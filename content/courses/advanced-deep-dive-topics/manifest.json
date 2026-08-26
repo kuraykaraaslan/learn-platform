@@ -1,0 +1,98 @@
+{
+  "slug": "advanced-deep-dive-topics",
+  "title": "Advanced & Deep-Dive Topics",
+  "description": "Below-the-API-surface internals — browsers, databases, event streaming, API philosophy — for when 'it works' isn't enough.",
+  "items": [
+    {
+      "id": 101,
+      "file": "101_realtime_systems.md",
+      "title": "Real-Time Systems — WebSocket, SSE, Long Polling",
+      "bracket": "3-7",
+      "category": "Advanced & Deep-Dive Topics"
+    },
+    {
+      "id": 102,
+      "file": "102_edge_computing.md",
+      "title": "Edge Computing — Vercel Edge Functions, Cloudflare Workers",
+      "bracket": "3-7",
+      "category": "Advanced & Deep-Dive Topics"
+    },
+    {
+      "id": 103,
+      "file": "103_browser_internals.md",
+      "title": "Browser Internals — Rendering Pipeline, V8, Event Loop, Memory",
+      "bracket": "7-10",
+      "category": "Advanced & Deep-Dive Topics"
+    },
+    {
+      "id": 104,
+      "file": "104_database_internals.md",
+      "title": "Database Internals — B-tree, WAL, MVCC Deep Dive, Vacuum",
+      "bracket": "7-10",
+      "category": "Advanced & Deep-Dive Topics"
+    },
+    {
+      "id": 105,
+      "file": "105_cryptography_fundamentals.md",
+      "title": "Cryptography Fundamentals — Beyond bcrypt",
+      "bracket": "7-10",
+      "category": "Advanced & Deep-Dive Topics"
+    },
+    {
+      "id": 106,
+      "file": "106_event_streaming_kafka_vs_bullmq.md",
+      "title": "Event Streaming — Kafka vs BullMQ: When to Choose",
+      "bracket": "7-10",
+      "category": "Advanced & Deep-Dive Topics"
+    },
+    {
+      "id": 107,
+      "file": "107_api_design_philosophy.md",
+      "title": "API Design Philosophy — REST vs GraphQL vs tRPC vs gRPC",
+      "bracket": "7-10",
+      "category": "Advanced & Deep-Dive Topics"
+    },
+    {
+      "id": 108,
+      "file": "108_monorepo_tooling.md",
+      "title": "Monorepo Tooling — Turborepo and Nx",
+      "bracket": "3-7",
+      "category": "Advanced & Deep-Dive Topics"
+    },
+    {
+      "id": 109,
+      "file": "109_performance_profiling.md",
+      "title": "Performance Profiling — Flame Graphs, Heap Snapshots, Memory Leak Detection",
+      "bracket": "3-7",
+      "category": "Advanced & Deep-Dive Topics"
+    },
+    {
+      "id": 110,
+      "file": "110_reading_large_codebases.md",
+      "title": "Reading Large Codebases Fast",
+      "bracket": "3-7",
+      "category": "Advanced & Deep-Dive Topics"
+    },
+    {
+      "id": 111,
+      "file": "111_production_debugging.md",
+      "title": "Production Debugging Methodology",
+      "bracket": "3-7",
+      "category": "Advanced & Deep-Dive Topics"
+    },
+    {
+      "id": 112,
+      "file": "112_technical_writing.md",
+      "title": "Technical Writing — Runbooks, API Docs, Decision Docs",
+      "bracket": "3-7",
+      "category": "Advanced & Deep-Dive Topics"
+    },
+    {
+      "id": 113,
+      "file": "113_systems_thinking.md",
+      "title": "Systems Thinking — Second and Third Order Consequences",
+      "bracket": "7-10",
+      "category": "Advanced & Deep-Dive Topics"
+    }
+  ]
+}

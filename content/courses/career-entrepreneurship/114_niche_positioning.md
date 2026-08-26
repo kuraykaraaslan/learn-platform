@@ -1,0 +1,85 @@
+# 114. Niche Positioning — From "Full-Stack Dev" to Known Expert
+
+## Coverage Level
+**Not Covered** — You run a solo software company with strong technical breadth. "Full-stack developer" is a commodity label that competes on price. Your actual positioning is much more specific and valuable than you're probably communicating.
+
+## What It Is
+Positioning is the answer to "what do you do?" that makes a specific type of client immediately think "that's exactly what I need." The mistake most developers make is trying to appeal to everyone — which means you're competing with every other developer on Upwork by price.
+
+A niche is not a limitation. It's a filter. "I build multi-tenant SaaS platforms for B2B startups" immediately qualifies the lead (are they building a multi-tenant product?), signals expertise (you know the domain deeply), and justifies a premium (specialists charge more than generalists). The narrower the niche, the less competition and the higher the rates — up to a point.
+
+The goal is to find the intersection of: what you're unusually good at, what clients pay premium for, and what's defensible (hard to fake with 3 months of tutorials). Your boilerplate already defines your niche. The question is whether you're communicating it.
+
+## Key Concepts
+- **Generalist trap**: Competing on breadth means competing on price. Every client considers you interchangeable with every other "full-stack developer."
+- **Specialist premium**: Clients pay more for someone who has solved their exact problem before. Risk reduction, not just skill.
+- **Positioning statement**: A one-sentence declaration of who you serve, what you do, and what outcome you produce.
+- **ICP (Ideal Client Profile)**: The specific type of client you want — industry, company size, problem type, budget level.
+- **Proof of position**: Case studies, open-source work, content, or the boilerplate itself that demonstrates the niche credibly.
+- **"Famous for one thing"**: Being known for one specific thing is more valuable than being known for many things. You can do many things — you're positioned on one.
+- **Content-led vs referral-led**: Content builds inbound (people find you). Referrals scale outbound. Positioning makes both more effective.
+- **Repositioning**: Changing position over time as your skills and market shift. It's a strategy, not a permanent identity.
+
+## Example / Template
+
+**Positioning statement template:**
+```
+I help [specific client type] [achieve specific outcome] by [your mechanism].
+Unlike [the alternative], I [differentiator].
+```
+
+**Three worked examples using your actual stack:**
+
+```
+Option A (narrow, technical):
+"I build multi-tenant SaaS platforms for B2B startups using Next.js and PostgreSQL.
+Unlike agencies that deliver and disappear, I hand over a production-ready codebase
+with architecture documentation so your team can own it immediately."
+
+Option B (outcome-focused):
+"I help early-stage SaaS founders go from idea to paying customers in 8 weeks,
+building on a battle-tested multi-tenant infrastructure so they don't spend their
+first year on auth, billing, and team management."
+
+Option C (market-specific):
+"I build internal SaaS platforms for Turkish SMEs expanding internationally —
+multi-currency, multi-language, KVKK-compliant from day one."
+```
+
+**ICP definition worksheet:**
+```markdown
+## Ideal Client Profile
+
+**Industry:** [e.g., B2B SaaS, fintech, e-commerce]
+**Company stage:** [pre-seed / seed / Series A / bootstrapped]
+**Company size:** [1-10 / 10-50 / 50-200 employees]
+**Their problem:** [the specific pain they have]
+**Their budget:** [€X–€Y for a project of this type]
+**Decision maker:** [CTO / founder / product manager]
+**How they find developers:** [LinkedIn / referral / content / community]
+
+## Red flags (who to avoid):
+- 
+- 
+
+## Green flags (who to seek):
+- 
+- 
+```
+
+## When to Use / Apply
+- When you feel like you're competing on price and losing
+- When you get inquiries for work outside your expertise (a sign your positioning isn't filtering)
+- When writing your LinkedIn headline, bio, or website — positioning comes first, then copy
+- When choosing which open-source work to do publicly — it should reinforce the niche
+
+## Common Mistakes
+- Positioning too broadly to "not miss any clients" — this is the generalist trap
+- Changing position every 6 months — trust requires consistency; clients need to see the same message repeatedly
+- Positioning on tools ("I'm a Next.js developer") instead of outcomes ("I build SaaS products that scale") — tools change, outcomes don't
+- Having a niche privately but not communicating it — positioning only works if clients can see it
+
+## Further Reading
+- *The Positioning Manual for Technical Firms* — Philip Morgan: the definitive guide for solo technical consultants
+- *Badass: Making Users Awesome* — Kathy Sierra: outcome-first thinking applied to positioning
+- *Win Without Pitching Manifesto* — Blair Enns: pricing and positioning for creative/technical professionals

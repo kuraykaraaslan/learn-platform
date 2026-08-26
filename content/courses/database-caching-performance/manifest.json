@@ -1,0 +1,49 @@
+{
+  "slug": "database-caching-performance",
+  "title": "Database & Caching Performance",
+  "description": "Indexing, query plans, connection pooling, and caching strategy for everyday read/write performance.",
+  "items": [
+    {
+      "id": 16,
+      "file": "16_n_plus_1_query_problem.md",
+      "title": "N+1 Query Problem",
+      "bracket": "1-3",
+      "category": "Database & Caching Performance"
+    },
+    {
+      "id": 17,
+      "file": "17_database_index_strategy.md",
+      "title": "Database Index Strategy (Composite, Covering, Partial Index)",
+      "bracket": "3-7",
+      "category": "Database & Caching Performance"
+    },
+    {
+      "id": 18,
+      "file": "18_query_plan_analysis.md",
+      "title": "Query Plan Analysis — EXPLAIN ANALYZE",
+      "bracket": "3-7",
+      "category": "Database & Caching Performance"
+    },
+    {
+      "id": 19,
+      "file": "19_connection_pool_tuning.md",
+      "title": "Connection Pool Tuning (pgBouncer, HikariCP)",
+      "bracket": "3-7",
+      "category": "Database & Caching Performance"
+    },
+    {
+      "id": 20,
+      "file": "20_redis_cache_strategies.md",
+      "title": "Redis Cache Strategies (Write-Through, Write-Behind, Cache-Aside)",
+      "bracket": "3-7",
+      "category": "Database & Caching Performance"
+    },
+    {
+      "id": 21,
+      "file": "21_cdn_cache_strategy.md",
+      "title": "CDN Cache Strategy — Cache-Control, stale-while-revalidate",
+      "bracket": "3-7",
+      "category": "Database & Caching Performance"
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "slug": "database-advanced",
+  "title": "Database — Advanced",
+  "description": "Beyond basic queries: concurrency control, migrations, retention, multi-tenancy, and specialized storage.",
+  "items": [
+    {
+      "id": 41,
+      "file": "41_postgresql_mvcc_vacuum_bloat_isolation.md",
+      "title": "PostgreSQL MVCC — Vacuum, Bloat, Transaction Isolation",
+      "bracket": "3-7",
+      "category": "Database — Advanced"
+    },
+    {
+      "id": 42,
+      "file": "42_optimistic_vs_pessimistic_locking.md",
+      "title": "Optimistic vs Pessimistic Locking in Prisma/TypeORM",
+      "bracket": "3-7",
+      "category": "Database — Advanced"
+    },
+    {
+      "id": 43,
+      "file": "43_zero_downtime_database_migration.md",
+      "title": "Zero-Downtime Database Migration",
+      "bracket": "3-7",
+      "category": "Database — Advanced"
+    },
+    {
+      "id": 44,
+      "file": "44_soft_delete_pattern_problems_alternatives.md",
+      "title": "Soft Delete Pattern — Problems and Alternatives",
+      "bracket": "1-3",
+      "category": "Database — Advanced"
+    },
+    {
+      "id": 45,
+      "file": "45_time_series_data_timescaledb_partitioning.md",
+      "title": "Time-Series Data — TimescaleDB or Partition by Range",
+      "bracket": "3-7",
+      "category": "Database — Advanced"
+    },
+    {
+      "id": 46,
+      "file": "46_full_text_search_postgres_tsvector_elasticsearch.md",
+      "title": "Full-Text Search — PostgreSQL tsvector vs Elasticsearch",
+      "bracket": "3-7",
+      "category": "Database — Advanced"
+    },
+    {
+      "id": 47,
+      "file": "47_audit_log_design_application_level.md",
+      "title": "Audit Log Design — Application-Level",
+      "bracket": "3-7",
+      "category": "Database — Advanced"
+    },
+    {
+      "id": 48,
+      "file": "48_data_retention_gdpr_kvkk_deletion_flow.md",
+      "title": "Data Retention and GDPR/KVKK Deletion Flow",
+      "bracket": "3-7",
+      "category": "Database — Advanced"
+    },
+    {
+      "id": 49,
+      "file": "49_backup_strategy_rto_rpo_restore_testing.md",
+      "title": "Backup Strategy — RTO, RPO, Real Restore Testing",
+      "bracket": "3-7",
+      "category": "Database — Advanced"
+    },
+    {
+      "id": 50,
+      "file": "50_multi_tenant_data_isolation_models.md",
+      "title": "Multi-Tenant Data Isolation Models",
+      "bracket": "3-7",
+      "category": "Database — Advanced"
+    },
+    {
+      "id": 51,
+      "file": "51_event_log_rehydration.md",
+      "title": "Event Log Rehydration (Rebuilding State from Event Log)",
+      "bracket": "7-10",
+      "category": "Database — Advanced"
+    },
+    {
+      "id": 52,
+      "file": "52_oltp_vs_olap.md",
+      "title": "OLTP vs OLAP — Analytical vs Transactional Workload Separation",
+      "bracket": "3-7",
+      "category": "Database — Advanced"
+    }
+  ]
+}

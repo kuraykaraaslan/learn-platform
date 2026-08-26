@@ -1,0 +1,14 @@
+{
+  "slug": "ai-llm-engineering",
+  "title": "AI & LLM Engineering",
+  "description": "Integrating LLMs into product features — the fastest-growing track on this platform.",
+  "items": [
+    {
+      "id": 140,
+      "file": "140_ai_llm_integration.md",
+      "title": "AI/LLM Integration & Prompt Engineering — RAG, Vector DBs, Agents, Evals",
+      "bracket": "7-10",
+      "category": "AI & LLM Engineering"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "slug": "distributed-systems-api-design",
+  "title": "Distributed Systems & API Design",
+  "description": "Consistency, resilience, and contract patterns for systems that talk to each other over a network.",
+  "items": [
+    {
+      "id": 1,
+      "file": "01_cap_theorem.md",
+      "title": "CAP Theorem",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 2,
+      "file": "02_event_sourcing_cqrs.md",
+      "title": "Event Sourcing + CQRS",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 3,
+      "file": "03_saga_pattern.md",
+      "title": "Saga Pattern (Orchestration vs Choreography)",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 4,
+      "file": "04_circuit_breaker_bulkhead_retry.md",
+      "title": "Circuit Breaker, Bulkhead, Retry",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 5,
+      "file": "05_rate_limiting_strategies.md",
+      "title": "Rate Limiting Strategies (Token Bucket, Leaky Bucket, Sliding Window)",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 6,
+      "file": "06_distributed_locking.md",
+      "title": "Distributed Locking (Redis Redlock, DB-based)",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 7,
+      "file": "07_idempotency_key_pattern.md",
+      "title": "Idempotency Key Pattern",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 8,
+      "file": "08_webhook_security_retry.md",
+      "title": "Webhook Security & Retry Mechanism",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 9,
+      "file": "09_api_versioning_strategies.md",
+      "title": "API Versioning Strategies (URL vs Header vs Content Negotiation)",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 10,
+      "file": "10_backward_forward_compatibility.md",
+      "title": "Backward/Forward Compatibility — Schema Evolution",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 11,
+      "file": "11_read_replica_routing.md",
+      "title": "Read Replica Routing in Prisma/TypeORM",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 12,
+      "file": "12_database_sharding_strategies.md",
+      "title": "Database Sharding Strategies",
+      "bracket": "7-10",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 13,
+      "file": "13_cqrs_read_model_optimization.md",
+      "title": "CQRS Read Model Optimization (Materialized Views)",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 14,
+      "file": "14_outbox_pattern.md",
+      "title": "Outbox Pattern",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 15,
+      "file": "15_two_phase_commit_eventual_consistency.md",
+      "title": "Two-Phase Commit vs Eventual Consistency",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 131,
+      "file": "131_message_queues_101.md",
+      "title": "Message Queues 101 — Pub/Sub and Point-to-Point Basics",
+      "bracket": "1-3",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 135,
+      "file": "135_microservices_vs_monolith.md",
+      "title": "Microservices vs Monolith — Service Boundary Design",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    },
+    {
+      "id": 136,
+      "file": "136_api_gateway_bff.md",
+      "title": "API Gateway / Backend-for-Frontend (BFF) Pattern",
+      "bracket": "3-7",
+      "category": "Distributed Systems & API Design"
+    }
+  ]
+}

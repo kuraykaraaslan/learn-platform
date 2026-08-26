@@ -1,0 +1,130 @@
+# 37. Secrets Management — Vault / SSM / KMS Instead of Env Files
+
+## Coverage Level
+**Not Covered** — Your secrets are managed via `.env` files validated through `libs/env.ts` with Zod. The Zod validation is excellent (it catches missing secrets at startup rather than at runtime), but the underlying storage mechanism is `.env` files, which have significant operational security problems at scale. You have no external secrets store, no rotation automation, and no audit trail for secret access.
+
+## What It Is
+An `.env` file is a perfectly reasonable place to start, and your `libs/env.ts` Zod validation layer is genuinely better than most teams' setups. The problem is operational: `.env` files sit on disk, get copied to servers during deploys, end up in CI/CD environment variable stores with no expiry, and occasionally get committed to version control. When a developer leaves, rotating secrets requires finding every `.env` file on every server and in every pipeline. When your database password leaks, you have no audit trail showing who accessed which secret and when.
+
+A secrets manager (HashiCorp Vault, AWS Systems Manager Parameter Store, AWS Secrets Manager, GCP Secret Manager) is a centralized service that stores secrets encrypted at rest, controls access via IAM-style policies, provides an audit log of every secret read, and supports automatic rotation. Your application requests secrets at startup (or at read time), the secrets manager returns them over an encrypted connection, and they live in memory only — never on disk. Access is controlled by the deployment environment's identity (IAM role, service account) rather than a shared credential.
+
+The operational improvement is most noticeable in three scenarios: (1) secret rotation — update in one place and all running instances pick it up on next request; (2) per-environment isolation — development, staging, and production have separate secret sets under the same naming hierarchy, and a compromise of the dev environment does not expose production secrets; (3) off-boarding — when a developer leaves, revoke their IAM access to the secrets manager and no secrets need to be rotated (assuming they didn't export them, which the audit log would show).
+
+## Key Concepts
+- **Secrets manager** — A dedicated service for storing, rotating, and auditing access to credentials (API keys, DB passwords, JWT secrets)
+- **AWS SSM Parameter Store** — Free for standard parameters; hierarchical naming (`/app/production/JWT_SECRET`); integrates with IAM; simpler than Vault for most cases
+- **AWS Secrets Manager** — Paid; adds automatic rotation for RDS passwords, first-class versioning, and cross-account sharing
+- **HashiCorp Vault** — Self-hosted or cloud; most feature-rich; dynamic secrets (generates a new DB credential per request); heavy operational overhead
+- **Dynamic secrets** — Vault generates a short-lived credential on demand (e.g., a DB user that expires in 1 hour); more powerful than static rotation
+- **Secret injection at startup** — Your app starts, requests secrets from the manager, loads them into memory (or environment); `libs/env.ts` still validates them
+- **Envelope encryption** — Secrets are encrypted with a data key, which is itself encrypted with a master key (KMS); compromise of the data key alone is insufficient
+- **Audit log** — Every secret read is logged with timestamp, requester identity, and secret name; critical for compliance (SOC 2, GDPR)
+
+## Example Code
+```typescript
+// libs/secrets/aws-ssm.ts
+// Load secrets from AWS SSM Parameter Store at application startup
+// Retains your Zod validation layer — the source changes, not the validation
+
+import { SSMClient, GetParametersCommand } from '@aws-sdk/client-ssm';
+import { z } from 'zod';
+
+const ssm = new SSMClient({ region: process.env.AWS_REGION ?? 'eu-west-1' });
+
+// Parameter names follow a hierarchy: /app/{environment}/{name}
+const ENV = process.env.NODE_ENV === 'production' ? 'production' : 'staging';
+
+const PARAMETER_NAMES = [
+  `/app/${ENV}/SYSTEM_DATABASE_URL`,
+  `/app/${ENV}/REDIS_PASSWORD`,
+  `/app/${ENV}/ACCESS_TOKEN_SECRET`,
+  `/app/${ENV}/REFRESH_TOKEN_SECRET`,
+  `/app/${ENV}/CSRF_SECRET`,
+  `/app/${ENV}/STRIPE_SECRET_KEY`,
+] as const;
+
+type ParameterName = typeof PARAMETER_NAMES[number];
+type SecretName = ParameterName extends `/app/${string}/${infer N}` ? N : never;
+
+// Schema mirrors your existing libs/env.ts EnvSchema — same validation
+const SecretsSchema = z.object({
+  SYSTEM_DATABASE_URL: z.string().min(1),
+  REDIS_PASSWORD: z.string().min(1),
+  ACCESS_TOKEN_SECRET: z.string().min(32),
+  REFRESH_TOKEN_SECRET: z.string().min(32),
+  CSRF_SECRET: z.string().min(32),
+  STRIPE_SECRET_KEY: z.string().startsWith('sk_'),
+});
+
+export type Secrets = z.infer<typeof SecretsSchema>;
+
+let cachedSecrets: Secrets | null = null;
+
+/**
+ * Load secrets from SSM at startup. Call once in your app bootstrap.
+ * Results are cached in memory for the lifetime of the process.
+ * WithDecryption: true is required for SecureString parameters.
+ */
+export async function loadSecrets(): Promise<Secrets> {
+  if (cachedSecrets) return cachedSecrets;
+
+  const command = new GetParametersCommand({
+    Names: [...PARAMETER_NAMES],
+    WithDecryption: true, // SSM SecureString — KMS decrypts on your behalf
+  });
+
+  const response = await ssm.send(command);
+
+  if (response.InvalidParameters?.length) {
+    throw new Error(
+      `Missing SSM parameters: ${response.InvalidParameters.join(', ')}`
+    );
+  }
+
+  const rawSecrets: Record<string, string> = {};
+  for (const param of response.Parameters ?? []) {
+    // Extract the last segment: /app/production/ACCESS_TOKEN_SECRET → ACCESS_TOKEN_SECRET
+    const name = param.Name!.split('/').pop() as SecretName;
+    rawSecrets[name] = param.Value!;
+  }
+
+  // Same Zod validation you already do in libs/env.ts — just a different source
+  cachedSecrets = SecretsSchema.parse(rawSecrets);
+  return cachedSecrets;
+}
+
+// ─── Integration with your existing libs/env.ts ────────────────────────────
+// Option A: Override env vars after loading (minimal code change)
+// In your app bootstrap (e.g., instrumentation.ts in Next.js):
+//
+// import { loadSecrets } from '@/libs/secrets/aws-ssm';
+// const secrets = await loadSecrets();
+// Object.assign(process.env, secrets); // env.ts Zod validation then reads these
+
+// Option B: Replace env.ts with a secrets-aware singleton (cleaner)
+// Replace: const env = EnvSchema.parse(process.env)
+// With:    const env = { ...EnvSchema.parse(process.env), ...await loadSecrets() }
+
+// ─── Secret rotation without downtime ─────────────────────────────────────
+// SSM supports versioning. Your app runs with version N.
+// Ops team pushes version N+1 of the secret.
+// Rolling restart: new instances start with N+1, old instances expire with N.
+// No manual .env file updates on servers required.
+```
+
+## When to Use
+- Before your first paying enterprise customer: many enterprise security reviews require a secrets manager, not `.env` files
+- When you have more than one environment (dev/staging/prod) and need strict isolation between them
+- When you add team members: `.env` files shared over Slack or email is an immediate secret exposure
+- When you need an audit trail for compliance (SOC 2 Type II requires evidence of secret access controls)
+
+## Common Mistakes
+- **Committing `.env` to version control** — Even `.env.example` with real values is a security incident; use `.env.example` with placeholder values only
+- **Long-lived static secrets with no rotation policy** — Even with a secrets manager, secrets that never rotate are a liability; set a rotation schedule for DB passwords and JWT secrets
+- **Putting secrets in Docker image build args** — Build args are visible in the image layer history; inject secrets at runtime, not build time
+- **Over-engineering before you have the problem** — Vault's full feature set (dynamic secrets, leasing) has real operational overhead; start with SSM Parameter Store and graduate to Vault when the need justifies it
+
+## Further Reading
+- [AWS SSM Parameter Store for storing secrets](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html)
+- [HashiCorp Vault: Getting Started](https://developer.hashicorp.com/vault/tutorials/getting-started)
+- [OWASP: Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)
