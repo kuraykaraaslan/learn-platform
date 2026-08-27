@@ -72,7 +72,7 @@ ipcMain.handle("update:install", (e) => { assertSender(e); autoUpdater.quitAndIn
 
 ```yaml
 # electron-builder.yml — per-OS targets, asar unpacking, and secure fuses at package time
-appId: com.kuray.myapp
+appId: com.example.myapp
 directories: { output: dist, buildResources: build }
 files: ["out/**/*"]
 asar: true

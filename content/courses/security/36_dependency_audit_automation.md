@@ -103,7 +103,7 @@ updates:
       - "dependencies"
       - "automated"
     reviewers:
-      - "kuraykaraaslan"
+      - "your-github-username"
 ```
 
 ```typescript

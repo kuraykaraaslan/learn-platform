@@ -23,7 +23,7 @@ For a multilingual site, canonical URLs should point to the same-language versio
 
 **URL:** /services/saas-mvp-development
 **Primary intent:** commercial
-**Title:** Custom SaaS MVP Development for SMEs | Kuray Karaaslan
+**Title:** Custom SaaS MVP Development for SMEs | [Your Name]
 **Meta description:** A practical service for founders and SMEs who need a
 production-ready SaaS MVP: clear scope, clean architecture, and a realistic
 first version built to prove the product, not the whole roadmap.

@@ -18,7 +18,7 @@ For a Next.js app specifically, HTTP/2 means you should prefer many small, preci
 - **Resource hints**: `<link rel="preload">` and `<link rel="modulepreload">` are the modern equivalent of server push — explicitly tell the browser what to fetch next
 
 ## Example Code
-```typescript
+```tsx
 // Practical HTTP/2 optimizations in Next.js
 
 // ─── 1. next.config.ts: enable correct HTTP/2 features ───

@@ -9,7 +9,7 @@ These three techniques address three different performance and correctness probl
 
 **Lazy Evaluation** solves the problem of doing work you might not need. In an eagerly evaluated language like JavaScript, `const results = expensiveComputation()` runs immediately whether or not `results` is ever used. Lazy evaluation defers computation until the value is actually needed. In JavaScript, you implement this with functions, `Proxy`, generators, or async iterators.
 
-For your stack, memoization is immediately applicable to permission checking, tenant configuration lookups, and feature flag evaluation — any pure-enough function that is called repeatedly with the same arguments. Lazy evaluation maps directly to async generators for streaming large result sets from your database.
+In a typical web backend the immediate candidates are permission checks, tenant configuration lookups, and feature-flag evaluation — any pure-enough function called repeatedly with the same arguments inside one request. Lazy evaluation maps just as directly onto async generators for streaming a large result set out of the database instead of materialising it.
 
 ## Key Concepts
 - **Tail position** — the call is the very last thing in the function; `return f(n-1)` is tail position; `return f(n-1) + 1` is not (the `+1` happens after)
@@ -22,7 +22,7 @@ For your stack, memoization is immediately applicable to permission checking, te
 - **Cache invalidation** — memoization is a footgun if you cache mutable data; always ask "can this input change without changing its identity?"
 
 ## Example Code
-```typescript
+```tsx
 // ── 1. Trampoline: recursion without stack overflow ─────────────────────────
 // TCO is unreliable in V8; use a trampoline instead for deep recursion
 

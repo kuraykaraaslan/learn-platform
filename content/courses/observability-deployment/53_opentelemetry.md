@@ -35,7 +35,7 @@ import { SEMRESATTRS_SERVICE_NAME, SEMRESATTRS_SERVICE_VERSION } from '@opentele
 
 const sdk = new NodeSDK({
   resource: new Resource({
-    [SEMRESATTRS_SERVICE_NAME]: 'next-boilerplate',
+    [SEMRESATTRS_SERVICE_NAME]: 'acme-web',
     [SEMRESATTRS_SERVICE_VERSION]: process.env.APP_VERSION ?? '0.0.1',
   }),
 
@@ -62,7 +62,7 @@ process.on('SIGTERM', () => sdk.shutdown());
 // libs/tracer.ts — manual spans for domain-level tracing
 import { trace, context, SpanStatusCode } from '@opentelemetry/api';
 
-const tracer = trace.getTracer('next-boilerplate');
+const tracer = trace.getTracer('acme-web');
 
 // Wrap any async function in a named span
 export async function withSpan<T>(

@@ -1,10 +1,10 @@
 {
   "generatedFrom": "scripts/verify-code.ts",
   "defectsByClass": {
-    "syntax": 346,
-    "undefined-identifier": 611,
+    "syntax": 51,
+    "undefined-identifier": 449,
     "implicit-any": 23,
-    "type-error": 342
+    "type-error": 278
   },
   "totals": {
     "fences": 162,
@@ -701,7 +701,7 @@
       "title": "MCP Server Auth, Errors, and Idempotency",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
@@ -1277,7 +1277,7 @@
       "title": "Tail Call Optimization, Memoization, Lazy Evaluation",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 25,
           "section": "Example Code",
           "defects": [
@@ -3687,448 +3687,10 @@
       "title": "React Native: Expo Router Navigation and Protected Routes",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS1005",
-              "line": 7,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 7,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 7,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 7,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 8,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 9,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 10,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 11,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 20,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 20,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 20,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 20,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 23,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 23,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 23,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 23,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 24,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 24,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 24,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 25,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 25,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 25,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 26,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 27,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 28,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 37,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 37,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 37,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 37,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 40,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 40,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 40,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 40,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 41,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 41,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 41,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 41,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 41,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 41,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 42,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 42,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 42,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 42,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 42,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 43,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 44,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 45,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 65,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 65,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 66,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 66,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 66,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 66,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 66,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 67,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 67,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 67,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 67,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 67,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 68,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 68,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 69,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 69,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 69,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 69,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 70,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 71,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 72,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 80,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 80,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 80,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 80,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 80,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
             {
               "code": "TS2323",
               "line": 5,
@@ -4142,15 +3704,9 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
+              "code": "TS2875",
               "line": 7,
-              "message": "Cannot find name 'style'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 7,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
             },
             {
@@ -4178,36 +3734,6 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
-              "line": 20,
-              "message": "Cannot find name 'href'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 20,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 23,
-              "message": "Cannot find name 'screenOptions'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 24,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2362",
-              "line": 25,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2300",
               "line": 31,
               "message": "Duplicate identifier 'Redirect'.",
@@ -4230,42 +3756,6 @@
               "line": 34,
               "message": "Duplicate function implementation.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 37,
-              "message": "Cannot find name 'href'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 37,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 40,
-              "message": "Cannot find name 'screenOptions'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 41,
-              "message": "Cannot find name 'options'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2588",
-              "line": 42,
-              "message": "Cannot assign to 'name' because it is a constant.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 42,
-              "message": "Cannot find name 'options'.",
-              "class": "undefined-identifier"
             },
             {
               "code": "TS2300",
@@ -4292,120 +3782,6 @@
               "class": "undefined-identifier"
             },
             {
-              "code": "TS2304",
-              "line": 65,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 66,
-              "message": "Cannot find name 'value'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 66,
-              "message": "Cannot find name 'onChangeText'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 66,
-              "message": "Cannot find name 'placeholder'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 66,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 66,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 67,
-              "message": "Cannot find name 'value'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 67,
-              "message": "Cannot find name 'onChangeText'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 67,
-              "message": "Cannot find name 'placeholder'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 67,
-              "message": "Cannot find name 'secureTextEntry'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 67,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 67,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 68,
-              "message": "Cannot find name 'onPress'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 68,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 69,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 69,
-              "message": "Cannot find name 'Sign'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 69,
-              "message": "Cannot find name 'In'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 69,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 69,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2323",
               "line": 78,
               "message": "Cannot redeclare exported variable 'default'.",
@@ -4416,24 +3792,6 @@
               "line": 78,
               "message": "Duplicate function implementation.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 80,
-              "message": "Cannot find name 'href'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 80,
-              "message": "Cannot find name 'Edit'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 80,
-              "message": "Cannot find name 'user'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -4525,7 +3883,7 @@
       "title": "React Native: Data Fetching, Loading States, and Offline Detection",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
@@ -4643,226 +4001,10 @@
       "title": "React Native: NativeWind Styling, Design Tokens, and Dark Mode",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 22,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS1005",
-              "line": 33,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 33,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 33,
-              "message": "',' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 33,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 34,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 35,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 36,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 37,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 48,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 48,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 49,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 50,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 51,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 51,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 51,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 52,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 52,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 53,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 54,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 55,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 67,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 67,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 70,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 70,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 71,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 71,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 71,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 71,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 71,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 71,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 71,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 71,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 71,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 72,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 73,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 74,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
             {
               "code": "TS2300",
               "line": 25,
@@ -4870,27 +4012,9 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
+              "code": "TS2875",
               "line": 33,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2367",
-              "line": 33,
-              "message": "This comparison appears to be unintentional because the types '{ scheme: any; }' and 'string' have no overlap.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2839",
-              "line": 33,
-              "message": "This condition will always return 'false' since JavaScript compares objects by reference, not value.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 33,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
             },
             {
@@ -4906,159 +4030,9 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
-              "line": 48,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 49,
-              "message": "Cannot find name 'style'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 51,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 51,
-              "message": "Operator '>' cannot be applied to types 'string' and '{ name: void; }'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 51,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 52,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 52,
-              "message": "Operator '>' cannot be applied to types 'string' and '{ email: any; }'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 52,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 52,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18004",
-              "line": 52,
-              "message": "No value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2300",
               "line": 59,
               "message": "Duplicate identifier 'useWindowDimensions'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 67,
-              "message": "Cannot find name 'key'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 68,
-              "message": "Cannot find name 'numColumns'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 69,
-              "message": "Cannot find name 'data'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 70,
-              "message": "Cannot find name 'keyExtractor'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2349",
-              "line": 70,
-              "message": "This expression is not callable.   Type '{}' has no call signatures.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 70,
-              "message": "Cannot find name 'item'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 70,
-              "message": "Cannot find name 'item'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 71,
-              "message": "Cannot find name 'renderItem'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2349",
-              "line": 71,
-              "message": "This expression is not callable.   Type '{}' has no call signatures.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18004",
-              "line": 71,
-              "message": "No value exists in scope for the shorthand property 'item'. Either declare one or provide an initializer.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 71,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2749",
-              "line": 71,
-              "message": "'UserCard' refers to a value, but is being used as a type here. Did you mean 'typeof UserCard'?",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 71,
-              "message": "Cannot find name 'item'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 71,
-              "message": "Cannot find name 'email'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 71,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
               "class": "type-error"
             }
           ]
@@ -5357,7 +4331,7 @@
       "title": "Electron: Process Model and Typed IPC Channels",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
@@ -5467,7 +4441,7 @@
       "title": "Electron: Preload Scripts and Context Isolation",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
@@ -5570,9 +4544,9 @@
       ]
     },
     {
-      "lesson": "framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md",
+      "lesson": "framework-deep-dives/425_electron_renderer_react_and_design_system_fork.md",
       "lessonId": 425,
-      "title": "Electron: Renderer Architecture — React, Client Routing, and the KUIreact Fork",
+      "title": "Electron: Renderer Architecture — React, Client Routing, and Vendoring a Design System",
       "fences": [
         {
           "lang": "typescript",
@@ -6109,52 +5083,10 @@
       "title": "HTTP/2 Multiplexing and Effect on Next.js",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS1005",
-              "line": 49,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 49,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 58,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 61,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 62,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 63,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 64,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
             {
               "code": "TS2528",
               "line": 36,
@@ -6168,94 +5100,10 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
+              "code": "TS2875",
               "line": 49,
-              "message": "Cannot find name 'html'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 49,
-              "message": "Cannot find name 'lang'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'head'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 52,
-              "message": "Cannot find name 'link'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 53,
-              "message": "Cannot find name 'rel'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 54,
-              "message": "Cannot find name 'href'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 55,
-              "message": "Cannot find name 'as'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 56,
-              "message": "Cannot find name 'type'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 57,
-              "message": "Cannot find name 'crossOrigin'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 57,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 57,
-              "message": "Operator '>' cannot be applied to types 'number' and '{}'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 61,
-              "message": "Operator '>' cannot be applied to types 'boolean' and '{ children: ReactNode; }'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 61,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 61,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 62,
-              "message": "Cannot find name 'body'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -6267,424 +5115,10 @@
       "title": "React Server Components — When Client vs Server",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS1005",
-              "line": 9,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 9,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 9,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 9,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 9,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 22,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 22,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 22,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 22,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 23,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 23,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 23,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1127",
-              "line": 23,
-              "message": "Invalid character.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1434",
-              "line": 23,
-              "message": "Unexpected keyword or identifier.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1434",
-              "line": 23,
-              "message": "Unexpected keyword or identifier.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 23,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 23,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 24,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 25,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 26,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 33,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 33,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 33,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 33,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 33,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 33,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 34,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 46,
-              "message": "',' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 46,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 48,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 49,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 49,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 49,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 49,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 50,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 50,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 50,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1127",
-              "line": 50,
-              "message": "Invalid character.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 50,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 50,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 51,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 53,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 53,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 53,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 53,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 53,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 54,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 54,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 54,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1127",
-              "line": 54,
-              "message": "Invalid character.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 54,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 54,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 54,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 55,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 56,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 57,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 58,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 64,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 64,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 64,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 90,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 90,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 91,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 91,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 92,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 92,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 92,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 93,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 94,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
             {
               "code": "TS2323",
               "line": 5,
@@ -6704,28 +5138,16 @@
               "class": "undefined-identifier"
             },
             {
+              "code": "TS2875",
+              "line": 9,
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
+              "class": "type-error"
+            },
+            {
               "code": "TS2304",
               "line": 9,
               "message": "Cannot find name 'DashboardLayout'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2588",
-              "line": 9,
-              "message": "Cannot assign to 'filter' because it is a constant.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 9,
-              "message": "Cannot find name 'onFilterChange'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 9,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
             },
             {
               "code": "TS2323",
@@ -6744,138 +5166,6 @@
               "line": 19,
               "message": "Cannot find name 'getDashboardStats'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 21,
-              "message": "Cannot find name 'main'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 22,
-              "message": "Cannot find name 'Only'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2683",
-              "line": 22,
-              "message": "'this' implicitly has type 'any' because it does not have a type annotation.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 22,
-              "message": "Cannot find name 'is'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 22,
-              "message": "Cannot find name 'client'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 22,
-              "message": "Cannot find name 'side'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2363",
-              "line": 22,
-              "message": "The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 23,
-              "message": "Cannot find name 'data'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 23,
-              "message": "Cannot find name 'initialData'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 23,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 23,
-              "message": "Cannot find name 'Server'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 23,
-              "message": "Cannot find name 'Component'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 23,
-              "message": "Cannot find name 'no'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 23,
-              "message": "Cannot find name 'JS'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 23,
-              "message": "Cannot find name 'shipped'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2363",
-              "line": 23,
-              "message": "The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 33,
-              "message": "Cannot find name 'select'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 33,
-              "message": "Cannot find name 'onChange'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2349",
-              "line": 33,
-              "message": "This expression is not callable.   Type '{}' has no call signatures.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 33,
-              "message": "Cannot find name 'e'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 33,
-              "message": "Cannot find name 'e'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 33,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
             },
             {
               "code": "TS2323",
@@ -6897,87 +5187,9 @@
             },
             {
               "code": "TS2304",
-              "line": 45,
-              "message": "Cannot find name 'div'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 46,
-              "message": "Cannot find name 'h1'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 49,
-              "message": "Cannot find name 'fallback'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 49,
               "message": "Cannot find name 'StatsSkeleton'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2749",
-              "line": 50,
-              "message": "'TenantStats' refers to a value, but is being used as a type here. Did you mean 'typeof TenantStats'?",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'tenantId'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 50,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'Slow'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'query'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'streamed'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2322",
-              "line": 50,
-              "message": "Type 'number' is not assignable to type 'object'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2363",
-              "line": 50,
-              "message": "The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 53,
-              "message": "Cannot find name 'fallback'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 53,
-              "message": "Operator '<' cannot be applied to types '{}' and 'number'.",
-              "class": "type-error"
             },
             {
               "code": "TS2304",
@@ -6993,54 +5205,6 @@
             },
             {
               "code": "TS2304",
-              "line": 54,
-              "message": "Cannot find name 'tenantId'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 54,
-              "message": "Cannot find name 'params'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 54,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 54,
-              "message": "Cannot find name 'Medium'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 54,
-              "message": "Cannot find name 'query'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 54,
-              "message": "Cannot find name 'streamed'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2322",
-              "line": 54,
-              "message": "Type 'number' is not assignable to type 'object'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2363",
-              "line": 54,
-              "message": "The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
               "line": 63,
               "message": "Cannot find name 'getExpensiveTenantAnalytics'.",
               "class": "undefined-identifier"
@@ -7049,12 +5213,6 @@
               "code": "TS2304",
               "line": 64,
               "message": "Cannot find name 'StatsGrid'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 64,
-              "message": "Cannot find name 'data'.",
               "class": "undefined-identifier"
             },
             {
@@ -7068,72 +5226,6 @@
               "line": 81,
               "message": "Cannot find name 'db'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 90,
-              "message": "Cannot find name 'form'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 90,
-              "message": "Cannot find name 'action'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 90,
-              "message": "Operator '>' cannot be applied to types '{ updateDisplayName: (formData: FormData) => Promise<void>; }' and '{}'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 91,
-              "message": "Cannot find name 'input'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2588",
-              "line": 91,
-              "message": "Cannot assign to 'name' because it is a constant.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2362",
-              "line": 91,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 92,
-              "message": "Cannot find name 'button'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 92,
-              "message": "Cannot find name 'type'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 92,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 92,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 92,
-              "message": "Cannot find name 'Save'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -7145,92 +5237,14 @@
       "title": "Bundle Size Optimization — Code Splitting, Tree Shaking",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS1005",
-              "line": 26,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 26,
-              "message": "',' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 26,
-              "message": "':' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 27,
-              "message": "',' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 41,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 41,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 42,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 43,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 44,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS2304",
-              "line": 26,
-              "message": "Cannot find name 'div'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 26,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
+              "code": "TS2875",
               "line": 39,
-              "message": "Cannot find name 'div'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2749",
-              "line": 41,
-              "message": "'RichTextEditor' refers to a value, but is being used as a type here. Did you mean 'typeof RichTextEditor'?",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2749",
-              "line": 42,
-              "message": "'AnalyticsChart' refers to a value, but is being used as a type here. Did you mean 'typeof AnalyticsChart'?",
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
             },
             {
@@ -7315,212 +5329,20 @@
       "title": "Web Vitals (LCP, CLS, INP) — Real User Data Improvement",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS1109",
-              "line": 49,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 50,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 51,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 91,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 91,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 92,
-              "message": "':' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 93,
-              "message": "':' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 96,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 97,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1127",
-              "line": 105,
-              "message": "Invalid character.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1435",
-              "line": 105,
-              "message": "Unknown keyword or identifier. Did you mean 'case'?",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 113,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 113,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 114,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 115,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 116,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 126,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 126,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 126,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 126,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 139,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 139,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 139,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 139,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS2365",
+              "code": "TS2875",
               "line": 46,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 46,
-              "message": "Cannot find name 'html'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 47,
-              "message": "Cannot find name 'body'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 49,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
             },
             {
               "code": "TS2304",
               "line": 63,
               "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 91,
-              "message": "Cannot find name 'src'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 92,
-              "message": "Cannot find name 'width'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 93,
-              "message": "Cannot find name 'height'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 94,
-              "message": "Cannot find name 'alt'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 95,
-              "message": "Cannot find name 'priority'.",
               "class": "undefined-identifier"
             },
             {
@@ -7537,36 +5359,6 @@
             },
             {
               "code": "TS2304",
-              "line": 105,
-              "message": "Cannot find name 'div'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 105,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 105,
-              "message": "Cannot find name 'Injected'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 105,
-              "message": "Cannot find name 'causes'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 105,
-              "message": "Cannot find name 'shift'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 110,
               "message": "Cannot find name 'useState'.",
               "class": "undefined-identifier"
@@ -7579,30 +5371,6 @@
             },
             {
               "code": "TS2304",
-              "line": 113,
-              "message": "Cannot find name 'div'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 113,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 113,
-              "message": "Operator '>' cannot be applied to types 'string' and '{}'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 114,
-              "message": "Cannot find name 'div'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 123,
               "message": "Cannot find name 'heavyComputation'.",
               "class": "undefined-identifier"
@@ -7611,30 +5379,6 @@
               "code": "TS2304",
               "line": 124,
               "message": "Cannot find name 'setResult'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 126,
-              "message": "Cannot find name 'button'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 126,
-              "message": "Cannot find name 'onClick'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 126,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 126,
-              "message": "Cannot find name 'Calculate'.",
               "class": "undefined-identifier"
             },
             {
@@ -7660,30 +5404,6 @@
               "line": 137,
               "message": "Cannot find name 'setLoading'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 139,
-              "message": "Cannot find name 'button'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 139,
-              "message": "Cannot find name 'onClick'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 139,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 139,
-              "message": "Cannot find name 'Calculate'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -7695,244 +5415,10 @@
       "title": "Streaming SSR and Suspense Boundaries",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS1005",
-              "line": 11,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 11,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 11,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 16,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 16,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 16,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 21,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 21,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 21,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 36,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 38,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 38,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 38,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 38,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 38,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 40,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 40,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 41,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 43,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 43,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 43,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 43,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 43,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 45,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 45,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 46,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 49,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 49,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 49,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 49,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 51,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 51,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 52,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 53,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 54,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 55,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 60,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 60,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 60,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
             {
               "code": "TS2304",
               "line": 10,
@@ -7940,15 +5426,15 @@
               "class": "undefined-identifier"
             },
             {
-              "code": "TS2304",
+              "code": "TS2875",
               "line": 11,
-              "message": "Cannot find name 'BillingCard'.",
-              "class": "undefined-identifier"
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
+              "class": "type-error"
             },
             {
               "code": "TS2304",
               "line": 11,
-              "message": "Cannot find name 'data'.",
+              "message": "Cannot find name 'BillingCard'.",
               "class": "undefined-identifier"
             },
             {
@@ -7988,69 +5474,21 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
-              "line": 35,
-              "message": "Cannot find name 'main'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 36,
-              "message": "Cannot find name 'h1'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 36,
-              "message": "Cannot find name 'Dashboard'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 38,
-              "message": "Cannot find name 'fallback'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 38,
-              "message": "Operator '<' cannot be applied to types '{}' and 'number'.",
+              "code": "TS2578",
+              "line": 39,
+              "message": "Unused '@ts-expect-error' directive.",
               "class": "type-error"
             },
             {
-              "code": "TS2365",
-              "line": 38,
-              "message": "Operator '<' cannot be applied to types 'boolean' and '({ tenantId }: { tenantId: string; }) => Promise<BillingCard>'.",
+              "code": "TS2578",
+              "line": 44,
+              "message": "Unused '@ts-expect-error' directive.",
               "class": "type-error"
             },
             {
-              "code": "TS2304",
-              "line": 43,
-              "message": "Cannot find name 'fallback'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 43,
-              "message": "Operator '<' cannot be applied to types '{}' and 'number'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 43,
-              "message": "Operator '<' cannot be applied to types 'boolean' and '({ tenantId }: { tenantId: string; }) => Promise<TeamTable>'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 49,
-              "message": "Cannot find name 'fallback'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 49,
-              "message": "Operator '<' cannot be applied to types 'boolean' and '({ tenantId }: { tenantId: string; }) => Promise<AnalyticsChart>'.",
+              "code": "TS2578",
+              "line": 50,
+              "message": "Unused '@ts-expect-error' directive.",
               "class": "type-error"
             },
             {
@@ -8064,18 +5502,6 @@
               "line": 59,
               "message": "Duplicate function implementation.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 60,
-              "message": "Cannot find name 'div'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 60,
-              "message": "Cannot find name 'dashboard'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -8537,136 +5963,10 @@
       "title": "Accessibility (a11y) — WCAG 2.1 AA Compliance",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 22,
           "section": "Example Code or Template",
           "defects": [
-            {
-              "code": "TS1005",
-              "line": 92,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 92,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 93,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 100,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 101,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 104,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 104,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 105,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 111,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 114,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 114,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1127",
-              "line": 114,
-              "message": "Invalid character.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 114,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 115,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 118,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 118,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 120,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 123,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 124,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 125,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 126,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
             {
               "code": "TS18046",
               "line": 65,
@@ -8686,232 +5986,10 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
+              "code": "TS2875",
               "line": 91,
-              "message": "Cannot find name 'div'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 92,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 93,
-              "message": "Cannot find name 'aria'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 93,
-              "message": "Cannot find name 'hidden'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 94,
-              "message": "Cannot find name 'onClick'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 94,
-              "message": "Operator '>' cannot be applied to types '{ onClose: () => void; }' and '{}'.",
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 97,
-              "message": "Cannot find name 'div'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 98,
-              "message": "Cannot find name 'ref'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 99,
-              "message": "Cannot find name 'role'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 100,
-              "message": "Cannot find name 'aria'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 100,
-              "message": "Cannot find name 'modal'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 101,
-              "message": "Cannot find name 'aria'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 101,
-              "message": "Cannot find name 'labelledby'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 102,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 103,
-              "message": "Cannot find name 'onKeyDown'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 104,
-              "message": "Cannot find name 'onClick'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2349",
-              "line": 104,
-              "message": "This expression is not callable.   Type '{}' has no call signatures.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 104,
-              "message": "Cannot find name 'e'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 104,
-              "message": "Cannot find name 'e'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 107,
-              "message": "Cannot find name 'button'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 108,
-              "message": "Cannot find name 'type'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 109,
-              "message": "Cannot find name 'onClick'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS18004",
-              "line": 109,
-              "message": "No value exists in scope for the shorthand property 'onClose'. Either declare one or provide an initializer.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 110,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 111,
-              "message": "Cannot find name 'aria'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 111,
-              "message": "Cannot find name 'label'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 111,
-              "message": "Operator '>' cannot be applied to types 'string' and '{}'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 114,
-              "message": "Cannot find name 'span'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 114,
-              "message": "Cannot find name 'aria'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 114,
-              "message": "Cannot find name 'hidden'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 118,
-              "message": "Cannot find name 'h2'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 118,
-              "message": "Cannot find name 'id'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 118,
-              "message": "Cannot find name 'titleId'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 118,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 118,
-              "message": "Operator '>' cannot be applied to types 'string' and '{ title: any; }'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 118,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18004",
-              "line": 119,
-              "message": "No value exists in scope for the shorthand property 'title'. Either declare one or provide an initializer.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 122,
-              "message": "Cannot find name 'children'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -8943,68 +6021,14 @@
       "title": "A/B Test Infrastructure — Statistical Significance",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 22,
           "section": "Example Code or Template",
           "defects": [
             {
-              "code": "TS1005",
+              "code": "TS2875",
               "line": 57,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 57,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 57,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 59,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 60,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS2304",
-              "line": 57,
-              "message": "Cannot find name 'button'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 57,
-              "message": "Cannot find name 'onClick'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 57,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 57,
-              "message": "Operator '>' cannot be applied to types 'string' and '{ buttonText: string; }'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 57,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
             }
           ]
@@ -9227,97 +6251,97 @@
           "defects": [
             {
               "code": "TS1192",
-              "line": 7,
+              "line": 8,
               "message": "Module '\"fs\"' has no default export.",
               "class": "syntax"
             },
             {
               "code": "TS2304",
-              "line": 14,
+              "line": 15,
               "message": "Cannot find name 'TokenPayload'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 23,
+              "line": 24,
               "message": "Cannot find name 'TokenPayload'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 29,
+              "line": 30,
               "message": "Cannot find name 'TokenPayload'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2339",
-              "line": 47,
+              "line": 48,
               "message": "Property 'createHash' does not exist on type 'Crypto'.",
               "class": "type-error"
             },
             {
               "code": "TS2304",
-              "line": 49,
+              "line": 50,
               "message": "Cannot find name 'sessionRepo'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 56,
+              "line": 57,
               "message": "Cannot find name 'rotationHistoryRepo'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 64,
+              "line": 65,
               "message": "Cannot find name 'rotationHistoryRepo'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 67,
+              "line": 68,
               "message": "Cannot find name 'sessionRepo'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 79,
+              "line": 80,
               "message": "Cannot find name 'generateAccessToken'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2339",
-              "line": 80,
+              "line": 81,
               "message": "Property 'randomBytes' does not exist on type 'Crypto'.",
               "class": "type-error"
             },
             {
               "code": "TS2339",
-              "line": 81,
+              "line": 82,
               "message": "Property 'createHash' does not exist on type 'Crypto'.",
               "class": "type-error"
             },
             {
               "code": "TS2304",
-              "line": 84,
+              "line": 85,
               "message": "Cannot find name 'rotationHistoryRepo'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 91,
+              "line": 92,
               "message": "Cannot find name 'sessionRepo'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 104,
+              "line": 105,
               "message": "Cannot find name 'token'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 104,
+              "line": 105,
               "message": "Cannot find name 'SECRET'.",
               "class": "undefined-identifier"
             }
@@ -9401,82 +6425,10 @@
       "title": "Content Security Policy (CSP) Headers",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS1005",
-              "line": 61,
-              "message": "')' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 61,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1136",
-              "line": 61,
-              "message": "Property assignment expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 61,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 62,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 67,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 67,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 70,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 71,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 72,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 73,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 74,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
             {
               "code": "TS2300",
               "line": 4,
@@ -9496,87 +6448,9 @@
               "class": "syntax"
             },
             {
-              "code": "TS2304",
+              "code": "TS2875",
               "line": 58,
-              "message": "Cannot find name 'html'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 59,
-              "message": "Cannot find name 'head'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 61,
-              "message": "Cannot find name 'script'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2588",
-              "line": 61,
-              "message": "Cannot assign to 'nonce' because it is a constant.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 61,
-              "message": "Cannot find name 'dangerouslySetInnerHTML'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 63,
-              "message": "Cannot find name 'body'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2635",
-              "line": 63,
-              "message": "Type 'RegExp' has no signatures for which the type argument list is applicable.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 64,
-              "message": "Cannot find name 'children'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 67,
-              "message": "Cannot find name 'src'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 68,
-              "message": "Cannot find name 'strategy'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 69,
-              "message": "Cannot find name 'nonce'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 69,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 69,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18004",
-              "line": 69,
-              "message": "No value exists in scope for the shorthand property 'nonce'. Either declare one or provide an initializer.",
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
             },
             {

@@ -7,7 +7,7 @@ Pact is the most widely used consumer-driven contract testing framework. The key
 
 The workflow: (1) your test writes a "pact" — a JSON document describing "when I call X with Y, I expect Z back"; (2) Pact generates a mock server from that pact for your consumer tests; (3) the pact file is shared with the provider (via a Pact Broker); (4) the provider runs a verification test that replays the pact against the real provider code; (5) if either side breaks the contract, the test fails before a bad deploy goes to production.
 
-For your stack, the highest-value use of Pact is testing your payment provider integrations (the interface between your code and Stripe/PayPal/Iyzico), and if you ever extract services from your monolith, testing the contracts between those services. Even without a Pact Broker, writing consumer-side pact tests for your Stripe integration gives you a regression safety net that is faster and cheaper than calling the Stripe sandbox on every CI run.
+The highest-value first target is usually a payment provider integration — the interface between your code and Stripe, PayPal, or Iyzico — because it is the boundary where a silent contract change costs real money. The second is the seam between services, the moment a monolith starts being split. Even without a Pact Broker, consumer-side pact tests against a payment provider give you a regression net that is faster and cheaper than calling the provider's sandbox on every CI run.
 
 ## Key Concepts
 - **Consumer** — the side that makes the API call and depends on the response format; your Next.js app

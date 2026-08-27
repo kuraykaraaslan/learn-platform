@@ -18,7 +18,7 @@ Getting CSP right is iterative. Start with `Content-Security-Policy-Report-Only`
 - **`strict-dynamic`** — Allows scripts loaded by a nonce-trusted script to also load further scripts; simplifies policies for SPAs with dynamic imports
 
 ## Example Code
-```typescript
+```tsx
 // next.config.ts — CSP with nonce support via middleware
 
 // middleware.ts — generate a nonce per request and set the CSP header

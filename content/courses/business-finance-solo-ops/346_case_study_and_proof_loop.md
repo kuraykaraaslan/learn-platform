@@ -55,9 +55,9 @@ the ops lead began using the dashboard for daily spot checks as well.
 Automated anomaly alerts; expansion to a second data source.
 
 ## Proof
-"Before working with Kuray, we spent most of Monday morning
+"Before working with [Your Name], we spent most of Monday morning
 rebuilding the same report from three spreadsheets. Now it's ready
-before we even sit down. The process was clear and he explained
+before we even sit down. The process was clear and they explained
 every decision in terms we understood." — Ops Lead, sanitized retail client
 
 ---

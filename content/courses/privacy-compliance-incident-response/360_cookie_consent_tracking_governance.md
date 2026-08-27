@@ -18,7 +18,7 @@ Analytics minimization is a second layer on top of consent: even with valid cons
 - **Edge-analytics exception**: cookieless, aggregate edge analytics (e.g., Cloudflare Analytics) is generally acceptable without a consent banner, unlike cookie-based tools like GA4
 
 ## Example Code
-```typescript
+```tsx
 // Consent-gated script loader: nothing non-essential fires until the user
 // has made a choice, and California's GPC signal is honored automatically
 // without requiring a manual click.

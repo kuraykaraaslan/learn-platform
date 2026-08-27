@@ -18,7 +18,7 @@ The mechanism under the hood is HTTP chunked transfer encoding combined with Rea
 - **Time-to-first-byte (TTFB) vs largest contentful paint (LCP)** — Streaming improves TTFB dramatically; LCP depends on what you stream first
 
 ## Example Code
-```typescript
+```tsx
 // app/dashboard/[tenantId]/page.tsx
 // Shell renders immediately; data panels stream in independently
 

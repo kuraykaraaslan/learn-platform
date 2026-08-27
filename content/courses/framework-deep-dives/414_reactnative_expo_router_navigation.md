@@ -18,7 +18,7 @@ Two different tools handle "user causes navigation" depending on whether the tri
 - **Modal screens**: added as a normal route with `presentation: "modal"` in its `Stack.Screen`/`Tabs.Screen` options, closed via `router.back()`
 
 ## Example Code
-```typescript
+```tsx
 // app/_layout.tsx — root: no NavigationContainer, just Slot
 import { Slot } from "expo-router";
 import { GestureHandlerRootView } from "react-native-gesture-handler";

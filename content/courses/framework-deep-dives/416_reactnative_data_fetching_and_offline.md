@@ -18,7 +18,7 @@ Two mobile-specific concerns have no real web equivalent. Offline detection via 
 - **Pagination hooks track `page`/`hasMore` and append rather than replace** on subsequent pages, driven by `FlatList`'s `onEndReached`
 
 ## Example Code
-```typescript
+```tsx
 // hooks/useUser.ts — single-item fetch with the cancelled-flag pattern
 import { useState, useEffect } from "react";
 import { axiosInstance } from "@/libs/axios";

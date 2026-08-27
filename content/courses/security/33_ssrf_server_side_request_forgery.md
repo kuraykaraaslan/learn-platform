@@ -5,7 +5,7 @@ SSRF is the vulnerability class where an attacker tricks your server into making
 
 A successful SSRF attack against a cloud-hosted application can retrieve the instance metadata endpoint (`http://169.254.169.254/latest/meta-data/iam/security-credentials/`), which returns temporary AWS credentials with whatever permissions your EC2/ECS role has. This has been the root cause of several major cloud data breaches including the Capital One breach in 2019.
 
-For your SaaS specifically, the realistic SSRF surface areas are: tenant custom webhook URLs (if you deliver events to URLs tenants configure), OAuth provider URLs (if you allow tenants to configure their own OAuth endpoints for SSO), payment provider callbacks, and any feature that allows importing data from a user-supplied URL. Even the "verify a domain" feature (checking that a tenant's DNS record resolves correctly) can be an SSRF vector if the domain name is not validated before DNS resolution.
+In a multi-tenant SaaS the realistic surface areas are narrower than "anywhere you make a request", and worth enumerating explicitly: tenant-configured webhook URLs, tenant-configured OAuth/SSO endpoints, payment provider callbacks, and any import-from-URL feature. The one teams miss is domain verification — checking that a tenant's DNS record resolves correctly is an outbound request to an attacker-chosen name, and is an SSRF vector unless the name is validated before resolution.
 
 ## Key Concepts
 - **SSRF** — Server makes an HTTP request to an attacker-controlled URL, potentially reaching internal services

@@ -26,13 +26,13 @@ For your multi-tenant SaaS, a typical Kubernetes setup would be: one Deployment 
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: next-boilerplate
+  name: acme-web
   namespace: production
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: next-boilerplate
+      app: acme-web
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -41,16 +41,16 @@ spec:
   template:
     metadata:
       labels:
-        app: next-boilerplate
+        app: acme-web
     spec:
       containers:
         - name: app
-          image: ghcr.io/you/next-boilerplate:${GIT_SHA}  # pinned to commit SHA, never :latest
+          image: ghcr.io/your-org/acme-web:${GIT_SHA}  # pinned to commit SHA, never :latest
           ports:
             - containerPort: 3000
           envFrom:
             - secretRef:
-                name: next-boilerplate-secrets  # DATABASE_URL, JWT secrets, etc.
+                name: acme-web-secrets  # DATABASE_URL, JWT secrets, etc.
           readinessProbe:
             httpGet:
               path: /api/health
@@ -73,11 +73,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: next-boilerplate
+  name: acme-web
   namespace: production
 spec:
   selector:
-    app: next-boilerplate   # routes to pods with this label
+    app: acme-web   # routes to pods with this label
   ports:
     - port: 80
       targetPort: 3000
@@ -86,7 +86,7 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: next-boilerplate
+  name: acme-web
   namespace: production
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"    # auto TLS via cert-manager
@@ -96,7 +96,7 @@ spec:
   tls:
     - hosts:
         - app.yourdomain.com
-      secretName: next-boilerplate-tls
+      secretName: acme-web-tls
   rules:
     - host: app.yourdomain.com
       http:
@@ -105,7 +105,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: next-boilerplate
+                name: acme-web
                 port:
                   number: 80
 ---
@@ -113,13 +113,13 @@ spec:
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: next-boilerplate
+  name: acme-web
   namespace: production
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: next-boilerplate
+    name: acme-web
   minReplicas: 2
   maxReplicas: 10
   metrics:

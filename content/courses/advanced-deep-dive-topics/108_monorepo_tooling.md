@@ -5,7 +5,7 @@ A monorepo is a single repository containing multiple packages or applications t
 
 Turborepo (by Vercel) and Nx are the two dominant monorepo tools for JavaScript/TypeScript. Both add a build pipeline with caching: if nothing changed in a package, the cached build output is used instead of rebuilding. Turborepo is simpler and integrates naturally with Next.js. Nx is more powerful with a richer plugin ecosystem and code generation.
 
-The main benefit is not the caching — it's colocation. When your UI component library (`01_NextJS_Components`) and your application (`next-boilerplate`) are in the same repo, a change to a component and the application that uses it is a single atomic commit. No publish → update version → install cycle. No version drift.
+The main benefit is not the caching — it's colocation. When a shared UI package (`packages/ui`) and the app that consumes it (`apps/web`) live in the same repo, a change to a component and the change to its caller are a single atomic commit. No publish → update version → install cycle. No version drift.
 
 ## Key Concepts
 - **Workspace**: A package within the monorepo. Each has its own `package.json`. npm/pnpm/yarn workspaces link them together.
@@ -21,10 +21,10 @@ The main benefit is not the caching — it's colocation. When your UI component 
 ```
 my-company/
 ├── apps/
-│   ├── next-boilerplate/          # your main SaaS app
-│   └── ejs-components/            # your EJS/Express app
+│   ├── web/                       # the customer-facing Next.js app
+│   └── admin/                     # the internal Express/EJS admin app
 ├── packages/
-│   ├── ui/                        # shared React components (from 01_NextJS_Components)
+│   ├── ui/                        # shared React components
 │   │   ├── package.json           # name: "@company/ui"
 │   │   └── src/
 │   ├── config-eslint/             # shared ESLint config
@@ -70,7 +70,7 @@ my-company/
 ```
 
 ```json
-// apps/next-boilerplate/package.json (relevant part)
+// apps/web/package.json (relevant part)
 {
   "dependencies": {
     "@company/ui": "*"   // workspace:* in pnpm — resolves to local package
@@ -82,12 +82,12 @@ my-company/
 # Run commands across all packages
 npx turbo build          # build everything, in dependency order, with caching
 npx turbo dev            # start all dev servers
-npx turbo test --filter=next-boilerplate  # only test one app
+npx turbo test --filter=web              # only test one app
 npx turbo build --filter=...[HEAD^1]      # only build what changed since last commit
 ```
 
 ## When to Use
-- You have shared UI components used by multiple apps (your exact situation)
+- You have shared UI components used by more than one app
 - A change frequently touches multiple repos simultaneously
 - You want unified CI that only runs what changed
 - You want to enforce architectural boundaries between packages

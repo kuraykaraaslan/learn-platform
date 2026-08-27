@@ -18,7 +18,7 @@ The bridge's shape becomes the renderer's entire contract with the outside world
 - **Dev-server content over `http://localhost` is fine in development; production must load only packaged content** (`app://`/`file://`) — never a remote URL, even for convenience
 
 ## Example Code
-```typescript
+```tsx
 // main/windows/createMainWindow.ts (excerpt) — the only acceptable webPreferences baseline
 import { BrowserWindow, shell } from "electron";
 import path from "node:path";

@@ -19,7 +19,7 @@ Funnel analysis is the sequenced view of a conversion process: what percentage o
 
 ## Example Code or Template
 
-```typescript
+```tsx
 // Analytics service abstraction layer
 // File: libs/analytics/analytics.service.ts
 

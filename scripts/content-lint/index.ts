@@ -10,6 +10,13 @@
  * owner and an expiry, and an expired waiver is itself a finding.
  */
 import fs from 'node:fs';
+
+// Piping this report into `head` closes stdout early; without this the process
+// dies with an unhandled EPIPE instead of just stopping.
+process.stdout.on('error', (error: NodeJS.ErrnoException) => {
+  if (error.code === 'EPIPE') process.exit(0);
+  throw error;
+});
 import path from 'node:path';
 import { listCourseSlugs } from '../../modules/course_content/course_content.manifest';
 import { loadCorpus, RULES, type Finding } from './rules';

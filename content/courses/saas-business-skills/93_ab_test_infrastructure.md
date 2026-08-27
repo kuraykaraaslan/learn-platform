@@ -19,7 +19,7 @@ The most common mistake in A/B testing is declaring a winner before sufficient s
 
 ## Example Code or Template
 
-```typescript
+```tsx
 // A/B test infrastructure using PostHog feature flags
 // PostHog handles random assignment, persistence, and result tracking
 

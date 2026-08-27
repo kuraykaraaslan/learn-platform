@@ -62,8 +62,8 @@ const k8sDeploymentSpec = {
   template: {
     spec: {
       containers: [{
-        name: 'next-boilerplate',
-        image: 'ghcr.io/you/next-boilerplate:${GIT_SHA}',
+        name: 'acme-web',
+        image: 'ghcr.io/your-org/acme-web:${GIT_SHA}',
         readinessProbe: {
           httpGet: { path: '/api/health', port: 3000 },
           initialDelaySeconds: 5,

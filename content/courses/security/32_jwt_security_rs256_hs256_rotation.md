@@ -19,9 +19,10 @@ Refresh token rotation is the practice of issuing a new refresh token every time
 
 ## Example Code
 ```typescript
-// Your current approach (HS256) — correct for your architecture.
-// This section shows how to upgrade to RS256 if you add external services,
-// and how to implement reuse detection (the gap in your current implementation).
+// Starting point: HS256, which is correct while every verifier is a server
+// you control. This section shows how to upgrade to RS256 once that stops
+// being true, and how to add refresh-token reuse detection — the part most
+// implementations leave out.
 
 // ─── Option A: RS256 upgrade (when you add external service verification) ──
 import jwt from 'jsonwebtoken';
@@ -128,11 +129,11 @@ jwt.verify(token, SECRET, {
 ```
 
 ## When to Use
-- **HS256** — Your current setup; correct when all token verification happens on your own servers
+- **HS256** — correct while every party verifying a token is a server you control and can hand a shared secret to
 - **RS256/ES256** — When you need to share token verification with a third party (mobile app backend, external microservice, webhook receiver) without sharing the signing secret
 - **Rotation history / reuse detection** — When refresh token theft is a concern for your user base; adds DB overhead but enables breach detection
 - **Short access token TTL (≤15 min)** — When you want to limit the window of a stolen access token without requiring re-login
-- **`notBefore: 5` on refresh tokens** — You already do this; prevents a race condition where a refresh token is used before the access token has had time to propagate
+- **`notBefore: 5` on refresh tokens** — prevents a race condition where a refresh token is used before the access token it replaces has had time to propagate
 
 ## Common Mistakes
 - **Using the same secret for access and refresh tokens** — If the signing secret leaks, both token types are compromised; use separate secrets (you already do this correctly)

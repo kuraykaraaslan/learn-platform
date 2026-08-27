@@ -23,7 +23,7 @@ For a solo developer with a multi-tenant SaaS boilerplate, the content already e
 (Based on your existing projects — no new work required)
 
 ```markdown
-## Week 1 — Architecture Posts (from next-boilerplate)
+## Week 1 — Architecture Posts (from acme-web)
 Day 1: "Why I use two PostgreSQL databases in my SaaS boilerplate (system + tenant)"
         → Explain the isolation model, when it matters
 Day 3: "The multi-tenant auth flow: how a single login works across 50 tenants"  

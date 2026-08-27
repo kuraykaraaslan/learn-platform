@@ -2,19 +2,16 @@
 
 `npx tsx scripts/content-lint` — generated file, do not edit by hand.
 
-412 lessons · 768 findings · 0 waived
+412 lessons · 670 findings · 0 waived
 
 | Rule | Findings | Severity | What it means |
 |---|---:|---|---|
 | `sources/no-url` | 282 | warn | A Further Reading section with no followable link is a list of names, not sources. |
 | `sources/bare-domain` | 166 | warn | A bare domain in parentheses looks like a citation but renders as plain grey text — remark-gfm only autolinks bare URLs, not "(zod.dev)". |
 | `links/non-canonical-ref` | 69 | warn | Cross-references written as "see #41" or "Lesson 41" are never linked; only the canonical "(#41)" form is rewritten by the markdown pipeline. |
-| `voice/private-reference` | 62 | warn | Names, repos and paths belonging to the corpus's first owner have no meaning to a reader. |
 | `code/private-alias` | 45 | warn | Snippets importing @/libs, @/modules, @/stores or @/components reference the first owner's private boilerplate; no reader can resolve them. |
 | `code/unlabeled-fence` | 43 | warn | An unlabeled fence gets no syntax highlighting and cannot be verified by tooling. |
 | `sources/disclaimer-as-source` | 40 | warn | A legal/financial disclaimer occupying a Further Reading slot is not a reference. |
-| `code/jsx-in-ts-fence` | 19 | warn | JSX inside a fence tagged `typescript` mis-highlights and proves the snippet was never compiled. |
-| `voice/audit-residue` | 17 | warn | Sentences that grade the reader's own codebase are left over from the deleted Coverage Level section; the reader has never seen that codebase. |
 | `sources/quota-signature` | 15 | warn | Every lesson in a course carrying the same number of Further Reading bullets is a generation artifact, not a research result. |
 | `shape/unrecognized-heading` | 10 | warn | A "## " heading the parser does not recognize is silently folded into the previous card instead of becoming its own section. |
 
@@ -152,50 +149,6 @@
 - privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md:6 — "#363" is not the canonical "(#N)" form, so it is never linked
 - …and 29 more (see content-lint.json)
 
-### `voice/private-reference` — 62
-
-- advanced-deep-dive-topics/108_monorepo_tooling.md:8 — private reference: The main benefit is not the caching — it's colocation. When your UI component library (`01
-- advanced-deep-dive-topics/108_monorepo_tooling.md:24 — private reference: │   ├── next-boilerplate/          # your main SaaS app
-- advanced-deep-dive-topics/108_monorepo_tooling.md:73 — private reference: // apps/next-boilerplate/package.json (relevant part)
-- advanced-deep-dive-topics/108_monorepo_tooling.md:85 — private reference: npx turbo test --filter=next-boilerplate  # only test one app
-- advanced-deep-dive-topics/112_technical_writing.md:26 — private reference: **Owner:** @kuray
-- advanced-deep-dive-topics/112_technical_writing.md:59 — private reference: pm2 restart next-boilerplate
-- advanced-deep-dive-topics/112_technical_writing.md:61 — private reference: kubectl rollout restart deployment/next-boilerplate
-- business-finance-solo-ops/344_referral_and_partner_channels.md:36 — private reference: "Kuray helped us replace three spreadsheets with a live reporting
-- business-finance-solo-ops/346_case_study_and_proof_loop.md:58 — private reference: "Before working with Kuray, we spent most of Monday morning
-- career-entrepreneurship/118_building_in_public.md:26 — private reference: ## Week 1 — Architecture Posts (from next-boilerplate)
-- content-seo-personal-brand/283_metadata_titles_descriptions_and_canonical_url_strategy.md:26 — private reference: **Title:** Custom SaaS MVP Development for SMEs | Kuray Karaaslan
-- content-seo-personal-brand/286_entity_clarity_and_eeat_trust_signals.md:24 — private reference: Written by Kuray Karaaslan, a software engineer focused on production-ready
-- framework-deep-dives/424_electron_project_structure_and_vite_build_config.md:37 — private reference: │   │   ├── components/     ← forked KUIreact
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:1 — private reference: # 425. Electron: Renderer Architecture — React, Client Routing, and the KUIreact Fork
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:6 — private reference: Data never flows into the renderer through a fetch call or a server component; it flows ex
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:8 — private reference: KUIreact itself — a private, 145-component Next.js showcase library — is deliberately **co
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:14 — private reference: - **Components stay fetch-agnostic**, receiving data/handlers as props — this is the exact
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:15 — private reference: - **KUIreact is copied/forked into `src/renderer/components/`, not installed as a package*
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:71 — private reference: return <DataTable rows={rows} loading={loading} onPage={load} />;   // ✅ same component KU
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:75 — private reference: // ❌ from KUIreact (Next)
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:91 — private reference: Re-sync: diff upstream modules/ui against this folder each KUIreact minor; re-apply the la
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:97 — private reference: - Bringing a KUIreact component into the app for the first time — copy it, don't reference
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:99 — private reference: - Re-syncing after a KUIreact update — diff upstream against the fork using `_FORK.md`'s r
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:103 — private reference: - **Calling `window.api` directly from inside a presentational component** — couples the c
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:104 — private reference: - **Trying to `npm install` KUIreact as if it were a published package** — it's a private 
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:106 — private reference: - **Editing a forked KUIreact component's styling locally instead of wrapping it** — cause
-- framework-deep-dives/427_electron_environment_secrets_and_auto_updates.md:75 — private reference: appId: com.kuray.myapp
-- framework-deep-dives/429_electron_window_chrome_and_desktop_layout.md:6 — private reference: Multi-window decisions default toward *not* opening a new window: a single window with in-
-- framework-deep-dives/429_electron_window_chrome_and_desktop_layout.md:8 — private reference: Desktop layout differs from web layout in density and resilience to resizing, not in its c
-- framework-deep-dives/429_electron_window_chrome_and_desktop_layout.md:14 — private reference: - **Most "modals" should be in-window KUIreact `Modal`s, not separate OS windows** — a tru
-- framework-deep-dives/429_electron_window_chrome_and_desktop_layout.md:90 — private reference: - **Building a native modal child window for an in-content confirmation** — heavier than n
-- framework-deep-dives/430_electron_menus_shortcuts_tray_and_dialogs.md:4 — private reference: Desktop apps expose two visually and functionally different kinds of menu, and confusing t
-- framework-deep-dives/430_electron_menus_shortcuts_tray_and_dialogs.md:8 — private reference: The tray icon is an earned feature, not a default one — it belongs on an app that does som
-- framework-deep-dives/430_electron_menus_shortcuts_tray_and_dialogs.md:11 — private reference: - **Application menu (native, OS-level) vs context menu (native or KUIreact `DropdownMenu`
-- framework-deep-dives/430_electron_menus_shortcuts_tray_and_dialogs.md:17 — private reference: - **Native `dialog` is for file pick/save and hard-blocking pre-window decisions; KUIreact
-- framework-deep-dives/430_electron_menus_shortcuts_tray_and_dialogs.md:95 — private reference: - Building the app's top-level menu bar — use native `Menu` with `role`-based items, and r
-- framework-deep-dives/430_electron_menus_shortcuts_tray_and_dialogs.md:98 — private reference: - Picking or saving a file, or showing a hard-blocking pre-window error — native `dialog`;
-- observability-deployment/53_opentelemetry.md:38 — private reference: [SEMRESATTRS_SERVICE_NAME]: 'next-boilerplate',
-- observability-deployment/53_opentelemetry.md:65 — private reference: const tracer = trace.getTracer('next-boilerplate');
-- observability-deployment/57_blue_green_vs_rolling_deployment.md:65 — private reference: name: 'next-boilerplate',
-- …and 22 more (see content-lint.json)
-
 ### `code/private-alias` — 45
 
 - advanced-deep-dive-topics/101_realtime_systems.md:22 — imports a private alias: @/modules/auth/auth.token.service, @/libs/redis
@@ -224,7 +177,7 @@
 - framework-deep-dives/418_reactnative_nativewind_styling_tokens_and_dark_mode.md:22 — imports a private alias: @/stores/appStore
 - framework-deep-dives/419_reactnative_accessibility_and_feedback_patterns.md:21 — imports a private alias: @/components/ui/SkeletonCard
 - framework-deep-dives/420_reactnative_testing_jest_rntl_and_maestro.md:21 — imports a private alias: @/stores/authStore
-- framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md:21 — imports a private alias: @/modules/home/ui/Home, @/modules/settings/ui/Settings, @/libs/api, @/components/ui
+- framework-deep-dives/425_electron_renderer_react_and_design_system_fork.md:21 — imports a private alias: @/modules/home/ui/Home, @/modules/settings/ui/Settings, @/libs/api, @/components/ui
 - frontend-performance-scaling/24_bundle_size_optimization.md:21 — imports a private alias: @/components/ui, @/components/ui/button, @/components/ui/input, @/components/ui/modal
 - frontend-performance-scaling/25_web_vitals.md:21 — imports a private alias: @/components/web-vitals-reporter
 - frontend-performance-scaling/26_streaming_ssr_suspense.md:21 — imports a private alias: @/modules/ui/skeletons
@@ -326,48 +279,6 @@
 - business-finance-solo-ops/353_business_continuity_planning.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. SLA remedy comm
 - business-finance-solo-ops/354_non_negotiable_operating_rules.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Specific capaci
 - business-finance-solo-ops/355_burnout_as_a_business_risk.md — disclaimer in Further Reading: - This lesson is general education, not financial, tax, or medical advice. Persi
-
-### `code/jsx-in-ts-fence` — 19
-
-- advanced-deep-dive-topics/109_performance_profiling.md:22 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- ai-llm-engineering/163_mcp_server_auth_error_idempotency.md:21 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- architecture-design-patterns-testing/69_tail_call_memoization_lazy_evaluation.md:25 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- framework-deep-dives/414_reactnative_expo_router_navigation.md:21 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- framework-deep-dives/416_reactnative_data_fetching_and_offline.md:21 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- framework-deep-dives/418_reactnative_nativewind_styling_tokens_and_dark_mode.md:22 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- framework-deep-dives/421_electron_process_model_and_typed_ipc.md:21 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- framework-deep-dives/422_electron_preload_and_context_isolation.md:21 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- frontend-performance-scaling/22_http2_multiplexing.md:21 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- frontend-performance-scaling/23_react_server_components.md:21 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- frontend-performance-scaling/24_bundle_size_optimization.md:21 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- frontend-performance-scaling/25_web_vitals.md:21 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- frontend-performance-scaling/26_streaming_ssr_suspense.md:21 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- privacy-compliance-incident-response/360_cookie_consent_tracking_governance.md:21 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- process-soft-skills/77_technical_debt_prioritization.md:22 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- saas-business-skills/90_accessibility.md:22 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- saas-business-skills/92_analytics_integration.md:22 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- saas-business-skills/93_ab_test_infrastructure.md:22 — fence contains JSX but is tagged `typescript` — should be `tsx`
-- security/35_content_security_policy_csp_headers.md:21 — fence contains JSX but is tagged `typescript` — should be `tsx`
-
-### `voice/audit-residue` — 17
-
-- advanced-deep-dive-topics/102_edge_computing.md:8 — assumes a codebase the reader has not seen: Cloudflare Workers extend this further with Durable Objects (strongly consistent stateful 
-- architecture-design-patterns-testing/65_hexagonal_architecture.md:8 — assumes a codebase the reader has not seen: You already have this in your payment module. `BasePaymentProvider` is a Driven Port. `Str
-- architecture-design-patterns-testing/66_dependency_injection_container.md:10 — assumes a codebase the reader has not seen: For your boilerplate, the immediate gap is not necessarily "install a DI framework" — it i
-- architecture-design-patterns-testing/69_tail_call_memoization_lazy_evaluation.md:12 — assumes a codebase the reader has not seen: For your stack, memoization is immediately applicable to permission checking, tenant confi
-- architecture-design-patterns-testing/71_test_pyramid.md:14 — assumes a codebase the reader has not seen: For your codebase, the highest-value first tests are integration tests on `AuthService.log
-- architecture-design-patterns-testing/72_property_based_testing.md:10 — assumes a codebase the reader has not seen: For your stack, property-based testing shines on Zod schemas (does the schema accept exact
-- architecture-design-patterns-testing/73_contract_testing_pact.md:10 — assumes a codebase the reader has not seen: For your stack, the highest-value use of Pact is testing your payment provider integration
-- database-advanced/42_optimistic_vs_pessimistic_locking.md:10 — assumes a codebase the reader has not seen: For your SaaS, pessimistic locking is the safer default for low-frequency high-stakes oper
-- database-advanced/47_audit_log_design_application_level.md:6 — assumes a codebase the reader has not seen: The properties that distinguish a compliance-grade audit log from a simple event log are: 
-- distributed-systems-api-design/05_rate_limiting_strategies.md:8 — assumes a codebase the reader has not seen: For your SaaS, you likely want different algorithms for different endpoints. Public auth e
-- fundamentals-tools/122_oop_data_structures_basics.md:4 — assumes a codebase the reader has not seen: SOLID Principles (#64) assumes you already have this vocabulary: classes as a bundle of st
-- security/32_jwt_security_rs256_hs256_rotation.md:22 — assumes a codebase the reader has not seen: // Your current approach (HS256) — correct for your architecture.
-- security/32_jwt_security_rs256_hs256_rotation.md:24 — assumes a codebase the reader has not seen: // and how to implement reuse detection (the gap in your current implementation).
-- security/32_jwt_security_rs256_hs256_rotation.md:131 — assumes a codebase the reader has not seen: - **HS256** — Your current setup; correct when all token verification happens on your own 
-- security/32_jwt_security_rs256_hs256_rotation.md:135 — assumes a codebase the reader has not seen: - **`notBefore: 5` on refresh tokens** — You already do this; prevents a race condition wh
-- security/33_ssrf_server_side_request_forgery.md:8 — assumes a codebase the reader has not seen: For your SaaS specifically, the realistic SSRF surface areas are: tenant custom webhook UR
-- security/39_rbac_vs_abac.md:8 — assumes a codebase the reader has not seen: For your SaaS, you are currently at the right level of abstraction. You have RBAC within t
 
 ### `sources/quota-signature` — 15
 

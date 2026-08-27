@@ -7,7 +7,7 @@ Log aggregation is the practice of shipping all log streams to a central, querya
 
 **ELK** (Elasticsearch + Logstash/Filebeat + Kibana) is the established enterprise stack. Elasticsearch stores and indexes logs; Kibana is the query UI; Filebeat or Logstash tails your log files and ships them. It is powerful but operationally heavy and expensive to self-host.
 
-**Grafana Loki** is the lighter, cloud-native alternative. Where Elasticsearch indexes the full content of every log line (expensive), Loki only indexes labels (e.g., `{service="next-boilerplate", level="error"}`), and stores the log content compressed. You query with LogQL. It is designed to pair with Grafana dashboards and Grafana Tempo traces, which makes the three-pillar observability stack (logs + traces + metrics) from a single UI.
+**Grafana Loki** is the lighter, cloud-native alternative. Where Elasticsearch indexes the full content of every log line (expensive), Loki only indexes labels (e.g., `{service="acme-web", level="error"}`), and stores the log content compressed. You query with LogQL. It is designed to pair with Grafana dashboards and Grafana Tempo traces, which makes the three-pillar observability stack (logs + traces + metrics) from a single UI.
 
 Looking at your existing Winston setup in `libs/logger/index.ts`: the `printf` formatter overrides the JSON output with a plain string, which defeats the purpose of calling `json()`. Fixing that and adding a Loki transport is two changes.
 
@@ -15,7 +15,7 @@ Looking at your existing Winston setup in `libs/logger/index.ts`: the `printf` f
 - **Structured log** — a log entry formatted as JSON with consistent fields (`level`, `message`, `timestamp`, `tenantId`, `userId`, `traceId`)
 - **Label** — in Loki, a small, low-cardinality key-value tag used for indexing (e.g., `service`, `level`, `env`); high-cardinality values (like `userId`) go in the log body, not labels
 - **Log stream** — in Loki, all logs sharing the same label set; efficient to query within a stream
-- **LogQL** — Loki's query language; filter by labels then search log content: `{service="next-boilerplate"} |= "error"`
+- **LogQL** — Loki's query language; filter by labels then search log content: `{service="acme-web"} |= "error"`
 - **Filebeat** — lightweight log shipper that tails files and forwards to Elasticsearch or Logstash
 - **winston-loki** — Winston transport that ships logs directly to Loki's push API; no agent needed
 - **Correlation ID** — a unique ID injected into each log line (often the `traceId`) that lets you find all logs for one request
@@ -64,7 +64,7 @@ function buildTransports(): winston.transport[] {
       new LokiTransport({
         host: env.LOKI_HOST,            // e.g., 'http://loki:3100'
         labels: {
-          service: 'next-boilerplate',
+          service: 'acme-web',
           env: env.NODE_ENV,
         },
         // Labels are indexed — keep them low-cardinality
@@ -115,7 +115,7 @@ export default class Logger {
 
 // Usage — now every log line has queryable context:
 // Logger.error('Login failed', { userId: user.id, tenantId: tenant.id, reason: 'bad password' });
-// In Loki: {service="next-boilerplate"} |= "Login failed" | json | userId = "abc-123"
+// In Loki: {service="acme-web"} |= "Login failed" | json | userId = "abc-123"
 ```
 
 ## When to Use

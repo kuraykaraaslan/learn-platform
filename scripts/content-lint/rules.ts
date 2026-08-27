@@ -138,14 +138,14 @@ export const RULES: Rule[] = [
   },
   {
     id: 'code/jsx-in-ts-fence',
-    severity: 'warn',
+    severity: 'error',
     description: 'JSX inside a fence tagged `typescript` mis-highlights and proves the snippet was never compiled.',
     lesson: (file) =>
       file.fences
         .filter((f) => f.lang.toLowerCase() === 'typescript' && /^\s*(return\s*\(|<[A-Z][\w.]*[\s/>])/m.test(f.code))
         .map((f) => ({
           rule: 'code/jsx-in-ts-fence',
-          severity: 'warn' as const,
+          severity: 'error' as const,
           target: file.target,
           line: f.line,
           message: 'fence contains JSX but is tagged `typescript` — should be `tsx`',
@@ -256,7 +256,7 @@ export const RULES: Rule[] = [
   },
   {
     id: 'voice/private-reference',
-    severity: 'warn',
+    severity: 'error',
     description: "Names, repos and paths belonging to the corpus's first owner have no meaning to a reader.",
     lesson: (file) => {
       const pattern =
@@ -266,7 +266,7 @@ export const RULES: Rule[] = [
         .filter(({ line }) => pattern.test(line))
         .map(({ line, index }) => ({
           rule: 'voice/private-reference',
-          severity: 'warn' as const,
+          severity: 'error' as const,
           target: file.target,
           line: index + 1,
           message: `private reference: ${line.trim().slice(0, 90)}`,
@@ -275,18 +275,18 @@ export const RULES: Rule[] = [
   },
   {
     id: 'voice/audit-residue',
-    severity: 'warn',
+    severity: 'error',
     description:
       'Sentences that grade the reader\'s own codebase are left over from the deleted Coverage Level section; the reader has never seen that codebase.',
     lesson: (file) => {
       const pattern =
-        /(^|\s)(For your (boilerplate|stack|SaaS|setup|codebase|app)|[Yy]ou already (do|have|handle) this|[Yy]our current (approach|setup|implementation)|as (?:noted|identified) above)/;
+        /(^|\s)(For your (boilerplate|stack|SaaS|setup|codebase|app)\b|[Yy]ou already (do|have|handle) this(?!\s+(vocabulary|knowledge|habit|instinct))|[Yy]our current (approach|setup|implementation)\b|as (?:noted|identified) above)/;
       return file.lines
         .map((line, index) => ({ line, index }))
         .filter(({ line }) => pattern.test(line))
         .map(({ line, index }) => ({
           rule: 'voice/audit-residue',
-          severity: 'warn' as const,
+          severity: 'error' as const,
           target: file.target,
           line: index + 1,
           message: `assumes a codebase the reader has not seen: ${line.trim().slice(0, 90)}`,
@@ -322,7 +322,7 @@ export const RULES: Rule[] = [
   },
   {
     id: 'links/dead-lesson-ref',
-    severity: 'warn',
+    severity: 'error',
     description: 'A "#N" cross-reference to a lesson id that does not exist cannot ever become a link.',
     lesson: (file) => {
       const ids = new Set<number>();
@@ -338,7 +338,7 @@ export const RULES: Rule[] = [
           if (!ids.has(id))
             out.push({
               rule: 'links/dead-lesson-ref',
-              severity: 'warn',
+              severity: 'error',
               target: file.target,
               line: index + 1,
               message: `"(#${id})" refers to a lesson id that does not exist`,

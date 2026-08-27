@@ -5,7 +5,7 @@ Edge computing executes code at CDN PoPs (Points of Presence) geographically clo
 
 The key insight is that edge is not a replacement for your Node.js API routes — it's a layer in front of them. You run logic that needs low latency and doesn't need a database connection: authentication header inspection, geo-routing, A/B test cookie assignment, rate limiting via Durable Objects or Redis with an HTTP adapter, bot detection, and rewriting/redirecting URLs. Heavy work — querying PostgreSQL, running BullMQ jobs, calling Stripe — stays in your Node.js runtime.
 
-Cloudflare Workers extend this further with Durable Objects (strongly consistent stateful edge), R2 (S3-compatible object storage), and KV (eventually consistent key-value). For your stack, the most immediately useful application is replacing your Next.js `middleware.ts` with a smarter edge layer that handles tenant resolution by domain, sets a `X-Tenant-Id` header, and blocks invalid domains before they hit your Node.js handlers.
+Cloudflare Workers extend this further with Durable Objects (strongly consistent stateful edge), R2 (S3-compatible object storage), and KV (eventually consistent key-value). For a Next.js application the most immediately useful application is turning `middleware.ts` into a real edge layer: resolve the tenant from the request domain, set an `X-Tenant-Id` header, and reject unknown domains before the request ever reaches a Node.js handler. The win is not latency, it is that invalid traffic never occupies a server process.
 
 ## Key Concepts
 - **V8 isolate model**: No OS process per request; a V8 context is created and destroyed per invocation. Cold start is ~0–5 ms. This is why you can't run native binaries or open TCP sockets.

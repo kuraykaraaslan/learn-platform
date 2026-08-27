@@ -16,9 +16,9 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 | Class | Count |
 |---|---:|
-| undefined-identifier | 611 |
-| syntax | 346 |
-| type-error | 342 |
+| undefined-identifier | 449 |
+| type-error | 278 |
+| syntax | 51 |
 | implicit-any | 23 |
 
 ## Failing lessons
@@ -170,7 +170,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### ai-llm-engineering/163_mcp_server_auth_error_idempotency.md
 
-- `typescript` fence at line 21 (section: Example Code)
+- `tsx` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'redis'.
   - TS2304: Cannot find name 'redis'.
   - TS2304: Cannot find name 'server'.
@@ -287,7 +287,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### architecture-design-patterns-testing/69_tail_call_memoization_lazy_evaluation.md
 
-- `typescript` fence at line 25 (section: Example Code)
+- `tsx` fence at line 25 (section: Example Code)
   - TS2304: Cannot find name 'db'.
   - TS2304: Cannot find name 'AuditLogRow'.
   - TS2304: Cannot find name 'db'.
@@ -761,131 +761,24 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### framework-deep-dives/414_reactnative_expo_router_navigation.md
 
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1136: Property assignment expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1128: Declaration or statement expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1136: Property assignment expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1110: Type expected.
-  - TS1128: Declaration or statement expected.
-  - TS1128: Declaration or statement expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1136: Property assignment expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1136: Property assignment expected.
-  - TS1128: Declaration or statement expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1136: Property assignment expected.
-  - TS1128: Declaration or statement expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1128: Declaration or statement expected.
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1161: Unterminated regular expression literal.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1005: ';' expected.
-  - TS1110: Type expected.
+- `tsx` fence at line 21 (section: Example Code)
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2393: Duplicate function implementation.
-  - TS2304: Cannot find name 'style'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2300: Duplicate identifier 'Redirect'.
   - TS2300: Duplicate identifier 'useAuthStore'.
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2393: Duplicate function implementation.
-  - TS2304: Cannot find name 'href'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2304: Cannot find name 'screenOptions'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
   - TS2300: Duplicate identifier 'Redirect'.
   - TS2300: Duplicate identifier 'useAuthStore'.
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2393: Duplicate function implementation.
-  - TS2304: Cannot find name 'href'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2304: Cannot find name 'screenOptions'.
-  - TS2304: Cannot find name 'options'.
-  - TS2588: Cannot assign to 'name' because it is a constant.
-  - TS2304: Cannot find name 'options'.
   - TS2300: Duplicate identifier 'useAuthStore'.
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2393: Duplicate function implementation.
   - TS2304: Cannot find name 'AuthService'.
-  - TS2304: Cannot find name 'className'.
-  - TS2304: Cannot find name 'value'.
-  - TS2304: Cannot find name 'onChangeText'.
-  - TS2304: Cannot find name 'placeholder'.
-  - TS2304: Cannot find name 'className'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2304: Cannot find name 'value'.
-  - TS2304: Cannot find name 'onChangeText'.
-  - TS2304: Cannot find name 'placeholder'.
-  - TS2304: Cannot find name 'secureTextEntry'.
-  - TS2304: Cannot find name 'className'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2304: Cannot find name 'onPress'.
-  - TS2304: Cannot find name 'className'.
-  - TS2304: Cannot find name 'className'.
-  - TS2304: Cannot find name 'Sign'.
-  - TS2304: Cannot find name 'In'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2393: Duplicate function implementation.
-  - TS2304: Cannot find name 'href'.
-  - TS2304: Cannot find name 'Edit'.
-  - TS2304: Cannot find name 'user'.
 
 ### framework-deep-dives/415_reactnative_zustand_mmkv_state_management.md
 
@@ -904,7 +797,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### framework-deep-dives/416_reactnative_data_fetching_and_offline.md
 
-- `typescript` fence at line 21 (section: Example Code)
+- `tsx` fence at line 21 (section: Example Code)
   - TS2300: Duplicate identifier 'useState'.
   - TS2300: Duplicate identifier 'useEffect'.
   - TS2300: Duplicate identifier 'axiosInstance'.
@@ -927,76 +820,12 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### framework-deep-dives/418_reactnative_nativewind_styling_tokens_and_dark_mode.md
 
-- `typescript` fence at line 22 (section: Example Code)
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1005: ',' expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1128: Declaration or statement expected.
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1136: Property assignment expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1128: Declaration or statement expected.
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1136: Property assignment expected.
-  - TS1005: ';' expected.
-  - TS1136: Property assignment expected.
-  - TS1005: ';' expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1110: Type expected.
-  - TS1128: Declaration or statement expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1128: Declaration or statement expected.
+- `tsx` fence at line 22 (section: Example Code)
   - TS2300: Duplicate identifier 'View'.
-  - TS2304: Cannot find name 'className'.
-  - TS2367: This comparison appears to be unintentional because the types '{ scheme: any; }' and 'string' have no overlap.
-  - TS2839: This condition will always return 'false' since JavaScript compares objects by reference, not value.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2300: Duplicate identifier 'View'.
   - TS2300: Duplicate identifier 'useWindowDimensions'.
-  - TS2304: Cannot find name 'className'.
-  - TS2304: Cannot find name 'style'.
-  - TS2304: Cannot find name 'className'.
-  - TS2365: Operator '>' cannot be applied to types 'string' and '{ name: void; }'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS2304: Cannot find name 'className'.
-  - TS2365: Operator '>' cannot be applied to types 'string' and '{ email: any; }'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS18004: No value exists in scope for the shorthand property 'email'. Either declare one or provide an initializer.
   - TS2300: Duplicate identifier 'useWindowDimensions'.
-  - TS2304: Cannot find name 'key'.
-  - TS2304: Cannot find name 'numColumns'.
-  - TS2304: Cannot find name 'data'.
-  - TS2304: Cannot find name 'keyExtractor'.
-  - TS2349: This expression is not callable.   Type '{}' has no call signatures.
-  - TS2304: Cannot find name 'item'.
-  - TS2304: Cannot find name 'item'.
-  - TS2304: Cannot find name 'renderItem'.
-  - TS2349: This expression is not callable.   Type '{}' has no call signatures.
-  - TS18004: No value exists in scope for the shorthand property 'item'. Either declare one or provide an initializer.
-  - TS2304: Cannot find name 'className'.
-  - TS2749: 'UserCard' refers to a value, but is being used as a type here. Did you mean 'typeof UserCard'?
-  - TS2304: Cannot find name 'item'.
-  - TS2304: Cannot find name 'email'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 
 ### framework-deep-dives/419_reactnative_accessibility_and_feedback_patterns.md
 
@@ -1051,7 +880,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### framework-deep-dives/421_electron_process_model_and_typed_ipc.md
 
-- `typescript` fence at line 21 (section: Example Code)
+- `tsx` fence at line 21 (section: Example Code)
   - TS2300: Duplicate identifier 'IPC'.
   - TS2395: Individual declarations in merged declaration 'IPC' must be all exported or all local.
   - TS2300: Duplicate identifier 'UsersListReq'.
@@ -1071,7 +900,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### framework-deep-dives/422_electron_preload_and_context_isolation.md
 
-- `typescript` fence at line 21 (section: Example Code)
+- `tsx` fence at line 21 (section: Example Code)
   - TS1259: Module '"node:path"' can only be default-imported using the 'allowSyntheticDefaultImports' flag
 
 ### framework-deep-dives/423_electron_main_process_lifecycle_and_window_management.md
@@ -1092,7 +921,7 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2503: Cannot find namespace 'Electron'.
   - TS2339: Property 'env' does not exist on type 'ImportMeta'.
 
-### framework-deep-dives/425_electron_renderer_react_and_kuireact_fork.md
+### framework-deep-dives/425_electron_renderer_react_and_design_system_fork.md
 
 - `typescript` fence at line 21 (section: Example Code)
   - TS1005: '>' expected.
@@ -1203,197 +1032,37 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### frontend-performance-scaling/22_http2_multiplexing.md
 
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1109: Expression expected.
-  - TS1110: Type expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
+- `tsx` fence at line 21 (section: Example Code)
   - TS2528: A module cannot have multiple default exports.
   - TS2528: A module cannot have multiple default exports.
-  - TS2304: Cannot find name 'html'.
-  - TS2304: Cannot find name 'lang'.
-  - TS2304: Cannot find name 'head'.
-  - TS2304: Cannot find name 'link'.
-  - TS2304: Cannot find name 'rel'.
-  - TS2304: Cannot find name 'href'.
-  - TS2304: Cannot find name 'as'.
-  - TS2304: Cannot find name 'type'.
-  - TS2304: Cannot find name 'crossOrigin'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2365: Operator '>' cannot be applied to types 'number' and '{}'.
-  - TS2365: Operator '>' cannot be applied to types 'boolean' and '{ children: ReactNode; }'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS2304: Cannot find name 'body'.
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
 
 ### frontend-performance-scaling/23_react_server_components.md
 
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1127: Invalid character.
-  - TS1434: Unexpected keyword or identifier.
-  - TS1434: Unexpected keyword or identifier.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1110: Type expected.
-  - TS1128: Declaration or statement expected.
-  - TS1128: Declaration or statement expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1136: Property assignment expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1005: ',' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: ')' expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: '>' expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1127: Invalid character.
-  - TS1109: Expression expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1110: Type expected.
-  - TS1005: ';' expected.
-  - TS1136: Property assignment expected.
-  - TS1109: Expression expected.
-  - TS1109: Expression expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1127: Invalid character.
-  - TS1109: Expression expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1110: Type expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1128: Declaration or statement expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
+- `tsx` fence at line 21 (section: Example Code)
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2393: Duplicate function implementation.
   - TS2304: Cannot find name 'useDashboardData'.
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2304: Cannot find name 'DashboardLayout'.
-  - TS2588: Cannot assign to 'filter' because it is a constant.
-  - TS2304: Cannot find name 'onFilterChange'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2393: Duplicate function implementation.
   - TS2304: Cannot find name 'getDashboardStats'.
-  - TS2304: Cannot find name 'main'.
-  - TS2304: Cannot find name 'Only'.
-  - TS2683: 'this' implicitly has type 'any' because it does not have a type annotation.
-  - TS2304: Cannot find name 'is'.
-  - TS2304: Cannot find name 'client'.
-  - TS2304: Cannot find name 'side'.
-  - TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2304: Cannot find name 'data'.
-  - TS2304: Cannot find name 'initialData'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2304: Cannot find name 'Server'.
-  - TS2304: Cannot find name 'Component'.
-  - TS2304: Cannot find name 'no'.
-  - TS2304: Cannot find name 'JS'.
-  - TS2304: Cannot find name 'shipped'.
-  - TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2304: Cannot find name 'select'.
-  - TS2304: Cannot find name 'onChange'.
-  - TS2349: This expression is not callable.   Type '{}' has no call signatures.
-  - TS2304: Cannot find name 'e'.
-  - TS2304: Cannot find name 'e'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2393: Duplicate function implementation.
   - TS2304: Cannot find name 'getTenant'.
-  - TS2304: Cannot find name 'div'.
-  - TS2304: Cannot find name 'h1'.
-  - TS2304: Cannot find name 'fallback'.
   - TS2304: Cannot find name 'StatsSkeleton'.
-  - TS2749: 'TenantStats' refers to a value, but is being used as a type here. Did you mean 'typeof TenantStats'?
-  - TS2304: Cannot find name 'tenantId'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2304: Cannot find name 'Slow'.
-  - TS2304: Cannot find name 'query'.
-  - TS2304: Cannot find name 'streamed'.
-  - TS2322: Type 'number' is not assignable to type 'object'.
-  - TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2304: Cannot find name 'fallback'.
-  - TS2365: Operator '<' cannot be applied to types '{}' and 'number'.
   - TS2304: Cannot find name 'MembersSkeleton'.
   - TS2304: Cannot find name 'MemberList'.
-  - TS2304: Cannot find name 'tenantId'.
-  - TS2304: Cannot find name 'params'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2304: Cannot find name 'Medium'.
-  - TS2304: Cannot find name 'query'.
-  - TS2304: Cannot find name 'streamed'.
-  - TS2322: Type 'number' is not assignable to type 'object'.
-  - TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
   - TS2304: Cannot find name 'getExpensiveTenantAnalytics'.
   - TS2304: Cannot find name 'StatsGrid'.
-  - TS2304: Cannot find name 'data'.
   - TS2304: Cannot find name 'getServerSession'.
   - TS2304: Cannot find name 'db'.
-  - TS2304: Cannot find name 'form'.
-  - TS2304: Cannot find name 'action'.
-  - TS2365: Operator '>' cannot be applied to types '{ updateDisplayName: (formData: FormData) => Promise<void>; }' and '{}'.
-  - TS2304: Cannot find name 'input'.
-  - TS2588: Cannot assign to 'name' because it is a constant.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2304: Cannot find name 'button'.
-  - TS2304: Cannot find name 'type'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS2304: Cannot find name 'Save'.
 
 ### frontend-performance-scaling/24_bundle_size_optimization.md
 
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1005: '>' expected.
-  - TS1005: ',' expected.
-  - TS1005: ':' expected.
-  - TS1005: ',' expected.
-  - TS1005: ')' expected.
-  - TS1005: '>' expected.
-  - TS1005: '>' expected.
-  - TS1110: Type expected.
-  - TS1128: Declaration or statement expected.
-  - TS2304: Cannot find name 'div'.
-  - TS2304: Cannot find name 'className'.
-  - TS2304: Cannot find name 'div'.
-  - TS2749: 'RichTextEditor' refers to a value, but is being used as a type here. Did you mean 'typeof RichTextEditor'?
-  - TS2749: 'AnalyticsChart' refers to a value, but is being used as a type here. Did you mean 'typeof AnalyticsChart'?
+- `tsx` fence at line 21 (section: Example Code)
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2451: Cannot redeclare block-scoped variable 'grouped'.
   - TS2304: Cannot find name 'items'.
   - TS2451: Cannot redeclare block-scoped variable 'grouped'.
@@ -1409,135 +1078,37 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### frontend-performance-scaling/25_web_vitals.md
 
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1109: Expression expected.
-  - TS1110: Type expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1005: ':' expected.
-  - TS1005: ':' expected.
-  - TS1109: Expression expected.
-  - TS1109: Expression expected.
-  - TS1127: Invalid character.
-  - TS1435: Unknown keyword or identifier. Did you mean 'case'?
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1110: Type expected.
-  - TS1128: Declaration or statement expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS2304: Cannot find name 'html'.
-  - TS2304: Cannot find name 'body'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+- `tsx` fence at line 21 (section: Example Code)
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2304: Cannot find name 'db'.
-  - TS2304: Cannot find name 'src'.
-  - TS2304: Cannot find name 'width'.
-  - TS2304: Cannot find name 'height'.
-  - TS2304: Cannot find name 'alt'.
-  - TS2304: Cannot find name 'priority'.
   - TS2304: Cannot find name 'useState'.
   - TS2304: Cannot find name 'fetchBanner'.
-  - TS2304: Cannot find name 'div'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2304: Cannot find name 'Injected'.
-  - TS2304: Cannot find name 'causes'.
-  - TS2304: Cannot find name 'shift'.
   - TS2304: Cannot find name 'useState'.
   - TS2304: Cannot find name 'fetchBanner'.
-  - TS2304: Cannot find name 'div'.
-  - TS2304: Cannot find name 'className'.
-  - TS2365: Operator '>' cannot be applied to types 'string' and '{}'.
-  - TS2304: Cannot find name 'div'.
   - TS2304: Cannot find name 'heavyComputation'.
   - TS2304: Cannot find name 'setResult'.
-  - TS2304: Cannot find name 'button'.
-  - TS2304: Cannot find name 'onClick'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS2304: Cannot find name 'Calculate'.
   - TS2304: Cannot find name 'setLoading'.
   - TS2304: Cannot find name 'heavyComputation'.
   - TS2304: Cannot find name 'setResult'.
   - TS2304: Cannot find name 'setLoading'.
-  - TS2304: Cannot find name 'button'.
-  - TS2304: Cannot find name 'onClick'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS2304: Cannot find name 'Calculate'.
 
 ### frontend-performance-scaling/26_streaming_ssr_suspense.md
 
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: ')' expected.
-  - TS1136: Property assignment expected.
-  - TS1109: Expression expected.
-  - TS1109: Expression expected.
-  - TS1109: Expression expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1110: Type expected.
-  - TS1005: ';' expected.
-  - TS1136: Property assignment expected.
-  - TS1109: Expression expected.
-  - TS1109: Expression expected.
-  - TS1109: Expression expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1110: Type expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: '>' expected.
-  - TS1109: Expression expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1110: Type expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1128: Declaration or statement expected.
-  - TS1005: ';' expected.
-  - TS1128: Declaration or statement expected.
-  - TS1110: Type expected.
+- `tsx` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'getBillingData'.
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2304: Cannot find name 'BillingCard'.
-  - TS2304: Cannot find name 'data'.
   - TS2304: Cannot find name 'getTenantMembers'.
   - TS2304: Cannot find name 'TeamTable'.
   - TS2304: Cannot find name 'getAnalytics'.
   - TS2304: Cannot find name 'AnalyticsChart'.
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2393: Duplicate function implementation.
-  - TS2304: Cannot find name 'main'.
-  - TS2304: Cannot find name 'h1'.
-  - TS2304: Cannot find name 'Dashboard'.
-  - TS2304: Cannot find name 'fallback'.
-  - TS2365: Operator '<' cannot be applied to types '{}' and 'number'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and '({ tenantId }: { tenantId: string; }) => Promise<BillingCard>'.
-  - TS2304: Cannot find name 'fallback'.
-  - TS2365: Operator '<' cannot be applied to types '{}' and 'number'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and '({ tenantId }: { tenantId: string; }) => Promise<TeamTable>'.
-  - TS2304: Cannot find name 'fallback'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and '({ tenantId }: { tenantId: string; }) => Promise<AnalyticsChart>'.
+  - TS2578: Unused '@ts-expect-error' directive.
+  - TS2578: Unused '@ts-expect-error' directive.
+  - TS2578: Unused '@ts-expect-error' directive.
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2393: Duplicate function implementation.
-  - TS2304: Cannot find name 'div'.
-  - TS2304: Cannot find name 'dashboard'.
 
 ### frontend-performance-scaling/28_horizontal_scaling_stateless_design.md
 
@@ -1626,69 +1197,11 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### saas-business-skills/90_accessibility.md
 
-- `typescript` fence at line 22 (section: Example Code or Template)
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1136: Property assignment expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1127: Invalid character.
-  - TS1110: Type expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1110: Type expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1128: Declaration or statement expected.
+- `tsx` fence at line 22 (section: Example Code or Template)
   - TS18046: 'el' is of type 'unknown'.
   - TS2339: Property 'focus' does not exist on type '{}'.
   - TS2339: Property 'focus' does not exist on type '{}'.
-  - TS2304: Cannot find name 'div'.
-  - TS2304: Cannot find name 'className'.
-  - TS2304: Cannot find name 'aria'.
-  - TS2304: Cannot find name 'hidden'.
-  - TS2304: Cannot find name 'onClick'.
-  - TS2365: Operator '>' cannot be applied to types '{ onClose: () => void; }' and '{}'.
-  - TS2304: Cannot find name 'div'.
-  - TS2304: Cannot find name 'ref'.
-  - TS2304: Cannot find name 'role'.
-  - TS2304: Cannot find name 'aria'.
-  - TS2304: Cannot find name 'modal'.
-  - TS2304: Cannot find name 'aria'.
-  - TS2304: Cannot find name 'labelledby'.
-  - TS2304: Cannot find name 'className'.
-  - TS2304: Cannot find name 'onKeyDown'.
-  - TS2304: Cannot find name 'onClick'.
-  - TS2349: This expression is not callable.   Type '{}' has no call signatures.
-  - TS2304: Cannot find name 'e'.
-  - TS2304: Cannot find name 'e'.
-  - TS2304: Cannot find name 'button'.
-  - TS2304: Cannot find name 'type'.
-  - TS2304: Cannot find name 'onClick'.
-  - TS18004: No value exists in scope for the shorthand property 'onClose'. Either declare one or provide an initializer.
-  - TS2304: Cannot find name 'className'.
-  - TS2304: Cannot find name 'aria'.
-  - TS2304: Cannot find name 'label'.
-  - TS2365: Operator '>' cannot be applied to types 'string' and '{}'.
-  - TS2304: Cannot find name 'span'.
-  - TS2304: Cannot find name 'aria'.
-  - TS2304: Cannot find name 'hidden'.
-  - TS2304: Cannot find name 'h2'.
-  - TS2304: Cannot find name 'id'.
-  - TS2304: Cannot find name 'titleId'.
-  - TS2304: Cannot find name 'className'.
-  - TS2365: Operator '>' cannot be applied to types 'string' and '{ title: any; }'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS18004: No value exists in scope for the shorthand property 'title'. Either declare one or provide an initializer.
-  - TS2304: Cannot find name 'children'.
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
 
 ### saas-business-skills/91_mobile_first_api_design.md
 
@@ -1697,17 +1210,8 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### saas-business-skills/93_ab_test_infrastructure.md
 
-- `typescript` fence at line 22 (section: Example Code or Template)
-  - TS1005: '>' expected.
-  - TS1005: ')' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS2304: Cannot find name 'button'.
-  - TS2304: Cannot find name 'onClick'.
-  - TS2304: Cannot find name 'className'.
-  - TS2365: Operator '>' cannot be applied to types 'string' and '{ buttonText: string; }'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
+- `tsx` fence at line 22 (section: Example Code or Template)
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
 
 ### security/143_compliance_frameworks.md
 
@@ -1792,35 +1296,10 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### security/35_content_security_policy_csp_headers.md
 
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1005: ')' expected.
-  - TS1005: ';' expected.
-  - TS1136: Property assignment expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1110: Type expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1128: Declaration or statement expected.
-  - TS1128: Declaration or statement expected.
+- `tsx` fence at line 21 (section: Example Code)
   - TS2300: Duplicate identifier 'NextRequest'.
   - TS2300: Duplicate identifier 'NextResponse'.
   - TS1192: Module '"crypto"' has no default export.
-  - TS2304: Cannot find name 'html'.
-  - TS2304: Cannot find name 'head'.
-  - TS2304: Cannot find name 'script'.
-  - TS2588: Cannot assign to 'nonce' because it is a constant.
-  - TS2304: Cannot find name 'dangerouslySetInnerHTML'.
-  - TS2304: Cannot find name 'body'.
-  - TS2635: Type 'RegExp' has no signatures for which the type argument list is applicable.
-  - TS2304: Cannot find name 'children'.
-  - TS2304: Cannot find name 'src'.
-  - TS2304: Cannot find name 'strategy'.
-  - TS2304: Cannot find name 'nonce'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
-  - TS18004: No value exists in scope for the shorthand property 'nonce'. Either declare one or provide an initializer.
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2300: Duplicate identifier 'NextRequest'.
   - TS2300: Duplicate identifier 'NextResponse'.

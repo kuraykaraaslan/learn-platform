@@ -18,7 +18,7 @@ The subtlest and most impactful optimization is **client component boundary plac
 - **Bundle analysis**: Server Components have zero bundle cost; every Client Component import adds to the JS delivered to the browser
 
 ## Example Code
-```typescript
+```tsx
 // ─── 1. Correct client boundary placement ───
 // BAD: "use client" at the page level converts everything to client
 // app/dashboard/page.tsx

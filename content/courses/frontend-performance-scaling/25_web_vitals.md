@@ -18,7 +18,7 @@ The critical distinction is **field data vs lab data**. Lighthouse is a lab tool
 - **Attribution**: The `web-vitals` library's attribution feature identifies which element caused the CLS, which interaction caused the INP — essential for knowing what to fix
 
 ## Example Code
-```typescript
+```tsx
 // ─── 1. Instrument Core Web Vitals in your Next.js app ───
 // npm install web-vitals
 

@@ -7,7 +7,7 @@ Property-based testing inverts this. Instead of writing specific examples, you d
 
 The canonical example: instead of testing `sort([3,1,2]) === [1,2,3]`, you test two properties: (1) the output array has the same length as the input, and (2) every element is less than or equal to the next element. These properties hold for any array, so the framework can generate thousands of random arrays and verify both properties on each.
 
-For your stack, property-based testing shines on Zod schemas (does the schema accept exactly what it should and reject everything else?), password hashing (does `verify(hash(x), x)` hold for all `x`?), and multi-tenant isolation invariants (does a query for tenant A ever return data from tenant B?).
+In a typical TypeScript backend, property-based testing earns its keep in three places: schema validation (does the schema accept exactly what it should and reject everything else?), password hashing (does `verify(hash(x), x)` hold for all `x`?), and tenant isolation (can a query scoped to tenant A ever return a row belonging to tenant B?). The common thread is that each has an invariant you can state in one sentence but could never enumerate as examples.
 
 ## Key Concepts
 - **Property** — an invariant that must hold for all valid inputs; expressed as a function that returns `true` or throws

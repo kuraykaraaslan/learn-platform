@@ -5,7 +5,7 @@ A reference resource is a comprehensive, structured piece of content or tooling 
 
 The leverage of a reference resource is unlike any other form of content. A blog post reaches people once. A course, guide, or tool becomes the resource that people search for when they are ready to build what you build. The developer looking to start a multi-tenant SaaS in 2027 will find your resource the same way a developer in 2025 would — the relevance does not expire as quickly as news or opinion content. When that developer needs help, they know exactly where to go. When that developer becomes a buyer, they already trust you.
 
-Your specific situation — 74K lines of formalized rulesets, a production multi-tenant SaaS boilerplate in Next.js/TypeScript/PostgreSQL, three years of solo full-stack experience, and documented processes for everything from technical architecture to client acquisition — is the raw material for the most comprehensive reference resource on running a solo SaaS business that currently exists. The question is not whether you have the content; it is which format to extract it into first, and how to build an audience for that resource before or alongside building it.
+Most developers who could write a reference resource believe they have nothing to write, because the raw material does not look like content while it is still work: a boilerplate refined across four client projects, the checklist you follow before every deploy, the architecture decisions you can now defend without thinking. The audit worth running is mechanical — list the artifacts you already maintain (templates, scaffolds, internal rules, runbooks, decision records), then ask which of them a stranger would pay to skip building. That intersection, not a blank page, is where a reference resource starts. The real question is rarely whether you have the content; it is which format to extract it into first, and how to build an audience for it before or alongside building it.
 
 ## Key Concepts
 - **Audience specificity**: The more specific the audience ("solo full-stack developers building their first SaaS on Next.js"), the more resonant the resource — broad resources compete with everything; specific resources own a niche
@@ -13,7 +13,7 @@ Your specific situation — 74K lines of formalized rulesets, a production multi
 - **The "build in public" strategy**: Documenting your creation process on LinkedIn, Twitter/X, or a blog while building the resource creates an audience before the resource is complete; it also generates feedback that improves the resource before release
 - **Pre-selling**: Offering the resource for purchase before it is complete (with a clear delivery timeline) validates demand before you invest the full creation time; if nobody buys a pre-sale, the market signal is valuable
 - **Minimum viable resource**: A 1-hour focused course or a 20-page guide that is complete and excellent beats a 40-hour course that is never finished; ship an MVP, get feedback, expand based on demand
-- **Content-to-tool pipeline**: Your rulesets are content; extracting them as a CLI tool or configuration generator is the same knowledge in a more immediately useful format for developers
+- **Content-to-tool pipeline**: Internal rules and conventions are content; extracting them as a CLI tool, a linter config, or a scaffolding generator is the same knowledge in a form a developer can use before they have read anything
 - **Evergreen vs. time-sensitive**: Resources about architecture patterns and business principles age slowly; resources about specific library APIs age quickly; weight your resource toward the former
 - **Platform choices**: Gumroad and Lemon Squeezy for digital products; Maven and Podia for courses; GitHub for tools; your own domain for guides that serve as SEO content
 
@@ -50,10 +50,11 @@ Your resource replaces all of the above with one authoritative, complete source.
 | Boilerplate | Project scaffolding             | Ongoing       | Free + paid support |
 | Newsletter  | Ongoing relationship             | Ongoing       | Sponsorships, affiliate |
 
-Your existing boilerplate + 74K lines of rulesets → STRONG candidate for:
+Worked example — a developer with a production boilerplate and a set of
+internal architecture rules has three plausible extractions:
 1. A paid guide: "The Solo SaaS Developer's Architecture Handbook"
 2. An open boilerplate + paid course: "Build Multi-Tenant SaaS with Next.js"
-3. A CLI tool that generates a configured Next.js multi-tenant project from your rules
+3. A CLI tool that scaffolds a configured multi-tenant project from those rules
 
 ## 4. Content Outline (table of contents first)
 [Write the full table of contents before writing any content.
@@ -95,16 +96,18 @@ Recommended starting point for your situation:
 ---
 
 ```markdown
-# Your Specific Extraction Opportunities
+# Extraction Worksheet — Worked Example
 
-Given your 74K lines of rulesets and multi-tenant SaaS boilerplate,
-here are the three highest-leverage resource formats to consider:
+Filled in for a developer whose assets are a production multi-tenant
+boilerplate and a documented set of internal architecture rules. Replace
+the assets with your own and the three options fall out the same way:
 
 ## Option A: "The Multi-Tenant Next.js Handbook"
 **Format**: Comprehensive written guide (PDF + web)
 **Audience**: Developers starting a B2B SaaS on Next.js
-**Your unique edge**: You have solved these problems in production AND formalized
-  the solutions into 74K lines of rules — nobody else has this combination
+**Unique edge**: the problems were solved in production first and formalized
+  into written rules second — the combination is what a reader cannot get from
+  documentation alone
 **Estimated creation time**: 3–4 weeks (much of the content is already written)
 **Monetization**: $49–$99 one-time; or free web version with paid PDF
 

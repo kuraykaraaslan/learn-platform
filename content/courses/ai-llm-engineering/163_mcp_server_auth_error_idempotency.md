@@ -18,7 +18,7 @@ Idempotency is the last piece, and it follows directly from the verb taxonomy es
 - **Partial results must say so explicitly**: a `partial: true` flag and a per-item breakdown, never a batch result presented as fully successful when part of it failed
 
 ## Example Code
-```typescript
+```tsx
 // middleware/auth.ts — validated once, never per-handler
 function createAuthMiddleware(validTokens: Set<string>) {
   return (req: Request, next: () => Promise<Response>): Promise<Response> => {

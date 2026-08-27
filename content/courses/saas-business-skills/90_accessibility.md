@@ -19,7 +19,7 @@ For a Next.js SaaS, the highest-impact accessibility work falls into five areas:
 
 ## Example Code or Template
 
-```typescript
+```tsx
 // Accessible modal dialog — keyboard trap, ARIA, focus management
 // Compatible with Next.js App Router and Tailwind CSS
 

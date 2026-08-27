@@ -19,7 +19,7 @@ Memory profiling catches leaks: objects that accumulate over time because someth
 
 ## Example Code
 
-```typescript
+```tsx
 // Deliberate memory leak — spot this pattern in production code
 class EventBus {
   private static handlers: Map<string, Function[]> = new Map();

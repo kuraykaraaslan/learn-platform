@@ -18,7 +18,7 @@ Two failure modes are common enough to call out explicitly. First, validating th
 - **Errors cross the boundary as data, not as thrown exceptions** — a thrown error in `handle` loses its shape; return a discriminated `Result<T>` envelope instead so the renderer can branch on `res.ok` with full type information
 
 ## Example Code
-```typescript
+```tsx
 // shared/ipc-contract.ts — imported by main, preload, AND renderer; types + Zod only
 import { z } from "zod";
 

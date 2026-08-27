@@ -7,7 +7,7 @@ Optimistic locking assumes conflicts are rare and detects them at write time. Th
 
 Pessimistic locking acquires a database-level lock at read time: `SELECT FOR UPDATE` (or `FOR SHARE`) holds a row lock until the transaction commits. Any concurrent transaction that tries to select the same row for update will wait. This guarantees that the state you read is the state you write to — no other transaction can change it between your read and your write. The downside is reduced concurrency: transactions queue up behind each other, and a slow transaction holds the lock for longer.
 
-For your SaaS, pessimistic locking is the safer default for low-frequency high-stakes operations (adding a member, activating a subscription, consuming a coupon). Optimistic locking is better for high-frequency operations where conflicts are rare and retries are cheap.
+As a default: pessimistic locking for low-frequency, high-stakes operations — adding a member against a seat limit, activating a subscription, consuming a single-use coupon — where a lost update is unrecoverable and the lock is held for milliseconds. Optimistic locking for high-frequency operations where conflicts are genuinely rare and a retry is cheap. The word doing the work in that sentence is *rare*: if you cannot say what your conflict rate actually is, you are guessing, and the section below shows how to measure it.
 
 ## Key Concepts
 - **Race condition** — Two concurrent transactions both read the same state and both proceed to write, producing an inconsistent final state

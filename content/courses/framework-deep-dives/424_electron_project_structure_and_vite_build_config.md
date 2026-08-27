@@ -34,7 +34,7 @@ my-app/
 │   ├── renderer/
 │   │   ├── main.tsx
 │   │   ├── modules/        ← feature modules: modules/users/ui, modules/users/users.store.ts
-│   │   ├── components/     ← forked KUIreact
+│   │   ├── components/     ← vendored design system
 │   │   └── stores/
 │   └── shared/              ← types + Zod ONLY — imported by all three processes
 │       └── ipc-contract.ts

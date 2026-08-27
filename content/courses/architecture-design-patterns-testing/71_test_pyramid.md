@@ -11,7 +11,7 @@ At the top, **E2E tests** (end-to-end) drive a real browser through a real user 
 
 The pyramid ratio for a typical SaaS: 70% unit, 20% integration, 10% E2E. Most teams get the pyramid upside down — they rely entirely on manual testing and a few E2E tests, which is slow, fragile, and gives no fast feedback during development.
 
-For your codebase, the highest-value first tests are integration tests on `AuthService.login` and `AuthService.register` — the services that gate all user access — followed by unit tests on your Zod schemas and pure utility functions.
+When a codebase has no tests at all, the highest-value first tests are integration tests on whatever gates access — `login` and `register` in a typical auth service — followed by unit tests on schema validation and pure utility functions. The ordering rule generalises: start where a silent failure is unrecoverable, not where testing is easiest.
 
 ## Key Concepts
 - **Unit test** — tests one function; all external dependencies are mocked; fast, cheap, high volume

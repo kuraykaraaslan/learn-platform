@@ -23,7 +23,7 @@ The inverted pyramid structure applies to all three: most important information 
 
 **Severity:** P2  
 **Last verified:** 2026-05-04  
-**Owner:** @kuray  
+**Owner:** @your-handle  
 
 ## Symptoms
 - `/api/auth/login` returning 5xx at > 1% rate
@@ -56,9 +56,9 @@ The inverted pyramid structure applies to all three: most important information 
 
 5. If service is unreachable, restart:
    ```bash
-   pm2 restart next-boilerplate
+   pm2 restart acme-web
    # or in Kubernetes:
-   kubectl rollout restart deployment/next-boilerplate
+   kubectl rollout restart deployment/acme-web
    ```
 
 ## Root Cause Categories

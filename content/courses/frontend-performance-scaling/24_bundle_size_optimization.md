@@ -18,7 +18,7 @@ The JavaScript bundle delivered to the user is one of the most direct levers on 
 - **`import()` hint comments**: `/* webpackChunkName: "editor" */` gives a human-readable name to dynamic import chunks — helpful for debugging
 
 ## Example Code
-```typescript
+```tsx
 // ─── 1. Bundle analysis setup ───
 // npm install @next/bundle-analyzer --save-dev
 // next.config.ts

@@ -33,8 +33,8 @@ If you know a founder, ops lead, or agency that might need this
 kind of technical partner, would you be comfortable introducing us?
 
 You can simply forward this:
-"Kuray helped us replace three spreadsheets with a live reporting
-dashboard. He builds production-ready web platforms and workflow
+"[Your Name] helped us replace three spreadsheets with a live reporting
+dashboard. They build production-ready web platforms and workflow
 automation. Worth a conversation before scoping any custom project."
 
 ---

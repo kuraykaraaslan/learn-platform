@@ -19,7 +19,7 @@ Dark mode has no CSS media query to lean on, so it's built from `useColorScheme(
 - **`SafeAreaView` or `useSafeAreaInsets()` wraps every screen root** — a raw `View` at the top level ignores notches, status bars, and home indicators
 
 ## Example Code
-```typescript
+```tsx
 // tailwind.config.js — tokens come from one file, never inline hex in components
 module.exports = {
   content: ["./app/**/*.{tsx,ts}", "./components/**/*.{tsx,ts}"],

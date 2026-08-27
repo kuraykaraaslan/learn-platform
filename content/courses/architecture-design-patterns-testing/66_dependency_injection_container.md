@@ -7,7 +7,7 @@ You probably know what DI is conceptually — injecting dependencies instead of 
 
 The core idea is a `Map<Token, Factory>`. You register a token (usually a string or a `Symbol`) with a factory function that creates the instance. When code asks for a token, the container calls the factory, resolves any transitive dependencies, and returns the instance — optionally caching it as a singleton.
 
-For your boilerplate, the immediate gap is not necessarily "install a DI framework" — it is "move from static methods to instance methods so dependencies can be injected at all." A minimal hand-rolled container gives you most of the benefit with none of the decorator-metadata complexity.
+In most codebases the immediate gap is not "install a DI framework" — it is "move from static methods to instance methods so dependencies can be injected at all." A service class whose methods are all `static` has no seam to inject through, and no container can add one. Make that change first; a minimal hand-rolled container then gives you most of the benefit with none of the decorator-metadata complexity.
 
 ## Key Concepts
 - **Token** — a key used to identify a dependency (string, Symbol, or class constructor reference)

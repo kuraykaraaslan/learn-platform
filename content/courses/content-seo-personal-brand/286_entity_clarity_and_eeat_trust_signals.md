@@ -21,8 +21,8 @@ Two concrete assets carry most of this weight on a small site: the author box an
 ```md
 ## Author Box Template
 
-Written by Kuray Karaaslan, a software engineer focused on production-ready
-SaaS MVPs and internal business platforms. He builds admin panels,
+Written by [Your Name], a software engineer focused on production-ready
+SaaS MVPs and internal business platforms. They build admin panels,
 dashboards, and workflow automation systems using React, Next.js, Node.js,
 and PostgreSQL. This article is based on practical experience with
 appointment/booking, ticketing, and operations-platform projects.
