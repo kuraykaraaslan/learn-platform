@@ -34,6 +34,19 @@ class SlackNotification implements NotificationStrategy {
   async send(to: string, _subject: string, body: string) { /* Slack webhook */ }
 }
 
+// The port the Observer example below depends on, and the entity it acts on.
+interface IEmailService {
+  send(to: string, subject: string, body: string): Promise<void>;
+}
+
+class User {
+  constructor(public readonly email: string) {}
+}
+
+declare const AuthService: {
+  login(email: string, password: string): Promise<{ accessToken: string }>;
+};
+
 // The context — picks strategy based on user preference
 class NotificationService {
   constructor(private readonly strategy: NotificationStrategy) {}

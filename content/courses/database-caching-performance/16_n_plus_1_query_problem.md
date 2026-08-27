@@ -61,6 +61,9 @@ import DataLoader from 'dataloader';
 
 // Create one DataLoader per request (not per-app — must not cache across requests)
 function createUserLoader(db: PrismaClient) {
+    // Only what the loader hands back to callers.
+  type User = { id: string; email: string; displayName: string };
+
   return new DataLoader<string, User | null>(async (userIds) => {
     const users = await db.user.findMany({
       where: { id: { in: [...userIds] } },

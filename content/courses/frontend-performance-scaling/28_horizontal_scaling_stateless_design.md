@@ -21,6 +21,13 @@ The nuance your design navigates well is the difference between stateless at the
 ```typescript
 // The anti-pattern: in-memory state that breaks horizontal scaling
 // DON'T DO THIS
+// "Safe" is doing real work in these names: what leaves the server is a
+// deliberate subset of the row, with the password hash and the raw refresh
+// token excluded by construction rather than by remembering to delete them.
+type SafeUser = { id: string; email: string; displayName: string; role: string };
+type SafeUserSession = { id: string; expiresAt: Date };
+type SessionData = { user: SafeUser; userSession: SafeUserSession };
+
 const sessionCache = new Map<string, SessionData>(); // lives on ONE instance only
 
 export function getSession(token: string) {

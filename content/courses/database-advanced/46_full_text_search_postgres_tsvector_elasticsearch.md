@@ -80,6 +80,15 @@ export async function searchProjects(
 
 // ─── Option B: Prisma equivalent using $queryRaw ─────────────────────────
 
+// A raw query returns the columns as PostgreSQL names them, plus whatever the
+// SELECT computes — `rank` exists only on a search result, never on the table.
+type User = {
+  id: string;
+  email: string;
+  display_name: string;
+  rank: number;
+};
+
 async function searchUsers(prisma: PrismaClient, query: string): Promise<User[]> {
   const tsQuery = query
     .trim()

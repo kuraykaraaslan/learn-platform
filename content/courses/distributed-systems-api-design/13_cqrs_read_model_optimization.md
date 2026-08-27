@@ -44,6 +44,19 @@ CREATE UNIQUE INDEX ON tenant_usage_summary (tenant_id);
 
 // Application: query the materialized view (fast — pre-computed)
 async function getTenantDashboardData(tenantId: string) {
+  // One row of the materialized view above. The names are snake_case because a
+// raw query returns the columns as PostgreSQL names them — no ORM mapping runs.
+// The nullable fields are the LEFT JOINs: a tenant with no activity has no row
+// to aggregate.
+type TenantUsageSummary = {
+  tenant_id: string;
+  tenant_name: string;
+  member_count: number;
+  active_sessions: number;
+  last_activity_at: Date | null;
+  requests_last_30d: number | null;
+};
+
   return db.$queryRaw<TenantUsageSummary[]>`
     SELECT * FROM tenant_usage_summary WHERE tenant_id = ${tenantId}
   `;

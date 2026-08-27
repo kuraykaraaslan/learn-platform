@@ -70,11 +70,27 @@ drawn where the reader loses information:
 | A name used as a **type annotation** with no declaration | Same, and it will not compile where they paste it |
 | An import from a real package that is simply missing | It just does not run |
 
-`scripts/verify-code.ts` encodes exactly this: the first two are reported as
-`assumed-context` / `assumed-helper` and tolerated, everything else is a
-defect. Generated type declarations were deliberately **not** used to close the
-gap — `type UserRecord = { id: unknown }` satisfies the compiler and teaches
-nothing, which is the failure mode this corpus is most at risk of.
+`scripts/verify-code.ts` encodes exactly this. The corpus is currently at
+**zero** defects under it, so both gates run with `--strict` and a regression
+fails the build.
+
+Two things the verifier deliberately does NOT treat as defects, because
+modelling them wrongly is how a tool produces confident nonsense:
+
+- **A fence that shows several files.** They are split on the path comment and
+  checked separately; otherwise two route handlers both called `GET` look like
+  a duplicate-symbol error.
+- **A fence that shows two versions of the same thing** — the wrong one and the
+  right one. That is the teaching pattern, so duplicate identifiers inside one
+  snippet are `shows-variants`.
+
+Node and DOM snippets are checked under separate libs: `lib.dom`'s global
+`crypto` is Web Crypto and shadows Node's module, which made every
+`crypto.randomBytes` look broken.
+
+Generated type declarations were deliberately **not** used to close the gap —
+`type UserRecord = { id: unknown }` satisfies the compiler and teaches nothing.
+The declarations that were added name real fields and say why they matter.
 
 Rules ship as `warn` and are promoted to `error` once the corpus is clean of
 them, so the gate never blocks on a backlog it did not create.

@@ -59,6 +59,16 @@ interface UserResponseV1 {
 }
 
 // Serialize for v1 clients: include BOTH old and new field names
+// The row as the ORM hands it back — camelCase properties over snake_case
+// columns. Both names exist at once here, which is the whole point of the
+// expand phase: nothing may be dropped while old instances are still running.
+type DbUser = {
+  id: string;
+  email: string;
+  fullName: string;      // the old column, still written during the transition
+  displayName: string;   // the new column
+};
+
 function serializeUserV1(user: DbUser): UserResponseV1 {
   return {
     id: user.id,

@@ -8,8 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "test": "vitest run",
-    "content:lint": "tsx scripts/content-lint",
-    "content:verify-code": "tsx scripts/verify-code.ts",
+    "content:lint": "tsx scripts/content-lint --strict",
+    "content:verify-code": "tsx scripts/verify-code.ts --strict",
     "content:snapshot": "tsx scripts/parse-snapshot.ts",
     "content:check": "npm run content:lint && npm run content:verify-code && npm run test"
   },

@@ -19,7 +19,7 @@ The uncomfortable truth about sharding is that it forces you to give up most of 
 
 ## Example Code
 ```typescript
-// Illustrating tenant-based sharding — conceptually matching your per-tenant DB architecture
+// Illustrating tenant-based sharding, the shape a per-tenant database layout takes
 // This shows a shard router that maps tenantId → DataSource
 
 import { PrismaClient } from '@prisma/client';
@@ -75,6 +75,16 @@ function hashShardKey(key: string, shardCount: number): number {
   }
   return hash % shardCount;
 }
+
+// The event as the caller supplies it. `tenantId` is deliberately absent: it
+// is the shard key, added at write time, so a caller cannot accidentally send
+// an event to the wrong shard by setting it themselves.
+type AuditEvent = {
+  id: string;
+  actorId: string;
+  action: string;
+  createdAt: Date;
+};
 
 async function insertAuditEvent(tenantId: string, event: AuditEvent) {
   const shardIndex = hashShardKey(tenantId, SHARDS.length);

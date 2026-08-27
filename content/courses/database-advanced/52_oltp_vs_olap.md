@@ -59,6 +59,13 @@ async function refreshAnalyticsView(db: Pool): Promise<void> {
 import { Pool } from 'pg';
 import Database from 'duckdb'; // npm install duckdb
 
+// One row of the aggregation above, in the shape the SELECT produces.
+type AnalyticsRow = {
+  day: Date;
+  active_users: number;
+  total_events: number;
+};
+
 async function buildAnalyticsSnapshot(rows: AnalyticsRow[]): Promise<void> {
   const duck = new Database(':memory:');
   const conn = duck.connect();

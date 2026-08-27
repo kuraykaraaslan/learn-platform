@@ -22,6 +22,10 @@ Testing follows a pyramid shaped by the process model itself: most coverage is V
 
 ## Example Code
 ```typescript
+import React from 'react';
+import { ipcMain } from 'electron';
+import { IPC } from '../shared/ipc';
+
 // shared/result.ts + main/ipc/users.ipc.ts — errors cross IPC as typed data, never a throw
 export type Result<T> = { ok: true; data: T } | { ok: false; error: { code: string; userMessage: string } };
 

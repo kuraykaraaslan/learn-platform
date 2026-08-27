@@ -27,7 +27,27 @@ SOLID is an acronym for five object-oriented design principles that, when applie
 ```typescript
 // Demonstrating DIP + ISP + SRP applied to AuthService
 
+// The validated environment object — one place reads process.env, everything
+// else imports the parsed result. A secret typed as `string` here is a secret
+// the app cannot start without.
+declare const env: { ACCESS_TOKEN_SECRET: string };
+
 // ── Define interfaces (abstractions) ────────────────────────────────────────
+
+// The two shapes the repository port trades in. `UserRecord` is what storage
+// returns — note it carries the hash, never the password — and `CreateUserDto`
+// is what a caller may supply. Keeping them separate is ISP applied to data:
+// a create call has no business being able to set an id.
+type UserRecord = {
+  id: string;
+  email: string;
+  hashedPassword: string;
+};
+
+type CreateUserDto = {
+  email: string;
+  password: string;
+};
 
 // ISP: UserRepository only has what AuthService actually needs
 import { DataSource } from 'typeorm';
@@ -105,7 +125,14 @@ class MockUserRepository implements IUserRepository {
   }
 
   async create(data: CreateUserDto) {
-    const user = { id: 'mock-id', ...data } as UserRecord;
+    // `data` is a CreateUserDto, so it carries `password`, not `hashedPassword` —
+    // a straight cast is rejected, and rightly so. Building the record explicitly
+    // is also the honest version: a fake repository still has to hash.
+    const user: UserRecord = {
+      id: 'mock-id',
+      email: data.email,
+      hashedPassword: `hashed:${data.password}`,
+    };
     this.users.push(user);
     return user;
   }

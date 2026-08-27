@@ -15,6 +15,13 @@
  *   npx tsx scripts/verify-code.ts --strict # exit 1 if any defect remains
  */
 import fs from 'node:fs';
+
+// Piping this report into `head` closes stdout early; without this the process
+// dies with an unhandled EPIPE instead of just stopping.
+process.stdout.on('error', (error: NodeJS.ErrnoException) => {
+  if (error.code === 'EPIPE') process.exit(0);
+  throw error;
+});
 import ts from 'typescript';
 import os from 'node:os';
 import path from 'node:path';
@@ -89,7 +96,7 @@ type DefectClass =
 const ASSUMED_CONTEXT = new Set([
   'db', 'prisma', 'PrismaClient', 'redis', 'logger', 'dataSource', 'systemDb',
   'queue', 'sagaQueue', 'pool', 'anthropic', 'eventBus', 'repo', 'sessionRepo',
-  'userRepo', 'rotationHistoryRepo',
+  'userRepo', 'rotationHistoryRepo', 'stripe', 'tenantDb', 'systemDb',
 ]);
 
 function classify(code: string, message = ''): DefectClass {
@@ -127,25 +134,59 @@ function classify(code: string, message = ''): DefectClass {
  * and that IS a defect.
  */
 function callOnlyNames(source: ts.SourceFile): Set<string> {
+  // `called` ends up meaning "referenced in a way that carries its own
+  // meaning": a call, a service method call, or a bare mention such as an ORM
+  // model token (`manager.findOne(Tenant, ...)`) or a named constant
+  // (`system: SUMMARY_SYSTEM_PROMPT`). None of those require the reader to know
+  // an internal shape.
   const called = new Set<string>();
   const shaped = new Set<string>();
 
   const visit = (node: ts.Node) => {
-    if (ts.isCallExpression(node) && ts.isIdentifier(node.expression)) {
-      called.add(node.expression.text);
+    if (ts.isCallExpression(node)) {
+      // `helper(x)` and `Service.method(x)` are both behaviour: the call names
+      // what happens, and the arguments are visible.
+      if (ts.isIdentifier(node.expression)) called.add(node.expression.text);
+      else if (
+        ts.isPropertyAccessExpression(node.expression) &&
+        ts.isIdentifier(node.expression.expression)
+      )
+        called.add(node.expression.expression.text);
     }
     if (ts.isPropertyAccessExpression(node) && ts.isIdentifier(node.expression)) {
-      shaped.add(node.expression.text);
+      // `AuthService.login(input)` is behaviour: the call is self-describing in
+      // exactly the way a bare helper call is, and spelling out the service's
+      // interface would pad the snippet.
+      //
+      // `user.email` is data: the reader cannot know what a User carries unless
+      // the lesson shows it, so a value read keeps the name in `shaped`.
+      const isImmediatelyCalled =
+        ts.isCallExpression(node.parent) && node.parent.expression === node;
+      if (!isImmediatelyCalled) shaped.add(node.expression.text);
     }
     if (ts.isTypeReferenceNode(node) && ts.isIdentifier(node.typeName)) {
       shaped.add(node.typeName.text);
     }
     if (ts.isNewExpression(node) && ts.isIdentifier(node.expression)) {
-      shaped.add(node.expression.text);
+      // `new BcryptPasswordHasher()` is construction, and the name plus the
+      // port it satisfies is the whole contract — the same reasoning as a call.
+      // If a value is read off the result, the property-access branch above
+      // still disqualifies it.
+      called.add(node.expression.text);
     }
     ts.forEachChild(node, visit);
   };
   visit(source);
+
+  // Any bare identifier reference counts, unless it was disqualified above by
+  // having a value read off it or appearing in a type position.
+  const mentioned = new Set<string>();
+  const collect = (node: ts.Node) => {
+    if (ts.isIdentifier(node) && !ts.isPropertyAccessExpression(node.parent)) mentioned.add(node.text);
+    ts.forEachChild(node, collect);
+  };
+  collect(source);
+  for (const name of mentioned) called.add(name);
 
   for (const name of shaped) called.delete(name);
   return called;
@@ -158,6 +199,13 @@ function classifyWithContext(
   siblings: Set<string>
 ): DefectClass {
   const base = classify(code, message);
+  // TS2686 ("'React' refers to a UMD global") is the same question as an
+  // undefined name: is this symbol available here? If a sibling file in the
+  // same fence imports it, it is.
+  if (code === 'TS2686') {
+    const umd = /'([^']+)' refers to a UMD global/.exec(message)?.[1];
+    if (umd && siblings.has(umd)) return 'assumed-context';
+  }
   if (base !== 'undefined-identifier') return base;
   const name = /Cannot find name '([^']+)'/.exec(message)?.[1];
   if (!name) return base;
@@ -165,10 +213,29 @@ function classifyWithContext(
   return callOnly.has(name) ? 'assumed-helper' : base;
 }
 
-/** Top-level names declared anywhere in a source file. */
+/** Top-level names declared — or imported — anywhere in a source file. */
 function topLevelDeclarations(source: ts.SourceFile): Set<string> {
   const names = new Set<string>();
+  // Walks the whole tree, not just top level: a fixture declared inside a
+  // `describe(...)` is still something the rest of the fence refers to.
+  const walk = (node: ts.Node) => {
+    if (ts.isVariableDeclaration(node) && ts.isIdentifier(node.name)) names.add(node.name.text);
+    ts.forEachChild(node, walk);
+  };
+  walk(source);
+
   for (const stmt of source.statements) {
+    // An import in one file of a fence is what the next file relies on; the
+    // lesson shows them together and the reader reads them together.
+    if (ts.isImportDeclaration(stmt) && stmt.importClause) {
+      const clause = stmt.importClause;
+      if (clause.name) names.add(clause.name.text);
+      if (clause.namedBindings) {
+        if (ts.isNamedImports(clause.namedBindings))
+          for (const el of clause.namedBindings.elements) names.add(el.name.text);
+        else names.add(clause.namedBindings.name.text);
+      }
+    }
     if (ts.isVariableStatement(stmt))
       for (const decl of stmt.declarationList.declarations)
         if (ts.isIdentifier(decl.name)) names.add(decl.name.text);

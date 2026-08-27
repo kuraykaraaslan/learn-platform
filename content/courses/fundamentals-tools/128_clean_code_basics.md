@@ -31,6 +31,14 @@ function proc(u: any) {
   return 0;
 }
 
+// Only the three fields this calculation reads — a function should not demand
+// a whole domain object to answer a narrow question.
+type User = {
+  age: number;
+  status: number;
+  balance: number;
+};
+
 // After: guard clauses, named constant, intention-revealing names
 const ACTIVE_STATUS = 1;
 const INTEREST_RATE = 0.05;

@@ -87,6 +87,12 @@ export default async function DashboardPage() {
 // Vercel: use `revalidatePath` or `revalidateTag` from next/cache
 import { revalidatePath, revalidateTag } from 'next/cache';
 
+type PlanUpdateInput = {
+  name?: string;
+  monthlyCents?: number;
+  isPublic?: boolean;
+};
+
 async function updatePricingPlan(planId: string, data: PlanUpdateInput) {
   await db.plan.update({ where: { id: planId }, data });
 

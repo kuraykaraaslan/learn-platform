@@ -86,6 +86,16 @@ async function checkPermission(userId: string, tenantId: string, action: string)
 // ── 3. Lazy Evaluation: async generator for large DB result sets ────────────
 // Instead of loading 100,000 audit log entries into memory, stream them lazily
 
+// One row as the raw query returns it — the generator's whole purpose is that
+// only one batch of these exists in memory at a time.
+type AuditLogRow = {
+  id: string;
+  tenant_id: string;
+  actor_id: string;
+  action: string;
+  created_at: Date;
+};
+
 async function* streamAuditLogs(
   tenantId: string,
   batchSize = 1000,

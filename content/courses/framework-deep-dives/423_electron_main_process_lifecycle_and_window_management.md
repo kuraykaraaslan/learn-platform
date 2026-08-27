@@ -20,6 +20,15 @@ Deep links follow a parallel lifecycle concern: registering the app as the defau
 
 ## Example Code
 ```typescript
+// shared/ipc.ts — one frozen map of channel names, imported by both processes.
+// String literals scattered across main and renderer are the classic Electron
+// bug: a typo in one of them fails silently at runtime instead of at build.
+export const IPC = {
+  usersList: "users:list",
+  usersCreate: "users:create",
+  appQuit: "app:quit",
+} as const;
+
 // src/main/index.ts — the fixed lifecycle order
 import { BrowserWindow, app, ipcMain } from 'electron';
 import { createMainWindow } from "./windows/createMainWindow";

@@ -21,6 +21,11 @@ The payoff is testability and interchangeability: you can run your entire domain
 
 ## Example Code
 ```typescript
+// The validated environment object — one place reads process.env, everything
+// else imports the parsed result. A secret typed as `string` here is a secret
+// the app cannot start without.
+declare const env: { ACCESS_TOKEN_SECRET: string };
+
 // ── Domain Core — no infrastructure imports ─────────────────────────────────
 
 // Driven Port: what AuthService needs from the user storage layer
@@ -49,6 +54,20 @@ export class User {
   verifyEmail(): void {
     this.isEmailVerified = true;
   }
+}
+
+// Driven Port: what AuthUseCase needs from password hashing. The domain says
+// "compare a plaintext against a stored hash" and refuses to know that bcrypt
+// exists — which is what lets the adapter be swapped for argon2 later.
+export interface IPasswordHasher {
+  hash(plain: string): Promise<string>;
+  compare(plain: string, hashed: string): Promise<boolean>;
+}
+
+// Driven Port: what AuthUseCase needs from token issuing
+export interface ITokenIssuer {
+  issue(userId: string): string;
+  verify(token: string): { userId: string } | null;
 }
 
 // Driving Port: what the application exposes to the outside world

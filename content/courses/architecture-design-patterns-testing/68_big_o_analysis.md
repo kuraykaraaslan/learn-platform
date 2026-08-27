@@ -27,6 +27,10 @@ The practical skill is: (1) identify every loop, recursive call, and database qu
 // Scenario: admin dashboard shows "active users per tenant this week"
 // You might write this innocently:
 
+// Only the field the complexity argument turns on: every algorithm below is
+// counted in terms of how many times it touches this id.
+type Tenant = { id: string };
+
 async function getActiveUsersBad(tenants: Tenant[]): Promise<Map<string, number>> {
   const result = new Map<string, number>();
 

@@ -16,6 +16,14 @@ DDD is really two separate toolkits aimed at one problem: complex business domai
 
 ## Example Code
 ```typescript
+// A line is a value object: no identity of its own, meaningful only inside an
+// Order. It is declared before the aggregate because the aggregate owns it.
+type OrderLine = {
+  sku: string;
+  quantity: number;
+  unitPrice: Money;
+};
+
 // Order aggregate: the root enforces the invariant "can't ship before payment"
 // External code can never reach in and set status directly — only through methods that protect the rule.
 class Order {

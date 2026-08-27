@@ -35,6 +35,24 @@ This pattern is the foundation of reliable event-driven architectures. Without i
 //   @@index([status, createdAt])
 // }
 
+// The TypeScript view of the model above, for the relay's raw query.
+type OutboxMessage = {
+  id: string;
+  aggregateId: string;
+  eventType: string;
+  payload: unknown;                 // opaque here on purpose — each eventType has its own shape
+  status: 'pending' | 'published';
+  createdAt: Date;
+  publishedAt: Date | null;
+};
+
+type Tenant = {
+  id: string;
+  name: string;
+  ownerId: string;
+  createdAt: Date;
+};
+
 // ─── Step 1: Write state + outbox entry atomically ───
 async function createTenant(
   name: string,

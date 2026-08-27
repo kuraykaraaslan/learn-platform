@@ -16,6 +16,11 @@ The **modular monolith** is the underrated middle step: a single deployable, but
 ## Example Code
 ```typescript
 // BEFORE — monolith: a direct, in-process, transactional call
+type PlaceOrderInput = {
+  sku: string;
+  quantity: number;
+};
+
 async function placeOrder(input: PlaceOrderInput) {
   return db.$transaction(async (tx) => {
     const order = await tx.order.create({ data: input });

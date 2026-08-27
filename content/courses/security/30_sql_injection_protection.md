@@ -22,6 +22,8 @@ The gap that remains after adopting an ORM is raw query usage. Prisma's `$queryR
 // Everything below starts from untrusted request values. Naming them once
 // makes the point of the whole lesson visible: the SAFE and UNSAFE versions
 // receive exactly the same input.
+declare const req: { body: unknown; query: Record<string, string | undefined> };
+
 const { email: userInput, tenantId, actorId, action } = req.body as {
   email: string;
   tenantId: string;

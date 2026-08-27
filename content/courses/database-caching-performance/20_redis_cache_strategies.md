@@ -24,6 +24,15 @@ For a multi-tenant SaaS, a layered strategy makes sense: session data and tenant
 // ─── Cache-aside with thundering herd prevention ───
 import { PrismaClient } from '@prisma/client';
 import Redis from 'ioredis';
+// What actually gets cached. Keep it small and derived: the more a cached
+// object carries, the more writes have to remember to invalidate it.
+type TenantConfig = {
+  id: string;
+  name: string;
+  planId: string;
+  featureFlags: Record<string, boolean>;
+};
+
 async function getTenantConfig(tenantId: string, redis: Redis, db: PrismaClient) {
   const cacheKey = `tenant:config:${tenantId}`;
   const cached = await redis.get(cacheKey);
