@@ -49,6 +49,7 @@ class AppErrorBoundary extends React.Component<{ children: React.ReactNode }> {
 }
 
 // main/libs/logger.ts — electron-log with rotation, never console.log in production
+import React from 'react';
 import log from "electron-log/main";
 log.transports.file.level = "info";
 log.transports.file.maxSize = 5 * 1024 * 1024;              // rotate at 5MB

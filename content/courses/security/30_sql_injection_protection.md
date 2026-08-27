@@ -19,6 +19,16 @@ The gap that remains after adopting an ORM is raw query usage. Prisma's `$queryR
 
 ## Example Code
 ```typescript
+// Everything below starts from untrusted request values. Naming them once
+// makes the point of the whole lesson visible: the SAFE and UNSAFE versions
+// receive exactly the same input.
+const { email: userInput, tenantId, actorId, action } = req.body as {
+  email: string;
+  tenantId: string;
+  actorId: string;
+  action: string;
+};
+
 // ─── SAFE: Standard ORM methods — fully parameterized ──────────────────────
 
 // Prisma — safe

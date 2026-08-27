@@ -5,20 +5,19 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 | | |
 |---|---:|
-| TS/TSX fences | 161 |
-| Clean | 25 |
-| Only uninstalled-module errors (tolerated) | 42 |
-| **Failing** | **94** |
-| Lessons affected | 94 |
-| Fences importing private `@/libs|modules|stores` aliases | 16 |
+| TS/TSX fences | 284 |
+| Clean | 56 |
+| Only uninstalled-module errors (tolerated) | 151 |
+| **Failing** | **77** |
+| Lessons affected | 65 |
+| Fences importing private `@/libs|modules|stores` aliases | 23 |
 
 ## Defects by class
 
 | Class | Count |
 |---|---:|
-| type-error | 250 |
-| undefined-identifier | 177 |
-| implicit-any | 14 |
+| undefined-identifier | 190 |
+| type-error | 1 |
 
 ## Failing lessons
 
@@ -26,25 +25,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 - `typescript` fence at line 22 (section: Example Code)
   - TS2304: Cannot find name 'TenantService'.
-
-### ai-llm-engineering/140_ai_llm_integration.md
-
-- `typescript` fence at line 19 (section: Example Code)
-  - TS7006: Parameter 'c' implicitly has an 'any' type.
-
-### ai-llm-engineering/147_anthropic_api_client_architecture.md
-
-- `typescript` fence at line 20 (section: Example Code)
-  - TS2395: Individual declarations in merged declaration 'anthropic' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'anthropic' must be all exported or all local.
-
-### ai-llm-engineering/148_prompts_as_versioned_code.md
-
-- `typescript` fence at line 20 (section: Example Code)
-  - TS2395: Individual declarations in merged declaration 'SUMMARY_SYSTEM_PROMPT' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'SUMMARY_CONFIG' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'SUMMARY_SYSTEM_PROMPT' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'SUMMARY_CONFIG' must be all exported or all local.
 
 ### ai-llm-engineering/151_tool_use_agentic_loops.md
 
@@ -57,9 +37,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 - `typescript` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'vectorStore'.
-  - TS7006: Parameter 'c' implicitly has an 'any' type.
   - TS2304: Cannot find name 'RAG_SYSTEM_PROMPT'.
-  - TS7006: Parameter 'c' implicitly has an 'any' type.
 
 ### ai-llm-engineering/154_token_budget_cost_engineering.md
 
@@ -75,14 +53,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 - `typescript` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'SUMMARY_SYSTEM_PROMPT'.
-  - TS18046: 'err' is of type 'unknown'.
-  - TS18046: 'err' is of type 'unknown'.
-
-### ai-llm-engineering/157_building_eval_pipeline.md
-
-- `typescript` fence at line 21 (section: Example Code)
-  - TS2395: Individual declarations in merged declaration 'goldenCases' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'goldenCases' must be all exported or all local.
 
 ### ai-llm-engineering/158_observability_logging_ai_features.md
 
@@ -93,12 +63,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 - `tsx` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'userSuppliedText'.
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
-
-### ai-llm-engineering/161_ai_feature_ux_patterns.md
-
-- `tsx` fence at line 21 (section: Example Code)
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
 
 ### ai-llm-engineering/162_mcp_server_architecture_tool_design.md
 
@@ -111,6 +75,9 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 - `tsx` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'server'.
+  - TS2304: Cannot find name 'z'.
+  - TS2304: Cannot find name 'z'.
+  - TS2304: Cannot find name 'z'.
 
 ### ai-llm-engineering/164_multi_agent_orchestration_workflow_chaining.md
 
@@ -129,8 +96,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 - `typescript` fence at line 18 (section: Example Code)
   - TS2304: Cannot find name 'userIds'.
-  - TS7006: Parameter 'id' implicitly has an 'any' type.
-  - TS7006: Parameter 'r' implicitly has an 'any' type.
 
 ### architecture-design-patterns-testing/134_domain_driven_design.md
 
@@ -163,6 +128,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 - `typescript` fence at line 23 (section: Example Code)
   - TS2304: Cannot find name 'IPasswordHasher'.
   - TS2304: Cannot find name 'ITokenIssuer'.
+- `typescript` fence at line 23 (section: Example Code)
   - TS2304: Cannot find name 'systemDataSource'.
   - TS2304: Cannot find name 'NodemailerEmailAdapter'.
   - TS2304: Cannot find name 'smtpConfig'.
@@ -173,6 +139,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 ### architecture-design-patterns-testing/66_dependency_injection_container.md
 
 - `typescript` fence at line 23 (section: Example Code)
+  - TS2304: Cannot find name 'AuthService'.
   - TS2304: Cannot find name 'InMemoryUserRepository'.
 
 ### architecture-design-patterns-testing/67_design_patterns.md
@@ -181,7 +148,6 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2304: Cannot find name 'AuthService'.
   - TS2304: Cannot find name 'AuthService'.
   - TS2304: Cannot find name 'IEmailService'.
-  - TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
   - TS2304: Cannot find name 'User'.
   - TS2304: Cannot find name 'User'.
 
@@ -189,7 +155,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 - `typescript` fence at line 23 (section: Example Code)
   - TS2304: Cannot find name 'Tenant'.
-  - TS7006: Parameter 'r' implicitly has an 'any' type.
   - TS2304: Cannot find name 'Tenant'.
 
 ### architecture-design-patterns-testing/69_tail_call_memoization_lazy_evaluation.md
@@ -198,20 +163,6 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2304: Cannot find name 'AuditLogRow'.
   - TS2304: Cannot find name 'AuditLogRow'.
   - TS2304: Cannot find name 'AuditLogRow'.
-
-### architecture-design-patterns-testing/71_test_pyramid.md
-
-- `typescript` fence at line 27 (section: Example Code)
-  - TS2300: Duplicate identifier 'beforeEach'.
-  - TS2300: Duplicate identifier 'describe'.
-  - TS2300: Duplicate identifier 'it'.
-  - TS2300: Duplicate identifier 'expect'.
-  - TS2300: Duplicate identifier 'beforeEach'.
-  - TS2300: Duplicate identifier 'AuthService'.
-  - TS2300: Duplicate identifier 'describe'.
-  - TS2300: Duplicate identifier 'it'.
-  - TS2300: Duplicate identifier 'expect'.
-  - TS2300: Duplicate identifier 'AuthService'.
 
 ### architecture-design-patterns-testing/72_property_based_testing.md
 
@@ -229,7 +180,9 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2304: Cannot find name 'AuthService'.
   - TS2304: Cannot find name 'AuthService'.
   - TS2304: Cannot find name 'AuthService'.
+- `typescript` fence at line 25 (section: Example Code)
   - TS2304: Cannot find name 'mockRedis'.
+  - TS2304: Cannot find name 'bcrypt'.
   - TS2304: Cannot find name 'AuthService'.
 
 ### database-advanced/41_postgresql_mvcc_vacuum_bloat_isolation.md
@@ -285,18 +238,11 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 - `typescript` fence at line 23 (section: Example Code)
   - TS2304: Cannot find name 'tenantEntities'.
-  - TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
   - TS2304: Cannot find name 'DB_HOST'.
   - TS2304: Cannot find name 'tenantEntities'.
   - TS2304: Cannot find name 'systemRepo'.
   - TS2304: Cannot find name 'systemRepo'.
   - TS2304: Cannot find name 'TenantMember'.
-
-### database-advanced/51_event_log_rehydration.md
-
-- `typescript` fence at line 21 (section: Example Code)
-  - TS7006: Parameter 'state' implicitly has an 'any' type.
-  - TS7006: Parameter 'row' implicitly has an 'any' type.
 
 ### database-advanced/52_oltp_vs_olap.md
 
@@ -317,30 +263,15 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 - `typescript` fence at line 23 (section: Example Code)
   - TS2304: Cannot find name 'TenantConfig'.
-  - TS2345: Argument of type 'unknown' is not assignable to parameter of type 'string'.
 
 ### database-caching-performance/21_cdn_cache_strategy.md
 
 - `tsx` fence at line 21 (section: Example Code)
-  - TS2323: Cannot redeclare exported variable 'GET'.
-  - TS2393: Duplicate function implementation.
-  - TS2323: Cannot redeclare exported variable 'GET'.
-  - TS2393: Duplicate function implementation.
-  - TS2323: Cannot redeclare exported variable 'GET'.
-  - TS2393: Duplicate function implementation.
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2393: Duplicate function implementation.
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2304: Cannot find name 'PricingGrid'.
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2393: Duplicate function implementation.
   - TS2304: Cannot find name 'Dashboard'.
   - TS2304: Cannot find name 'PlanUpdateInput'.
-
-### distributed-systems-api-design/03_saga_pattern.md
-
-- `typescript` fence at line 20 (section: Example Code)
-  - TS2322: Type 'any' is not assignable to type 'never'.
+  - TS2304: Cannot find name 'NextResponse'.
+  - TS2304: Cannot find name 'NextResponse'.
 
 ### distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md
 
@@ -368,20 +299,12 @@ extracted and typechecked. Generated file: do not edit by hand.
 ### distributed-systems-api-design/131_message_queues_101.md
 
 - `typescript` fence at line 17 (section: Example Code)
-  - TS18004: No value exists in scope for the shorthand property 'orderId'. Either declare one or provide an initializer.
-  - TS18004: No value exists in scope for the shorthand property 'userId'. Either declare one or provide an initializer.
-  - TS18004: No value exists in scope for the shorthand property 'totalCents'. Either declare one or provide an initializer.
-  - TS7006: Parameter 'event' implicitly has an 'any' type.
-  - TS7006: Parameter 'event' implicitly has an 'any' type.
-  - TS7006: Parameter 'event' implicitly has an 'any' type.
+  - TS2304: Cannot find name 'order'.
 
 ### distributed-systems-api-design/135_microservices_vs_monolith.md
 
 - `typescript` fence at line 17 (section: Example Code)
-  - TS2393: Duplicate function implementation.
   - TS2304: Cannot find name 'PlaceOrderInput'.
-  - TS7006: Parameter 'tx' implicitly has an 'any' type.
-  - TS2393: Duplicate function implementation.
   - TS2304: Cannot find name 'PlaceOrderInput'.
   - TS2304: Cannot find name 'orderService'.
   - TS2304: Cannot find name 'inventoryService'.
@@ -392,9 +315,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 - `typescript` fence at line 16 (section: Example Code)
   - TS2304: Cannot find name 'profileService'.
   - TS2304: Cannot find name 'notificationService'.
-  - TS18046: 'profile.value' is of type 'unknown'.
-  - TS18046: 'profile.value' is of type 'unknown'.
-  - TS18046: 'notifications.value' is of type 'unknown'.
 
 ### distributed-systems-api-design/13_cqrs_read_model_optimization.md
 
@@ -412,140 +332,10 @@ extracted and typechecked. Generated file: do not edit by hand.
 - `typescript` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'tenantDb'.
 
-### framework-deep-dives/396_express_two_layer_architecture.md
-
-- `typescript` fence at line 21 (section: Example Code)
-  - TS2395: Individual declarations in merged declaration 'CreateProjectDTO' must be all exported or all local.
-  - TS2528: A module cannot have multiple default exports.
-  - TS2528: A module cannot have multiple default exports.
-  - TS2300: Duplicate identifier 'Router'.
-  - TS2395: Individual declarations in merged declaration 'CreateProjectDTO' must be all exported or all local.
-  - TS2300: Duplicate identifier 'authMiddleware'.
-  - TS2528: A module cannot have multiple default exports.
-  - TS2300: Duplicate identifier 'Router'.
-  - TS2300: Duplicate identifier 'authMiddleware'.
-  - TS2528: A module cannot have multiple default exports.
-
-### framework-deep-dives/397_express_middleware_pipeline_and_security.md
-
-- `typescript` fence at line 21 (section: Example Code)
-  - TS2395: Individual declarations in merged declaration 'corsMiddleware' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'helmetMiddleware' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'authLimiter' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'corsMiddleware' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'helmetMiddleware' must be all exported or all local.
-  - TS2528: A module cannot have multiple default exports.
-  - TS2395: Individual declarations in merged declaration 'authLimiter' must be all exported or all local.
-  - TS2528: A module cannot have multiple default exports.
-
-### framework-deep-dives/398_express_curried_auth_middleware.md
-
-- `typescript` fence at line 21 (section: Example Code)
-  - TS2300: Duplicate identifier 'SafeUser'.
-  - TS2300: Duplicate identifier 'SafeUserSession'.
-  - TS2300: Duplicate identifier 'AppError'.
-  - TS2300: Duplicate identifier 'AuthMessages'.
-  - TS2300: Duplicate identifier 'AppError'.
-  - TS2300: Duplicate identifier 'AuthMessages'.
-  - TS2300: Duplicate identifier 'SafeUser'.
-  - TS2300: Duplicate identifier 'SafeUserSession'.
-  - TS2528: A module cannot have multiple default exports.
-  - TS2528: A module cannot have multiple default exports.
-
-### framework-deep-dives/399_express_centralized_error_handling.md
-
-- `typescript` fence at line 21 (section: Example Code)
-  - TS2300: Duplicate identifier 'AppError'.
-  - TS2528: A module cannot have multiple default exports.
-  - TS2300: Duplicate identifier 'AppError'.
-  - TS2300: Duplicate identifier 'Logger'.
-  - TS18046: 'error' is of type 'unknown'.
-  - TS18046: 'error' is of type 'unknown'.
-  - TS2300: Duplicate identifier 'AppError'.
-  - TS2300: Duplicate identifier 'Logger'.
-  - TS2528: A module cannot have multiple default exports.
-  - TS2528: A module cannot have multiple default exports.
-
-### framework-deep-dives/400_express_validation_and_response_conventions.md
-
-- `typescript` fence at line 21 (section: Example Code)
-  - TS2300: Duplicate identifier 'z'.
-  - TS2395: Individual declarations in merged declaration 'UuidParam' must be all exported or all local.
-  - TS2300: Duplicate identifier 'z'.
-  - TS2395: Individual declarations in merged declaration 'CreateProjectDTO' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'ListProjectsQuery' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'UuidParam' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'CreateProjectDTO' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'ListProjectsQuery' must be all exported or all local.
-
-### framework-deep-dives/401_express_realtime_sse_and_socketio.md
-
-- `typescript` fence at line 21 (section: Example Code)
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2300: Duplicate identifier 'env'.
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2300: Duplicate identifier 'env'.
-
-### framework-deep-dives/402_express_testing_with_jest_and_supertest.md
-
-- `typescript` fence at line 21 (section: Example Code)
-  - TS2300: Duplicate identifier 'request'.
-  - TS2300: Duplicate identifier 'app'.
-  - TS2300: Duplicate identifier 'AppDataSource'.
-  - TS2300: Duplicate identifier 'User'.
-  - TS2300: Duplicate identifier 'request'.
-  - TS2300: Duplicate identifier 'app'.
-  - TS2300: Duplicate identifier 'AppDataSource'.
-  - TS2300: Duplicate identifier 'User'.
-
 ### framework-deep-dives/414_reactnative_expo_router_navigation.md
 
 - `tsx` fence at line 21 (section: Example Code)
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2393: Duplicate function implementation.
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
-  - TS2300: Duplicate identifier 'Redirect'.
-  - TS2300: Duplicate identifier 'useAuthStore'.
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2393: Duplicate function implementation.
-  - TS2300: Duplicate identifier 'Redirect'.
-  - TS2300: Duplicate identifier 'useAuthStore'.
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2393: Duplicate function implementation.
-  - TS2300: Duplicate identifier 'useAuthStore'.
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2393: Duplicate function implementation.
   - TS2304: Cannot find name 'AuthService'.
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2393: Duplicate function implementation.
-
-### framework-deep-dives/415_reactnative_zustand_mmkv_state_management.md
-
-- `tsx` fence at line 21 (section: Example Code)
-  - TS2395: Individual declarations in merged declaration 'mmkv' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'mmkv' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'zustandMMKVStorage' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'zustandMMKVStorage' must be all exported or all local.
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
-  - TS2786: 'Text' cannot be used as a JSX component.   Its type '{ new (data?: string | undefined): Text; prototype: Text; }' is not a valid JSX element type.     Type '{ new (data?: string | undefined): Text; prototype: Text; }' is not assignable to type 'new (props: any, context: any) => Component<any, any, any>'.       Type 'Text' is missing the following properties from type 'Component<any, any, any>': context, setState, forceUpdate, render, and 2 more.
-
-### framework-deep-dives/416_reactnative_data_fetching_and_offline.md
-
-- `tsx` fence at line 21 (section: Example Code)
-  - TS2300: Duplicate identifier 'useState'.
-  - TS2300: Duplicate identifier 'useEffect'.
-  - TS2300: Duplicate identifier 'axiosInstance'.
-  - TS2300: Duplicate identifier 'extractErrorMessage'.
-  - TS2300: Duplicate identifier 'UserResponse'.
-  - TS2300: Duplicate identifier 'extractErrorMessage'.
-  - TS18046: 'err' is of type 'unknown'.
-  - TS18046: 'err' is of type 'unknown'.
-  - TS2300: Duplicate identifier 'useState'.
-  - TS2300: Duplicate identifier 'axiosInstance'.
-  - TS2300: Duplicate identifier 'extractErrorMessage'.
-  - TS2300: Duplicate identifier 'UserResponse'.
-  - TS2300: Duplicate identifier 'useState'.
-  - TS2300: Duplicate identifier 'useEffect'.
 
 ### framework-deep-dives/417_reactnative_expo_config_permissions_and_native_apis.md
 
@@ -555,96 +345,43 @@ extracted and typechecked. Generated file: do not edit by hand.
 ### framework-deep-dives/418_reactnative_nativewind_styling_tokens_and_dark_mode.md
 
 - `tsx` fence at line 22 (section: Example Code)
-  - TS2300: Duplicate identifier 'View'.
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
-  - TS2300: Duplicate identifier 'View'.
-  - TS2300: Duplicate identifier 'useWindowDimensions'.
-  - TS2300: Duplicate identifier 'useWindowDimensions'.
-
-### framework-deep-dives/419_reactnative_accessibility_and_feedback_patterns.md
-
-- `tsx` fence at line 21 (section: Example Code)
-  - TS2300: Duplicate identifier 'Pressable'.
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
-  - TS2300: Duplicate identifier 'View'.
-  - TS2300: Duplicate identifier 'Text'.
-  - TS2300: Duplicate identifier 'View'.
-  - TS2300: Duplicate identifier 'Text'.
-  - TS2300: Duplicate identifier 'Pressable'.
-
-### framework-deep-dives/421_electron_process_model_and_typed_ipc.md
-
-- `tsx` fence at line 21 (section: Example Code)
-  - TS2300: Duplicate identifier 'IPC'.
-  - TS2395: Individual declarations in merged declaration 'IPC' must be all exported or all local.
-  - TS2300: Duplicate identifier 'UsersListReq'.
-  - TS2395: Individual declarations in merged declaration 'UsersListReq' must be all exported or all local.
-  - TS2300: Duplicate identifier 'UsersListReq'.
-  - TS2300: Duplicate identifier 'Result'.
-  - TS2503: Cannot find namespace 'Electron'.
-  - TS2300: Duplicate identifier 'IPC'.
-  - TS2395: Individual declarations in merged declaration 'IPC' must be all exported or all local.
-  - TS2300: Duplicate identifier 'UsersListReq'.
-  - TS2395: Individual declarations in merged declaration 'UsersListReq' must be all exported or all local.
-  - TS2300: Duplicate identifier 'Result'.
-  - TS2300: Duplicate identifier 'IPC'.
-  - TS2300: Duplicate identifier 'UsersListReq'.
-  - TS2300: Duplicate identifier 'Result'.
+  - TS2304: Cannot find name 'View'.
+  - TS2304: Cannot find name 'View'.
 
 ### framework-deep-dives/423_electron_main_process_lifecycle_and_window_management.md
 
 - `typescript` fence at line 22 (section: Example Code)
-  - TS2300: Duplicate identifier 'BrowserWindow'.
-  - TS2300: Duplicate identifier 'BrowserWindow'.
+  - TS2304: Cannot find name 'ipcMain'.
   - TS2304: Cannot find name 'IPC'.
   - TS2304: Cannot find name 'UsersService'.
   - TS2304: Cannot find name 'UsersListReq'.
-
-### framework-deep-dives/424_electron_project_structure_and_vite_build_config.md
-
-- `typescript` fence at line 44 (section: Example Code)
-  - TS2503: Cannot find namespace 'Electron'.
-  - TS2339: Property 'env' does not exist on type 'ImportMeta'.
-
-### framework-deep-dives/425_electron_renderer_react_and_design_system_fork.md
-
-- `tsx` fence at line 21 (section: Example Code)
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
-  - TS2395: Individual declarations in merged declaration 'api' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'api' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'useUsers' must be all exported or all local.
-  - TS2395: Individual declarations in merged declaration 'useUsers' must be all exported or all local.
-
-### framework-deep-dives/426_electron_native_modules_and_os_integration.md
-
-- `typescript` fence at line 33 (section: Example Code)
-  - TS2300: Duplicate identifier 'Menu'.
-  - TS2503: Cannot find namespace 'Electron'.
-  - TS2300: Duplicate identifier 'Menu'.
 
 ### framework-deep-dives/427_electron_environment_secrets_and_auto_updates.md
 
 - `typescript` fence at line 22 (section: Example Code)
   - TS2304: Cannot find name 'AuthApi'.
+- `typescript` fence at line 22 (section: Example Code)
+  - TS2304: Cannot find name 'ipcMain'.
+  - TS2304: Cannot find name 'autoUpdater'.
+  - TS2304: Cannot find name 'ipcMain'.
+  - TS2304: Cannot find name 'autoUpdater'.
 
 ### framework-deep-dives/428_electron_error_handling_crash_reporting_and_performance.md
 
 - `typescript` fence at line 24 (section: Example Code)
+  - TS2304: Cannot find name 'ipcMain'.
   - TS2304: Cannot find name 'IPC'.
+  - TS2304: Cannot find name 'UsersService'.
   - TS2304: Cannot find name 'UsersListReq'.
+- `typescript` fence at line 24 (section: Example Code)
   - TS2686: 'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.
+- `typescript` fence at line 24 (section: Example Code)
   - TS2304: Cannot find name 'app'.
-  - TS2503: Cannot find namespace 'Electron'.
   - TS2304: Cannot find name 'initDeferredServices'.
-  - TS2300: Duplicate identifier 'expect'.
-  - TS2300: Duplicate identifier 'test'.
-  - TS2300: Duplicate identifier 'test'.
-  - TS2300: Duplicate identifier 'expect'.
 
 ### framework-deep-dives/429_electron_window_chrome_and_desktop_layout.md
 
 - `tsx` fence at line 21 (section: Example Code)
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2304: Cannot find name 'WindowControls'.
   - TS2304: Cannot find name 'Toolbar'.
   - TS2304: Cannot find name 'StatusBar'.
@@ -653,92 +390,46 @@ extracted and typechecked. Generated file: do not edit by hand.
 ### framework-deep-dives/430_electron_menus_shortcuts_tray_and_dialogs.md
 
 - `tsx` fence at line 21 (section: Example Code)
-  - TS2300: Duplicate identifier 'Menu'.
-  - TS2300: Duplicate identifier 'app'.
-  - TS2503: Cannot find namespace 'Electron'.
   - TS2304: Cannot find name 'exportDocument'.
-  - TS2300: Duplicate identifier 'app'.
-  - TS2304: Cannot find name 'focusMainWindow'.
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
-  - TS2300: Duplicate identifier 'Menu'.
-  - TS2304: Cannot find name 'focusMainWindow'.
-
-### frontend-performance-scaling/138_frontend_state_management.md
-
-- `typescript` fence at line 16 (section: Example Code)
-  - TS7006: Parameter 'set' implicitly has an 'any' type.
-  - TS7006: Parameter 's' implicitly has an 'any' type.
-
-### frontend-performance-scaling/22_http2_multiplexing.md
-
 - `tsx` fence at line 21 (section: Example Code)
-  - TS2528: A module cannot have multiple default exports.
-  - TS2528: A module cannot have multiple default exports.
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+  - TS2304: Cannot find name 'focusMainWindow'.
+- `tsx` fence at line 21 (section: Example Code)
+  - TS2304: Cannot find name 'focusMainWindow'.
 
 ### frontend-performance-scaling/23_react_server_components.md
 
 - `tsx` fence at line 21 (section: Example Code)
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2393: Duplicate function implementation.
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2304: Cannot find name 'DashboardLayout'.
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2393: Duplicate function implementation.
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2393: Duplicate function implementation.
+- `tsx` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'StatsSkeleton'.
   - TS2304: Cannot find name 'MembersSkeleton'.
   - TS2304: Cannot find name 'MemberList'.
+- `tsx` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'StatsGrid'.
 
 ### frontend-performance-scaling/24_bundle_size_optimization.md
 
 - `tsx` fence at line 21 (section: Example Code)
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
-  - TS2451: Cannot redeclare block-scoped variable 'grouped'.
   - TS2304: Cannot find name 'items'.
-  - TS2451: Cannot redeclare block-scoped variable 'grouped'.
   - TS2304: Cannot find name 'items'.
-  - TS2451: Cannot redeclare block-scoped variable 'formatted'.
-  - TS2451: Cannot redeclare block-scoped variable 'formatted'.
-  - TS2300: Duplicate identifier 'Button'.
-  - TS2300: Duplicate identifier 'Input'.
-  - TS2300: Duplicate identifier 'Modal'.
-  - TS2300: Duplicate identifier 'Button'.
-  - TS2300: Duplicate identifier 'Input'.
-  - TS2300: Duplicate identifier 'Modal'.
-
-### frontend-performance-scaling/25_web_vitals.md
-
-- `tsx` fence at line 21 (section: Example Code)
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
 
 ### frontend-performance-scaling/26_streaming_ssr_suspense.md
 
 - `tsx` fence at line 21 (section: Example Code)
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2304: Cannot find name 'BillingCard'.
   - TS2304: Cannot find name 'TeamTable'.
   - TS2304: Cannot find name 'AnalyticsChart'.
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2393: Duplicate function implementation.
-  - TS2578: Unused '@ts-expect-error' directive.
-  - TS2578: Unused '@ts-expect-error' directive.
-  - TS2578: Unused '@ts-expect-error' directive.
-  - TS2323: Cannot redeclare exported variable 'default'.
-  - TS2393: Duplicate function implementation.
 
 ### frontend-performance-scaling/28_horizontal_scaling_stateless_design.md
 
 - `typescript` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'SessionData'.
-  - TS2300: Duplicate identifier 'redis'.
+- `typescript` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'SafeUser'.
   - TS2304: Cannot find name 'SafeUserSession'.
   - TS2304: Cannot find name 'SafeUser'.
   - TS2304: Cannot find name 'SafeUserSession'.
-  - TS2300: Duplicate identifier 'redis'.
+- `typescript` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'worker'.
 
 ### fundamentals-tools/121_sql_fundamentals.md
@@ -756,18 +447,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 - `typescript` fence at line 17 (section: Example Code)
   - TS2304: Cannot find name 'User'.
 
-### observability-deployment/54_distributed_tracing.md
-
-- `typescript` fence at line 23 (section: Example Code)
-  - TS2300: Duplicate identifier 'trace'.
-  - TS2300: Duplicate identifier 'context'.
-  - TS2300: Duplicate identifier 'propagation'.
-  - TS2300: Duplicate identifier 'context'.
-  - TS2300: Duplicate identifier 'propagation'.
-  - TS2300: Duplicate identifier 'context'.
-  - TS2300: Duplicate identifier 'propagation'.
-  - TS2300: Duplicate identifier 'trace'.
-
 ### observability-deployment/61_alerting_design.md
 
 - `typescript` fence at line 23 (section: Example Code)
@@ -777,49 +456,24 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2304: Cannot find name 'writeToLog'.
   - TS2304: Cannot find name 'writeToLog'.
 
-### saas-business-skills/90_accessibility.md
-
-- `tsx` fence at line 22 (section: Example Code or Template)
-  - TS18046: 'el' is of type 'unknown'.
-  - TS2339: Property 'focus' does not exist on type '{}'.
-  - TS2339: Property 'focus' does not exist on type '{}'.
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
-
-### saas-business-skills/93_ab_test_infrastructure.md
-
-- `tsx` fence at line 22 (section: Example Code or Template)
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
-
 ### security/29_owasp_top_10.md
 
 - `typescript` fence at line 23 (section: Example Code)
   - TS2304: Cannot find name 'TenantMemberService'.
+- `typescript` fence at line 23 (section: Example Code)
   - TS2304: Cannot find name 'AuditLogService'.
   - TS2304: Cannot find name 'Logger'.
 
 ### security/30_sql_injection_protection.md
 
 - `typescript` fence at line 21 (section: Example Code)
-  - TS2451: Cannot redeclare block-scoped variable 'user'.
-  - TS2304: Cannot find name 'userInput'.
-  - TS2451: Cannot redeclare block-scoped variable 'user'.
-  - TS2304: Cannot find name 'userInput'.
-  - TS2451: Cannot redeclare block-scoped variable 'result'.
-  - TS2304: Cannot find name 'tenantId'.
-  - TS2451: Cannot redeclare block-scoped variable 'result'.
-  - TS2304: Cannot find name 'actorId'.
-  - TS2304: Cannot find name 'action'.
+  - TS2304: Cannot find name 'req'.
   - TS2304: Cannot find name 'AuditLog'.
-  - TS18004: No value exists in scope for the shorthand property 'actorId'. Either declare one or provide an initializer.
-  - TS18004: No value exists in scope for the shorthand property 'action'. Either declare one or provide an initializer.
   - TS2304: Cannot find name 'req'.
 
 ### security/32_jwt_security_rs256_hs256_rotation.md
 
 - `typescript` fence at line 21 (section: Example Code)
-  - TS2339: Property 'createHash' does not exist on type 'Crypto'.
-  - TS2339: Property 'randomBytes' does not exist on type 'Crypto'.
-  - TS2339: Property 'createHash' does not exist on type 'Crypto'.
   - TS2304: Cannot find name 'token'.
   - TS2304: Cannot find name 'SECRET'.
 
@@ -829,12 +483,3 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2304: Cannot find name 'plainPassword'.
   - TS2304: Cannot find name 'hashedPassword'.
   - TS2304: Cannot find name 'rawToken'.
-
-### security/35_content_security_policy_csp_headers.md
-
-- `tsx` fence at line 21 (section: Example Code)
-  - TS2300: Duplicate identifier 'NextRequest'.
-  - TS2300: Duplicate identifier 'NextResponse'.
-  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
-  - TS2300: Duplicate identifier 'NextRequest'.
-  - TS2300: Duplicate identifier 'NextResponse'.

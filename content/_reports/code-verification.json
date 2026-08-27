@@ -1,17 +1,16 @@
 {
   "generatedFrom": "scripts/verify-code.ts",
   "defectsByClass": {
-    "undefined-identifier": 177,
-    "implicit-any": 14,
-    "type-error": 250
+    "undefined-identifier": 190,
+    "type-error": 1
   },
   "totals": {
-    "fences": 161,
-    "clean": 25,
-    "onlyMissingModules": 42,
-    "failing": 94,
-    "lessonsAffected": 94,
-    "privateAliasImports": 16
+    "fences": 284,
+    "clean": 56,
+    "onlyMissingModules": 151,
+    "failing": 77,
+    "lessonsAffected": 65,
+    "privateAliasImports": 23
   },
   "lessons": [
     {
@@ -26,93 +25,9 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 40,
+              "line": 17,
               "message": "Cannot find name 'TenantService'.",
               "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "ai-llm-engineering/140_ai_llm_integration.md",
-      "lessonId": 140,
-      "title": "AI/LLM Integration & Prompt Engineering — RAG, Vector DBs, Agents, Evals",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 19,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS7006",
-              "line": 11,
-              "message": "Parameter 'c' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "ai-llm-engineering/147_anthropic_api_client_architecture.md",
-      "lessonId": 147,
-      "title": "The Anthropic API Client Architecture",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 20,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2395",
-              "line": 8,
-              "message": "Individual declarations in merged declaration 'anthropic' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 25,
-              "message": "Individual declarations in merged declaration 'anthropic' must be all exported or all local.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "ai-llm-engineering/148_prompts_as_versioned_code.md",
-      "lessonId": 148,
-      "title": "Prompts as Versioned Code",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 20,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2395",
-              "line": 3,
-              "message": "Individual declarations in merged declaration 'SUMMARY_SYSTEM_PROMPT' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 15,
-              "message": "Individual declarations in merged declaration 'SUMMARY_CONFIG' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 23,
-              "message": "Individual declarations in merged declaration 'SUMMARY_SYSTEM_PROMPT' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 23,
-              "message": "Individual declarations in merged declaration 'SUMMARY_CONFIG' must be all exported or all local.",
-              "class": "type-error"
             }
           ]
         }
@@ -167,22 +82,10 @@
               "class": "undefined-identifier"
             },
             {
-              "code": "TS7006",
-              "line": 6,
-              "message": "Parameter 'c' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            },
-            {
               "code": "TS2304",
               "line": 50,
               "message": "Cannot find name 'RAG_SYSTEM_PROMPT'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS7006",
-              "line": 54,
-              "message": "Parameter 'c' implicitly has an 'any' type.",
-              "class": "implicit-any"
             }
           ]
         }
@@ -243,44 +146,6 @@
               "line": 17,
               "message": "Cannot find name 'SUMMARY_SYSTEM_PROMPT'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS18046",
-              "line": 23,
-              "message": "'err' is of type 'unknown'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18046",
-              "line": 24,
-              "message": "'err' is of type 'unknown'.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "ai-llm-engineering/157_building_eval_pipeline.md",
-      "lessonId": 157,
-      "title": "Building an Eval Pipeline",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2395",
-              "line": 2,
-              "message": "Individual declarations in merged declaration 'goldenCases' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 17,
-              "message": "Individual declarations in merged declaration 'goldenCases' must be all exported or all local.",
-              "class": "type-error"
             }
           ]
         }
@@ -298,7 +163,7 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 44,
+              "line": 11,
               "message": "Cannot find name 'CLASSIFY_CONFIG'.",
               "class": "undefined-identifier"
             }
@@ -321,32 +186,6 @@
               "line": 2,
               "message": "Cannot find name 'userSuppliedText'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2875",
-              "line": 23,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "ai-llm-engineering/161_ai_feature_ux_patterns.md",
-      "lessonId": 161,
-      "title": "AI Feature UX Patterns",
-      "fences": [
-        {
-          "lang": "tsx",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2875",
-              "line": 5,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
             }
           ]
         }
@@ -396,8 +235,26 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 33,
+              "line": 11,
               "message": "Cannot find name 'server'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 17,
+              "message": "Cannot find name 'z'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 17,
+              "message": "Cannot find name 'z'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 17,
+              "message": "Cannot find name 'z'.",
               "class": "undefined-identifier"
             }
           ]
@@ -477,18 +334,6 @@
               "line": 21,
               "message": "Cannot find name 'userIds'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS7006",
-              "line": 21,
-              "message": "Parameter 'id' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            },
-            {
-              "code": "TS7006",
-              "line": 22,
-              "message": "Parameter 'r' implicitly has an 'any' type.",
-              "class": "implicit-any"
             }
           ]
         }
@@ -625,40 +470,47 @@
               "line": 43,
               "message": "Cannot find name 'ITokenIssuer'.",
               "class": "undefined-identifier"
-            },
+            }
+          ]
+        },
+        {
+          "lang": "typescript",
+          "line": 23,
+          "section": "Example Code",
+          "defects": [
             {
               "code": "TS2304",
-              "line": 108,
+              "line": 2,
               "message": "Cannot find name 'systemDataSource'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 109,
+              "line": 3,
               "message": "Cannot find name 'NodemailerEmailAdapter'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 109,
+              "line": 3,
               "message": "Cannot find name 'smtpConfig'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 110,
+              "line": 4,
               "message": "Cannot find name 'BcryptPasswordHasher'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 111,
+              "line": 5,
               "message": "Cannot find name 'JwtTokenIssuer'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 111,
+              "line": 5,
               "message": "Cannot find name 'env'.",
               "class": "undefined-identifier"
             }
@@ -678,7 +530,13 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 101,
+              "line": 11,
+              "message": "Cannot find name 'AuthService'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 21,
               "message": "Cannot find name 'InMemoryUserRepository'.",
               "class": "undefined-identifier"
             }
@@ -715,12 +573,6 @@
               "class": "undefined-identifier"
             },
             {
-              "code": "TS2339",
-              "line": 54,
-              "message": "Property 'randomBytes' does not exist on type 'Crypto'.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
               "line": 65,
               "message": "Cannot find name 'User'.",
@@ -751,12 +603,6 @@
               "line": 7,
               "message": "Cannot find name 'Tenant'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS7006",
-              "line": 34,
-              "message": "Parameter 'r' implicitly has an 'any' type.",
-              "class": "implicit-any"
             },
             {
               "code": "TS2304",
@@ -801,80 +647,6 @@
       ]
     },
     {
-      "lesson": "architecture-design-patterns-testing/71_test_pyramid.md",
-      "lessonId": 71,
-      "title": "Test Pyramid — Unit, Integration, E2E Ratio and Trade-offs",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 27,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2300",
-              "line": 20,
-              "message": "Duplicate identifier 'beforeEach'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 42,
-              "message": "Duplicate identifier 'describe'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 42,
-              "message": "Duplicate identifier 'it'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 42,
-              "message": "Duplicate identifier 'expect'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 42,
-              "message": "Duplicate identifier 'beforeEach'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 43,
-              "message": "Duplicate identifier 'AuthService'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 115,
-              "message": "Duplicate identifier 'describe'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 115,
-              "message": "Duplicate identifier 'it'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 115,
-              "message": "Duplicate identifier 'expect'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 116,
-              "message": "Duplicate identifier 'AuthService'.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "lesson": "architecture-design-patterns-testing/72_property_based_testing.md",
       "lessonId": 72,
       "title": "Property-Based Testing (fast-check, Hypothesis)",
@@ -906,7 +678,7 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 108,
+              "line": 105,
               "message": "Cannot find name 'stripeProvider'.",
               "class": "undefined-identifier"
             }
@@ -941,16 +713,29 @@
               "line": 56,
               "message": "Cannot find name 'AuthService'.",
               "class": "undefined-identifier"
-            },
+            }
+          ]
+        },
+        {
+          "lang": "typescript",
+          "line": 25,
+          "section": "Example Code",
+          "defects": [
             {
               "code": "TS2304",
-              "line": 105,
+              "line": 42,
               "message": "Cannot find name 'mockRedis'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 108,
+              "line": 43,
+              "message": "Cannot find name 'bcrypt'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 45,
               "message": "Cannot find name 'AuthService'.",
               "class": "undefined-identifier"
             }
@@ -1118,19 +903,19 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 65,
+              "line": 64,
               "message": "Cannot find name 'AuditLog'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 97,
+              "line": 96,
               "message": "Cannot find name 'AuditLog'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 131,
+              "line": 130,
               "message": "Cannot find name 'AuditLog'.",
               "class": "undefined-identifier"
             }
@@ -1230,71 +1015,39 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 43,
+              "line": 34,
               "message": "Cannot find name 'tenantEntities'.",
               "class": "undefined-identifier"
             },
             {
-              "code": "TS2339",
-              "line": 77,
-              "message": "Property 'randomBytes' does not exist on type 'Crypto'.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
-              "line": 87,
+              "line": 78,
               "message": "Cannot find name 'DB_HOST'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 93,
+              "line": 84,
               "message": "Cannot find name 'tenantEntities'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 102,
+              "line": 93,
               "message": "Cannot find name 'systemRepo'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 127,
+              "line": 118,
               "message": "Cannot find name 'systemRepo'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 148,
+              "line": 139,
               "message": "Cannot find name 'TenantMember'.",
               "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "database-advanced/51_event_log_rehydration.md",
-      "lessonId": 51,
-      "title": "Event Log Rehydration (Rebuilding State from Event Log)",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS7006",
-              "line": 55,
-              "message": "Parameter 'state' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            },
-            {
-              "code": "TS7006",
-              "line": 55,
-              "message": "Parameter 'row' implicitly has an 'any' type.",
-              "class": "implicit-any"
             }
           ]
         }
@@ -1352,7 +1105,7 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 66,
+              "line": 62,
               "message": "Cannot find name 'pgBouncerAdminClient'.",
               "class": "undefined-identifier"
             }
@@ -1375,12 +1128,6 @@
               "line": 34,
               "message": "Cannot find name 'TenantConfig'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2345",
-              "line": 74,
-              "message": "Argument of type 'unknown' is not assignable to parameter of type 'string'.",
-              "class": "type-error"
             }
           ]
         }
@@ -1397,108 +1144,34 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2323",
-              "line": 7,
-              "message": "Cannot redeclare exported variable 'GET'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 7,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2323",
-              "line": 20,
-              "message": "Cannot redeclare exported variable 'GET'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 20,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2323",
-              "line": 33,
-              "message": "Cannot redeclare exported variable 'GET'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 33,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2323",
-              "line": 51,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 51,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2875",
-              "line": 53,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
-              "line": 53,
+              "line": 6,
               "message": "Cannot find name 'PricingGrid'.",
               "class": "undefined-identifier"
             },
             {
-              "code": "TS2323",
-              "line": 59,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 59,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
-              "line": 62,
+              "line": 15,
               "message": "Cannot find name 'Dashboard'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 69,
+              "line": 22,
               "message": "Cannot find name 'PlanUpdateInput'.",
               "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "distributed-systems-api-design/03_saga_pattern.md",
-      "lessonId": 3,
-      "title": "Saga Pattern (Orchestration vs Choreography)",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 20,
-          "section": "Example Code",
-          "defects": [
+            },
             {
-              "code": "TS2322",
-              "line": 136,
-              "message": "Type 'any' is not assignable to type 'never'.",
-              "class": "type-error"
+              "code": "TS2304",
+              "line": 31,
+              "message": "Cannot find name 'NextResponse'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 31,
+              "message": "Cannot find name 'NextResponse'.",
+              "class": "undefined-identifier"
             }
           ]
         }
@@ -1679,40 +1352,10 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS18004",
+              "code": "TS2304",
               "line": 5,
-              "message": "No value exists in scope for the shorthand property 'orderId'. Either declare one or provide an initializer.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18004",
-              "line": 5,
-              "message": "No value exists in scope for the shorthand property 'userId'. Either declare one or provide an initializer.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18004",
-              "line": 5,
-              "message": "No value exists in scope for the shorthand property 'totalCents'. Either declare one or provide an initializer.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS7006",
-              "line": 8,
-              "message": "Parameter 'event' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            },
-            {
-              "code": "TS7006",
-              "line": 12,
-              "message": "Parameter 'event' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            },
-            {
-              "code": "TS7006",
-              "line": 16,
-              "message": "Parameter 'event' implicitly has an 'any' type.",
-              "class": "implicit-any"
+              "message": "Cannot find name 'order'.",
+              "class": "undefined-identifier"
             }
           ]
         }
@@ -1729,28 +1372,10 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2393",
-              "line": 2,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
               "line": 2,
               "message": "Cannot find name 'PlaceOrderInput'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS7006",
-              "line": 3,
-              "message": "Parameter 'tx' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            },
-            {
-              "code": "TS2393",
-              "line": 12,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
             },
             {
               "code": "TS2304",
@@ -1801,470 +1426,6 @@
               "line": 6,
               "message": "Cannot find name 'notificationService'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS18046",
-              "line": 11,
-              "message": "'profile.value' is of type 'unknown'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18046",
-              "line": 12,
-              "message": "'profile.value' is of type 'unknown'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18046",
-              "line": 13,
-              "message": "'notifications.value' is of type 'unknown'.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/396_express_two_layer_architecture.md",
-      "lessonId": 396,
-      "title": "Express: Two-Layer Architecture — Routes and Static Services",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2395",
-              "line": 4,
-              "message": "Individual declarations in merged declaration 'CreateProjectDTO' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2528",
-              "line": 11,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2528",
-              "line": 23,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 40,
-              "message": "Duplicate identifier 'Router'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 42,
-              "message": "Individual declarations in merged declaration 'CreateProjectDTO' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 43,
-              "message": "Duplicate identifier 'authMiddleware'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2528",
-              "line": 65,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 68,
-              "message": "Duplicate identifier 'Router'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 70,
-              "message": "Duplicate identifier 'authMiddleware'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2528",
-              "line": 74,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/397_express_middleware_pipeline_and_security.md",
-      "lessonId": 397,
-      "title": "Express: Middleware Pipeline, CORS, and Rate Limiting",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2395",
-              "line": 5,
-              "message": "Individual declarations in merged declaration 'corsMiddleware' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 15,
-              "message": "Individual declarations in merged declaration 'helmetMiddleware' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 39,
-              "message": "Individual declarations in merged declaration 'authLimiter' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 50,
-              "message": "Individual declarations in merged declaration 'corsMiddleware' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 51,
-              "message": "Individual declarations in merged declaration 'helmetMiddleware' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2528",
-              "line": 71,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 75,
-              "message": "Individual declarations in merged declaration 'authLimiter' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2528",
-              "line": 87,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/398_express_curried_auth_middleware.md",
-      "lessonId": 398,
-      "title": "Express: Curried Auth Middleware and Typed Request Augmentation",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2300",
-              "line": 2,
-              "message": "Duplicate identifier 'SafeUser'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 3,
-              "message": "Duplicate identifier 'SafeUserSession'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 17,
-              "message": "Duplicate identifier 'AppError'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 18,
-              "message": "Duplicate identifier 'AuthMessages'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 50,
-              "message": "Duplicate identifier 'AppError'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 51,
-              "message": "Duplicate identifier 'AuthMessages'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 52,
-              "message": "Duplicate identifier 'SafeUser'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 52,
-              "message": "Duplicate identifier 'SafeUserSession'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2528",
-              "line": 54,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2528",
-              "line": 100,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/399_express_centralized_error_handling.md",
-      "lessonId": 399,
-      "title": "Express: Centralized Error Handling with AppError",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2300",
-              "line": 2,
-              "message": "Duplicate identifier 'AppError'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2528",
-              "line": 2,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 16,
-              "message": "Duplicate identifier 'AppError'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 17,
-              "message": "Duplicate identifier 'Logger'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18046",
-              "line": 26,
-              "message": "'error' is of type 'unknown'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18046",
-              "line": 30,
-              "message": "'error' is of type 'unknown'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 44,
-              "message": "Duplicate identifier 'AppError'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 45,
-              "message": "Duplicate identifier 'Logger'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2528",
-              "line": 48,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2528",
-              "line": 89,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/400_express_validation_and_response_conventions.md",
-      "lessonId": 400,
-      "title": "Express: Zod Validation and Response Envelope Conventions",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2300",
-              "line": 2,
-              "message": "Duplicate identifier 'z'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 4,
-              "message": "Individual declarations in merged declaration 'UuidParam' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 26,
-              "message": "Duplicate identifier 'z'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 28,
-              "message": "Individual declarations in merged declaration 'CreateProjectDTO' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 33,
-              "message": "Individual declarations in merged declaration 'ListProjectsQuery' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 41,
-              "message": "Individual declarations in merged declaration 'UuidParam' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 43,
-              "message": "Individual declarations in merged declaration 'CreateProjectDTO' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 43,
-              "message": "Individual declarations in merged declaration 'ListProjectsQuery' must be all exported or all local.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/401_express_realtime_sse_and_socketio.md",
-      "lessonId": 401,
-      "title": "Express: Real-Time Updates with SSE and Socket.io",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2323",
-              "line": 35,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 41,
-              "message": "Duplicate identifier 'env'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2323",
-              "line": 83,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 96,
-              "message": "Duplicate identifier 'env'.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/402_express_testing_with_jest_and_supertest.md",
-      "lessonId": 402,
-      "title": "Express: Integration Testing with Jest and Supertest",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2300",
-              "line": 2,
-              "message": "Duplicate identifier 'request'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 3,
-              "message": "Duplicate identifier 'app'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 4,
-              "message": "Duplicate identifier 'AppDataSource'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 5,
-              "message": "Duplicate identifier 'User'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 29,
-              "message": "Duplicate identifier 'request'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 30,
-              "message": "Duplicate identifier 'app'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 31,
-              "message": "Duplicate identifier 'AppDataSource'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 33,
-              "message": "Duplicate identifier 'User'.",
-              "class": "type-error"
             }
           ]
         }
@@ -2281,254 +1442,10 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2323",
-              "line": 5,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 5,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2875",
-              "line": 7,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 14,
-              "message": "Duplicate identifier 'Redirect'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 15,
-              "message": "Duplicate identifier 'useAuthStore'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2323",
-              "line": 17,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 17,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 31,
-              "message": "Duplicate identifier 'Redirect'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 32,
-              "message": "Duplicate identifier 'useAuthStore'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2323",
-              "line": 34,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 34,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 50,
-              "message": "Duplicate identifier 'useAuthStore'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2323",
-              "line": 53,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 53,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
               "line": 59,
               "message": "Cannot find name 'AuthService'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2323",
-              "line": 78,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 78,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/415_reactnative_zustand_mmkv_state_management.md",
-      "lessonId": 415,
-      "title": "React Native: Zustand + MMKV State Management",
-      "fences": [
-        {
-          "lang": "tsx",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2395",
-              "line": 3,
-              "message": "Individual declarations in merged declaration 'mmkv' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 7,
-              "message": "Individual declarations in merged declaration 'mmkv' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 9,
-              "message": "Individual declarations in merged declaration 'zustandMMKVStorage' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 18,
-              "message": "Individual declarations in merged declaration 'zustandMMKVStorage' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2875",
-              "line": 65,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2786",
-              "line": 65,
-              "message": "'Text' cannot be used as a JSX component.   Its type '{ new (data?: string | undefined): Text; prototype: Text; }' is not a valid JSX element type.     Type '{ new (data?: string | undefined): Text; prototype: Text; }' is not assignable to type 'new (props: any, context: any) => Component<any, any, any>'.       Type 'Text' is missing the following properties from type 'Component<any, any, any>': context, setState, forceUpdate, render, and 2 more.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/416_reactnative_data_fetching_and_offline.md",
-      "lessonId": 416,
-      "title": "React Native: Data Fetching, Loading States, and Offline Detection",
-      "fences": [
-        {
-          "lang": "tsx",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2300",
-              "line": 2,
-              "message": "Duplicate identifier 'useState'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 2,
-              "message": "Duplicate identifier 'useEffect'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 3,
-              "message": "Duplicate identifier 'axiosInstance'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 4,
-              "message": "Duplicate identifier 'extractErrorMessage'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 5,
-              "message": "Duplicate identifier 'UserResponse'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 38,
-              "message": "Duplicate identifier 'extractErrorMessage'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18046",
-              "line": 39,
-              "message": "'err' is of type 'unknown'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18046",
-              "line": 39,
-              "message": "'err' is of type 'unknown'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 45,
-              "message": "Duplicate identifier 'useState'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 46,
-              "message": "Duplicate identifier 'axiosInstance'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 47,
-              "message": "Duplicate identifier 'extractErrorMessage'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 50,
-              "message": "Duplicate identifier 'UserResponse'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 76,
-              "message": "Duplicate identifier 'useState'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 76,
-              "message": "Duplicate identifier 'useEffect'.",
-              "class": "type-error"
             }
           ]
         }
@@ -2546,7 +1463,7 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 66,
+              "line": 26,
               "message": "Cannot find name 'axiosInstance'.",
               "class": "undefined-identifier"
             }
@@ -2565,194 +1482,16 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2300",
-              "line": 25,
-              "message": "Duplicate identifier 'View'.",
-              "class": "type-error"
+              "code": "TS2304",
+              "line": 15,
+              "message": "Cannot find name 'View'.",
+              "class": "undefined-identifier"
             },
             {
-              "code": "TS2875",
-              "line": 33,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 40,
-              "message": "Duplicate identifier 'View'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 40,
-              "message": "Duplicate identifier 'useWindowDimensions'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 59,
-              "message": "Duplicate identifier 'useWindowDimensions'.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/419_reactnative_accessibility_and_feedback_patterns.md",
-      "lessonId": 419,
-      "title": "React Native: Accessibility and Feedback Patterns",
-      "fences": [
-        {
-          "lang": "tsx",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2300",
-              "line": 2,
-              "message": "Duplicate identifier 'Pressable'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2875",
-              "line": 8,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 49,
-              "message": "Duplicate identifier 'View'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 49,
-              "message": "Duplicate identifier 'Text'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 82,
-              "message": "Duplicate identifier 'View'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 82,
-              "message": "Duplicate identifier 'Text'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 82,
-              "message": "Duplicate identifier 'Pressable'.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/421_electron_process_model_and_typed_ipc.md",
-      "lessonId": 421,
-      "title": "Electron: Process Model and Typed IPC Channels",
-      "fences": [
-        {
-          "lang": "tsx",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2300",
-              "line": 4,
-              "message": "Duplicate identifier 'IPC'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 4,
-              "message": "Individual declarations in merged declaration 'IPC' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 6,
-              "message": "Duplicate identifier 'UsersListReq'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 6,
-              "message": "Individual declarations in merged declaration 'UsersListReq' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 7,
-              "message": "Duplicate identifier 'UsersListReq'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 9,
-              "message": "Duplicate identifier 'Result'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2503",
-              "line": 12,
-              "message": "Cannot find namespace 'Electron'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 21,
-              "message": "Duplicate identifier 'IPC'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 21,
-              "message": "Individual declarations in merged declaration 'IPC' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 21,
-              "message": "Duplicate identifier 'UsersListReq'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 21,
-              "message": "Individual declarations in merged declaration 'UsersListReq' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 21,
-              "message": "Duplicate identifier 'Result'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 38,
-              "message": "Duplicate identifier 'IPC'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 38,
-              "message": "Duplicate identifier 'UsersListReq'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 38,
-              "message": "Duplicate identifier 'Result'.",
-              "class": "type-error"
+              "code": "TS2304",
+              "line": 15,
+              "message": "Cannot find name 'View'.",
+              "class": "undefined-identifier"
             }
           ]
         }
@@ -2769,136 +1508,28 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2300",
+              "code": "TS2304",
               "line": 2,
-              "message": "Duplicate identifier 'BrowserWindow'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 35,
-              "message": "Duplicate identifier 'BrowserWindow'.",
-              "class": "type-error"
+              "message": "Cannot find name 'ipcMain'.",
+              "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 72,
+              "line": 2,
               "message": "Cannot find name 'IPC'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 74,
+              "line": 4,
               "message": "Cannot find name 'UsersService'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 74,
+              "line": 4,
               "message": "Cannot find name 'UsersListReq'.",
               "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/424_electron_project_structure_and_vite_build_config.md",
-      "lessonId": 424,
-      "title": "Electron: Project Structure and electron-vite Build Configuration",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 44,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2503",
-              "line": 34,
-              "message": "Cannot find namespace 'Electron'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2339",
-              "line": 44,
-              "message": "Property 'env' does not exist on type 'ImportMeta'.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/425_electron_renderer_react_and_design_system_fork.md",
-      "lessonId": 425,
-      "title": "Electron: Renderer Architecture — React, Client Routing, and Vendoring a Design System",
-      "fences": [
-        {
-          "lang": "tsx",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2875",
-              "line": 7,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 19,
-              "message": "Individual declarations in merged declaration 'api' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 23,
-              "message": "Individual declarations in merged declaration 'api' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 31,
-              "message": "Individual declarations in merged declaration 'useUsers' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2395",
-              "line": 43,
-              "message": "Individual declarations in merged declaration 'useUsers' must be all exported or all local.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "framework-deep-dives/426_electron_native_modules_and_os_integration.md",
-      "lessonId": 426,
-      "title": "Electron: Native Modules and OS API Integration",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 33,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2300",
-              "line": 16,
-              "message": "Duplicate identifier 'Menu'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2503",
-              "line": 19,
-              "message": "Cannot find namespace 'Electron'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 28,
-              "message": "Duplicate identifier 'Menu'.",
-              "class": "type-error"
             }
           ]
         }
@@ -2916,8 +1547,39 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 24,
+              "line": 3,
               "message": "Cannot find name 'AuthApi'.",
+              "class": "undefined-identifier"
+            }
+          ]
+        },
+        {
+          "lang": "typescript",
+          "line": 22,
+          "section": "Example Code",
+          "defects": [
+            {
+              "code": "TS2304",
+              "line": 2,
+              "message": "Cannot find name 'ipcMain'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 2,
+              "message": "Cannot find name 'autoUpdater'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 3,
+              "message": "Cannot find name 'ipcMain'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 3,
+              "message": "Cannot find name 'autoUpdater'.",
               "class": "undefined-identifier"
             }
           ]
@@ -2937,7 +1599,19 @@
             {
               "code": "TS2304",
               "line": 4,
+              "message": "Cannot find name 'ipcMain'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 4,
               "message": "Cannot find name 'IPC'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 7,
+              "message": "Cannot find name 'UsersService'.",
               "class": "undefined-identifier"
             },
             {
@@ -2945,54 +1619,38 @@
               "line": 7,
               "message": "Cannot find name 'UsersListReq'.",
               "class": "undefined-identifier"
-            },
+            }
+          ]
+        },
+        {
+          "lang": "typescript",
+          "line": 24,
+          "section": "Example Code",
+          "defects": [
             {
               "code": "TS2686",
-              "line": 20,
+              "line": 6,
               "message": "'React' refers to a UMD global, but the current file is a module. Consider adding an import instead.",
               "class": "type-error"
-            },
+            }
+          ]
+        },
+        {
+          "lang": "typescript",
+          "line": 24,
+          "section": "Example Code",
+          "defects": [
             {
               "code": "TS2304",
-              "line": 35,
+              "line": 2,
               "message": "Cannot find name 'app'.",
               "class": "undefined-identifier"
             },
             {
-              "code": "TS2503",
-              "line": 40,
-              "message": "Cannot find namespace 'Electron'.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
-              "line": 43,
+              "line": 10,
               "message": "Cannot find name 'initDeferredServices'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2300",
-              "line": 56,
-              "message": "Duplicate identifier 'expect'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 56,
-              "message": "Duplicate identifier 'test'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 71,
-              "message": "Duplicate identifier 'test'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 71,
-              "message": "Duplicate identifier 'expect'.",
-              "class": "type-error"
             }
           ]
         }
@@ -3008,12 +1666,6 @@
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS2875",
-              "line": 4,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            },
             {
               "code": "TS2304",
               "line": 11,
@@ -3053,90 +1705,36 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2300",
-              "line": 2,
-              "message": "Duplicate identifier 'Menu'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 2,
-              "message": "Duplicate identifier 'app'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2503",
-              "line": 5,
-              "message": "Cannot find namespace 'Electron'.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
               "line": 9,
               "message": "Cannot find name 'exportDocument'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2300",
-              "line": 20,
-              "message": "Duplicate identifier 'app'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 26,
-              "message": "Cannot find name 'focusMainWindow'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2875",
-              "line": 33,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 37,
-              "message": "Duplicate identifier 'Menu'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 43,
-              "message": "Cannot find name 'focusMainWindow'.",
-              "class": "undefined-identifier"
             }
           ]
-        }
-      ]
-    },
-    {
-      "lesson": "frontend-performance-scaling/22_http2_multiplexing.md",
-      "lessonId": 22,
-      "title": "HTTP/2 Multiplexing and Effect on Next.js",
-      "fences": [
+        },
         {
           "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2528",
-              "line": 36,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            },
+              "code": "TS2304",
+              "line": 14,
+              "message": "Cannot find name 'focusMainWindow'.",
+              "class": "undefined-identifier"
+            }
+          ]
+        },
+        {
+          "lang": "tsx",
+          "line": 21,
+          "section": "Example Code",
+          "defects": [
             {
-              "code": "TS2528",
-              "line": 47,
-              "message": "A module cannot have multiple default exports.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2875",
-              "line": 49,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
+              "code": "TS2304",
+              "line": 8,
+              "message": "Cannot find name 'focusMainWindow'.",
+              "class": "undefined-identifier"
             }
           ]
         }
@@ -3153,74 +1751,46 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2323",
-              "line": 5,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 5,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2875",
-              "line": 9,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
-              "line": 9,
+              "line": 7,
               "message": "Cannot find name 'DashboardLayout'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2323",
-              "line": 17,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 17,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2323",
-              "line": 40,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 40,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
+            }
+          ]
+        },
+        {
+          "lang": "tsx",
+          "line": 21,
+          "section": "Example Code",
+          "defects": [
             {
               "code": "TS2304",
-              "line": 49,
+              "line": 22,
               "message": "Cannot find name 'StatsSkeleton'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 53,
+              "line": 26,
               "message": "Cannot find name 'MembersSkeleton'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 54,
+              "line": 27,
               "message": "Cannot find name 'MemberList'.",
               "class": "undefined-identifier"
-            },
+            }
+          ]
+        },
+        {
+          "lang": "tsx",
+          "line": 21,
+          "section": "Example Code",
+          "defects": [
             {
               "code": "TS2304",
-              "line": 64,
+              "line": 5,
               "message": "Cannot find name 'StatsGrid'.",
               "class": "undefined-identifier"
             }
@@ -3239,102 +1809,16 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2875",
-              "line": 39,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2451",
-              "line": 51,
-              "message": "Cannot redeclare block-scoped variable 'grouped'.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
-              "line": 51,
+              "line": 49,
               "message": "Cannot find name 'items'.",
               "class": "undefined-identifier"
             },
             {
-              "code": "TS2451",
-              "line": 55,
-              "message": "Cannot redeclare block-scoped variable 'grouped'.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
-              "line": 55,
+              "line": 53,
               "message": "Cannot find name 'items'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2451",
-              "line": 59,
-              "message": "Cannot redeclare block-scoped variable 'formatted'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2451",
-              "line": 63,
-              "message": "Cannot redeclare block-scoped variable 'formatted'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 66,
-              "message": "Duplicate identifier 'Button'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 66,
-              "message": "Duplicate identifier 'Input'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 66,
-              "message": "Duplicate identifier 'Modal'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 69,
-              "message": "Duplicate identifier 'Button'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 70,
-              "message": "Duplicate identifier 'Input'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 71,
-              "message": "Duplicate identifier 'Modal'.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "frontend-performance-scaling/25_web_vitals.md",
-      "lessonId": 25,
-      "title": "Web Vitals (LCP, CLS, INP) — Real User Data Improvement",
-      "fences": [
-        {
-          "lang": "tsx",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2875",
-              "line": 46,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
             }
           ]
         }
@@ -3350,12 +1834,6 @@
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS2875",
-              "line": 11,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            },
             {
               "code": "TS2304",
               "line": 11,
@@ -3373,48 +1851,6 @@
               "line": 21,
               "message": "Cannot find name 'AnalyticsChart'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2323",
-              "line": 24,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 24,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2578",
-              "line": 39,
-              "message": "Unused '@ts-expect-error' directive.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2578",
-              "line": 44,
-              "message": "Unused '@ts-expect-error' directive.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2578",
-              "line": 50,
-              "message": "Unused '@ts-expect-error' directive.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2323",
-              "line": 59,
-              "message": "Cannot redeclare exported variable 'default'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2393",
-              "line": 59,
-              "message": "Duplicate function implementation.",
-              "class": "type-error"
             }
           ]
         }
@@ -3435,74 +1871,50 @@
               "line": 3,
               "message": "Cannot find name 'SessionData'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2300",
-              "line": 13,
-              "message": "Duplicate identifier 'redis'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 20,
-              "message": "Cannot find name 'SafeUser'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 20,
-              "message": "Cannot find name 'SafeUserSession'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 30,
-              "message": "Cannot find name 'SafeUser'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 30,
-              "message": "Cannot find name 'SafeUserSession'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2300",
-              "line": 41,
-              "message": "Duplicate identifier 'redis'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 67,
-              "message": "Cannot find name 'worker'.",
-              "class": "undefined-identifier"
             }
           ]
-        }
-      ]
-    },
-    {
-      "lesson": "frontend-performance-scaling/138_frontend_state_management.md",
-      "lessonId": 138,
-      "title": "Frontend State Management Architecture — Client vs Server State",
-      "fences": [
+        },
         {
           "lang": "typescript",
-          "line": 16,
+          "line": 21,
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS7006",
-              "line": 11,
-              "message": "Parameter 'set' implicitly has an 'any' type.",
-              "class": "implicit-any"
+              "code": "TS2304",
+              "line": 9,
+              "message": "Cannot find name 'SafeUser'.",
+              "class": "undefined-identifier"
             },
             {
-              "code": "TS7006",
-              "line": 13,
-              "message": "Parameter 's' implicitly has an 'any' type.",
-              "class": "implicit-any"
+              "code": "TS2304",
+              "line": 9,
+              "message": "Cannot find name 'SafeUserSession'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 19,
+              "message": "Cannot find name 'SafeUser'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 19,
+              "message": "Cannot find name 'SafeUserSession'.",
+              "class": "undefined-identifier"
+            }
+          ]
+        },
+        {
+          "lang": "typescript",
+          "line": 21,
+          "section": "Example Code",
+          "defects": [
+            {
+              "code": "TS2304",
+              "line": 28,
+              "message": "Cannot find name 'worker'.",
+              "class": "undefined-identifier"
             }
           ]
         }
@@ -3569,68 +1981,6 @@
       ]
     },
     {
-      "lesson": "observability-deployment/54_distributed_tracing.md",
-      "lessonId": 54,
-      "title": "Distributed Tracing — Following a Request Across Services",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 23,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2300",
-              "line": 3,
-              "message": "Duplicate identifier 'trace'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 3,
-              "message": "Duplicate identifier 'context'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 3,
-              "message": "Duplicate identifier 'propagation'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 25,
-              "message": "Duplicate identifier 'context'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 25,
-              "message": "Duplicate identifier 'propagation'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 49,
-              "message": "Duplicate identifier 'context'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 49,
-              "message": "Duplicate identifier 'propagation'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 49,
-              "message": "Duplicate identifier 'trace'.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "lesson": "observability-deployment/61_alerting_design.md",
       "lessonId": 61,
       "title": "Alerting Design — Avoiding Alert Fatigue",
@@ -3675,64 +2025,6 @@
       ]
     },
     {
-      "lesson": "saas-business-skills/90_accessibility.md",
-      "lessonId": 90,
-      "title": "Accessibility (a11y) — WCAG 2.1 AA Compliance",
-      "fences": [
-        {
-          "lang": "tsx",
-          "line": 22,
-          "section": "Example Code or Template",
-          "defects": [
-            {
-              "code": "TS18046",
-              "line": 65,
-              "message": "'el' is of type 'unknown'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2339",
-              "line": 74,
-              "message": "Property 'focus' does not exist on type '{}'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2339",
-              "line": 80,
-              "message": "Property 'focus' does not exist on type '{}'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2875",
-              "line": 91,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "saas-business-skills/93_ab_test_infrastructure.md",
-      "lessonId": 93,
-      "title": "A/B Test Infrastructure — Statistical Significance",
-      "fences": [
-        {
-          "lang": "tsx",
-          "line": 22,
-          "section": "Example Code or Template",
-          "defects": [
-            {
-              "code": "TS2875",
-              "line": 57,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "lesson": "security/29_owasp_top_10.md",
       "lessonId": 29,
       "title": "OWASP Top 10 — Practical Application",
@@ -3744,19 +2036,26 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 29,
+              "line": 28,
               "message": "Cannot find name 'TenantMemberService'.",
               "class": "undefined-identifier"
-            },
+            }
+          ]
+        },
+        {
+          "lang": "typescript",
+          "line": 23,
+          "section": "Example Code",
+          "defects": [
             {
               "code": "TS2304",
-              "line": 58,
+              "line": 13,
               "message": "Cannot find name 'AuditLogService'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 64,
+              "line": 19,
               "message": "Cannot find name 'Logger'.",
               "class": "undefined-identifier"
             }
@@ -3775,80 +2074,20 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2451",
+              "code": "TS2304",
               "line": 4,
-              "message": "Cannot redeclare block-scoped variable 'user'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 5,
-              "message": "Cannot find name 'userInput'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2451",
-              "line": 9,
-              "message": "Cannot redeclare block-scoped variable 'user'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 9,
-              "message": "Cannot find name 'userInput'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2451",
-              "line": 16,
-              "message": "Cannot redeclare block-scoped variable 'result'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 17,
-              "message": "Cannot find name 'tenantId'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2451",
-              "line": 22,
-              "message": "Cannot redeclare block-scoped variable 'result'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 24,
-              "message": "Cannot find name 'actorId'.",
+              "message": "Cannot find name 'req'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 24,
-              "message": "Cannot find name 'action'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 29,
+              "line": 39,
               "message": "Cannot find name 'AuditLog'.",
               "class": "undefined-identifier"
             },
             {
-              "code": "TS18004",
-              "line": 31,
-              "message": "No value exists in scope for the shorthand property 'actorId'. Either declare one or provide an initializer.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18004",
-              "line": 32,
-              "message": "No value exists in scope for the shorthand property 'action'. Either declare one or provide an initializer.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
-              "line": 73,
+              "line": 83,
               "message": "Cannot find name 'req'.",
               "class": "undefined-identifier"
             }
@@ -3867,32 +2106,14 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2339",
-              "line": 64,
-              "message": "Property 'createHash' does not exist on type 'Crypto'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2339",
-              "line": 97,
-              "message": "Property 'randomBytes' does not exist on type 'Crypto'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2339",
-              "line": 98,
-              "message": "Property 'createHash' does not exist on type 'Crypto'.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
-              "line": 121,
+              "line": 122,
               "message": "Cannot find name 'token'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 121,
+              "line": 122,
               "message": "Cannot find name 'SECRET'.",
               "class": "undefined-identifier"
             }
@@ -3927,50 +2148,6 @@
               "line": 76,
               "message": "Cannot find name 'rawToken'.",
               "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "security/35_content_security_policy_csp_headers.md",
-      "lessonId": 35,
-      "title": "Content Security Policy (CSP) Headers",
-      "fences": [
-        {
-          "lang": "tsx",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2300",
-              "line": 4,
-              "message": "Duplicate identifier 'NextRequest'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 4,
-              "message": "Duplicate identifier 'NextResponse'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2875",
-              "line": 58,
-              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 79,
-              "message": "Duplicate identifier 'NextRequest'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 79,
-              "message": "Duplicate identifier 'NextResponse'.",
-              "class": "type-error"
             }
           ]
         }

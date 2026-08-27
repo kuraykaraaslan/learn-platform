@@ -36,6 +36,7 @@ The third model — which you use — is separate databases. Each tenant has the
 // PostgreSQL's default max_connections is 100-200.
 // Solution: limit pool size per tenant and use connection pooling (PgBouncer).
 
+import crypto from 'crypto';
 import { DataSource } from 'typeorm';
 import { LRUCache } from 'lru-cache'; // npm install lru-cache
 

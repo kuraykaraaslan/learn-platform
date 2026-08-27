@@ -19,6 +19,7 @@ Delivery guarantees are the part that bites people in production. Most brokers o
 // (see #27 for a concrete BullMQ implementation, #106 for Kafka)
 
 // Producer: doesn't know or care who's listening
+const { id: orderId, userId, totalCents } = order;
 await eventBus.publish("order.placed", { orderId, userId, totalCents });
 
 // Three independent subscribers, each with its own concern and its own retry/DLQ policy

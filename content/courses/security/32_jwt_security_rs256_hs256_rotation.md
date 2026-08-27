@@ -25,6 +25,7 @@ Refresh token rotation is the practice of issuing a new refresh token every time
 // implementations leave out.
 
 // ─── Option A: RS256 upgrade (when you add external service verification) ──
+import crypto from 'crypto';
 import jwt from 'jsonwebtoken';
 import fs from 'fs';
 

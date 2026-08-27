@@ -97,6 +97,7 @@ class UserFactory {
 // Just write three if-statements. CoR adds cognitive overhead with no benefit under ~10 handlers.
 
 // ✓ Right fit: Observer when you have 4+ independent side effects on user registration
+import crypto from 'crypto';
 import { EventEmitter } from 'events';
 const userEvents = new EventEmitter();
 

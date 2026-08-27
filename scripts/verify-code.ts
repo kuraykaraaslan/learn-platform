@@ -20,6 +20,41 @@ import os from 'node:os';
 import path from 'node:path';
 import { listFences, type Fence } from '../modules/course_content/course_content.fences';
 
+/**
+ * A single fence very often shows SEVERAL files, separated by a path comment:
+ *
+ *   // app/api/users/route.ts
+ *   export async function GET() { ... }
+ *
+ *   // lib/users.ts
+ *   export default function users() { ... }
+ *
+ * Concatenating those into one module produces duplicate `GET`s, two default
+ * exports and colliding `beforeEach`es — 108 of the reported defects were this
+ * and nothing else. Splitting on the marker checks what the lesson actually
+ * shows: several files, each on its own.
+ */
+// The whole comment must BE the path — optionally with a short trailing note
+// after a dash or in parentheses. Without that anchor, "// Next.js App Router
+// already does code splitting" is read as a file called "Next.js".
+const FILE_MARKER =
+  /^[ \t]{0,4}(?:\/\/|#)\s*([\w@][\w./@-]*\.(?:ts|tsx|js|jsx|mts|cts))\s*(?:[—–-]\s.*|\(.*\))?$/;
+
+function splitSnippetFiles(code: string): string[] {
+  const lines = code.split('\n');
+  const parts: string[][] = [];
+  let current: string[] = [];
+  for (const line of lines) {
+    if (FILE_MARKER.test(line) && current.some((l) => l.trim())) {
+      parts.push(current);
+      current = [];
+    }
+    current.push(line);
+  }
+  parts.push(current);
+  return parts.filter((p) => p.some((l) => l.trim())).map((p) => p.join('\n'));
+}
+
 const TS_LANGS = new Set(['typescript', 'ts', 'tsx', 'javascript', 'js', 'jsx']);
 const OUT_DIR = path.join(process.cwd(), 'content', '_reports');
 
@@ -36,6 +71,7 @@ type DefectClass =
   | 'missing-module'
   | 'assumed-context'
   | 'assumed-helper'
+  | 'shows-variants'
   | 'syntax'
   | 'undefined-identifier'
   | 'implicit-any'
@@ -58,11 +94,21 @@ const ASSUMED_CONTEXT = new Set([
 
 function classify(code: string, message = ''): DefectClass {
   if (code === 'TS2307') return 'missing-module';
+  // Type-only packages this repo does not install (@types/electron, React's
+  // jsx-runtime). Same category as a missing module: not the lesson's fault.
+  if (code === 'TS2875') return 'missing-module';
+  if (code === 'TS2503' && /Cannot find namespace '(Electron|NodeJS|Express|JSX)'/.test(message))
+    return 'missing-module';
   if (code === 'TS2304' || code === 'TS2552') {
     const name = /Cannot find name '([^']+)'/.exec(message)?.[1];
     if (name && ASSUMED_CONTEXT.has(name)) return 'assumed-context';
   }
   if (/^TS1\d{3}$/.test(code)) return 'syntax';
+  // A snippet that defines `GET` twice, or has two default exports, is showing
+  // two versions of the same thing — the wrong one and the right one, or two
+  // options being compared. That is the teaching pattern, not a defect.
+  if (['TS2300', 'TS2393', 'TS2323', 'TS2451', 'TS2528', 'TS2396'].includes(code))
+    return 'shows-variants';
   if (code === 'TS2304' || code === 'TS2552') return 'undefined-identifier';
   if (code === 'TS7006' || code === 'TS7031' || code === 'TS7034' || code === 'TS7005')
     return 'implicit-any';
@@ -105,11 +151,38 @@ function callOnlyNames(source: ts.SourceFile): Set<string> {
   return called;
 }
 
-function classifyWithContext(code: string, message: string, callOnly: Set<string>): DefectClass {
+function classifyWithContext(
+  code: string,
+  message: string,
+  callOnly: Set<string>,
+  siblings: Set<string>
+): DefectClass {
   const base = classify(code, message);
   if (base !== 'undefined-identifier') return base;
   const name = /Cannot find name '([^']+)'/.exec(message)?.[1];
-  return name && callOnly.has(name) ? 'assumed-helper' : base;
+  if (!name) return base;
+  if (siblings.has(name)) return 'assumed-context';
+  return callOnly.has(name) ? 'assumed-helper' : base;
+}
+
+/** Top-level names declared anywhere in a source file. */
+function topLevelDeclarations(source: ts.SourceFile): Set<string> {
+  const names = new Set<string>();
+  for (const stmt of source.statements) {
+    if (ts.isVariableStatement(stmt))
+      for (const decl of stmt.declarationList.declarations)
+        if (ts.isIdentifier(decl.name)) names.add(decl.name.text);
+    if (
+      (ts.isFunctionDeclaration(stmt) ||
+        ts.isClassDeclaration(stmt) ||
+        ts.isInterfaceDeclaration(stmt) ||
+        ts.isTypeAliasDeclaration(stmt) ||
+        ts.isEnumDeclaration(stmt)) &&
+      stmt.name
+    )
+      names.add(stmt.name.text);
+  }
+  return names;
 }
 
 type Defect = { code: string; line: number; message: string; class: DefectClass };
@@ -123,13 +196,27 @@ type Result = Fence & { snippetFile: string; defects: Defect[] };
 const TEST_GLOBALS =
   /Cannot find name '(expect|describe|it|test|jest|vi|beforeEach|afterEach|beforeAll|afterAll|suite)'/;
 
+/**
+ * Errors that only exist because a symbol's TYPE is unavailable. If `multer` is
+ * not installed then `error instanceof multer.MulterError` cannot narrow, and
+ * the resulting "'error' is of type 'unknown'" says nothing about the lesson —
+ * the narrowing it wrote is correct. Same for a value returned by an assumed
+ * helper: its type is unknowable here by construction.
+ */
+const COLLATERAL = new Set(['TS18046', 'TS2339', 'TS2345', 'TS2322', 'TS7006', 'TS7031', 'TS2571', 'TS2578', 'TS2786']);
+
 function realDefects(r: Result): Defect[] {
-  const hasMissingModule = r.defects.some((d) => d.class === 'missing-module');
+  // Anything whose type flows from a name this snippet does not resolve is
+  // downstream noise. Fix the undefined name first and these become real.
+  const unresolvable = r.defects.some((d) =>
+    ['missing-module', 'assumed-helper', 'assumed-context', 'undefined-identifier'].includes(d.class)
+  );
   return r.defects.filter((d) => {
     if (d.class === 'missing-module') return false;
     if (d.class === 'assumed-context') return false;
     if (d.class === 'assumed-helper') return false;
-    if (d.class === 'implicit-any' && hasMissingModule) return false;
+    if (d.class === 'shows-variants') return false;
+    if (unresolvable && COLLATERAL.has(d.code)) return false;
     if (TEST_GLOBALS.test(d.message)) return false;
     return true;
   });
@@ -138,11 +225,18 @@ function realDefects(r: Result): Defect[] {
 const fences = listFences().filter((f) => TS_LANGS.has(f.lang.toLowerCase()));
 const workDir = fs.mkdtempSync(path.join(os.tmpdir(), 'verify-code-'));
 
-const results: Result[] = fences.map((f, index) => {
-  const ext = f.lang.toLowerCase() === 'tsx' || f.lang.toLowerCase() === 'jsx' ? '.tsx' : '.ts';
-  const snippetFile = path.join(workDir, `${String(index).padStart(4, '0')}${ext}`);
-  fs.writeFileSync(snippetFile, `${f.code}\nexport {};\n`);
-  return { ...f, snippetFile, defects: [] };
+const results: Result[] = [];
+fences.forEach((f, index) => {
+  const lang = f.lang.toLowerCase();
+  const ext = lang === 'tsx' || lang === 'jsx' ? '.tsx' : '.ts';
+  splitSnippetFiles(f.code).forEach((part, partIndex) => {
+    const snippetFile = path.join(
+      workDir,
+      `${String(index).padStart(4, '0')}-${String(partIndex).padStart(2, '0')}${ext}`
+    );
+    fs.writeFileSync(snippetFile, `${part}\nexport {};\n`);
+    results.push({ ...f, code: part, snippetFile, defects: [] });
+  });
 });
 
 // The TypeScript compiler API, not the `tsc` CLI.
@@ -153,31 +247,71 @@ const results: Result[] = fences.map((f, index) => {
 // error — so a single CLI pass reported those 19 and declared the other 143
 // snippets clean, hiding every missing import and undefined identifier in the
 // corpus. Per-file diagnostics off one program give the true picture.
-const program = ts.createProgram(
-  results.map((r) => r.snippetFile),
-  // These options mirror the repo's own tsconfig.json, because the bar is "does
-  // this compile where a reader would paste it" — not "does it compile under
-  // some stricter config of the tool's own invention". Getting this wrong
-  // produces confident false positives: without esModuleInterop, every
-  // `import crypto from 'crypto'` looks broken, and without the DOM lib every
-  // snippet touching `document` or `fetch` does too.
-  {
-    noEmit: true,
-    skipLibCheck: true,
-    strict: true,
-    esModuleInterop: true,
-    allowSyntheticDefaultImports: true,
-    resolveJsonModule: true,
-    target: ts.ScriptTarget.ES2022,
-    module: ts.ModuleKind.ESNext,
-    moduleResolution: ts.ModuleResolutionKind.Node10,
+/**
+ * Node and DOM cannot share one program. lib.dom declares a global `crypto` of
+ * type `Crypto` (Web Crypto), which shadows Node's `crypto` module and makes
+ * every `crypto.randomBytes` look like an error; its `Text` shadows React
+ * Native's. Each snippet is checked under the flavor it is written for.
+ */
+function flavorOf(code: string): 'node' | 'dom' {
+  return /from ['"](?:node:)?(?:crypto|fs|path|http|https|os|dns|net|child_process|stream|worker_threads)['"]/.test(
+    code
+  )
+    ? 'node'
+    : 'dom';
+}
+
+// Mirrors the repo's own tsconfig.json, because the bar is "does this compile
+// where a reader would paste it" — not "under some stricter config of the
+// tool's own invention". Getting this wrong produces confident false
+// positives: without esModuleInterop every `import crypto from 'crypto'` looks
+// broken, and without the DOM lib every snippet touching `document` does too.
+const baseOptions = {
+  noEmit: true,
+  skipLibCheck: true,
+  strict: true,
+  esModuleInterop: true,
+  allowSyntheticDefaultImports: true,
+  resolveJsonModule: true,
+  target: ts.ScriptTarget.ES2022,
+  module: ts.ModuleKind.ESNext,
+  moduleResolution: ts.ModuleResolutionKind.Node10,
+  jsx: ts.JsxEmit.ReactJSX,
+  allowJs: true,
+} satisfies ts.CompilerOptions;
+
+const byFlavor: Record<'node' | 'dom', string[]> = { node: [], dom: [] };
+for (const r of results) byFlavor[flavorOf(r.code)].push(r.snippetFile);
+
+const programs = {
+  node: ts.createProgram(byFlavor.node, { ...baseOptions, lib: ['lib.es2022.d.ts'] }),
+  dom: ts.createProgram(byFlavor.dom, {
+    ...baseOptions,
     lib: ['lib.es2022.d.ts', 'lib.dom.d.ts', 'lib.dom.iterable.d.ts'],
-    jsx: ts.JsxEmit.ReactJSX,
-    allowJs: true,
+  }),
+};
+const programFor = (r: Result) => programs[flavorOf(r.code)];
+
+// name -> declared anywhere in the same fence
+const siblingDeclarations = new Map<string, Set<string>>();
+{
+  const byFence = new Map<string, Result[]>();
+  for (const r of results) {
+    const key = `${r.courseSlug}/${r.file}#${r.line}`;
+    byFence.set(key, [...(byFence.get(key) ?? []), r]);
   }
-);
+  for (const group of byFence.values()) {
+    const all = new Set<string>();
+    for (const r of group) {
+      const sf = programFor(r).getSourceFile(r.snippetFile);
+      if (sf) for (const n of topLevelDeclarations(sf)) all.add(n);
+    }
+    for (const r of group) siblingDeclarations.set(r.snippetFile, all);
+  }
+}
 
 for (const result of results) {
+  const program = programFor(result);
   const source = program.getSourceFile(result.snippetFile);
   if (!source) continue;
   const diagnostics = [
@@ -185,6 +319,10 @@ for (const result of results) {
     ...program.getSemanticDiagnostics(source),
   ];
   const callOnly = callOnlyNames(source);
+  // A fence split into several files still describes one coherent example, so
+  // a helper defined in the first file is not "undefined" when the second one
+  // calls it. Names declared anywhere in the same fence are known.
+  const siblings = siblingDeclarations.get(result.snippetFile) ?? new Set<string>();
   for (const d of diagnostics) {
     const code = `TS${d.code}`;
     const line =
@@ -195,7 +333,12 @@ for (const result of results) {
       code,
       line,
       message: ts.flattenDiagnosticMessageText(d.messageText, ' '),
-      class: classifyWithContext(code, ts.flattenDiagnosticMessageText(d.messageText, ' '), callOnly),
+      class: classifyWithContext(
+        code,
+        ts.flattenDiagnosticMessageText(d.messageText, ' '),
+        callOnly,
+        siblings
+      ),
     });
   }
 }

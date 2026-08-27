@@ -20,6 +20,7 @@ Reading from a store correctly matters as much as writing to it. `useAuthStore((
 ## Example Code
 ```tsx
 // libs/mmkv.ts
+import { Text } from "react-native";
 import { MMKV } from "react-native-mmkv";
 export const mmkv = new MMKV({ id: "app-storage" });
 
