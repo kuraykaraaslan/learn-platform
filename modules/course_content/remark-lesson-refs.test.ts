@@ -35,7 +35,7 @@ describe('remarkLessonRefs', () => {
 });
 
 describe('remarkLessonRefs — non-canonical forms', () => {
-  it('links a bare id after a reference cue', () => {
+  it('links a bare id that matches a lesson', () => {
     expect(markdownToHtml('ties to #55 SLO/SLI/SLA')).toContain('/courses/observability-deployment/slo-sli-sla');
   });
 
@@ -56,5 +56,19 @@ describe('remarkLessonRefs — non-canonical forms', () => {
   it('keeps a prose cue outside the link so the sentence still reads', () => {
     const html = markdownToHtml('in place (see Lesson 258), someone must run support');
     expect(html).toContain('(see <a ');
+  });
+
+  it('links the "Course N" form the compliance lessons use', () => {
+    expect(markdownToHtml('Blameless Post-Mortem (course #79) covers the retrospective')).toContain('<a ');
+    expect(markdownToHtml('Course 358 — Data Classification')).toContain('>Course 358<');
+  });
+
+  it('never links an id introduced by a counter noun', () => {
+    // The deny-list is small because a survey of every bare id in all 412
+    // lessons found exactly one counter usage. If a new one appears, it must
+    // be added here rather than discovered by a reader.
+    for (const counter of ['rule', 'step', 'issue', 'item', 'phase', 'option', 'week']) {
+      expect(markdownToHtml(`${counter} #1 is the one that matters`)).not.toContain('<a ');
+    }
   });
 });

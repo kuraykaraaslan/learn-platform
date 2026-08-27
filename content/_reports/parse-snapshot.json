@@ -123,8 +123,8 @@
     "ai-llm-engineering": {
       "140_ai_llm_integration.md": {
         "title": "0a2d117aba4039cc",
-        "whatItIs": "810ec50a26601d05",
-        "keyConcepts": "5613302cf96e8dcc",
+        "whatItIs": "4c97ada5bce5a047",
+        "keyConcepts": "85eb34f003dadee8",
         "exampleCode": "d589ba943a643aba",
         "whenToUse": "eb6e6ad43db6d8ec",
         "commonMistakes": "b5f658e061eefc83",
@@ -443,9 +443,9 @@
       "134_domain_driven_design.md": {
         "title": "7ffa4f6ca0e35470",
         "whatItIs": "a5f5b0bab39483b8",
-        "keyConcepts": "667f25f8d1358eea",
+        "keyConcepts": "7c692190275e4723",
         "exampleCode": "d156e3b93674c6e4",
-        "whenToUse": "e7197fc9747c6c31",
+        "whenToUse": "f4c5dfbe4ab17788",
         "commonMistakes": "e778263b55c347a4",
         "furtherReading": "2f433b53e7456465"
       },
@@ -454,7 +454,7 @@
         "whatItIs": "5d723f5ee2762863",
         "keyConcepts": "0cb72ea89d9d1372",
         "exampleCode": "5b847ab3bc40fff4",
-        "whenToUse": "c2aef88a597d48eb",
+        "whenToUse": "27df4c39bb9607b3",
         "commonMistakes": "6d7437a5dfb9533a",
         "furtherReading": "3a7beacf946b32d6"
       }
@@ -2386,7 +2386,7 @@
       },
       "131_message_queues_101.md": {
         "title": "df839942cb44ce58",
-        "whatItIs": "ef3ff22487d118db",
+        "whatItIs": "e5cdce0d7ff72c64",
         "keyConcepts": "09b72d426a3947a8",
         "exampleCode": "5bb431a3f0d5e45e",
         "whenToUse": "2980ca32207eb676",
@@ -2395,8 +2395,8 @@
       },
       "135_microservices_vs_monolith.md": {
         "title": "117f95ec3d34ccfa",
-        "whatItIs": "f10b9bd948a8ce91",
-        "keyConcepts": "7ea878349ea2ca17",
+        "whatItIs": "9fac4123127ad93c",
+        "keyConcepts": "584b0c5d7eba47d5",
         "exampleCode": "1e8c712358fbc3f1",
         "whenToUse": "5b18091bea5b501c",
         "commonMistakes": "5099afae4158eeaa",
@@ -2906,7 +2906,7 @@
       "139_git_internals_advanced_workflows.md": {
         "title": "e22e0cc07a6442a7",
         "whatItIs": "21c92aa3816768ee",
-        "keyConcepts": "56d7ea68808c5d96",
+        "keyConcepts": "75b18f71be10e8f9",
         "exampleCode": "2bf17ef99100f027",
         "whenToUse": "121ce0afd02d8168",
         "commonMistakes": "7bf2f6929740b3b0",
@@ -3024,7 +3024,7 @@
       },
       "141_cloud_architecture_well_architected.md": {
         "title": "110eea14bb34a34b",
-        "whatItIs": "651413cbe72135b9",
+        "whatItIs": "785adeda4d2c2441",
         "keyConcepts": "fc74ddab0352bf1d",
         "exampleCode": "c09dc1f1d74ce6d8",
         "whenToUse": "fb27cab509a2f7cc",
@@ -3154,16 +3154,16 @@
       },
       "362_incident_response_process_detection_to_postmortem.md": {
         "title": "a6e8315ccc9c22ca",
-        "whatItIs": "dbceb6a5b5f38234",
+        "whatItIs": "f62a6ab2dd3bb290",
         "keyConcepts": "57a10a84a44c537d",
         "exampleCode": "9a35f8270dd02586",
         "whenToUse": "47321757b26226d8",
         "commonMistakes": "db4b87127dbf7ac5",
-        "furtherReading": "30a8560cbdc5959e"
+        "furtherReading": "89d9481b9901de47"
       },
       "363_breach_notification_requirements_across_jurisdictions.md": {
         "title": "b67ef49e3ffc6271",
-        "whatItIs": "0dd140fe270a2e45",
+        "whatItIs": "9d14b2b6ed834431",
         "keyConcepts": "1d005b8b3ceb79f7",
         "exampleCode": "c4ae82feda02d5e1",
         "whenToUse": "ddc748c7d104b472",
@@ -3172,16 +3172,16 @@
       },
       "364_third_party_vendor_risk_data_processing_agreements.md": {
         "title": "d2a320e4807bc9ca",
-        "whatItIs": "cf152ec342fe60a5",
+        "whatItIs": "7052e16fac93b6f7",
         "keyConcepts": "456267f9904e7ab5",
         "exampleCode": "3661eb1dd5671c82",
-        "whenToUse": "719251ba9504d501",
+        "whenToUse": "92d8f34f38611e52",
         "commonMistakes": "4ff3c875f0d904d3",
-        "furtherReading": "363c750483b6580e"
+        "furtherReading": "afb7a008e054a39b"
       },
       "365_childrens_data_compliance_age_verification_parental_consent.md": {
         "title": "76efb372cfe877e3",
-        "whatItIs": "46e4be943d25538c",
+        "whatItIs": "faabbd195ac2f2eb",
         "keyConcepts": "c7e8e4a9c4d433a1",
         "exampleCode": "0d79dae3736ed31e",
         "whenToUse": "2cfccdb28f8ca403",
@@ -3190,30 +3190,30 @@
       },
       "366_health_data_compliance_hipaa_nhs_kvkk_saglik.md": {
         "title": "7c2c4720d530a15d",
-        "whatItIs": "b1cb78d4fd81c07c",
-        "keyConcepts": "478527fa0f2eb0a0",
+        "whatItIs": "d54833aefa4e78e2",
+        "keyConcepts": "25be7c936a06ec80",
         "exampleCode": "d50e6a838bf3fc44",
-        "whenToUse": "6280cba1ca14fde9",
+        "whenToUse": "7d186d386c495455",
         "commonMistakes": "ab41637d6ea068fd",
-        "furtherReading": "884013b1b7a5d8d1"
+        "furtherReading": "2d3ab272e974ef78"
       },
       "367_security_handover_access_transition_checklist.md": {
         "title": "7c392a1ef042f70a",
-        "whatItIs": "59fdbb2cbd550e53",
-        "keyConcepts": "4792c9ad4c84ec0e",
+        "whatItIs": "352f1c70117921f0",
+        "keyConcepts": "1bf79d7892657c35",
         "exampleCode": "2feb9b0aeebd54a0",
         "whenToUse": "2b5ef16187ae99c5",
         "commonMistakes": "183e47e35a691dbc",
-        "furtherReading": "021a7e8139e2aede"
+        "furtherReading": "5b5a25a63d61bcc2"
       },
       "368_client_facing_security_communication_risk_framing.md": {
         "title": "ae605ab29e22e6f5",
-        "whatItIs": "7cd187100cadc3b9",
-        "keyConcepts": "24519f4c32a4e6e1",
+        "whatItIs": "a1ffb63585c8127c",
+        "keyConcepts": "75221a1642773be3",
         "exampleCode": "79f1b25bfaa4f484",
-        "whenToUse": "718d7cf13f21a0a5",
+        "whenToUse": "1e6b499dcea50e24",
         "commonMistakes": "520db457a14affdd",
-        "furtherReading": "a250211fa80db778"
+        "furtherReading": "4a01e41d9b50cfed"
       }
     },
     "process-soft-skills": {
@@ -3747,7 +3747,7 @@
       },
       "143_compliance_frameworks.md": {
         "title": "f396739580678ce2",
-        "whatItIs": "773dbc864974cd2c",
+        "whatItIs": "d7e4d22fb80a3e84",
         "keyConcepts": "1b375e76932f9a43",
         "exampleCode": "eacb1b81ccd366dd",
         "whenToUse": "c60cee1318005bc4",

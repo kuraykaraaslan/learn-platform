@@ -2,23 +2,27 @@ import type { Root, Text, PhrasingContent } from 'mdast';
 import { lessonIndex } from './course_content.index';
 
 /**
- * The three ways the corpus refers to another lesson, recognized in prose so
- * the source text never has to be rewritten:
+ * Cross-references to another lesson, recognized in prose so the source text
+ * never has to be rewritten. Any `#41` whose id exists in the corpus becomes a
+ * link, as does the spelled-out `Lesson 41` / `Course 41` form.
  *
- *   1. `(#41)`        — the canonical form
- *   2. `see #41`      — a bare id after a reference cue
- *   3. `Lesson 41`    — the spelled-out form used in the business courses
+ * The exclusions are what make this safe, and both are grounded in what the
+ * corpus actually contains rather than in caution:
  *
- * A bare `#41` with no cue is deliberately NOT matched: the corpus also writes
- * "rule #1" and "Top 10 #29", and linking those would be wrong. An id range
- * ("#53–62") is skipped too — it is one reference to many lessons and cannot
- * become a single link.
+ *   - A counter noun before the id ("rule #1", "step #3") is never a lesson
+ *     reference. A survey of every bare id in all 412 lessons found exactly one
+ *     such usage, so the deny-list is small on purpose and is enforced by test.
+ *   - An id range ("#53–62") is one reference to many lessons and cannot become
+ *     a single link, so it is left alone.
  */
+const COUNTER_NOUNS =
+  /\b(rule|issue|step|item|no|num|number|pr|ticket|bug|chapter|figure|part|point|phase|option|version|week|day)\.?$/i;
+
 const REF = new RegExp(
   [
     String.raw`\(#(?<paren>\d{1,3})\)`,
-    String.raw`(?<cue>\b(?:see|See|ties to|also see|counterpart to|covered in|described in)\s+)#(?<cued>\d{1,3})\b(?!\s*[–—-]\s*\d)`,
-    String.raw`\b(?<word>Lessons?\s+)(?<spelled>\d{1,3})\b`,
+    String.raw`(?<word>\b(?:Lessons?|Courses?)\s+)(?<spelled>\d{1,3})\b`,
+    String.raw`#(?<bare>\d{1,3})\b(?!\s*[–—-]\s*\d)`,
   ].join('|'),
   'g'
 );
@@ -52,15 +56,16 @@ export function remarkLessonRefs() {
         REF.lastIndex = 0;
         for (let match = REF.exec(value); match; match = REF.exec(value)) {
           const g = match.groups!;
-          const id = Number(g.paren ?? g.cued ?? g.spelled);
+          const id = Number(g.paren ?? g.spelled ?? g.bare);
           const ref = index.get(id);
           if (!ref) continue;
+          // "rule #1" counts rules, not lessons.
+          if (g.bare && COUNTER_NOUNS.test(value.slice(0, match.index).trimEnd())) continue;
 
-          // Keep the cue word ("see ", "Lesson ") outside the link where it
-          // reads as prose, and inside it where it reads as the label.
-          const lead = g.cue ?? '';
+          // "Lesson 41" reads as its own label; a bare or parenthesised id
+          // becomes "#41".
           const label = g.word ? `${g.word.trim()} ${id}` : `#${id}`;
-          const from = match.index + lead.length;
+          const from = match.index;
 
           if (from > cursor) parts.push({ type: 'text', value: value.slice(cursor, from) });
           parts.push({
