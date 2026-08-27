@@ -112,3 +112,4 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 - [**Stripe API documentation — versioning policy](https://stripe.com/docs/upgrades)** — The gold standard for API versioning UX; their date-based versioning and changelog approach is worth emulating
 - [**"RESTful API Design" by Apigee](https://cloud.google.com/apis/design)** — Google's API Design Guide covers versioning, backward compatibility, and breaking changes with concrete examples
 - [**"API Versioning Has No Right Way" by Troy Hunt](https://troyhunt.com)** — An honest breakdown of tradeoffs for each approach; pragmatic and not dogmatic
+- [Semantic Versioning 2.0.0](https://semver.org/) — the definition the whole argument about "is this breaking" refers back to

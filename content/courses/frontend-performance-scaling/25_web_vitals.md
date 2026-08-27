@@ -177,3 +177,4 @@ function GoodButton() {
 - **"web.dev/vitals" — Core Web Vitals documentation** — The canonical source; includes the latest thresholds, how each metric is measured, and official improvement guides
 - **"Optimize LCP", "Optimize CLS", "Optimize INP" on web.dev** — Each metric has a dedicated optimization guide with specific, actionable techniques; these are the most useful documents for a developer who has identified a specific metric to improve
 - **Chrome User Experience Report (CrUX) documentation** — If your site has enough traffic, Google's CrUX provides free real-user field data in Google Search Console and PageSpeed Insights; understanding how to read CrUX data is the first step before building your own RUM pipeline
+- [web.dev: Core Web Vitals](https://web.dev/articles/vitals) — the current metric definitions and thresholds, which are revised over time

@@ -156,3 +156,4 @@ run HS256 and RS256 validation in parallel for one access-token TTL cycle (15 mi
 - Michael Nygard — "Documenting Architecture Decisions" (the original article): https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions
 - Joel Parker Henderson — ADR GitHub templates: https://github.com/joelparkerhenderson/architecture-decision-record
 - adr-tools — CLI for creating and managing ADRs: https://github.com/npryce/adr-tools
+- [adr.github.io](https://adr.github.io/) — templates and a catalogue of the formats teams actually use

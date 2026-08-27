@@ -123,3 +123,4 @@ function addTenantCacheHeaders(response: NextResponse, tenantId: string): NextRe
 - **MDN Web Docs — "HTTP Caching"** — The definitive reference for `Cache-Control` directives; covers `stale-while-revalidate`, `stale-if-error`, and `Vary` with clear examples
 - [Caching best practices — Jake Archibald](https://jakearchibald.com/2016/caching-best-practices/) — the clearest treatment of immutable vs. revalidated assets and why the pattern matters
 - **Next.js documentation — "Caching"** — Covers the four caching layers in Next.js 14+ (Request Memoization, Data Cache, Full Route Cache, Router Cache); essential reading for RSC-based apps
+- [RFC 9111 — HTTP Caching](https://www.rfc-editor.org/rfc/rfc9111.html) — the actual semantics of `Cache-Control`, freshness and revalidation, which every CDN implements against

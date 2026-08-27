@@ -158,3 +158,4 @@ testRestoreLatestBackup();
 - [PostgreSQL backup and restore documentation](https://www.postgresql.org/docs/current/backup.html)
 - [AWS RDS automated backups and point-in-time recovery](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html)
 - [Barman — PostgreSQL Backup and Recovery Manager](https://www.pgbarman.org/)
+- [PostgreSQL: continuous archiving and PITR](https://www.postgresql.org/docs/current/continuous-archiving.html) — what point-in-time recovery actually requires you to have set up in advance

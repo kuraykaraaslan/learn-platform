@@ -89,3 +89,4 @@ const recovered = decrypt(ciphertext, iv, tag, key);
 - *Serious Cryptography* — Jean-Philippe Aumasson: best practical cryptography book for developers, no math degree required
 - [Node.js `crypto`](https://nodejs.org/api/crypto.html) — the API reference for every primitive used above
 - [*Cryptopals Challenges*](https://cryptopals.com) — hands-on exercises that break bad cryptography to teach correct usage
+- [RFC 8446 — TLS 1.3](https://www.rfc-editor.org/rfc/rfc8446.html) — the handshake, and why the primitives above are combined the way they are

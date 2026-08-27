@@ -99,3 +99,4 @@ export function useAiStream() {
 - Anthropic — "Streaming Messages" (official SDK and API documentation)
 - MDN — "Using readable streams" and "Server-Sent Events" (for the underlying web platform mechanics)
 - [Next.js Route Handlers](https://nextjs.org/docs/app/api-reference/file-conventions/route) — including streaming responses
+- [Streaming Messages](https://platform.claude.com/docs/en/build-with-claude/streaming) — the event types you must handle, including the ones that only appear on long responses

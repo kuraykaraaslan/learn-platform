@@ -90,7 +90,7 @@ public UserResponse getById(UUID userId) {
 public ResponseEntity<?> getUserBroken(@PathVariable UUID userId) {
     Optional<UserEntity> user = userRepository.findById(userId);
     if (user.isEmpty()) {
-        return ResponseEntity.status(404).body(Map.of("message", "User not found"));   // banned
+        return ResponseEntity.status(404).body(Map.of("message", "User not found"));   // banned by this ruleset
     }
     return ResponseEntity.ok(UserResponse.from(user.get()));
 }

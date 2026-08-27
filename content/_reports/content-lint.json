@@ -2,98 +2,11 @@
   "generatedFrom": "scripts/content-lint",
   "lessons": 412,
   "totals": {
-    "findings": 14,
+    "findings": 0,
     "errors": 0,
-    "warnings": 14,
-    "waived": 5
+    "warnings": 0,
+    "waived": 6
   },
-  "byRule": {
-    "sources/quota-signature": 14
-  },
-  "findings": [
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics",
-      "message": "all 13 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "ai-llm-engineering",
-      "message": "all 21 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "architecture-design-patterns-testing",
-      "message": "all 14 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "client-acquisition-sales",
-      "message": "all 24 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "client-delivery-pm-handover",
-      "message": "all 34 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "database-advanced",
-      "message": "all 12 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "distributed-systems-api-design",
-      "message": "all 18 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "frontend-performance-scaling",
-      "message": "all 8 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "fundamentals-tools",
-      "message": "all 12 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "observability-deployment",
-      "message": "all 13 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "process-soft-skills",
-      "message": "all 13 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "product-technical-strategy",
-      "message": "all 25 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "saas-business-skills",
-      "message": "all 8 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "sources/quota-signature",
-      "severity": "warn",
-      "target": "security",
-      "message": "all 13 lessons have exactly 3 Further Reading bullets (zero variance)"
-    }
-  ]
+  "byRule": {},
+  "findings": []
 }

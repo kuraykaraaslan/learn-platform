@@ -179,3 +179,4 @@ export function AccessibleModal({
 - [**"Inclusive Components" — Heydon Pickering](https://inclusive-components.design)** — Pattern library of accessible UI components with full explanations; each pattern includes the HTML, CSS, JavaScript, and ARIA used; the modal, dropdown, and card patterns are directly applicable to your SaaS
 - [**WebAIM](https://webaim.org)** — The most practical accessibility resource for web developers; their contrast checker, screen reader survey, and WCAG quick reference are daily-use tools
 - [**axe DevTools browser extension](https://deque.com/axe/devtools)** — The fastest way to audit a page; runs automated checks against WCAG 2.1 and reports violations with explanations and remediation guidance; the free browser extension catches roughly 30–40% of all WCAG issues automatically
+- [WCAG 2.2](https://www.w3.org/TR/WCAG22/) — the normative success criteria, not a summary of them

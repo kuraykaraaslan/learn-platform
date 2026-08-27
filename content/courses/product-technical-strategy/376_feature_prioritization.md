@@ -46,3 +46,4 @@ The dependency dimension is the one teams most often skip, and it's the one that
 - Itamar Gilad — "Confidence Meter" and the RICE-adjacent prioritization writing on itamargilad.com
 - Intercom's "How we prioritize" engineering/product blog series (effort vs. impact frameworks in practice)
 - Teresa Torres — "Continuous Discovery Habits," chapter on opportunity solution trees, for connecting prioritization back to the problem it's meant to serve
+- [RICE scoring, as originally described by Intercom](https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/) — the source of the framework, including the reach/confidence definitions most retellings drop

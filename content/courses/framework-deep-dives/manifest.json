@@ -1,7 +1,7 @@
 {
   "slug": "framework-deep-dives",
   "title": "Framework Deep Dives",
-  "description": "Express, Spring Boot, React Native, and Electron \u2014 the same engineering rigor applied outside the React/Next.js stack.",
+  "description": "Express, Spring Boot, React Native, and Electron \u2014 the same engineering rigor applied outside the primary stack. Written as one team's house ruleset: the conventions are opinionated and stated as rules, and the reasoning behind each is what transfers even where you choose differently.",
   "items": [
     {
       "id": 396,

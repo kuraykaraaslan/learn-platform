@@ -70,3 +70,4 @@ to a second region.
 - Marty Cagan — "Inspired" (on treating a release as a risk-managed decision rather than a milestone to hit)
 - Jez Humble & David Farley — "Continuous Delivery" (on staged rollout and feature-flag mechanics as risk-reduction tools)
 - Laura Klein — "Build Better Products" (on structuring beta and pilot stages around what you actually need to learn from real users)
+- [DORA](https://dora.dev/) — the four delivery metrics and the research behind them, rather than a summary of the summary

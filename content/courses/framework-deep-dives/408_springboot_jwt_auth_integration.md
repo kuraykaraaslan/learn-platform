@@ -128,3 +128,4 @@ public class UserController {
 - Spring Security reference — "Authentication": https://docs.spring.io/spring-security/reference/servlet/authentication/index.html
 - Spring Security reference — "Method Security" (`@PreAuthorize`): https://docs.spring.io/spring-security/reference/servlet/authorization/method-security.html
 - JJWT (Java JWT library) documentation: https://github.com/jwtk/jjwt
+- [RFC 7519 — JSON Web Token](https://www.rfc-editor.org/rfc/rfc7519.html) — the registered claim names and what verification is required to check

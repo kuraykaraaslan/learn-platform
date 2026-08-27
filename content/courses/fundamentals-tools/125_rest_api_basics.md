@@ -57,3 +57,4 @@ export async function DELETE(_req: Request, { params }: { params: { id: string }
 - "REST API Design Rulebook" by Mark Massé
 - [Microsoft REST API Guidelines](https://github.com/microsoft/api-guidelines)
 - Roy Fielding's dissertation, chapter 5 (the original source — dense, but worth skimming once)
+- [RFC 9457 — Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc9457.html) — a standard error body, so every API you write stops inventing its own

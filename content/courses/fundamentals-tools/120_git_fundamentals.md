@@ -54,3 +54,4 @@ git reset --hard HEAD@{3}
 - "Pro Git" by Scott Chacon & Ben Straub — free online, chapters 2–3 cover this completely
 - Atlassian Git Tutorials — merge vs rebase comparison
 - `git help everyday` — the built-in "everyday git" workflow guide
+- [Pro Git](https://git-scm.com/book/en/v2) — free and complete; chapters 2, 3 and 7 cover everything above properly

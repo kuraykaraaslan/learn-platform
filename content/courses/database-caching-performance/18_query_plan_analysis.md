@@ -117,3 +117,4 @@ export function attachSlowQueryLogger(db: PrismaClient, thresholdMs = 100) {
 - **"explain.dalibo.com"** — Free online tool to visualize PostgreSQL query plans; paste JSON output from `EXPLAIN (ANALYZE, FORMAT JSON)` for a visual, annotated breakdown
 - [**"Use the Index, Luke" — "Execution Plans" section](https://use-the-index-luke.com/sql/explain-plan)** — The best non-official explanation of how to read query plans; language-agnostic and very clear
 - **PostgreSQL documentation — "Using EXPLAIN"** — The official reference; explains each node type, cost estimates, and the statistics system that feeds the planner
+- [PostgreSQL: using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — how to read the plan, and why `EXPLAIN ANALYZE` differs from `EXPLAIN`

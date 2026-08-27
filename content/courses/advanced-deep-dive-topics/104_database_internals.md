@@ -87,3 +87,4 @@ ORDER BY xid_age DESC;
 - *The Internals of PostgreSQL* — Hironobu Suzuki (free online): chapter-by-chapter breakdown of heap, indexes, WAL, and MVCC
 - [PostgreSQL: the statistics collector views](https://www.postgresql.org/docs/current/monitoring-stats.html) — `pg_stat_user_tables` and `pg_stat_user_indexes` are the two you will actually read
 - [*Use The Index, Luke*](https://use-the-index-luke.com) — practical B-tree index design, vendor-neutral
+- [PostgreSQL: write-ahead logging](https://www.postgresql.org/docs/current/wal-intro.html) — the mechanism durability and replication are both built on

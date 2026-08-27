@@ -146,3 +146,4 @@ const ASSET_URL = 'https://cdn.yourdomain.com'; // One domain, HTTP/2 multiplexi
 - **"HTTP/2 in Action" by Barry Pollard** — The most thorough book on HTTP/2 for web developers; covers multiplexing, performance implications, and migration from HTTP/1.1
 - [HTTP/3 explained](https://http3-explained.haxx.se/) — a free online book on QUIC and HTTP/3, from the curl maintainer
 - **Next.js documentation — "Optimizing: Lazy Loading"** — Documents `next/dynamic` and how Next.js manages code splitting; understanding this is prerequisite for taking advantage of HTTP/2 granular caching
+- [RFC 9113 — HTTP/2](https://www.rfc-editor.org/rfc/rfc9113.html) — the specification; §5 on streams is what multiplexing actually means

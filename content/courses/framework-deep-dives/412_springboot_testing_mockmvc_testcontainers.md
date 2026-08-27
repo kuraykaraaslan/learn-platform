@@ -128,3 +128,4 @@ class AuthControllerTest {
 - Spring Boot reference — "Testing": https://docs.spring.io/spring-boot/reference/testing/index.html
 - Testcontainers — "Spring Boot integration": https://testcontainers.com/guides/testing-spring-boot-rest-api-using-testcontainers/
 - Spring Framework Javadoc — `MockitoBean`: https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/context/bean/override/mockito/MockitoBean.html
+- [Testcontainers for Java](https://java.testcontainers.org/) — the official docs; the reuse and startup-strategy pages are what keep the suite fast

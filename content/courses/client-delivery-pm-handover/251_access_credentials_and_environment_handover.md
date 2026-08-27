@@ -75,3 +75,4 @@ provider dashboard, update the hosting environment variable, and redeploy.
 - OWASP, "Secrets Management Cheat Sheet" — foundational guidance on how credentials should be stored, rotated, and never embedded in documentation or code: https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html
 - 1Password, "Team vaults and sharing best practices" — practical patterns for secure credential handover between organizations
 - The Twelve-Factor App, "Config" — the canonical case for strict separation of configuration/secrets from code: https://12factor.net/config
+- [GOV.UK Service Manual](https://www.gov.uk/service-manual) — a public, worked standard for running and handing over a service, useful as a reference model rather than a rulebook

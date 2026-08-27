@@ -78,3 +78,4 @@ Best,
 - Divio, "The documentation system" — informs how to split a handover package by document purpose rather than one undifferentiated file: https://docs.divio.com/documentation-system/
 - PMI, *A Guide to the Project Management Body of Knowledge (PMBOK Guide)* — the Closing process group addresses formal transfer of deliverables and administrative closure
 - Atlassian, "Runbooks and handover documentation best practices" — practical patterns for operational handover structure: https://www.atlassian.com/incident-management/handbook/runbooks
+- [GOV.UK Service Manual](https://www.gov.uk/service-manual) — a public, worked standard for running and handing over a service, useful as a reference model rather than a rulebook

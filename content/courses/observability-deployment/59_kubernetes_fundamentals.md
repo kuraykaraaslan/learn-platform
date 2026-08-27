@@ -148,3 +148,4 @@ spec:
 - Kubernetes official documentation: https://kubernetes.io/docs/home/
 - `kubectl` cheatsheet: https://kubernetes.io/docs/reference/kubectl/cheatsheet/
 - Kelsey Hightower — "Kubernetes the Hard Way": https://github.com/kelseyhightower/kubernetes-the-hard-way
+- [Kubernetes concepts](https://kubernetes.io/docs/concepts/) — the official model for workloads, services and configuration

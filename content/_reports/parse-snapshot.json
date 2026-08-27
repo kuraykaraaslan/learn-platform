@@ -27,7 +27,7 @@
         "exampleCode": "161f86e01a2edab2",
         "whenToUse": "322bd979f0e8e646",
         "commonMistakes": "08231921ec720012",
-        "furtherReading": "d63fae3442f9cb5f"
+        "furtherReading": "cf568a7acef0dc7c"
       },
       "104_database_internals.md": {
         "title": "805f793697488d3d",
@@ -36,7 +36,7 @@
         "exampleCode": "141f5a79a69badd8",
         "whenToUse": "af4964409c2a4cbf",
         "commonMistakes": "97bbb0c96c3554f2",
-        "furtherReading": "ef7fbd88b41fcdd7"
+        "furtherReading": "3cd7f42c89bd412b"
       },
       "105_cryptography_fundamentals.md": {
         "title": "3642d5e4894a35d2",
@@ -45,7 +45,7 @@
         "exampleCode": "383f3830facf677e",
         "whenToUse": "da3b47ba155f7267",
         "commonMistakes": "83a4e5fd46e2bdf4",
-        "furtherReading": "72a791af0520e52a"
+        "furtherReading": "6c9cbf75f74fc640"
       },
       "106_event_streaming_kafka_vs_bullmq.md": {
         "title": "ee4021291a9c139a",
@@ -54,7 +54,7 @@
         "exampleCode": "14f9f6285e7834b1",
         "whenToUse": "a9e35639847d8441",
         "commonMistakes": "bac062e39a7e59ff",
-        "furtherReading": "64aad25ae278e16d"
+        "furtherReading": "bce272cf62d953b8"
       },
       "107_api_design_philosophy.md": {
         "title": "44a89c23d7212220",
@@ -164,7 +164,7 @@
         "exampleCode": "7835d5a45bc58ca4",
         "whenToUse": "2a238bc5c9861e24",
         "commonMistakes": "080578ab68682ead",
-        "furtherReading": "003303d04d3ba6a4"
+        "furtherReading": "8e3adaeabc524550"
       },
       "150_context_window_conversation_management.md": {
         "title": "f1556fde6bcf68c6",
@@ -218,7 +218,7 @@
         "exampleCode": "196abc8310454c64",
         "whenToUse": "dd3c272895a446c1",
         "commonMistakes": "00773d67e397d06e",
-        "furtherReading": "f73cc87e140c8aaf"
+        "furtherReading": "5e5960a828d3da49"
       },
       "156_fallback_graceful_degradation.md": {
         "title": "3a8c68fbfaf13b13",
@@ -281,7 +281,7 @@
         "exampleCode": "6d704cbf1303cac9",
         "whenToUse": "03c181ea5dd2471a",
         "commonMistakes": "99aad3209ad28430",
-        "furtherReading": "5772e8fb21b6029d"
+        "furtherReading": "94c7a254ab159b3e"
       },
       "163_mcp_server_auth_error_idempotency.md": {
         "title": "8330d819acfdf55d",
@@ -447,7 +447,7 @@
         "exampleCode": "d156e3b93674c6e4",
         "whenToUse": "f4c5dfbe4ab17788",
         "commonMistakes": "e778263b55c347a4",
-        "furtherReading": "d36aaae9397550c5"
+        "furtherReading": "b62f5481c5cb5b4a"
       },
       "142_capacity_planning_estimation.md": {
         "title": "3ed073bed143c1c1",
@@ -1220,7 +1220,7 @@
         "exampleCode": "a515fa78f6590a3c",
         "whenToUse": "dc01170a43462404",
         "commonMistakes": "aa1a07b111ad690f",
-        "furtherReading": "f90c304a1273fae5"
+        "furtherReading": "27ddaf3662f4c358"
       },
       "251_access_credentials_and_environment_handover.md": {
         "title": "5d9fd9e2d51f45c0",
@@ -1229,7 +1229,7 @@
         "exampleCode": "bdc6a0fcf5a3a43d",
         "whenToUse": "61ae8dbede9ea1a7",
         "commonMistakes": "8a45521e9ebfe5ae",
-        "furtherReading": "e32646f7a1420682"
+        "furtherReading": "5c1e5f0ad8ca04ad"
       },
       "252_database_api_and_integration_handover_docs.md": {
         "title": "b0126545d6f8fed8",
@@ -2162,7 +2162,7 @@
         "exampleCode": "02402a9a7ca49cd5",
         "whenToUse": "d49f831e8d8279ee",
         "commonMistakes": "e7e58942239668f4",
-        "furtherReading": "7239d0de69ca6d37"
+        "furtherReading": "5bfbff81e71d3a84"
       },
       "50_multi_tenant_data_isolation_models.md": {
         "title": "f58602b3dc6c14fb",
@@ -2209,7 +2209,7 @@
         "exampleCode": "bd7f2315377a3c8c",
         "whenToUse": "c681da75fa0894ef",
         "commonMistakes": "5e3691d2149ea4c6",
-        "furtherReading": "594f139969e27801"
+        "furtherReading": "a45b95be4992f8fc"
       },
       "18_query_plan_analysis.md": {
         "title": "4422a6d89ccfe51b",
@@ -2218,7 +2218,7 @@
         "exampleCode": "5ba4a6f9bfad6d4d",
         "whenToUse": "085f93aed425acb2",
         "commonMistakes": "a7c179d851afcaf4",
-        "furtherReading": "8a339162a236ff60"
+        "furtherReading": "019e9546d3251bb2"
       },
       "19_connection_pool_tuning.md": {
         "title": "1a63810dea4e7cd4",
@@ -2245,7 +2245,7 @@
         "exampleCode": "7ec599ae74e91c14",
         "whenToUse": "8bbf13384b8edfdf",
         "commonMistakes": "129a70e9e60bd366",
-        "furtherReading": "558db1a090b131b1"
+        "furtherReading": "211af95309fdebe0"
       }
     },
     "distributed-systems-api-design": {
@@ -2292,7 +2292,7 @@
         "exampleCode": "b35d505ad5db6b3a",
         "whenToUse": "66abbdf290a967c3",
         "commonMistakes": "e1a42af03ec187d0",
-        "furtherReading": "cc87c141e2771df0"
+        "furtherReading": "82d1194d3b7fe935"
       },
       "06_distributed_locking.md": {
         "title": "030162e56f046621",
@@ -2310,7 +2310,7 @@
         "exampleCode": "6a400778ff74ff2f",
         "whenToUse": "863b8fc5e3a2031c",
         "commonMistakes": "f3d7d487d527b71e",
-        "furtherReading": "d47fc971f324afd2"
+        "furtherReading": "1da530ebce386937"
       },
       "08_webhook_security_retry.md": {
         "title": "82af9bb32ada51f9",
@@ -2328,7 +2328,7 @@
         "exampleCode": "df2d4e06238a3b4d",
         "whenToUse": "84729fab83e063fc",
         "commonMistakes": "888323068cf447d1",
-        "furtherReading": "653f4c2cfa904145"
+        "furtherReading": "4066ce24fdaba207"
       },
       "10_backward_forward_compatibility.md": {
         "title": "4adaced350c3fb07",
@@ -2429,7 +2429,7 @@
         "exampleCode": "e33453e782725a5f",
         "whenToUse": "4af5abb3e3695878",
         "commonMistakes": "179ae38076fbf1b0",
-        "furtherReading": "efd07f7f7360fd95"
+        "furtherReading": "9abafb703b6dcf81"
       },
       "398_express_curried_auth_middleware.md": {
         "title": "ff4aed510e345352",
@@ -2497,7 +2497,7 @@
       "405_springboot_bean_validation.md": {
         "title": "ef05b0dfc14aa1e4",
         "whatItIs": "b3361dee960a9c1e",
-        "keyConcepts": "d1c8ba10eb63ca0b",
+        "keyConcepts": "458951a162c8f610",
         "exampleCode": "2b7acb66d2b4f9fe",
         "whenToUse": "2c1a889edcac75f5",
         "commonMistakes": "532af8a61dc22968",
@@ -2505,7 +2505,7 @@
       },
       "406_springboot_service_layer_transactional.md": {
         "title": "35e0d1e16fbd6861",
-        "whatItIs": "47be3d8091609e83",
+        "whatItIs": "bf77b3e3b1d61e36",
         "keyConcepts": "997985735559bfe4",
         "exampleCode": "d53671f8c9308788",
         "whenToUse": "2235303153ff686b",
@@ -2528,13 +2528,13 @@
         "exampleCode": "f48ecbc8d6ccac3c",
         "whenToUse": "f9c9ffc98259ddb7",
         "commonMistakes": "072908ca5278c351",
-        "furtherReading": "6ef5a5c8311bf71f"
+        "furtherReading": "1e90215c62cdbc52"
       },
       "409_springboot_controller_advice_error_handling.md": {
         "title": "e9dcb566c0e0533d",
         "whatItIs": "ebe76ccf8bda65b6",
         "keyConcepts": "233e59a1d1de6d18",
-        "exampleCode": "1f03409b121ea22b",
+        "exampleCode": "1da41a0a21c7619d",
         "whenToUse": "21acb73cf83446e2",
         "commonMistakes": "ceeb7a5e8d6ea730",
         "furtherReading": "220fc612b1947b52"
@@ -2545,7 +2545,7 @@
         "keyConcepts": "32a1e039909929d5",
         "exampleCode": "1d3e1cb86d78c04f",
         "whenToUse": "fa93c3c626590c1c",
-        "commonMistakes": "152531622efa49b2",
+        "commonMistakes": "9f99487c1495ec0a",
         "furtherReading": "5ac4b32c65076cba"
       },
       "411_springboot_flyway_migrations.md": {
@@ -2564,11 +2564,11 @@
         "exampleCode": "05c1003219638802",
         "whenToUse": "e6c5a41c8620e629",
         "commonMistakes": "3b95e0332314ca67",
-        "furtherReading": "10d6c1ee9d2babb0"
+        "furtherReading": "8de6431b92320d61"
       },
       "413_reactnative_file_organization_and_banned_patterns.md": {
         "title": "f2fb7b77f1084a80",
-        "whatItIs": "90a238b9217ee4f3",
+        "whatItIs": "f76bd1934290364a",
         "keyConcepts": "9a42e4603a9aca29",
         "exampleCode": "e8caf265abe2b702",
         "whenToUse": "939138c6a8e36cad",
@@ -2737,7 +2737,7 @@
         "exampleCode": "497e3eca0cf372c5",
         "whenToUse": "7d127b5019294781",
         "commonMistakes": "4a793064e408f0a2",
-        "furtherReading": "fb13985d4f685074"
+        "furtherReading": "a53d6f23bf7c914e"
       },
       "23_react_server_components.md": {
         "title": "5accfc574e9d8a9c",
@@ -2764,7 +2764,7 @@
         "exampleCode": "91eab1c6b720a3dd",
         "whenToUse": "5e5e96fbddc0df4d",
         "commonMistakes": "f516b57672a38568",
-        "furtherReading": "89560515cef2ea81"
+        "furtherReading": "344d202cb2193691"
       },
       "26_streaming_ssr_suspense.md": {
         "title": "81ac8b819ffc6fa4",
@@ -2820,7 +2820,7 @@
         "exampleCode": "c62b0c66d590ea28",
         "whenToUse": "c1d0b509709c27d4",
         "commonMistakes": "4a9d1ff3f3338680",
-        "furtherReading": "7d0d34b69ca04833"
+        "furtherReading": "c3a1d91ab014b8ce"
       },
       "121_sql_fundamentals.md": {
         "title": "ac0ac1117407df97",
@@ -2865,7 +2865,7 @@
         "exampleCode": "cdaaa1a12679aa3b",
         "whenToUse": "8202f8030e30a29f",
         "commonMistakes": "8e5efce6d23f7cae",
-        "furtherReading": "1331af94a73951ca"
+        "furtherReading": "895cdf67350e073b"
       },
       "126_cli_dev_environment_basics.md": {
         "title": "bbae16599eb4c9e9",
@@ -2921,7 +2921,7 @@
         "exampleCode": "18eb3f46f3a6f7ce",
         "whenToUse": "116c00d81b153281",
         "commonMistakes": "096584c96169d834",
-        "furtherReading": "9452c1976d398e0b"
+        "furtherReading": "72a7aaba40c0a310"
       },
       "54_distributed_tracing.md": {
         "title": "4a465f49d53a71d1",
@@ -2975,7 +2975,7 @@
         "exampleCode": "f229de9ef6034b54",
         "whenToUse": "c3b0be8834ac3f1b",
         "commonMistakes": "961f22502edc9b7e",
-        "furtherReading": "2a14a35a603dd836"
+        "furtherReading": "5d67de72a3afe58d"
       },
       "60_github_actions_ci_pipeline.md": {
         "title": "58773d21d35d54ef",
@@ -3224,7 +3224,7 @@
         "exampleCode": "12a0fcba19cb7bb7",
         "whenToUse": "69836793ee934fe8",
         "commonMistakes": "b9417a53080acd4a",
-        "furtherReading": "82d1e6d67b1d0446"
+        "furtherReading": "b0ca0cc89b01857a"
       },
       "76_rfc_process.md": {
         "title": "8d5598f24169cd0f",
@@ -3388,7 +3388,7 @@
         "exampleCode": "0a81fd0f53fbd4ae",
         "whenToUse": "dd1654b6d706bb14",
         "commonMistakes": "a0acc96a892593ea",
-        "furtherReading": "1667063f2b74e5e1"
+        "furtherReading": "f4171c2422c535b8"
       },
       "377_scope_boundaries.md": {
         "title": "607dde42839e0ef7",
@@ -3478,7 +3478,7 @@
         "exampleCode": "f2ca9b2bd9e2f414",
         "whenToUse": "c44573f7a0510230",
         "commonMistakes": "932d28dc06aaa054",
-        "furtherReading": "4a020c02b9881ba6"
+        "furtherReading": "46799701522128c5"
       },
       "387_technical_architecture_operating_system.md": {
         "title": "51c1af06cf5b8cc8",
@@ -3523,7 +3523,7 @@
         "exampleCode": "d2e31ba41f6a225c",
         "whenToUse": "b2797fa9b0e1b9a3",
         "commonMistakes": "0cb651565b30f8aa",
-        "furtherReading": "47783dda02b2bb4a"
+        "furtherReading": "fce6f0d379271229"
       },
       "392_data_architecture_ownership_lifecycle.md": {
         "title": "2a7f1e876f9fec4c",
@@ -3579,7 +3579,7 @@
         "exampleCode": "772c5a0c71abfc48",
         "whenToUse": "c578c9d90c2ad682",
         "commonMistakes": "94b15acd189fc0b4",
-        "furtherReading": "38eb377ba95e5551"
+        "furtherReading": "17d1c95db8949ebb"
       },
       "88_email_deliverability.md": {
         "title": "61f60e93e175e185",
@@ -3606,7 +3606,7 @@
         "exampleCode": "d78f46570d0bb8d4",
         "whenToUse": "0cdc876f8532c278",
         "commonMistakes": "aa69ef32f4211434",
-        "furtherReading": "67a2871a53915a8f"
+        "furtherReading": "9a7cf068aee2412b"
       },
       "91_mobile_first_api_design.md": {
         "title": "fea79b7f6cea9936",
@@ -3698,7 +3698,7 @@
         "exampleCode": "d83e7d343aea4735",
         "whenToUse": "d843fb9ec60d4890",
         "commonMistakes": "da621a319ff6c2a7",
-        "furtherReading": "81e5b1a4a9d79569"
+        "furtherReading": "9423243933f89bc6"
       },
       "36_dependency_audit_automation.md": {
         "title": "45c72369954eb1ad",

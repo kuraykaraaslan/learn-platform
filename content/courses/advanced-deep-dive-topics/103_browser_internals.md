@@ -107,3 +107,4 @@ function createGoodUser(admin: boolean) {
 - [Google: Critical Rendering Path](https://web.dev/articles/critical-rendering-path) — the authoritative walkthrough with diagrams
 - [Jake Archibald: Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) — the clearest event loop explainer written
 - [V8: Shapes and Inline Caches](https://v8.dev/blog/shapes-and-inline-caches) — official V8 blog post, directly relevant to how TypeScript objects compile
+- [HTML Standard — parsing](https://html.spec.whatwg.org/multipage/parsing.html) — the normative tokenizer and tree-construction algorithm every browser implements

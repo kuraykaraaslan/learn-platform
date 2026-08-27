@@ -83,3 +83,4 @@ server.resource('project-member', 'project://{projectId}/members/{userId}', asyn
 - [Model Context Protocol specification](https://modelcontextprotocol.io) — the authoritative reference for Tool, Resource, and Prompt semantics
 - Anthropic — "Model Context Protocol" documentation and reference server implementations
 - Anthropic — "Building effective agents," for the broader design philosophy of giving a model well-scoped, well-described capabilities
+- [MCP architecture](https://modelcontextprotocol.io/docs/concepts/architecture) — the transport and capability model, which decides what a server may expose

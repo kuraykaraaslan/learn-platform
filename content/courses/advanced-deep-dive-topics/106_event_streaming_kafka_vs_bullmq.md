@@ -101,3 +101,4 @@ await consumer.run({
 - *Designing Data-Intensive Applications* — Martin Kleppmann: chapters 10–11 cover stream processing and the log abstraction better than anything else
 - [BullMQ docs](https://docs.bullmq.io) — covers patterns, flows, and sandboxed processors
 - [Confluent's Kafka tutorials](https://developer.confluent.io) — free, hands-on, producer/consumer to Kafka Streams
+- [Apache Kafka documentation](https://kafka.apache.org/documentation/) — the design section explains the log abstraction the comparison above rests on

@@ -124,3 +124,4 @@ export default router;
 - Express — Using middleware: https://expressjs.com/en/guide/using-middleware.html
 - Helmet.js documentation: https://helmetjs.github.io/
 - express-rate-limit documentation: https://express-rate-limit.mintlify.app/overview
+- [MDN: Cross-Origin Resource Sharing](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS) — including preflight, which is the half most misconfigurations get wrong

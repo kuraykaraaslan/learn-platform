@@ -64,3 +64,4 @@ platform's built-in rollback; no destructive migration planned for pilot.
 - Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy (eds.) — "Site Reliability Engineering" (Google's SRE book — the origin of much of the reliability/observability framing here)
 - Michael T. Nygard — "Release It!" (stability patterns and graceful degradation, written specifically for production systems that must survive real failure)
 - Niall Richard Murphy et al. — "The Site Reliability Workbook" (practical exercises for turning reliability principles into an actual operating decision)
+- [The Twelve-Factor App](https://12factor.net/) — the checklist most production-readiness requirements are a restatement of

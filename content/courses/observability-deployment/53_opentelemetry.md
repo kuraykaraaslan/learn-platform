@@ -124,3 +124,4 @@ export async function login(email: string, password: string) {
 - OpenTelemetry JavaScript SDK: https://opentelemetry.io/docs/instrumentation/js/
 - Next.js OpenTelemetry guide: https://nextjs.org/docs/app/building-your-application/optimizing/open-telemetry
 - Grafana Tempo + Loki + Prometheus (the OSS observability stack): https://grafana.com/oss/
+- [OpenTelemetry specification](https://opentelemetry.io/docs/specs/otel/) — the semantic conventions section is what keeps span attributes portable between backends

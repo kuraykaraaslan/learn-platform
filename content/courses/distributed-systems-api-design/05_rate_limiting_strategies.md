@@ -126,3 +126,4 @@ export async function tokenBucketRateLimit(
 - [**"An alternative approach to rate limiting" by Cloudflare Blog](https://cloudflare.com/blog)** — Describes the sliding window counter approximation; explains the math and the tradeoffs clearly
 - **"Rate Limiting" chapter in "Building Microservices" by Sam Newman (2nd edition)** — Covers rate limiting in the context of API gateways and service meshes; practical framing
 - **redis-rate-limiter-flexible (npm)** — Production-tested Node.js library supporting all four algorithms with Redis; reading the documentation surfaces the edge cases you'll need to handle in a custom implementation
+- [RateLimit header fields for HTTP (IETF draft)](https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/) — the standard way to tell a client what its remaining quota is, instead of inventing your own headers

@@ -125,3 +125,4 @@ export async function withIdempotency(
 - **Stripe API documentation — "Idempotent Requests"** — The best real-world description of how to implement and use idempotency keys correctly; shows exactly what to store and return
 - **"The Idempotency-Key HTTP Header Field" (IETF draft)** — The emerging standard for how to communicate idempotency keys in HTTP; useful if you expose a public API
 - **"Building reliable reprocessing and dead letter queues with Amazon SQS" (AWS blog)** — Though AWS-specific, the concepts apply directly to BullMQ: idempotency at the consumer side to make at-least-once queues effectively exactly-once
+- [Idempotency-Key HTTP header field (IETF draft)](https://datatracker.ietf.org/doc/draft-ietf-httpapi-idempotency-key-header/) — the interoperable form of the pattern, including what a server must do when the same key arrives with a different body

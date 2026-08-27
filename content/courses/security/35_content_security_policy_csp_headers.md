@@ -127,3 +127,4 @@ export async function POST(req: NextRequest) {
 - [MDN: Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP)
 - [Next.js CSP documentation with nonce support](https://nextjs.org/docs/app/building-your-application/configuring/content-security-policy)
 - [Google CSP Evaluator](https://csp-evaluator.withgoogle.com/)
+- [W3C Content Security Policy Level 3](https://www.w3.org/TR/CSP3/) — the normative source for directive semantics and nonce/hash behaviour

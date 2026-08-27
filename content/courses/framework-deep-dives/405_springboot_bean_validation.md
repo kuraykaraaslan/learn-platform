@@ -15,7 +15,7 @@ For validation logic that can't be expressed as a static annotation — checking
 - **Validation groups**: marker interfaces (`OnCreate`, `OnUpdate`) let one request record serve create and update with different required fields, activated via `@Validated(OnCreate.class)`
 - **Custom `@Constraint`**: a `@Component`-annotated `ConstraintValidator` for checks that need a dependency (e.g. a repository) — keeps DB-backed validation at the same declarative boundary as everything else
 - **`ConstraintViolationException` vs `MethodArgumentNotValidException`**: the former comes from a `@Validated` service/path-variable failure, the latter from a `@RequestBody` failure — both are caught by `@ControllerAdvice` and produce the same 400 shape
-- **`BindingResult` is banned in REST controllers**: adding it as a parameter stops Spring from throwing automatically, forcing manual error handling that bypasses the uniform `@ControllerAdvice` path
+- **`BindingResult` is banned in REST controllers by this ruleset**: adding it as a parameter stops Spring from throwing automatically, forcing manual error handling that bypasses the uniform `@ControllerAdvice` path
 
 ## Example Code
 ```java

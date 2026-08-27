@@ -110,7 +110,7 @@ public List<UserWithSessionCountResponse> listActiveWithSessionCounts() {
 - **Leaving a `@ManyToOne`/`@OneToOne` on its Hibernate default (`EAGER`)** — this silently loads the related entity on every fetch of the parent, everywhere, which both wastes bandwidth and hides N+1 problems until they compound in a loop.
 - **Accessing a lazy collection inside a loop without `JOIN FETCH`/`@EntityGraph`** — `users.forEach(u -> u.getSessions().size())` fires one query per user; fix it at the repository method, not by adding more collection access patterns.
 - **Returning `@Entity` objects from a service** — exposes internal columns like `deletedAt` and any lazy proxy fields that fail to serialize outside a transaction; always map to a response record first.
-- **Using `spring.jpa.hibernate.ddl-auto=update` "just for now"** — this drifts the schema out of sync with tracked migrations and is explicitly banned in every environment, including local dev.
+- **Using `spring.jpa.hibernate.ddl-auto=update` "just for now"** — this drifts the schema out of sync with tracked migrations and is banned by this ruleset in every environment, including local dev.
 - **Manually overriding column names to force `snake_case`** — JPA already does this mapping from `camelCase` by convention; an explicit `@Column(name = "user_id")` is redundant and adds noise.
 
 ## Further Reading

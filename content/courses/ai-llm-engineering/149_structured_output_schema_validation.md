@@ -85,3 +85,4 @@ export async function classifyTicket(text: string): Promise<Classification> {
 - [Zod official documentation](https://zod.dev) — schema definition and `safeParse`
 - Anthropic — "Increase output consistency with JSON output" (prompt engineering docs)
 - [Tool use overview](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview) — for when structured output should become an actual function call instead
+- [Structured outputs](https://platform.claude.com/docs/en/build-with-claude/structured-outputs) — constraining the response format at the API level rather than validating after the fact

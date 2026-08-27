@@ -35,6 +35,13 @@
       "reason": "thesaascfo.com returns 406 to a scripted request (bot protection), so the URL cannot be verified from CI; left unlinked rather than written unverified",
       "owner": "kuray",
       "expires": "2026-11-30"
+    },
+    {
+      "rule": "sources/quota-signature",
+      "target": "client-acquisition-sales",
+      "reason": "every lesson cites three books by author and title; sales craft has no canonical primary source to add, and adding a weak one purely to break the variance would be gaming the rule rather than improving the course",
+      "owner": "kuray",
+      "expires": "2027-02-28"
     }
   ]
 }
