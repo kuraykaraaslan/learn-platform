@@ -1,47 +1,685 @@
 {
-  "rate-limiting": {
-    "term": "rate limiting",
-    "aliases": ["rate limit", "rate limited"],
-    "short": "Controls how many requests a client can make in a given period. Token bucket, leaky bucket, and sliding window are the common algorithms, and they trade off burst tolerance, fairness, and implementation cost differently — one algorithm for every endpoint is almost always the wrong choice.",
-    "lesson": 5
+  "abac": {
+    "term": "ABAC",
+    "short": "Policy evaluated against (subject, resource, action, environment) attributes; expressive but complex.",
+    "lesson": 39
   },
-  "connection-pooling": {
-    "term": "connection pooling",
-    "aliases": ["connection pool"],
-    "short": "Maintains a set of pre-established database connections that application instances share, so requests avoid the cost of a fresh TCP handshake, authentication, and session setup every time.",
-    "lesson": 19
+  "acid-transaction": {
+    "term": "ACID transaction",
+    "short": "Atomic, Consistent, Isolated, Durable — guaranteed for single-database operations; the gold standard you're giving up when spanning databases.",
+    "lesson": 15
   },
-  "read-replica": {
-    "term": "read replica",
-    "aliases": ["read replicas"],
-    "short": "A continuously synchronized copy of a database that accepts only read (SELECT) queries. Writes go to the primary and stream to replicas asynchronously, with some replication lag before they're visible there.",
-    "lesson": 11
+  "alert-fatigue": {
+    "term": "Alert fatigue",
+    "short": "When so many alerts fire that on-call engineers start ignoring all of them, including critical ones.",
+    "lesson": 61
+  },
+  "api-documentation": {
+    "term": "API documentation",
+    "short": "Describes endpoints, request/response schemas, auth requirements, error codes, and rate limits. OpenAPI/Swagger is the standard format.",
+    "lesson": 112
+  },
+  "append-only": {
+    "term": "Append-only",
+    "short": "Audit records are inserted, never updated or deleted; enforced at the database permission level, not just application logic.",
+    "lesson": 47
+  },
+  "audit-log": {
+    "term": "Audit log",
+    "aliases": [
+      "audit logs"
+    ],
+    "short": "Every secret read is logged with timestamp, requester identity, and secret name; critical for compliance (SOC 2, GDPR).",
+    "lesson": 37
+  },
+  "aws-secrets-manager": {
+    "term": "AWS Secrets Manager",
+    "short": "Paid; adds automatic rotation for RDS passwords, first-class versioning, and cross-account sharing.",
+    "lesson": 37
+  },
+  "b-tree-index": {
+    "term": "B-tree index",
+    "short": "The default PostgreSQL index type; supports =, <, >, BETWEEN, LIKE 'prefix%' efficiently.",
+    "lesson": 17
+  },
+  "backward-compatibility": {
+    "term": "Backward compatibility",
+    "short": "New code can read data written by old code — old records remain readable after a schema change.",
+    "lesson": 10
+  },
+  "base": {
+    "term": "BASE",
+    "short": "Basically Available, Soft state, Eventual consistency — the alternative to ACID for distributed systems; AP systems are BASE systems.",
+    "lesson": 15
+  },
+  "billable-utilization": {
+    "term": "Billable utilization",
+    "short": "Billable delivery hours ÷ total work hours — used for capacity insight, never as a self-punishment metric.",
+    "lesson": 325
+  },
+  "binary-search": {
+    "term": "Binary search",
+    "short": "O(log n), but only valid on sorted/monotonic data — check the precondition before reaching for it.",
+    "lesson": 130
+  },
+  "blast-radius": {
+    "term": "Blast radius",
+    "short": "The scope of impact from a chaos experiment; start small (1 instance, staging environment).",
+    "lesson": 63
+  },
+  "bounded-context": {
+    "term": "Bounded context",
+    "short": "An explicit boundary where a term has exactly one model and meaning.",
+    "lesson": 134
+  },
+  "breaking-change": {
+    "term": "Breaking change",
+    "aliases": [
+      "breaking changes"
+    ],
+    "short": "Any change that would cause an existing client to break — removing a field, changing a field type, changing required/optional status, changing authentication scheme.",
+    "lesson": 9
+  },
+  "cache-invalidation": {
+    "term": "Cache invalidation",
+    "short": "Deleting or updating cache entries when source data changes — the hardest problem in caching.",
+    "lesson": 20
+  },
+  "change-request-process": {
+    "term": "Change request process",
+    "short": "Every fixed-price package needs an explicit path for \"what happens when the client asks for something not in scope\" — without this, every such request becomes a negotiation from scratch.",
+    "lesson": 336
   },
   "circuit-breaker": {
     "term": "circuit breaker",
     "short": "Tracks recent failure rates for calls to an external dependency and \"opens\" once failures exceed a threshold, making further calls fail fast instead of piling up on a slow or dead service — then probes with a half-open state before closing again.",
     "lesson": 4
   },
-  "exponential-backoff": {
-    "term": "exponential backoff",
-    "short": "Spreads out retries after a failed operation instead of retrying immediately, so a recovering service doesn't get hit by every client at once. Usually paired with jitter, which randomizes the delay so retries from many clients don't all land on the same second.",
-    "lesson": 4
+  "code-generation": {
+    "term": "Code generation",
+    "short": "The final stage; walks the (possibly transformed) AST and emits output text (JavaScript, binary, SQL, etc.).",
+    "lesson": 70
+  },
+  "composition-root": {
+    "term": "Composition Root",
+    "short": "The one place (app startup) where you wire Ports to Adapters; the only place that imports both.",
+    "lesson": 65
+  },
+  "connection-pooling": {
+    "term": "connection pooling",
+    "aliases": [
+      "connection pool"
+    ],
+    "short": "Maintains a set of pre-established database connections that application instances share, so requests avoid the cost of a fresh TCP handshake, authentication, and session setup every time.",
+    "lesson": 19
+  },
+  "constant-time-comparison": {
+    "term": "Constant-time comparison",
+    "short": "Use crypto.timingSafeEqual() to compare HMACs; regular string comparison is vulnerable to timing attacks.",
+    "lesson": 8
+  },
+  "constructor-injection": {
+    "term": "Constructor injection",
+    "short": "The idiomatic DI pattern: dependencies are passed in as constructor arguments.",
+    "lesson": 64
+  },
+  "consumer-groups": {
+    "term": "Consumer groups",
+    "aliases": [
+      "consumer group"
+    ],
+    "short": "A way to have multiple independent \"logical consumers\" each get their own copy of a topic, while each group internally load-balances across its workers.",
+    "lesson": 131
+  },
+  "content-negotiation": {
+    "term": "Content negotiation",
+    "short": "Accept: application/vnd.company.v2+json — HTTP-purist approach, rare in practice.",
+    "lesson": 9
+  },
+  "context-propagation": {
+    "term": "Context propagation",
+    "short": "The mechanism that carries the active span context into async callbacks, Promise chains, and across HTTP boundaries via AsyncLocalStorage.",
+    "lesson": 54
+  },
+  "correlation-id": {
+    "term": "Correlation ID",
+    "short": "A unique ID injected into each log line (often the traceId) that lets you find all logs for one request.",
+    "lesson": 62
+  },
+  "cqrs": {
+    "term": "CQRS",
+    "short": "Separates the command model (write) from the query model (read); each is optimized independently.",
+    "lesson": 2
+  },
+  "cve": {
+    "term": "CVE",
+    "short": "Common Vulnerabilities and Exposures; a numbered, publicly documented security vulnerability in a specific software version.",
+    "lesson": 36
+  },
+  "data-minimization": {
+    "term": "Data minimization",
+    "short": "Collect only the PII necessary for the stated purpose; less data collected = less data to delete.",
+    "lesson": 48
+  },
+  "data-residency": {
+    "term": "Data residency",
+    "short": "Some data classes (health, biometric, government-classified) carry a legal requirement to stay within a specific country's borders, independent of which cloud provider is used.",
+    "lesson": 358
+  },
+  "data-retention-policy": {
+    "term": "Data retention policy",
+    "short": "Automatically drop partitions/chunks older than a threshold; more efficient than DELETE WHERE created_at < $threshold.",
+    "lesson": 45
   },
   "database-sharding": {
     "term": "sharding",
-    "aliases": ["shard", "shards", "database sharding"],
+    "aliases": [
+      "shard",
+      "shards",
+      "database sharding"
+    ],
     "short": "Horizontally partitions data across multiple independent database instances, each holding only a subset of the total data — unlike replication, where every node holds all of it. The shard key (the field that decides which shard a row lands on) is the critical design choice.",
     "lesson": 12
+  },
+  "dead-tuples": {
+    "term": "Dead tuples",
+    "short": "Old row versions left behind by UPDATE/DELETE. They occupy space until vacuumed.",
+    "lesson": 104
+  },
+  "dependency-rule": {
+    "term": "Dependency Rule",
+    "short": "Dependencies only point inward; the core never imports adapters.",
+    "lesson": 65
+  },
+  "dip": {
+    "term": "DIP",
+    "short": "High-level modules should not import low-level modules directly; both should depend on an abstraction (interface).",
+    "lesson": 64
+  },
+  "dkim": {
+    "term": "DKIM",
+    "short": "Two keys — private key held by your email provider signs each outgoing message; public key in DNS is used by receivers to verify the signature; each selector can be different per provider.",
+    "lesson": 88
+  },
+  "dmarc": {
+    "term": "DMARC",
+    "short": "DNS TXT record specifying policy (p=none, p=quarantine, p=reject) and reporting email; start with p=none to observe before enforcing.",
+    "lesson": 88
+  },
+  "domain-event": {
+    "term": "Domain event",
+    "aliases": [
+      "domain events"
+    ],
+    "short": "Something meaningful that happened in the domain (OrderShipped), decoupled from how other parts react to it (ties to #131 Message Queues, #14 Outbox Pattern).",
+    "lesson": 134
+  },
+  "eager-loading": {
+    "term": "Eager loading",
+    "short": "Pre-fetching related data in the initial query (via JOIN or a second bulk query) — Prisma's include.",
+    "lesson": 16
+  },
+  "effective-hourly-rate": {
+    "term": "Effective hourly rate",
+    "short": "Total revenue ÷ total hours worked (including admin, sales, unpaid revisions). This is usually much lower than your stated rate.",
+    "lesson": 117
+  },
+  "error-budget": {
+    "term": "Error budget",
+    "short": "(1 - SLO_target) × window; the amount of failures you can afford before breaching.",
+    "lesson": 55
+  },
+  "event-store": {
+    "term": "Event store",
+    "short": "An append-only log of events, keyed by aggregate ID and ordered by sequence number.",
+    "lesson": 2
+  },
+  "event-stream": {
+    "term": "Event stream",
+    "short": "All events for a single aggregate, identified by an aggregateId.",
+    "lesson": 51
   },
   "eventual-consistency": {
     "term": "eventual consistency",
     "short": "Accepts that different parts of a distributed system may be briefly out of sync, and designs the system to converge to a consistent state over time — a deliberate trade of synchronous consistency for availability and performance, not \"eventual incorrectness.\"",
     "lesson": 15
   },
+  "exponential-backoff": {
+    "term": "exponential backoff",
+    "short": "Spreads out retries after a failed operation instead of retrying immediately, so a recovering service doesn't get hit by every client at once. Usually paired with jitter, which randomizes the delay so retries from many clients don't all land on the same second.",
+    "lesson": 4
+  },
   "feature-flag": {
     "term": "feature flag",
-    "aliases": ["feature flags", "feature toggle", "feature toggles"],
+    "aliases": [
+      "feature flags",
+      "feature toggle",
+      "feature toggles"
+    ],
     "short": "A runtime switch that controls whether a feature is visible inside an already-deployed version of the code, decoupling deployment from release — code can ship dark, then be turned on for a small percentage of users before everyone.",
     "lesson": 56
+  },
+  "flame-graph": {
+    "term": "Flame graph",
+    "short": "Visualization of CPU time per function. Width = time spent. Read top-down for hot paths.",
+    "lesson": 109
+  },
+  "git-bisect": {
+    "term": "git bisect",
+    "short": "Binary search over commit history to isolate a regression.",
+    "lesson": 123
+  },
+  "graceful-degradation": {
+    "term": "Graceful degradation",
+    "short": "The system continues serving reduced functionality when a dependency fails; the opposite of hard dependencies everywhere.",
+    "lesson": 63
+  },
+  "hard-bounce": {
+    "term": "Hard bounce",
+    "short": "Email address does not exist — permanently undeliverable; must be suppressed immediately and never retried.",
+    "lesson": 88
+  },
+  "hashicorp-vault": {
+    "term": "HashiCorp Vault",
+    "short": "Self-hosted or cloud; most feature-rich; dynamic secrets (generates a new DB credential per request); heavy operational overhead.",
+    "lesson": 37
+  },
+  "heap-snapshot": {
+    "term": "Heap snapshot",
+    "short": "A dump of all live objects in V8's heap at a moment in time. Comparing two snapshots shows what was allocated and not collected.",
+    "lesson": 109
+  },
+  "hmac": {
+    "term": "HMAC",
+    "short": "Hash-based Message Authentication Code. Proves both integrity and authenticity — the sender has the secret key. This is what JWT HS256 uses.",
+    "lesson": 105
+  },
+  "hmac-sha256": {
+    "term": "HMAC-SHA256",
+    "short": "Hash-based Message Authentication Code using SHA-256; proves the payload was generated by the secret holder and hasn't been tampered with.",
+    "lesson": 8
+  },
+  "idempotency-key": {
+    "term": "Idempotency key",
+    "short": "A unique identifier per logical operation (Stripe uses Idempotency-Key header; your own operations need equivalent protection) — guarantees at-most-once or exactly-once semantics.",
+    "lesson": 87
+  },
+  "index-bloat": {
+    "term": "Index bloat",
+    "short": "Over time, dead tuples accumulate in indexes; VACUUM reclaims them; REINDEX CONCURRENTLY rebuilds without locking.",
+    "lesson": 17
+  },
+  "index-only-scan": {
+    "term": "Index Only Scan",
+    "short": "Uses a covering index; no heap fetch needed; fastest for covered queries.",
+    "lesson": 18
+  },
+  "integration-test": {
+    "term": "Integration test",
+    "aliases": [
+      "integration tests"
+    ],
+    "short": "Tests a real component against real infrastructure (test DB, test Redis); slower but higher confidence.",
+    "lesson": 71
+  },
+  "kill-switch": {
+    "term": "Kill switch",
+    "aliases": [
+      "kill switches"
+    ],
+    "short": "A flag whose only purpose is to disable a feature in production without a deploy.",
+    "lesson": 56
+  },
+  "kvkk": {
+    "term": "KVKK",
+    "short": "Turkish equivalent of GDPR; applies to any service processing data of Turkish citizens; same practical requirements as GDPR for most operational purposes.",
+    "lesson": 48
+  },
+  "lazy-loading": {
+    "term": "Lazy loading",
+    "short": "Fetching related data only when accessed — triggers per-item queries; often the root cause of N+1.",
+    "lesson": 16
+  },
+  "lockfile-integrity": {
+    "term": "Lockfile integrity",
+    "short": "Package-lock.json pins exact versions and hashes; CI should run npm ci (not npm install) to enforce the lockfile.",
+    "lesson": 36
+  },
+  "mass-assignment": {
+    "term": "Mass assignment",
+    "short": "Binding a user-supplied object directly to a database entity without field filtering.",
+    "lesson": 31
+  },
+  "materialized-view": {
+    "term": "Materialized view",
+    "short": "A stored query result in PostgreSQL; refreshed explicitly; faster reads at the cost of data freshness.",
+    "lesson": 13
+  },
+  "modular-monolith": {
+    "term": "Modular monolith",
+    "short": "One deployable, enforced internal module boundaries — often the right first step.",
+    "lesson": 135
+  },
+  "mrr": {
+    "term": "MRR",
+    "short": "Monthly Recurring Revenue — sum of all active subscriptions normalized to monthly; the most fundamental SaaS metric.",
+    "lesson": 86
+  },
+  "n-plus-1-query": {
+    "term": "N+1 query",
+    "aliases": [
+      "n+1 query",
+      "n+1 queries",
+      "n+1 problem"
+    ],
+    "short": "1 query to fetch a list, N queries to fetch related data per item — total N+1 round trips.",
+    "lesson": 16
+  },
+  "nested-loop": {
+    "term": "Nested Loop",
+    "short": "For each row in the outer set, scan the inner set; fast when inner set is small and indexed; slow when outer set is large.",
+    "lesson": 18
+  },
+  "outbox-relay": {
+    "term": "Outbox relay",
+    "short": "A process that reads unpublished outbox entries and publishes them to the message broker.",
+    "lesson": 14
+  },
+  "partial-index": {
+    "term": "Partial index",
+    "short": "Index with a WHERE clause; indexes only matching rows; smaller and faster to maintain than a full index.",
+    "lesson": 17
+  },
+  "password-hashing": {
+    "term": "Password hashing",
+    "short": "One-way, salted, deliberately slow (bcrypt/argon2) — never plain SHA-256, never reversible encryption.",
+    "lesson": 127
+  },
+  "pool-exhaustion": {
+    "term": "Pool exhaustion",
+    "short": "When all connections are in use and a new request can't get one; results in timeout or 500 error.",
+    "lesson": 19
+  },
+  "primary-key": {
+    "term": "Primary key",
+    "short": "Uniquely identifies a row in a table; a foreign key in another table references it, enforcing referential integrity.",
+    "lesson": 121
+  },
+  "principle-of-least-privilege": {
+    "term": "Principle of least privilege",
+    "short": "Assign the minimum role required; avoid creating \"super roles\" that span multiple unrelated permissions.",
+    "lesson": 39
+  },
+  "productized-service": {
+    "term": "Productized service",
+    "short": "Fixed scope + fixed price + documented delivery process. Repeatable.",
+    "lesson": 115
+  },
+  "prompt-injection": {
+    "term": "Prompt injection",
+    "short": "Untrusted retrieved or user-supplied content containing instructions that hijack the model's behavior — treat any injected text as untrusted input, same posture as #29 OWASP.",
+    "lesson": 140
+  },
+  "race-condition": {
+    "term": "Race condition",
+    "aliases": [
+      "race conditions"
+    ],
+    "short": "Two concurrent transactions both read the same state and both proceed to write, producing an inconsistent final state.",
+    "lesson": 42
+  },
+  "rag-pipeline": {
+    "term": "RAG pipeline",
+    "short": "Embed documents → store in a vector DB → embed the query → retrieve top-k similar chunks → inject into the prompt.",
+    "lesson": 140
+  },
+  "rate-limiting": {
+    "term": "rate limiting",
+    "aliases": [
+      "rate limit",
+      "rate limited"
+    ],
+    "short": "Controls how many requests a client can make in a given period. Token bucket, leaky bucket, and sliding window are the common algorithms, and they trade off burst tolerance, fairness, and implementation cost differently — one algorithm for every endpoint is almost always the wrong choice.",
+    "lesson": 5
+  },
+  "rbac": {
+    "term": "RBAC",
+    "short": "Permissions assigned to roles; users assigned to roles; simple, auditable, correct for 80% of SaaS use cases.",
+    "lesson": 39
+  },
+  "read-replica": {
+    "term": "read replica",
+    "aliases": [
+      "read replicas"
+    ],
+    "short": "A continuously synchronized copy of a database that accepts only read (SELECT) queries. Writes go to the primary and stream to replicas asynchronously, with some replication lag before they're visible there.",
+    "lesson": 11
+  },
+  "readiness-probe": {
+    "term": "Readiness probe",
+    "short": "Kubernetes health check that gates traffic to a new pod; only routes traffic once the pod is healthy.",
+    "lesson": 57
+  },
+  "replication-lag": {
+    "term": "Replication lag",
+    "short": "The delay between a write on the primary and its visibility on the replica; can be milliseconds to seconds.",
+    "lesson": 11
+  },
+  "residual-risk": {
+    "term": "Residual risk",
+    "short": "The risk that remains after controls are applied — must be named explicitly in the register, never left implied by silence.",
+    "lesson": 356
+  },
+  "retained-size": {
+    "term": "Retained size",
+    "short": "Memory a node keeps alive (itself + everything reachable only through it). Leak investigation starts here.",
+    "lesson": 109
+  },
+  "retention-policy": {
+    "term": "Retention policy",
+    "short": "Compliance standards (GDPR, PCI-DSS) specify minimum and maximum retention periods; implement automated archival.",
+    "lesson": 47
+  },
+  "retry-policy": {
+    "term": "Retry policy",
+    "short": "Exponential backoff with a cap (e.g., 1s, 5s, 30s, 5m, 30m, 2h, 12h, 24h); total max attempts ~8–10.",
+    "lesson": 8
+  },
+  "risk-register": {
+    "term": "Risk register",
+    "short": "A living table (Risk / Level / Impact / Control / Owner / Residual Risk) revisited whenever scope changes, not a document written once at kickoff.",
+    "lesson": 356
+  },
+  "rolling-update": {
+    "term": "Rolling update",
+    "short": "Replacing a fraction of instances at a time; used by Kubernetes Deployments by default.",
+    "lesson": 57
+  },
+  "root-span": {
+    "term": "Root span",
+    "short": "The first span in a trace; created by the service that receives the original request.",
+    "lesson": 54
+  },
+  "scope-definition": {
+    "term": "Scope definition",
+    "short": "Which URLs, APIs, and features are in-scope; what attack types are permitted (no DDoS, no social engineering of employees); defines what the tester can legally do.",
+    "lesson": 38
+  },
+  "scoped-packages": {
+    "term": "Scoped packages",
+    "short": "@yourusername/package-name — scoped packages prevent name collisions and signal authorship; required for GitHub Packages, optional but recommended for npm.",
+    "lesson": 97
+  },
+  "secrets-manager": {
+    "term": "Secrets manager",
+    "short": "A dedicated service for storing, rotating, and auditing access to credentials (API keys, DB passwords, JWT secrets).",
+    "lesson": 37
+  },
+  "seq-scan": {
+    "term": "Seq scan",
+    "short": "Full table scan; acceptable for small tables or low-selectivity filters; bad for large tables with selective filters.",
+    "lesson": 17
+  },
+  "shallow-size": {
+    "term": "Shallow size",
+    "short": "Memory the object itself uses, not counting references. Usually small.",
+    "lesson": 109
+  },
+  "shared-schema": {
+    "term": "Shared-schema",
+    "short": "Weakest isolation; all tenants in shared tables with tenantId discriminator; simplest to build, highest risk of data leakage.",
+    "lesson": 50
+  },
+  "singleton-scope": {
+    "term": "Singleton scope",
+    "short": "The container creates one instance and caches it; subsequent requests return the same object.",
+    "lesson": 66
+  },
+  "sla": {
+    "term": "SLA",
+    "short": "A contractual SLO with consequences (credits, exits); always weaker than your internal SLO.",
+    "lesson": 55
+  },
+  "sli": {
+    "term": "SLI",
+    "short": "A specific measurable indicator: successful_requests / total_requests, p99_latency_ms, checkout_completion_rate.",
+    "lesson": 55
+  },
+  "slo": {
+    "term": "SLO",
+    "short": "A target threshold for an SLI over a time window: \"99.5% availability over 30 days\".",
+    "lesson": 55
+  },
+  "soft-delete": {
+    "term": "Soft delete",
+    "short": "DeletedAt TIMESTAMP NULL column; NULL = active, non-null = deleted; queries filter on WHERE deletedAt IS NULL.",
+    "lesson": 44
+  },
+  "sticky-sessions": {
+    "term": "Sticky sessions",
+    "short": "WebSocket connections are stateful — without them, a load balancer may route the same client to a different server on reconnect, losing room membership. Solve with Redis Pub/Sub as a shared message bus.",
+    "lesson": 101
+  },
+  "streaming-replication": {
+    "term": "Streaming replication",
+    "short": "PostgreSQL's built-in replication mechanism; replicas connect to the primary and receive WAL in real-time.",
+    "lesson": 11
+  },
+  "stress-test": {
+    "term": "Stress test",
+    "short": "Traffic ramped past expected levels to find the breaking point and failure mode.",
+    "lesson": 132
+  },
+  "suspense-boundary": {
+    "term": "Suspense boundary",
+    "short": "A <Suspense fallback={...}> wrapper that tells React \"this subtree can be deferred; show the fallback until it resolves\".",
+    "lesson": 26
+  },
+  "table-partitioning": {
+    "term": "Table partitioning",
+    "short": "A single logical table split into multiple physical storage units based on a partition key; queries that filter on the partition key only scan relevant partitions.",
+    "lesson": 45
+  },
+  "tax-reserve": {
+    "term": "Tax reserve",
+    "short": "Setting aside 20–30% of every payment immediately for tax obligations. Not doing this is the most common freelancer financial mistake.",
+    "lesson": 117
+  },
+  "tcp-handshake": {
+    "term": "TCP handshake",
+    "short": "SYN/SYN-ACK/ACK sets up a connection before any application data flows — a real, measurable cost per new connection.",
+    "lesson": 133
+  },
+  "tenant-provisioning": {
+    "term": "Tenant provisioning",
+    "short": "Creating a new database, running migrations, seeding initial data — should be automated and idempotent.",
+    "lesson": 50
+  },
+  "test-double": {
+    "term": "Test double",
+    "aliases": [
+      "test doubles"
+    ],
+    "short": "Umbrella term for mocks, stubs, fakes, and spies.",
+    "lesson": 71
+  },
+  "thundering-herd": {
+    "term": "Thundering herd",
+    "short": "Many concurrent requests all miss the cache at the same time and flood the DB; prevent with staggered TTLs, lock-based population, or probabilistic early expiration.",
+    "lesson": 20
+  },
+  "timeline-reconstruction": {
+    "term": "Timeline reconstruction",
+    "short": "Precise chronological sequence of events (detection, diagnosis, mitigation, resolution) — the foundation everything else is built on.",
+    "lesson": 79
+  },
+  "token-bucket": {
+    "term": "Token bucket",
+    "short": "Bucket refills at a fixed rate; allows bursts up to bucket capacity; most user-friendly for API limits.",
+    "lesson": 5
+  },
+  "traffic-cutover": {
+    "term": "Traffic cutover",
+    "short": "The moment you flip the load balancer or DNS from old to new; in blue-green this is atomic.",
+    "lesson": 57
+  },
+  "trust-boundary": {
+    "term": "Trust boundary",
+    "aliases": [
+      "trust boundaries"
+    ],
+    "short": "The point where data crosses from a domain you control into one you don't — frontend/backend, backend/third-party API, tenant/tenant.",
+    "lesson": 356
+  },
+  "unit-test": {
+    "term": "Unit test",
+    "aliases": [
+      "unit tests"
+    ],
+    "short": "Tests one function; all external dependencies are mocked; fast, cheap, high volume.",
+    "lesson": 71
+  },
+  "url-versioning": {
+    "term": "URL versioning",
+    "short": "/api/v1/, /api/v2/ — visible, easy to route, most common for REST APIs.",
+    "lesson": 9
+  },
+  "vacuum-freeze": {
+    "term": "VACUUM FREEZE",
+    "short": "Prevents transaction ID wraparound — a critical maintenance operation on long-running databases.",
+    "lesson": 104
+  },
+  "value-based-pricing": {
+    "term": "Value-based pricing",
+    "short": "Price is set by the value delivered to the client, not your cost. A €3000/month SaaS replacing a €50K/year manual process is worth more than 80 hours × €50.",
+    "lesson": 115
+  },
+  "value-object": {
+    "term": "Value object",
+    "aliases": [
+      "value objects"
+    ],
+    "short": "No identity, defined entirely by its attributes, typically immutable.",
+    "lesson": 134
+  },
+  "webhook-signature-verification": {
+    "term": "Webhook signature verification",
+    "short": "Every incoming webhook should have its signature verified against your provider's secret before any processing; skipping this allows attackers to forge payment events.",
+    "lesson": 87
+  },
+  "websocket-handshake": {
+    "term": "WebSocket handshake",
+    "short": "Starts as HTTP Upgrade request (101 Switching Protocols), then becomes raw TCP frame exchange — no HTTP overhead per message.",
+    "lesson": 101
+  },
+  "x-forwarded-for": {
+    "term": "X-Forwarded-For",
+    "short": "The original client IP, added by each proxy hop — must only be trusted from a known, trusted proxy, never taken as-is from the raw request.",
+    "lesson": 133
+  },
+  "yagni": {
+    "term": "YAGNI",
+    "short": "\"You Aren't Gonna Need It\"; the single most useful design principle for knowing when NOT to apply a pattern.",
+    "lesson": 67
   }
 }

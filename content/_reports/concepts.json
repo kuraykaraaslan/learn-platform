@@ -1,14 +1,216 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
-  "totalTerms": 8,
+  "totalTerms": 125,
   "totalLessons": 412,
   "totals": {
     "neverMatched": 0,
-    "atCapLessons": 0
+    "atCapLessons": 10
   },
   "neverMatched": [],
-  "atCapLessons": [],
+  "atCapLessons": [
+    "advanced-deep-dive-topics/103_browser_internals.md",
+    "advanced-deep-dive-topics/107_api_design_philosophy.md",
+    "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
+    "architecture-design-patterns-testing/68_big_o_analysis.md",
+    "distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md",
+    "observability-deployment/59_kubernetes_fundamentals.md",
+    "product-technical-strategy/389_domain_modeling_module_boundaries_scaling_path.md",
+    "product-technical-strategy/391_nfr_production_readiness_strategy.md",
+    "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md",
+    "saas-business-skills/87_payment_integration_depth.md"
+  ],
   "byTerm": [
+    {
+      "slug": "abac",
+      "term": "ABAC",
+      "lessonsLinkedIn": [
+        "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
+      ],
+      "rawOccurrences": 17
+    },
+    {
+      "slug": "acid-transaction",
+      "term": "ACID transaction",
+      "lessonsLinkedIn": [
+        "distributed-systems-api-design/14_outbox_pattern.md"
+      ],
+      "rawOccurrences": 2
+    },
+    {
+      "slug": "alert-fatigue",
+      "term": "Alert fatigue",
+      "lessonsLinkedIn": [
+        "observability-deployment/55_slo_sli_sla.md"
+      ],
+      "rawOccurrences": 3
+    },
+    {
+      "slug": "api-documentation",
+      "term": "API documentation",
+      "lessonsLinkedIn": [
+        "ai-llm-engineering/155_streaming_ai_responses_production.md",
+        "client-acquisition-sales/199_risk_logs_meeting_recaps_and_the_discovery_to_proposal_handoff.md",
+        "client-delivery-pm-handover/252_database_api_and_integration_handover_docs.md",
+        "content-seo-personal-brand/290_content_operations_at_scale_programmatic_seo_refresh_and_search_console_review.md",
+        "contracts-pricing-legal/212_assumptions_and_dependencies.md"
+      ],
+      "rawOccurrences": 12
+    },
+    {
+      "slug": "append-only",
+      "term": "Append-only",
+      "lessonsLinkedIn": [
+        "database-advanced/51_event_log_rehydration.md",
+        "distributed-systems-api-design/02_event_sourcing_cqrs.md"
+      ],
+      "rawOccurrences": 5
+    },
+    {
+      "slug": "audit-log",
+      "term": "Audit log",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/67_design_patterns.md",
+        "career-entrepreneurship/115_productizing_services.md",
+        "database-advanced/42_optimistic_vs_pessimistic_locking.md",
+        "database-advanced/44_soft_delete_pattern_problems_alternatives.md",
+        "database-advanced/45_time_series_data_timescaledb_partitioning.md",
+        "database-advanced/47_audit_log_design_application_level.md",
+        "database-advanced/48_data_retention_gdpr_kvkk_deletion_flow.md",
+        "distributed-systems-api-design/02_event_sourcing_cqrs.md",
+        "framework-deep-dives/399_express_centralized_error_handling.md",
+        "framework-deep-dives/409_springboot_controller_advice_error_handling.md",
+        "observability-deployment/62_log_aggregation.md",
+        "privacy-compliance-incident-response/357_government_regulated_sector_security_baselines.md",
+        "product-technical-strategy/388_requirements_to_architecture_translation.md",
+        "product-technical-strategy/391_nfr_production_readiness_strategy.md",
+        "saas-business-skills/87_payment_integration_depth.md",
+        "security/143_compliance_frameworks.md",
+        "security/39_rbac_vs_abac.md"
+      ],
+      "rawOccurrences": 70
+    },
+    {
+      "slug": "aws-secrets-manager",
+      "term": "AWS Secrets Manager",
+      "lessonsLinkedIn": [
+        "observability-deployment/59_kubernetes_fundamentals.md"
+      ],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "b-tree-index",
+      "term": "B-tree index",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/104_database_internals.md",
+        "architecture-design-patterns-testing/68_big_o_analysis.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "backward-compatibility",
+      "term": "Backward compatibility",
+      "lessonsLinkedIn": [
+        "distributed-systems-api-design/09_api_versioning_strategies.md",
+        "product-technical-strategy/392_data_architecture_ownership_lifecycle.md"
+      ],
+      "rawOccurrences": 5
+    },
+    {
+      "slug": "base",
+      "term": "BASE",
+      "lessonsLinkedIn": [
+        "algorithms-concurrency/130_data_structures_algorithms_practice.md",
+        "architecture-design-patterns-testing/64_solid_principles.md",
+        "architecture-design-patterns-testing/71_test_pyramid.md",
+        "business-finance-solo-ops/330_pricing_for_margin.md",
+        "business-finance-solo-ops/331_productized_offer_catalog.md",
+        "client-delivery-pm-handover/252_database_api_and_integration_handover_docs.md",
+        "client-delivery-pm-handover/269_scope_ladders_included_vs_priced_add_ons.md",
+        "content-seo-personal-brand/277_content_calendar_cadence_and_quality_gate.md",
+        "contracts-pricing-legal/214_change_request_control.md",
+        "database-advanced/43_zero_downtime_database_migration.md",
+        "database-advanced/49_backup_strategy_rto_rpo_restore_testing.md",
+        "fundamentals-tools/120_git_fundamentals.md",
+        "fundamentals-tools/122_oop_data_structures_basics.md",
+        "observability-deployment/61_alerting_design.md",
+        "saas-business-skills/86_saas_metrics.md",
+        "saas-business-skills/90_accessibility.md",
+        "security/32_jwt_security_rs256_hs256_rotation.md",
+        "security/33_ssrf_server_side_request_forgery.md"
+      ],
+      "rawOccurrences": 41
+    },
+    {
+      "slug": "billable-utilization",
+      "term": "Billable utilization",
+      "lessonsLinkedIn": [
+        "business-finance-solo-ops/322_time_tracking_and_effective_rate.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "binary-search",
+      "term": "Binary search",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/111_production_debugging.md",
+        "architecture-design-patterns-testing/68_big_o_analysis.md",
+        "fundamentals-tools/123_debugging_fundamentals.md",
+        "fundamentals-tools/139_git_internals_advanced_workflows.md"
+      ],
+      "rawOccurrences": 11
+    },
+    {
+      "slug": "blast-radius",
+      "term": "Blast radius",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/111_production_debugging.md",
+        "observability-deployment/141_cloud_architecture_well_architected.md",
+        "observability-deployment/58_dockerfile_best_practices.md",
+        "process-soft-skills/77_technical_debt_prioritization.md",
+        "security/40_supply_chain_security_lockfile_integrity.md"
+      ],
+      "rawOccurrences": 8
+    },
+    {
+      "slug": "bounded-context",
+      "term": "Bounded context",
+      "lessonsLinkedIn": [
+        "product-technical-strategy/389_domain_modeling_module_boundaries_scaling_path.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "breaking-change",
+      "term": "Breaking change",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/107_api_design_philosophy.md",
+        "fundamentals-tools/122_oop_data_structures_basics.md",
+        "open-source-community/95_publishing_maintaining_oss_tool.md",
+        "open-source-community/96_semver_changelog_management.md",
+        "security/40_supply_chain_security_lockfile_integrity.md"
+      ],
+      "rawOccurrences": 25
+    },
+    {
+      "slug": "cache-invalidation",
+      "term": "Cache invalidation",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/113_systems_thinking.md",
+        "architecture-design-patterns-testing/69_tail_call_memoization_lazy_evaluation.md",
+        "framework-deep-dives/416_reactnative_data_fetching_and_offline.md"
+      ],
+      "rawOccurrences": 5
+    },
+    {
+      "slug": "change-request-process",
+      "term": "Change request process",
+      "lessonsLinkedIn": [
+        "client-delivery-pm-handover/243_decisions_and_change_requests.md",
+        "contracts-pricing-legal/211_statement_of_work_structure.md",
+        "process-soft-skills/83_scope_creep_management.md"
+      ],
+      "rawOccurrences": 7
+    },
     {
       "slug": "circuit-breaker",
       "term": "circuit breaker",
@@ -20,6 +222,26 @@
       "rawOccurrences": 14
     },
     {
+      "slug": "code-generation",
+      "term": "Code generation",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/107_api_design_philosophy.md",
+        "advanced-deep-dive-topics/108_monorepo_tooling.md",
+        "ai-llm-engineering/146_when_to_add_ai.md",
+        "ai-llm-engineering/148_prompts_as_versioned_code.md",
+        "ai-llm-engineering/154_token_budget_cost_engineering.md"
+      ],
+      "rawOccurrences": 11
+    },
+    {
+      "slug": "composition-root",
+      "term": "Composition Root",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/66_dependency_injection_container.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
       "slug": "connection-pooling",
       "term": "connection pooling",
       "lessonsLinkedIn": [
@@ -28,10 +250,100 @@
         "distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md",
         "distributed-systems-api-design/11_read_replica_routing.md",
         "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md",
-        "fundamentals-tools/133_networking_fundamentals.md",
-        "observability-deployment/61_alerting_design.md"
+        "fundamentals-tools/133_networking_fundamentals.md"
       ],
       "rawOccurrences": 28
+    },
+    {
+      "slug": "constant-time-comparison",
+      "term": "Constant-time comparison",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/105_cryptography_fundamentals.md",
+        "security/34_timing_attack_constant_time_comparison.md"
+      ],
+      "rawOccurrences": 16
+    },
+    {
+      "slug": "constructor-injection",
+      "term": "Constructor injection",
+      "lessonsLinkedIn": [
+        "framework-deep-dives/403_springboot_three_layer_architecture.md",
+        "framework-deep-dives/406_springboot_service_layer_transactional.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "consumer-groups",
+      "term": "Consumer groups",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "content-negotiation",
+      "term": "Content negotiation",
+      "lessonsLinkedIn": [
+        "fundamentals-tools/119_http_fundamentals.md"
+      ],
+      "rawOccurrences": 5
+    },
+    {
+      "slug": "context-propagation",
+      "term": "Context propagation",
+      "lessonsLinkedIn": [
+        "observability-deployment/53_opentelemetry.md"
+      ],
+      "rawOccurrences": 5
+    },
+    {
+      "slug": "correlation-id",
+      "term": "Correlation ID",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 2
+    },
+    {
+      "slug": "cqrs",
+      "term": "CQRS",
+      "lessonsLinkedIn": [
+        "database-advanced/51_event_log_rehydration.md",
+        "distributed-systems-api-design/13_cqrs_read_model_optimization.md"
+      ],
+      "rawOccurrences": 12
+    },
+    {
+      "slug": "cve",
+      "term": "CVE",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "data-minimization",
+      "term": "Data minimization",
+      "lessonsLinkedIn": [
+        "ai-llm-engineering/160_ai_data_privacy_regulatory_compliance.md",
+        "privacy-compliance-incident-response/359_privacy_by_design_process_multi_jurisdiction_basis.md",
+        "privacy-compliance-incident-response/365_childrens_data_compliance_age_verification_parental_consent.md"
+      ],
+      "rawOccurrences": 7
+    },
+    {
+      "slug": "data-residency",
+      "term": "Data residency",
+      "lessonsLinkedIn": [
+        "distributed-systems-api-design/12_database_sharding_strategies.md",
+        "privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md",
+        "product-technical-strategy/390_technology_selection_governance.md"
+      ],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "data-retention-policy",
+      "term": "Data retention policy",
+      "lessonsLinkedIn": [
+        "database-advanced/48_data_retention_gdpr_kvkk_deletion_flow.md"
+      ],
+      "rawOccurrences": 5
     },
     {
       "slug": "database-sharding",
@@ -42,6 +354,96 @@
         "frontend-performance-scaling/22_http2_multiplexing.md"
       ],
       "rawOccurrences": 88
+    },
+    {
+      "slug": "dead-tuples",
+      "term": "Dead tuples",
+      "lessonsLinkedIn": [
+        "database-advanced/41_postgresql_mvcc_vacuum_bloat_isolation.md",
+        "database-caching-performance/17_database_index_strategy.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "dependency-rule",
+      "term": "Dependency Rule",
+      "lessonsLinkedIn": [
+        "product-technical-strategy/382_roadmap_planning.md"
+      ],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "dip",
+      "term": "DIP",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "dkim",
+      "term": "DKIM",
+      "lessonsLinkedIn": [
+        "content-seo-personal-brand/305_deliverability_list_hygiene_reengagement_and_metrics.md"
+      ],
+      "rawOccurrences": 20
+    },
+    {
+      "slug": "dmarc",
+      "term": "DMARC",
+      "lessonsLinkedIn": [
+        "content-seo-personal-brand/305_deliverability_list_hygiene_reengagement_and_metrics.md"
+      ],
+      "rawOccurrences": 18
+    },
+    {
+      "slug": "domain-event",
+      "term": "Domain event",
+      "lessonsLinkedIn": [
+        "product-technical-strategy/393_api_integration_event_driven_decisions.md"
+      ],
+      "rawOccurrences": 7
+    },
+    {
+      "slug": "eager-loading",
+      "term": "Eager loading",
+      "lessonsLinkedIn": [
+        "framework-deep-dives/410_springboot_jpa_entities_and_n_plus_one.md"
+      ],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "effective-hourly-rate",
+      "term": "Effective hourly rate",
+      "lessonsLinkedIn": [
+        "business-finance-solo-ops/321_project_accounting_and_costing.md",
+        "business-finance-solo-ops/322_time_tracking_and_effective_rate.md",
+        "business-finance-solo-ops/325_finance_dashboard_and_kpis.md"
+      ],
+      "rawOccurrences": 12
+    },
+    {
+      "slug": "error-budget",
+      "term": "Error budget",
+      "lessonsLinkedIn": [
+        "observability-deployment/61_alerting_design.md"
+      ],
+      "rawOccurrences": 11
+    },
+    {
+      "slug": "event-store",
+      "term": "Event store",
+      "lessonsLinkedIn": [
+        "database-advanced/51_event_log_rehydration.md"
+      ],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "event-stream",
+      "term": "Event stream",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md",
+        "ai-llm-engineering/155_streaming_ai_responses_production.md"
+      ],
+      "rawOccurrences": 3
     },
     {
       "slug": "eventual-consistency",
@@ -81,6 +483,289 @@
       "rawOccurrences": 23
     },
     {
+      "slug": "flame-graph",
+      "term": "Flame graph",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/103_browser_internals.md"
+      ],
+      "rawOccurrences": 10
+    },
+    {
+      "slug": "git-bisect",
+      "term": "git bisect",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 20
+    },
+    {
+      "slug": "graceful-degradation",
+      "term": "Graceful degradation",
+      "lessonsLinkedIn": [
+        "ai-llm-engineering/156_fallback_graceful_degradation.md",
+        "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
+        "product-technical-strategy/391_nfr_production_readiness_strategy.md"
+      ],
+      "rawOccurrences": 8
+    },
+    {
+      "slug": "hard-bounce",
+      "term": "Hard bounce",
+      "lessonsLinkedIn": [
+        "client-acquisition-sales/189_followup_cadence_reply_handling_and_campaign_discipline.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "hashicorp-vault",
+      "term": "HashiCorp Vault",
+      "lessonsLinkedIn": [
+        "observability-deployment/59_kubernetes_fundamentals.md"
+      ],
+      "rawOccurrences": 5
+    },
+    {
+      "slug": "heap-snapshot",
+      "term": "Heap snapshot",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/103_browser_internals.md"
+      ],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "hmac",
+      "term": "HMAC",
+      "lessonsLinkedIn": [
+        "distributed-systems-api-design/08_webhook_security_retry.md",
+        "saas-business-skills/87_payment_integration_depth.md",
+        "security/34_timing_attack_constant_time_comparison.md"
+      ],
+      "rawOccurrences": 16
+    },
+    {
+      "slug": "hmac-sha256",
+      "term": "HMAC-SHA256",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/105_cryptography_fundamentals.md",
+        "security/32_jwt_security_rs256_hs256_rotation.md"
+      ],
+      "rawOccurrences": 7
+    },
+    {
+      "slug": "idempotency-key",
+      "term": "Idempotency key",
+      "lessonsLinkedIn": [
+        "ai-llm-engineering/163_mcp_server_auth_error_idempotency.md",
+        "database-advanced/41_postgresql_mvcc_vacuum_bloat_isolation.md",
+        "distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md",
+        "distributed-systems-api-design/07_idempotency_key_pattern.md",
+        "distributed-systems-api-design/131_message_queues_101.md"
+      ],
+      "rawOccurrences": 18
+    },
+    {
+      "slug": "index-bloat",
+      "term": "Index bloat",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 2
+    },
+    {
+      "slug": "index-only-scan",
+      "term": "Index Only Scan",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 2
+    },
+    {
+      "slug": "integration-test",
+      "term": "Integration test",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/66_dependency_injection_container.md",
+        "architecture-design-patterns-testing/73_contract_testing_pact.md",
+        "architecture-design-patterns-testing/74_tdd_cycle.md",
+        "database-caching-performance/16_n_plus_1_query_problem.md",
+        "framework-deep-dives/402_express_testing_with_jest_and_supertest.md",
+        "framework-deep-dives/411_springboot_flyway_migrations.md",
+        "framework-deep-dives/412_springboot_testing_mockmvc_testcontainers.md",
+        "fundamentals-tools/124_unit_testing_basics.md",
+        "observability-deployment/60_github_actions_ci_pipeline.md"
+      ],
+      "rawOccurrences": 25
+    },
+    {
+      "slug": "kill-switch",
+      "term": "Kill switch",
+      "lessonsLinkedIn": [
+        "observability-deployment/63_chaos_engineering.md"
+      ],
+      "rawOccurrences": 3
+    },
+    {
+      "slug": "kvkk",
+      "term": "KVKK",
+      "lessonsLinkedIn": [
+        "ai-llm-engineering/160_ai_data_privacy_regulatory_compliance.md",
+        "career-entrepreneurship/116_legal_literacy.md",
+        "database-advanced/44_soft_delete_pattern_problems_alternatives.md",
+        "privacy-compliance-incident-response/359_privacy_by_design_process_multi_jurisdiction_basis.md",
+        "privacy-compliance-incident-response/363_breach_notification_requirements_across_jurisdictions.md",
+        "privacy-compliance-incident-response/365_childrens_data_compliance_age_verification_parental_consent.md",
+        "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
+        "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
+        "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
+      ],
+      "rawOccurrences": 38
+    },
+    {
+      "slug": "lazy-loading",
+      "term": "Lazy loading",
+      "lessonsLinkedIn": [
+        "database-caching-performance/20_redis_cache_strategies.md",
+        "frontend-performance-scaling/22_http2_multiplexing.md"
+      ],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "lockfile-integrity",
+      "term": "Lockfile integrity",
+      "lessonsLinkedIn": [
+        "security/40_supply_chain_security_lockfile_integrity.md"
+      ],
+      "rawOccurrences": 2
+    },
+    {
+      "slug": "mass-assignment",
+      "term": "Mass assignment",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 9
+    },
+    {
+      "slug": "materialized-view",
+      "term": "Materialized view",
+      "lessonsLinkedIn": [
+        "database-advanced/45_time_series_data_timescaledb_partitioning.md",
+        "database-advanced/52_oltp_vs_olap.md"
+      ],
+      "rawOccurrences": 24
+    },
+    {
+      "slug": "modular-monolith",
+      "term": "Modular monolith",
+      "lessonsLinkedIn": [
+        "content-seo-personal-brand/275_technical_writing_style_for_business_readers.md",
+        "product-technical-strategy/387_technical_architecture_operating_system.md",
+        "product-technical-strategy/389_domain_modeling_module_boundaries_scaling_path.md"
+      ],
+      "rawOccurrences": 8
+    },
+    {
+      "slug": "mrr",
+      "term": "MRR",
+      "lessonsLinkedIn": [
+        "saas-business-skills/87_payment_integration_depth.md",
+        "saas-business-skills/93_ab_test_infrastructure.md"
+      ],
+      "rawOccurrences": 39
+    },
+    {
+      "slug": "n-plus-1-query",
+      "term": "N+1 query",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/107_api_design_philosophy.md",
+        "advanced-deep-dive-topics/113_systems_thinking.md",
+        "architecture-design-patterns-testing/68_big_o_analysis.md",
+        "framework-deep-dives/410_springboot_jpa_entities_and_n_plus_one.md",
+        "fundamentals-tools/121_sql_fundamentals.md"
+      ],
+      "rawOccurrences": 17
+    },
+    {
+      "slug": "nested-loop",
+      "term": "Nested Loop",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/68_big_o_analysis.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "outbox-relay",
+      "term": "Outbox relay",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 7
+    },
+    {
+      "slug": "partial-index",
+      "term": "Partial index",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 9
+    },
+    {
+      "slug": "password-hashing",
+      "term": "Password hashing",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/71_test_pyramid.md",
+        "architecture-design-patterns-testing/72_property_based_testing.md"
+      ],
+      "rawOccurrences": 8
+    },
+    {
+      "slug": "pool-exhaustion",
+      "term": "Pool exhaustion",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 1
+    },
+    {
+      "slug": "primary-key",
+      "term": "Primary key",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "principle-of-least-privilege",
+      "term": "Principle of least privilege",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 2
+    },
+    {
+      "slug": "productized-service",
+      "term": "Productized service",
+      "lessonsLinkedIn": [
+        "business-finance-solo-ops/331_productized_offer_catalog.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "prompt-injection",
+      "term": "Prompt injection",
+      "lessonsLinkedIn": [
+        "ai-llm-engineering/159_prompt_injection_defense.md",
+        "ai-llm-engineering/164_multi_agent_orchestration_workflow_chaining.md"
+      ],
+      "rawOccurrences": 8
+    },
+    {
+      "slug": "race-condition",
+      "term": "Race condition",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/113_systems_thinking.md",
+        "algorithms-concurrency/129_concurrency_async_fundamentals.md",
+        "content-seo-personal-brand/286_entity_clarity_and_eeat_trust_signals.md",
+        "database-advanced/41_postgresql_mvcc_vacuum_bloat_isolation.md",
+        "distributed-systems-api-design/05_rate_limiting_strategies.md",
+        "frontend-performance-scaling/138_frontend_state_management.md",
+        "process-soft-skills/78_code_review_culture.md",
+        "saas-business-skills/87_payment_integration_depth.md",
+        "security/32_jwt_security_rs256_hs256_rotation.md",
+        "security/38_penetration_testing_process.md"
+      ],
+      "rawOccurrences": 20
+    },
+    {
+      "slug": "rag-pipeline",
+      "term": "RAG pipeline",
+      "lessonsLinkedIn": [
+        "ai-llm-engineering/159_prompt_injection_defense.md"
+      ],
+      "rawOccurrences": 2
+    },
+    {
       "slug": "rate-limiting",
       "term": "rate limiting",
       "lessonsLinkedIn": [
@@ -99,13 +784,23 @@
         "framework-deep-dives/407_springboot_security_filter_chain.md",
         "framework-deep-dives/408_springboot_jwt_auth_integration.md",
         "frontend-performance-scaling/27_job_queue_bullmq.md",
-        "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md",
         "fundamentals-tools/133_networking_fundamentals.md",
         "observability-deployment/63_chaos_engineering.md",
-        "privacy-compliance-incident-response/361_vulnerability_management_lifecycle_patch_slas.md",
-        "product-technical-strategy/393_api_integration_event_driven_decisions.md"
+        "privacy-compliance-incident-response/361_vulnerability_management_lifecycle_patch_slas.md"
       ],
       "rawOccurrences": 50
+    },
+    {
+      "slug": "rbac",
+      "term": "RBAC",
+      "lessonsLinkedIn": [
+        "career-entrepreneurship/115_productizing_services.md",
+        "privacy-compliance-incident-response/356_risk_based_security_scoping_threat_model_lite.md",
+        "product-technical-strategy/373_personas_role_mapping.md",
+        "product-technical-strategy/388_requirements_to_architecture_translation.md",
+        "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
+      ],
+      "rawOccurrences": 22
     },
     {
       "slug": "read-replica",
@@ -119,10 +814,391 @@
         "distributed-systems-api-design/12_database_sharding_strategies.md",
         "framework-deep-dives/406_springboot_service_layer_transactional.md",
         "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md",
-        "observability-deployment/63_chaos_engineering.md",
         "product-technical-strategy/389_domain_modeling_module_boundaries_scaling_path.md"
       ],
       "rawOccurrences": 28
+    },
+    {
+      "slug": "readiness-probe",
+      "term": "Readiness probe",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 2
+    },
+    {
+      "slug": "replication-lag",
+      "term": "Replication lag",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/104_database_internals.md",
+        "distributed-systems-api-design/01_cap_theorem.md"
+      ],
+      "rawOccurrences": 8
+    },
+    {
+      "slug": "residual-risk",
+      "term": "Residual risk",
+      "lessonsLinkedIn": [
+        "client-delivery-pm-handover/255_known_issues_and_troubleshooting_disclosure.md",
+        "privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md",
+        "privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md"
+      ],
+      "rawOccurrences": 13
+    },
+    {
+      "slug": "retained-size",
+      "term": "Retained size",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/103_browser_internals.md"
+      ],
+      "rawOccurrences": 5
+    },
+    {
+      "slug": "retention-policy",
+      "term": "Retention policy",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md"
+      ],
+      "rawOccurrences": 3
+    },
+    {
+      "slug": "retry-policy",
+      "term": "Retry policy",
+      "lessonsLinkedIn": [
+        "distributed-systems-api-design/07_idempotency_key_pattern.md"
+      ],
+      "rawOccurrences": 2
+    },
+    {
+      "slug": "risk-register",
+      "term": "Risk register",
+      "lessonsLinkedIn": [
+        "client-delivery-pm-handover/242_risk_issue_and_dependency_logs.md",
+        "client-delivery-pm-handover/267_delivery_playbooks_codifying_project_types.md",
+        "contracts-pricing-legal/228_handoff_from_scope_to_execution.md",
+        "product-technical-strategy/387_technical_architecture_operating_system.md",
+        "product-technical-strategy/393_api_integration_event_driven_decisions.md",
+        "security/143_compliance_frameworks.md"
+      ],
+      "rawOccurrences": 21
+    },
+    {
+      "slug": "rolling-update",
+      "term": "Rolling update",
+      "lessonsLinkedIn": [
+        "observability-deployment/59_kubernetes_fundamentals.md"
+      ],
+      "rawOccurrences": 5
+    },
+    {
+      "slug": "root-span",
+      "term": "Root span",
+      "lessonsLinkedIn": [
+        "observability-deployment/53_opentelemetry.md"
+      ],
+      "rawOccurrences": 2
+    },
+    {
+      "slug": "scope-definition",
+      "term": "Scope definition",
+      "lessonsLinkedIn": [
+        "client-delivery-pm-handover/267_delivery_playbooks_codifying_project_types.md",
+        "contracts-pricing-legal/210_scope_definition_and_boundaries.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "scoped-packages",
+      "term": "Scoped packages",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 3
+    },
+    {
+      "slug": "secrets-manager",
+      "term": "Secrets manager",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/105_cryptography_fundamentals.md",
+        "ai-llm-engineering/147_anthropic_api_client_architecture.md",
+        "ai-llm-engineering/163_mcp_server_auth_error_idempotency.md",
+        "observability-deployment/58_dockerfile_best_practices.md",
+        "observability-deployment/59_kubernetes_fundamentals.md"
+      ],
+      "rawOccurrences": 13
+    },
+    {
+      "slug": "seq-scan",
+      "term": "Seq scan",
+      "lessonsLinkedIn": [
+        "database-caching-performance/18_query_plan_analysis.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "shallow-size",
+      "term": "Shallow size",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/103_browser_internals.md"
+      ],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "shared-schema",
+      "term": "Shared-schema",
+      "lessonsLinkedIn": [
+        "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
+      ],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "singleton-scope",
+      "term": "Singleton scope",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/67_design_patterns.md"
+      ],
+      "rawOccurrences": 3
+    },
+    {
+      "slug": "sla",
+      "term": "SLA",
+      "lessonsLinkedIn": [
+        "business-finance-solo-ops/353_business_continuity_planning.md",
+        "business-finance-solo-ops/355_burnout_as_a_business_risk.md",
+        "client-acquisition-sales/189_followup_cadence_reply_handling_and_campaign_discipline.md",
+        "client-delivery-pm-handover/261_client_facing_postmortem_reports.md",
+        "client-delivery-pm-handover/265_support_operations_channels_slas_and_boundaries.md",
+        "distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md",
+        "observability-deployment/54_distributed_tracing.md",
+        "privacy-compliance-incident-response/361_vulnerability_management_lifecycle_patch_slas.md",
+        "process-soft-skills/145_build_vs_buy_vendor_evaluation.md",
+        "process-soft-skills/78_code_review_culture.md",
+        "process-soft-skills/79_blameless_post_mortem.md"
+      ],
+      "rawOccurrences": 49
+    },
+    {
+      "slug": "sli",
+      "term": "SLI",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
+        "observability-deployment/61_alerting_design.md",
+        "product-technical-strategy/391_nfr_production_readiness_strategy.md"
+      ],
+      "rawOccurrences": 17
+    },
+    {
+      "slug": "slo",
+      "term": "SLO",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
+        "product-technical-strategy/391_nfr_production_readiness_strategy.md"
+      ],
+      "rawOccurrences": 21
+    },
+    {
+      "slug": "soft-delete",
+      "term": "Soft delete",
+      "lessonsLinkedIn": [
+        "framework-deep-dives/410_springboot_jpa_entities_and_n_plus_one.md",
+        "product-technical-strategy/392_data_architecture_ownership_lifecycle.md"
+      ],
+      "rawOccurrences": 23
+    },
+    {
+      "slug": "sticky-sessions",
+      "term": "Sticky sessions",
+      "lessonsLinkedIn": [
+        "distributed-systems-api-design/11_read_replica_routing.md",
+        "framework-deep-dives/401_express_realtime_sse_and_socketio.md",
+        "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md"
+      ],
+      "rawOccurrences": 9
+    },
+    {
+      "slug": "streaming-replication",
+      "term": "Streaming replication",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/104_database_internals.md"
+      ],
+      "rawOccurrences": 3
+    },
+    {
+      "slug": "stress-test",
+      "term": "Stress test",
+      "lessonsLinkedIn": [
+        "client-acquisition-sales/176_brand_foundation_and_positioning_statement.md"
+      ],
+      "rawOccurrences": 5
+    },
+    {
+      "slug": "suspense-boundary",
+      "term": "Suspense boundary",
+      "lessonsLinkedIn": [
+        "frontend-performance-scaling/23_react_server_components.md"
+      ],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "table-partitioning",
+      "term": "Table partitioning",
+      "lessonsLinkedIn": [
+        "distributed-systems-api-design/12_database_sharding_strategies.md"
+      ],
+      "rawOccurrences": 5
+    },
+    {
+      "slug": "tax-reserve",
+      "term": "Tax reserve",
+      "lessonsLinkedIn": [
+        "business-finance-solo-ops/316_cash_flow_and_runway.md",
+        "business-finance-solo-ops/319_tax_and_accounting_readiness.md",
+        "business-finance-solo-ops/327_risk_reserve_and_contingency.md"
+      ],
+      "rawOccurrences": 8
+    },
+    {
+      "slug": "tcp-handshake",
+      "term": "TCP handshake",
+      "lessonsLinkedIn": [
+        "database-caching-performance/19_connection_pool_tuning.md"
+      ],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "tenant-provisioning",
+      "term": "Tenant provisioning",
+      "lessonsLinkedIn": [
+        "distributed-systems-api-design/06_distributed_locking.md",
+        "distributed-systems-api-design/07_idempotency_key_pattern.md"
+      ],
+      "rawOccurrences": 6
+    },
+    {
+      "slug": "test-double",
+      "term": "Test double",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/66_dependency_injection_container.md",
+        "framework-deep-dives/415_reactnative_zustand_mmkv_state_management.md",
+        "fundamentals-tools/124_unit_testing_basics.md"
+      ],
+      "rawOccurrences": 7
+    },
+    {
+      "slug": "thundering-herd",
+      "term": "Thundering herd",
+      "lessonsLinkedIn": [
+        "distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md"
+      ],
+      "rawOccurrences": 7
+    },
+    {
+      "slug": "timeline-reconstruction",
+      "term": "Timeline reconstruction",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/111_production_debugging.md",
+        "privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md"
+      ],
+      "rawOccurrences": 3
+    },
+    {
+      "slug": "token-bucket",
+      "term": "Token bucket",
+      "lessonsLinkedIn": [
+        "framework-deep-dives/407_springboot_security_filter_chain.md"
+      ],
+      "rawOccurrences": 9
+    },
+    {
+      "slug": "traffic-cutover",
+      "term": "Traffic cutover",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 2
+    },
+    {
+      "slug": "trust-boundary",
+      "term": "Trust boundary",
+      "lessonsLinkedIn": [
+        "ai-llm-engineering/148_prompts_as_versioned_code.md",
+        "framework-deep-dives/421_electron_process_model_and_typed_ipc.md",
+        "product-technical-strategy/388_requirements_to_architecture_translation.md"
+      ],
+      "rawOccurrences": 11
+    },
+    {
+      "slug": "unit-test",
+      "term": "Unit test",
+      "lessonsLinkedIn": [
+        "ai-llm-engineering/147_anthropic_api_client_architecture.md",
+        "ai-llm-engineering/157_building_eval_pipeline.md",
+        "architecture-design-patterns-testing/64_solid_principles.md",
+        "architecture-design-patterns-testing/65_hexagonal_architecture.md",
+        "architecture-design-patterns-testing/73_contract_testing_pact.md",
+        "architecture-design-patterns-testing/74_tdd_cycle.md",
+        "framework-deep-dives/402_express_testing_with_jest_and_supertest.md",
+        "framework-deep-dives/406_springboot_service_layer_transactional.md",
+        "fundamentals-tools/124_unit_testing_basics.md",
+        "process-soft-skills/82_estimation.md"
+      ],
+      "rawOccurrences": 32
+    },
+    {
+      "slug": "url-versioning",
+      "term": "URL versioning",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/107_api_design_philosophy.md",
+        "open-source-community/96_semver_changelog_management.md"
+      ],
+      "rawOccurrences": 7
+    },
+    {
+      "slug": "vacuum-freeze",
+      "term": "VACUUM FREEZE",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 3
+    },
+    {
+      "slug": "value-based-pricing",
+      "term": "Value-based pricing",
+      "lessonsLinkedIn": [
+        "contracts-pricing-legal/202_pricing_models.md"
+      ],
+      "rawOccurrences": 4
+    },
+    {
+      "slug": "value-object",
+      "term": "Value object",
+      "lessonsLinkedIn": [
+        "product-technical-strategy/389_domain_modeling_module_boundaries_scaling_path.md"
+      ],
+      "rawOccurrences": 8
+    },
+    {
+      "slug": "webhook-signature-verification",
+      "term": "Webhook signature verification",
+      "lessonsLinkedIn": [
+        "open-source-community/95_publishing_maintaining_oss_tool.md",
+        "product-technical-strategy/393_api_integration_event_driven_decisions.md"
+      ],
+      "rawOccurrences": 7
+    },
+    {
+      "slug": "websocket-handshake",
+      "term": "WebSocket handshake",
+      "lessonsLinkedIn": [
+        "framework-deep-dives/398_express_curried_auth_middleware.md"
+      ],
+      "rawOccurrences": 2
+    },
+    {
+      "slug": "x-forwarded-for",
+      "term": "X-Forwarded-For",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 7
+    },
+    {
+      "slug": "yagni",
+      "term": "YAGNI",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/74_tdd_cycle.md"
+      ],
+      "rawOccurrences": 2
     }
   ]
 }
