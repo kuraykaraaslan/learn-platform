@@ -53,4 +53,4 @@ function useStatusFilter() {
 ## Further Reading
 - TkDodo (React Query maintainer) — "Practical React Query" blog series (tkdodo.eu/blog)
 - Kent C. Dodds — "State Colocation will make your React app faster"
-- TanStack Query and Zustand official documentation
+- [TanStack Query](https://tanstack.com/query/latest) and [Zustand](https://zustand.docs.pmnd.rs/) — server state and client state, kept deliberately separate

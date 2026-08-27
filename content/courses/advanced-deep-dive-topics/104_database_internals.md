@@ -85,5 +85,5 @@ ORDER BY xid_age DESC;
 
 ## Further Reading
 - *The Internals of PostgreSQL* — Hironobu Suzuki (free online): chapter-by-chapter breakdown of heap, indexes, WAL, and MVCC
-- PostgreSQL docs: `pg_stat_user_tables`, `pg_stat_user_indexes` — the two most important monitoring views
+- [PostgreSQL: the statistics collector views](https://www.postgresql.org/docs/current/monitoring-stats.html) — `pg_stat_user_tables` and `pg_stat_user_indexes` are the two you will actually read
 - [*Use The Index, Luke*](https://use-the-index-luke.com) — practical B-tree index design, vendor-neutral

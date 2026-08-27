@@ -103,5 +103,5 @@ export function getMemoryStats() {
 
 ## Further Reading
 - [clinic.js](https://clinicjs.org) — the fastest path to a Node.js flame graph, zero config
-- Chrome DevTools Memory docs — official guide to heap snapshots and allocation timelines
+- [Chrome DevTools: fix memory problems](https://developer.chrome.com/docs/devtools/memory-problems) — the official guide to heap snapshots and allocation timelines
 - *Node.js Design Patterns* — Mario Casciaro: Chapter on performance covers V8 internals, streams, and profiling workflow

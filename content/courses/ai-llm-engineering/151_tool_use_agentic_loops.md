@@ -99,4 +99,4 @@ export async function runAgentLoop(userMessage: string): Promise<string> {
 ## Further Reading
 - Anthropic — "Tool use with Claude" (official documentation, including parallel and sequential tool calling)
 - Anthropic — "Building effective agents" (the agentic loop pattern and when to reach for it)
-- OWASP Top 10 for LLM Applications — LLM06 Excessive Agency, directly relevant to unbounded or unconfirmed tool actions
+- [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — LLM06 Excessive Agency is the entry that maps directly onto unbounded or unconfirmed tool use

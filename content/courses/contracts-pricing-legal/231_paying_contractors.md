@@ -52,4 +52,4 @@ Two habits round out a clean payment process: define upfront whether project-rel
 ## Further Reading
 - Your local accountant or tax advisor — this lesson's specific document types, withholding rates, and retention periods are jurisdiction-dependent and change over time.
 - The Freelancers Union's guides on payment structuring, viewed from the hiring side of a subcontractor relationship.
-- IFAC (International Federation of Accountants) general guidance on documentation standards for deductible business expenses.
+- [IFAC](https://www.ifac.org/) — general guidance on documentation standards for deductible expenses; treat it as background, not as advice for your jurisdiction

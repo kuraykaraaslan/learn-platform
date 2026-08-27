@@ -51,5 +51,5 @@ async function loginSession(email: string, password: string) {
 
 ## Further Reading
 - [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org)
-- OWASP Password Storage Cheat Sheet
+- [OWASP Password Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html) — the current parameters for Argon2id and bcrypt, which move over time
 - Auth0's "Cookies vs Tokens" comparison (vendor blog, but the tradeoff explanation is accurate and vendor-neutral)

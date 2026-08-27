@@ -93,4 +93,4 @@ export async function continueConversation(
 ## Further Reading
 - Anthropic — Messages API reference, particularly the `system` parameter and multi-turn conversation examples
 - Anthropic — "Building with the Messages API" guide on statelessness and context assembly
-- Anthropic SDK documentation for `messages.countTokens()`
+- [Token counting](https://platform.claude.com/docs/en/build-with-claude/token-counting) — count tokens before sending rather than estimating with a third-party tokenizer

@@ -83,4 +83,4 @@ find . -name "*.test.ts" | head -20   # find the test suite
 ## Further Reading
 - *Working Effectively with Legacy Code* — Michael Feathers (the canonical reference on navigating unfamiliar code)
 - *The Art of Reading Code* — Dustin Boswell & Trevor Foucher (practical grep/trace techniques)
-- GitHub: `git log` documentation — `git help log` (master the `--stat`, `--follow`, `--pickaxe-all` flags)
+- [git log](https://git-scm.com/docs/git-log) — master the `--stat`, `--follow` and `--pickaxe-all` flags

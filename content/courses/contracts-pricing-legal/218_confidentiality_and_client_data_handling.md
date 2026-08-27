@@ -53,6 +53,6 @@ compliance requirements with qualified legal counsel.
 - Telling a client "don't worry, this is fully compliant" about a data protection law you haven't actually had reviewed by a lawyer.
 
 ## Further Reading
-- OWASP's guidance on secrets management as a technical starting point for credential handling practices.
+- [OWASP Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html) — a technical starting point for credential handling practices
 - The IAPP's (International Association of Privacy Professionals) introductory resources on data processor obligations.
-- 1Password's and Bitwarden's public documentation on team/shared vault workflows for contractor access.
+- [Bitwarden: organizations and collections](https://bitwarden.com/help/about-organizations/) — shared-vault workflows for contractor access; 1Password documents an equivalent model

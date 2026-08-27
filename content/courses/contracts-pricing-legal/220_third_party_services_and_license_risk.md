@@ -51,4 +51,4 @@ service providers.
 ## Further Reading
 - [The Open Source Initiative's license list and comparison guide](https://opensource.org) for understanding license categories.
 - The Software Freedom Law Center's practical guides on open-source license compliance for commercial products.
-- FOSSA's and Snyk's public documentation on automated license scanning in a CI pipeline.
+- [Snyk documentation](https://docs.snyk.io/) — automated license and dependency scanning in a CI pipeline; FOSSA documents an equivalent workflow

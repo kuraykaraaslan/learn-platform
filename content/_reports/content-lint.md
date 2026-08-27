@@ -2,62 +2,16 @@
 
 `npx tsx scripts/content-lint` — generated file, do not edit by hand.
 
-412 lessons · 274 findings · 4 waived
+412 lessons · 66 findings · 4 waived
 
 | Rule | Findings | Severity | What it means |
 |---|---:|---|---|
-| `sources/no-url` | 172 | warn | A Further Reading section with no followable link is a list of names, not sources. |
 | `code/private-alias` | 45 | warn | Snippets importing @/libs, @/modules, @/stores or @/components reference the first owner's private boilerplate; no reader can resolve them. |
-| `code/unlabeled-fence` | 35 | warn | An unlabeled fence gets no syntax highlighting and cannot be verified by tooling. |
-| `sources/quota-signature` | 15 | warn | Every lesson in a course carrying the same number of Further Reading bullets is a generation artifact, not a research result. |
+| `sources/quota-signature` | 14 | warn | Every lesson in a course carrying the same number of Further Reading bullets is a generation artifact, not a research result. |
 | `sources/bare-domain` | 6 | warn | A bare domain in parentheses looks like a citation but renders as plain grey text — remark-gfm only autolinks bare URLs, not "(zod.dev)". |
 | `links/unlinked-lesson-ref` | 1 | warn | A "#N" that matches a real lesson but carries no reference cue is left as plain text by the markdown pipeline, because "rule #1" and "Top 10 #29" also exist. Parenthesise it as "(#N)" or add a cue ("see #N"). |
 
 ## Findings by rule
-
-### `sources/no-url` — 172
-
-- advanced-deep-dive-topics/110_reading_large_codebases.md — 3 Further Reading bullets, none with a URL
-- advanced-deep-dive-topics/111_production_debugging.md — 3 Further Reading bullets, none with a URL
-- advanced-deep-dive-topics/113_systems_thinking.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/146_when_to_add_ai.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/148_prompts_as_versioned_code.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/150_context_window_conversation_management.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/151_tool_use_agentic_loops.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/152_advanced_rag_chunking_reranking_grounding.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/155_streaming_ai_responses_production.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/156_fallback_graceful_degradation.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/158_observability_logging_ai_features.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/160_ai_data_privacy_regulatory_compliance.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/161_ai_feature_ux_patterns.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/163_mcp_server_auth_error_idempotency.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/164_multi_agent_orchestration_workflow_chaining.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/165_human_in_the_loop_review_gates.md — 3 Further Reading bullets, none with a URL
-- algorithms-concurrency/130_data_structures_algorithms_practice.md — 3 Further Reading bullets, none with a URL
-- architecture-design-patterns-testing/142_capacity_planning_estimation.md — 3 Further Reading bullets, none with a URL
-- business-finance-solo-ops/316_cash_flow_and_runway.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/317_invoicing_and_payment_tracking.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/321_project_accounting_and_costing.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/322_time_tracking_and_effective_rate.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/323_revenue_stream_design.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/324_monthly_financial_close.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/325_finance_dashboard_and_kpis.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/326_business_records_and_file_system.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/327_risk_reserve_and_contingency.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/328_procurement_and_vendor_management.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/329_operations_sops_and_admin_calendar.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/330_pricing_for_margin.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/331_productized_offer_catalog.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/332_paid_audit_as_door_opener.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/333_retainers_vs_maintenance.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/334_retainer_renewal_and_negotiation.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/335_custom_bundle_design.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/336_scoping_fixed_price_projects.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/337_selling_without_a_reference.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/338_growth_focus_and_bets.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/339_growth_risk_and_concentration.md — 2 Further Reading bullets, none with a URL
-- business-finance-solo-ops/340_scaling_with_contractors.md — 2 Further Reading bullets, none with a URL
-- …and 132 more (see content-lint.json)
 
 ### `code/private-alias` — 45
 
@@ -103,52 +57,13 @@
 - saas-business-skills/88_email_deliverability.md:23 — imports a private alias: @/libs/db
 - …and 5 more (see content-lint.json)
 
-### `code/unlabeled-fence` — 35
-
-- advanced-deep-dive-topics/108_monorepo_tooling.md:21 — fence has no language tag
-- advanced-deep-dive-topics/110_reading_large_codebases.md:24 — fence has no language tag
-- advanced-deep-dive-topics/111_production_debugging.md:24 — fence has no language tag
-- advanced-deep-dive-topics/113_systems_thinking.md:61 — fence has no language tag
-- business-finance-solo-ops/316_cash_flow_and_runway.md:25 — fence has no language tag
-- business-finance-solo-ops/317_invoicing_and_payment_tracking.md:24 — fence has no language tag
-- business-finance-solo-ops/317_invoicing_and_payment_tracking.md:35 — fence has no language tag
-- business-finance-solo-ops/318_banking_and_payment_methods.md:24 — fence has no language tag
-- business-finance-solo-ops/318_banking_and_payment_methods.md:43 — fence has no language tag
-- business-finance-solo-ops/319_tax_and_accounting_readiness.md:24 — fence has no language tag
-- business-finance-solo-ops/319_tax_and_accounting_readiness.md:45 — fence has no language tag
-- business-finance-solo-ops/320_expense_and_subscription_control.md:24 — fence has no language tag
-- business-finance-solo-ops/320_expense_and_subscription_control.md:38 — fence has no language tag
-- business-finance-solo-ops/321_project_accounting_and_costing.md:24 — fence has no language tag
-- business-finance-solo-ops/322_time_tracking_and_effective_rate.md:23 — fence has no language tag
-- business-finance-solo-ops/323_revenue_stream_design.md:23 — fence has no language tag
-- business-finance-solo-ops/324_monthly_financial_close.md:22 — fence has no language tag
-- business-finance-solo-ops/325_finance_dashboard_and_kpis.md:24 — fence has no language tag
-- business-finance-solo-ops/326_business_records_and_file_system.md:23 — fence has no language tag
-- business-finance-solo-ops/327_risk_reserve_and_contingency.md:23 — fence has no language tag
-- business-finance-solo-ops/328_procurement_and_vendor_management.md:23 — fence has no language tag
-- business-finance-solo-ops/330_pricing_for_margin.md:23 — fence has no language tag
-- business-finance-solo-ops/334_retainer_renewal_and_negotiation.md:24 — fence has no language tag
-- business-finance-solo-ops/345_pipeline_forecasting.md:23 — fence has no language tag
-- business-finance-solo-ops/348_acquisition_funnel_and_attribution.md:23 — fence has no language tag
-- career-entrepreneurship/114_niche_positioning.md:23 — fence has no language tag
-- career-entrepreneurship/114_niche_positioning.md:30 — fence has no language tag
-- career-entrepreneurship/117_financial_literacy.md:63 — fence has no language tag
-- career-entrepreneurship/118_building_in_public.md:62 — fence has no language tag
-- framework-deep-dives/413_reactnative_file_organization_and_banned_patterns.md:21 — fence has no language tag
-- framework-deep-dives/424_electron_project_structure_and_vite_build_config.md:21 — fence has no language tag
-- fundamentals-tools/119_http_fundamentals.md:20 — fence has no language tag
-- fundamentals-tools/133_networking_fundamentals.md:17 — fence has no language tag
-- observability-deployment/58_dockerfile_best_practices.md:72 — fence has no language tag
-- saas-business-skills/88_email_deliverability.md:143 — fence has no language tag
-
-### `sources/quota-signature` — 15
+### `sources/quota-signature` — 14
 
 - advanced-deep-dive-topics — all 13 lessons have exactly 3 Further Reading bullets (zero variance)
 - ai-llm-engineering — all 21 lessons have exactly 3 Further Reading bullets (zero variance)
 - architecture-design-patterns-testing — all 14 lessons have exactly 3 Further Reading bullets (zero variance)
 - client-acquisition-sales — all 24 lessons have exactly 3 Further Reading bullets (zero variance)
 - client-delivery-pm-handover — all 34 lessons have exactly 3 Further Reading bullets (zero variance)
-- content-seo-personal-brand — all 43 lessons have exactly 3 Further Reading bullets (zero variance)
 - database-advanced — all 12 lessons have exactly 3 Further Reading bullets (zero variance)
 - distributed-systems-api-design — all 18 lessons have exactly 3 Further Reading bullets (zero variance)
 - frontend-performance-scaling — all 8 lessons have exactly 3 Further Reading bullets (zero variance)

@@ -103,4 +103,4 @@ Rule: Find the first frame that is YOUR code. That is where to start.
 ## Further Reading
 - *Site Reliability Engineering* — Google (chapters on incident management and postmortems; free online at sre.google/books)
 - *Debugging: The 9 Indispensable Rules for Finding Even the Most Elusive Software and Hardware Problems* — David Agans
-- Winston documentation on structured logging and correlation IDs — `github.com/winstonjs/winston`
+- [Winston](https://github.com/winstonjs/winston) — structured logging and correlation IDs; the transports section is the part that matters in production

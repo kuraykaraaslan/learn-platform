@@ -63,4 +63,4 @@ it("rejects registration when email already exists", async () => {
 ## Further Reading
 - Kent C. Dodds — "Testing JavaScript" blog and course
 - Martin Fowler — "Mocks Aren't Stubs" (the canonical explanation of test double types)
-- Jest / Vitest official documentation
+- [Vitest](https://vitest.dev/) and [Jest](https://jestjs.io/) — the official docs; the mocking chapters are where the real differences show up

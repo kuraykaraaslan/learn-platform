@@ -62,4 +62,3 @@ The red-flag list did the real work here: "we actually have 15 entity types" is 
 
 ## Further Reading
 - *Managing Successful Projects with PRINCE2* (or any standard scope-management reference): the general discipline of defining boundaries before committing to a fixed number applies directly here.
-- The Offer_Library fixed-price-packages examples show fully worked inclusion/exclusion tables and phase breakdowns worth adapting directly.

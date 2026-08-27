@@ -55,5 +55,5 @@ function dedupeActiveUserIds(events: { userId: string }[]): string[] {
 
 ## Further Reading
 - "Head First Design Patterns" — early chapters, "favor composition over inheritance"
-- MDN — `Map` and `Set` reference
+- [MDN: `Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) — and the `Set` reference alongside it; read the complexity notes, not just the method list
 - Sandi Metz — "Practical Object-Oriented Design" (language-agnostic principles)

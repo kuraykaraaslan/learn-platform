@@ -61,4 +61,4 @@ across "software developer Istanbul / Ankara / Izmir" with no unique content.
 ## Further Reading
 - [Google's guidance on "duplicate content" and "doorway pages"](https://developers.google.com/search) — the primary source on why templated local pages get suppressed
 - *Don't Make Me Think* — Steve Krug: a landing-page-relevant classic on removing friction between a visitor and the action you want them to take
-- Google Business Profile help documentation — for the specific, current rules on truthful local/service-area representation
+- [Google Business Profile guidelines](https://support.google.com/business/answer/3038177) — the current rules on truthful representation, which change more often than the advice about them

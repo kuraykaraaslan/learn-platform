@@ -69,4 +69,4 @@ function classifyEuAiActRisk(input: AiFeatureRiskInput): 'unacceptable' | 'high'
 ## Further Reading
 - EU AI Act (Regulation 2024/1689) — official text and the European Commission's phased enforcement timeline
 - GDPR Article 28 (processor obligations) and Article 17 (right to erasure) — the core mechanics behind the DPA and deletion-cascade requirements
-- Anthropic's Trust Center and Data Processing Addendum — confirm current data-use and sub-processor terms before writing a compliance spec
+- [Anthropic Trust Center](https://trust.anthropic.com/) — confirm current data-use and sub-processor terms directly rather than relying on a summary

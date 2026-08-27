@@ -80,4 +80,4 @@ export async function answerWithGroundingCheck(question: string): Promise<{ answ
 ## Further Reading
 - Pinecone — "Chunking Strategies for LLM Applications" (learn.pinecone.io)
 - Anthropic — "Contextual Retrieval" cookbook/blog post on improving RAG chunk relevance
-- Voyage AI documentation on embedding models and reranking (voyage AI is Anthropic's recommended embedding partner)
+- [Voyage AI documentation](https://docs.voyageai.com/) — embedding models and reranking

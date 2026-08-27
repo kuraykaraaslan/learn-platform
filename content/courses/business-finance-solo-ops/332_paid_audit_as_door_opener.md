@@ -62,4 +62,3 @@ The report structure alone does most of the selling — a client who has just re
 
 ## Further Reading
 - *The Trusted Advisor* — David H. Maister, Charles H. Green, Robert M. Galford: on why a diagnostic-first engagement builds the trust that larger project sales depend on.
-- The Offer_Library audit package examples (Technical Debt, Performance & Security, SEO & Web Vitals, Pre-Launch Readiness) are worth using directly as starting templates.

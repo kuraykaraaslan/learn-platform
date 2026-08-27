@@ -53,5 +53,5 @@ to end the engagement per our agreement's termination terms."
 
 ## Further Reading
 - The Society for Human Resource Management's (SHRM) general guidance on documented performance escalation, adapted to contractor relationships.
-- OWASP's guidance on access lifecycle management as the technical counterpart to offboarding checklists.
+- [OWASP Access Control Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Access_Control_Cheat_Sheet.html) — the technical counterpart to an offboarding checklist
 - Camille Fournier, *The Manager's Path* — on giving direct, written feedback without letting a small issue become a bigger conflict than necessary.

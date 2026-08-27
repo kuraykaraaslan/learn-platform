@@ -97,4 +97,4 @@ export function useAiStream() {
 ## Further Reading
 - Anthropic — "Streaming Messages" (official SDK and API documentation)
 - MDN — "Using readable streams" and "Server-Sent Events" (for the underlying web platform mechanics)
-- Vercel — Next.js documentation on Route Handlers and streaming responses
+- [Next.js Route Handlers](https://nextjs.org/docs/app/api-reference/file-conventions/route) — including streaming responses

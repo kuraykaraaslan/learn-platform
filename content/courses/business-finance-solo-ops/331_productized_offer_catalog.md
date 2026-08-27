@@ -74,4 +74,3 @@ The price band and exclusions are visible before a single call happens — a pro
 
 ## Further Reading
 - *Built to Sell* — John Warrillow: the case for productizing expertise into something that can be sold and delivered repeatably.
-- The Offer_Library fixed-price package examples (Landing Page Pro, Admin Panel MVP, API Integration Package) are worth studying as fully worked templates of this structure.

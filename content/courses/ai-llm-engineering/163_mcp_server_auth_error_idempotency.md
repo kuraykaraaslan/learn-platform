@@ -82,6 +82,6 @@ server.tool(
 - Returning a batch result as if fully successful when some items actually failed, instead of setting `partial: true` with a breakdown
 
 ## Further Reading
-- Model Context Protocol specification — authentication and error handling sections
-- OWASP API Security Top 10 — broken authentication and improper asset management, both directly applicable to MCP server auth design
+- [Model Context Protocol specification](https://modelcontextprotocol.io/specification) — read the authentication and error-handling sections
+- [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/) — broken authentication and improper asset management are the two that apply most directly here
 - Stripe API documentation — "Idempotent Requests," the reference implementation the idempotency-key pattern here is modeled on

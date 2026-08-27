@@ -81,4 +81,4 @@ export async function generateSummaryWithBudget(text: string): Promise<string> {
 ## Further Reading
 - [Anthropic pricing page](https://anthropic.com/pricing) — always verify current rates before writing a cost spec, prices change
 - Anthropic — "Reduce costs" section of the prompt engineering documentation
-- Anthropic — prompt caching documentation, for reducing repeated system-prompt cost on high-volume features
+- [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) — for cutting the cost of a repeated system prompt; note that caching is a prefix match, so one changed byte invalidates the rest

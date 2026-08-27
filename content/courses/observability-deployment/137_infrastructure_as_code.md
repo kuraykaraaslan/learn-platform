@@ -63,4 +63,4 @@ terraform apply tfplan
 ## Further Reading
 - "Terraform: Up & Running" by Yevgeniy Brikman
 - Terraform official documentation — "State" section (understanding what the state file actually is)
-- Pulumi docs, if preferring real programming languages over HCL — same core concepts, different syntax
+- [Pulumi docs](https://www.pulumi.com/docs/) — if you prefer a real programming language over HCL; same core concepts, different syntax

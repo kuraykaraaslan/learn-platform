@@ -88,6 +88,6 @@ export async function classifyWithCache(text: string, traceId: string): Promise<
 - Setting up dashboards without alert thresholds, so a real regression sits unnoticed until a user complains
 
 ## Further Reading
-- Anthropic — usage and rate limit monitoring documentation
+- [Claude API rate limits](https://platform.claude.com/docs/en/api/rate-limits) — the headers to read for usage and remaining quota
 - Google SRE Book — "Monitoring Distributed Systems" (the four golden signals, directly applicable to AI call observability)
 - OWASP — logging guidance on avoiding sensitive data exposure in log sinks, applicable to the "never log content" rule

@@ -53,5 +53,5 @@ git sparse-checkout set packages/api packages/shared
 
 ## Further Reading
 - "Pro Git" by Scott Chacon & Ben Straub — chapter 10 (Git Internals) is the object-model deep dive
-- git-scm.com — `git bisect` and `git rebase --interactive` documentation
+- [git bisect](https://git-scm.com/docs/git-bisect) — and `git rebase --interactive`, the two commands worth learning properly
 - Google's monorepo engineering blog posts (research.google/pubs, "Why Google Stores Billions of Lines of Code in a Single Repository") for the scale-specific tooling context

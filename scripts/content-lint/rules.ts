@@ -200,10 +200,16 @@ export const RULES: Rule[] = [
   {
     id: 'code/unlabeled-fence',
     severity: 'warn',
-    description: 'An unlabeled fence gets no syntax highlighting and cannot be verified by tooling.',
+    description:
+      'An unlabeled fence holding actual code is never syntax-highlighted and, more importantly, is invisible to scripts/verify-code.ts. An unlabeled fence holding a diagram, a checklist or a transcript is fine and is not flagged: rehype-highlight does not auto-detect, so it renders exactly as written.',
     lesson: (file) =>
       file.fences
         .filter((f) => f.lang === '')
+        .filter((f) =>
+          /^\s*(import|export|const|let|function|async|class|interface|type|return|await|SELECT|CREATE|ALTER)\b/m.test(
+            f.code
+          )
+        )
         .map((f) => ({
           rule: 'code/unlabeled-fence',
           severity: 'warn' as const,
@@ -213,22 +219,25 @@ export const RULES: Rule[] = [
         })),
   },
   {
-    id: 'sources/no-url',
+    id: 'sources/unlinked-web-source',
     severity: 'warn',
-    description: 'A Further Reading section with no followable link is a list of names, not sources.',
+    description:
+      'A Further Reading bullet naming a web resource (docs, a spec, an RFC, a cheat sheet, a site) with no URL. A book cited by author and title is a complete reference and is deliberately not flagged — the demand is that a reference be followable, not that it be clickable.',
     lesson: (file) => {
-      const list = bullets(file, 'Further Reading');
-      if (!list.length) return [];
-      return list.some((l) => /https?:\/\//.test(l))
-        ? []
-        : [
-            {
-              rule: 'sources/no-url',
-              severity: 'warn' as const,
-              target: file.target,
-              message: `${list.length} Further Reading bullets, none with a URL`,
-            },
-          ];
+      const WEB =
+        /\b(documentation|docs|cheat ?sheet|spec|specification|RFC\s*\d+|MDN|OWASP|W3C|IETF|changelog|repository|repo|website|web site|online|blog post|API reference)\b/i;
+      // A title in italics or quotes plus an author is a book/paper citation.
+      const CITATION = /\*[^*]{4,}\*|"[^"]{4,}"|—\s*[A-Z][a-z]+\s+[A-Z]/;
+
+      return bullets(file, 'Further Reading')
+        .filter((l) => !/https?:\/\//.test(l))
+        .filter((l) => WEB.test(l) && !CITATION.test(l))
+        .map((l) => ({
+          rule: 'sources/unlinked-web-source',
+          severity: 'warn' as const,
+          target: file.target,
+          message: `names a web resource but gives no URL: ${l.trim().slice(0, 90)}`,
+        }));
     },
   },
   {

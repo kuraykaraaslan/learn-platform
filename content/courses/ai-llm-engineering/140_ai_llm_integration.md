@@ -61,4 +61,4 @@ for (const { question, mustContain } of evalCases) {
 ## Further Reading
 - Anthropic — prompt engineering documentation and "Building effective agents" guide
 - ["Building LLM Applications for Production" by Chip Huyen](https://huyenchip.com)
-- OWASP Top 10 for LLM Applications (a direct LLM-era counterpart to #29)
+- [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — the LLM-era counterpart to the injection risks in (#29)

@@ -65,5 +65,3 @@ Total: __ / 35
 
 ## Further Reading
 - *The Personal MBA* — Josh Kaufman: relevant chapters on positioning and signal-versus-noise apply directly to portfolio curation discipline
-- A UX portfolio curation guide from a design-hiring resource (e.g., Bestfolios or a similar critique archive) — practical models of selective, high-signal portfolios
-- Basecamp's or a comparable studio's public case-study archive — a useful reference model for a small, carefully curated set of deep case studies over a large pile of shallow ones

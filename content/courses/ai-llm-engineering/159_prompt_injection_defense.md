@@ -64,6 +64,6 @@ function flagSuspiciousDocument(text: string): boolean {
 - Trying to "harden" a system prompt against jailbreaks with increasingly emphatic wording instead of narrowing scope and adding validation layers
 
 ## Further Reading
-- OWASP Top 10 for LLM Applications — LLM01 Prompt Injection (the most directly relevant, actively maintained reference)
+- [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — LLM01 Prompt Injection is the entry that applies most directly here
 - [Simon Willison — extensive public writing on prompt injection, coined much of the common terminology](https://simonwillison.net)
 - Anthropic — "Mitigate jailbreaks and prompt injections" (official documentation)

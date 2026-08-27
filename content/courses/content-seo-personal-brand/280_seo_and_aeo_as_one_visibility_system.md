@@ -63,5 +63,5 @@ A second, quieter discipline sits underneath all of this: resisting SEO folklore
 
 ## Further Reading
 - [Google Search Central documentation](https://developers.google.com/search) — the primary source for how Google actually treats crawling, indexing, and helpful content
-- Schema.org and Google's Rich Results documentation — for verifying structured-data claims against the actual spec rather than secondhand advice
+- [Schema.org](https://schema.org/) and [Google's structured data gallery](https://developers.google.com/search/docs/appearance/structured-data/search-gallery) — for verifying structured-data claims against what search engines actually consume
 - Aleyda Solis' SEO FOMO newsletter and Orainti research — a widely respected, current source specifically tracking AI search and AEO developments

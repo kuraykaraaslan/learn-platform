@@ -64,6 +64,6 @@ async function fetchWithRetry(url: string, init: RequestInit, attempts = 3): Pro
 - Assuming any server-side "session" exists without an explicit cookie/token mechanism behind it
 
 ## Further Reading
-- MDN: HTTP overview and methods reference
-- RFC 9110 — HTTP Semantics (the current spec, replacing 7231)
+- [MDN: HTTP overview](https://developer.mozilla.org/en-US/docs/Web/HTTP) — methods, status codes and headers, with the semantics spelled out
+- [RFC 9110 — HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html) — the current specification, replacing RFC 7231
 - Julia Evans — "HTTP: let's GET it on" zine (approachable, still technically precise)

@@ -55,4 +55,3 @@ A client asking "can you also add a new reporting page?" under the Hosting & Upt
 
 ## Further Reading
 - *Recurring Revenue* — Roman Stanek and John Warrillow (concepts drawn from *The Automatic Customer*): the broader business case for recurring revenue structures.
-- The Offer_Library monthly-retainers and maintenance-packages tier examples are directly usable as starting templates for pricing and scope.

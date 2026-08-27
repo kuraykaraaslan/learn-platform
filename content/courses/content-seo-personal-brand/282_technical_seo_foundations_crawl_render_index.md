@@ -63,4 +63,4 @@ Bad:  /page?id=123, /blog/post_2026_final_v3
 ## Further Reading
 - [Google Search Central's "Crawling and Indexing" documentation](https://developers.google.com/search/docs/crawling-indexing) — the authoritative technical reference
 - web.dev's guidance on rendering strategies for JavaScript frameworks — practical detail on SSR/SSG/hydration trade-offs for SEO
-- Next.js's own Metadata and rendering documentation — for confirming framework-specific implementation details stay current
+- [Next.js `generateMetadata`](https://nextjs.org/docs/app/api-reference/functions/generate-metadata) — for confirming framework-specific rendering and metadata behaviour rather than assuming it

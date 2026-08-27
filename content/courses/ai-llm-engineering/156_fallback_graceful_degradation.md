@@ -76,6 +76,6 @@ export async function getSummaryWithFallback(
 - Exposing `err.message` from the Anthropic SDK directly in an HTTP response, leaking internal details to the client
 
 ## Further Reading
-- Anthropic — SDK error handling documentation (`APIError` subclasses and status code mapping)
+- [Claude API errors](https://platform.claude.com/docs/en/api/errors) — HTTP status codes, which are retryable, and the typed SDK exception classes that map to them
 - Google SRE Book — "Handling Overload" chapter, for the general principles behind graceful degradation
-- Anthropic — rate limits documentation, for `retry-after` header semantics
+- [Claude API rate limits](https://platform.claude.com/docs/en/api/rate-limits) — limits by tier, and the `retry-after` header semantics
