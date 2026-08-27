@@ -6,12 +6,12 @@ extracted and typechecked. Generated file: do not edit by hand.
 | | |
 |---|---:|
 | TS/TSX fences | 285 |
-| Clean | 60 |
-| Only uninstalled-module errors (tolerated) | 225 |
+| Clean | 61 |
+| Only uninstalled-module errors (tolerated) | 224 |
 | **Failing** | **0** |
 | Lessons affected | 0 |
 | Fences importing private `@/libs|modules|stores` aliases | 23 |
-| `run` fences: ready / blocked | 3 / 0 |
+| `run` fences: ready / blocked | 4 / 0 |
 
 ## Defects by class
 

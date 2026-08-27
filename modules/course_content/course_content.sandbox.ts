@@ -24,9 +24,6 @@
 // srcdoc's own inline script — because both run in a context with no module
 // loader at all (blob: URL, opaque origin, `script-src 'unsafe-inline'` only).
 
-const MAX_DEPTH = 4;
-const MAX_ENTRIES = 200;
-
 /**
  * console.log argument serializer. Bounded on every axis a snippet could
  * abuse to hang the render: recursion depth, entry count per object/array,
@@ -37,12 +34,22 @@ const MAX_ENTRIES = 200;
  * Written as a normal, independently testable function and re-embedded into
  * the worker verbatim via `.toString()` in buildWorkerSource() below — there
  * is no bundler-aware module loader inside a blob: worker to import this
- * from.
+ * from. Because `.toString()` only captures the function's own source text
+ * (not its closure), the depth/entry caps are literal default-parameter
+ * values, not references to a module-level `const` — a default initializer
+ * that read an outer-scope name would still be `undefined` when this text is
+ * re-evaluated inside the worker's separate global scope.
  */
-export function serializeForSandbox(value: unknown, depth = 0, onPath?: Set<object>): string {
+export function serializeForSandbox(
+  value: unknown,
+  depth = 0,
+  onPath?: Set<object>,
+  maxDepth = 4,
+  maxEntries = 200,
+): string {
   const path = onPath ?? new Set<object>();
 
-  if (depth > MAX_DEPTH) return '…';
+  if (depth > maxDepth) return '…';
   if (value instanceof Error) return value.stack || value.message || String(value);
   if (value === null) return 'null';
   if (value === undefined) return 'undefined';
@@ -54,13 +61,13 @@ export function serializeForSandbox(value: unknown, depth = 0, onPath?: Set<obje
 
   let result: string;
   if (Array.isArray(value)) {
-    const shown = value.slice(0, MAX_ENTRIES).map((v) => serializeForSandbox(v, depth + 1, path));
-    const rest = value.length > MAX_ENTRIES ? `, …+${value.length - MAX_ENTRIES} more` : '';
+    const shown = value.slice(0, maxEntries).map((v) => serializeForSandbox(v, depth + 1, path, maxDepth, maxEntries));
+    const rest = value.length > maxEntries ? `, …+${value.length - maxEntries} more` : '';
     result = `[${shown.join(', ')}${rest}]`;
   } else {
     const entries = Object.entries(value as Record<string, unknown>);
-    const shown = entries.slice(0, MAX_ENTRIES).map(([k, v]) => `${k}: ${serializeForSandbox(v, depth + 1, path)}`);
-    const rest = entries.length > MAX_ENTRIES ? `, …+${entries.length - MAX_ENTRIES} more` : '';
+    const shown = entries.slice(0, maxEntries).map(([k, v]) => `${k}: ${serializeForSandbox(v, depth + 1, path, maxDepth, maxEntries)}`);
+    const rest = entries.length > maxEntries ? `, …+${entries.length - maxEntries} more` : '';
     result = `{ ${shown.join(', ')}${rest} }`;
   }
 
@@ -92,12 +99,25 @@ function makeConsole() {
   return { log: level('log'), info: level('log'), warn: level('warn'), error: level('error'), table: level('table') };
 }
 
+// Grace period between the synchronous call returning and posting 'done' —
+// without it, a snippet that schedules a zero-delay setTimeout or a .then()
+// (the "1 — sync / 6 — sync / 3 — microtask / ... / 2 — macrotask" shape
+// every event-loop-ordering example uses) has its 'done' race ahead of that
+// output, and the parent (course_content.blocks.ts's CodeRunner.tsx) stops
+// listening for messages once 'done' arrives — silently dropping any log
+// line that hadn't posted yet. This doesn't wait for a *long* deliberate
+// timer (there's no bound that would be both safe and useful for that), only
+// for the immediate-tick work every real example in this corpus schedules.
+var DONE_GRACE_MS = 150;
+
 self.onmessage = function (event) {
   var code = event.data && event.data.code;
   try {
     var run = new Function('console', code);
     run(makeConsole());
-    post({ type: 'done' });
+    setTimeout(function () {
+      post({ type: 'done' });
+    }, DONE_GRACE_MS);
   } catch (err) {
     post({ type: 'error', message: err && err.message ? err.message : String(err), stack: (err && err.stack) || '' });
   }

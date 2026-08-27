@@ -20,7 +20,7 @@ The practical skill is: (1) identify every loop, recursive call, and database qu
 - **n in context** — always ask "what is n in production?" — not the test data size, but the realistic worst case per tenant per day
 
 ## Example Code
-```typescript
+```typescript run
 // Analyzing real code patterns from your stack
 
 // ── O(n²) bug: nested loop over tenants and users ────────────────────────────
@@ -30,6 +30,11 @@ The practical skill is: (1) identify every loop, recursive call, and database qu
 // Only the field the complexity argument turns on: every algorithm below is
 // counted in terms of how many times it touches this id.
 type Tenant = { id: string };
+
+// Stands in for your ORM/driver's query client — declared, not called, by the
+// two functions below (this fence runs the O(n) counting demo further down,
+// which needs no real database).
+declare const db: { query(sql: string, params?: unknown[]): Promise<{ rows: { count: string; tenant_id: string; active_count: string }[] }> };
 
 async function getActiveUsersBad(tenants: Tenant[]): Promise<Map<string, number>> {
   const result = new Map<string, number>();
@@ -102,6 +107,21 @@ function analyzePermissions(tenants: Tenant[], usersPerTenant: User[][], permiss
 }
 // Rule: if you have 3 nested loops over collections that grow with user data,
 // look for a way to flatten it using a Map/Set or a single SQL query.
+
+// ── dene ── (getActiveUsers* above needs a real `db` and can't run here —
+// this exercises the two functions that don't)
+const sampleTenants: Tenant[] = [{ id: 't1' }, { id: 't2' }];
+const sampleUsersPerTenant: User[][] = [
+  [{ id: 'u1', name: 'Alice' }, { id: 'u2', name: 'Bob' }],
+];
+const samplePermissions: Permission[] = [
+  { userId: 'u1', action: 'read' },
+  { userId: 'u2', action: 'write' },
+];
+analyzePermissions(sampleTenants, sampleUsersPerTenant, samplePermissions);
+
+const allowed = getUsersWithPermissionBetter(sampleUsersPerTenant[0], samplePermissions, 'read');
+console.log('Users with read permission:', allowed.map((u) => u.name));
 ```
 
 ## When to Use

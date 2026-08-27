@@ -75,6 +75,57 @@ describe('buildWorkerSource', () => {
     expect(source).not.toMatch(/XMLHttpRequest/);
     expect(source).not.toMatch(/document\./);
   });
+
+  it('waits a grace period before posting done, so a zero-delay setTimeout/.then() in the snippet still gets its console.log captured', () => {
+    // Regression: 'done' used to post synchronously right after the initial
+    // call returned, before the parent's message listener could still be
+    // listening for a subsequent async log line — CodeRunner.tsx removes its
+    // listener on 'done'. Executed directly (real timers, real Function) to
+    // prove the ordering, not just check the source text for a setTimeout call.
+    const source = buildWorkerSource();
+    const posted: unknown[] = [];
+    const fakeSelf = {
+      postMessage: (msg: unknown) => posted.push(msg),
+      onmessage: undefined as unknown as (e: { data: { code: string } }) => void,
+    };
+    // eslint-disable-next-line @typescript-eslint/no-implied-eval -- constructing the worker's own global scope is the point of this test
+    new Function('self', source)(fakeSelf);
+    fakeSelf.onmessage({ data: { code: `console.log('sync'); setTimeout(() => console.log('async'), 0);` } });
+
+    // Immediately after the synchronous call returns, 'done' must NOT have
+    // posted yet — only the synchronous log.
+    expect(posted).toEqual([{ type: 'log', level: 'log', parts: ['sync'] }]);
+
+    return new Promise<void>((resolve) => {
+      setTimeout(() => {
+        expect(posted).toEqual([
+          { type: 'log', level: 'log', parts: ['sync'] },
+          { type: 'log', level: 'log', parts: ['async'] },
+          { type: 'done' },
+        ]);
+        resolve();
+      }, 200);
+    });
+  });
+
+  it('logs an object through the real worker without throwing', () => {
+    // Regression: serializeForSandbox's depth/entry caps used to be
+    // module-level `const`s, invisible to `.toString()` — every call inside
+    // the worker (not just ones deep enough to hit the cap) threw
+    // `ReferenceError: MAX_DEPTH is not defined` the instant a snippet
+    // logged anything, since the check runs before the type dispatch.
+    const source = buildWorkerSource();
+    const posted: unknown[] = [];
+    const fakeSelf = {
+      postMessage: (msg: unknown) => posted.push(msg),
+      onmessage: undefined as unknown as (e: { data: { code: string } }) => void,
+    };
+    // eslint-disable-next-line @typescript-eslint/no-implied-eval -- constructing the worker's own global scope is the point of this test
+    new Function('self', source)(fakeSelf);
+    fakeSelf.onmessage({ data: { code: `console.log({ a: 1, b: [1, 2, 3] });` } });
+
+    expect(posted).toEqual([{ type: 'log', level: 'log', parts: ['{ a: 1, b: [1, 2, 3] }'] }]);
+  });
 });
 
 describe('buildSandboxHtml', () => {

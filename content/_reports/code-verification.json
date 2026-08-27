@@ -3,15 +3,15 @@
   "defectsByClass": {},
   "totals": {
     "fences": 285,
-    "clean": 60,
-    "onlyMissingModules": 225,
+    "clean": 61,
+    "onlyMissingModules": 224,
     "failing": 0,
     "lessonsAffected": 0,
     "privateAliasImports": 23
   },
   "runnable": {
-    "total": 3,
-    "ready": 3,
+    "total": 4,
+    "ready": 4,
     "blocked": 0
   },
   "lessons": []
