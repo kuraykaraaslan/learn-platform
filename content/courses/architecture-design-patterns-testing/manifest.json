@@ -8,98 +8,112 @@
       "file": "64_solid_principles.md",
       "title": "SOLID Principles — Practical Application",
       "bracket": "1-3",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 65,
       "file": "65_hexagonal_architecture.md",
       "title": "Hexagonal Architecture (Ports & Adapters)",
       "bracket": "3-7",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 66,
       "file": "66_dependency_injection_container.md",
       "title": "Dependency Injection Container — Build from Scratch",
       "bracket": "1-3",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 67,
       "file": "67_design_patterns.md",
       "title": "Design Patterns — Knowing When NOT to Use Them",
       "bracket": "3-7",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 68,
       "file": "68_big_o_analysis.md",
       "title": "Big O Analysis — Analyzing Your Own Code",
       "bracket": "1-3",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 69,
       "file": "69_tail_call_memoization_lazy_evaluation.md",
       "title": "Tail Call Optimization, Memoization, Lazy Evaluation",
       "bracket": "3-7",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 70,
       "file": "70_compiler_interpreter_fundamentals.md",
       "title": "Compiler/Interpreter Fundamentals — AST, Lexer, Parser",
       "bracket": "7-10",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 71,
       "file": "71_test_pyramid.md",
       "title": "Test Pyramid — Unit, Integration, E2E Ratio and Trade-offs",
       "bracket": "1-3",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 72,
       "file": "72_property_based_testing.md",
       "title": "Property-Based Testing (fast-check, Hypothesis)",
       "bracket": "3-7",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 73,
       "file": "73_contract_testing_pact.md",
       "title": "Contract Testing with Pact",
       "bracket": "3-7",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 74,
       "file": "74_tdd_cycle.md",
       "title": "TDD Cycle — Red/Green/Refactor in Practice",
       "bracket": "1-3",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 132,
       "file": "132_load_stress_testing_basics.md",
       "title": "Load & Stress Testing Basics — k6, Artillery",
       "bracket": "1-3",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 134,
       "file": "134_domain_driven_design.md",
       "title": "Domain-Driven Design — Bounded Contexts, Aggregates, Ubiquitous Language",
       "bracket": "3-7",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     },
     {
       "id": 142,
       "file": "142_capacity_planning_estimation.md",
       "title": "Capacity Planning & Back-of-Envelope Estimation",
       "bracket": "7-10",
-      "category": "Architecture, Design Patterns & Testing"
+      "category": "Architecture, Design Patterns & Testing",
+      "verified": true
     }
   ]
 }

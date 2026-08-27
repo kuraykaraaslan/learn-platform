@@ -8,147 +8,168 @@
       "file": "140_ai_llm_integration.md",
       "title": "AI/LLM Integration & Prompt Engineering — RAG, Vector DBs, Agents, Evals",
       "bracket": "7-10",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 146,
       "file": "146_when_to_add_ai.md",
       "title": "When to Add an AI Feature",
       "bracket": "1-3",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 147,
       "file": "147_anthropic_api_client_architecture.md",
       "title": "The Anthropic API Client Architecture",
       "bracket": "1-3",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 148,
       "file": "148_prompts_as_versioned_code.md",
       "title": "Prompts as Versioned Code",
       "bracket": "1-3",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 149,
       "file": "149_structured_output_schema_validation.md",
       "title": "Structured Output and Schema Validation",
       "bracket": "3-7",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 150,
       "file": "150_context_window_conversation_management.md",
       "title": "Context Window and Conversation Management",
       "bracket": "3-7",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 151,
       "file": "151_tool_use_agentic_loops.md",
       "title": "Tool Use and Agentic Loops",
       "bracket": "7-10",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 152,
       "file": "152_advanced_rag_chunking_reranking_grounding.md",
       "title": "Advanced RAG: Chunking, Reranking, and Grounding Verification",
       "bracket": "7-10",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 153,
       "file": "153_model_selection_strategy.md",
       "title": "Model Selection Strategy",
       "bracket": "3-7",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 154,
       "file": "154_token_budget_cost_engineering.md",
       "title": "Token Budget and Cost Engineering",
       "bracket": "3-7",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 155,
       "file": "155_streaming_ai_responses_production.md",
       "title": "Streaming AI Responses in Production",
       "bracket": "3-7",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 156,
       "file": "156_fallback_graceful_degradation.md",
       "title": "Fallback and Graceful Degradation for AI Calls",
       "bracket": "3-7",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 157,
       "file": "157_building_eval_pipeline.md",
       "title": "Building an Eval Pipeline",
       "bracket": "7-10",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 158,
       "file": "158_observability_logging_ai_features.md",
       "title": "Observability and Logging for AI Features",
       "bracket": "7-10",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 159,
       "file": "159_prompt_injection_defense.md",
       "title": "Prompt Injection Defense and Untrusted Content Handling",
       "bracket": "7-10",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 160,
       "file": "160_ai_data_privacy_regulatory_compliance.md",
       "title": "AI Data Privacy and Regulatory Compliance",
       "bracket": "7-10",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 161,
       "file": "161_ai_feature_ux_patterns.md",
       "title": "AI Feature UX Patterns",
       "bracket": "1-3",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 162,
       "file": "162_mcp_server_architecture_tool_design.md",
       "title": "MCP Server Architecture and Tool Design",
       "bracket": "3-7",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 163,
       "file": "163_mcp_server_auth_error_idempotency.md",
       "title": "MCP Server Auth, Errors, and Idempotency",
       "bracket": "3-7",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 164,
       "file": "164_multi_agent_orchestration_workflow_chaining.md",
       "title": "Multi-Agent Orchestration and Workflow Chaining",
       "bracket": "7-10",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     },
     {
       "id": 165,
       "file": "165_human_in_the_loop_review_gates.md",
       "title": "Human-in-the-Loop Review Gates and Structured Verdicts",
       "bracket": "3-7",
-      "category": "AI & LLM Engineering"
+      "category": "AI & LLM Engineering",
+      "verified": true
     }
   ]
 }

@@ -8,28 +8,32 @@
       "file": "94_contributing_to_open_source.md",
       "title": "Contributing to Popular Open Source Projects",
       "bracket": "1-3",
-      "category": "Open Source & Community"
+      "category": "Open Source & Community",
+      "verified": true
     },
     {
       "id": 95,
       "file": "95_publishing_maintaining_oss_tool.md",
       "title": "Publishing and Maintaining Your Own Open Source Tool",
       "bracket": "7-10",
-      "category": "Open Source & Community"
+      "category": "Open Source & Community",
+      "verified": true
     },
     {
       "id": 96,
       "file": "96_semver_changelog_management.md",
       "title": "Semver and Changelog Management",
       "bracket": "1-3",
-      "category": "Open Source & Community"
+      "category": "Open Source & Community",
+      "verified": true
     },
     {
       "id": 97,
       "file": "97_publishing_npm_github_packages.md",
       "title": "Publishing npm / GitHub Packages",
       "bracket": "1-3",
-      "category": "Open Source & Community"
+      "category": "Open Source & Community",
+      "verified": true
     },
     {
       "id": 98,
@@ -43,7 +47,8 @@
       "file": "99_conference_meetup_speaking.md",
       "title": "Conference / Meetup Speaking",
       "bracket": "7-10",
-      "category": "Open Source & Community"
+      "category": "Open Source & Community",
+      "verified": true
     },
     {
       "id": 100,

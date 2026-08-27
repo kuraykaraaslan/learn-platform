@@ -8,70 +8,80 @@
       "file": "75_writing_adrs.md",
       "title": "Writing ADRs (Architecture Decision Records)",
       "bracket": "3-7",
-      "category": "Process & Soft Skills"
+      "category": "Process & Soft Skills",
+      "verified": true
     },
     {
       "id": 76,
       "file": "76_rfc_process.md",
       "title": "RFC (Request for Comments) Process Management",
       "bracket": "3-7",
-      "category": "Process & Soft Skills"
+      "category": "Process & Soft Skills",
+      "verified": true
     },
     {
       "id": 77,
       "file": "77_technical_debt_prioritization.md",
       "title": "Technical Debt Prioritization — Risk × Cost Matrix",
       "bracket": "3-7",
-      "category": "Process & Soft Skills"
+      "category": "Process & Soft Skills",
+      "verified": true
     },
     {
       "id": 78,
       "file": "78_code_review_culture.md",
       "title": "Code Review Culture — Critique Code, Not People",
       "bracket": "1-3",
-      "category": "Process & Soft Skills"
+      "category": "Process & Soft Skills",
+      "verified": true
     },
     {
       "id": 79,
       "file": "79_blameless_post_mortem.md",
       "title": "Blameless Post-Mortem — Writing and Running One",
       "bracket": "3-7",
-      "category": "Process & Soft Skills"
+      "category": "Process & Soft Skills",
+      "verified": true
     },
     {
       "id": 80,
       "file": "80_mentorship.md",
       "title": "Mentorship — Pair Programming Structure, Junior Guidance",
       "bracket": "3-7",
-      "category": "Process & Soft Skills"
+      "category": "Process & Soft Skills",
+      "verified": true
     },
     {
       "id": 81,
       "file": "81_explaining_technical_concepts.md",
       "title": "Explaining Technical Concepts to Non-Technical Stakeholders",
       "bracket": "1-3",
-      "category": "Process & Soft Skills"
+      "category": "Process & Soft Skills",
+      "verified": true
     },
     {
       "id": 82,
       "file": "82_estimation.md",
       "title": "Estimation — Confidence Intervals Instead of Story Points",
       "bracket": "1-3",
-      "category": "Process & Soft Skills"
+      "category": "Process & Soft Skills",
+      "verified": true
     },
     {
       "id": 83,
       "file": "83_scope_creep_management.md",
       "title": "Scope Creep Management — Saying No with Alternatives",
       "bracket": "3-7",
-      "category": "Process & Soft Skills"
+      "category": "Process & Soft Skills",
+      "verified": true
     },
     {
       "id": 84,
       "file": "84_technical_interview_design.md",
       "title": "Technical Interview Design — Asking and Evaluating",
       "bracket": "7-10",
-      "category": "Process & Soft Skills"
+      "category": "Process & Soft Skills",
+      "verified": true
     },
     {
       "id": 85,
@@ -85,14 +95,16 @@
       "file": "144_engineering_leadership.md",
       "title": "Engineering Leadership — Team Management, 1:1s, Performance Reviews",
       "bracket": "7-10",
-      "category": "Process & Soft Skills"
+      "category": "Process & Soft Skills",
+      "verified": true
     },
     {
       "id": 145,
       "file": "145_build_vs_buy_vendor_evaluation.md",
       "title": "Build vs Buy / Vendor Evaluation Decisions",
       "bracket": "7-10",
-      "category": "Process & Soft Skills"
+      "category": "Process & Soft Skills",
+      "verified": true
     }
   ]
 }

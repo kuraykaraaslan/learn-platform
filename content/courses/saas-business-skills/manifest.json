@@ -8,56 +8,64 @@
       "file": "86_saas_metrics.md",
       "title": "SaaS Metrics — MRR, Churn, LTV, CAC",
       "bracket": "3-7",
-      "category": "SaaS & Business Skills"
+      "category": "SaaS & Business Skills",
+      "verified": true
     },
     {
       "id": 87,
       "file": "87_payment_integration_depth.md",
       "title": "Payment Integration Depth — Webhook Idempotency, Dispute Handling",
       "bracket": "3-7",
-      "category": "SaaS & Business Skills"
+      "category": "SaaS & Business Skills",
+      "verified": true
     },
     {
       "id": 88,
       "file": "88_email_deliverability.md",
       "title": "Email Deliverability — SPF, DKIM, DMARC, Bounce Management",
       "bracket": "3-7",
-      "category": "SaaS & Business Skills"
+      "category": "SaaS & Business Skills",
+      "verified": true
     },
     {
       "id": 89,
       "file": "89_internationalization.md",
       "title": "Internationalization (i18n) — Timezone, Currency, RTL Support",
       "bracket": "3-7",
-      "category": "SaaS & Business Skills"
+      "category": "SaaS & Business Skills",
+      "verified": true
     },
     {
       "id": 90,
       "file": "90_accessibility.md",
       "title": "Accessibility (a11y) — WCAG 2.1 AA Compliance",
       "bracket": "1-3",
-      "category": "SaaS & Business Skills"
+      "category": "SaaS & Business Skills",
+      "verified": true
     },
     {
       "id": 91,
       "file": "91_mobile_first_api_design.md",
       "title": "Mobile-First API Design — Bandwidth, Offline-First Thinking",
       "bracket": "3-7",
-      "category": "SaaS & Business Skills"
+      "category": "SaaS & Business Skills",
+      "verified": true
     },
     {
       "id": 92,
       "file": "92_analytics_integration.md",
       "title": "Analytics Integration — Event Design, Funnel Analysis",
       "bracket": "1-3",
-      "category": "SaaS & Business Skills"
+      "category": "SaaS & Business Skills",
+      "verified": true
     },
     {
       "id": 93,
       "file": "93_ab_test_infrastructure.md",
       "title": "A/B Test Infrastructure — Statistical Significance",
       "bracket": "3-7",
-      "category": "SaaS & Business Skills"
+      "category": "SaaS & Business Skills",
+      "verified": true
     }
   ]
 }

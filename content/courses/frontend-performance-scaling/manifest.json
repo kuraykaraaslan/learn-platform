@@ -8,56 +8,64 @@
       "file": "22_http2_multiplexing.md",
       "title": "HTTP/2 Multiplexing and Effect on Next.js",
       "bracket": "3-7",
-      "category": "Frontend Performance & Service Scaling"
+      "category": "Frontend Performance & Service Scaling",
+      "verified": true
     },
     {
       "id": 23,
       "file": "23_react_server_components.md",
       "title": "React Server Components — When Client vs Server",
       "bracket": "3-7",
-      "category": "Frontend Performance & Service Scaling"
+      "category": "Frontend Performance & Service Scaling",
+      "verified": true
     },
     {
       "id": 24,
       "file": "24_bundle_size_optimization.md",
       "title": "Bundle Size Optimization — Code Splitting, Tree Shaking",
       "bracket": "3-7",
-      "category": "Frontend Performance & Service Scaling"
+      "category": "Frontend Performance & Service Scaling",
+      "verified": true
     },
     {
       "id": 25,
       "file": "25_web_vitals.md",
       "title": "Web Vitals (LCP, CLS, INP) — Real User Data Improvement",
       "bracket": "1-3",
-      "category": "Frontend Performance & Service Scaling"
+      "category": "Frontend Performance & Service Scaling",
+      "verified": true
     },
     {
       "id": 26,
       "file": "26_streaming_ssr_suspense.md",
       "title": "Streaming SSR and Suspense Boundaries",
       "bracket": "3-7",
-      "category": "Frontend Performance & Service Scaling"
+      "category": "Frontend Performance & Service Scaling",
+      "verified": true
     },
     {
       "id": 27,
       "file": "27_job_queue_bullmq.md",
       "title": "Job Queue Design with BullMQ (Priority, Concurrency, Backpressure)",
       "bracket": "3-7",
-      "category": "Frontend Performance & Service Scaling"
+      "category": "Frontend Performance & Service Scaling",
+      "verified": true
     },
     {
       "id": 28,
       "file": "28_horizontal_scaling_stateless_design.md",
       "title": "Horizontal Scaling — Stateless Service Design",
       "bracket": "3-7",
-      "category": "Frontend Performance & Service Scaling"
+      "category": "Frontend Performance & Service Scaling",
+      "verified": true
     },
     {
       "id": 138,
       "file": "138_frontend_state_management.md",
       "title": "Frontend State Management Architecture — Client vs Server State",
       "bracket": "3-7",
-      "category": "Frontend Performance & Service Scaling"
+      "category": "Frontend Performance & Service Scaling",
+      "verified": true
     }
   ]
 }

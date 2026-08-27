@@ -15,84 +15,96 @@
       "file": "54_distributed_tracing.md",
       "title": "Distributed Tracing — Following a Request Across Services",
       "bracket": "3-7",
-      "category": "Observability & Deployment"
+      "category": "Observability & Deployment",
+      "verified": true
     },
     {
       "id": 55,
       "file": "55_slo_sli_sla.md",
       "title": "SLO/SLI/SLA — Error Budget Calculation",
       "bracket": "3-7",
-      "category": "Observability & Deployment"
+      "category": "Observability & Deployment",
+      "verified": true
     },
     {
       "id": 56,
       "file": "56_canary_deployment_feature_flags.md",
       "title": "Canary Deployment and Feature Flag Integration",
       "bracket": "3-7",
-      "category": "Observability & Deployment"
+      "category": "Observability & Deployment",
+      "verified": true
     },
     {
       "id": 57,
       "file": "57_blue_green_vs_rolling_deployment.md",
       "title": "Blue-Green vs Rolling Deployment",
       "bracket": "3-7",
-      "category": "Observability & Deployment"
+      "category": "Observability & Deployment",
+      "verified": true
     },
     {
       "id": 58,
       "file": "58_dockerfile_best_practices.md",
       "title": "Dockerfile Best Practices — Multi-Stage Build, Minimal Image",
       "bracket": "1-3",
-      "category": "Observability & Deployment"
+      "category": "Observability & Deployment",
+      "verified": true
     },
     {
       "id": 59,
       "file": "59_kubernetes_fundamentals.md",
       "title": "Kubernetes Fundamentals — Pod, Service, Ingress, HPA",
       "bracket": "3-7",
-      "category": "Observability & Deployment"
+      "category": "Observability & Deployment",
+      "verified": true
     },
     {
       "id": 60,
       "file": "60_github_actions_ci_pipeline.md",
       "title": "GitHub Actions CI Pipeline — Lint, Test, Build, Deploy Automation",
       "bracket": "1-3",
-      "category": "Observability & Deployment"
+      "category": "Observability & Deployment",
+      "verified": true
     },
     {
       "id": 61,
       "file": "61_alerting_design.md",
       "title": "Alerting Design — Avoiding Alert Fatigue",
       "bracket": "3-7",
-      "category": "Observability & Deployment"
+      "category": "Observability & Deployment",
+      "verified": true
     },
     {
       "id": 62,
       "file": "62_log_aggregation.md",
       "title": "Log Aggregation — Structured Logging + ELK or Loki",
       "bracket": "3-7",
-      "category": "Observability & Deployment"
+      "category": "Observability & Deployment",
+      "verified": true
     },
     {
       "id": 63,
       "file": "63_chaos_engineering.md",
       "title": "Chaos Engineering Fundamentals — Failure Injection",
       "bracket": "7-10",
-      "category": "Observability & Deployment"
+      "category": "Observability & Deployment",
+      "verified": true
     },
     {
       "id": 137,
       "file": "137_infrastructure_as_code.md",
       "title": "Infrastructure as Code — Terraform / Pulumi",
       "bracket": "3-7",
-      "category": "Observability & Deployment"
+      "category": "Observability & Deployment",
+      "verified": true
     },
     {
       "id": 141,
       "file": "141_cloud_architecture_well_architected.md",
       "title": "Cloud Architecture & Well-Architected Patterns — Multi-Region, FinOps",
       "bracket": "7-10",
-      "category": "Observability & Deployment"
+      "category": "Observability & Deployment",
+      "verified": true
     }
   ]
 }

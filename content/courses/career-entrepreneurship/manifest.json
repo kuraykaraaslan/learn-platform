@@ -15,28 +15,32 @@
       "file": "115_productizing_services.md",
       "title": "Productizing Services — From Hourly to Packaged Offerings",
       "bracket": "7-10",
-      "category": "Career & Entrepreneurship"
+      "category": "Career & Entrepreneurship",
+      "verified": true
     },
     {
       "id": 116,
       "file": "116_legal_literacy.md",
       "title": "Legal Literacy for Software Contracts",
       "bracket": "3-7",
-      "category": "Career & Entrepreneurship"
+      "category": "Career & Entrepreneurship",
+      "verified": true
     },
     {
       "id": 117,
       "file": "117_financial_literacy.md",
       "title": "Financial Literacy for Freelancers",
       "bracket": "1-3",
-      "category": "Career & Entrepreneurship"
+      "category": "Career & Entrepreneurship",
+      "verified": true
     },
     {
       "id": 118,
       "file": "118_building_in_public.md",
       "title": "Building in Public — Social Proof Without a Portfolio",
       "bracket": "3-7",
-      "category": "Career & Entrepreneurship"
+      "category": "Career & Entrepreneurship",
+      "verified": true
     }
   ]
 }

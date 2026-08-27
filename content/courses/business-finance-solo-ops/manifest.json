@@ -3,45 +3,324 @@
   "title": "Business Growth & Finance",
   "description": "Invoicing, cash flow, retainers, productized offers, and growth experiments — running the business side of independent engineering work.",
   "items": [
-    { "id": 316, "file": "316_cash_flow_and_runway.md", "title": "Cash Flow and Runway: Why Profit Isn't Cash", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 317, "file": "317_invoicing_and_payment_tracking.md", "title": "Invoicing and Payment Tracking Systems", "bracket": "1-3", "category": "Business Growth & Finance" },
-    { "id": 318, "file": "318_banking_and_payment_methods.md", "title": "Banking, Payment Methods, and Currency Reconciliation", "bracket": "1-3", "category": "Business Growth & Finance" },
-    { "id": 319, "file": "319_tax_and_accounting_readiness.md", "title": "Tax and Accounting Readiness for International Freelancers", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 320, "file": "320_expense_and_subscription_control.md", "title": "Expense and Subscription Cost Control", "bracket": "1-3", "category": "Business Growth & Finance" },
-    { "id": 321, "file": "321_project_accounting_and_costing.md", "title": "Project-Level Accounting: Is This Client Actually Profitable?", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 322, "file": "322_time_tracking_and_effective_rate.md", "title": "Time Tracking and Your Real Effective Hourly Rate", "bracket": "1-3", "category": "Business Growth & Finance" },
-    { "id": 323, "file": "323_revenue_stream_design.md", "title": "Classifying and Balancing Your Revenue Streams", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 324, "file": "324_monthly_financial_close.md", "title": "The Monthly Financial Close", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 325, "file": "325_finance_dashboard_and_kpis.md", "title": "Building a Finance Dashboard: Core KPIs for Solo Businesses", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 326, "file": "326_business_records_and_file_system.md", "title": "Business Records and File Organization for Accountant Handoff", "bracket": "1-3", "category": "Business Growth & Finance" },
-    { "id": 327, "file": "327_risk_reserve_and_contingency.md", "title": "Building Financial Reserves and a Contingency Plan", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 328, "file": "328_procurement_and_vendor_management.md", "title": "Vendor and Procurement Decisions for a Solo Shop", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 329, "file": "329_operations_sops_and_admin_calendar.md", "title": "Turning Recurring Admin Work into SOPs", "bracket": "1-3", "category": "Business Growth & Finance" },
-    { "id": 330, "file": "330_pricing_for_margin.md", "title": "Pricing for Margin, Not Just Revenue", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 331, "file": "331_productized_offer_catalog.md", "title": "Building a Productized Offer Catalog with Real Price Bands", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 332, "file": "332_paid_audit_as_door_opener.md", "title": "The Paid Audit as a Sales and Risk-Reduction Tool", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 333, "file": "333_retainers_vs_maintenance.md", "title": "Retainers vs. Maintenance: Designing Recurring Revenue Tiers", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 334, "file": "334_retainer_renewal_and_negotiation.md", "title": "Retainer Renewal, Renegotiation, and Graceful Cancellation", "bracket": "7-10", "category": "Business Growth & Finance" },
-    { "id": 335, "file": "335_custom_bundle_design.md", "title": "Designing Custom Service Bundles for Strategic Accounts", "bracket": "7-10", "category": "Business Growth & Finance" },
-    { "id": 336, "file": "336_scoping_fixed_price_projects.md", "title": "Scoping Fixed-Price Projects Without Scope Creep", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 337, "file": "337_selling_without_a_reference.md", "title": "Selling Into a New Vertical Without a Case Study", "bracket": "7-10", "category": "Business Growth & Finance" },
-    { "id": 338, "file": "338_growth_focus_and_bets.md", "title": "Choosing One Growth Focus Instead of Five", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 339, "file": "339_growth_risk_and_concentration.md", "title": "Growth Risk Management: Client Concentration and Capacity", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 340, "file": "340_scaling_with_contractors.md", "title": "Scaling with Contractors Without Losing Quality", "bracket": "7-10", "category": "Business Growth & Finance" },
-    { "id": 341, "file": "341_strategic_repositioning.md", "title": "Repositioning Your Business for Higher-Value Work", "bracket": "7-10", "category": "Business Growth & Finance" },
-    { "id": 342, "file": "342_account_health_management.md", "title": "Managing Account Health: Green, Yellow, Red", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 343, "file": "343_expansion_signals_and_upsell.md", "title": "Reading Expansion Signals: When to Upsell", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 344, "file": "344_referral_and_partner_channels.md", "title": "Building a Referral and Partner Channel", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 345, "file": "345_pipeline_forecasting.md", "title": "Pipeline Forecasting for Solo Operators", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 346, "file": "346_case_study_and_proof_loop.md", "title": "Turning Delivered Work into Proof: The Case Study Loop", "bracket": "1-3", "category": "Business Growth & Finance" },
-    { "id": 347, "file": "347_growth_model_and_north_star.md", "title": "Choosing a Growth Model and North Star Metric", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 348, "file": "348_acquisition_funnel_and_attribution.md", "title": "Diagnosing Your Acquisition Funnel", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 349, "file": "349_growth_experiment_design.md", "title": "Designing Growth Experiments That Produce Real Signal", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 350, "file": "350_decision_rules_and_scaling.md", "title": "Deciding When to Scale, Pause, or Kill a Growth Tactic", "bracket": "7-10", "category": "Business Growth & Finance" },
-    { "id": 351, "file": "351_weekly_monthly_business_review.md", "title": "Running a Weekly and Monthly Business Review", "bracket": "1-3", "category": "Business Growth & Finance" },
-    { "id": 352, "file": "352_ethical_growth_guardrails.md", "title": "Ethical Growth: What Not to Do", "bracket": "0-1", "category": "Business Growth & Finance" },
-    { "id": 353, "file": "353_business_continuity_planning.md", "title": "Business Continuity Planning for a Solo Operator", "bracket": "3-7", "category": "Business Growth & Finance" },
-    { "id": 354, "file": "354_non_negotiable_operating_rules.md", "title": "The Solo Operator's Non-Negotiable Rules: Capacity, Payment, Decisions", "bracket": "0-1", "category": "Business Growth & Finance" },
-    { "id": 355, "file": "355_burnout_as_a_business_risk.md", "title": "Recognizing and Responding to Burnout as a Business Risk", "bracket": "3-7", "category": "Business Growth & Finance" }
+    {
+      "id": 316,
+      "file": "316_cash_flow_and_runway.md",
+      "title": "Cash Flow and Runway: Why Profit Isn't Cash",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 317,
+      "file": "317_invoicing_and_payment_tracking.md",
+      "title": "Invoicing and Payment Tracking Systems",
+      "bracket": "1-3",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 318,
+      "file": "318_banking_and_payment_methods.md",
+      "title": "Banking, Payment Methods, and Currency Reconciliation",
+      "bracket": "1-3",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 319,
+      "file": "319_tax_and_accounting_readiness.md",
+      "title": "Tax and Accounting Readiness for International Freelancers",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance"
+    },
+    {
+      "id": 320,
+      "file": "320_expense_and_subscription_control.md",
+      "title": "Expense and Subscription Cost Control",
+      "bracket": "1-3",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 321,
+      "file": "321_project_accounting_and_costing.md",
+      "title": "Project-Level Accounting: Is This Client Actually Profitable?",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 322,
+      "file": "322_time_tracking_and_effective_rate.md",
+      "title": "Time Tracking and Your Real Effective Hourly Rate",
+      "bracket": "1-3",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 323,
+      "file": "323_revenue_stream_design.md",
+      "title": "Classifying and Balancing Your Revenue Streams",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 324,
+      "file": "324_monthly_financial_close.md",
+      "title": "The Monthly Financial Close",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 325,
+      "file": "325_finance_dashboard_and_kpis.md",
+      "title": "Building a Finance Dashboard: Core KPIs for Solo Businesses",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 326,
+      "file": "326_business_records_and_file_system.md",
+      "title": "Business Records and File Organization for Accountant Handoff",
+      "bracket": "1-3",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 327,
+      "file": "327_risk_reserve_and_contingency.md",
+      "title": "Building Financial Reserves and a Contingency Plan",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 328,
+      "file": "328_procurement_and_vendor_management.md",
+      "title": "Vendor and Procurement Decisions for a Solo Shop",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 329,
+      "file": "329_operations_sops_and_admin_calendar.md",
+      "title": "Turning Recurring Admin Work into SOPs",
+      "bracket": "1-3",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 330,
+      "file": "330_pricing_for_margin.md",
+      "title": "Pricing for Margin, Not Just Revenue",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 331,
+      "file": "331_productized_offer_catalog.md",
+      "title": "Building a Productized Offer Catalog with Real Price Bands",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 332,
+      "file": "332_paid_audit_as_door_opener.md",
+      "title": "The Paid Audit as a Sales and Risk-Reduction Tool",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 333,
+      "file": "333_retainers_vs_maintenance.md",
+      "title": "Retainers vs. Maintenance: Designing Recurring Revenue Tiers",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 334,
+      "file": "334_retainer_renewal_and_negotiation.md",
+      "title": "Retainer Renewal, Renegotiation, and Graceful Cancellation",
+      "bracket": "7-10",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 335,
+      "file": "335_custom_bundle_design.md",
+      "title": "Designing Custom Service Bundles for Strategic Accounts",
+      "bracket": "7-10",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 336,
+      "file": "336_scoping_fixed_price_projects.md",
+      "title": "Scoping Fixed-Price Projects Without Scope Creep",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 337,
+      "file": "337_selling_without_a_reference.md",
+      "title": "Selling Into a New Vertical Without a Case Study",
+      "bracket": "7-10",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 338,
+      "file": "338_growth_focus_and_bets.md",
+      "title": "Choosing One Growth Focus Instead of Five",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 339,
+      "file": "339_growth_risk_and_concentration.md",
+      "title": "Growth Risk Management: Client Concentration and Capacity",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 340,
+      "file": "340_scaling_with_contractors.md",
+      "title": "Scaling with Contractors Without Losing Quality",
+      "bracket": "7-10",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 341,
+      "file": "341_strategic_repositioning.md",
+      "title": "Repositioning Your Business for Higher-Value Work",
+      "bracket": "7-10",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 342,
+      "file": "342_account_health_management.md",
+      "title": "Managing Account Health: Green, Yellow, Red",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 343,
+      "file": "343_expansion_signals_and_upsell.md",
+      "title": "Reading Expansion Signals: When to Upsell",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 344,
+      "file": "344_referral_and_partner_channels.md",
+      "title": "Building a Referral and Partner Channel",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 345,
+      "file": "345_pipeline_forecasting.md",
+      "title": "Pipeline Forecasting for Solo Operators",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 346,
+      "file": "346_case_study_and_proof_loop.md",
+      "title": "Turning Delivered Work into Proof: The Case Study Loop",
+      "bracket": "1-3",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 347,
+      "file": "347_growth_model_and_north_star.md",
+      "title": "Choosing a Growth Model and North Star Metric",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 348,
+      "file": "348_acquisition_funnel_and_attribution.md",
+      "title": "Diagnosing Your Acquisition Funnel",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 349,
+      "file": "349_growth_experiment_design.md",
+      "title": "Designing Growth Experiments That Produce Real Signal",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 350,
+      "file": "350_decision_rules_and_scaling.md",
+      "title": "Deciding When to Scale, Pause, or Kill a Growth Tactic",
+      "bracket": "7-10",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 351,
+      "file": "351_weekly_monthly_business_review.md",
+      "title": "Running a Weekly and Monthly Business Review",
+      "bracket": "1-3",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 352,
+      "file": "352_ethical_growth_guardrails.md",
+      "title": "Ethical Growth: What Not to Do",
+      "bracket": "0-1",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 353,
+      "file": "353_business_continuity_planning.md",
+      "title": "Business Continuity Planning for a Solo Operator",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 354,
+      "file": "354_non_negotiable_operating_rules.md",
+      "title": "The Solo Operator's Non-Negotiable Rules: Capacity, Payment, Decisions",
+      "bracket": "0-1",
+      "category": "Business Growth & Finance",
+      "verified": true
+    },
+    {
+      "id": 355,
+      "file": "355_burnout_as_a_business_risk.md",
+      "title": "Recognizing and Responding to Burnout as a Business Risk",
+      "bracket": "3-7",
+      "category": "Business Growth & Finance",
+      "verified": true
+    }
   ]
 }

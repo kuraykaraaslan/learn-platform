@@ -8,84 +8,96 @@
       "file": "119_http_fundamentals.md",
       "title": "HTTP Fundamentals — Methods, Status Codes, Statelessness",
       "bracket": "0-1",
-      "category": "Fundamentals"
+      "category": "Fundamentals",
+      "verified": true
     },
     {
       "id": 120,
       "file": "120_git_fundamentals.md",
       "title": "Git Fundamentals — Branching, Merge vs Rebase, Resolving Conflicts",
       "bracket": "0-1",
-      "category": "Fundamentals"
+      "category": "Fundamentals",
+      "verified": true
     },
     {
       "id": 121,
       "file": "121_sql_fundamentals.md",
       "title": "SQL Fundamentals — Joins, Normalization, Core CRUD",
       "bracket": "0-1",
-      "category": "Fundamentals"
+      "category": "Fundamentals",
+      "verified": true
     },
     {
       "id": 122,
       "file": "122_oop_data_structures_basics.md",
       "title": "OOP & Basic Data Structures",
       "bracket": "0-1",
-      "category": "Fundamentals"
+      "category": "Fundamentals",
+      "verified": true
     },
     {
       "id": 123,
       "file": "123_debugging_fundamentals.md",
       "title": "Debugging Fundamentals",
       "bracket": "0-1",
-      "category": "Fundamentals"
+      "category": "Fundamentals",
+      "verified": true
     },
     {
       "id": 124,
       "file": "124_unit_testing_basics.md",
       "title": "Writing Your First Unit Tests — Assertions & Mocking Basics",
       "bracket": "0-1",
-      "category": "Fundamentals"
+      "category": "Fundamentals",
+      "verified": true
     },
     {
       "id": 125,
       "file": "125_rest_api_basics.md",
       "title": "REST API Basics — Resource & CRUD Design",
       "bracket": "0-1",
-      "category": "Fundamentals"
+      "category": "Fundamentals",
+      "verified": true
     },
     {
       "id": 126,
       "file": "126_cli_dev_environment_basics.md",
       "title": "Command Line & Development Environment Basics",
       "bracket": "0-1",
-      "category": "Fundamentals"
+      "category": "Fundamentals",
+      "verified": true
     },
     {
       "id": 127,
       "file": "127_auth_basics.md",
       "title": "Authentication Basics — Sessions vs Tokens, Password Hashing",
       "bracket": "0-1",
-      "category": "Fundamentals"
+      "category": "Fundamentals",
+      "verified": true
     },
     {
       "id": 128,
       "file": "128_clean_code_basics.md",
       "title": "Clean Code Basics — Naming, Function Size, Readability",
       "bracket": "0-1",
-      "category": "Fundamentals"
+      "category": "Fundamentals",
+      "verified": true
     },
     {
       "id": 133,
       "file": "133_networking_fundamentals.md",
       "title": "Networking Fundamentals for Backend Engineers — DNS, TCP/IP, Load Balancers",
       "bracket": "1-3",
-      "category": "Fundamentals"
+      "category": "Fundamentals",
+      "verified": true
     },
     {
       "id": 139,
       "file": "139_git_internals_advanced_workflows.md",
       "title": "Git Internals & Advanced Workflows — Bisect, Rebase Strategies, Monorepo Git",
       "bracket": "3-7",
-      "category": "Tools & Workflow"
+      "category": "Tools & Workflow",
+      "verified": true
     }
   ]
 }

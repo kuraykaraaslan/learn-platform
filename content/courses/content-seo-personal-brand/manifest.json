@@ -8,301 +8,344 @@
       "file": "271_content_pillars_and_strategic_positioning.md",
       "title": "Content Pillars & Strategic Positioning",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 272,
       "file": "272_idea_capture_system.md",
       "title": "Idea Capture — Turning Daily Work Into a Content Backlog",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 273,
       "file": "273_audience_and_intent_mapping.md",
       "title": "Audience & Intent Mapping Before You Write",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 274,
       "file": "274_content_angles_and_storytelling_frameworks.md",
       "title": "Content Angles & Storytelling Frameworks",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 275,
       "file": "275_technical_writing_style_for_business_readers.md",
       "title": "Technical Writing Style for Business Readers",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 276,
       "file": "276_content_repurposing_one_idea_many_assets.md",
       "title": "Content Repurposing — One Idea Into Many Assets",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 277,
       "file": "277_content_calendar_cadence_and_quality_gate.md",
       "title": "Content Calendar, Cadence & the Pre-Publish Quality Gate",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 278,
       "file": "278_ai_assisted_content_without_losing_your_voice.md",
       "title": "AI-Assisted Content Without Losing Your Voice",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 279,
       "file": "279_content_analytics_library_and_asset_management.md",
       "title": "Content Analytics, Library & Asset Management",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 280,
       "file": "280_seo_and_aeo_as_one_visibility_system.md",
       "title": "SEO and AEO as One Visibility System",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 281,
       "file": "281_search_intent_topic_clusters_and_keyword_query_mapping.md",
       "title": "Search Intent, Topic Clusters and Keyword Query Mapping",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 282,
       "file": "282_technical_seo_foundations_crawl_render_index.md",
       "title": "Technical SEO Foundations: Crawl, Render, Index",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 283,
       "file": "283_metadata_titles_descriptions_and_canonical_url_strategy.md",
       "title": "Metadata, Titles, Descriptions and Canonical URL Strategy",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 284,
       "file": "284_robots_snippet_controls_and_structured_data.md",
       "title": "Robots, Snippet Controls and Structured Data",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 285,
       "file": "285_ai_search_and_answer_engine_optimization.md",
       "title": "AI Search and Answer Engine Optimization (AEO)",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 286,
       "file": "286_entity_clarity_and_eeat_trust_signals.md",
       "title": "Entity Clarity and E-E-A-T Trust Signals",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 287,
       "file": "287_content_briefs_page_templates_and_blog_seo.md",
       "title": "Content Briefs, Page Templates and Blog SEO",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 288,
       "file": "288_landing_page_local_and_service_seo.md",
       "title": "Landing Page, Local and Service SEO",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 289,
       "file": "289_internal_linking_information_architecture_and_rich_media_seo.md",
       "title": "Internal Linking, Information Architecture and Rich Media SEO",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 290,
       "file": "290_content_operations_at_scale_programmatic_seo_refresh_and_search_console_review.md",
       "title": "Content Operations at Scale: Programmatic SEO, Refresh and Search Console Review",
       "bracket": "7-10",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 291,
       "file": "291_seo_qa_and_launch_checklist.md",
       "title": "SEO QA and Launch Checklist",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 292,
       "file": "292_linkedin_authority_operating_system_pillars_and_weekly_cadence.md",
       "title": "LinkedIn Authority Operating System: Pillars and Weekly Cadence",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 293,
       "file": "293_linkedin_profile_positioning_headline_and_about_section.md",
       "title": "LinkedIn Profile Positioning, Headline and About Section",
       "bracket": "0-1",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 294,
       "file": "294_featured_section_proof_assets_and_credibility_signals.md",
       "title": "Featured Section, Proof Assets and Credibility Signals",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 295,
       "file": "295_technical_post_frameworks_and_case_study_posts.md",
       "title": "Technical Post Frameworks and Case Study Posts",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 296,
       "file": "296_problem_solution_founder_story_carousel_and_video_posts.md",
       "title": "Problem-Solution Posts, Founder Stories, Carousels and Short Video",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 297,
       "file": "297_comment_strategy_dms_and_networking.md",
       "title": "Comment Strategy, DMs and Networking",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 298,
       "file": "298_soft_pitching_repurposing_and_analytics_on_linkedin.md",
       "title": "Soft Pitching, Repurposing and Analytics on LinkedIn",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 299,
       "file": "299_email_list_strategy_audience_consent_and_opt_in_design.md",
       "title": "Email List Strategy — Audience, Consent & Opt-in Design",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 300,
       "file": "300_newsletter_system_architecture_and_editorial_strategy.md",
       "title": "Newsletter System Architecture & Editorial Strategy",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 301,
       "file": "301_welcome_and_nurture_sequence_design.md",
       "title": "Welcome & Nurture Sequence Design",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 302,
       "file": "302_email_copywriting_voice_subject_lines_and_ctas.md",
       "title": "Email Copywriting — Voice, Subject Lines & CTAs",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 303,
       "file": "303_proof_emails_and_ready_to_use_templates.md",
       "title": "Proof Emails & Ready-to-Use Templates",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 304,
       "file": "304_segmentation_crm_automation_and_sales_handoff.md",
       "title": "Segmentation, CRM Automation & Sales Handoff",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 305,
       "file": "305_deliverability_list_hygiene_reengagement_and_metrics.md",
       "title": "Deliverability, List Hygiene, Re-engagement & Metrics",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 306,
       "file": "306_case_study_structure_narrative_arc_and_operating_system.md",
       "title": "Case Study Structure, Narrative Arc & Operating System",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 307,
       "file": "307_confidentiality_anonymization_and_technical_depth_calibration.md",
       "title": "Confidentiality, Anonymization & Technical Depth Calibration",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 308,
       "file": "308_case_study_metrics_outcomes_and_evidence_levels.md",
       "title": "Case Study Metrics, Outcomes & Evidence Levels",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 309,
       "file": "309_project_selection_and_portfolio_auditing.md",
       "title": "Project Selection & Portfolio Auditing",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 310,
       "file": "310_visual_proof_screenshots_and_demo_videos.md",
       "title": "Visual Proof, Screenshots & Demo Videos",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 311,
       "file": "311_testimonials_and_github_as_proof.md",
       "title": "Testimonials & GitHub as Proof",
       "bracket": "1-3",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 312,
       "file": "312_portfolio_page_structure_and_seo.md",
       "title": "Portfolio Page Structure & SEO",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     },
     {
       "id": 313,
       "file": "313_proof_asset_repurposing_one_case_study_many_assets.md",
       "title": "Proof Asset Repurposing — One Case Study, Many Assets",
       "bracket": "3-7",
-      "category": "Content, SEO & Personal Brand"
+      "category": "Content, SEO & Personal Brand",
+      "verified": true
     }
   ]
 }

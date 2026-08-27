@@ -8,14 +8,16 @@
       "file": "129_concurrency_async_fundamentals.md",
       "title": "Concurrency & Async Fundamentals — Event Loop, Promises, Race Conditions",
       "bracket": "1-3",
-      "category": "Concurrency & Performance"
+      "category": "Concurrency & Performance",
+      "verified": true
     },
     {
       "id": 130,
       "file": "130_data_structures_algorithms_practice.md",
       "title": "Data Structures & Algorithms in Practice — Trees, Graphs, Sorting, Recursion",
       "bracket": "1-3",
-      "category": "Algorithms & Data Structures"
+      "category": "Algorithms & Data Structures",
+      "verified": true
     }
   ]
 }

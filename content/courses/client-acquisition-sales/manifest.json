@@ -3,29 +3,197 @@
   "title": "Client Acquisition & Sales",
   "description": "Lead generation, discovery calls, qualifying, and positioning — turning technical skill into a pipeline of real client work.",
   "items": [
-    { "id": 176, "file": "176_brand_foundation_and_positioning_statement.md", "title": "Brand Foundation & the Positioning Statement", "bracket": "1-3", "category": "Client Acquisition & Sales" },
-    { "id": 177, "file": "177_value_proposition_and_buyer_personas.md", "title": "Value Proposition & Ideal Buyer Personas", "bracket": "1-3", "category": "Client Acquisition & Sales" },
-    { "id": 178, "file": "178_differentiation_and_competitive_alternatives.md", "title": "Differentiation & Competitive Alternatives", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 179, "file": "179_message_pillars_and_brand_voice.md", "title": "Message Pillars & Brand Voice", "bracket": "1-3", "category": "Client Acquisition & Sales" },
-    { "id": 180, "file": "180_proof_credibility_and_founder_narrative.md", "title": "Proof, Credibility & Founder Narrative", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 181, "file": "181_bio_headline_and_anti_positioning.md", "title": "Bio, Headline, Anti-Positioning & Review Cadence", "bracket": "1-3", "category": "Client Acquisition & Sales" },
-    { "id": 182, "file": "182_client_acquisition_pipeline_and_icp.md", "title": "The Client Acquisition Pipeline & Ideal Client Profile", "bracket": "0-1", "category": "Client Acquisition & Sales" },
-    { "id": 183, "file": "183_offer_and_service_packaging.md", "title": "Offer & Service Packaging", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 184, "file": "184_lead_source_strategy_and_inbound_content.md", "title": "Lead Source Strategy & Inbound Content", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 185, "file": "185_cold_outreach_ethics_and_the_three_gates.md", "title": "Cold Outreach Ethics & the Three Gates", "bracket": "0-1", "category": "Client Acquisition & Sales" },
-    { "id": 186, "file": "186_target_lists_trigger_events_and_tiering.md", "title": "Target Lists, Trigger Events & Tiering", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 187, "file": "187_cold_message_anatomy_and_the_substitution_test.md", "title": "Cold Message Anatomy, Personalization & the Substitution Test", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 188, "file": "188_cold_outreach_channels_email_linkedin_and_phone.md", "title": "Cold Outreach Channels: Email, LinkedIn & Phone", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 189, "file": "189_followup_cadence_reply_handling_and_campaign_discipline.md", "title": "Follow-Up Cadence, Reply Handling & Campaign Discipline", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 190, "file": "190_lead_intake_crm_hygiene_and_acquisition_metrics.md", "title": "Lead Intake, CRM Hygiene & Acquisition Metrics", "bracket": "1-3", "category": "Client Acquisition & Sales" },
-    { "id": 191, "file": "191_qualification_and_red_flag_screening_before_discovery.md", "title": "Qualification & Red-Flag Screening Before Discovery", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 192, "file": "192_acquisition_trust_assets_landing_pages_portfolio_and_objection_prep.md", "title": "Acquisition Trust Assets: Landing Pages, Portfolio Proof & Objection Prep", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 193, "file": "193_referrals_and_partnership_channels.md", "title": "Referrals & Partnership Channels", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 194, "file": "194_discovery_call_preparation_agenda_and_question_frameworks.md", "title": "Discovery Call Preparation, Agenda & Question Frameworks", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 195, "file": "195_business_problem_diagnosis_and_current_state_workflow_mapping.md", "title": "Business Problem Diagnosis & Current-State Workflow Mapping", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 196, "file": "196_stakeholder_mapping_decision_authority_and_budget_timeline_discovery.md", "title": "Stakeholder Mapping, Decision Authority & Budget/Timeline Discovery", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 197, "file": "197_requirements_user_stories_and_mvp_scope_framing.md", "title": "Requirements, User Stories & MVP Scope Framing", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 198, "file": "198_technical_feasibility_paid_discovery_and_objection_handling.md", "title": "Technical Feasibility, Paid Discovery & Objection Handling", "bracket": "3-7", "category": "Client Acquisition & Sales" },
-    { "id": 199, "file": "199_risk_logs_meeting_recaps_and_the_discovery_to_proposal_handoff.md", "title": "Risk Logs, Meeting Recaps & the Discovery-to-Proposal Handoff", "bracket": "3-7", "category": "Client Acquisition & Sales" }
+    {
+      "id": 176,
+      "file": "176_brand_foundation_and_positioning_statement.md",
+      "title": "Brand Foundation & the Positioning Statement",
+      "bracket": "1-3",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 177,
+      "file": "177_value_proposition_and_buyer_personas.md",
+      "title": "Value Proposition & Ideal Buyer Personas",
+      "bracket": "1-3",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 178,
+      "file": "178_differentiation_and_competitive_alternatives.md",
+      "title": "Differentiation & Competitive Alternatives",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 179,
+      "file": "179_message_pillars_and_brand_voice.md",
+      "title": "Message Pillars & Brand Voice",
+      "bracket": "1-3",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 180,
+      "file": "180_proof_credibility_and_founder_narrative.md",
+      "title": "Proof, Credibility & Founder Narrative",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 181,
+      "file": "181_bio_headline_and_anti_positioning.md",
+      "title": "Bio, Headline, Anti-Positioning & Review Cadence",
+      "bracket": "1-3",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 182,
+      "file": "182_client_acquisition_pipeline_and_icp.md",
+      "title": "The Client Acquisition Pipeline & Ideal Client Profile",
+      "bracket": "0-1",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 183,
+      "file": "183_offer_and_service_packaging.md",
+      "title": "Offer & Service Packaging",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 184,
+      "file": "184_lead_source_strategy_and_inbound_content.md",
+      "title": "Lead Source Strategy & Inbound Content",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 185,
+      "file": "185_cold_outreach_ethics_and_the_three_gates.md",
+      "title": "Cold Outreach Ethics & the Three Gates",
+      "bracket": "0-1",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 186,
+      "file": "186_target_lists_trigger_events_and_tiering.md",
+      "title": "Target Lists, Trigger Events & Tiering",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 187,
+      "file": "187_cold_message_anatomy_and_the_substitution_test.md",
+      "title": "Cold Message Anatomy, Personalization & the Substitution Test",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 188,
+      "file": "188_cold_outreach_channels_email_linkedin_and_phone.md",
+      "title": "Cold Outreach Channels: Email, LinkedIn & Phone",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 189,
+      "file": "189_followup_cadence_reply_handling_and_campaign_discipline.md",
+      "title": "Follow-Up Cadence, Reply Handling & Campaign Discipline",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 190,
+      "file": "190_lead_intake_crm_hygiene_and_acquisition_metrics.md",
+      "title": "Lead Intake, CRM Hygiene & Acquisition Metrics",
+      "bracket": "1-3",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 191,
+      "file": "191_qualification_and_red_flag_screening_before_discovery.md",
+      "title": "Qualification & Red-Flag Screening Before Discovery",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 192,
+      "file": "192_acquisition_trust_assets_landing_pages_portfolio_and_objection_prep.md",
+      "title": "Acquisition Trust Assets: Landing Pages, Portfolio Proof & Objection Prep",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 193,
+      "file": "193_referrals_and_partnership_channels.md",
+      "title": "Referrals & Partnership Channels",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 194,
+      "file": "194_discovery_call_preparation_agenda_and_question_frameworks.md",
+      "title": "Discovery Call Preparation, Agenda & Question Frameworks",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 195,
+      "file": "195_business_problem_diagnosis_and_current_state_workflow_mapping.md",
+      "title": "Business Problem Diagnosis & Current-State Workflow Mapping",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 196,
+      "file": "196_stakeholder_mapping_decision_authority_and_budget_timeline_discovery.md",
+      "title": "Stakeholder Mapping, Decision Authority & Budget/Timeline Discovery",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 197,
+      "file": "197_requirements_user_stories_and_mvp_scope_framing.md",
+      "title": "Requirements, User Stories & MVP Scope Framing",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 198,
+      "file": "198_technical_feasibility_paid_discovery_and_objection_handling.md",
+      "title": "Technical Feasibility, Paid Discovery & Objection Handling",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    },
+    {
+      "id": 199,
+      "file": "199_risk_logs_meeting_recaps_and_the_discovery_to_proposal_handoff.md",
+      "title": "Risk Logs, Meeting Recaps & the Discovery-to-Proposal Handoff",
+      "bracket": "3-7",
+      "category": "Client Acquisition & Sales",
+      "verified": true
+    }
   ]
 }
