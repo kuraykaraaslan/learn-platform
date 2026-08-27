@@ -38,8 +38,8 @@ import bcrypt from 'bcrypt';
 describe('AuthService — brute force protection', () => {
   const mockRedis = { incr: vi.fn(), expire: vi.fn(), get: vi.fn(), del: vi.fn() };
 
-  vi.mock('@/libs/redis', () => ({ default: mockRedis }));
-  vi.mock('@/libs/typeorm', () => ({
+  vi.mock('@/lib/redis', () => ({ default: mockRedis }));
+  vi.mock('@/lib/typeorm', () => ({
     getSystemDataSource: vi.fn().mockResolvedValue({
       getRepository: () => ({
         findOne: vi.fn().mockResolvedValue({

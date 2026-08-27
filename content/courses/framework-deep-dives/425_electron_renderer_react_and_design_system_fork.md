@@ -41,7 +41,7 @@ export const api = window.api;   // typed via the preload's exported AppApi
 
 // renderer/modules/users/users.store.ts — Zustand store is the only thing that calls window.api
 import { create } from "zustand";
-import { api } from "@/libs/api";
+import { api } from "@/lib/api";
 
 type UsersState = {
   rows: { id: string; name: string }[];

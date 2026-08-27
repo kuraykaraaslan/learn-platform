@@ -83,7 +83,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
 ```typescript
 // hooks/useUsers.ts — hook lives in hooks/, not co-located inside components/
 import { useState, useEffect, useCallback } from "react";
-import { axiosInstance } from "@/libs/axios";
+import { axiosInstance } from "@/lib/axios";
 import type { UserResponse } from "@/types/user.types";
 
 export function useUsers() {
@@ -105,7 +105,7 @@ export function useUsers() {
 ## When to Use
 - Scaffolding a new Expo screen — decide first whether it's an authenticated or unauthenticated flow, and place it under the matching `(group)` before writing any UI
 - Adding any piece of shared logic used by more than one screen — a hook goes in `hooks/`, never inside a `components/` subfolder, regardless of how "component-specific" it currently feels
-- Reaching for `AsyncStorage`, `fetch()`, `console.log`, or a Context provider for global state — stop and use the mandated replacement (`SecureStore`/MMKV, `axiosInstance`, `@/libs/logger`, Zustand) instead
+- Reaching for `AsyncStorage`, `fetch()`, `console.log`, or a Context provider for global state — stop and use the mandated replacement (`SecureStore`/MMKV, `axiosInstance`, `@/lib/logger`, Zustand) instead
 - Adding a new environment variable — add it to the Zod schema in `libs/env.ts` first, with the `EXPO_PUBLIC_` prefix if the client bundle needs it
 
 ## Common Mistakes

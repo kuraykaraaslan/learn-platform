@@ -50,7 +50,7 @@ function verifyTokenRS256(token: string): TokenPayload {
     audience: 'web',
   }) as TokenPayload;
 }
-// Practical note: your current HS256 is perfectly fine until you need
+// Practical note: HS256 is perfectly fine until you need
 // a third-party service (mobile app backend, microservice) to verify tokens
 // without sharing the signing secret.
 

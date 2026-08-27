@@ -12,7 +12,7 @@
     "onlyMissingModules": 19,
     "failing": 120,
     "lessonsAffected": 120,
-    "privateAliasImports": 39
+    "privateAliasImports": 17
   },
   "lessons": [
     {
@@ -383,31 +383,31 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 26,
+              "line": 27,
               "message": "Cannot find name 'anthropic'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 28,
+              "line": 29,
               "message": "Cannot find name 'SUMMARY_SYSTEM_PROMPT'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 33,
+              "line": 34,
               "message": "Cannot find name 'logger'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 36,
+              "line": 37,
               "message": "Cannot find name 'logger'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 43,
+              "line": 44,
               "message": "Cannot find name 'extractText'.",
               "class": "undefined-identifier"
             }

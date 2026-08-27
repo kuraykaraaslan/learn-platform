@@ -21,8 +21,8 @@ Two mobile-specific concerns have no real web equivalent. Offline detection via 
 ```tsx
 // hooks/useUser.ts — single-item fetch with the cancelled-flag pattern
 import { useState, useEffect } from "react";
-import { axiosInstance } from "@/libs/axios";
-import { extractErrorMessage } from "@/libs/errorUtils";
+import { axiosInstance } from "@/lib/axios";
+import { extractErrorMessage } from "@/lib/errorUtils";
 import type { UserResponse } from "@/types/user.types";
 
 export function useUser(userId: string) {
@@ -64,8 +64,8 @@ export function extractErrorMessage(err: unknown): string {
 
 // hooks/useUserMutations.ts — haptic + toast on every mutation outcome
 import { useState } from "react";
-import { axiosInstance } from "@/libs/axios";
-import { extractErrorMessage } from "@/libs/errorUtils";
+import { axiosInstance } from "@/lib/axios";
+import { extractErrorMessage } from "@/lib/errorUtils";
 import * as Haptics from "expo-haptics";
 import { toast } from "sonner-native";
 import type { CreateUserDTO, UserResponse } from "@/types/user.types";

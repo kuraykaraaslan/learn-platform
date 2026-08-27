@@ -20,8 +20,8 @@ A good fallback degrades usefully rather than failing outright: a summary featur
 ## Example Code
 ```typescript
 import Anthropic from '@anthropic-ai/sdk';
-import { logger } from '@/libs/logger';
-import { AppError } from '@/libs/errors';
+import { logger } from '@/lib/logger';
+import { AppError } from '@/lib/errors';
 
 const AI_ERROR_MESSAGES = {
   unavailable: 'AI is temporarily unavailable. Please try again in a moment.',

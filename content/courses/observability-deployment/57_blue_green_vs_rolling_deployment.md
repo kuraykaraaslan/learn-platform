@@ -83,8 +83,8 @@ const k8sDeploymentSpec = {
 
 // app/api/health/route.ts — your readiness endpoint
 import { NextResponse } from 'next/server';
-import { getSystemDataSource } from '@/libs/typeorm';
-import redis from '@/libs/redis';
+import { getSystemDataSource } from '@/lib/typeorm';
+import redis from '@/lib/redis';
 
 export async function GET() {
   try {

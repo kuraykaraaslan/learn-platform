@@ -55,7 +55,7 @@ Stopping rule: Do NOT check results until 800 visitors per variant
 
 'use client';
 import { useFeatureFlagVariantKey } from 'posthog-js/react';
-import { analytics, AnalyticsEvents } from '@/libs/analytics/analytics.service';
+import { analytics, AnalyticsEvents } from '@/lib/analytics/analytics.service';
 
 export function PricingCTAButton() {
   // PostHog assigns users to control/variant and persists the assignment

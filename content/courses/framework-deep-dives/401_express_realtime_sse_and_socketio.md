@@ -21,9 +21,9 @@ Socket.io earns its complexity when the client needs to send events too — a ch
 ```typescript
 // modules/jobs/jobs.route.ts — SSE for one-directional progress updates
 import { Router } from "express";
-import { authMiddleware } from "@/libs/middleware/auth";
+import { authMiddleware } from "@/lib/middleware/auth";
 import JobService from "@/modules/jobs/job.service";
-import { UuidParam } from "@/libs/validation";
+import { UuidParam } from "@/lib/validation";
 
 const router = Router();
 
@@ -58,8 +58,8 @@ export default router;
 // libs/socket.ts — Socket.io setup for bidirectional features
 import { Server as SocketServer } from "socket.io";
 import { Server as HttpServer } from "http";
-import { verifyToken } from "@/libs/jwt";
-import { env } from "@/libs/env";
+import { verifyToken } from "@/lib/jwt";
+import { env } from "@/lib/env";
 
 let io: SocketServer;
 
@@ -96,9 +96,9 @@ export function getIO(): SocketServer {
 }
 
 // modules/notification/notification.service.ts — services emit, routes never touch the socket
-import { AppDataSource } from "@/libs/typeorm";
+import { AppDataSource } from "@/lib/typeorm";
 import { Notification } from "@/modules/notification/entities/Notification";
-import { getIO } from "@/libs/socket";
+import { getIO } from "@/lib/socket";
 import type { NotificationPayload } from "@/modules/notification/notification.types";
 
 export default class NotificationService {
@@ -113,8 +113,8 @@ export default class NotificationService {
 // index.ts — attaching Socket.io to the same HTTP server as Express
 import http from "http";
 import app from "@/app";
-import { initSocket } from "@/libs/socket";
-import { env } from "@/libs/env";
+import { initSocket } from "@/lib/socket";
+import { env } from "@/lib/env";
 
 const httpServer = http.createServer(app);
 initSocket(httpServer);

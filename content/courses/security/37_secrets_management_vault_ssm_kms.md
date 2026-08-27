@@ -43,7 +43,7 @@ const PARAMETER_NAMES = [
 type ParameterName = typeof PARAMETER_NAMES[number];
 type SecretName = ParameterName extends `/app/${string}/${infer N}` ? N : never;
 
-// Schema mirrors your existing libs/env.ts EnvSchema — same validation
+// Schema mirrors the app's own env schema — same validation
 const SecretsSchema = z.object({
   SYSTEM_DATABASE_URL: z.string().min(1),
   REDIS_PASSWORD: z.string().min(1),
@@ -90,11 +90,11 @@ export async function loadSecrets(): Promise<Secrets> {
   return cachedSecrets;
 }
 
-// ─── Integration with your existing libs/env.ts ────────────────────────────
+// ─── Integration with the app's env schema ─────────────────────────────────
 // Option A: Override env vars after loading (minimal code change)
 // In your app bootstrap (e.g., instrumentation.ts in Next.js):
 //
-// import { loadSecrets } from '@/libs/secrets/aws-ssm';
+// import { loadSecrets } from '@/lib/secrets/aws-ssm';
 // const secrets = await loadSecrets();
 // Object.assign(process.env, secrets); // env.ts Zod validation then reads these
 

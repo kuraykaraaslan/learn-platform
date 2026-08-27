@@ -33,7 +33,7 @@ export const anthropic = new Anthropic({
 
 // libs/ai/extract-text.ts
 import type { Message, TextBlock } from '@anthropic-ai/sdk/resources/messages';
-import { AppError } from '@/libs/errors';
+import { AppError } from '@/lib/errors';
 
 export function extractText(response: Message): string {
   const block = response.content.find((b): b is TextBlock => b.type === 'text');
@@ -42,8 +42,8 @@ export function extractText(response: Message): string {
 }
 
 // services/summary.service.ts — consumer, never constructs its own client
-import { anthropic } from '@/libs/ai/client';
-import { extractText } from '@/libs/ai/extract-text';
+import { anthropic } from '@/lib/ai/client';
+import { extractText } from '@/lib/ai/extract-text';
 
 export async function generateSummary(text: string): Promise<string> {
   const response = await anthropic.messages.create({

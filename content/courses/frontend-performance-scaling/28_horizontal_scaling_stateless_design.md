@@ -31,7 +31,7 @@ export function getSession(token: string) {
 
 // Your actual pattern (already correct): shared Redis cache
 // libs/redis/session-cache.ts
-import redis from '@/libs/redis';
+import redis from '@/lib/redis';
 
 const SESSION_TTL = 1800; // 30 minutes
 
@@ -59,7 +59,7 @@ export async function getCachedSession(
 
 // Rate limiter that works across instances (Redis-backed)
 // libs/limiter/redis-rate-limiter.ts
-import redis from '@/libs/redis';
+import redis from '@/lib/redis';
 
 export async function checkRateLimit(
   key: string,

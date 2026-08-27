@@ -25,7 +25,7 @@ For your multi-tenant SaaS, SSE is the correct choice for `notification_inapp`. 
 
 import { NextRequest } from "next/server";
 import { verifyJwt } from "@/modules/auth/auth.token.service";
-import { getRedisClient } from "@/libs/redis";
+import { getRedisClient } from "@/lib/redis";
 
 export const runtime = "nodejs"; // SSE requires Node.js runtime, not edge
 

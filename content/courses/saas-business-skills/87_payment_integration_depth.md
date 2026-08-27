@@ -25,7 +25,7 @@ Dispute handling (chargebacks) is the part of payment processing that most integ
 
 import Stripe from 'stripe';
 import { NextRequest, NextResponse } from 'next/server';
-import { db } from '@/libs/db';
+import { db } from '@/lib/db';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 

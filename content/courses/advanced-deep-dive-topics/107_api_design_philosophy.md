@@ -20,7 +20,7 @@ Choosing wrong means fighting the paradigm: a public REST API built as GraphQL (
 ## Example Code
 
 ```typescript
-// tRPC — fits your Next.js + Zod stack perfectly
+// tRPC — the natural fit when the client and server share one TypeScript codebase
 // server/routers/user.ts
 import { z } from 'zod';
 import { router, protectedProcedure } from '../trpc';
@@ -44,7 +44,7 @@ export const userRouter = router({
 });
 
 // client/hooks/useProfile.ts — full type inference, no code gen, no fetch boilerplate
-import { trpc } from '@/libs/trpc';
+import { trpc } from '@/lib/trpc';
 
 function ProfilePage() {
   const { data: user } = trpc.user.me.useQuery();

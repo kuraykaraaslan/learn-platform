@@ -24,7 +24,7 @@ The payoff is testability and interchangeability: you can run your entire domain
 // ── Domain Core — no infrastructure imports ─────────────────────────────────
 
 // Driven Port: what AuthService needs from the user storage layer
-// (your existing payment BasePaymentProvider follows this exact pattern)
+// (a payment module with a BasePaymentProvider interface is the same shape)
 export interface IUserRepository {
   findByEmail(email: string): Promise<User | null>;
   findById(id: string): Promise<User | null>;

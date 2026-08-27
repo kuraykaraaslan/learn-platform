@@ -59,8 +59,8 @@ export const ListProjectsQuery = z.object({
 
 // modules/project/project.route.ts — body (safeParse), query (safeParse+coerce), param (.parse)
 import { Router } from "express";
-import { UuidParam } from "@/libs/validation";
-import { paginationMeta } from "@/libs/pagination";
+import { UuidParam } from "@/lib/validation";
+import { paginationMeta } from "@/lib/pagination";
 import { CreateProjectDTO, ListProjectsQuery } from "@/modules/project/project.dto";
 import ProjectService from "@/modules/project/project.service";
 

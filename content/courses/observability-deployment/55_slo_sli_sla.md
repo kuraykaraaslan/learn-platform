@@ -23,8 +23,8 @@ For a solo SaaS builder, you may not have formal SLAs yet, but defining internal
 ```typescript
 // libs/slo-tracker.ts — minimal error budget calculator using Redis counters
 
-import redis from '@/libs/redis';
-import Logger from '@/libs/logger';
+import redis from '@/lib/redis';
+import Logger from '@/lib/logger';
 
 const WINDOW_SECONDS = 30 * 24 * 60 * 60; // 30-day rolling window
 const SLO_TARGET = 0.995; // 99.5% availability target

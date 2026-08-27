@@ -20,7 +20,7 @@ The patterns that actually recur in your stack — Strategy, Repository, Factory
 
 ## Example Code
 ```typescript
-// ── Strategy (you already have this for payments) ────────────────────────────
+// ── Strategy (a payment provider interface is the textbook case) ─────────────
 // Extended example: Strategy for notification channels
 interface NotificationStrategy {
   send(to: string, subject: string, body: string): Promise<void>;

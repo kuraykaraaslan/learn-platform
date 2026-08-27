@@ -21,9 +21,9 @@ The three concepts you should care about next — priority, concurrency, and bac
 ```typescript
 // libs/queues/email.queue.ts
 import { Queue, Worker, Job, QueueEvents } from 'bullmq';
-import { getBullMQConnection } from '@/libs/redis/bullmq';
+import { getBullMQConnection } from '@/lib/redis/bullmq';
 import MailService from '@/modules/notification_mail/notification_mail.service';
-import Logger from '@/libs/logger';
+import Logger from '@/lib/logger';
 
 export interface EmailJobData {
   to: string;

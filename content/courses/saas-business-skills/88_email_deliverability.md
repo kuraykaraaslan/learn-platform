@@ -25,7 +25,7 @@ Beyond DNS authentication, the two factors that degrade deliverability over time
 // Provider: Resend (resend.com) — adapt for SendGrid or SES
 
 import { NextRequest, NextResponse } from 'next/server';
-import { db } from '@/libs/db';
+import { db } from '@/lib/db';
 
 // Resend webhook event types relevant to deliverability
 type ResendWebhookEvent =

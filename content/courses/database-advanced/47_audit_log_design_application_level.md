@@ -20,7 +20,7 @@ For immutability, the database-level approach is to revoke `UPDATE` and `DELETE`
 ## Example Code
 ```typescript
 // ─── What you have (solid foundation) ────────────────────────────────────
-// modules/audit_log/entities/audit_log.entity.ts (your existing structure)
+// modules/audit_log/entities/audit_log.entity.ts (a typical structure)
 // AuditLog: auditLogId, actorId, actorType, action, resourceType, resourceId,
 //           metadata (JSONB), ipAddress, userAgent, createdAt
 // TenantAuditLog: same + tenantId

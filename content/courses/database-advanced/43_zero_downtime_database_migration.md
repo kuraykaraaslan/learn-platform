@@ -34,7 +34,7 @@ For your multi-tenant setup, zero-downtime migrations have an additional dimensi
 // Phase 2 — Backfill: populate the new column for existing rows
 // Run this as a background job, not in the migration itself
 // migration-scripts/002_backfill_tenant_slug.ts
-import { getSystemDataSource } from '@/libs/typeorm';
+import { getSystemDataSource } from '@/lib/typeorm';
 
 export async function backfillTenantSlugs(): Promise<void> {
   const ds = await getSystemDataSource();

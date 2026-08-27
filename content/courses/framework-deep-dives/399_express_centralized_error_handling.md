@@ -34,8 +34,8 @@ export default class AppError extends Error {
 // libs/middleware/error.ts — the single source of truth for error responses
 import { Request, Response, NextFunction } from "express";
 import multer from "multer";
-import AppError from "@/libs/app-error";
-import Logger from "@/libs/logger";
+import AppError from "@/lib/app-error";
+import Logger from "@/lib/logger";
 
 export function errorHandler(
   error: unknown,
@@ -62,8 +62,8 @@ export function errorHandler(
 }
 
 // modules/auth/auth.service.ts — throw AppError for expected negative paths
-import AppError from "@/libs/app-error";
-import Logger from "@/libs/logger";
+import AppError from "@/lib/app-error";
+import Logger from "@/lib/logger";
 import AuthMessages from "@/modules/auth/auth.messages";
 
 export default class AuthService {

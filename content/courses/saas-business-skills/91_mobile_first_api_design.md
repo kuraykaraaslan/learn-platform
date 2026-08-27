@@ -28,7 +28,7 @@ Offline-first thinking is the design philosophy that the client should function 
 // GET /api/tenants?fields=id,name,plan_id,created_at
 
 import { NextRequest, NextResponse } from 'next/server';
-import { db } from '@/libs/db';
+import { db } from '@/lib/db';
 
 const ALLOWED_TENANT_FIELDS = new Set([
   'id', 'name', 'plan_id', 'status', 'created_at', 'member_count',

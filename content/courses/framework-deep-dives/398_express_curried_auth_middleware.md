@@ -35,7 +35,7 @@ declare global {
 // libs/middleware/auth.ts — the curried factory
 import { Request, Response, NextFunction } from "express";
 import UserSessionService from "@/modules/user_session/user_session.service";
-import AppError from "@/libs/app-error";
+import AppError from "@/lib/app-error";
 import AuthMessages from "@/modules/auth/auth.messages";
 
 type Role = "GUEST" | "USER" | "ADMIN";
@@ -65,10 +65,10 @@ export function authMiddleware(role: Role) {
 
 // modules/user_session/user_session.service.ts — the real logic, framework-agnostic
 import jwt, { JwtPayload } from "jsonwebtoken";
-import { redis } from "@/libs/redis";
-import { hashToken } from "@/libs/crypto";
-import { env } from "@/libs/env";
-import AppError from "@/libs/app-error";
+import { redis } from "@/lib/redis";
+import { hashToken } from "@/lib/crypto";
+import { env } from "@/lib/env";
+import AppError from "@/lib/app-error";
 import AuthMessages from "@/modules/auth/auth.messages";
 import type { SafeUser, SafeUserSession } from "@/modules/user_session/user_session.types";
 
@@ -94,8 +94,8 @@ export default class UserSessionService {
 
 // modules/user/user.route.ts — role tiers visible directly in the route table
 import { Router } from "express";
-import { authMiddleware } from "@/libs/middleware/auth";
-import { apiLimiter } from "@/libs/middleware/rate-limit";
+import { authMiddleware } from "@/lib/middleware/auth";
+import { apiLimiter } from "@/lib/middleware/rate-limit";
 import UserService from "@/modules/user/user.service";
 
 const router = Router();

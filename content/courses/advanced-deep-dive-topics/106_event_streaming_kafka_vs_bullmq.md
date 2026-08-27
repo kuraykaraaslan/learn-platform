@@ -20,9 +20,9 @@ For most solo SaaS products under 100K events/day, BullMQ is the right choice. K
 ## Example Code
 
 ```typescript
-// BullMQ — what you already have, extended with proper worker pattern
+// BullMQ — the Redis-backed option, with the worker pattern done properly
 import { Queue, Worker, Job } from 'bullmq';
-import { getBullMQConnection } from '@/libs/redis/bullmq';
+import { getBullMQConnection } from '@/lib/redis/bullmq';
 
 const connection = getBullMQConnection();
 

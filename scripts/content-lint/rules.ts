@@ -178,24 +178,28 @@ export const RULES: Rule[] = [
         })),
   },
   {
-    id: 'code/private-alias',
-    severity: 'warn',
+    id: 'code/reader-codebase-assertion',
+    severity: 'error',
     description:
-      'Snippets importing @/libs, @/modules, @/stores or @/components reference the first owner\'s private boilerplate; no reader can resolve them.',
-    lesson: (file) =>
-      file.fences
-        .filter((f) => /from\s+['"]@\/(libs|modules|stores|components)\//.test(f.code))
+      'A code comment telling the reader what their own codebase already contains. These hid inside fences, where the prose rules do not look, and are the same defect as the deleted Coverage Level section: the reader has never seen that code. An import from "@/lib/..." is NOT flagged — that is idiomatic for "your own module".',
+    lesson: (file) => {
+      // "your existing login logic" is a placeholder for the reader's own code
+      // and is fine. What is not fine is naming a file, class or design the
+      // reader is told they already have.
+      const ASSERTS =
+        /(what you already have|you already have this|your existing [\w./-]*(?:\.ts|\.tsx|\/|[A-Z]\w+)|your current (HS256|RBAC|setup|approach|implementation)|fits your [A-Z]|already in your (codebase|project|stack))/;
+      return file.fences
+        .filter((f) => ASSERTS.test(f.code))
         .map((f) => ({
-          rule: 'code/private-alias',
-          severity: 'warn' as const,
+          rule: 'code/reader-codebase-assertion',
+          severity: 'error' as const,
           target: file.target,
           line: f.line,
-          message: `imports a private alias: ${
-            [...f.code.matchAll(/from\s+['"](@\/(?:libs|modules|stores|components)\/[^'"]*)['"]/g)]
-              .map((m) => m[1])
-              .join(', ')
+          message: `code comment asserts what the reader's codebase contains: ${
+            f.code.split('\n').find((l) => ASSERTS.test(l))?.trim().slice(0, 90) ?? ''
           }`,
-        })),
+        }));
+    },
   },
   {
     id: 'code/unlabeled-fence',

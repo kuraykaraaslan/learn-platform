@@ -35,9 +35,9 @@ export default class ProjectMessages {
 }
 
 // modules/project/project.service.ts — static class, no Express imports
-import { AppDataSource } from "@/libs/typeorm";
+import { AppDataSource } from "@/lib/typeorm";
 import { Project } from "@/modules/project/entities/Project";
-import AppError from "@/libs/app-error";
+import AppError from "@/lib/app-error";
 import ProjectMessages from "@/modules/project/project.messages";
 import type { CreateProjectInput } from "@/modules/project/project.dto";
 
@@ -61,8 +61,8 @@ export default class ProjectService {
 import { Router } from "express";
 import ProjectService from "@/modules/project/project.service";
 import { CreateProjectDTO } from "@/modules/project/project.dto";
-import { authMiddleware } from "@/libs/middleware/auth";
-import { apiLimiter } from "@/libs/middleware/rate-limit";
+import { authMiddleware } from "@/lib/middleware/auth";
+import { apiLimiter } from "@/lib/middleware/rate-limit";
 
 const router = Router({ mergeParams: true }); // mergeParams to read :tenantId from the parent
 
@@ -88,7 +88,7 @@ export default router;
 // libs/router/tenant.ts — wires the module into the tenant-scoped top-level router
 import { Router } from "express";
 import projectRouter from "@/modules/project/project.route";
-import { authMiddleware } from "@/libs/middleware/auth";
+import { authMiddleware } from "@/lib/middleware/auth";
 
 const tenantRouter = Router();
 tenantRouter.use("/:tenantId/projects", authMiddleware("USER"), projectRouter);

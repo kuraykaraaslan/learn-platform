@@ -22,7 +22,7 @@ For a solo developer, both tools pay off more than you might think. A new paymen
 // libs/feature-flags.ts — a minimal in-house feature flag evaluator
 // For production use, consider OpenFeature + a provider (Unleash, LaunchDarkly, Flagsmith)
 
-import redis from '@/libs/redis';
+import redis from '@/lib/redis';
 import crypto from 'crypto';
 
 interface FlagConfig {

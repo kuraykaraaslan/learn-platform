@@ -34,7 +34,7 @@ Implementation requires a durable store (PostgreSQL is ideal — Redis can lose 
 // }
 
 import { NextRequest, NextResponse } from 'next/server';
-import { db } from '@/libs/db';
+import { db } from '@/lib/db';
 
 export async function withIdempotency(
   request: NextRequest,

@@ -98,7 +98,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 // app/api/csp-report/route.ts — collect CSP violations for analysis
 import { NextRequest, NextResponse } from 'next/server';
-import Logger from '@/libs/logger';
+import Logger from '@/lib/logger';
 
 export async function POST(req: NextRequest) {
   try {

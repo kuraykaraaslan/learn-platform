@@ -72,7 +72,7 @@ import bcrypt from 'bcrypt';
 
 // Stub the TypeORM DataSource — no real DB needed for unit tests
 const mockFindOne = vi.fn();
-vi.mock('@/libs/typeorm', () => ({
+vi.mock('@/lib/typeorm', () => ({
   getSystemDataSource: vi.fn().mockResolvedValue({
     getRepository: () => ({ findOne: mockFindOne }),
   }),
@@ -141,7 +141,7 @@ describe('AuthService.login', () => {
 // tests/integration/auth.register.test.ts
 import { describe, it, expect } from 'vitest';
 import AuthService from '@/modules/auth/auth.service';
-import { getSystemDataSource } from '@/libs/typeorm';
+import { getSystemDataSource } from '@/lib/typeorm';
 
 describe('AuthService.register (integration)', () => {
   it('creates a user and returns a SafeUser without password field', async () => {

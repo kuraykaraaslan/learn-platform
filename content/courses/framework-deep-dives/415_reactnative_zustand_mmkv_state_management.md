@@ -25,7 +25,7 @@ export const mmkv = new MMKV({ id: "app-storage" });
 
 // libs/zustandStorage.ts — adapts MMKV's sync API to Zustand's StateStorage interface
 import { StateStorage } from "zustand/middleware";
-import { mmkv } from "@/libs/mmkv";
+import { mmkv } from "@/lib/mmkv";
 
 export const zustandMMKVStorage: StateStorage = {
   getItem: (key) => mmkv.getString(key) ?? null,
@@ -36,8 +36,8 @@ export const zustandMMKVStorage: StateStorage = {
 // stores/authStore.ts — tokens NEVER enter this store; only isAuthenticated + a lightweight profile
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { zustandMMKVStorage } from "@/libs/zustandStorage";
-import { setToken, clearAllTokens } from "@/libs/secureStorage";
+import { zustandMMKVStorage } from "@/lib/zustandStorage";
+import { setToken, clearAllTokens } from "@/lib/secureStorage";
 import type { UserResponse } from "@/types/user.types";
 
 type AuthState = {

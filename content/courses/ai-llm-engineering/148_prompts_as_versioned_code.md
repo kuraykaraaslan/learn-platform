@@ -39,10 +39,10 @@ export const SUMMARY_CONFIG = {
 } as const;
 
 // services/summary.service.ts
-import { anthropic } from '@/libs/ai/client';
-import { SUMMARY_SYSTEM_PROMPT, SUMMARY_CONFIG } from '@/libs/ai/prompts/summary.prompt';
-import { extractText } from '@/libs/ai/extract-text';
-import { logger } from '@/libs/logger';
+import { anthropic } from '@/lib/ai/client';
+import { SUMMARY_SYSTEM_PROMPT, SUMMARY_CONFIG } from '@/lib/ai/prompts/summary.prompt';
+import { extractText } from '@/lib/ai/extract-text';
+import { logger } from '@/lib/logger';
 
 export async function generateSummary(text: string): Promise<string> {
   const response = await anthropic.messages.create({

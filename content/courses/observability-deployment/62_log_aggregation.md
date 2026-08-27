@@ -27,7 +27,7 @@ Looking at your existing Winston setup in `libs/logger/index.ts`: the `printf` f
 // and add Loki transport for production
 import winston from 'winston';
 import LokiTransport from 'winston-loki';  // npm install winston-loki
-import { env } from '@/libs/env';
+import { env } from '@/lib/env';
 
 const { combine, timestamp, json, errors } = winston.format;
 

@@ -19,10 +19,10 @@ The failure mode that separates production-grade structured output handling from
 ## Example Code
 ```typescript
 import { z } from 'zod';
-import { anthropic } from '@/libs/ai/client';
-import { extractText } from '@/libs/ai/extract-text';
-import { AppError } from '@/libs/errors';
-import { logger } from '@/libs/logger';
+import { anthropic } from '@/lib/ai/client';
+import { extractText } from '@/lib/ai/extract-text';
+import { AppError } from '@/lib/errors';
+import { logger } from '@/lib/logger';
 
 const ClassificationSchema = z.object({
   category: z.enum(['billing', 'technical', 'feature_request', 'other']),

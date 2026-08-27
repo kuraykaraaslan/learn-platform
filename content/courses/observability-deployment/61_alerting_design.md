@@ -63,8 +63,8 @@ const HIGH_ERROR_BUDGET_BURN: Omit<Alert, 'message'> = {
 // → move this to 'warning' and route to Slack only
 
 // ── BullMQ queue depth alert — actionable, with clear threshold ──────────────
-import redis from '@/libs/redis';
-import Logger from '@/libs/logger';
+import redis from '@/lib/redis';
+import Logger from '@/lib/logger';
 
 const QUEUE_DEPTH_THRESHOLD = 500;  // tune this based on your worker throughput
 

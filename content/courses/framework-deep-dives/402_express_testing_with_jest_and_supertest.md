@@ -22,7 +22,7 @@ Authenticating in tests means minting a *real* session rather than injecting a f
 // modules/auth/tests/helpers/auth.helper.ts — real login, not a fake req.user
 import request from "supertest";
 import app from "@/../index";
-import { AppDataSource } from "@/libs/typeorm";
+import { AppDataSource } from "@/lib/typeorm";
 import { User } from "@/modules/user/entities/User";
 import bcrypt from "bcryptjs";
 
@@ -49,7 +49,7 @@ export async function createTestUserAndLogin(
 // modules/project/tests/project.route.test.ts — the three-state minimum, plus forbidden/not-found
 import request from "supertest";
 import app from "@/../index";
-import { AppDataSource } from "@/libs/typeorm";
+import { AppDataSource } from "@/lib/typeorm";
 import { Project } from "@/modules/project/entities/Project";
 import { User } from "@/modules/user/entities/User";
 import { createTestUserAndLogin } from "@/modules/auth/tests/helpers/auth.helper";

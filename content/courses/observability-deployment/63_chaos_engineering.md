@@ -56,7 +56,7 @@ export async function withChaos<T>(
 
 // libs/redis/index.ts — wrap Redis calls with chaos for resilience testing
 import IORedis from 'ioredis';
-import { withChaos } from '@/libs/chaos';
+import { withChaos } from '@/lib/chaos';
 
 const redisClient = new IORedis({ /* your config */ });
 

@@ -21,7 +21,7 @@ Rate limiting in this stack is applied per-route or per-router rather than globa
 ```typescript
 // libs/middleware/cors.ts
 import cors from "cors";
-import { env } from "@/libs/env";
+import { env } from "@/lib/env";
 
 export const corsMiddleware = cors({
   origin: env.CORS_ORIGIN,        // from env — never a hardcoded string
@@ -68,11 +68,11 @@ export const authLimiter = rateLimit({
 // index.ts — the full pipeline, in the mandatory order
 import express from "express";
 import cookieParser from "cookie-parser";
-import { corsMiddleware } from "@/libs/middleware/cors";
-import { helmetMiddleware } from "@/libs/middleware/helmet";
-import { errorHandler } from "@/libs/middleware/error";
-import systemRouter from "@/libs/router/system";
-import tenantRouter from "@/libs/router/tenant";
+import { corsMiddleware } from "@/lib/middleware/cors";
+import { helmetMiddleware } from "@/lib/middleware/helmet";
+import { errorHandler } from "@/lib/middleware/error";
+import systemRouter from "@/lib/router/system";
+import tenantRouter from "@/lib/router/tenant";
 
 const app = express();
 
@@ -93,7 +93,7 @@ export default app;
 
 // modules/auth/auth.route.ts — tiered rate limits applied per-route
 import { Router } from "express";
-import { authLimiter } from "@/libs/middleware/rate-limit";
+import { authLimiter } from "@/lib/middleware/rate-limit";
 import AuthService from "@/modules/auth/auth.service";
 
 const router = Router();

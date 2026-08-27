@@ -10,7 +10,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 | Only uninstalled-module errors (tolerated) | 19 |
 | **Failing** | **120** |
 | Lessons affected | 120 |
-| Fences importing private `@/libs|modules|stores` aliases | 39 |
+| Fences importing private `@/libs|modules|stores` aliases | 17 |
 
 ## Defects by class
 

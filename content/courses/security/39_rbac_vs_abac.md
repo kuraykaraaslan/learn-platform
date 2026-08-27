@@ -19,7 +19,7 @@ RBAC inside each tenant plus RBAC at the system level is the right level of abst
 
 ## Example Code
 ```typescript
-// Your current RBAC — solid foundation
+// Role-based access control — a solid foundation
 // modules/tenant_member/tenant_member.enums.ts (you have this)
 export type TenantMemberRole = 'OWNER' | 'ADMIN' | 'USER';
 
