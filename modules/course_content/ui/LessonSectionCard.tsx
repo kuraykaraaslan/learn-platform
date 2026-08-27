@@ -11,6 +11,7 @@ import type { LessonBlock } from '../course_content.blocks';
 import { CodeBlock } from './CodeBlock';
 import { TemplateFormCard } from './widgets/TemplateFormCard';
 import { ChecklistCard } from './widgets/ChecklistCard';
+import { MermaidBlock } from './MermaidBlock';
 
 // Tried next/dynamic() here to keep this JS out of the ~324 lesson pages
 // with no widget block — measured worse (8.59 kB vs 7.22 kB gz) and, per
@@ -67,7 +68,15 @@ function BlockView({
       // eslint-disable-next-line react/no-danger -- block.html is our own build-time markdown pipeline output, not user input
       return <div dangerouslySetInnerHTML={{ __html: block.html }} />;
     case 'code':
-      return <CodeBlock block={block} />;
+      // The mermaid library itself is loaded only inside MermaidBlock, only
+      // once it's actually visible — MermaidBlock's own module has no static
+      // import of 'mermaid', so this branch costs ~nothing on the 412 pages
+      // that never hit it.
+      return block.lang === 'mermaid' ? (
+        <MermaidBlock source={block.source} html={block.html} />
+      ) : (
+        <CodeBlock block={block} />
+      );
     case 'widget':
       switch (block.widget.type) {
         case 'template':
