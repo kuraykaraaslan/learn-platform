@@ -19,7 +19,7 @@ The **event loop** is the scheduler that decides what executes when. It is not a
 
 ## Example Code
 
-```typescript
+```typescript run
 // --- 1. Layout thrashing — the problem and fix ---
 
 // BAD: reads and writes interleaved — forces synchronous layout per element
@@ -88,6 +88,12 @@ function createGoodUser(admin: boolean) {
 //    means React is doing heavy work — check for unnecessary re-renders first.
 // 5. Check "Layout" and "Recalculate Style" events — if they appear repeatedly
 //    in tight loops, you have thrashing.
+
+// ── dene ── (badResize/goodResize above need real DOM elements and can't run
+// here — this exercises the two functions that don't)
+demonstrateEventLoop();
+console.log("bad shape:", createBadUser(true));
+console.log("good shape:", createGoodUser(true));
 ```
 
 ## When to Use

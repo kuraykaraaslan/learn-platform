@@ -11,7 +11,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 | **Failing** | **0** |
 | Lessons affected | 0 |
 | Fences importing private `@/libs|modules|stores` aliases | 23 |
-| `run` fences: ready / blocked | 4 / 0 |
+| `run` fences: ready / blocked | 5 / 0 |
 
 ## Defects by class
 
