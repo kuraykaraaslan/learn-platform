@@ -5,6 +5,7 @@ import {
   readLessonMarkdown,
 } from './course_content.manifest';
 import { parseLessonBlocks } from './course_content.parser';
+import { parseMistakes } from './course_content.mistakes';
 import {
   type Bracket,
   type CourseSummary,
@@ -56,12 +57,13 @@ export class CourseContentService {
     if (!item) return null;
 
     const raw = readLessonMarkdown(courseSlug, item.file);
-    const { blocks } = parseLessonBlocks(raw);
+    const { blocks, sections } = parseLessonBlocks(raw);
 
     return {
       ...item,
       courseSlug,
       blocks,
+      mistakes: parseMistakes(sections.commonMistakes),
     };
   }
 

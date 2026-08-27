@@ -1,9 +1,13 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { listFences, type Fence } from '../../modules/course_content/course_content.fences';
 import {
   listCourseSlugs,
   readCourseManifest,
   readLessonMarkdown,
 } from '../../modules/course_content/course_content.manifest';
+import type { Interactive } from '../../modules/course_content/course_content.types';
 
 export type Severity = 'error' | 'warn';
 
@@ -27,6 +31,8 @@ export type LessonFile = {
   /** Section heading -> its body lines, in source order. */
   sections: { heading: string; start: number; lines: string[] }[];
   fences: Fence[];
+  verified?: boolean;
+  interactive?: Interactive;
 };
 
 export type Rule = {
@@ -112,6 +118,8 @@ export function loadCorpus(): LessonFile[] {
         lines,
         sections,
         fences: fencesByFile.get(target) ?? [],
+        verified: item.verified,
+        interactive: item.interactive,
       });
     }
   }
@@ -122,6 +130,18 @@ const bullets = (file: LessonFile, heading: string) =>
   (file.sections.find((s) => s.heading.startsWith(heading))?.lines ?? []).filter((l) =>
     l.trimStart().startsWith('- ')
   );
+
+function sha(value: string): string {
+  return createHash('sha256').update(value, 'utf8').digest('hex').slice(0, 16);
+}
+
+// Written only by scripts/stamp-verified.ts. Absent (nothing has ever been
+// stamped yet) is not an error on its own — verify/stale-stamp below only
+// fires for a lesson that actually claims `verified: true`.
+const VERIFIED_SHA_REPORT = path.join(process.cwd(), 'content', '_reports', 'verified-sha.json');
+const verifiedShaReport: Record<string, string> = fs.existsSync(VERIFIED_SHA_REPORT)
+  ? JSON.parse(fs.readFileSync(VERIFIED_SHA_REPORT, 'utf-8'))
+  : {};
 
 export const RULES: Rule[] = [
   {
@@ -407,6 +427,45 @@ export const RULES: Rule[] = [
         }
       }
       return out;
+    },
+  },
+  {
+    id: 'drill/unverified-lesson',
+    severity: 'error',
+    description:
+      'A manifest.json opts a lesson into an interactive mechanism (`interactive: "drill"` or `"full"`) without `verified: true` also being set. The stopping rule this repo runs on: never open an exercise on an unverified lesson.',
+    lesson: (file) => {
+      if (file.interactive === undefined || file.interactive === 'off') return [];
+      if (file.verified === true) return [];
+      return [
+        {
+          rule: 'drill/unverified-lesson',
+          severity: 'error',
+          target: file.target,
+          message: `interactive: "${file.interactive}" but verified is not true`,
+        },
+      ];
+    },
+  },
+  {
+    id: 'verify/stale-stamp',
+    severity: 'error',
+    description:
+      'A lesson manifest.json claims `verified: true` but its body sha does not match (or is missing from) content/_reports/verified-sha.json — either the file changed after being stamped, or `verified` was set by hand. Only scripts/stamp-verified.ts may set it; run that to re-stamp.',
+    lesson: (file) => {
+      if (file.verified !== true) return [];
+      const recorded = verifiedShaReport[file.target];
+      if (recorded === sha(file.raw)) return [];
+      return [
+        {
+          rule: 'verify/stale-stamp',
+          severity: 'error',
+          target: file.target,
+          message: recorded
+            ? 'body sha no longer matches the recorded verified stamp — re-run scripts/stamp-verified.ts'
+            : 'verified: true has no matching entry in verified-sha.json — set by hand, not by stamp-verified.ts',
+        },
+      ];
     },
   },
 ];

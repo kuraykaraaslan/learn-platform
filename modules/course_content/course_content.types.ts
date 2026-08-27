@@ -1,6 +1,9 @@
 import type { LessonBlock } from './course_content.blocks';
+import type { LessonMistake } from './course_content.mistakes';
 
 export type Bracket = '0-1' | '1-3' | '3-7' | '7-10';
+
+export type Interactive = 'off' | 'drill' | 'full';
 
 export type ManifestItem = {
   id: number;
@@ -12,6 +15,9 @@ export type ManifestItem = {
   minutes?: number;
   /** Lesson ids (globally unique across all courses) this lesson assumes. */
   prereqs?: number[];
+  /** Written only by scripts/stamp-verified.ts. */
+  verified?: boolean;
+  interactive?: Interactive;
 };
 
 export type CourseManifest = {
@@ -42,6 +48,7 @@ export type Lesson = ManifestItem & {
   courseSlug: string;
   lessonSlug: string;
   blocks: Record<keyof LessonSections, LessonBlock[]>;
+  mistakes: LessonMistake[];
 };
 
 export const BRACKET_LABELS: Record<Bracket, string> = {

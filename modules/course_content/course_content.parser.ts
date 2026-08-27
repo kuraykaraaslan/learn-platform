@@ -115,11 +115,19 @@ export function parseLessonMarkdown(raw: string): { title: string; sections: Les
 
 /** Same section split as parseLessonMarkdown, but each section is rendered to
  *  <pre>-bounded blocks instead of one opaque HTML string — see
- *  course_content.blocks.ts. */
-export function parseLessonBlocks(raw: string): { title: string; blocks: Record<keyof LessonSections, LessonBlock[]> } {
+ *  course_content.blocks.ts. Raw per-section markdown is returned alongside
+ *  (course_content.mistakes.ts's parseMistakes needs the Common Mistakes
+ *  section's raw markdown, not HTML; kept out of this file so it stays
+ *  single-purpose, per docs/phases/01-callouts-and-drill.md). */
+export function parseLessonBlocks(raw: string): {
+  title: string;
+  sections: LessonSections;
+  blocks: Record<keyof LessonSections, LessonBlock[]>;
+} {
   const { title, sections } = splitLessonSections(raw);
   return {
     title,
+    sections,
     blocks: Object.fromEntries(
       Object.entries(sections).map(([key, markdown]) => [
         key,

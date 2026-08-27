@@ -21,6 +21,15 @@ const ManifestItemSchema = z
     minutes: z.number().int().positive().optional(),
     /** Lesson ids (globally unique across all courses) this lesson assumes. */
     prereqs: z.array(z.number()).optional(),
+    /** Written ONLY by scripts/stamp-verified.ts — never by hand (enforced by
+     *  verify/stale-stamp, which checks this against a body-sha report the
+     *  script also writes). Absent/false means no exercise may open on this
+     *  lesson, full stop. */
+    verified: z.boolean().optional(),
+    /** Author-set opt-out/opt-in for interactive mechanisms. Absent behaves
+     *  as 'drill' would (gated by `verified` regardless), so omitting this
+     *  key changes nothing on its own. */
+    interactive: z.enum(['off', 'drill', 'full']).optional(),
   })
   .strict();
 

@@ -24,7 +24,18 @@ export const PROSE_CLASSES = cn(
   '[&_table]:w-full [&_table]:text-xs [&_table]:mb-3 [&_table]:border-collapse',
   '[&_th]:border [&_th]:border-border [&_th]:px-2 [&_th]:py-1 [&_th]:bg-surface-overlay [&_th]:text-left',
   '[&_td]:border [&_td]:border-border [&_td]:px-2 [&_td]:py-1',
-  '[&_blockquote]:border-l-2 [&_blockquote]:border-border-strong [&_blockquote]:pl-3 [&_blockquote]:text-text-secondary'
+  '[&_blockquote]:border-l-2 [&_blockquote]:border-border-strong [&_blockquote]:pl-3 [&_blockquote]:text-text-secondary',
+  // Callouts (remark-callouts.ts): a blockquote starting with `[!KIND]`
+  // becomes `<aside data-callout="kind">`. Zero client JS — theme tokens
+  // carry light/dark automatically. note/tip lean informational, warning is
+  // its own token, caution and pitfall (this corpus's inline Common Mistakes
+  // equivalent) both read as "this will actually break something".
+  '[&_aside]:rounded-lg [&_aside]:border-l-4 [&_aside]:px-4 [&_aside]:py-3 [&_aside]:mb-3 [&_aside>:last-child]:mb-0',
+  '[&_aside[data-callout="note"]]:bg-info-subtle [&_aside[data-callout="note"]]:border-info [&_aside[data-callout="note"]]:text-info-fg',
+  '[&_aside[data-callout="tip"]]:bg-success-subtle [&_aside[data-callout="tip"]]:border-success [&_aside[data-callout="tip"]]:text-success-fg',
+  '[&_aside[data-callout="warning"]]:bg-warning-subtle [&_aside[data-callout="warning"]]:border-warning [&_aside[data-callout="warning"]]:text-warning-fg',
+  '[&_aside[data-callout="caution"]]:bg-error-subtle [&_aside[data-callout="caution"]]:border-error [&_aside[data-callout="caution"]]:text-error-fg',
+  '[&_aside[data-callout="pitfall"]]:bg-error-subtle [&_aside[data-callout="pitfall"]]:border-error [&_aside[data-callout="pitfall"]]:text-error-fg'
 );
 
 function BlockView({ block }: { block: LessonBlock }) {

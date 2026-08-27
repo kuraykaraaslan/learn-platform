@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Badge } from '@kui/ui/Badge';
 import { BRACKET_LABELS, type Lesson } from '../course_content.types';
 import { LessonSectionCard } from './LessonSectionCard';
+import { FailureDrillCard } from './FailureDrillCard';
 
 export function LessonPage({ lesson, courseTitle }: { lesson: Lesson; courseTitle: string }) {
   return (
@@ -29,7 +30,7 @@ export function LessonPage({ lesson, courseTitle }: { lesson: Lesson; courseTitl
         <LessonSectionCard title="Key Concepts" blocks={lesson.blocks.keyConcepts} />
         <LessonSectionCard title="Example Code" blocks={lesson.blocks.exampleCode} />
         <LessonSectionCard title="When to Use" blocks={lesson.blocks.whenToUse} />
-        <LessonSectionCard title="Common Mistakes" blocks={lesson.blocks.commonMistakes} />
+        <FailureDrillCard lesson={lesson} blocks={lesson.blocks.commonMistakes} />
         <LessonSectionCard title="Further Reading" blocks={lesson.blocks.furtherReading} />
       </div>
     </div>
