@@ -2,9 +2,9 @@
   "generatedFrom": "scripts/verify-code.ts",
   "defectsByClass": {},
   "totals": {
-    "fences": 285,
+    "fences": 283,
     "clean": 61,
-    "onlyMissingModules": 224,
+    "onlyMissingModules": 222,
     "failing": 0,
     "lessonsAffected": 0,
     "privateAliasImports": 23

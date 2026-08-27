@@ -18,86 +18,40 @@ A **covering index** includes all columns needed to satisfy a query — both the
 - **Write overhead**: Every index adds overhead to INSERT/UPDATE/DELETE; don't index every column — index based on actual query patterns
 
 ## Example Code
-```typescript
-// Prisma schema annotations for strategic indexes
-// These translate directly to PostgreSQL CREATE INDEX statements in migrations
 
-// ─── Example: tenant_members table ───
-// Prisma schema:
-import { PrismaClient } from '@prisma/client';
-/*
-model TenantMember {
-  id          String   @id @default(uuid())
-  tenantId    String
-  userId      String
-  role        String   @default("member")
-  status      String   @default("active")  // 'active' | 'suspended' | 'invited'
-  lastActiveAt DateTime?
-  createdAt   DateTime @default(now())
+Same seeded table as the query-plan-analysis lesson: 400 tenants, 20,000 users, 50,000 `tenant_members` rows, no indexes yet. Each fence below is self-contained — run them in any order.
 
-  // 1. Composite: most queries filter by tenantId first, then userId
-  @@unique([tenantId, userId])
+**Composite index** — the leading-column rule in action: an index on `(tenant_id, status)` serves a query filtering on both, or on `tenant_id` alone, but not on `status` alone.
 
-  // 2. Composite for listing active members sorted by activity
-  @@index([tenantId, status, lastActiveAt(sort: Desc)])
+```sql run seed=tenant_members
+CREATE INDEX IF NOT EXISTS idx_tm_tenant_status ON tenant_members(tenant_id, status);
+ANALYZE tenant_members;
 
-  // 3. Partial index via raw SQL in migration (Prisma doesn't support partial indexes natively):
-  // CREATE INDEX tenant_members_active_idx ON tenant_members(tenant_id, last_active_at DESC)
-  // WHERE status = 'active';
-}
-*/
-
-// ─── Adding partial and covering indexes via Prisma's raw migration ───
-// In your migration SQL file (add to the migration Prisma generates):
-
-const migrationSQL = `
--- Partial index: only active sessions (90% of rows are expired)
-CREATE INDEX CONCURRENTLY user_sessions_active_idx
-  ON user_sessions(tenant_id, user_id, expires_at DESC)
-  WHERE expires_at > NOW();
-  -- This index is much smaller than a full index on user_sessions
-  -- because it excludes the vast majority of expired rows
-
--- Covering index: query fetches id, email, display_name filtered by tenant_id
--- The INCLUDE columns are in the index leaf but not the key — enables index-only scan
-CREATE INDEX CONCURRENTLY users_tenant_listing_idx
-  ON users(tenant_id, created_at DESC)
-  INCLUDE (id, email, display_name, status);
-  -- A SELECT id, email, display_name, status FROM users WHERE tenant_id = $1
-  -- ORDER BY created_at DESC can now be answered without touching the heap
-
--- Composite for audit log time-range queries within a tenant
-CREATE INDEX CONCURRENTLY audit_log_tenant_time_idx
-  ON audit_log(tenant_id, created_at DESC, event_type);
-`;
-
-// ─── Identifying missing indexes via EXPLAIN ANALYZE ───
-// Run this directly in psql or via a migration to add a helper function:
-
-async function explainQuery(db: PrismaClient, tenantId: string) {
-  // Use $queryRaw to run EXPLAIN ANALYZE on a specific query
-  const plan = await db.$queryRaw`
-    EXPLAIN (ANALYZE, BUFFERS, FORMAT TEXT)
-    SELECT id, email, display_name
-    FROM users
-    WHERE tenant_id = ${tenantId}
-    ORDER BY created_at DESC
-    LIMIT 50
-  `;
-  console.log(plan);
-  // Look for "Seq Scan" on large tables — that's a missing index
-  // Look for "Index Only Scan" — that means your covering index is working
-  // Look for "Buffers: shared hit=X read=Y" — high "read" means cold data
-}
-
-// ─── Composite index column order decision ───
-// BAD: tenantId has low cardinality in this context — put userId first if it's
-// in every query and has higher selectivity
-// @@index([status, tenantId, userId]) -- wrong order for WHERE tenantId = ? AND userId = ?
-
-// GOOD: leading columns match the WHERE clause filters
-// @@index([tenantId, userId, status]) -- correct for WHERE tenantId = ? AND userId = ?
+EXPLAIN ANALYZE
+SELECT * FROM tenant_members WHERE tenant_id = 42 AND status = 'active';
 ```
+
+**Covering index → index-only scan** — this is the one that needs three separate fences, and that's a genuine PostgreSQL constraint, not an artifact of running in a browser: `VACUUM` refuses to run inside a multi-statement transaction block, so it can never be combined with another statement in one call — not here, not in a real migration either.
+
+```sql run seed=tenant_members
+-- INCLUDE adds role/status to the index leaf without making them part of the
+-- key — they ride along for free once the index is already being scanned.
+CREATE INDEX IF NOT EXISTS idx_tm_covering ON tenant_members(tenant_id) INCLUDE (role, status);
+```
+
+```sql run seed=tenant_members
+-- Its own fence, on purpose — see the note above.
+VACUUM ANALYZE tenant_members;
+```
+
+```sql run seed=tenant_members
+-- Only role and status are selected, and both are covered by the index
+-- above — nothing here needs a row from the actual table.
+EXPLAIN ANALYZE
+SELECT role, status FROM tenant_members WHERE tenant_id = 42;
+```
+
+Look for `Index Only Scan` and `Heap Fetches: 0` in that last plan — PostgreSQL answered the query entirely from the index, without touching `tenant_members` itself. Before `VACUUM` ran, the same query would still use the index but couldn't claim `Heap Fetches: 0`: the visibility map (which rows are guaranteed visible to every transaction) is only current after a vacuum, and without it Postgres still has to check the heap.
 
 ## When to Use
 - Any query that filters on `tenantId` + one or more additional columns — these are your most common queries in a multi-tenant app and the first place to apply composite indexes

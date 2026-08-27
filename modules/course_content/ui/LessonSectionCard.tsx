@@ -14,6 +14,7 @@ import { ChecklistCard } from './widgets/ChecklistCard';
 import { MermaidBlock } from './MermaidBlock';
 import { RunMount } from './RunMount';
 import { ProjectRunner } from './ProjectRunner';
+import { SqlRunner } from './SqlRunner';
 
 // Tried next/dynamic() here to keep this JS out of the ~324 lesson pages
 // with no widget block — measured worse (8.59 kB vs 7.22 kB gz) and, per
@@ -81,6 +82,14 @@ function BlockView({
       // and a project needs the heavier runner, not the transpile-in-an-
       // iframe one.
       if (block.meta.project) return <ProjectRunner block={block} />;
+      // A `sql run` fence goes to PGlite (P10, real single-process Postgres
+      // in-browser), never the P8 JS sandbox — `seed=` names a file under
+      // content/_runtime/seeds/, already read into block.seedSql by
+      // course_content.blocks.ts (server-side, build time — "inlined at
+      // build time" for a statically generated lesson page).
+      if (block.lang === 'sql' && block.meta.run) {
+        return <SqlRunner block={block} seedSql={block.seedSql ?? ''} courseSlug={courseSlug} lessonFile={lessonFile} />;
+      }
       // RunMount replaces the plain highlighted+copy display for a `run`
       // fence — it has its own editable textarea and Run button. The actual
       // sandbox (CodeRunner) inside it is not imported until that button is

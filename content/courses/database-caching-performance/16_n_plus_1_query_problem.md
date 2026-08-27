@@ -18,38 +18,31 @@ The fix is almost always **eager loading** — telling the ORM to fetch related 
 - **JOIN vs two queries**: For large datasets, a single JOIN can be slower than two targeted queries; profile before assuming a JOIN is always better
 
 ## Example Code
+
+Same seeded table as the query-plan-analysis and index-strategy lessons. This is the shape a naive per-item loop actually fires — one query, run once per member of tenant 42 (~120 of them):
+
+```sql run seed=tenant_members
+-- One of the N: db.user.findUnique({ where: { id: member.userId } }) inside
+-- a .map() over the member list. Fast and harmless on its own — the problem
+-- is only visible at the round-trip count, not in this single query's plan.
+SELECT id, email, display_name FROM users WHERE id = 7;
+```
+
+And this is the fix — the same total data, in one round trip instead of N:
+
+```sql run seed=tenant_members
+-- Eager loading: fetch every member's user row in ONE query. This is what
+-- Prisma's include actually issues (a second bulk query, not a JOIN) — a
+-- plain JOIN is used here because that's the SQL-native equivalent.
+SELECT tm.id AS member_id, tm.role, u.email, u.display_name
+FROM tenant_members tm
+JOIN users u ON u.id = tm.user_id
+WHERE tm.tenant_id = 42;
+```
+
+Both queries run in a few milliseconds here — and that's exactly the honesty band's point. This is one browser tab, one process, no network. Running the first query 120 times (once per member of tenant 42) costs nothing extra in this environment, so N+1's actual damage doesn't show up in either the timing or the plan. In production, each of those N queries pays a real network round trip — typically 1-5ms same-region, 20-50ms+ cross-region — and that cost is what the second query collapses to one instance of, not a difference in query complexity.
+
 ```typescript
-// ─── PROBLEM: N+1 in disguise ───
-async function listTenantMembersNPlus1(tenantId: string) {
-  const members = await db.tenantMember.findMany({ where: { tenantId } });
-  // 1 query ✓
-
-  const result = await Promise.all(
-    members.map(async (member) => {
-      const user = await db.user.findUnique({ where: { id: member.userId } });
-      // N queries — one per member ✗
-      return { ...member, user };
-    })
-  );
-  return result;
-  // For 50 members: 51 DB round trips
-}
-
-// ─── FIX 1: Eager loading with Prisma include ───
-async function listTenantMembersEager(tenantId: string) {
-  return db.tenantMember.findMany({
-    where: { tenantId },
-    include: {
-      user: {
-        select: { id: true, email: true, displayName: true }, // only needed fields
-      },
-    },
-    // Prisma issues 2 queries: one for members, one bulk SELECT for all related users
-    // NOT a JOIN — Prisma uses a batched second query for relations
-  });
-  // For 50 members: 2 DB round trips
-}
-
 // ─── FIX 2: DataLoader for batching across concurrent requests ───
 // Useful when the same user might appear in multiple concurrent queries
 // (common in GraphQL resolvers, also useful in complex REST handlers)

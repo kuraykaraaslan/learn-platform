@@ -10,6 +10,7 @@ import {
 import type { Interactive } from '../../modules/course_content/course_content.types';
 import { parseFenceMeta } from '../../modules/course_content/course_content.fence-meta';
 import { RUNNABLE_LANGS } from '../../modules/course_content/course_content.transpile';
+import { MAX_SEED_BYTES } from '../../modules/course_content/course_content.seeds';
 
 export type Severity = 'error' | 'warn';
 
@@ -497,10 +498,10 @@ export const RULES: Rule[] = [
     id: 'run/marker-on-unrunnable-lang',
     severity: 'error',
     description:
-      'A `run` fence tagged with a language the sandbox cannot execute (course_content.transpile.ts\'s RUNNABLE_LANGS is exactly typescript/ts/javascript/js — no bash, yaml, java, dockerfile, hcl, tsx, or jsx). Applies to `run project` fences too — WebContainer still needs a real Node entry file.',
+      'A `run` fence tagged with a language no runner can execute. course_content.transpile.ts\'s RUNNABLE_LANGS (typescript/ts/javascript/js) goes through the P8 sandbox; `sql` goes through P10\'s PGlite runner instead — no bash, yaml, java, dockerfile, hcl, tsx, or jsx. Applies to `run project` fences too — WebContainer still needs a real Node entry file.',
     lesson: (file) =>
       file.fences
-        .filter((f) => parseFenceMeta(f.meta).run && !RUNNABLE_LANGS.has(f.lang))
+        .filter((f) => parseFenceMeta(f.meta).run && f.lang !== 'sql' && !RUNNABLE_LANGS.has(f.lang))
         .map((f) => ({
           rule: 'run/marker-on-unrunnable-lang',
           severity: 'error' as const,
@@ -513,13 +514,13 @@ export const RULES: Rule[] = [
     id: 'run/no-observable-output',
     severity: 'error',
     description:
-      'A plain `run` fence (P8 sandbox, not `run project`) with no console.log/warn/error/table call writes nothing when Run is clicked — this is the rule that catches the "44 no-import TS fences, only 5 actually print anything" trap docs/phases/08-live-js-runner.md measured. A dead Run button is worse than no Run button. Not applied to `run project`: a server\'s observable output is its HTTP response in the preview iframe, not a console call.',
+      'A plain `run` fence (P8 sandbox, not `run project`) with no console.log/warn/error/table call writes nothing when Run is clicked — this is the rule that catches the "44 no-import TS fences, only 5 actually print anything" trap docs/phases/08-live-js-runner.md measured. A dead Run button is worse than no Run button. Not applied to `run project`: a server\'s observable output is its HTTP response in the preview iframe, not a console call. Not applied to `sql` (P10): a query\'s result table/plan is its own observable output, with no console.* equivalent.',
     lesson: (file) => {
       const OUTPUT_CALL = /\bconsole\.(log|warn|error|table|info)\s*\(/;
       return file.fences
         .filter((f) => {
           const meta = parseFenceMeta(f.meta);
-          return meta.run && !meta.project && !OUTPUT_CALL.test(f.code);
+          return meta.run && !meta.project && f.lang !== 'sql' && !OUTPUT_CALL.test(f.code);
         })
         .map((f) => ({
           rule: 'run/no-observable-output',
@@ -534,13 +535,13 @@ export const RULES: Rule[] = [
     id: 'run/not-self-contained',
     severity: 'error',
     description:
-      'A plain `run` fence (P8 sandbox) that imports something. That sandbox\'s iframe has no network access at all (default-src \'none\') and no module loader, so any import fails at execution time regardless of whether the package exists. Does not apply to `run project` — WebContainer runs a real `npm install`, so imports are the entire point.',
+      'A plain `run` fence (P8 sandbox) that imports something. That sandbox\'s iframe has no network access at all (default-src \'none\') and no module loader, so any import fails at execution time regardless of whether the package exists. Does not apply to `run project` — WebContainer runs a real `npm install`, so imports are the entire point. Does not apply to `sql` (P10) — PGlite has no JS import statements to match, and its own dataset comes from `seed=`, not a network call.',
     lesson: (file) => {
       const IMPORT_OR_REQUIRE = /^\s*import\b|\brequire\s*\(/m;
       return file.fences
         .filter((f) => {
           const meta = parseFenceMeta(f.meta);
-          return meta.run && !meta.project && IMPORT_OR_REQUIRE.test(f.code);
+          return meta.run && !meta.project && f.lang !== 'sql' && IMPORT_OR_REQUIRE.test(f.code);
         })
         .map((f) => ({
           rule: 'run/not-self-contained',
@@ -550,6 +551,43 @@ export const RULES: Rule[] = [
           message: '`run` fence imports something — the sandbox has no network access and no module loader',
         }));
     },
+  },
+  {
+    id: 'run/missing-seed-file',
+    severity: 'error',
+    description:
+      'A `sql run seed=<name>` fence (P10, PGlite) names a seed with no matching content/_runtime/seeds/<name>.sql file, or one over the 50 KB cap. course_content.seeds.ts throws for the same reason at build time (loadSeed() runs during static generation) — this rule catches it at lint time instead, before a full `next build` is needed to find out.',
+    lesson: (file) =>
+      file.fences
+        .filter((f) => f.lang === 'sql' && parseFenceMeta(f.meta).run && parseFenceMeta(f.meta).seed)
+        .flatMap((f) => {
+          const seedName = parseFenceMeta(f.meta).seed as string;
+          const seedPath = path.join(process.cwd(), 'content', '_runtime', 'seeds', `${seedName}.sql`);
+          if (!fs.existsSync(seedPath)) {
+            return [
+              {
+                rule: 'run/missing-seed-file',
+                severity: 'error' as const,
+                target: file.target,
+                line: f.line,
+                message: `seed="${seedName}" has no content/_runtime/seeds/${seedName}.sql`,
+              },
+            ];
+          }
+          const size = fs.statSync(seedPath).size;
+          if (size > MAX_SEED_BYTES) {
+            return [
+              {
+                rule: 'run/missing-seed-file',
+                severity: 'error' as const,
+                target: file.target,
+                line: f.line,
+                message: `content/_runtime/seeds/${seedName}.sql is ${size} bytes, over the ${MAX_SEED_BYTES}-byte cap`,
+              },
+            ];
+          }
+          return [];
+        }),
   },
   {
     id: 'run/needs-native',

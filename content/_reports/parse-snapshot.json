@@ -2197,7 +2197,7 @@
         "title": "45d41106d839eb1e",
         "whatItIs": "2796b805235bc4c1",
         "keyConcepts": "d6495e81bffdd043",
-        "exampleCode": "62d56276516e0851",
+        "exampleCode": "66d483f8e59b9ad0",
         "whenToUse": "b186107dd764ce22",
         "commonMistakes": "ec523975f9f4e017",
         "furtherReading": "ab959b2f927e5dd6"
@@ -2206,7 +2206,7 @@
         "title": "a551e2011d930ae8",
         "whatItIs": "3c62e92ad6bb18ea",
         "keyConcepts": "d1de5b130a3f02e1",
-        "exampleCode": "bd7f2315377a3c8c",
+        "exampleCode": "00b916a022b78414",
         "whenToUse": "c681da75fa0894ef",
         "commonMistakes": "5e3691d2149ea4c6",
         "furtherReading": "a45b95be4992f8fc"
@@ -2215,9 +2215,9 @@
         "title": "4422a6d89ccfe51b",
         "whatItIs": "c8dbc7fdfd04e1dd",
         "keyConcepts": "a112fb9166831b32",
-        "exampleCode": "5ba4a6f9bfad6d4d",
+        "exampleCode": "c30e5edd8ae5b90f",
         "whenToUse": "085f93aed425acb2",
-        "commonMistakes": "a4d985f007968cae",
+        "commonMistakes": "a7c179d851afcaf4",
         "furtherReading": "019e9546d3251bb2"
       },
       "19_connection_pool_tuning.md": {

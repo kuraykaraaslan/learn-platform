@@ -5,9 +5,9 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 | | |
 |---|---:|
-| TS/TSX fences | 285 |
+| TS/TSX fences | 283 |
 | Clean | 61 |
-| Only uninstalled-module errors (tolerated) | 224 |
+| Only uninstalled-module errors (tolerated) | 222 |
 | **Failing** | **0** |
 | Lessons affected | 0 |
 | Fences importing private `@/libs|modules|stores` aliases | 23 |

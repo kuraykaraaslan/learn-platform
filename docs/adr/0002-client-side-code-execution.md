@@ -125,6 +125,25 @@ statik başlık eşleştirmesi rota bazlı, sayfa içeriği bazlı değil). Ger�
 tarayıcı taraması yapılınca ve temiz çıkarsa, `next.config.ts`'teki `source`
 deseni `/(.*)`'e genişletilebilir.
 
+## P10 uygulaması — ölçülen boyut, beyan edilenden farklı (2026-08-28)
+
+`docs/phases/10-pglite-sql.md` "< 3 MB gz beyan ediliyor, doğrulanacak" diyor —
+kendi metni bile bunu ölçülmemiş bir tahmin olarak işaretliyor. Gerçek `next
+build` çıktısı üzerinden ölçüldü (`@electric-sql/pglite` 0.5.8):
+`pglite.wasm` tek başına 3.3 MB gz, `pglite.data` 1.8 MB gz — ikisi birlikte
+**~5.1 MB gz**, JS sarmalayıcı chunk'ları hariç. Bu ikisi `new PGlite()`'ın
+gerçek minimum maliyeti; paketin `exports` alanında daha küçük bir alternatif
+build yok, ve Postgres'i WASM'a derleyen ikili dosyanın kendisi bu boyutta.
+
+Karar: yine de uygulandı. Gerekçe — bu, sayfa yüklemesinde **0 byte**
+(tıklamaya kadar hiç indirilmiyor, `run/marker-on-unrunnable-lang` ve
+`ui/SqlRunner.test.ts`'in "PGlite modül kapsamında import edilmiyor" testiyle
+doğrulandı), tek seferlik, okuyucunun kendi isteğiyle tetiklediği bir indirme;
+P9'un WebContainer'ı zaten aynı sınıfta çok daha büyük bir opt-in çalışma
+zamanı kabul etmişti. Düzeltme: spec'in kendi "< 3 MB" hedefi yanlış — gerçek
+sayı ~5-6 MB gz (wasm + data + JS), ve bu ADR'ın kaydı bunu düzeltiyor, sessizce
+geçmiyor.
+
 ## Related
 - `docs/adr/0001-no-backend-markdown-content.md` — genişletilen karar
 - `docs/phases/08-live-js-runner.md`, `09-webcontainer.md`, `10-pglite-sql.md`,

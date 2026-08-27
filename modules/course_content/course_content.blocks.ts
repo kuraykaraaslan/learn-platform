@@ -3,6 +3,7 @@ import type { Root as HastRoot, RootContent, Element } from 'hast';
 import type { LessonSections } from './course_content.types';
 import { parseTemplate, parseChecklist, looksLikeChecklist, type LessonWidget } from './course_content.templates';
 import { parseFenceMeta, type FenceMeta } from './course_content.fence-meta';
+import { loadSeed } from './course_content.seeds';
 
 export type { LessonWidget } from './course_content.templates';
 export type { FenceMeta } from './course_content.fence-meta';
@@ -19,7 +20,7 @@ declare module 'hast' {
 
 export type LessonBlock =
   | { kind: 'html'; id: string; html: string }
-  | { kind: 'code'; id: string; lang: string; meta: FenceMeta; source: string; html: string }
+  | { kind: 'code'; id: string; lang: string; meta: FenceMeta; source: string; html: string; seedSql?: string }
   | { kind: 'widget'; id: string; widget: LessonWidget; html: string };
 
 function isPre(node: RootContent): node is Element {
@@ -83,7 +84,15 @@ export function splitBlocks(root: HastRoot, sectionKey: keyof LessonSections): L
     if (lang === 'template') widget = parseTemplate(source);
     else if ((lang === 'md' || lang === 'markdown') && looksLikeChecklist(source)) widget = parseChecklist(source);
 
-    blocks.push(widget ? { kind: 'widget', id, widget, html } : { kind: 'code', id, lang, meta, source, html });
+    // Read here, not in the UI layer: loadSeed() touches node:fs, and this
+    // module (unlike a `'use client'` component) is only ever reachable from
+    // client bundles through a type-only `import type { LessonBlock }` —
+    // erased at compile time, so fs never ends up in a webpack client build.
+    const seedSql = lang === 'sql' && meta.run && meta.seed ? loadSeed(meta.seed) : undefined;
+
+    blocks.push(
+      widget ? { kind: 'widget', id, widget, html } : { kind: 'code', id, lang, meta, source, html, seedSql }
+    );
   }
   flushHtml();
 

@@ -18,88 +18,50 @@ The key things to look for in a plan are: **Seq Scan on a large table** (means n
 - **Buffers: shared hit / read**: Cache hits (fast) vs disk reads (slow); high "read" values indicate cold data
 
 ## Example Code
-```typescript
-// Reading and acting on EXPLAIN ANALYZE output
 
-// ─── Run EXPLAIN ANALYZE via Prisma raw query ───
-import { PrismaClient } from '@prisma/client';
-async function analyzeQuery(db: PrismaClient, tenantId: string) {
-  // Always use EXPLAIN ANALYZE on dev/staging, not production (it runs the query)
-  // Use EXPLAIN (no ANALYZE) on production to avoid executing expensive queries
-  const plan = await db.$queryRaw`
-    EXPLAIN (ANALYZE, BUFFERS, VERBOSE, FORMAT TEXT)
-    SELECT
-      tm.id, tm.role, tm.last_active_at,
-      u.email, u.display_name
-    FROM tenant_members tm
-    INNER JOIN users u ON u.id = tm.user_id
-    WHERE tm.tenant_id = ${tenantId}
-      AND tm.status = 'active'
-    ORDER BY tm.last_active_at DESC
-    LIMIT 50
-  `;
+This runs against a real, single-process Postgres in your browser (PGlite), seeded with 400 tenants, 20,000 users, and 50,000 `tenant_members` rows — no index on `tenant_id` yet. Run it, read the plan, then try the second query below.
 
-  // plan is an array of rows, each with a "QUERY PLAN" string
-  // Log it to console during development
-  (plan as any[]).forEach((row) => console.log(row['QUERY PLAN']));
-}
-
-/*
-Example output to read:
-─────────────────────────────────────────────────────────────────────────────
-Limit  (cost=0.43..150.12 rows=50 width=96) (actual time=0.123..2.341 ms rows=50 loops=1)
-  ->  Nested Loop  (cost=0.43..3420.00 rows=1140 width=96) (actual time=0.121..2.309 ms rows=50 loops=1)
-        ->  Index Scan using tenant_members_tenant_status_active_idx on tenant_members tm
-              (cost=0.29..1700.00 rows=1140 width=48) (actual time=0.089..1.102 ms rows=50 loops=1)
-              Index Cond: ((tenant_id = '...'::uuid) AND (status = 'active'))
-              Filter: (status = 'active')
-        ->  Index Scan using users_pkey on users u
-              (cost=0.14..1.52 rows=1 width=48) (actual time=0.023..0.023 ms rows=1 loops=50)
-              Index Cond: (id = tm.user_id)
-Buffers: shared hit=203 read=0
-Planning Time: 0.845 ms
-Execution Time: 2.451 ms
-
-READING THIS PLAN:
-- "Limit" at the top → applied after the inner plan; execution stops at 50 rows
-- "Nested Loop" → for each of the 50 tenant_members rows, fetch 1 user row
-- First Index Scan uses our partial index (tenant_id + status = 'active') ✓
-- Second Index Scan uses users_pkey (primary key) → O(1) per lookup ✓
-- "Buffers: shared hit=203 read=0" → all data in memory, no disk I/O ✓
-- Execution Time: 2.451 ms → acceptable for this query
-
-RED FLAGS to look for in plans:
-- "Seq Scan on [large_table]" → missing index
-- "actual rows=50000" vs "rows=100" → stale statistics (run ANALYZE)
-- "Sort Method: external merge  Disk: 12288kB" → sort spilled to disk (add index, or increase work_mem)
-- "actual time=1200.000..1200.000 ms" on a specific node → that node is the bottleneck
-─────────────────────────────────────────────────────────────────────────────
-*/
-
-// ─── Enable slow query logging in PostgreSQL ───
-// Add to postgresql.conf (or via Supabase/RDS parameter group):
-// log_min_duration_statement = 200   # log queries taking > 200ms
-// log_statement = 'none'             # don't log all statements, just slow ones
-
-// ─── Add Prisma query logging in development ───
-export function createDevDb() {
-  return new PrismaClient({
-    log: [
-      { emit: 'event', level: 'query' },
-      { emit: 'stdout', level: 'warn' },
-    ],
-  });
-}
-
-// Listen for slow queries (> 100ms) and log them
-export function attachSlowQueryLogger(db: PrismaClient, thresholdMs = 100) {
-  db.$on('query', (e) => {
-    if (e.duration > thresholdMs) {
-      console.warn(`SLOW QUERY (${e.duration}ms):\n${e.query}\nParams: ${e.params}`);
-    }
-  });
-}
+```sql run seed=tenant_members
+EXPLAIN ANALYZE
+SELECT * FROM tenant_members WHERE tenant_id = 42;
 ```
+
+Read the "Seq Scan" line, the "Rows Removed by Filter" line (everything the planner had to read and discard), and the "Execution Time" line — then add the index this table is missing and run the same query again:
+
+```sql run seed=tenant_members
+CREATE INDEX IF NOT EXISTS idx_tenant_members_tenant_id ON tenant_members(tenant_id);
+ANALYZE tenant_members;
+
+EXPLAIN ANALYZE
+SELECT * FROM tenant_members WHERE tenant_id = 42;
+```
+
+The plan changes shape — from a full scan of all 50,000 rows to a bitmap index scan that only touches the ~125 rows for tenant 42. That's not a simulated difference; it's the same planner PostgreSQL runs in production, choosing a different strategy because `ANALYZE` gave it real statistics and a usable index now exists.
+
+```sql run seed=tenant_members
+-- IF NOT EXISTS again: this fence stands on its own whether or not you ran
+-- the one above first — the index is a precondition of the plan below, not
+-- something this specific query creates.
+CREATE INDEX IF NOT EXISTS idx_tenant_members_tenant_id ON tenant_members(tenant_id);
+ANALYZE tenant_members;
+
+-- EXPLAIN (no ANALYZE) shows the estimated plan without running the query —
+-- the version safe to run against a production table you don't want to
+-- actually execute (an UPDATE or DELETE, for instance).
+EXPLAIN
+SELECT tm.id, tm.role, tm.last_active_at, u.email, u.display_name
+FROM tenant_members tm
+JOIN users u ON u.id = tm.user_id
+WHERE tm.tenant_id = 42 AND tm.status = 'active'
+ORDER BY tm.last_active_at DESC
+LIMIT 50;
+```
+
+RED FLAGS to look for in a plan, in any of the three above:
+- **"Seq Scan" on a table this size** — missing index, or the planner decided the index wasn't worth using (check selectivity)
+- **A large gap between the estimated `rows=` and the actual `rows=`** — stale statistics; run `ANALYZE`
+- **"Rows Removed by Filter" close to the total row count** — the index (if any) narrowed the search far less than you'd expect
+- **A high "actual time" on one specific node** — that node, not the query as a whole, is the bottleneck
 
 ## When to Use
 - When an API endpoint is noticeably slow — run `EXPLAIN ANALYZE` on the specific query before reaching for indexes
