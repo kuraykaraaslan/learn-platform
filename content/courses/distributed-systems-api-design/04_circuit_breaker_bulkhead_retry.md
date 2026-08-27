@@ -19,6 +19,17 @@ The **Bulkhead** pattern isolates failures by partitioning resources. Named afte
 - **Retry budget**: A total limit on retries per time window to prevent retry amplification in fan-out call graphs
 - **Idempotency requirement**: Retries are only safe if the operation is idempotent; never retry non-idempotent mutations without an idempotency key
 
+The three circuit states and the transitions between them — the part a bullet list can describe but not really show:
+
+```mermaid
+stateDiagram-v2
+    [*] --> CLOSED
+    CLOSED --> OPEN: failures >= threshold
+    OPEN --> HALF_OPEN: after resetTimeoutMs
+    HALF_OPEN --> CLOSED: probe succeeds
+    HALF_OPEN --> OPEN: probe fails
+```
+
 ## Example Code
 ```typescript
 // Circuit breaker + retry with exponential backoff + jitter

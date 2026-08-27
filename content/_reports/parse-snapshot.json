@@ -2279,7 +2279,7 @@
       "04_circuit_breaker_bulkhead_retry.md": {
         "title": "a2f8585952eaff09",
         "whatItIs": "e20c8abcd4aba544",
-        "keyConcepts": "b0ac17ec08399495",
+        "keyConcepts": "9c23502462b7d084",
         "exampleCode": "7d28e6ffdea7f25e",
         "whenToUse": "0a48110137c46a73",
         "commonMistakes": "2d6236c24c4b768b",
@@ -2378,7 +2378,7 @@
       "15_two_phase_commit_eventual_consistency.md": {
         "title": "5d9f9edaf4e453de",
         "whatItIs": "559f5298d7f4dc97",
-        "keyConcepts": "5b99fbb4b26d6652",
+        "keyConcepts": "ae516acbe8c1434c",
         "exampleCode": "4c756e5fb074912d",
         "whenToUse": "26b3985faff0ed21",
         "commonMistakes": "9a6abc05b1cc7208",

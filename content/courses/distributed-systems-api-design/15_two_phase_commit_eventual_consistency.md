@@ -17,6 +17,22 @@ The problem with 2PC is its availability and latency cost. During the commit pha
 - **BASE**: Basically Available, Soft state, Eventual consistency — the alternative to ACID for distributed systems; AP systems are BASE systems
 - **Compensating transaction**: The "undo" of an eventually consistent operation if a later step fails; forward-moving, not a rollback
 
+The two phases, and why a coordinator crash between them is the whole problem — both participants are shown, but 2PC works the same way with any number of them:
+
+```mermaid
+sequenceDiagram
+    participant C as Coordinator
+    participant P1 as Participant 1
+    participant P2 as Participant 2
+    C->>P1: prepare?
+    C->>P2: prepare?
+    P1-->>C: yes
+    P2-->>C: yes
+    Note over C: if any participant said no, abort instead
+    C->>P1: commit
+    C->>P2: commit
+```
+
 ## Example Code
 ```typescript
 // Demonstrating WHY 2PC is impractical and what eventual consistency looks like instead
