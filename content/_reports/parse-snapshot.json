@@ -2377,7 +2377,7 @@
       },
       "15_two_phase_commit_eventual_consistency.md": {
         "title": "5d9f9edaf4e453de",
-        "whatItIs": "559f5298d7f4dc97",
+        "whatItIs": "200bc29f8d23b6be",
         "keyConcepts": "ae516acbe8c1434c",
         "exampleCode": "4c756e5fb074912d",
         "whenToUse": "26b3985faff0ed21",
@@ -2752,7 +2752,7 @@
         "title": "61c08f113d4b3186",
         "whatItIs": "75827f0710d0b51d",
         "keyConcepts": "82c3904379a9862f",
-        "exampleCode": "f3f386b73b9b68db",
+        "exampleCode": "0bae654ef91dd6ce",
         "whenToUse": "3bfb89c57a8ae57e",
         "commonMistakes": "fc8c2e04b86e5a94",
         "furtherReading": "c69616dc1daa489c"
@@ -2953,7 +2953,7 @@
       "57_blue_green_vs_rolling_deployment.md": {
         "title": "27924432938e69ae",
         "whatItIs": "45e60d010772952f",
-        "keyConcepts": "cebac772c4958348",
+        "keyConcepts": "8184a27faf7c0e1e",
         "exampleCode": "ae6d8323f6a72df4",
         "whenToUse": "65d7170ea1e825d0",
         "commonMistakes": "0f4cbc5276e9e3a7",

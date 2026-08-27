@@ -112,6 +112,23 @@ import { Modal } from '@/components/ui/modal';
 // }
 ```
 
+The barrel-file case from above, isolated — toggle between the two to see exactly what changes and nothing else:
+
+```typescript
+// ── broken ──
+// Forces the bundler to process the entire barrel file, even though only
+// three components are actually used — every other export in
+// @/components/ui/index.ts still gets pulled into the dependency graph.
+import { Button, Input, Modal } from '@/components/ui';
+
+// ── fixed ──
+// Each import resolves straight to its own module; the bundler never even
+// sees the other 47 components the barrel file re-exports.
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Modal } from '@/components/ui/modal';
+```
+
 ## When to Use
 - Run bundle analysis (`ANALYZE=true next build`) whenever you add a new npm dependency that has client-side usage
 - Apply `next/dynamic` to any component that imports a library over 50KB: chart libraries, rich text editors, PDF viewers, syntax highlighters, map libraries

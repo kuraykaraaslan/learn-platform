@@ -11,6 +11,7 @@ import type { Interactive } from '../../modules/course_content/course_content.ty
 import { parseFenceMeta } from '../../modules/course_content/course_content.fence-meta';
 import { RUNNABLE_LANGS } from '../../modules/course_content/course_content.transpile';
 import { MAX_SEED_BYTES } from '../../modules/course_content/course_content.seeds';
+import { parseQuiz } from '../../modules/course_content/course_content.quiz';
 
 export type Severity = 'error' | 'warn';
 
@@ -644,6 +645,87 @@ export const RULES: Rule[] = [
             message: `\`run project\` fence imports \`${p.name}\`, which WebContainer cannot run`,
           }))
         );
+    },
+  },
+  {
+    id: 'quiz/missing-why',
+    severity: 'error',
+    description:
+      'A `quiz` fence course_content.quiz.ts\'s zod schema rejects — a missing `why` on some option, zero or more than one `correct: true`, fewer than 2 options, or unparseable YAML. docs/phases/06-quiz-tradeoff-diff.md: a wrong option has to say why it\'s wrong or the quiz is a guessing game, not a check.',
+    lesson: (file) =>
+      file.fences
+        .filter((f) => f.lang === 'quiz')
+        .flatMap((f) => {
+          try {
+            parseQuiz(f.code);
+            return [];
+          } catch (error) {
+            return [
+              {
+                rule: 'quiz/missing-why',
+                severity: 'error' as const,
+                target: file.target,
+                line: f.line,
+                message: `quiz fence failed validation: ${error instanceof Error ? error.message : String(error)}`,
+              },
+            ];
+          }
+        }),
+  },
+  {
+    id: 'quiz/unanchored-answer',
+    severity: 'error',
+    description:
+      'A `quiz` question\'s `anchor` does not appear verbatim in the lesson\'s own prose (outside quiz fence bodies themselves — a self-referential match doesn\'t count). The whole point of anchor: a question the lesson didn\'t actually say cannot be quizzed, closing the roadmap\'s "generated text silently canonicalizes what the lesson currently gets wrong" objection.',
+    lesson: (file) => {
+      const quizFences = file.fences.filter((f) => f.lang === 'quiz');
+      if (quizFences.length === 0) return [];
+      const proseWithoutQuizzes = quizFences.reduce((text, f) => text.split(f.code).join(''), file.raw);
+
+      return quizFences.flatMap((f) => {
+        let questions;
+        try {
+          questions = parseQuiz(f.code).questions;
+        } catch {
+          return []; // quiz/missing-why already reports this fence
+        }
+        return questions
+          .filter((q) => !proseWithoutQuizzes.includes(q.anchor))
+          .map((q) => ({
+            rule: 'quiz/unanchored-answer',
+            severity: 'error' as const,
+            target: file.target,
+            line: f.line,
+            message: `anchor "${q.anchor}" does not appear in this lesson's own prose`,
+          }));
+      });
+    },
+  },
+  {
+    id: 'quiz/max-three',
+    severity: 'error',
+    description: 'More than 3 quiz questions total across every `quiz` fence in one lesson.',
+    lesson: (file) => {
+      const quizFences = file.fences.filter((f) => f.lang === 'quiz');
+      if (quizFences.length === 0) return [];
+
+      let total = 0;
+      for (const f of quizFences) {
+        try {
+          total += parseQuiz(f.code).questions.length;
+        } catch {
+          // quiz/missing-why already reports a malformed fence
+        }
+      }
+      if (total <= 3) return [];
+      return [
+        {
+          rule: 'quiz/max-three',
+          severity: 'error' as const,
+          target: file.target,
+          message: `${total} quiz questions across ${quizFences.length} fence(s) — at most 3 per lesson`,
+        },
+      ];
     },
   },
 ];

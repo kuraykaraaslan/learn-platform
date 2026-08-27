@@ -1,12 +1,20 @@
 import { toHtml } from 'hast-util-to-html';
 import type { Root as HastRoot, RootContent, Element } from 'hast';
 import type { LessonSections } from './course_content.types';
-import { parseTemplate, parseChecklist, looksLikeChecklist, type LessonWidget } from './course_content.templates';
+import { parseTemplate, parseChecklist, looksLikeChecklist, type TemplateWidget, type ChecklistWidget } from './course_content.templates';
+import { parseQuiz, type QuizWidget } from './course_content.quiz';
+import { parseTradeoff, type TradeoffWidget } from './course_content.tradeoff';
+import { looksLikeDiff, parseDiff, type DiffWidget } from './course_content.diff';
 import { parseFenceMeta, type FenceMeta } from './course_content.fence-meta';
 import { loadSeed } from './course_content.seeds';
 
-export type { LessonWidget } from './course_content.templates';
 export type { FenceMeta } from './course_content.fence-meta';
+export type { TemplateWidget, ChecklistWidget } from './course_content.templates';
+export type { QuizWidget, QuizQuestion, QuizOption } from './course_content.quiz';
+export type { TradeoffWidget } from './course_content.tradeoff';
+export type { DiffWidget } from './course_content.diff';
+
+export type LessonWidget = TemplateWidget | ChecklistWidget | QuizWidget | TradeoffWidget | DiffWidget;
 
 declare module 'hast' {
   interface Data {
@@ -80,9 +88,21 @@ export function splitBlocks(root: HastRoot, sectionKey: keyof LessonSections): L
     // still tagged `md`/`markdown` was NOT form-shaped (that retag is
     // exhaustive over the corpus), so if it also has checkbox items it's the
     // corpus's other widget shape: a plain checklist, never both.
+    //
+    // quiz/tradeoff parsing can throw (bad YAML, a zod violation) — left
+    // uncaught on purpose: docs/phases/06-quiz-tradeoff-diff.md calls for a
+    // bad payload to be a build failure ("widget/invalid-payload"), not a
+    // silently-dropped widget.
+    //
+    // A diff pair is detected structurally (the broken/fixed marker
+    // comment), not by a dedicated fence language — it labels a shape
+    // that's already sitting in whatever language the fence was written in.
     let widget: LessonWidget | null = null;
     if (lang === 'template') widget = parseTemplate(source);
     else if ((lang === 'md' || lang === 'markdown') && looksLikeChecklist(source)) widget = parseChecklist(source);
+    else if (lang === 'quiz') widget = parseQuiz(source);
+    else if (lang === 'tradeoff') widget = parseTradeoff(source);
+    else if (looksLikeDiff(source)) widget = parseDiff(source);
 
     // Read here, not in the UI layer: loadSeed() touches node:fs, and this
     // module (unlike a `'use client'` component) is only ever reachable from

@@ -27,8 +27,6 @@ export type ChecklistWidget = {
   raw: string;
 };
 
-export type LessonWidget = TemplateWidget | ChecklistWidget;
-
 // `^\s*[-*]\s+\[[ xX]\]` — a checkbox list item. Captured separately from
 // CHECKBOX_TOKEN below because at the line level it also owns the leading
 // bullet marker (kept as static text so the rendered list still looks like

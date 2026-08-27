@@ -7,6 +7,31 @@ The problem with 2PC is its availability and latency cost. During the commit pha
 
 **Eventual consistency** is the practical alternative: accept that different parts of the system may be temporarily out of sync, and design the system to converge to a consistent state over time. The tools for this are the Saga pattern (item 3), the Outbox pattern (item 14), idempotency keys (item 7), and compensating transactions. Eventual consistency is not "eventual incorrectness" — it's a deliberate choice to trade the synchronous consistency guarantee for availability and performance, while using design patterns to ensure the system always converges to the correct state.
 
+```quiz
+- q: "The 2PC coordinator crashes right after the commit phase starts, before every participant has heard back. What happens to a participant that already said yes and is waiting?"
+  anchor: "they've locked their resources and can neither commit nor abort without hearing from the coordinator"
+  options:
+    - text: "It automatically rolls back its own local transaction after a short timeout"
+      correct: false
+      why: "There's no automatic abort built into classic 2PC here — that's exactly what makes this the blocking problem, not a self-healing one."
+    - text: "It stays blocked, holding its locks, until it hears from the coordinator"
+      correct: true
+      why: "The participant already said yes and is in the prepared state — it has locked its resources and can neither commit nor abort without hearing from the coordinator."
+    - text: "It commits anyway, assuming the coordinator meant to say commit"
+      correct: false
+      why: "Assuming success would risk committing a transaction the coordinator actually meant to abort — 2PC exists specifically to avoid that kind of guess."
+
+- q: "What does \"eventual consistency\" actually promise, per this lesson?"
+  anchor: "a deliberate choice to trade the synchronous consistency guarantee for availability and performance"
+  options:
+    - text: "The system might or might not become consistent, depending on load"
+      correct: false
+      why: "The lesson is explicit that eventual consistency is not \"eventual incorrectness\" — convergence is guaranteed by design, not a maybe."
+    - text: "A deliberate tradeoff of synchronous consistency for availability and performance, with the system still converging to correct state"
+      correct: true
+      why: "That's the exact tradeoff the lesson names — synchronous consistency traded for availability and performance, with correctness ensured by patterns like sagas and outbox, not abandoned."
+```
+
 ## Key Concepts
 - **ACID transaction**: Atomic, Consistent, Isolated, Durable — guaranteed for single-database operations; the gold standard you're giving up when spanning databases
 - **Two-Phase Commit (2PC)**: Coordinator + participants protocol; prepare phase + commit phase; provides atomicity at the cost of blocking on coordinator failure

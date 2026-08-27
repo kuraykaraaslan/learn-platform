@@ -16,6 +16,9 @@ import { RunMount } from './RunMount';
 import { ProjectRunner } from './ProjectRunner';
 import { SqlRunner } from './SqlRunner';
 import { PredictOutputCard } from './PredictOutputCard';
+import { QuizCard } from './QuizCard';
+import { TradeoffCard } from './TradeoffCard';
+import { DiffCard } from './DiffCard';
 
 // Tried next/dynamic() here to keep this JS out of the ~324 lesson pages
 // with no widget block — measured worse (8.59 kB vs 7.22 kB gz) and, per
@@ -62,10 +65,12 @@ function BlockView({
   block,
   courseSlug,
   lessonFile,
+  verified,
 }: {
   block: LessonBlock;
   courseSlug: string;
   lessonFile: string;
+  verified: boolean;
 }) {
   switch (block.kind) {
     case 'html':
@@ -113,6 +118,12 @@ function BlockView({
           return (
             <ChecklistCard widget={block.widget} blockId={block.id} courseSlug={courseSlug} lessonFile={lessonFile} />
           );
+        case 'quiz':
+          return <QuizCard widget={block.widget} verified={verified} />;
+        case 'tradeoff':
+          return <TradeoffCard widget={block.widget} />;
+        case 'diff':
+          return <DiffCard widget={block.widget} />;
       }
   }
 }
@@ -123,12 +134,17 @@ export function LessonSectionCard({
   courseSlug,
   lessonFile,
   className,
+  // Gates QuizCard only (docs/phases/06's constraint #1) — defaults to
+  // false, the safe direction: a caller that doesn't know or pass a
+  // lesson's verified status never accidentally opens a quiz.
+  verified = false,
 }: {
   title: string;
   blocks: LessonBlock[];
   courseSlug: string;
   lessonFile: string;
   className?: string;
+  verified?: boolean;
 }) {
   if (blocks.length === 0) return null;
 
@@ -139,7 +155,7 @@ export function LessonSectionCard({
       </h2>
       <div className={PROSE_CLASSES}>
         {blocks.map((block) => (
-          <BlockView key={block.id} block={block} courseSlug={courseSlug} lessonFile={lessonFile} />
+          <BlockView key={block.id} block={block} courseSlug={courseSlug} lessonFile={lessonFile} verified={verified} />
         ))}
       </div>
     </section>

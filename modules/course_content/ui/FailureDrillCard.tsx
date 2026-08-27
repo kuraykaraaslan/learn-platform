@@ -106,7 +106,13 @@ export function FailureDrillCard({ lesson, blocks }: { lesson: Lesson; blocks: L
 
   if (!eligible)
     return (
-      <LessonSectionCard title="Common Mistakes" blocks={blocks} courseSlug={lesson.courseSlug} lessonFile={lesson.file} />
+      <LessonSectionCard
+        title="Common Mistakes"
+        blocks={blocks}
+        courseSlug={lesson.courseSlug}
+        lessonFile={lesson.file}
+        verified={lesson.verified === true}
+      />
     );
 
   return (

@@ -31,6 +31,21 @@ stateDiagram-v2
     GreenLive --> BlueLive: rollback — flip back, instant
 ```
 
+```tradeoff
+question: "Blue-green or rolling deployment?"
+sides:
+  - name: "Blue-green"
+    wins_when:
+      - signal: "your infra budget covers 2x steady-state compute cost — check your hosting bill's compute line item against a doubled estimate"
+      - signal: "rollback must be instant — a flipped load balancer/DNS record, not a redeploy that takes minutes"
+      - signal: "your platform can do an atomic traffic cutover (a load balancer target-group swap, or DNS with a low TTL you've actually tested)"
+  - name: "Rolling"
+    wins_when:
+      - signal: "the hosting bill has no room for a second full environment — check current compute spend against 2x"
+      - signal: "your platform already does this by default (Kubernetes Deployments) — no extra infra to provision"
+      - signal: "your app can already run two versions concurrently without breaking — check whether any in-flight migration is additive-only (docs/adr on migrations, if you have one, or a quick scan of the last few migration files for DROP/RENAME)"
+```
+
 ## Example Code
 ```typescript
 // Example: expand/contract database migration pattern — required for safe rolling deploys
