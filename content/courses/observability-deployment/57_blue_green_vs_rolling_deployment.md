@@ -19,6 +19,18 @@ For a Next.js SaaS deployed on Railway, Fly.io, or Kubernetes, you will choose b
 - **Canary as a hybrid** — a canary deploy is a blue-green where you send only X% of traffic to green; you test before full cutover
 - **Zero-downtime constraint** — both strategies aim for this; the key is that health checks and readiness probes must be tuned correctly
 
+Blue-green's real advantage is that rollback is a state transition, not a redeploy — flipping the load balancer back is instant because the old environment never stopped running:
+
+```mermaid
+stateDiagram-v2
+    [*] --> BlueLive
+    BlueLive --> GreenDeploying: deploy new version to idle green
+    GreenDeploying --> GreenSmokeTesting: smoke test green
+    GreenSmokeTesting --> BlueLive: smoke test fails, green stays idle
+    GreenSmokeTesting --> GreenLive: cutover — flip load balancer
+    GreenLive --> BlueLive: rollback — flip back, instant
+```
+
 ## Example Code
 ```typescript
 // Example: expand/contract database migration pattern — required for safe rolling deploys

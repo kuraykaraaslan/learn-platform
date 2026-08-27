@@ -17,6 +17,22 @@ In Prisma (your current ORM), read replica routing requires the `@prisma/extensi
 - **Sticky sessions for reads after writes**: After a mutation, subsequent reads in the same request should go to the primary to avoid reading stale data
 - **Connection pool per role**: Each replica needs its own connection pool; read traffic + write traffic should not share the same pool
 
+Why a plain read right after a write can miss its own change — the WAL stream is asynchronous, not part of the write's transaction:
+
+```mermaid
+sequenceDiagram
+    participant App
+    participant Primary
+    participant Replica
+    App->>Primary: INSERT/UPDATE (mutation)
+    Primary-->>App: commit ack
+    Primary-)Replica: stream WAL (async, lagged)
+    App->>Replica: SELECT (default read routing)
+    Replica-->>App: may not reflect the write yet
+    App->>Primary: SELECT via .$primary() (read-your-own-writes)
+    Primary-->>App: reflects the write
+```
+
 ## Example Code
 ```typescript
 // Prisma 5.x with @prisma/extension-read-replicas

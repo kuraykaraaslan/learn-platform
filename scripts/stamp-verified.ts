@@ -62,6 +62,13 @@ const corpus = loadCorpus();
 
 const lintErrorTargets = new Set<string>();
 for (const rule of RULES) {
+  // verify/stale-stamp fires exactly when a verified lesson's content has
+  // changed since it was last stamped — i.e. exactly the lessons this script
+  // exists to re-stamp. Counting it as a lint error here would make it
+  // permanently un-fixable: newly-stale is indistinguishable from
+  // ineligible, and re-running this script (its own documented fix) could
+  // never clear it.
+  if (rule.id === 'verify/stale-stamp') continue;
   if (!rule.lesson) continue;
   for (const file of corpus) {
     for (const finding of rule.lesson(file)) {
@@ -84,7 +91,8 @@ const shaReport: Record<string, string> = fs.existsSync(SHA_REPORT)
   : {};
 
 let stamped = 0;
-let alreadyVerified = 0;
+let restamped = 0;
+let unchanged = 0;
 let blocked = 0;
 
 for (const courseSlug of listCourseSlugs()) {
@@ -93,11 +101,12 @@ for (const courseSlug of listCourseSlugs()) {
 
   for (const item of manifest.items) {
     const target = `${courseSlug}/${item.file}`;
-    if (item.verified) {
-      alreadyVerified++;
-      continue;
-    }
 
+    // Every lesson is re-evaluated on every run, verified or not — otherwise
+    // `if (item.verified) continue` (the previous behavior) makes the
+    // doc-comment's promise above ("edit the file, re-run this script")
+    // false: a stamp can go stale from a content edit, but an
+    // already-`verified: true` item would never have its sha refreshed.
     const eligible =
       !lintErrorTargets.has(target) && !codeFailingTargets.has(target) && !HARM_DENYLIST.has(target);
     if (!eligible) {
@@ -106,12 +115,22 @@ for (const courseSlug of listCourseSlugs()) {
     }
 
     const body = readLessonMarkdown(courseSlug, item.file);
-    shaReport[target] = sha(body);
-    if (!dryRun) {
-      (item as { verified?: boolean }).verified = true;
-      changed = true;
+    const newSha = sha(body);
+    const staleOrMissing = shaReport[target] !== newSha;
+
+    if (!item.verified) {
+      shaReport[target] = newSha;
+      if (!dryRun) {
+        (item as { verified?: boolean }).verified = true;
+        changed = true;
+      }
+      stamped++;
+    } else if (staleOrMissing) {
+      shaReport[target] = newSha;
+      restamped++;
+    } else {
+      unchanged++;
     }
-    stamped++;
   }
 
   if (changed && !dryRun) {
@@ -126,5 +145,5 @@ if (!dryRun) {
 }
 
 console.log(
-  `${dryRun ? '[dry run] ' : ''}stamped: ${stamped}  already-verified: ${alreadyVerified}  blocked: ${blocked}  (denylist: ${HARM_DENYLIST.size})`
+  `${dryRun ? '[dry run] ' : ''}stamped: ${stamped}  restamped: ${restamped}  unchanged: ${unchanged}  blocked: ${blocked}  (denylist: ${HARM_DENYLIST.size})`
 );

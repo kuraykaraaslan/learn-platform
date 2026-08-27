@@ -2167,7 +2167,7 @@
       "50_multi_tenant_data_isolation_models.md": {
         "title": "f58602b3dc6c14fb",
         "whatItIs": "05dbbacfb28fbca7",
-        "keyConcepts": "b3b74f2d7454408d",
+        "keyConcepts": "3a2b3eec0f7990b4",
         "exampleCode": "bf30e41ee504f0be",
         "whenToUse": "67519024dd2e1c3b",
         "commonMistakes": "4fcfa44e77c613f0",
@@ -2261,7 +2261,7 @@
       "02_event_sourcing_cqrs.md": {
         "title": "4ac2da6e71710442",
         "whatItIs": "c6e6d9519bec9043",
-        "keyConcepts": "bfe16cdc2c740360",
+        "keyConcepts": "1d53821de4d8b25d",
         "exampleCode": "b731c26b63d22fc6",
         "whenToUse": "3fa30e2ead769624",
         "commonMistakes": "289fcf8e59e4c4db",
@@ -2342,7 +2342,7 @@
       "11_read_replica_routing.md": {
         "title": "5909b748342da825",
         "whatItIs": "f718a1502ac0921c",
-        "keyConcepts": "7cddfaabab1e6742",
+        "keyConcepts": "da39433c557615d3",
         "exampleCode": "292cefd8494bd8e0",
         "whenToUse": "7e573cb6203b9aaf",
         "commonMistakes": "e625eb5b39b3bd63",
@@ -2369,7 +2369,7 @@
       "14_outbox_pattern.md": {
         "title": "a05b66a947f0190c",
         "whatItIs": "b3430f2ef38bcbd0",
-        "keyConcepts": "58f1fd30b0a5f2ae",
+        "keyConcepts": "b1e31f6eba896aeb",
         "exampleCode": "023c49519ce5b2a6",
         "whenToUse": "ece0ea4701305a88",
         "commonMistakes": "2f00066805573106",
@@ -2953,7 +2953,7 @@
       "57_blue_green_vs_rolling_deployment.md": {
         "title": "27924432938e69ae",
         "whatItIs": "45e60d010772952f",
-        "keyConcepts": "948ddc252fe32a8b",
+        "keyConcepts": "cebac772c4958348",
         "exampleCode": "ae6d8323f6a72df4",
         "whenToUse": "65d7170ea1e825d0",
         "commonMistakes": "0f4cbc5276e9e3a7",

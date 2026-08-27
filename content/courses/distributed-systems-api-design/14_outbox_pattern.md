@@ -17,6 +17,27 @@ This pattern is the foundation of reliable event-driven architectures. Without i
 - **Message ordering**: Outbox messages must be published in order per aggregate ID; use a sequence column and process in order
 - **Dead letter handling**: If publishing fails repeatedly (BullMQ is down), the outbox message must not be silently dropped — alert and retry with backoff
 
+The relay is what turns a single ACID transaction into a guaranteed-eventually-published message — the part a bullet list states but doesn't show happening:
+
+```mermaid
+sequenceDiagram
+    participant App
+    participant DB as Database (1 transaction)
+    participant Relay as Outbox relay
+    participant Broker as Message broker
+    App->>DB: BEGIN
+    App->>DB: UPDATE state
+    App->>DB: INSERT INTO outbox
+    App->>DB: COMMIT
+    Note over DB: State change and message are now durable together
+    loop poll or LISTEN/NOTIFY
+        Relay->>DB: SELECT unpublished outbox rows
+        Relay->>Broker: publish message
+        Broker-->>Relay: ack
+        Relay->>DB: mark processed
+    end
+```
+
 ## Example Code
 ```typescript
 // Outbox pattern with PostgreSQL + BullMQ + Prisma

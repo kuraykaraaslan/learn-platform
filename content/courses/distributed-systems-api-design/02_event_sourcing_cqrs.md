@@ -17,6 +17,20 @@ Together, they shine in domains with complex business rules, audit requirements,
 - **CQRS**: Separates the command model (write) from the query model (read); each is optimized independently
 - **Snapshot**: A periodic checkpoint of projected state to avoid replaying thousands of events on every load
 
+The one-log-many-read-models topology that makes CQRS worth the added complexity — a table can list the projections, but not the fan-out itself:
+
+```mermaid
+graph LR
+    Client -->|command| CH[Command Handler]
+    CH -->|validate, then append| ES[(Event Store)]
+    ES -->|replay| P1[Projection: Search]
+    ES -->|replay| P2[Projection: Analytics]
+    ES -->|replay| P3[Projection: Main UI]
+    P1 --> RM1[(Read Model)]
+    P2 --> RM2[(Read Model)]
+    P3 --> RM3[(Read Model)]
+```
+
 ## Example Code
 ```typescript
 // Minimal event sourcing example for a Subscription aggregate

@@ -19,6 +19,23 @@ The third model — which you use — is separate databases. Each tenant has the
 - **Cross-tenant query** — Aggregate queries across all tenants (total users, revenue by tenant) require either federated queries or a separate analytics pipeline
 - **Tenant offboarding** — Deleting a tenant means dropping a database; complete data erasure is trivially auditable
 
+The isolation boundary is a nesting relationship a bullet list states but a diagram actually shows — where does one tenant's blast radius stop:
+
+```mermaid
+graph TB
+    subgraph "Shared schema — weakest"
+        S1[(one database)] --> ST[one users table<br/>tenantId column]
+    end
+    subgraph "Schema-per-tenant — medium"
+        M1[(one database)] --> MA[schema: tenant_abc]
+        M1 --> MB[schema: tenant_xyz]
+    end
+    subgraph "Database-per-tenant — strongest, your model"
+        DA[(database: tenant_abc)]
+        DB[(database: tenant_xyz)]
+    end
+```
+
 ## Example Code
 ```typescript
 // ─── What you have (the core pattern) ─────────────────────────────────────
