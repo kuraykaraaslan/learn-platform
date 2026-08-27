@@ -1,0 +1,40 @@
+# P7 — Mermaid diyagramlar
+
+**Efor:** ~1 gün · **Bağımlılık:** P0
+
+## Neden şimdi mümkün
+
+Yol haritası *"Mermaid varsaymayın"* diyor ve gerekçesi teknikti: bu repoda bir
+mermaid fence'i düz bir `<pre class="language-mermaid">` olarak render ediliyor,
+ve düzeltmenin bedeli *"her ders sayfasına ~40 KB client JS"*.
+
+**P0'dan sonra bu gerekçe geçersiz.** Mermaid bloğu artık tembel yüklenen bir
+ada: `next/dynamic({ ssr: false })` ile **yalnız diyagram içeren sayfada**,
+**yalnız görünür olduğunda** yüklenir. Korpusta bugün mermaid kullanan ders **0**,
+yani 412 sayfa **0 byte** gönderir.
+
+## Yapılacaklar
+
+`ui/MermaidBlock.tsx` *(`'use client'`)* — `IntersectionObserver` ile görünür
+olunca `await import('mermaid')`, `mermaid.initialize({ theme })` ile
+`next-themes`'in aktif temasına bağlanır, tema değişince yeniden render eder.
+
+Yükleme sırasında kaynak metni bir `<pre>` olarak görünür kalır — JS kapalıysa
+ya da yükleme başarısızsa okuyucu **yine de diyagramın tanımını okur**. Bozuk
+sözdiziminde hata mesajı basılır, sessizce boş kalmaz.
+
+## Yazım kuralı — yol haritasının asıl uyarısı geçerli
+
+**70 karar diyagramı yazmayın.** Tablo yetiyorsa tablo; yol haritası T2.2'de
+bunu açıkça söylüyor ve haklı. Mermaid şunlar için: durum makineleri, sıra
+diyagramları, ve tablonun kaybettiği topoloji.
+
+Ders başına en fazla 1 diyagram.
+
+## Kabul kriterleri
+
+- [ ] Diyagram içermeyen ders sayfası **0 byte** ek JS gönderiyor (bundle testi)
+- [ ] Diyagram görünür olana kadar mermaid yüklenmiyor
+- [ ] Tema değişince diyagram yeniden render oluyor
+- [ ] Bozuk sözdiziminde okunabilir hata, sessiz boşluk değil
+- [ ] JS kapalıyken diyagram kaynağı `<pre>` olarak okunabiliyor
