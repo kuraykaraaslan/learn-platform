@@ -15,6 +15,7 @@ import { MermaidBlock } from './MermaidBlock';
 import { RunMount } from './RunMount';
 import { ProjectRunner } from './ProjectRunner';
 import { SqlRunner } from './SqlRunner';
+import { PredictOutputCard } from './PredictOutputCard';
 
 // Tried next/dynamic() here to keep this JS out of the ~324 lesson pages
 // with no widget block — measured worse (8.59 kB vs 7.22 kB gz) and, per
@@ -76,6 +77,12 @@ function BlockView({
       // import of 'mermaid', so this branch costs ~nothing on the 412 pages
       // that never hit it.
       if (block.lang === 'mermaid') return <MermaidBlock source={block.source} html={block.html} />;
+      // A `proof` fence (P5) is never a Run button — its body is real
+      // stdout scripts/stamp-verify.ts already captured, not something the
+      // reader executes. PredictOutputCard hides it behind a prediction.
+      if (block.lang === 'proof') {
+        return <PredictOutputCard block={block} courseSlug={courseSlug} lessonFile={lessonFile} />;
+      }
       // `run project` (P9, WebContainer — real npm install + server) takes
       // priority over plain `run` (P8, browser sandbox): the corpus's own
       // fence syntax marks both tokens together (`run project entry=...`),

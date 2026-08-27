@@ -1,0 +1,8 @@
+{
+  "name": "verify-fundamentals-tools-139",
+  "private": true,
+  "description": "Real git reflog recovery after an accidental `git reset --hard` in a scratch repo with pinned commit dates — for lesson 139's proof block. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "bash run.sh"
+  }
+}

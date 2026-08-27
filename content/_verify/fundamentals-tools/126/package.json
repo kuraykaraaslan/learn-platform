@@ -1,0 +1,8 @@
+{
+  "name": "verify-fundamentals-tools-126",
+  "private": true,
+  "description": "Real find | xargs grep | sort against a scratch directory tree — for lesson 126's proof block. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "bash run.sh"
+  }
+}

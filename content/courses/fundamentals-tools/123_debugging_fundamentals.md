@@ -40,6 +40,34 @@ npm test && git bisect good || git bisect bad
 git bisect reset
 ```
 
+That's the shape. Below is that exact loop run for real, against a real 5-commit history with one real bug — not a hand-typed transcript. Predict which commit `git bisect` will land on before revealing the actual output.
+
+```proof sha=abc1cd52ea83b08a at=2026-08-27 commit=eb4085c
+$ bash run.sh
+status: waiting for both good and bad commits
+status: waiting for good commit(s), bad commit known
+Bisecting: 0 revisions left to test after this (roughly 1 step)
+[2fb911a1aad6821de752d6241f319ea9876bcc78] feat: add input validation
+running 'node' 'check.js'
+FAIL: add(2,3) !== 5
+Bisecting: 0 revisions left to test after this (roughly 0 steps)
+[6abc1ce05061f02dd35149815527706225c5f141] refactor: add a comment (no behavior change)
+running 'node' 'check.js'
+PASS
+2fb911a1aad6821de752d6241f319ea9876bcc78 is the first bad commit
+commit 2fb911a1aad6821de752d6241f319ea9876bcc78
+Author: CI <ci@example.com>
+Date:   Thu Jan 1 00:00:04 2026 +0000
+
+    feat: add input validation
+
+ add.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+bisect found first bad commit
+Previous HEAD position was 6abc1ce refactor: add a comment (no behavior change)
+Switched to branch 'master'
+```
+
 ## When to Use
 - Any bug, but especially intermittent ones — resist the urge to guess-fix before you can reproduce it on demand
 - A regression with no obvious cause — `git bisect` is faster than manually reading diffs once history is more than ~10 commits deep

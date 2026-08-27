@@ -31,6 +31,14 @@ lsof -i :3000
 kill -9 $(lsof -t -i:3000)
 ```
 
+The `find | xargs grep | sort` line above, run for real against a scratch tree with three `.ts` files (one with a TODO) and a `node_modules` decoy (also with a TODO, which the `-not -path` clause must exclude). Predict the output before revealing it — is the decoy file in the result or not?
+
+```proof sha=2242da17c2bc6c1b at=2026-08-27 commit=eb4085c
+$ bash run.sh
+$ find . -name "*.ts" -mtime -1 -not -path "*/node_modules/*" | xargs grep -l "TODO" | sort
+./src/divide.ts
+```
+
 ```bash
 # .env.example — committed, documents required config with placeholder values
 DATABASE_URL=postgresql://user:password@localhost:5432/dbname

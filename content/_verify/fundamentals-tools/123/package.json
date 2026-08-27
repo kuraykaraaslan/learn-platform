@@ -1,0 +1,8 @@
+{
+  "name": "verify-fundamentals-tools-123",
+  "private": true,
+  "description": "Real git bisect run against a scratch repo with a deterministic, pinned-date regression — for lesson 123's `run:begin`/`run:end` proof block. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "bash run.sh"
+  }
+}

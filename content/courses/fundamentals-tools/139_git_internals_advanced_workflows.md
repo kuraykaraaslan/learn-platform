@@ -39,6 +39,34 @@ git log --oneline -- packages/api
 git sparse-checkout set packages/api packages/shared
 ```
 
+The reflog recovery above, run for real: three commits, an accidental `reset --hard` that drops two of them, then the actual recovery. Predict what `cat file.txt` prints at each step before revealing the real output.
+
+```proof sha=808e797f441230c8 at=2026-08-27 commit=eb4085c
+$ bash run.sh
+$ git log --oneline
+92e1764 third commit — this is the work we're about to 'lose'
+a467b92 second commit
+45f95d3 first commit
+
+$ git reset --hard HEAD~2   # oops — meant to undo 1 commit, undid 2
+HEAD is now at 45f95d3 first commit
+
+$ cat file.txt   # confirms the reset really happened — third commit's change is gone
+one
+
+$ git reflog   # HEAD@{0} is where we are now; HEAD@{1} is right before the reset
+45f95d3 HEAD@{0}: reset: moving to HEAD~2
+92e1764 HEAD@{1}: commit: third commit — this is the work we're about to 'lose'
+a467b92 HEAD@{2}: commit: second commit
+45f95d3 HEAD@{3}: commit (initial): first commit
+
+$ git reset --hard HEAD@{1}   # jump back to right before the reset
+HEAD is now at 92e1764 third commit — this is the work we're about to 'lose'
+
+$ cat file.txt   # third commit's change is back
+three
+```
+
 ## When to Use
 - Cleaning up a feature branch's commit history before opening a PR — squash noisy WIP commits into meaningful units
 - Hunting a regression with no obvious cause across more than a handful of commits — `bisect` beats manual diff-reading past that point

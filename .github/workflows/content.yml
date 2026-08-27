@@ -1,0 +1,33 @@
+name: content
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      # lint + verify-code + test — the two gates docs/phases/README.md's
+      # invariants require staying green, plus content-lint's
+      # verify/stale-stamp and verify/hand-edited-output rules, which are
+      # exactly what makes the `verified` and `proof` gates mean anything:
+      # neither can be hand-set without this failing.
+      - run: npm run content:check
+
+      # Re-runs every `proof` fence's real command (content/_verify/) and
+      # fails if a byte between its markers no longer matches what that
+      # command actually produces today — catches both a hand-edit that
+      # slipped past content:lint's offline self-consistency check, and a
+      # behavior change (a tool's real output changed) that needs a re-stamp.
+      - run: npx tsx scripts/stamp-verify.ts --check

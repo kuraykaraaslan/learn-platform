@@ -553,6 +553,31 @@ export const RULES: Rule[] = [
     },
   },
   {
+    id: 'verify/hand-edited-output',
+    severity: 'error',
+    description:
+      'A `proof` fence (P5, docs/phases/05-ci-and-proof.md) whose body no longer matches its own `sha=` meta attribute — the body was hand-edited after scripts/stamp-verify.ts wrote it, or `sha=` was hand-edited to match a tampered body. This is the fast, offline half of the check: it verifies the fence is internally self-consistent without re-running anything. scripts/stamp-verify.ts --check is the slow half — it re-runs the real command and confirms the body still matches what that command actually produces today, which this rule cannot detect on its own (a hand-edit that happens to still be internally consistent would pass this rule but fail --check).',
+    lesson: (file) =>
+      file.fences
+        .filter((f) => f.lang === 'proof')
+        .flatMap((f) => {
+          const recorded = parseFenceMeta(f.meta).opts.sha as string | undefined;
+          const actual = sha(f.code);
+          if (recorded === actual) return [];
+          return [
+            {
+              rule: 'verify/hand-edited-output',
+              severity: 'error' as const,
+              target: file.target,
+              line: f.line,
+              message: recorded
+                ? `proof fence body sha (${actual}) does not match its own sha=${recorded} — re-run scripts/stamp-verify.ts`
+                : 'proof fence has no sha= meta attribute — run scripts/stamp-verify.ts to stamp it',
+            },
+          ];
+        }),
+  },
+  {
     id: 'run/missing-seed-file',
     severity: 'error',
     description:
