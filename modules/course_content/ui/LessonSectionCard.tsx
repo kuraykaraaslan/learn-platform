@@ -19,6 +19,7 @@ import { PredictOutputCard } from './PredictOutputCard';
 import { QuizCard } from './QuizCard';
 import { TradeoffCard } from './TradeoffCard';
 import { DiffCard } from './DiffCard';
+import { RecallCard } from './widgets/RecallCard';
 
 // Tried next/dynamic() here to keep this JS out of the ~324 lesson pages
 // with no widget block — measured worse (8.59 kB vs 7.22 kB gz) and, per
@@ -124,6 +125,10 @@ function BlockView({
           return <TradeoffCard widget={block.widget} />;
         case 'diff':
           return <DiffCard widget={block.widget} />;
+        case 'recall':
+          return (
+            <RecallCard widget={block.widget} blockId={block.id} courseSlug={courseSlug} lessonFile={lessonFile} verified={verified} />
+          );
       }
   }
 }

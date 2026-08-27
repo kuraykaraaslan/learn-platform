@@ -140,4 +140,24 @@ console.log('Users with read permission:', allowed.map((u) => u.name));
 ## Further Reading
 - Big O Cheat Sheet: https://www.bigocheatsheet.com/
 - "Designing Data-Intensive Applications" — Chapter 3 (data structure choices in databases)
+
+```recall
+- q: "What's the practical process for finding an O(n²) bug in a multi-tenant SaaS, before writing any fix?"
+  must:
+    - "identify every loop, recursive call, and database query in the hot path"
+    - "estimate the worst-case n for each — not the test data size, the realistic worst case per tenant per day"
+    - "multiply nested complexities together"
+    - "decide whether a different data structure or a database query should replace the loop"
+
+- q: "Why doesn't a better Big O always mean faster in practice?"
+  must:
+    - "Big O describes growth as n increases, not absolute speed at any one n"
+    - "a bigger constant factor can make the asymptotically-better algorithm slower for small n"
+
+- q: "Why does the N+1 query problem hide from code review even though it's the most common O(n) bug in web apps?"
+  must:
+    - "each individual query is fast on its own, so nothing looks wrong reading any one line"
+    - "the loop firing the query N times is what's actually O(n), not any single query"
+    - "many small fast queries still add up — 500 queries at 20ms each is 10 seconds total"
+```
 - AlgoExpert / LeetCode — practical Big O exercises; even a few dozen problems builds strong intuition

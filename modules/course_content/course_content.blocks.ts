@@ -5,6 +5,7 @@ import { parseTemplate, parseChecklist, looksLikeChecklist, type TemplateWidget,
 import { parseQuiz, type QuizWidget } from './course_content.quiz';
 import { parseTradeoff, type TradeoffWidget } from './course_content.tradeoff';
 import { looksLikeDiff, parseDiff, type DiffWidget } from './course_content.diff';
+import { parseRecall, type RecallWidget } from './course_content.recall';
 import { parseFenceMeta, type FenceMeta } from './course_content.fence-meta';
 import { loadSeed } from './course_content.seeds';
 
@@ -13,8 +14,9 @@ export type { TemplateWidget, ChecklistWidget } from './course_content.templates
 export type { QuizWidget, QuizQuestion, QuizOption } from './course_content.quiz';
 export type { TradeoffWidget } from './course_content.tradeoff';
 export type { DiffWidget } from './course_content.diff';
+export type { RecallWidget, RecallItem } from './course_content.recall';
 
-export type LessonWidget = TemplateWidget | ChecklistWidget | QuizWidget | TradeoffWidget | DiffWidget;
+export type LessonWidget = TemplateWidget | ChecklistWidget | QuizWidget | TradeoffWidget | DiffWidget | RecallWidget;
 
 declare module 'hast' {
   interface Data {
@@ -102,6 +104,7 @@ export function splitBlocks(root: HastRoot, sectionKey: keyof LessonSections): L
     else if ((lang === 'md' || lang === 'markdown') && looksLikeChecklist(source)) widget = parseChecklist(source);
     else if (lang === 'quiz') widget = parseQuiz(source);
     else if (lang === 'tradeoff') widget = parseTradeoff(source);
+    else if (lang === 'recall') widget = parseRecall(source);
     else if (looksLikeDiff(source)) widget = parseDiff(source);
 
     // Read here, not in the UI layer: loadSeed() touches node:fs, and this
