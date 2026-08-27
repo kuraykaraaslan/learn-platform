@@ -1,3 +1,5 @@
+import type { LessonBlock } from './course_content.blocks';
+
 export type Bracket = '0-1' | '1-3' | '3-7' | '7-10';
 
 export type ManifestItem = {
@@ -39,7 +41,7 @@ export type LessonSections = {
 export type Lesson = ManifestItem & {
   courseSlug: string;
   lessonSlug: string;
-  sections: LessonSections;
+  blocks: Record<keyof LessonSections, LessonBlock[]>;
 };
 
 export const BRACKET_LABELS: Record<Bracket, string> = {

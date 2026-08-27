@@ -1,4 +1,5 @@
-import { markdownToHtml } from './course_content.markdown';
+import { markdownToHast, markdownToHtml } from './course_content.markdown';
+import { splitBlocks, type LessonBlock } from './course_content.blocks';
 import type { LessonSections } from './course_content.types';
 
 // The original 118-document corpus is NOT perfectly consistent in its section
@@ -37,7 +38,7 @@ function matchHeading(heading: string): keyof LessonSections | null {
  * makes YAML frontmatter safe to add, and why a section placed ABOVE
  * `## What It Is` vanishes entirely instead of rendering in the wrong card.
  */
-export function parseLessonMarkdown(raw: string): { title: string; sections: LessonSections } {
+export function splitLessonSections(raw: string): { title: string; sections: LessonSections } {
   const lines = raw.split('\n');
 
   const titleLine = lines.find((l) => l.startsWith('# '));
@@ -50,7 +51,7 @@ export function parseLessonMarkdown(raw: string): { title: string; sections: Les
 
   function flush() {
     if (currentField && buffer.length > 0) {
-      sections[currentField] = markdownToHtml(buffer.join('\n').trim());
+      sections[currentField] = buffer.join('\n').trim();
     }
     buffer = [];
   }
@@ -96,5 +97,34 @@ export function parseLessonMarkdown(raw: string): { title: string; sections: Les
       commonMistakes: sections.commonMistakes ?? '',
       furtherReading: sections.furtherReading ?? '',
     },
+  };
+}
+
+/** Raw markdown per section, rendered to HTML. Output is byte-identical to
+ *  before the block-refactor (course_content.snapshot.ts and
+ *  scripts/parse-snapshot.ts depend on that). */
+export function parseLessonMarkdown(raw: string): { title: string; sections: LessonSections } {
+  const { title, sections } = splitLessonSections(raw);
+  return {
+    title,
+    sections: Object.fromEntries(
+      Object.entries(sections).map(([key, markdown]) => [key, markdownToHtml(markdown)])
+    ) as LessonSections,
+  };
+}
+
+/** Same section split as parseLessonMarkdown, but each section is rendered to
+ *  <pre>-bounded blocks instead of one opaque HTML string — see
+ *  course_content.blocks.ts. */
+export function parseLessonBlocks(raw: string): { title: string; blocks: Record<keyof LessonSections, LessonBlock[]> } {
+  const { title, sections } = splitLessonSections(raw);
+  return {
+    title,
+    blocks: Object.fromEntries(
+      Object.entries(sections).map(([key, markdown]) => [
+        key,
+        splitBlocks(markdownToHast(markdown), key as keyof LessonSections),
+      ])
+    ) as Record<keyof LessonSections, LessonBlock[]>,
   };
 }

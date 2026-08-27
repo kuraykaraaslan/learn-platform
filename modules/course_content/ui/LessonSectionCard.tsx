@@ -1,14 +1,19 @@
-// Renders one parsed lesson section (already-HTML string from the remark/
-// rehype pipeline, see course_content.markdown.ts) as a titled card. The
-// prose styling here follows the same "Tailwind arbitrary-variant selectors
-// instead of @tailwindcss/typography" approach as kui-react's PostContent
-// component (modules/domains/blog/post/PostContent.tsx) — not copied
-// verbatim since the section set differs, but the same technique.
+// Renders one parsed lesson section as a titled card. A section is a sequence
+// of blocks (course_content.blocks.ts): 'html' runs go through the same
+// remark/rehype pipeline output as before (dangerouslySetInnerHTML), 'code'
+// blocks get their own <CodeBlock> with a copy button. The prose styling here
+// follows the same "Tailwind arbitrary-variant selectors instead of
+// @tailwindcss/typography" approach as kui-react's PostContent component
+// (modules/domains/blog/post/PostContent.tsx) — not copied verbatim since the
+// section set differs, but the same technique.
 import { cn } from '@/libs/utils/cn';
+import type { LessonBlock } from '../course_content.blocks';
+import { CodeBlock } from './CodeBlock';
 
-const PROSE_CLASSES = cn(
+// Exported for course_content.blocks.test.ts's margin-regression guard.
+export const PROSE_CLASSES = cn(
   'text-text-primary leading-relaxed text-sm',
-  '[&_p]:mb-3 [&_p:last-child]:mb-0',
+  '[&_p]:mb-3 [&>:last-child>:last-child]:mb-0',
   '[&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-3 [&_ul]:space-y-1',
   '[&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-3 [&_ol]:space-y-1',
   '[&_strong]:font-semibold [&_strong]:text-text-primary',
@@ -22,24 +27,40 @@ const PROSE_CLASSES = cn(
   '[&_blockquote]:border-l-2 [&_blockquote]:border-border-strong [&_blockquote]:pl-3 [&_blockquote]:text-text-secondary'
 );
 
+function BlockView({ block }: { block: LessonBlock }) {
+  switch (block.kind) {
+    case 'html':
+      // eslint-disable-next-line react/no-danger -- block.html is our own build-time markdown pipeline output, not user input
+      return <div dangerouslySetInnerHTML={{ __html: block.html }} />;
+    case 'code':
+      return <CodeBlock block={block} />;
+    case 'widget':
+      // No fence maps to 'widget' until P4 retags template fences.
+      return null;
+  }
+}
+
 export function LessonSectionCard({
   title,
-  html,
+  blocks,
   className,
 }: {
   title: string;
-  html: string;
+  blocks: LessonBlock[];
   className?: string;
 }) {
-  if (!html) return null;
+  if (blocks.length === 0) return null;
 
   return (
     <section className={cn('rounded-lg border border-border bg-surface-raised p-5', className)}>
       <h2 className="text-sm font-semibold text-text-primary uppercase tracking-wide mb-3">
         {title}
       </h2>
-      {/* eslint-disable-next-line react/no-danger -- html is our own build-time markdown pipeline output, not user input */}
-      <div className={PROSE_CLASSES} dangerouslySetInnerHTML={{ __html: html }} />
+      <div className={PROSE_CLASSES}>
+        {blocks.map((block) => (
+          <BlockView key={block.id} block={block} />
+        ))}
+      </div>
     </section>
   );
 }

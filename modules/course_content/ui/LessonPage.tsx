@@ -25,12 +25,12 @@ export function LessonPage({ lesson, courseTitle }: { lesson: Lesson; courseTitl
       </div>
 
       <div className="space-y-4">
-        <LessonSectionCard title="What It Is" html={lesson.sections.whatItIs} />
-        <LessonSectionCard title="Key Concepts" html={lesson.sections.keyConcepts} />
-        <LessonSectionCard title="Example Code" html={lesson.sections.exampleCode} />
-        <LessonSectionCard title="When to Use" html={lesson.sections.whenToUse} />
-        <LessonSectionCard title="Common Mistakes" html={lesson.sections.commonMistakes} />
-        <LessonSectionCard title="Further Reading" html={lesson.sections.furtherReading} />
+        <LessonSectionCard title="What It Is" blocks={lesson.blocks.whatItIs} />
+        <LessonSectionCard title="Key Concepts" blocks={lesson.blocks.keyConcepts} />
+        <LessonSectionCard title="Example Code" blocks={lesson.blocks.exampleCode} />
+        <LessonSectionCard title="When to Use" blocks={lesson.blocks.whenToUse} />
+        <LessonSectionCard title="Common Mistakes" blocks={lesson.blocks.commonMistakes} />
+        <LessonSectionCard title="Further Reading" blocks={lesson.blocks.furtherReading} />
       </div>
     </div>
   );
