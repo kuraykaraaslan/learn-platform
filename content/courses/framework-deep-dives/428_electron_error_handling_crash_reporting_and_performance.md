@@ -69,7 +69,7 @@ function onMainWindowReady(win: Electron.BrowserWindow) {
 }
 
 // main/libs/broadcast.ts — guard against sending to a destroyed window (a real leak source)
-import { BrowserWindow } from "electron";
+import { BrowserWindow, ipcMain } from 'electron';
 export function broadcast(channel: string, payload: unknown) {
   for (const w of BrowserWindow.getAllWindows()) {
     if (!w.isDestroyed()) w.webContents.send(channel, payload);    // ✅ guarded

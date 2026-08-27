@@ -21,7 +21,7 @@ Deep links follow a parallel lifecycle concern: registering the app as the defau
 ## Example Code
 ```typescript
 // src/main/index.ts — the fixed lifecycle order
-import { app, BrowserWindow } from "electron";
+import { BrowserWindow, app, ipcMain } from 'electron';
 import { createMainWindow } from "./windows/createMainWindow";
 import { registerIpc } from "./ipc";
 import { focusMainWindow } from "./windows/windowRegistry";

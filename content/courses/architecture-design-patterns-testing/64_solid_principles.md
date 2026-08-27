@@ -30,6 +30,8 @@ SOLID is an acronym for five object-oriented design principles that, when applie
 // ── Define interfaces (abstractions) ────────────────────────────────────────
 
 // ISP: UserRepository only has what AuthService actually needs
+import { DataSource } from 'typeorm';
+import bcrypt from 'bcryptjs';
 interface IUserRepository {
   findByEmail(email: string): Promise<UserRecord | null>;
   create(data: CreateUserDto): Promise<UserRecord>;

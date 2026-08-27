@@ -22,6 +22,7 @@ The operational challenge is that "delete my data" in a multi-tenant SaaS is not
 // modules/user/user_deletion.service.ts
 // Implements the Right to Erasure deletion pipeline
 
+import { DataSource } from 'typeorm';
 import crypto from 'crypto';
 
 export interface DeletionReport {

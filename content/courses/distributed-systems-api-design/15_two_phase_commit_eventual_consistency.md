@@ -22,6 +22,7 @@ The problem with 2PC is its availability and latency cost. During the commit pha
 // Demonstrating WHY 2PC is impractical and what eventual consistency looks like instead
 
 // ─── NAIVE (BROKEN): Dual database write without coordination ───
+import { PoolClient } from 'pg';
 async function createTenantNaive(name: string, ownerId: string) {
   // Write to system database
   const tenant = await systemDb.tenant.create({ data: { name, ownerId } });

@@ -23,6 +23,7 @@ Together, they shine in domains with complex business rules, audit requirements,
 // Uses PostgreSQL as the event store (no extra infrastructure needed to start)
 
 // --- Types ---
+import { PrismaClient } from '@prisma/client';
 type DomainEvent =
   | { type: 'SubscriptionStarted'; planId: string; startedAt: Date }
   | { type: 'SubscriptionUpgraded'; newPlanId: string; upgradedAt: Date }

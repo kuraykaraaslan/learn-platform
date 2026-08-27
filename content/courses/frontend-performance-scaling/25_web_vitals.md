@@ -25,7 +25,7 @@ The critical distinction is **field data vs lab data**. Lighthouse is a lab tool
 // app/components/web-vitals-reporter.tsx
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { onCLS, onINP, onLCP, onFCP, onTTFB, type Metric } from 'web-vitals/attribution';
 
 export function WebVitalsReporter() {

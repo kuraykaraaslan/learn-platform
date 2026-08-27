@@ -54,6 +54,9 @@ async function listTenantMembersEager(tenantId: string) {
 // Useful when the same user might appear in multiple concurrent queries
 // (common in GraphQL resolvers, also useful in complex REST handlers)
 
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+import { PrismaClient } from '@prisma/client';
 import DataLoader from 'dataloader';
 
 // Create one DataLoader per request (not per-app — must not cache across requests)

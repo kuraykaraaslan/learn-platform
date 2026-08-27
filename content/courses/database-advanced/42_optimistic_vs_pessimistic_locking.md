@@ -23,6 +23,7 @@ As a default: pessimistic locking for low-frequency, high-stakes operations — 
 ```typescript
 // ─── Optimistic locking in TypeORM ────────────────────────────────────────
 
+import { PrismaClient } from '@prisma/client';
 import { Entity, Column, VersionColumn, Repository } from 'typeorm';
 
 @Entity('tenant_subscriptions')

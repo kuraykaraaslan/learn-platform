@@ -20,6 +20,7 @@ The last discipline is treating AI output as a draft, not a final artifact, when
 ## Example Code
 ```tsx
 // components/AiOutput.tsx — disclosure label, always visible
+import { useState } from 'react';
 export function AiOutput({ content, source }: { content: string; source: 'ai' | 'fallback' }) {
   return (
     <div className="ai-output" aria-live="polite" aria-label="AI response">

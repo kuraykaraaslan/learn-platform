@@ -20,6 +20,7 @@ The failure mode unique to streaming is what happens when an error occurs mid-re
 ## Example Code
 ```typescript
 // app/api/ai/stream/route.ts — Next.js App Router
+import { useState } from 'react';
 import { anthropic } from '@/lib/ai/client';
 
 export const runtime = 'nodejs'; // required — Edge does not support SDK streaming

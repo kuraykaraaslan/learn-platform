@@ -20,6 +20,7 @@ Idempotency is the last piece, and it follows directly from the verb taxonomy es
 ## Example Code
 ```tsx
 // middleware/auth.ts — validated once, never per-handler
+import { z } from 'zod';
 function createAuthMiddleware(validTokens: Set<string>) {
   return (req: Request, next: () => Promise<Response>): Promise<Response> => {
     const token = req.headers.get('Authorization')?.replace('Bearer ', '');

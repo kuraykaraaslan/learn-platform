@@ -33,6 +33,22 @@ import fs from 'fs';
 const PRIVATE_KEY = fs.readFileSync('./secrets/private.pem');
 const PUBLIC_KEY = fs.readFileSync('./secrets/public.pem');
 
+/**
+ * What actually travels in the token. Keep it small and non-sensitive: every
+ * claim here is base64url — readable by anyone holding the token — and every
+ * claim here is stale the moment the underlying record changes, because the
+ * whole point of a signed token is that it is verified without a lookup.
+ *
+ * `role` is the classic mistake: put it in and a demotion does not take effect
+ * until the token expires. Either accept that window deliberately, or look the
+ * role up per request and keep the token to identity alone.
+ */
+type TokenPayload = {
+  sub: string;        // user id — the subject, never an email
+  tenantId: string;   // scopes every downstream query
+  sessionId: string;  // lets you revoke one session without revoking the user
+};
+
 function signAccessTokenRS256(payload: TokenPayload): string {
   return jwt.sign(payload, PRIVATE_KEY, {
     algorithm: 'RS256',

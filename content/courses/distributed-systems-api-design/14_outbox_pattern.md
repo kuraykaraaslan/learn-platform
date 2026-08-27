@@ -61,6 +61,7 @@ async function createTenant(
 }
 
 // ─── Step 2: Outbox relay — polls and publishes ───
+import { PrismaClient } from '@prisma/client';
 import { Queue } from 'bullmq';
 
 const eventQueue = new Queue('domain-events');

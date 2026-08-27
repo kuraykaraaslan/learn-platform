@@ -36,6 +36,7 @@ function TitleBar() {
 }
 
 // main/windows/createMainWindow.ts (excerpt) — per-OS title bar style + a real minimum size
+import { useEffect } from 'react';
 import { BrowserWindow } from "electron";
 
 const isMac = process.platform === "darwin";

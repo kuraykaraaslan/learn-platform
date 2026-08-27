@@ -1,45 +1,19 @@
 {
   "generatedFrom": "scripts/verify-code.ts",
   "defectsByClass": {
-    "undefined-identifier": 423,
-    "implicit-any": 23,
+    "undefined-identifier": 177,
+    "implicit-any": 14,
     "type-error": 250
   },
   "totals": {
     "fences": 161,
     "clean": 25,
-    "onlyMissingModules": 22,
-    "failing": 114,
-    "lessonsAffected": 114,
+    "onlyMissingModules": 42,
+    "failing": 94,
+    "lessonsAffected": 94,
     "privateAliasImports": 16
   },
   "lessons": [
-    {
-      "lesson": "advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md",
-      "lessonId": 106,
-      "title": "Event Streaming — Kafka vs BullMQ: When to Choose",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 22,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 23,
-              "message": "Cannot find name 'sendEmail'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 54,
-              "message": "Cannot find name 'sendWelcomeEmail'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
     {
       "lesson": "advanced-deep-dive-topics/107_api_design_philosophy.md",
       "lessonId": 107,
@@ -71,28 +45,10 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2304",
-              "line": 3,
-              "message": "Cannot find name 'embed'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 5,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS7006",
               "line": 11,
               "message": "Parameter 'c' implicitly has an 'any' type.",
               "class": "implicit-any"
-            },
-            {
-              "code": "TS2304",
-              "line": 13,
-              "message": "Cannot find name 'callModel'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -163,38 +119,6 @@
       ]
     },
     {
-      "lesson": "ai-llm-engineering/150_context_window_conversation_management.md",
-      "lessonId": 150,
-      "title": "Context Window and Conversation Management",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 20,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 23,
-              "message": "Cannot find name 'anthropic'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'anthropic'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 56,
-              "message": "Cannot find name 'extractText'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "lesson": "ai-llm-engineering/151_tool_use_agentic_loops.md",
       "lessonId": 151,
       "title": "Tool Use and Agentic Loops",
@@ -205,12 +129,6 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2552",
-              "line": 27,
-              "message": "Cannot find name 'searchProducts'. Did you mean 'searchProductsTool'?",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS2304",
               "line": 29,
               "message": "Cannot find name 'AppError'.",
@@ -218,20 +136,8 @@
             },
             {
               "code": "TS2304",
-              "line": 39,
-              "message": "Cannot find name 'anthropic'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 42,
               "message": "Cannot find name 'AGENT_SYSTEM_PROMPT'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 47,
-              "message": "Cannot find name 'extractText'.",
               "class": "undefined-identifier"
             },
             {
@@ -268,55 +174,13 @@
             },
             {
               "code": "TS2304",
-              "line": 7,
-              "message": "Cannot find name 'rerank'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 11,
-              "message": "Cannot find name 'RetrievedChunk'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 20,
-              "message": "Cannot find name 'anthropic'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 29,
-              "message": "Cannot find name 'extractText'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 33,
-              "message": "Cannot find name 'embed'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 35,
-              "message": "Cannot find name 'anthropic'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 38,
+              "line": 50,
               "message": "Cannot find name 'RAG_SYSTEM_PROMPT'.",
               "class": "undefined-identifier"
             },
             {
-              "code": "TS2304",
-              "line": 41,
-              "message": "Cannot find name 'extractText'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS7006",
-              "line": 42,
+              "line": 54,
               "message": "Parameter 'c' implicitly has an 'any' type.",
               "class": "implicit-any"
             }
@@ -336,32 +200,8 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 27,
-              "message": "Cannot find name 'anthropic'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 29,
               "message": "Cannot find name 'SUMMARY_SYSTEM_PROMPT'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 34,
-              "message": "Cannot find name 'logger'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 37,
-              "message": "Cannot find name 'logger'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 44,
-              "message": "Cannot find name 'extractText'.",
               "class": "undefined-identifier"
             }
           ]
@@ -380,20 +220,8 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 12,
+              "line": 13,
               "message": "Cannot find name 'DRAFT_SYSTEM_PROMPT'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 41,
-              "message": "Cannot find name 'useState'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 42,
-              "message": "Cannot find name 'useState'.",
               "class": "undefined-identifier"
             }
           ]
@@ -412,20 +240,8 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 14,
-              "message": "Cannot find name 'anthropic'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 17,
               "message": "Cannot find name 'SUMMARY_SYSTEM_PROMPT'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 20,
-              "message": "Cannot find name 'extractText'.",
               "class": "undefined-identifier"
             },
             {
@@ -482,44 +298,8 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 14,
-              "message": "Cannot find name 'logger'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 18,
-              "message": "Cannot find name 'logger'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 37,
-              "message": "Cannot find name 'redis'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 44,
-              "message": "Cannot find name 'anthropic'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 44,
               "message": "Cannot find name 'CLASSIFY_CONFIG'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 51,
-              "message": "Cannot find name 'extractText'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 52,
-              "message": "Cannot find name 'redis'.",
               "class": "undefined-identifier"
             }
           ]
@@ -553,26 +333,6 @@
       ]
     },
     {
-      "lesson": "ai-llm-engineering/160_ai_data_privacy_regulatory_compliance.md",
-      "lessonId": 160,
-      "title": "AI Data Privacy and Regulatory Compliance",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 14,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "lesson": "ai-llm-engineering/161_ai_feature_ux_patterns.md",
       "lessonId": 161,
       "title": "AI Feature UX Patterns",
@@ -584,15 +344,9 @@
           "defects": [
             {
               "code": "TS2875",
-              "line": 4,
+              "line": 5,
               "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 13,
-              "message": "Cannot find name 'useState'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -642,62 +396,8 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 25,
-              "message": "Cannot find name 'redis'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 28,
-              "message": "Cannot find name 'redis'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 32,
+              "line": 33,
               "message": "Cannot find name 'server'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 38,
-              "message": "Cannot find name 'z'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 38,
-              "message": "Cannot find name 'z'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 38,
-              "message": "Cannot find name 'z'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS7031",
-              "line": 39,
-              "message": "Binding element 'projectId' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            },
-            {
-              "code": "TS7031",
-              "line": 39,
-              "message": "Binding element 'name' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            },
-            {
-              "code": "TS7031",
-              "line": 39,
-              "message": "Binding element 'idempotencyKey' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            },
-            {
-              "code": "TS2304",
-              "line": 41,
-              "message": "Cannot find name 'createItem'.",
               "class": "undefined-identifier"
             }
           ]
@@ -716,26 +416,8 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 9,
-              "message": "Cannot find name 'anthropic'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 12,
               "message": "Cannot find name 'CLASSIFY_SYSTEM_PROMPT'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 15,
-              "message": "Cannot find name 'extractText'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 19,
-              "message": "Cannot find name 'anthropic'.",
               "class": "undefined-identifier"
             },
             {
@@ -746,26 +428,8 @@
             },
             {
               "code": "TS2304",
-              "line": 25,
-              "message": "Cannot find name 'extractText'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 29,
-              "message": "Cannot find name 'anthropic'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 32,
               "message": "Cannot find name 'REVIEW_SYSTEM_PROMPT'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 35,
-              "message": "Cannot find name 'extractText'.",
               "class": "undefined-identifier"
             },
             {
@@ -790,24 +454,6 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 21,
-              "message": "Cannot find name 'logger'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 27,
-              "message": "Cannot find name 'logger'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 30,
-              "message": "Cannot find name 'mergePullRequest'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 39,
               "message": "Cannot find name 'AppError'.",
               "class": "undefined-identifier"
@@ -828,24 +474,6 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 6,
-              "message": "Cannot find name 'readBalanceFromDb'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 8,
-              "message": "Cannot find name 'writeBalanceToDb'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 13,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 21,
               "message": "Cannot find name 'userIds'.",
               "class": "undefined-identifier"
@@ -855,12 +483,6 @@
               "line": 21,
               "message": "Parameter 'id' implicitly has an 'any' type.",
               "class": "implicit-any"
-            },
-            {
-              "code": "TS2304",
-              "line": 21,
-              "message": "Cannot find name 'sendWelcomeEmail'.",
-              "class": "undefined-identifier"
             },
             {
               "code": "TS7006",
@@ -884,121 +506,97 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 7,
+              "line": 9,
               "message": "Cannot find name 'UserRecord'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 8,
+              "line": 10,
               "message": "Cannot find name 'CreateUserDto'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 8,
+              "line": 10,
               "message": "Cannot find name 'UserRecord'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 49,
-              "message": "Cannot find name 'bcrypt'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 52,
-              "message": "Cannot find name 'bcrypt'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 58,
-              "message": "Cannot find name 'DataSource'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 60,
+              "line": 62,
               "message": "Cannot find name 'UserRecord'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 61,
-              "message": "Cannot find name 'UserEntity'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 64,
-              "message": "Cannot find name 'CreateUserDto'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 64,
-              "message": "Cannot find name 'UserRecord'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 65,
+              "line": 63,
               "message": "Cannot find name 'UserEntity'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
               "line": 66,
-              "message": "Cannot find name 'UserEntity'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 72,
-              "message": "Cannot find name 'UserRecord'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 78,
               "message": "Cannot find name 'CreateUserDto'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 79,
+              "line": 66,
               "message": "Cannot find name 'UserRecord'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 85,
+              "line": 67,
+              "message": "Cannot find name 'UserEntity'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 68,
+              "message": "Cannot find name 'UserEntity'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 74,
               "message": "Cannot find name 'UserRecord'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 90,
-              "message": "Cannot find name 'dataSource'.",
+              "line": 80,
+              "message": "Cannot find name 'CreateUserDto'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 92,
+              "line": 81,
+              "message": "Cannot find name 'UserRecord'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 87,
+              "message": "Cannot find name 'UserRecord'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 94,
               "message": "Cannot find name 'JwtTokenService'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 92,
+              "line": 94,
               "message": "Cannot find name 'env'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 99,
+              "line": 101,
               "message": "Cannot find name 'StaticTokenService'.",
               "class": "undefined-identifier"
             }
@@ -1133,30 +731,6 @@
               "line": 66,
               "message": "Cannot find name 'User'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 81,
-              "message": "Cannot find name 'sendWelcomeEmail'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 82,
-              "message": "Cannot find name 'initializeUserSettings'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 83,
-              "message": "Cannot find name 'sendSlackNotification'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 84,
-              "message": "Cannot find name 'provisionFreeTrial'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -1176,18 +750,6 @@
               "code": "TS2304",
               "line": 7,
               "message": "Cannot find name 'Tenant'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 14,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 26,
-              "message": "Cannot find name 'db'.",
               "class": "undefined-identifier"
             },
             {
@@ -1218,20 +780,8 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 42,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 67,
               "message": "Cannot find name 'AuditLogRow'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 72,
-              "message": "Cannot find name 'db'.",
               "class": "undefined-identifier"
             },
             {
@@ -1473,52 +1023,6 @@
       ]
     },
     {
-      "lesson": "database-advanced/42_optimistic_vs_pessimistic_locking.md",
-      "lessonId": 42,
-      "title": "Optimistic vs Pessimistic Locking in Prisma/TypeORM",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 23,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 83,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 107,
-              "message": "Cannot find name 'dataSource'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "database-advanced/43_zero_downtime_database_migration.md",
-      "lessonId": 43,
-      "title": "Zero-Downtime Database Migration",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 88,
-              "message": "Cannot find name 'getAllTenantIds'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "lesson": "database-advanced/44_soft_delete_pattern_problems_alternatives.md",
       "lessonId": 44,
       "title": "Soft Delete Pattern — Problems and Alternatives",
@@ -1568,13 +1072,7 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 49,
-              "message": "Cannot find name 'DataSource'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 52,
+              "line": 53,
               "message": "Cannot find name 'TenantAuditLog'.",
               "class": "undefined-identifier"
             }
@@ -1592,18 +1090,6 @@
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS2304",
-              "line": 28,
-              "message": "Cannot find name 'DataSource'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 62,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
             {
               "code": "TS2304",
               "line": 62,
@@ -1632,49 +1118,19 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 61,
-              "message": "Cannot find name 'getTenantDataSource'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 62,
-              "message": "Cannot find name 'getSystemDataSource'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 64,
+              "line": 65,
               "message": "Cannot find name 'AuditLog'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 95,
-              "message": "Cannot find name 'DataSource'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 96,
+              "line": 97,
               "message": "Cannot find name 'AuditLog'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 127,
-              "message": "Cannot find name 'getTenantDataSource'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 128,
-              "message": "Cannot find name 'getSystemDataSource'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 130,
+              "line": 131,
               "message": "Cannot find name 'AuditLog'.",
               "class": "undefined-identifier"
             }
@@ -1694,85 +1150,67 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 22,
-              "message": "Cannot find name 'DataSource'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS7006",
-              "line": 32,
-              "message": "Parameter 'manager' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            },
-            {
-              "code": "TS2304",
-              "line": 34,
+              "line": 35,
               "message": "Cannot find name 'UserSession'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 38,
+              "line": 39,
               "message": "Cannot find name 'UserSocialAccount'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 42,
+              "line": 43,
               "message": "Cannot find name 'TenantMember'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 48,
+              "line": 49,
               "message": "Cannot find name 'AuditLog'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 62,
+              "line": 63,
               "message": "Cannot find name 'User'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 74,
+              "line": 75,
               "message": "Cannot find name 'TenantSubscription'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 83,
+              "line": 84,
               "message": "Cannot find name 'Invoice'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 94,
+              "line": 95,
               "message": "Cannot find name 'AuditLogService'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 114,
-              "message": "Cannot find name 'getSystemDataSource'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 118,
+              "line": 119,
               "message": "Cannot find name 'UserSession'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 124,
+              "line": 125,
               "message": "Cannot find name 'Logger'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 129,
+              "line": 130,
               "message": "Cannot find name 'User'.",
               "class": "undefined-identifier"
             }
@@ -1792,20 +1230,8 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 38,
-              "message": "Cannot find name 'resolveTenantDatabaseUrl'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 43,
               "message": "Cannot find name 'tenantEntities'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 64,
-              "message": "Cannot find name 'getAdminDataSource'.",
               "class": "undefined-identifier"
             },
             {
@@ -1834,20 +1260,8 @@
             },
             {
               "code": "TS2304",
-              "line": 118,
-              "message": "Cannot find name 'getAdminDataSource'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 127,
               "message": "Cannot find name 'systemRepo'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 142,
-              "message": "Cannot find name 'getAllActiveTenants'.",
               "class": "undefined-identifier"
             },
             {
@@ -1870,12 +1284,6 @@
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS2304",
-              "line": 44,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
             {
               "code": "TS7006",
               "line": 55,
@@ -1904,19 +1312,7 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 7,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 30,
-              "message": "Cannot find name 'Pool'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 38,
+              "line": 39,
               "message": "Cannot find name 'AnalyticsRow'.",
               "class": "undefined-identifier"
             }
@@ -1936,121 +1332,9 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 3,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 8,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 19,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 39,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 40,
+              "line": 43,
               "message": "Cannot find name 'User'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 51,
-              "message": "Cannot find name 'NextRequest'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 52,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 53,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 57,
-              "message": "Cannot find name 'NextResponse'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 62,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "database-caching-performance/17_database_index_strategy.md",
-      "lessonId": 17,
-      "title": "Database Index Strategy (Composite, Covering, Partial Index)",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 55,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "database-caching-performance/18_query_plan_analysis.md",
-      "lessonId": 18,
-      "title": "Query Plan Analysis — EXPLAIN ANALYZE",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 4,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 64,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 73,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS7006",
-              "line": 74,
-              "message": "Parameter 'e' implicitly has an 'any' type.",
-              "class": "implicit-any"
             }
           ]
         }
@@ -2088,63 +1372,15 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 2,
-              "message": "Cannot find name 'Redis'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 2,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 32,
+              "line": 34,
               "message": "Cannot find name 'TenantConfig'.",
               "class": "undefined-identifier"
             },
             {
-              "code": "TS2304",
-              "line": 33,
-              "message": "Cannot find name 'Redis'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 34,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 53,
-              "message": "Cannot find name 'Redis'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 60,
-              "message": "Cannot find name 'Redis'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 60,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS2345",
-              "line": 72,
+              "line": 74,
               "message": "Argument of type 'unknown' is not assignable to parameter of type 'string'.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 80,
-              "message": "Cannot find name 'Redis'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -2173,12 +1409,6 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
-              "line": 8,
-              "message": "Cannot find name 'getPublicPricingData'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS2323",
               "line": 20,
               "message": "Cannot redeclare exported variable 'GET'.",
@@ -2191,18 +1421,6 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
-              "line": 21,
-              "message": "Cannot find name 'getTenantFromRequest'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 22,
-              "message": "Cannot find name 'getTenantDashboard'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS2323",
               "line": 33,
               "message": "Cannot redeclare exported variable 'GET'.",
@@ -2213,18 +1431,6 @@
               "line": 33,
               "message": "Duplicate function implementation.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 34,
-              "message": "Cannot find name 'getSession'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 35,
-              "message": "Cannot find name 'getUserProfile'.",
-              "class": "undefined-identifier"
             },
             {
               "code": "TS2323",
@@ -2237,12 +1443,6 @@
               "line": 51,
               "message": "Duplicate function implementation.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 52,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
             },
             {
               "code": "TS2875",
@@ -2270,18 +1470,6 @@
             },
             {
               "code": "TS2304",
-              "line": 60,
-              "message": "Cannot find name 'getTenantFromCookies'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 61,
-              "message": "Cannot find name 'getTenantStats'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 62,
               "message": "Cannot find name 'Dashboard'.",
               "class": "undefined-identifier"
@@ -2291,82 +1479,6 @@
               "line": 69,
               "message": "Cannot find name 'PlanUpdateInput'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 70,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "distributed-systems-api-design/01_cap_theorem.md",
-      "lessonId": 1,
-      "title": "CAP Theorem",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 10,
-              "message": "Cannot find name 'redis'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 16,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 27,
-              "message": "Cannot find name 'redis'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 32,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 33,
-              "message": "Cannot find name 'redis'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "distributed-systems-api-design/02_event_sourcing_cqrs.md",
-      "lessonId": 2,
-      "title": "Event Sourcing + CQRS",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 36,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS7006",
-              "line": 43,
-              "message": "Parameter 'r' implicitly has an 'any' type.",
-              "class": "implicit-any"
             }
           ]
         }
@@ -2382,60 +1494,6 @@
           "line": 20,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS2304",
-              "line": 34,
-              "message": "Cannot find name 'createTenant'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 49,
-              "message": "Cannot find name 'chargeCard'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 69,
-              "message": "Cannot find name 'isDefiniteFailure'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 76,
-              "message": "Cannot find name 'findChargeByIdempotencyKey'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 93,
-              "message": "Cannot find name 'allocateSeats'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 113,
-              "message": "Cannot find name 'sendWelcomeEmail'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 120,
-              "message": "Cannot find name 'markSagaCompleted'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 124,
-              "message": "Cannot find name 'refundCharge'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 129,
-              "message": "Cannot find name 'deleteTenant'.",
-              "class": "undefined-identifier"
-            },
             {
               "code": "TS2322",
               "line": 136,
@@ -2467,116 +1525,6 @@
       ]
     },
     {
-      "lesson": "distributed-systems-api-design/05_rate_limiting_strategies.md",
-      "lessonId": 5,
-      "title": "Rate Limiting Strategies (Token Bucket, Leaky Bucket, Sliding Window)",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 5,
-              "message": "Cannot find name 'Redis'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 49,
-              "message": "Cannot find name 'Redis'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "distributed-systems-api-design/06_distributed_locking.md",
-      "lessonId": 6,
-      "title": "Distributed Locking (Redis Redlock, DB-based)",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 20,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 49,
-              "message": "Cannot find name 'redis'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 57,
-              "message": "Cannot find name 'createTenantSchema'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 58,
-              "message": "Cannot find name 'seedTenantDefaults'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 59,
-              "message": "Cannot find name 'markTenantActive'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 68,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "distributed-systems-api-design/08_webhook_security_retry.md",
-      "lessonId": 8,
-      "title": "Webhook Security & Retry Mechanism",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 78,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "distributed-systems-api-design/09_api_versioning_strategies.md",
-      "lessonId": 9,
-      "title": "API Versioning Strategies (URL vs Header vs Content Negotiation)",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 69,
-              "message": "Cannot find name 'getUserV2'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "lesson": "distributed-systems-api-design/10_backward_forward_compatibility.md",
       "lessonId": 10,
       "title": "Backward/Forward Compatibility — Schema Evolution",
@@ -2586,12 +1534,6 @@
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS2304",
-              "line": 12,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
             {
               "code": "TS2304",
               "line": 41,
@@ -2646,45 +1588,15 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 17,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 27,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 32,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 57,
+              "line": 58,
               "message": "Cannot find name 'AuditEvent'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 65,
+              "line": 66,
               "message": "Cannot find name 'AuditEvent'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS7006",
-              "line": 73,
-              "message": "Parameter 'a' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            },
-            {
-              "code": "TS7006",
-              "line": 73,
-              "message": "Parameter 'b' implicitly has an 'any' type.",
-              "class": "implicit-any"
             }
           ]
         }
@@ -2703,37 +1615,7 @@
             {
               "code": "TS2304",
               "line": 26,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 26,
               "message": "Cannot find name 'TenantUsageSummary'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 40,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 47,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 60,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 74,
-              "message": "Cannot find name 'db'.",
               "class": "undefined-identifier"
             }
           ]
@@ -2752,25 +1634,13 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 21,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 22,
               "message": "Cannot find name 'Tenant'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 47,
-              "message": "Cannot find name 'PrismaClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 52,
+              "line": 53,
               "message": "Cannot find name 'OutboxMessage'.",
               "class": "undefined-identifier"
             }
@@ -2790,62 +1660,8 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 6,
-              "message": "Cannot find name 'systemDb'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 9,
+              "line": 10,
               "message": "Cannot find name 'tenantDb'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 20,
-              "message": "Cannot find name 'systemDb'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS7006",
-              "line": 20,
-              "message": "Parameter 'tx' implicitly has an 'any' type.",
-              "class": "implicit-any"
-            },
-            {
-              "code": "TS2304",
-              "line": 46,
-              "message": "Cannot find name 'systemDb'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'initializeTenantDatabase'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 51,
-              "message": "Cannot find name 'seedTenantDefaults'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 54,
-              "message": "Cannot find name 'systemDb'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 66,
-              "message": "Cannot find name 'PoolClient'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 67,
-              "message": "Cannot find name 'PoolClient'.",
               "class": "undefined-identifier"
             }
           ]
@@ -2862,12 +1678,6 @@
           "line": 17,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS2304",
-              "line": 5,
-              "message": "Cannot find name 'eventBus'.",
-              "class": "undefined-identifier"
-            },
             {
               "code": "TS18004",
               "line": 5,
@@ -2887,28 +1697,10 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
-              "line": 8,
-              "message": "Cannot find name 'eventBus'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS7006",
               "line": 8,
               "message": "Parameter 'event' implicitly has an 'any' type.",
               "class": "implicit-any"
-            },
-            {
-              "code": "TS2304",
-              "line": 9,
-              "message": "Cannot find name 'sendOrderConfirmationEmail'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 12,
-              "message": "Cannot find name 'eventBus'.",
-              "class": "undefined-identifier"
             },
             {
               "code": "TS7006",
@@ -2917,28 +1709,10 @@
               "class": "implicit-any"
             },
             {
-              "code": "TS2304",
-              "line": 13,
-              "message": "Cannot find name 'decrementInventory'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 16,
-              "message": "Cannot find name 'eventBus'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS7006",
               "line": 16,
               "message": "Parameter 'event' implicitly has an 'any' type.",
               "class": "implicit-any"
-            },
-            {
-              "code": "TS2304",
-              "line": 17,
-              "message": "Cannot find name 'recordOrderEvent'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -2964,12 +1738,6 @@
               "code": "TS2304",
               "line": 2,
               "message": "Cannot find name 'PlaceOrderInput'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 3,
-              "message": "Cannot find name 'db'.",
               "class": "undefined-identifier"
             },
             {
@@ -3329,24 +2097,6 @@
               "line": 48,
               "message": "A module cannot have multiple default exports.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'findUserByEmail'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 59,
-              "message": "Cannot find name 'warmSessionCache'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 64,
-              "message": "Cannot find name 'buildAuthResponse'.",
-              "class": "undefined-identifier"
             },
             {
               "code": "TS2528",
@@ -4003,12 +2753,6 @@
               "line": 38,
               "message": "Duplicate identifier 'Result'.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 62,
-              "message": "Cannot find name 'showToast'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -4039,19 +2783,7 @@
             {
               "code": "TS2304",
               "line": 72,
-              "message": "Cannot find name 'ipcMain'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 72,
               "message": "Cannot find name 'IPC'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 73,
-              "message": "Cannot find name 'assertSender'.",
               "class": "undefined-identifier"
             },
             {
@@ -4151,12 +2883,6 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2304",
-              "line": 13,
-              "message": "Cannot find name 'broadcast'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS2300",
               "line": 16,
               "message": "Duplicate identifier 'Menu'.",
@@ -4193,30 +2919,6 @@
               "line": 24,
               "message": "Cannot find name 'AuthApi'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 44,
-              "message": "Cannot find name 'ipcMain'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 44,
-              "message": "Cannot find name 'assertSender'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 45,
-              "message": "Cannot find name 'ipcMain'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 45,
-              "message": "Cannot find name 'assertSender'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -4235,31 +2937,13 @@
             {
               "code": "TS2304",
               "line": 4,
-              "message": "Cannot find name 'ipcMain'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 4,
               "message": "Cannot find name 'IPC'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 5,
-              "message": "Cannot find name 'assertSender'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
               "line": 7,
               "message": "Cannot find name 'UsersListReq'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 9,
-              "message": "Cannot find name 'toAppError'.",
               "class": "undefined-identifier"
             },
             {
@@ -4272,18 +2956,6 @@
               "code": "TS2304",
               "line": 35,
               "message": "Cannot find name 'app'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 36,
-              "message": "Cannot find name 'registerIpc'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 37,
-              "message": "Cannot find name 'createMainWindow'.",
               "class": "undefined-identifier"
             },
             {
@@ -4350,37 +3022,19 @@
             },
             {
               "code": "TS2304",
-              "line": 35,
+              "line": 36,
               "message": "Cannot find name 'Toolbar'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 37,
+              "line": 38,
               "message": "Cannot find name 'StatusBar'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 47,
-              "message": "Cannot find name 'useEffect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 47,
-              "message": "Cannot find name 'applyTheme'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'create'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 54,
+              "line": 55,
               "message": "Cannot find name 'mainWindow'.",
               "class": "undefined-identifier"
             }
@@ -4451,12 +3105,6 @@
               "line": 43,
               "message": "Cannot find name 'focusMainWindow'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 61,
-              "message": "Cannot find name 'showToast'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -4517,12 +3165,6 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
-              "line": 8,
-              "message": "Cannot find name 'useDashboardData'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS2875",
               "line": 9,
               "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
@@ -4547,12 +3189,6 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
-              "line": 19,
-              "message": "Cannot find name 'getDashboardStats'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS2323",
               "line": 40,
               "message": "Cannot redeclare exported variable 'default'.",
@@ -4563,12 +3199,6 @@
               "line": 40,
               "message": "Duplicate function implementation.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 42,
-              "message": "Cannot find name 'getTenant'.",
-              "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
@@ -4590,26 +3220,8 @@
             },
             {
               "code": "TS2304",
-              "line": 63,
-              "message": "Cannot find name 'getExpensiveTenantAnalytics'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 64,
               "message": "Cannot find name 'StatsGrid'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 76,
-              "message": "Cannot find name 'getServerSession'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 81,
-              "message": "Cannot find name 'db'.",
               "class": "undefined-identifier"
             }
           ]
@@ -4723,72 +3335,6 @@
               "line": 46,
               "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 63,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 103,
-              "message": "Cannot find name 'useState'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 104,
-              "message": "Cannot find name 'fetchBanner'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 110,
-              "message": "Cannot find name 'useState'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 111,
-              "message": "Cannot find name 'fetchBanner'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 123,
-              "message": "Cannot find name 'heavyComputation'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 124,
-              "message": "Cannot find name 'setResult'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 132,
-              "message": "Cannot find name 'setLoading'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 135,
-              "message": "Cannot find name 'heavyComputation'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 136,
-              "message": "Cannot find name 'setResult'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 137,
-              "message": "Cannot find name 'setLoading'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -4805,12 +3351,6 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2304",
-              "line": 10,
-              "message": "Cannot find name 'getBillingData'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS2875",
               "line": 11,
               "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
@@ -4824,20 +3364,8 @@
             },
             {
               "code": "TS2304",
-              "line": 15,
-              "message": "Cannot find name 'getTenantMembers'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 16,
               "message": "Cannot find name 'TeamTable'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 20,
-              "message": "Cannot find name 'getAnalytics'.",
               "class": "undefined-identifier"
             },
             {
@@ -4965,18 +3493,6 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2304",
-              "line": 3,
-              "message": "Cannot find name 'useQuery'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 11,
-              "message": "Cannot find name 'create'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS7006",
               "line": 11,
               "message": "Parameter 'set' implicitly has an 'any' type.",
@@ -4987,18 +3503,6 @@
               "line": 13,
               "message": "Parameter 's' implicitly has an 'any' type.",
               "class": "implicit-any"
-            },
-            {
-              "code": "TS2304",
-              "line": 18,
-              "message": "Cannot find name 'useSearchParams'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 19,
-              "message": "Cannot find name 'useRouter'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -5014,12 +3518,6 @@
           "line": 30,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS2304",
-              "line": 2,
-              "message": "Cannot find name 'prisma'.",
-              "class": "undefined-identifier"
-            },
             {
               "code": "TS2304",
               "line": 3,
@@ -5051,70 +3549,6 @@
       ]
     },
     {
-      "lesson": "fundamentals-tools/125_rest_api_basics.md",
-      "lessonId": 125,
-      "title": "REST API Basics — Resource & CRUD Design",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 17,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 5,
-              "message": "Cannot find name 'prisma'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 11,
-              "message": "Cannot find name 'prisma'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 18,
-              "message": "Cannot find name 'prisma'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 23,
-              "message": "Cannot find name 'prisma'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "fundamentals-tools/127_auth_basics.md",
-      "lessonId": 127,
-      "title": "Authentication Basics — Sessions vs Tokens, Password Hashing",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 18,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 14,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 18,
-              "message": "Cannot find name 'redis'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "lesson": "fundamentals-tools/128_clean_code_basics.md",
       "lessonId": 128,
       "title": "Clean Code Basics — Naming, Function Size, Readability",
@@ -5128,46 +3562,6 @@
               "code": "TS2304",
               "line": 22,
               "message": "Cannot find name 'User'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "fundamentals-tools/133_networking_fundamentals.md",
-      "lessonId": 133,
-      "title": "Networking Fundamentals for Backend Engineers — DNS, TCP/IP, Load Balancers",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 30,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 3,
-              "message": "Cannot find name 'getSocketRemoteAddress'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "observability-deployment/53_opentelemetry.md",
-      "lessonId": 53,
-      "title": "OpenTelemetry — Traces, Metrics, Logs Triad",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 25,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 75,
-              "message": "Cannot find name 'lookupUserIdByEmail'.",
               "class": "undefined-identifier"
             }
           ]
@@ -5274,26 +3668,6 @@
               "code": "TS2304",
               "line": 22,
               "message": "Cannot find name 'writeToLog'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "privacy-compliance-incident-response/361_vulnerability_management_lifecycle_patch_slas.md",
-      "lessonId": 361,
-      "title": "Vulnerability Management Lifecycle & Patch SLAs",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 38,
-              "message": "Cannot find name 'notifySecurityChannel'.",
               "class": "undefined-identifier"
             }
           ]
@@ -5408,12 +3782,6 @@
             },
             {
               "code": "TS2304",
-              "line": 4,
-              "message": "Cannot find name 'prisma'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 5,
               "message": "Cannot find name 'userInput'.",
               "class": "undefined-identifier"
@@ -5427,12 +3795,6 @@
             {
               "code": "TS2304",
               "line": 9,
-              "message": "Cannot find name 'repo'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 9,
               "message": "Cannot find name 'userInput'.",
               "class": "undefined-identifier"
             },
@@ -5441,12 +3803,6 @@
               "line": 16,
               "message": "Cannot redeclare block-scoped variable 'result'.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 16,
-              "message": "Cannot find name 'prisma'.",
-              "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
@@ -5462,12 +3818,6 @@
             },
             {
               "code": "TS2304",
-              "line": 22,
-              "message": "Cannot find name 'dataSource'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 24,
               "message": "Cannot find name 'actorId'.",
               "class": "undefined-identifier"
@@ -5476,12 +3826,6 @@
               "code": "TS2304",
               "line": 24,
               "message": "Cannot find name 'action'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 28,
-              "message": "Cannot find name 'dataSource'.",
               "class": "undefined-identifier"
             },
             {
@@ -5504,58 +3848,8 @@
             },
             {
               "code": "TS2304",
-              "line": 53,
-              "message": "Cannot find name 'prisma'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 73,
               "message": "Cannot find name 'req'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 74,
-              "message": "Cannot find name 'prisma'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "security/31_mass_assignment_protection_dto_whitelist.md",
-      "lessonId": 31,
-      "title": "Mass Assignment Protection — DTO Whitelist",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 44,
-              "message": "Cannot find name 'prisma'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'prisma'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 59,
-              "message": "Cannot find name 'prisma'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 69,
-              "message": "Cannot find name 'prisma'.",
               "class": "undefined-identifier"
             }
           ]
@@ -5573,92 +3867,32 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2304",
-              "line": 15,
-              "message": "Cannot find name 'TokenPayload'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 24,
-              "message": "Cannot find name 'TokenPayload'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 30,
-              "message": "Cannot find name 'TokenPayload'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS2339",
-              "line": 48,
+              "line": 64,
               "message": "Property 'createHash' does not exist on type 'Crypto'.",
               "class": "type-error"
             },
             {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'sessionRepo'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 57,
-              "message": "Cannot find name 'rotationHistoryRepo'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 65,
-              "message": "Cannot find name 'rotationHistoryRepo'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 68,
-              "message": "Cannot find name 'sessionRepo'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 80,
-              "message": "Cannot find name 'generateAccessToken'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS2339",
-              "line": 81,
+              "line": 97,
               "message": "Property 'randomBytes' does not exist on type 'Crypto'.",
               "class": "type-error"
             },
             {
               "code": "TS2339",
-              "line": 82,
+              "line": 98,
               "message": "Property 'createHash' does not exist on type 'Crypto'.",
               "class": "type-error"
             },
             {
               "code": "TS2304",
-              "line": 85,
-              "message": "Cannot find name 'rotationHistoryRepo'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 92,
-              "message": "Cannot find name 'sessionRepo'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 105,
+              "line": 121,
               "message": "Cannot find name 'token'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 105,
+              "line": 121,
               "message": "Cannot find name 'SECRET'.",
               "class": "undefined-identifier"
             }
@@ -5678,32 +3912,20 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 66,
-              "message": "Cannot find name 'bcrypt'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 66,
+              "line": 67,
               "message": "Cannot find name 'plainPassword'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 66,
+              "line": 67,
               "message": "Cannot find name 'hashedPassword'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 75,
-              "message": "Cannot find name 'rawToken'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
               "line": 76,
-              "message": "Cannot find name 'repo'.",
+              "message": "Cannot find name 'rawToken'.",
               "class": "undefined-identifier"
             }
           ]
@@ -5749,38 +3971,6 @@
               "line": 79,
               "message": "Duplicate identifier 'NextResponse'.",
               "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "security/143_compliance_frameworks.md",
-      "lessonId": 143,
-      "title": "Compliance Frameworks — SOC 2, ISO 27001, HIPAA",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 17,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS2304",
-              "line": 5,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 6,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 7,
-              "message": "Cannot find name 'db'.",
-              "class": "undefined-identifier"
             }
           ]
         }

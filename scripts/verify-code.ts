@@ -34,18 +34,82 @@ const OUT_DIR = path.join(process.cwd(), 'content', '_reports');
  */
 type DefectClass =
   | 'missing-module'
+  | 'assumed-context'
+  | 'assumed-helper'
   | 'syntax'
   | 'undefined-identifier'
   | 'implicit-any'
   | 'type-error';
 
-function classify(code: string): DefectClass {
+/**
+ * Identifiers a lesson may reference without showing: the reader's own ORM,
+ * cache client, logger and queue. Every documentation corpus assumes these;
+ * spelling them out in each snippet would add noise and teach nothing.
+ *
+ * This list is deliberately closed. A name that is NOT here and is not defined
+ * in the snippet is a real gap — the reader is being shown a symbol they have
+ * no way to reconstruct.
+ */
+const ASSUMED_CONTEXT = new Set([
+  'db', 'prisma', 'PrismaClient', 'redis', 'logger', 'dataSource', 'systemDb',
+  'queue', 'sagaQueue', 'pool', 'anthropic', 'eventBus', 'repo', 'sessionRepo',
+  'userRepo', 'rotationHistoryRepo',
+]);
+
+function classify(code: string, message = ''): DefectClass {
   if (code === 'TS2307') return 'missing-module';
+  if (code === 'TS2304' || code === 'TS2552') {
+    const name = /Cannot find name '([^']+)'/.exec(message)?.[1];
+    if (name && ASSUMED_CONTEXT.has(name)) return 'assumed-context';
+  }
   if (/^TS1\d{3}$/.test(code)) return 'syntax';
   if (code === 'TS2304' || code === 'TS2552') return 'undefined-identifier';
   if (code === 'TS7006' || code === 'TS7031' || code === 'TS7034' || code === 'TS7005')
     return 'implicit-any';
   return 'type-error';
+}
+
+/**
+ * Names that appear ONLY in call position — never with a property read off
+ * them, never in a type annotation. `await sendWelcomeEmail(tenantId)` tells
+ * the reader everything they need: the name is the contract and the arguments
+ * are visible. Declaring a body for it would pad the snippet without adding
+ * information.
+ *
+ * The moment a name is used as a type, or has a field read off it, it stops
+ * qualifying — because then the reader genuinely cannot reconstruct its shape,
+ * and that IS a defect.
+ */
+function callOnlyNames(source: ts.SourceFile): Set<string> {
+  const called = new Set<string>();
+  const shaped = new Set<string>();
+
+  const visit = (node: ts.Node) => {
+    if (ts.isCallExpression(node) && ts.isIdentifier(node.expression)) {
+      called.add(node.expression.text);
+    }
+    if (ts.isPropertyAccessExpression(node) && ts.isIdentifier(node.expression)) {
+      shaped.add(node.expression.text);
+    }
+    if (ts.isTypeReferenceNode(node) && ts.isIdentifier(node.typeName)) {
+      shaped.add(node.typeName.text);
+    }
+    if (ts.isNewExpression(node) && ts.isIdentifier(node.expression)) {
+      shaped.add(node.expression.text);
+    }
+    ts.forEachChild(node, visit);
+  };
+  visit(source);
+
+  for (const name of shaped) called.delete(name);
+  return called;
+}
+
+function classifyWithContext(code: string, message: string, callOnly: Set<string>): DefectClass {
+  const base = classify(code, message);
+  if (base !== 'undefined-identifier') return base;
+  const name = /Cannot find name '([^']+)'/.exec(message)?.[1];
+  return name && callOnly.has(name) ? 'assumed-helper' : base;
 }
 
 type Defect = { code: string; line: number; message: string; class: DefectClass };
@@ -63,6 +127,8 @@ function realDefects(r: Result): Defect[] {
   const hasMissingModule = r.defects.some((d) => d.class === 'missing-module');
   return r.defects.filter((d) => {
     if (d.class === 'missing-module') return false;
+    if (d.class === 'assumed-context') return false;
+    if (d.class === 'assumed-helper') return false;
     if (d.class === 'implicit-any' && hasMissingModule) return false;
     if (TEST_GLOBALS.test(d.message)) return false;
     return true;
@@ -118,6 +184,7 @@ for (const result of results) {
     ...program.getSyntacticDiagnostics(source),
     ...program.getSemanticDiagnostics(source),
   ];
+  const callOnly = callOnlyNames(source);
   for (const d of diagnostics) {
     const code = `TS${d.code}`;
     const line =
@@ -128,7 +195,7 @@ for (const result of results) {
       code,
       line,
       message: ts.flattenDiagnosticMessageText(d.messageText, ' '),
-      class: classify(code),
+      class: classifyWithContext(code, ts.flattenDiagnosticMessageText(d.messageText, ' '), callOnly),
     });
   }
 }

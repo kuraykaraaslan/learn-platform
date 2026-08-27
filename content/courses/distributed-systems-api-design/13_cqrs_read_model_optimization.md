@@ -50,6 +50,7 @@ async function getTenantDashboardData(tenantId: string) {
 }
 
 // Refresh via BullMQ on a schedule (every 5 minutes)
+import { PrismaClient } from '@prisma/client';
 import { Queue, Worker } from 'bullmq';
 
 const refreshQueue = new Queue('read-model-refresh', {

@@ -29,6 +29,18 @@ async function retrieveRelevantChunks(queryVector: number[]) {
   return reranked.slice(0, TOP_K);
 }
 
+/**
+ * What a retrieval step hands back. `filename` is not decoration: without a
+ * source identifier on every chunk the model cannot cite, you cannot show the
+ * user where an answer came from, and you cannot check grounding afterwards.
+ * `score` is kept so the threshold filter above is auditable rather than magic.
+ */
+type RetrievedChunk = {
+  text: string;
+  filename: string;
+  score: number;
+};
+
 function buildRAGUserMessage(query: string, chunks: RetrievedChunk[]): string {
   const context = chunks
     .map((c, i) => `<source id="${i + 1}" file="${c.filename}">\n${c.text}\n</source>`)

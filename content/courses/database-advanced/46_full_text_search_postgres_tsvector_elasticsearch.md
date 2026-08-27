@@ -102,6 +102,8 @@ async function searchUsers(prisma: PrismaClient, query: string): Promise<User[]>
 // If you outgrow PostgreSQL FTS, sync to Elasticsearch via your audit log
 // pattern: write to DB first, then index to Elasticsearch via a job queue
 
+import { DataSource } from 'typeorm';
+import { PrismaClient } from '@prisma/client';
 import { Queue } from 'bullmq';
 
 const searchIndexQueue = new Queue('search-index');

@@ -22,6 +22,7 @@ One algorithm across every endpoint is almost always the wrong choice, because t
 // Upgrading from fixed-window to sliding window counter and token bucket
 // Sliding window counter: accurate burst prevention at window boundaries
 
+import Redis from 'ioredis';
 export async function slidingWindowRateLimit(
   redis: Redis,
   key: string,       // e.g., `rl:login:${ip}`

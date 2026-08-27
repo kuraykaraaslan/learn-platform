@@ -22,6 +22,7 @@ In a single-process Node.js app, the event loop gives you implicit single-thread
 // For multi-node Redis, use the `redlock` npm package which implements
 // the full Redlock algorithm across N independent Redis nodes.
 
+import { PrismaClient } from '@prisma/client';
 import { Redis } from 'ioredis';
 import crypto from 'crypto';
 

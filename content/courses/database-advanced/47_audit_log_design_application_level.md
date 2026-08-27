@@ -41,6 +41,7 @@ For immutability, the database-level approach is to revoke `UPDATE` and `DELETE`
 */
 
 // ─── Upgrade 2: Hash chain for tamper detection ──────────────────────────
+import { DataSource } from 'typeorm';
 import crypto from 'crypto';
 
 interface AuditLogEntry {

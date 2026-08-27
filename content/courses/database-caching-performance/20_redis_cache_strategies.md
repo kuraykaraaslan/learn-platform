@@ -22,6 +22,8 @@ For a multi-tenant SaaS, a layered strategy makes sense: session data and tenant
 ## Example Code
 ```typescript
 // ─── Cache-aside with thundering herd prevention ───
+import { PrismaClient } from '@prisma/client';
+import Redis from 'ioredis';
 async function getTenantConfig(tenantId: string, redis: Redis, db: PrismaClient) {
   const cacheKey = `tenant:config:${tenantId}`;
   const cached = await redis.get(cacheKey);

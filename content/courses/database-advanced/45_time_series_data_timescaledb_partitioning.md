@@ -72,6 +72,7 @@ DROP TABLE audit_logs_2025_q1; -- instant!
 // After installing the TimescaleDB extension:
 
 // Migration SQL (run once):
+import { DataSource } from 'typeorm';
 /*
   -- Convert existing table to hypertable
   SELECT create_hypertable('audit_logs', 'created_at',

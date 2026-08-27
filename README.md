@@ -53,6 +53,29 @@ npm run content:snapshot     # regenerate the render snapshot (intended changes 
 - **`content/_waivers.json`** waives one rule for one file, with a reason, an
   owner and an expiry. An expired waiver is itself an error.
 
+### What a code snippet is allowed to assume
+
+A lesson snippet is documentation, not a runnable program, and forcing every
+one to be standalone would bloat them without teaching anything. The line is
+drawn where the reader loses information:
+
+| Allowed | Why |
+|---|---|
+| Infrastructure clients — `db`, `prisma`, `redis`, `logger`, `queue` | Universal, and the reader has their own |
+| A helper that is only ever **called** — `await sendWelcomeEmail(id)` | The name is the contract and the arguments are visible |
+
+| Not allowed | Why |
+|---|---|
+| A name whose **fields are read** but whose shape is never shown | The reader cannot reconstruct it |
+| A name used as a **type annotation** with no declaration | Same, and it will not compile where they paste it |
+| An import from a real package that is simply missing | It just does not run |
+
+`scripts/verify-code.ts` encodes exactly this: the first two are reported as
+`assumed-context` / `assumed-helper` and tolerated, everything else is a
+defect. Generated type declarations were deliberately **not** used to close the
+gap — `type UserRecord = { id: unknown }` satisfies the compiler and teaches
+nothing, which is the failure mode this corpus is most at risk of.
+
 Rules ship as `warn` and are promoted to `error` once the corpus is clean of
 them, so the gate never blocks on a backlog it did not create.
 

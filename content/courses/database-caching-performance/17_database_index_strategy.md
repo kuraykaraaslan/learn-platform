@@ -24,6 +24,7 @@ A **covering index** includes all columns needed to satisfy a query — both the
 
 // ─── Example: tenant_members table ───
 // Prisma schema:
+import { PrismaClient } from '@prisma/client';
 /*
 model TenantMember {
   id          String   @id @default(uuid())

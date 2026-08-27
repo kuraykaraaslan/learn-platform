@@ -20,6 +20,7 @@ Constant-time comparison algorithms compare every byte of both strings regardles
 ## Example Code
 ```typescript
 // lib/crypto/constant-time.ts
+import bcrypt from 'bcryptjs';
 import crypto from 'crypto';
 
 // ❌ The version almost everyone writes first, and why it does not work:

@@ -56,6 +56,7 @@ async function refreshAnalyticsView(db: Pool): Promise<void> {
 }
 
 // ✓ Better option 2: BullMQ job exports data to DuckDB (embedded OLAP)
+import { Pool } from 'pg';
 import Database from 'duckdb'; // npm install duckdb
 
 async function buildAnalyticsSnapshot(rows: AnalyticsRow[]): Promise<void> {

@@ -22,6 +22,7 @@ The key things to look for in a plan are: **Seq Scan on a large table** (means n
 // Reading and acting on EXPLAIN ANALYZE output
 
 // ─── Run EXPLAIN ANALYZE via Prisma raw query ───
+import { PrismaClient } from '@prisma/client';
 async function analyzeQuery(db: PrismaClient, tenantId: string) {
   // Always use EXPLAIN ANALYZE on dev/staging, not production (it runs the query)
   // Use EXPLAIN (no ANALYZE) on production to avoid executing expensive queries

@@ -22,6 +22,7 @@ The uncomfortable truth about sharding is that it forces you to give up most of 
 // Illustrating tenant-based sharding — conceptually matching your per-tenant DB architecture
 // This shows a shard router that maps tenantId → DataSource
 
+import { PrismaClient } from '@prisma/client';
 interface ShardConfig {
   id: string;
   connectionString: string;

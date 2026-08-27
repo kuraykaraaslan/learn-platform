@@ -21,7 +21,7 @@ Packaging ties both of these together: `electron-builder` is the primary tool (F
 ## Example Code
 ```typescript
 // main/libs/secret-store.ts — safeStorage encrypts with an OS-provided key
-import { safeStorage, app } from "electron";
+import { app, ipcMain, safeStorage } from 'electron';
 import { writeFile, readFile } from "node:fs/promises";
 import { join } from "node:path";
 
