@@ -1,1 +1,47 @@
-{}
+{
+  "rate-limiting": {
+    "term": "rate limiting",
+    "aliases": ["rate limit", "rate limited"],
+    "short": "Controls how many requests a client can make in a given period. Token bucket, leaky bucket, and sliding window are the common algorithms, and they trade off burst tolerance, fairness, and implementation cost differently — one algorithm for every endpoint is almost always the wrong choice.",
+    "lesson": 5
+  },
+  "connection-pooling": {
+    "term": "connection pooling",
+    "aliases": ["connection pool"],
+    "short": "Maintains a set of pre-established database connections that application instances share, so requests avoid the cost of a fresh TCP handshake, authentication, and session setup every time.",
+    "lesson": 19
+  },
+  "read-replica": {
+    "term": "read replica",
+    "aliases": ["read replicas"],
+    "short": "A continuously synchronized copy of a database that accepts only read (SELECT) queries. Writes go to the primary and stream to replicas asynchronously, with some replication lag before they're visible there.",
+    "lesson": 11
+  },
+  "circuit-breaker": {
+    "term": "circuit breaker",
+    "short": "Tracks recent failure rates for calls to an external dependency and \"opens\" once failures exceed a threshold, making further calls fail fast instead of piling up on a slow or dead service — then probes with a half-open state before closing again.",
+    "lesson": 4
+  },
+  "exponential-backoff": {
+    "term": "exponential backoff",
+    "short": "Spreads out retries after a failed operation instead of retrying immediately, so a recovering service doesn't get hit by every client at once. Usually paired with jitter, which randomizes the delay so retries from many clients don't all land on the same second.",
+    "lesson": 4
+  },
+  "database-sharding": {
+    "term": "sharding",
+    "aliases": ["shard", "shards", "database sharding"],
+    "short": "Horizontally partitions data across multiple independent database instances, each holding only a subset of the total data — unlike replication, where every node holds all of it. The shard key (the field that decides which shard a row lands on) is the critical design choice.",
+    "lesson": 12
+  },
+  "eventual-consistency": {
+    "term": "eventual consistency",
+    "short": "Accepts that different parts of a distributed system may be briefly out of sync, and designs the system to converge to a consistent state over time — a deliberate trade of synchronous consistency for availability and performance, not \"eventual incorrectness.\"",
+    "lesson": 15
+  },
+  "feature-flag": {
+    "term": "feature flag",
+    "aliases": ["feature flags", "feature toggle", "feature toggles"],
+    "short": "A runtime switch that controls whether a feature is visible inside an already-deployed version of the code, decoupling deployment from release — code can ship dark, then be turned on for a small percentage of users before everyone.",
+    "lesson": 56
+  }
+}

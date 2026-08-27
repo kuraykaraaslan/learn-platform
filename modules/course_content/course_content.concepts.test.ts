@@ -2,8 +2,14 @@ import { describe, expect, it } from 'vitest';
 import { loadConcepts, assertNoGenericTerms, buildConceptIndex, type Concept } from './course_content.concepts';
 
 describe('loadConcepts', () => {
-  it('reads the real (currently empty) content/concepts.json without throwing', () => {
-    expect(loadConcepts()).toEqual({});
+  it('reads the real content/concepts.json without throwing, and every entry has a defining lesson', () => {
+    const concepts = loadConcepts();
+    expect(Object.keys(concepts).length).toBeGreaterThan(0);
+    for (const [slug, concept] of Object.entries(concepts)) {
+      expect(concept.term, slug).toBeTruthy();
+      expect(concept.short, slug).toBeTruthy();
+      expect(concept.lesson, slug).toBeGreaterThan(0);
+    }
   });
 });
 

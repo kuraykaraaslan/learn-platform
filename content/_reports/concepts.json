@@ -1,6 +1,6 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
-  "totalTerms": 0,
+  "totalTerms": 8,
   "totalLessons": 412,
   "totals": {
     "neverMatched": 0,
@@ -8,5 +8,121 @@
   },
   "neverMatched": [],
   "atCapLessons": [],
-  "byTerm": []
+  "byTerm": [
+    {
+      "slug": "circuit-breaker",
+      "term": "circuit breaker",
+      "lessonsLinkedIn": [
+        "distributed-systems-api-design/136_api_gateway_bff.md",
+        "observability-deployment/63_chaos_engineering.md",
+        "process-soft-skills/79_blameless_post_mortem.md"
+      ],
+      "rawOccurrences": 14
+    },
+    {
+      "slug": "connection-pooling",
+      "term": "connection pooling",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
+        "database-advanced/50_multi_tenant_data_isolation_models.md",
+        "distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md",
+        "distributed-systems-api-design/11_read_replica_routing.md",
+        "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md",
+        "fundamentals-tools/133_networking_fundamentals.md",
+        "observability-deployment/61_alerting_design.md"
+      ],
+      "rawOccurrences": 28
+    },
+    {
+      "slug": "database-sharding",
+      "term": "sharding",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/142_capacity_planning_estimation.md",
+        "distributed-systems-api-design/11_read_replica_routing.md",
+        "frontend-performance-scaling/22_http2_multiplexing.md"
+      ],
+      "rawOccurrences": 88
+    },
+    {
+      "slug": "eventual-consistency",
+      "term": "eventual consistency",
+      "lessonsLinkedIn": [
+        "distributed-systems-api-design/01_cap_theorem.md",
+        "distributed-systems-api-design/02_event_sourcing_cqrs.md",
+        "distributed-systems-api-design/135_microservices_vs_monolith.md"
+      ],
+      "rawOccurrences": 19
+    },
+    {
+      "slug": "exponential-backoff",
+      "term": "exponential backoff",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/101_realtime_systems.md",
+        "ai-llm-engineering/147_anthropic_api_client_architecture.md",
+        "ai-llm-engineering/156_fallback_graceful_degradation.md",
+        "database-advanced/42_optimistic_vs_pessimistic_locking.md",
+        "distributed-systems-api-design/08_webhook_security_retry.md",
+        "frontend-performance-scaling/27_job_queue_bullmq.md"
+      ],
+      "rawOccurrences": 16
+    },
+    {
+      "slug": "feature-flag",
+      "term": "feature flag",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/102_edge_computing.md",
+        "architecture-design-patterns-testing/69_tail_call_memoization_lazy_evaluation.md",
+        "database-caching-performance/20_redis_cache_strategies.md",
+        "database-caching-performance/21_cdn_cache_strategy.md",
+        "distributed-systems-api-design/09_api_versioning_strategies.md",
+        "saas-business-skills/92_analytics_integration.md",
+        "saas-business-skills/93_ab_test_infrastructure.md"
+      ],
+      "rawOccurrences": 23
+    },
+    {
+      "slug": "rate-limiting",
+      "term": "rate limiting",
+      "lessonsLinkedIn": [
+        "advanced-deep-dive-topics/102_edge_computing.md",
+        "ai-llm-engineering/151_tool_use_agentic_loops.md",
+        "ai-llm-engineering/159_prompt_injection_defense.md",
+        "architecture-design-patterns-testing/67_design_patterns.md",
+        "architecture-design-patterns-testing/72_property_based_testing.md",
+        "database-caching-performance/20_redis_cache_strategies.md",
+        "distributed-systems-api-design/08_webhook_security_retry.md",
+        "distributed-systems-api-design/131_message_queues_101.md",
+        "distributed-systems-api-design/136_api_gateway_bff.md",
+        "framework-deep-dives/396_express_two_layer_architecture.md",
+        "framework-deep-dives/397_express_middleware_pipeline_and_security.md",
+        "framework-deep-dives/403_springboot_three_layer_architecture.md",
+        "framework-deep-dives/407_springboot_security_filter_chain.md",
+        "framework-deep-dives/408_springboot_jwt_auth_integration.md",
+        "frontend-performance-scaling/27_job_queue_bullmq.md",
+        "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md",
+        "fundamentals-tools/133_networking_fundamentals.md",
+        "observability-deployment/63_chaos_engineering.md",
+        "privacy-compliance-incident-response/361_vulnerability_management_lifecycle_patch_slas.md",
+        "product-technical-strategy/393_api_integration_event_driven_decisions.md"
+      ],
+      "rawOccurrences": 50
+    },
+    {
+      "slug": "read-replica",
+      "term": "read replica",
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/142_capacity_planning_estimation.md",
+        "database-advanced/52_oltp_vs_olap.md",
+        "database-caching-performance/18_query_plan_analysis.md",
+        "database-caching-performance/19_connection_pool_tuning.md",
+        "distributed-systems-api-design/01_cap_theorem.md",
+        "distributed-systems-api-design/12_database_sharding_strategies.md",
+        "framework-deep-dives/406_springboot_service_layer_transactional.md",
+        "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md",
+        "observability-deployment/63_chaos_engineering.md",
+        "product-technical-strategy/389_domain_modeling_module_boundaries_scaling_path.md"
+      ],
+      "rawOccurrences": 28
+    }
+  ]
 }
