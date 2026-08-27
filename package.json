@@ -11,6 +11,7 @@
     "content:lint": "tsx scripts/content-lint --strict",
     "content:verify-code": "tsx scripts/verify-code.ts --strict",
     "content:snapshot": "tsx scripts/parse-snapshot.ts",
+    "content:concepts": "tsx scripts/build-concepts.ts",
     "content:check": "npm run content:lint && npm run content:verify-code && npm run test"
   },
   "dependencies": {

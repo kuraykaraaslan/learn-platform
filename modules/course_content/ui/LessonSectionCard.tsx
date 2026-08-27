@@ -35,7 +35,13 @@ export const PROSE_CLASSES = cn(
   '[&_aside[data-callout="tip"]]:bg-success-subtle [&_aside[data-callout="tip"]]:border-success [&_aside[data-callout="tip"]]:text-success-fg',
   '[&_aside[data-callout="warning"]]:bg-warning-subtle [&_aside[data-callout="warning"]]:border-warning [&_aside[data-callout="warning"]]:text-warning-fg',
   '[&_aside[data-callout="caution"]]:bg-error-subtle [&_aside[data-callout="caution"]]:border-error [&_aside[data-callout="caution"]]:text-error-fg',
-  '[&_aside[data-callout="pitfall"]]:bg-error-subtle [&_aside[data-callout="pitfall"]]:border-error [&_aside[data-callout="pitfall"]]:text-error-fg'
+  '[&_aside[data-callout="pitfall"]]:bg-error-subtle [&_aside[data-callout="pitfall"]]:border-error [&_aside[data-callout="pitfall"]]:text-error-fg',
+  // Concept terms (remark-concepts.ts): a real <button>, reset off its
+  // default browser chrome so it reads as inline text with a dotted
+  // underline, not a form control. ui/ConceptTooltip.tsx wires up the click.
+  '[&_button.concept-term]:appearance-none [&_button.concept-term]:border-0 [&_button.concept-term]:bg-transparent [&_button.concept-term]:p-0 [&_button.concept-term]:m-0 [&_button.concept-term]:font-inherit [&_button.concept-term]:text-inherit',
+  '[&_button.concept-term]:underline [&_button.concept-term]:decoration-dotted [&_button.concept-term]:decoration-text-secondary [&_button.concept-term]:underline-offset-2 [&_button.concept-term]:cursor-pointer',
+  'hover:[&_button.concept-term]:text-primary'
 );
 
 function BlockView({ block }: { block: LessonBlock }) {

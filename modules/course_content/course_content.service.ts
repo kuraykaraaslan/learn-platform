@@ -6,6 +6,8 @@ import {
 } from './course_content.manifest';
 import { parseLessonBlocks } from './course_content.parser';
 import { parseMistakes } from './course_content.mistakes';
+import { loadConcepts, type ConceptSummary } from './course_content.concepts';
+import { lessonIndex } from './course_content.index';
 import {
   type Bracket,
   type CourseSummary,
@@ -57,13 +59,32 @@ export class CourseContentService {
     if (!item) return null;
 
     const raw = readLessonMarkdown(courseSlug, item.file);
-    const { blocks, sections } = parseLessonBlocks(raw);
+    const { blocks, sections, usedConcepts } = parseLessonBlocks(raw, item.id);
+
+    const allConcepts = loadConcepts();
+    const lessons = lessonIndex();
+    const concepts: Record<string, ConceptSummary> = Object.fromEntries(
+      usedConcepts.flatMap((slug) => {
+        const concept = allConcepts[slug];
+        const definingLesson = lessons.get(concept.lesson);
+        if (!definingLesson) return [];
+        const summary: ConceptSummary = {
+          slug,
+          term: concept.term,
+          short: concept.short,
+          href: definingLesson.href,
+          lessonTitle: definingLesson.title,
+        };
+        return [[slug, summary]];
+      })
+    );
 
     return {
       ...item,
       courseSlug,
       blocks,
       mistakes: parseMistakes(sections.commonMistakes),
+      concepts,
     };
   }
 

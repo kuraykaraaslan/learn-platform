@@ -1,0 +1,12 @@
+{
+  "generatedFrom": "scripts/build-concepts.ts",
+  "totalTerms": 0,
+  "totalLessons": 412,
+  "totals": {
+    "neverMatched": 0,
+    "atCapLessons": 0
+  },
+  "neverMatched": [],
+  "atCapLessons": [],
+  "byTerm": []
+}

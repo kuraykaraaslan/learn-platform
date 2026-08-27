@@ -28,7 +28,7 @@ export function buildParseSnapshot(): ParseSnapshot {
 
     for (const item of manifest.items) {
       const raw = readLessonMarkdown(slug, item.file);
-      const { title, sections } = parseLessonMarkdown(raw);
+      const { title, sections } = parseLessonMarkdown(raw, item.id);
       const entry: Record<string, string> = { title: sha(title) };
       for (const [key, html] of Object.entries(sections) as [keyof LessonSections, string][]) {
         entry[key] = sha(html);

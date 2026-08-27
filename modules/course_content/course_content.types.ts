@@ -1,5 +1,6 @@
 import type { LessonBlock } from './course_content.blocks';
 import type { LessonMistake } from './course_content.mistakes';
+import type { ConceptSummary } from './course_content.concepts';
 
 export type Bracket = '0-1' | '1-3' | '3-7' | '7-10';
 
@@ -49,6 +50,10 @@ export type Lesson = ManifestItem & {
   lessonSlug: string;
   blocks: Record<keyof LessonSections, LessonBlock[]>;
   mistakes: LessonMistake[];
+  /** Only the concepts actually linked somewhere in this lesson (keyed by
+   *  slug) — never the whole ~120-term glossary, so the client only ever
+   *  gets the handful of definitions ui/ConceptTooltip.tsx can show here. */
+  concepts: Record<string, ConceptSummary>;
 };
 
 export const BRACKET_LABELS: Record<Bracket, string> = {

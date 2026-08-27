@@ -27,6 +27,7 @@ function baseLesson(overrides: Partial<Lesson> = {}): Lesson {
       furtherReading: [],
     },
     mistakes: [],
+    concepts: {},
     ...overrides,
   };
 }

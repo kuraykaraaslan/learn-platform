@@ -1,6 +1,17 @@
-import { markdownToHast, markdownToHtml } from './course_content.markdown';
+import { markdownToHast, markdownToHtml, type MarkdownContext } from './course_content.markdown';
 import { splitBlocks, type LessonBlock } from './course_content.blocks';
 import type { LessonSections } from './course_content.types';
+
+/** One shared budget/usedConcepts pair for all 6 sections of one lesson —
+ *  see MarkdownContext's own doc comment for why this can't just be a
+ *  `.use()` plugin option. `undefined` lessonId (unit tests, anything that
+ *  doesn't care about concept-linking) means "don't build a context at all",
+ *  which remarkConcepts treats as a no-op — zero behavior change for every
+ *  existing caller that doesn't pass one. */
+function newMarkdownContext(lessonId: number | undefined): MarkdownContext | undefined {
+  if (lessonId === undefined) return undefined;
+  return { lessonId, conceptLinkBudget: { remaining: 4 }, usedConcepts: [] };
+}
 
 // The original 118-document corpus is NOT perfectly consistent in its section
 // naming (verified across all 145 files): "Example Code" appears as "Example
@@ -102,13 +113,21 @@ export function splitLessonSections(raw: string): { title: string; sections: Les
 
 /** Raw markdown per section, rendered to HTML. Output is byte-identical to
  *  before the block-refactor (course_content.snapshot.ts and
- *  scripts/parse-snapshot.ts depend on that). */
-export function parseLessonMarkdown(raw: string): { title: string; sections: LessonSections } {
+ *  scripts/parse-snapshot.ts depend on that) UNLESS `lessonId` is given AND
+ *  content/concepts.json links a term in this lesson — that is an intentional
+ *  render change (docs/phases/03-concept-glossary.md's snapshot IS expected
+ *  to move once the glossary has real entries; it does not move today, since
+ *  the file is still empty). */
+export function parseLessonMarkdown(
+  raw: string,
+  lessonId?: number
+): { title: string; sections: LessonSections } {
   const { title, sections } = splitLessonSections(raw);
+  const ctx = newMarkdownContext(lessonId);
   return {
     title,
     sections: Object.fromEntries(
-      Object.entries(sections).map(([key, markdown]) => [key, markdownToHtml(markdown)])
+      Object.entries(sections).map(([key, markdown]) => [key, markdownToHtml(markdown, ctx)])
     ) as LessonSections,
   };
 }
@@ -118,21 +137,30 @@ export function parseLessonMarkdown(raw: string): { title: string; sections: Les
  *  course_content.blocks.ts. Raw per-section markdown is returned alongside
  *  (course_content.mistakes.ts's parseMistakes needs the Common Mistakes
  *  section's raw markdown, not HTML; kept out of this file so it stays
- *  single-purpose, per docs/phases/01-callouts-and-drill.md). */
-export function parseLessonBlocks(raw: string): {
+ *  single-purpose, per docs/phases/01-callouts-and-drill.md). `usedConcepts`
+ *  is every concept slug actually linked anywhere in the lesson — the caller
+ *  (course_content.service.ts) uses it to ship only those definitions to the
+ *  client instead of the whole glossary. */
+export function parseLessonBlocks(
+  raw: string,
+  lessonId?: number
+): {
   title: string;
   sections: LessonSections;
   blocks: Record<keyof LessonSections, LessonBlock[]>;
+  usedConcepts: string[];
 } {
   const { title, sections } = splitLessonSections(raw);
+  const ctx = newMarkdownContext(lessonId);
   return {
     title,
     sections,
     blocks: Object.fromEntries(
       Object.entries(sections).map(([key, markdown]) => [
         key,
-        splitBlocks(markdownToHast(markdown), key as keyof LessonSections),
+        splitBlocks(markdownToHast(markdown, ctx), key as keyof LessonSections),
       ])
     ) as Record<keyof LessonSections, LessonBlock[]>,
+    usedConcepts: ctx?.usedConcepts ?? [],
   };
 }
