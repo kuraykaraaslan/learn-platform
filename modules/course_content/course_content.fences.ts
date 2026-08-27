@@ -7,6 +7,10 @@ export type Fence = {
   lessonTitle: string;
   /** The info string exactly as authored, e.g. "typescript" or "md". */
   lang: string;
+  /** Everything in the info string after the first (whitespace-separated)
+   *  token, e.g. "run" for ` ```typescript run`. Empty string if there is
+   *  none. See course_content.fence-meta.ts's parseFenceMeta(). */
+  meta: string;
   /** 1-based line number of the opening fence in the source file. */
   line: number;
   /** Heading of the section the fence sits in, or null if before any. */
@@ -45,12 +49,14 @@ export function listFences(): Fence[] {
             body.push(lines[j].startsWith(indent) ? lines[j].slice(indent.length) : lines[j]);
             j++;
           }
+          const tokens = info.trim().split(/\s+/);
           out.push({
             courseSlug,
             file: item.file,
             lessonId: item.id,
             lessonTitle: item.title,
-            lang: info.trim().split(/\s+/)[0] ?? '',
+            lang: tokens[0] ?? '',
+            meta: tokens.slice(1).join(' '),
             line: i + 1,
             section,
             code: body.join('\n'),

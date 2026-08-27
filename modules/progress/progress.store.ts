@@ -24,6 +24,13 @@ export function widgetFieldKey(courseSlug: string, lessonFile: string, blockId: 
   return `${courseSlug}/${lessonFile}#${blockId}:${fieldId}`;
 }
 
+/** `<courseSlug>/<lessonFile>#<blockId>` — a `run` code block's edited
+ *  buffer. Block-scoped, not field-scoped: there's exactly one editable
+ *  source per runnable block. */
+export function editorKey(courseSlug: string, lessonFile: string, blockId: string): string {
+  return `${courseSlug}/${lessonFile}#${blockId}`;
+}
+
 type PersistedProgress = {
   mistake: Record<string, MistakeAssessment>;
   expandAll: Record<string, boolean>;
@@ -32,6 +39,10 @@ type PersistedProgress = {
   /** ui/widgets/ChecklistCard.tsx (and a template's own checkbox lines) item
    *  state, keyed by widgetFieldKey(). */
   checklistChecked: Record<string, boolean>;
+  /** ui/RunMount.tsx edited source per runnable code block, keyed by
+   *  editorKey(). Restoring this buffer on load never auto-runs it — Run is
+   *  always an explicit click (docs/phases/08-live-js-runner.md). */
+  editors: Record<string, string>;
 };
 
 type ProgressState = PersistedProgress & {
@@ -39,6 +50,7 @@ type ProgressState = PersistedProgress & {
   setExpandAll: (key: string, value: boolean) => void;
   setTemplateValue: (key: string, value: string) => void;
   setChecklistChecked: (key: string, value: boolean) => void;
+  setEditorValue: (key: string, value: string) => void;
 };
 
 /** Bumps `key` to the end of `map` (most-recently-touched) by deleting and
@@ -52,19 +64,21 @@ function touch<V>(map: Record<string, V>, key: string, value: V): Record<string,
   return next;
 }
 
-// Actions are never persisted, only these four data maps — and that's
+// Actions are never persisted, only these five data maps — and that's
 // exactly what progress.store.test.ts pins: the persisted key set is
-// {checklistChecked, expandAll, mistake, templateValues}. Deliberately no
-// completed/streak/percentage field — see docs/phases/README.md's
-// invariants. Exported (rather than left inline in the persist() call below)
-// so the test can call it directly with a real type, instead of fighting
-// zustand's persist generics through `.persist.getOptions()`.
+// {checklistChecked, editors, expandAll, mistake, templateValues}.
+// Deliberately no completed/streak/percentage field — see
+// docs/phases/README.md's invariants. Exported (rather than left inline in
+// the persist() call below) so the test can call it directly with a real
+// type, instead of fighting zustand's persist generics through
+// `.persist.getOptions()`.
 export function partializeProgress(state: ProgressState): PersistedProgress {
   return {
     mistake: state.mistake,
     expandAll: state.expandAll,
     templateValues: state.templateValues,
     checklistChecked: state.checklistChecked,
+    editors: state.editors,
   };
 }
 
@@ -75,11 +89,13 @@ export const useProgressStore = create<ProgressState>()(
       expandAll: {},
       templateValues: {},
       checklistChecked: {},
+      editors: {},
       setMistakeAssessment: (key, value) => set((state) => ({ mistake: touch(state.mistake, key, value) })),
       setExpandAll: (key, value) => set((state) => ({ expandAll: touch(state.expandAll, key, value) })),
       setTemplateValue: (key, value) => set((state) => ({ templateValues: touch(state.templateValues, key, value) })),
       setChecklistChecked: (key, value) =>
         set((state) => ({ checklistChecked: touch(state.checklistChecked, key, value) })),
+      setEditorValue: (key, value) => set((state) => ({ editors: touch(state.editors, key, value) })),
     }),
     {
       name: 'learn:v1',

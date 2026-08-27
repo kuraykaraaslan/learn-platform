@@ -19,7 +19,7 @@ There are also two debt dimensions that the matrix does not capture on its own: 
 
 ## Example Code or Template
 
-```tsx
+```typescript run
 // Technical Debt Register — scored with risk × cost matrix
 // Keep this as a tracked JSON, CSV, or table in your project wiki
 

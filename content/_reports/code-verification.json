@@ -9,5 +9,10 @@
     "lessonsAffected": 0,
     "privateAliasImports": 23
   },
+  "runnable": {
+    "total": 3,
+    "ready": 3,
+    "blocked": 0
+  },
   "lessons": []
 }

@@ -1,11 +1,12 @@
 import { describe, expect, it } from 'vitest';
-import { useProgressStore, partializeProgress, mistakeKey, lessonKey, widgetFieldKey } from './progress.store';
+import { useProgressStore, partializeProgress, mistakeKey, lessonKey, widgetFieldKey, editorKey } from './progress.store';
 
 describe('useProgressStore', () => {
-  it('persists exactly {mistake, expandAll, templateValues, checklistChecked} — adding a field like "completed" must fail this test', () => {
+  it('persists exactly {mistake, expandAll, templateValues, checklistChecked, editors} — adding a field like "completed" must fail this test', () => {
     const persisted = partializeProgress(useProgressStore.getState());
     expect(Object.keys(persisted).sort()).toEqual([
       'checklistChecked',
+      'editors',
       'expandAll',
       'mistake',
       'templateValues',
@@ -66,5 +67,17 @@ describe('useProgressStore', () => {
     expect(useProgressStore.getState().checklistChecked[key]).toBe(true);
     // Setting one never touches the other.
     expect(useProgressStore.getState().templateValues[key]).toBe('150');
+  });
+
+  it('editorKey composes courseSlug/lessonFile#blockId, with no field segment', () => {
+    expect(editorKey('architecture-design-patterns-testing', '68_big_o_analysis.md', 'exampleCode-0')).toBe(
+      'architecture-design-patterns-testing/68_big_o_analysis.md#exampleCode-0'
+    );
+  });
+
+  it('setEditorValue persists an edited buffer independent of the other maps', () => {
+    const key = editorKey('architecture-design-patterns-testing', '68_big_o_analysis.md', 'exampleCode-0');
+    useProgressStore.getState().setEditorValue(key, 'console.log("edited");');
+    expect(useProgressStore.getState().editors[key]).toBe('console.log("edited");');
   });
 });

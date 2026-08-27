@@ -26,41 +26,8 @@ import ts from 'typescript';
 import os from 'node:os';
 import path from 'node:path';
 import { listFences, type Fence } from '../modules/course_content/course_content.fences';
-
-/**
- * A single fence very often shows SEVERAL files, separated by a path comment:
- *
- *   // app/api/users/route.ts
- *   export async function GET() { ... }
- *
- *   // lib/users.ts
- *   export default function users() { ... }
- *
- * Concatenating those into one module produces duplicate `GET`s, two default
- * exports and colliding `beforeEach`es — 108 of the reported defects were this
- * and nothing else. Splitting on the marker checks what the lesson actually
- * shows: several files, each on its own.
- */
-// The whole comment must BE the path — optionally with a short trailing note
-// after a dash or in parentheses. Without that anchor, "// Next.js App Router
-// already does code splitting" is read as a file called "Next.js".
-const FILE_MARKER =
-  /^[ \t]{0,4}(?:\/\/|#)\s*([\w@][\w./@-]*\.(?:ts|tsx|js|jsx|mts|cts))\s*(?:[—–-]\s.*|\(.*\))?$/;
-
-function splitSnippetFiles(code: string): string[] {
-  const lines = code.split('\n');
-  const parts: string[][] = [];
-  let current: string[] = [];
-  for (const line of lines) {
-    if (FILE_MARKER.test(line) && current.some((l) => l.trim())) {
-      parts.push(current);
-      current = [];
-    }
-    current.push(line);
-  }
-  parts.push(current);
-  return parts.filter((p) => p.some((l) => l.trim())).map((p) => p.join('\n'));
-}
+import { splitSnippetFiles } from '../modules/course_content/course_content.snippets';
+import { parseFenceMeta } from '../modules/course_content/course_content.fence-meta';
 
 const TS_LANGS = new Set(['typescript', 'ts', 'tsx', 'javascript', 'js', 'jsx']);
 const OUT_DIR = path.join(process.cwd(), 'content', '_reports');
@@ -272,18 +239,35 @@ const TEST_GLOBALS =
  */
 const COLLATERAL = new Set(['TS18046', 'TS2339', 'TS2345', 'TS2322', 'TS7006', 'TS7031', 'TS2571', 'TS2578', 'TS2786']);
 
+/** True for a fence marked `run` in its info string — checked per-Result
+ *  since a multi-file fence's parts all share the same `meta`. */
+function isRunFence(r: Result): boolean {
+  return parseFenceMeta(r.meta).run;
+}
+
+/**
+ * `missing-module`/`assumed-context`/`assumed-helper` are tolerated for a
+ * plain documentation fence (the reader is reading, not executing — an
+ * uninstalled package or an assumed ORM client teaches something even if it
+ * doesn't compile standalone). A `run` fence has no such excuse: the sandbox
+ * has no network access and no module loader, so any of these three is
+ * fatal, not tolerated — docs/phases/08-live-js-runner.md's stricter tier.
+ */
 function realDefects(r: Result): Defect[] {
+  const strict = isRunFence(r);
   // Anything whose type flows from a name this snippet does not resolve is
   // downstream noise. Fix the undefined name first and these become real.
   const unresolvable = r.defects.some((d) =>
     ['missing-module', 'assumed-helper', 'assumed-context', 'undefined-identifier'].includes(d.class)
   );
   return r.defects.filter((d) => {
-    if (d.class === 'missing-module') return false;
-    if (d.class === 'assumed-context') return false;
-    if (d.class === 'assumed-helper') return false;
+    if (!strict) {
+      if (d.class === 'missing-module') return false;
+      if (d.class === 'assumed-context') return false;
+      if (d.class === 'assumed-helper') return false;
+    }
     if (d.class === 'shows-variants') return false;
-    if (unresolvable && COLLATERAL.has(d.code)) return false;
+    if (unresolvable && !strict && COLLATERAL.has(d.code)) return false;
     if (TEST_GLOBALS.test(d.message)) return false;
     return true;
   });
@@ -414,6 +398,13 @@ const failing = results.filter((r) => realDefects(r).length > 0);
 const onlyMissingModules = results.filter((r) => r.defects.length > 0 && realDefects(r).length === 0);
 const clean = results.filter((r) => r.defects.length === 0);
 
+const runFences = results.filter(isRunFence);
+const runnable = {
+  total: runFences.length,
+  ready: runFences.filter((r) => realDefects(r).length === 0).length,
+  blocked: runFences.filter((r) => realDefects(r).length > 0).length,
+};
+
 const byClass = new Map<DefectClass, number>();
 for (const r of results) for (const d of realDefects(r)) byClass.set(d.class, (byClass.get(d.class) ?? 0) + 1);
 
@@ -442,6 +433,7 @@ fs.writeFileSync(
         lessonsAffected: byLesson.size,
         privateAliasImports: privateImports.length,
       },
+      runnable,
       lessons: [...byLesson.entries()].map(([lesson, rs]) => ({
         lesson,
         lessonId: rs[0].lessonId,
@@ -473,6 +465,7 @@ const md: string[] = [
   `| **Failing** | **${failing.length}** |`,
   `| Lessons affected | ${byLesson.size} |`,
   `| Fences importing private \`@/libs\|modules\|stores\` aliases | ${privateImports.length} |`,
+  `| \`run\` fences: ready / blocked | ${runnable.ready} / ${runnable.blocked} |`,
   '',
   '## Defects by class',
   '',
@@ -499,6 +492,7 @@ fs.rmSync(workDir, { recursive: true, force: true });
 
 console.log(`fences: ${results.length}  clean: ${clean.length}  tolerated: ${onlyMissingModules.length}  failing: ${failing.length}`);
 console.log(`lessons affected: ${byLesson.size}   private-alias imports: ${privateImports.length}`);
+console.log(`runnable: ready ${runnable.ready}  blocked ${runnable.blocked}  (of ${runnable.total} \`run\` fences)`);
 console.log(`reports -> content/_reports/code-verification.{json,md}`);
 
 if (process.argv.includes('--strict') && failing.length > 0) process.exit(1);

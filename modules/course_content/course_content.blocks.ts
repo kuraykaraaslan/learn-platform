@@ -2,12 +2,20 @@ import { toHtml } from 'hast-util-to-html';
 import type { Root as HastRoot, RootContent, Element } from 'hast';
 import type { LessonSections } from './course_content.types';
 import { parseTemplate, parseChecklist, looksLikeChecklist, type LessonWidget } from './course_content.templates';
+import { parseFenceMeta, type FenceMeta } from './course_content.fence-meta';
 
 export type { LessonWidget } from './course_content.templates';
+export type { FenceMeta } from './course_content.fence-meta';
 
-/** P0 always produces { run: false, opts: {} }. P8 extends this shape
- *  (entry?, seed?) without touching LessonBlock's discriminant fields. */
-export type FenceMeta = { run: boolean; opts: Record<string, unknown> };
+declare module 'hast' {
+  interface Data {
+    /** mdast-util-to-hast's own convention (lib/handlers/code.js): everything
+     *  in a fence's info string after the language token. Not declared by
+     *  hast's own types, since it's mdast-util-to-hast-specific, not a hast
+     *  concept. */
+    meta?: string;
+  }
+}
 
 export type LessonBlock =
   | { kind: 'html'; id: string; html: string }
@@ -60,7 +68,9 @@ export function splitBlocks(root: HastRoot, sectionKey: keyof LessonSections): L
     flushHtml();
 
     const lang = extractLang(node);
-    const source = findCode(node)?.data?.source ?? '';
+    const code = findCode(node);
+    const source = code?.data?.source ?? '';
+    const meta = parseFenceMeta(code?.data?.meta ?? '');
     const html = toHtml(node);
     const id = `${sectionKey}-${ordinal++}`;
 
@@ -73,11 +83,7 @@ export function splitBlocks(root: HastRoot, sectionKey: keyof LessonSections): L
     if (lang === 'template') widget = parseTemplate(source);
     else if ((lang === 'md' || lang === 'markdown') && looksLikeChecklist(source)) widget = parseChecklist(source);
 
-    blocks.push(
-      widget
-        ? { kind: 'widget', id, widget, html }
-        : { kind: 'code', id, lang, meta: { run: false, opts: {} }, source, html }
-    );
+    blocks.push(widget ? { kind: 'widget', id, widget, html } : { kind: 'code', id, lang, meta, source, html });
   }
   flushHtml();
 

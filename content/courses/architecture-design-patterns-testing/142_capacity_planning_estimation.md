@@ -13,7 +13,7 @@ The standard shape is: start from a known or estimated business number (daily ac
 - **Stated assumptions over false precision**: round numbers, and write down every assumption — an estimate nobody can review or challenge isn't useful
 
 ## Example Code
-```typescript
+```typescript run
 // Not "real" code — this is the actual deliverable: an explicit, reviewable calculation
 // with every assumption stated, so a reviewer can challenge any single line.
 

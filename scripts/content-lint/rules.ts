@@ -8,6 +8,8 @@ import {
   readLessonMarkdown,
 } from '../../modules/course_content/course_content.manifest';
 import type { Interactive } from '../../modules/course_content/course_content.types';
+import { parseFenceMeta } from '../../modules/course_content/course_content.fence-meta';
+import { RUNNABLE_LANGS } from '../../modules/course_content/course_content.transpile';
 
 export type Severity = 'error' | 'warn';
 
@@ -489,6 +491,58 @@ export const RULES: Rule[] = [
             : 'verified: true has no matching entry in verified-sha.json — set by hand, not by stamp-verified.ts',
         },
       ];
+    },
+  },
+  {
+    id: 'run/marker-on-unrunnable-lang',
+    severity: 'error',
+    description:
+      'A `run` fence tagged with a language the sandbox cannot execute (course_content.transpile.ts\'s RUNNABLE_LANGS is exactly typescript/ts/javascript/js — no bash, yaml, java, dockerfile, hcl, tsx, or jsx).',
+    lesson: (file) =>
+      file.fences
+        .filter((f) => parseFenceMeta(f.meta).run && !RUNNABLE_LANGS.has(f.lang))
+        .map((f) => ({
+          rule: 'run/marker-on-unrunnable-lang',
+          severity: 'error' as const,
+          target: file.target,
+          line: f.line,
+          message: `\`run\` fence tagged \`${f.lang || '(none)'}\`, which the sandbox cannot execute`,
+        })),
+  },
+  {
+    id: 'run/no-observable-output',
+    severity: 'error',
+    description:
+      'A `run` fence with no console.log/warn/error/table call writes nothing when Run is clicked — this is the rule that catches the "44 no-import TS fences, only 5 actually print anything" trap docs/phases/08-live-js-runner.md measured. A dead Run button is worse than no Run button.',
+    lesson: (file) => {
+      const OUTPUT_CALL = /\bconsole\.(log|warn|error|table|info)\s*\(/;
+      return file.fences
+        .filter((f) => parseFenceMeta(f.meta).run && !OUTPUT_CALL.test(f.code))
+        .map((f) => ({
+          rule: 'run/no-observable-output',
+          severity: 'error' as const,
+          target: file.target,
+          line: f.line,
+          message: '`run` fence has no console.* call — Run would produce no visible output',
+        }));
+    },
+  },
+  {
+    id: 'run/not-self-contained',
+    severity: 'error',
+    description:
+      'A `run` fence that imports something. The sandbox iframe has no network access at all (default-src \'none\') and no module loader, so any import fails at execution time regardless of whether the package exists — a `run` fence must be fully self-contained.',
+    lesson: (file) => {
+      const IMPORT_OR_REQUIRE = /^\s*import\b|\brequire\s*\(/m;
+      return file.fences
+        .filter((f) => parseFenceMeta(f.meta).run && IMPORT_OR_REQUIRE.test(f.code))
+        .map((f) => ({
+          rule: 'run/not-self-contained',
+          severity: 'error' as const,
+          target: file.target,
+          line: f.line,
+          message: '`run` fence imports something — the sandbox has no network access and no module loader',
+        }));
     },
   },
 ];

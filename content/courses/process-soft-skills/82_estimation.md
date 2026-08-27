@@ -19,7 +19,7 @@ Story points, used in Scrum, are a relative sizing system (this feature is "twic
 
 ## Example Code or Template
 
-```typescript
+```typescript run
 // Three-point PERT estimation model
 // Use this before quoting any project or task to a client
 

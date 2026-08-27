@@ -12,6 +12,7 @@ import { CodeBlock } from './CodeBlock';
 import { TemplateFormCard } from './widgets/TemplateFormCard';
 import { ChecklistCard } from './widgets/ChecklistCard';
 import { MermaidBlock } from './MermaidBlock';
+import { RunMount } from './RunMount';
 
 // Tried next/dynamic() here to keep this JS out of the ~324 lesson pages
 // with no widget block — measured worse (8.59 kB vs 7.22 kB gz) and, per
@@ -72,11 +73,13 @@ function BlockView({
       // once it's actually visible — MermaidBlock's own module has no static
       // import of 'mermaid', so this branch costs ~nothing on the 412 pages
       // that never hit it.
-      return block.lang === 'mermaid' ? (
-        <MermaidBlock source={block.source} html={block.html} />
-      ) : (
-        <CodeBlock block={block} />
-      );
+      if (block.lang === 'mermaid') return <MermaidBlock source={block.source} html={block.html} />;
+      // RunMount replaces the plain highlighted+copy display for a `run`
+      // fence — it has its own editable textarea and Run button. The actual
+      // sandbox (CodeRunner) inside it is not imported until that button is
+      // clicked, so this costs ~nothing on a page with no `run` fence either.
+      if (block.meta.run) return <RunMount block={block} courseSlug={courseSlug} lessonFile={lessonFile} />;
+      return <CodeBlock block={block} />;
     case 'widget':
       switch (block.widget.type) {
         case 'template':
