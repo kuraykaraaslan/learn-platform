@@ -71,9 +71,13 @@ public interface UserRepository extends JpaRepository<UserEntity, UUID> {
         """)
     List<UserEntity> findActiveUsersWithSessions();
 
-    // ✅ @EntityGraph — same fix, declarative form on a derived query
+    // ✅ @EntityGraph — same fix, declarative form on a derived query.
+    // Note the name: a return type is not part of a Java method signature, so
+    // reusing `findByUserStatus` here would be a duplicate-method compile
+    // error, not an overload. Spring Data ignores whatever sits between
+    // `find` and `By`, which is exactly what makes a distinct name free.
     @EntityGraph(attributePaths = {"sessions"})
-    List<UserEntity> findByUserStatus(String status);
+    List<UserEntity> findWithSessionsByUserStatus(String status);
 
     // Soft-delete-aware lookup
     @Query("SELECT u FROM UserEntity u WHERE u.deletedAt IS NULL AND u.userId = :id")

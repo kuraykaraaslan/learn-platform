@@ -18,7 +18,7 @@ For a multi-tenant SaaS, the key rule is: any response that differs per user or 
 - **`Surrogate-Control` / `CDN-Cache-Control`**: Cloudflare, Fastly, and others support custom headers that override `Cache-Control` at the CDN level without affecting the browser
 
 ## Example Code
-```typescript
+```tsx
 // Setting Cache-Control headers in Next.js API routes and RSC pages
 
 import { NextRequest, NextResponse } from 'next/server';

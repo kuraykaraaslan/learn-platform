@@ -18,7 +18,7 @@ MSW (Mock Service Worker) intercepts HTTP at the network level rather than mocki
 - **Spectron has no place here** — this is React Native, not Electron, but the same "test the packaged/real thing for E2E, unit-test the logic underneath" philosophy applies via Maestro against a real build
 
 ## Example Code
-```typescript
+```jsonc
 // jest.config / package.json excerpt
 {
   "jest": {

@@ -5,28 +5,22 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 | | |
 |---|---:|
-| TS/TSX fences | 162 |
-| Clean | 23 |
-| Only uninstalled-module errors (tolerated) | 19 |
-| **Failing** | **120** |
-| Lessons affected | 120 |
-| Fences importing private `@/libs|modules|stores` aliases | 17 |
+| TS/TSX fences | 161 |
+| Clean | 25 |
+| Only uninstalled-module errors (tolerated) | 22 |
+| **Failing** | **114** |
+| Lessons affected | 114 |
+| Fences importing private `@/libs|modules|stores` aliases | 16 |
 
 ## Defects by class
 
 | Class | Count |
 |---|---:|
-| undefined-identifier | 449 |
-| type-error | 278 |
-| syntax | 51 |
+| undefined-identifier | 423 |
+| type-error | 250 |
 | implicit-any | 23 |
 
 ## Failing lessons
-
-### advanced-deep-dive-topics/105_cryptography_fundamentals.md
-
-- `typescript` fence at line 22 (section: Example Code)
-  - TS1192: Module '"crypto"' has no default export.
 
 ### advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md
 
@@ -38,12 +32,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 - `typescript` fence at line 22 (section: Example Code)
   - TS2304: Cannot find name 'TenantService'.
-
-### advanced-deep-dive-topics/109_performance_profiling.md
-
-- `typescript` fence at line 73 (section: Example Code)
-  - TS1192: Module '"v8"' has no default export.
-  - TS1259: Module '"process"' can only be default-imported using the 'allowSyntheticDefaultImports' flag
 
 ### ai-llm-engineering/140_ai_llm_integration.md
 
@@ -143,12 +131,9 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### ai-llm-engineering/159_prompt_injection_defense.md
 
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1005: ';' expected.
+- `tsx` fence at line 21 (section: Example Code)
   - TS2304: Cannot find name 'userSuppliedText'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
-  - TS2693: 'never' only refers to a type, but is being used as a value here.
-  - TS2304: Cannot find name 'dangerouslySetInnerHTML'.
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
 
 ### ai-llm-engineering/160_ai_data_privacy_regulatory_compliance.md
 
@@ -316,7 +301,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 ### architecture-design-patterns-testing/73_contract_testing_pact.md
 
 - `typescript` fence at line 23 (section: Example Code)
-  - TS1259: Module '"path"' can only be default-imported using the 'allowSyntheticDefaultImports' flag
   - TS2304: Cannot find name 'stripeProvider'.
 
 ### architecture-design-patterns-testing/74_tdd_cycle.md
@@ -333,6 +317,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 - `typescript` fence at line 62 (section: Example Code)
   - TS2304: Cannot find name 'Tenant'.
   - TS2304: Cannot find name 'TenantMember'.
+  - TS2304: Cannot find name 'DEFAULT_SEAT_LIMIT'.
   - TS2304: Cannot find name 'TenantMember'.
 
 ### database-advanced/42_optimistic_vs_pessimistic_locking.md
@@ -371,7 +356,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 ### database-advanced/47_audit_log_design_application_level.md
 
 - `typescript` fence at line 21 (section: Example Code)
-  - TS1192: Module '"crypto"' has no default export.
   - TS2304: Cannot find name 'getTenantDataSource'.
   - TS2304: Cannot find name 'getSystemDataSource'.
   - TS2304: Cannot find name 'AuditLog'.
@@ -384,7 +368,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 ### database-advanced/48_data_retention_gdpr_kvkk_deletion_flow.md
 
 - `typescript` fence at line 21 (section: Example Code)
-  - TS1192: Module '"crypto"' has no default export.
   - TS2304: Cannot find name 'DataSource'.
   - TS7006: Parameter 'manager' implicitly has an 'any' type.
   - TS2304: Cannot find name 'UserSession'.
@@ -477,13 +460,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### database-caching-performance/21_cdn_cache_strategy.md
 
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
+- `tsx` fence at line 21 (section: Example Code)
   - TS2323: Cannot redeclare exported variable 'GET'.
   - TS2393: Duplicate function implementation.
   - TS2304: Cannot find name 'getPublicPricingData'.
@@ -498,6 +475,7 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2393: Duplicate function implementation.
   - TS2304: Cannot find name 'db'.
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2304: Cannot find name 'PricingGrid'.
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2393: Duplicate function implementation.
@@ -527,9 +505,14 @@ extracted and typechecked. Generated file: do not edit by hand.
 - `typescript` fence at line 20 (section: Example Code)
   - TS2304: Cannot find name 'createTenant'.
   - TS2304: Cannot find name 'chargeCard'.
+  - TS2304: Cannot find name 'isDefiniteFailure'.
+  - TS2304: Cannot find name 'findChargeByIdempotencyKey'.
   - TS2304: Cannot find name 'allocateSeats'.
+  - TS2304: Cannot find name 'sendWelcomeEmail'.
+  - TS2304: Cannot find name 'markSagaCompleted'.
   - TS2304: Cannot find name 'refundCharge'.
   - TS2304: Cannot find name 'deleteTenant'.
+  - TS2322: Type 'any' is not assignable to type 'never'.
 
 ### distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md
 
@@ -545,7 +528,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 ### distributed-systems-api-design/06_distributed_locking.md
 
 - `typescript` fence at line 20 (section: Example Code)
-  - TS1192: Module '"crypto"' has no default export.
   - TS2304: Cannot find name 'redis'.
   - TS2304: Cannot find name 'createTenantSchema'.
   - TS2304: Cannot find name 'seedTenantDefaults'.
@@ -555,7 +537,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 ### distributed-systems-api-design/08_webhook_security_retry.md
 
 - `typescript` fence at line 21 (section: Example Code)
-  - TS1192: Module '"crypto"' has no default export.
   - TS2304: Cannot find name 'db'.
 
 ### distributed-systems-api-design/09_api_versioning_strategies.md
@@ -733,7 +714,6 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2323: Cannot redeclare exported variable 'default'.
   - TS2300: Duplicate identifier 'env'.
   - TS2323: Cannot redeclare exported variable 'default'.
-  - TS1192: Module '"http"' has no default export.
   - TS2300: Duplicate identifier 'env'.
 
 ### framework-deep-dives/402_express_testing_with_jest_and_supertest.md
@@ -747,17 +727,6 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2300: Duplicate identifier 'app'.
   - TS2300: Duplicate identifier 'AppDataSource'.
   - TS2300: Duplicate identifier 'User'.
-  - TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2304: Cannot find name 'beforeAll'.
-  - TS2304: Cannot find name 'afterAll'.
-  - TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2304: Cannot find name 'expect'.
-  - TS2304: Cannot find name 'expect'.
-  - TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2304: Cannot find name 'expect'.
-  - TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2304: Cannot find name 'expect'.
-  - TS2304: Cannot find name 'expect'.
 
 ### framework-deep-dives/414_reactnative_expo_router_navigation.md
 
@@ -782,18 +751,13 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### framework-deep-dives/415_reactnative_zustand_mmkv_state_management.md
 
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1005: ',' expected.
-  - TS1005: ',' expected.
-  - TS1110: Type expected.
-  - TS1128: Declaration or statement expected.
+- `tsx` fence at line 21 (section: Example Code)
   - TS2395: Individual declarations in merged declaration 'mmkv' must be all exported or all local.
   - TS2395: Individual declarations in merged declaration 'mmkv' must be all exported or all local.
   - TS2395: Individual declarations in merged declaration 'zustandMMKVStorage' must be all exported or all local.
   - TS2395: Individual declarations in merged declaration 'zustandMMKVStorage' must be all exported or all local.
-  - TS2352: Conversion of type '{ user: any; fullName: any; }' to type 'Text' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.   Type '{ user: any; fullName: any; }' is missing the following properties from type 'Text': wholeText, splitText, data, length, and 62 more.
-  - TS2869: Right operand of ?? is unreachable because the left operand is never nullish.
-  - TS18004: No value exists in scope for the shorthand property 'fullName'. Either declare one or provide an initializer.
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+  - TS2786: 'Text' cannot be used as a JSX component.   Its type '{ new (data?: string | undefined): Text; prototype: Text; }' is not a valid JSX element type.     Type '{ new (data?: string | undefined): Text; prototype: Text; }' is not assignable to type 'new (props: any, context: any) => Component<any, any, any>'.       Type 'Text' is missing the following properties from type 'Component<any, any, any>': context, setState, forceUpdate, render, and 2 more.
 
 ### framework-deep-dives/416_reactnative_data_fetching_and_offline.md
 
@@ -838,46 +802,6 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2300: Duplicate identifier 'Text'.
   - TS2300: Duplicate identifier 'Pressable'.
 
-### framework-deep-dives/420_reactnative_testing_jest_rntl_and_maestro.md
-
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1005: '>' expected.
-  - TS2695: Left side of comma operator is unused and has no side effects.
-  - TS2695: Left side of comma operator is unused and has no side effects.
-  - TS2304: Cannot find name 'jest'.
-  - TS2304: Cannot find name 'jest'.
-  - TS2304: Cannot find name 'jest'.
-  - TS2304: Cannot find name 'jest'.
-  - TS2304: Cannot find name 'jest'.
-  - TS2300: Duplicate identifier 'waitFor'.
-  - TS2300: Duplicate identifier 'http'.
-  - TS2300: Duplicate identifier 'HttpResponse'.
-  - TS2300: Duplicate identifier 'server'.
-  - TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2304: Cannot find name 'expect'.
-  - TS2304: Cannot find name 'expect'.
-  - TS2304: Cannot find name 'expect'.
-  - TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2304: Cannot find name 'expect'.
-  - TS2304: Cannot find name 'expect'.
-  - TS2300: Duplicate identifier 'waitFor'.
-  - TS2300: Duplicate identifier 'http'.
-  - TS2300: Duplicate identifier 'HttpResponse'.
-  - TS2300: Duplicate identifier 'server'.
-  - TS2304: Cannot find name 'jest'.
-  - TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2304: Cannot find name 'expect'.
-  - TS2304: Cannot find name 'afterEach'.
-  - TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2304: Cannot find name 'expect'.
-
 ### framework-deep-dives/421_electron_process_model_and_typed_ipc.md
 
 - `tsx` fence at line 21 (section: Example Code)
@@ -898,17 +822,11 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2300: Duplicate identifier 'Result'.
   - TS2304: Cannot find name 'showToast'.
 
-### framework-deep-dives/422_electron_preload_and_context_isolation.md
-
-- `tsx` fence at line 21 (section: Example Code)
-  - TS1259: Module '"node:path"' can only be default-imported using the 'allowSyntheticDefaultImports' flag
-
 ### framework-deep-dives/423_electron_main_process_lifecycle_and_window_management.md
 
 - `typescript` fence at line 22 (section: Example Code)
   - TS2300: Duplicate identifier 'BrowserWindow'.
   - TS2300: Duplicate identifier 'BrowserWindow'.
-  - TS1259: Module '"node:path"' can only be default-imported using the 'allowSyntheticDefaultImports' flag
   - TS2304: Cannot find name 'ipcMain'.
   - TS2304: Cannot find name 'IPC'.
   - TS2304: Cannot find name 'assertSender'.
@@ -923,24 +841,12 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### framework-deep-dives/425_electron_renderer_react_and_design_system_fork.md
 
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1005: '>' expected.
-  - TS1005: '>' expected.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: ';' expected.
-  - TS1109: Expression expected.
-  - TS1109: Expression expected.
+- `tsx` fence at line 21 (section: Example Code)
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2395: Individual declarations in merged declaration 'api' must be all exported or all local.
   - TS2395: Individual declarations in merged declaration 'api' must be all exported or all local.
   - TS2395: Individual declarations in merged declaration 'useUsers' must be all exported or all local.
   - TS2395: Individual declarations in merged declaration 'useUsers' must be all exported or all local.
-  - TS2588: Cannot assign to 'loading' because it is a constant.
-  - TS2304: Cannot find name 'onPage'.
-  - TS2362: The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
 
 ### framework-deep-dives/426_electron_native_modules_and_os_integration.md
 
@@ -975,8 +881,6 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2304: Cannot find name 'initDeferredServices'.
   - TS2300: Duplicate identifier 'expect'.
   - TS2300: Duplicate identifier 'test'.
-  - TS2304: Cannot find name 'beforeEach'.
-  - TS2304: Cannot find name 'vi'.
   - TS2300: Duplicate identifier 'test'.
   - TS2300: Duplicate identifier 'expect'.
 
@@ -994,31 +898,17 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 ### framework-deep-dives/430_electron_menus_shortcuts_tray_and_dialogs.md
 
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1161: Unterminated regular expression literal.
-  - TS1005: '>' expected.
-  - TS1005: ';' expected.
-  - TS1005: ',' expected.
-  - TS1161: Unterminated regular expression literal.
+- `tsx` fence at line 21 (section: Example Code)
   - TS2300: Duplicate identifier 'Menu'.
   - TS2300: Duplicate identifier 'app'.
   - TS2503: Cannot find namespace 'Electron'.
   - TS2304: Cannot find name 'exportDocument'.
   - TS2300: Duplicate identifier 'app'.
   - TS2304: Cannot find name 'focusMainWindow'.
-  - TS2304: Cannot find name 'kbd'.
-  - TS2304: Cannot find name 'className'.
-  - TS2365: Operator '>' cannot be applied to types 'string' and '{ keys: string; }'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
+  - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2300: Duplicate identifier 'Menu'.
   - TS2304: Cannot find name 'focusMainWindow'.
   - TS2304: Cannot find name 'showToast'.
-  - TS2304: Cannot find name 'span'.
-  - TS2304: Cannot find name 'className'.
-  - TS2365: Operator '>' cannot be applied to types 'string' and '{ online: boolean; Synced: string; }'.
-  - TS2365: Operator '<' cannot be applied to types 'boolean' and 'RegExp'.
 
 ### frontend-performance-scaling/138_frontend_state_management.md
 
@@ -1131,14 +1021,7 @@ extracted and typechecked. Generated file: do not edit by hand.
 ### fundamentals-tools/124_unit_testing_basics.md
 
 - `typescript` fence at line 16 (section: Example Code)
-  - TS2582: Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2304: Cannot find name 'expect'.
-  - TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
-  - TS2304: Cannot find name 'expect'.
-  - TS2582: Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.
   - TS2304: Cannot find name 'RegistrationService'.
-  - TS2304: Cannot find name 'expect'.
 
 ### fundamentals-tools/125_rest_api_basics.md
 
@@ -1164,6 +1047,11 @@ extracted and typechecked. Generated file: do not edit by hand.
 - `typescript` fence at line 30 (section: Example Code)
   - TS2304: Cannot find name 'getSocketRemoteAddress'.
 
+### observability-deployment/53_opentelemetry.md
+
+- `typescript` fence at line 25 (section: Example Code)
+  - TS2304: Cannot find name 'lookupUserIdByEmail'.
+
 ### observability-deployment/54_distributed_tracing.md
 
 - `typescript` fence at line 23 (section: Example Code)
@@ -1175,11 +1063,6 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2300: Duplicate identifier 'context'.
   - TS2300: Duplicate identifier 'propagation'.
   - TS2300: Duplicate identifier 'trace'.
-
-### observability-deployment/56_canary_deployment_feature_flags.md
-
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1192: Module '"crypto"' has no default export.
 
 ### observability-deployment/61_alerting_design.md
 
@@ -1202,11 +1085,6 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2339: Property 'focus' does not exist on type '{}'.
   - TS2339: Property 'focus' does not exist on type '{}'.
   - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
-
-### saas-business-skills/91_mobile_first_api_design.md
-
-- `typescript` fence at line 22 (section: Example Code or Template)
-  - TS1192: Module '"crypto"' has no default export.
 
 ### saas-business-skills/93_ab_test_infrastructure.md
 
@@ -1262,7 +1140,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 ### security/32_jwt_security_rs256_hs256_rotation.md
 
 - `typescript` fence at line 21 (section: Example Code)
-  - TS1192: Module '"fs"' has no default export.
   - TS2304: Cannot find name 'TokenPayload'.
   - TS2304: Cannot find name 'TokenPayload'.
   - TS2304: Cannot find name 'TokenPayload'.
@@ -1279,15 +1156,9 @@ extracted and typechecked. Generated file: do not edit by hand.
   - TS2304: Cannot find name 'token'.
   - TS2304: Cannot find name 'SECRET'.
 
-### security/33_ssrf_server_side_request_forgery.md
-
-- `typescript` fence at line 21 (section: Example Code)
-  - TS1192: Module '"dns/promises"' has no default export.
-
 ### security/34_timing_attack_constant_time_comparison.md
 
 - `typescript` fence at line 21 (section: Example Code)
-  - TS1192: Module '"crypto"' has no default export.
   - TS2304: Cannot find name 'bcrypt'.
   - TS2304: Cannot find name 'plainPassword'.
   - TS2304: Cannot find name 'hashedPassword'.
@@ -1299,7 +1170,6 @@ extracted and typechecked. Generated file: do not edit by hand.
 - `tsx` fence at line 21 (section: Example Code)
   - TS2300: Duplicate identifier 'NextRequest'.
   - TS2300: Duplicate identifier 'NextResponse'.
-  - TS1192: Module '"crypto"' has no default export.
   - TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
   - TS2300: Duplicate identifier 'NextRequest'.
   - TS2300: Duplicate identifier 'NextResponse'.

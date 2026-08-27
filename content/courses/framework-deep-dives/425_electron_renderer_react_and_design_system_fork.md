@@ -18,7 +18,7 @@ A design system that lives in your web repo — call it `@acme/ui` — is often 
 - **Vendoring provenance is mandatory**: a `_FORK.md` recording the source commit and local changes turns a future re-sync into a mechanical diff instead of a guessing game
 
 ## Example Code
-```typescript
+```tsx
 // renderer/main.tsx — hash router, survives file:// and reloads on any route
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import { Home } from "@/modules/home/ui/Home";

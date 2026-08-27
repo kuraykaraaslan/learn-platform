@@ -18,7 +18,7 @@ The tray icon is an earned feature, not a default one — it belongs on an app t
 - **Drag-and-drop, file-open-from-OS, and offline states all need a visible, non-silent affordance** — a drop target with clear active/reject states, single-instance-aware file opening, and an ambient (not blocking) offline indicator
 
 ## Example Code
-```typescript
+```tsx
 // main/menu.ts — application menu with roles, correct top-level order per OS
 import { Menu, app } from "electron";
 const isMac = process.platform === "darwin";

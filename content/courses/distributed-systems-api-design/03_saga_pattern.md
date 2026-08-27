@@ -20,7 +20,7 @@ For a solo developer on a SaaS, orchestration is almost always the right choice 
 ```typescript
 // Orchestrated saga for tenant onboarding using BullMQ
 // Steps: create tenant → charge card → allocate seats → send welcome email
-// Each step can compensate if a later step fails
+// Each step before the pivot can compensate if a later step fails.
 
 import { Queue, Worker, Job } from 'bullmq';
 
@@ -29,6 +29,7 @@ type SagaStep =
   | 'CHARGE_CARD'
   | 'ALLOCATE_SEATS'
   | 'SEND_WELCOME_EMAIL'
+  | 'COMPLETED'
   | 'COMPENSATE_CHARGE'
   | 'COMPENSATE_TENANT';
 
@@ -61,16 +62,48 @@ const orchestrator = new Worker<OnboardingSagaState>(
       }
 
       case 'CHARGE_CARD': {
+        // The idempotency key is derived from the saga, not generated here, so
+        // a retry of this step can never produce a second charge.
+        const idempotencyKey = `saga:${state.sagaId}:charge`;
         try {
-          const charge = await chargeCard(state.input.paymentMethodId, state.input.planId);
+          const charge = await chargeCard(
+            state.input.paymentMethodId,
+            state.input.planId,
+            idempotencyKey
+          );
           await sagaQueue.add('saga', {
             ...state,
             chargeId: charge.id,
             step: 'ALLOCATE_SEATS',
           });
-        } catch {
-          // Charge failed — compensate by deleting the tenant
-          await sagaQueue.add('saga', { ...state, step: 'COMPENSATE_TENANT' });
+        } catch (error) {
+          // ❌ The version almost everyone writes is `} catch {` followed by
+          //    compensating. That treats two completely different outcomes as
+          //    one: a declined card (no money moved) and a request that timed
+          //    out (the provider may well have taken the money). Compensating
+          //    blindly on the second one deletes the tenant and never issues a
+          //    refund — the customer is charged and has no account.
+          //
+          // This is the ambiguous outcome, and it is the thing that makes
+          // sagas hard in production. You cannot infer it; you have to ask.
+          if (isDefiniteFailure(error)) {
+            await sagaQueue.add('saga', { ...state, step: 'COMPENSATE_TENANT' });
+            break;
+          }
+
+          // Ambiguous: ask the provider what actually happened, using the same
+          // idempotency key. Providers return the original charge if one exists.
+          const existing = await findChargeByIdempotencyKey(idempotencyKey);
+          if (existing) {
+            await sagaQueue.add('saga', {
+              ...state,
+              chargeId: existing.id,
+              step: 'ALLOCATE_SEATS',
+            });
+          } else {
+            // The provider has no record: nothing moved, so compensating is safe.
+            await sagaQueue.add('saga', { ...state, step: 'COMPENSATE_TENANT' });
+          }
         }
         break;
       }
@@ -86,6 +119,27 @@ const orchestrator = new Worker<OnboardingSagaState>(
         break;
       }
 
+      case 'SEND_WELCOME_EMAIL': {
+        // Declared in SagaStep and reached by the step above, but with no case
+        // here the job is consumed, nothing happens, and the saga simply stops
+        // in a non-terminal state — the failure mode that produces "it worked
+        // in staging" tickets. A default clause below turns this into a loud
+        // error instead of silence.
+        //
+        // Note this step is deliberately NOT compensatable: an email that has
+        // been sent cannot be unsent, which is why it is ordered last. In
+        // Richardson's terms the charge is the pivot; everything after it must
+        // be retriable rather than compensatable.
+        await sendWelcomeEmail(state.tenantId!, state.input.ownerId);
+        await sagaQueue.add('saga', { ...state, step: 'COMPLETED' });
+        break;
+      }
+
+      case 'COMPLETED':
+        // Terminal success. Record it so a replayed job is a no-op.
+        await markSagaCompleted(state.sagaId);
+        break;
+
       case 'COMPENSATE_CHARGE':
         await refundCharge(state.chargeId!);
         await sagaQueue.add('saga', { ...state, step: 'COMPENSATE_TENANT' });
@@ -95,6 +149,13 @@ const orchestrator = new Worker<OnboardingSagaState>(
         await deleteTenant(state.tenantId!);
         // Saga ends in a compensated state — log and alert
         break;
+
+      default: {
+        // Exhaustiveness check: adding a step to SagaStep without a case here
+        // is now a compile error instead of a saga that silently stalls.
+        const unreachable: never = state.step;
+        throw new Error(`Unhandled saga step: ${String(unreachable)}`);
+      }
     }
   }
 );

@@ -168,7 +168,14 @@ export const RULES: Rule[] = [
     description: 'JSX inside a fence tagged `typescript` mis-highlights and proves the snippet was never compiled.',
     lesson: (file) =>
       file.fences
-        .filter((f) => f.lang.toLowerCase() === 'typescript' && /^\s*(return\s*\(|<[A-Z][\w.]*[\s/>])/m.test(f.code))
+        // Catches `return <X>`, a bare `<X ...>` element line, and lowercase
+        // intrinsic tags — the first version of this rule only matched a line
+        // starting with `<Capital`, and missed five lessons because of it.
+        .filter(
+          (f) =>
+            f.lang.toLowerCase() === 'typescript' &&
+            /(^\s*<[a-zA-Z][\w.]*[\s/>]|\breturn\s*\(?\s*<[a-zA-Z]|=>\s*\(?\s*<[a-zA-Z])/m.test(f.code)
+        )
         .map((f) => ({
           rule: 'code/jsx-in-ts-fence',
           severity: 'error' as const,

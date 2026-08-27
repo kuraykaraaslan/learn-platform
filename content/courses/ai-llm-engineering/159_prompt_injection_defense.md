@@ -18,7 +18,7 @@ Because delimiting alone isn't a complete defense, injection risk has to be hand
 - **Jailbreak resistance is a posture, not a prompt trick**: narrow scope + output validation + rate limiting + anomaly monitoring, not an arms race of increasingly emphatic system prompt wording
 
 ## Example Code
-```typescript
+```tsx
 // VULNERABLE — the model cannot distinguish "text to summarize" from "instructions to follow"
 const badPrompt = `Summarize this: ${userSuppliedText}`;
 

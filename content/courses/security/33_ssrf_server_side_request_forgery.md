@@ -19,29 +19,49 @@ In a multi-tenant SaaS the realistic surface areas are narrower than "anywhere y
 
 ## Example Code
 ```typescript
-// libs/ssrf/safe-fetch.ts
+// lib/ssrf/safe-fetch.ts
 // A wrapper around node-fetch / axios that blocks SSRF vectors
 
 import { isIP } from 'net';
 import dns from 'dns/promises';
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 
-// RFC 1918 private ranges + loopback + link-local + multicast
-const BLOCKED_CIDR_PATTERNS = [
-  /^127\./,                          // loopback
-  /^10\./,                           // RFC 1918
-  /^172\.(1[6-9]|2\d|3[01])\./,     // RFC 1918
-  /^192\.168\./,                     // RFC 1918
-  /^169\.254\./,                     // link-local (AWS metadata, Azure IMDS)
-  /^::1$/,                           // IPv6 loopback
-  /^fc|fd/,                          // IPv6 private
-  /^0\./,                            // current network
-  /^100\.64\./,                      // CGNAT (RFC 6598)
+// RFC 1918 private ranges + loopback + link-local + CGNAT.
+// Two of these are easy to get subtly wrong; both mistakes are marked.
+const BLOCKED_IP_PATTERNS = [
+  /^127\./,                            // loopback
+  /^10\./,                             // RFC 1918
+  /^172\.(1[6-9]|2\d|3[01])\./,        // RFC 1918
+  /^192\.168\./,                       // RFC 1918
+  /^169\.254\./,                       // link-local — AWS IMDS, Azure IMDS
+  /^0\./,                              // "this network"
+  /^100\.(6[4-9]|[7-9]\d|1[01]\d|12[0-7])\./,  // CGNAT 100.64.0.0/10
+  // ❌ /^100\.64\./ covers only 100.64.x — 100.65 through 100.127 are also CGNAT
+  /^::1$/,                             // IPv6 loopback
+  /^f[cd][0-9a-f]{2}:/i,               // IPv6 unique-local fc00::/7
+  // ❌ /^fc|fd/ is (^fc)|(fd): the anchor binds tighter than the alternation,
+  //    so it matches "fd" ANYWHERE — it blocks the public 2606:4700:fd00::1
+  //    and would silently break a legitimate webhook.
+  /^fe[89ab][0-9a-f]:/i,               // IPv6 link-local fe80::/10 — was missing
 ];
 
-function isPrivateIP(ip: string): boolean {
-  return BLOCKED_CIDR_PATTERNS.some((pattern) => pattern.test(ip));
+/**
+ * ::ffff:127.0.0.1 is loopback wearing an IPv6 costume. Without this the whole
+ * IPv4 list above is bypassable in one step, including the metadata endpoint.
+ */
+function normalizeIp(ip: string): string {
+  const mapped = /^::ffff:(\d+\.\d+\.\d+\.\d+)$/i.exec(ip);
+  return mapped ? mapped[1] : ip;
 }
+
+function isPrivateIP(ip: string): boolean {
+  const addr = normalizeIp(ip);
+  return BLOCKED_IP_PATTERNS.some((pattern) => pattern.test(addr));
+}
+
+// Worth knowing what you do NOT have to handle: Node's URL parser normalises
+// the decimal-encoded form, so `new URL('http://2130706433/').hostname` is
+// already "127.0.0.1" by the time this code sees it.
 
 async function resolveAndValidate(hostname: string): Promise<void> {
   // Pre-resolve DNS to check if it points to a private IP
@@ -93,12 +113,16 @@ export async function safeFetch(
     await resolveAndValidate(parsed.hostname);
   }
 
-  // Disable redirects — a redirect could lead to a private IP
-  return axios.get(url, {
+  // axios.request, NOT axios.get: `get` pins the method, so the documented
+  // usage below — safeFetch(url, { method: 'POST', data: payload }) — would be
+  // silently downgraded to a GET and the webhook body would never be sent.
+  return axios.request({
     ...config,
-    maxRedirects: 0,           // no redirects
-    timeout: 5000,             // fail fast
-    validateStatus: () => true, // don't throw on non-2xx, let caller decide
+    url,
+    method: config.method ?? 'GET',
+    maxRedirects: 0,            // a redirect is a second, unvalidated request
+    timeout: 5000,              // fail fast
+    validateStatus: () => true, // don't throw on non-2xx; let the caller decide
   });
 }
 

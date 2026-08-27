@@ -64,7 +64,11 @@ VACUUM FULL audit_logs;          -- compact the file (locks the table — use pg
 // Use SERIALIZABLE isolation for operations that must not have race conditions
 // Example: checking and updating a seat count
 
-import { DataSource, IsolationLevel } from 'typeorm';
+import { DataSource } from 'typeorm';
+// IsolationLevel is a string-union TYPE in TypeORM, not an enum value, so
+// `import { IsolationLevel }` and `IsolationLevel.REPEATABLE_READ` do not
+// compile. The level is passed as a plain string.
+import type { IsolationLevel } from 'typeorm';
 
 export async function addTenantMember(
   dataSource: DataSource,
@@ -72,20 +76,25 @@ export async function addTenantMember(
   userId: string
 ): Promise<void> {
   await dataSource.transaction(
-    IsolationLevel.REPEATABLE_READ,  // or 'SERIALIZABLE' for stricter guarantees
+    'REPEATABLE READ' satisfies IsolationLevel,  // or 'SERIALIZABLE' for stricter guarantees
     async (manager) => {
       // Within REPEATABLE READ: these two SELECTs will return consistent data
       // even if another transaction commits between them
       const tenant = await manager.findOne(Tenant, {
         where: { tenantId },
         lock: { mode: 'pessimistic_write' }, // additional row-level lock
+        // Without `relations`, `tenant.subscription` is undefined and the
+        // seat limit below silently falls back to 5 for every tenant — a
+        // limit check that always passes is worse than no limit check.
+        relations: { subscription: true },
       });
 
       const currentMemberCount = await manager.count(TenantMember, {
         where: { tenantId, status: 'ACTIVE' },
       });
 
-      const seatLimit = tenant?.subscription?.seatLimit ?? 5;
+      if (!tenant) throw new Error(`Tenant ${tenantId} not found`);
+      const seatLimit = tenant.subscription?.seatLimit ?? DEFAULT_SEAT_LIMIT;
 
       if (currentMemberCount >= seatLimit) {
         throw new Error('Seat limit reached');

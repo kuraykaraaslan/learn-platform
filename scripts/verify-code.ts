@@ -51,11 +51,20 @@ function classify(code: string): DefectClass {
 type Defect = { code: string; line: number; message: string; class: DefectClass };
 type Result = Fence & { snippetFile: string; defects: Defect[] };
 
+/**
+ * Test-runner globals are injected by vitest/jest at run time and are not
+ * something a snippet is expected to declare. Counting them as defects blames
+ * the lesson for this tool's lack of @types/jest.
+ */
+const TEST_GLOBALS =
+  /Cannot find name '(expect|describe|it|test|jest|vi|beforeEach|afterEach|beforeAll|afterAll|suite)'/;
+
 function realDefects(r: Result): Defect[] {
   const hasMissingModule = r.defects.some((d) => d.class === 'missing-module');
   return r.defects.filter((d) => {
     if (d.class === 'missing-module') return false;
     if (d.class === 'implicit-any' && hasMissingModule) return false;
+    if (TEST_GLOBALS.test(d.message)) return false;
     return true;
   });
 }
@@ -80,13 +89,23 @@ const results: Result[] = fences.map((f, index) => {
 // corpus. Per-file diagnostics off one program give the true picture.
 const program = ts.createProgram(
   results.map((r) => r.snippetFile),
+  // These options mirror the repo's own tsconfig.json, because the bar is "does
+  // this compile where a reader would paste it" — not "does it compile under
+  // some stricter config of the tool's own invention". Getting this wrong
+  // produces confident false positives: without esModuleInterop, every
+  // `import crypto from 'crypto'` looks broken, and without the DOM lib every
+  // snippet touching `document` or `fetch` does too.
   {
     noEmit: true,
     skipLibCheck: true,
-    strict: true, // matches tsconfig.json — the bar a reader pasting this faces
+    strict: true,
+    esModuleInterop: true,
+    allowSyntheticDefaultImports: true,
+    resolveJsonModule: true,
     target: ts.ScriptTarget.ES2022,
     module: ts.ModuleKind.ESNext,
     moduleResolution: ts.ModuleResolutionKind.Node10,
+    lib: ['lib.es2022.d.ts', 'lib.dom.d.ts', 'lib.dom.iterable.d.ts'],
     jsx: ts.JsxEmit.ReactJSX,
     allowJs: true,
   }

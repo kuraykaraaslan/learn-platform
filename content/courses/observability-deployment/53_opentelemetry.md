@@ -85,12 +85,25 @@ export async function withSpan<T>(
   });
 }
 
-// Usage in AuthService.login — adds a domain span on top of the auto-instrumented pg span
+// Usage in a login service — adds a domain span on top of the auto-instrumented
+// pg span.
+//
+// ❌ Do NOT do this:  }, { 'user.email': email });
+//    Span attributes are exported to the tracing backend and retained there,
+//    usually for weeks, usually in a different jurisdiction, usually readable
+//    by anyone with dashboard access. An email address is personal data, so
+//    that one line turns a tracing tool into an undeclared data processor and
+//    puts it in scope for every access request and breach notification.
+//
+// ✅ Attach an identifier you can already resolve from your own database.
 export async function login(email: string, password: string) {
+  const userId = await lookupUserIdByEmail(email); // may be null — do not leak that either
   return withSpan('auth.login', async () => {
-    // ... your existing login logic
-    // The pg query inside will automatically become a child span
-  }, { 'user.email': email });
+    // ... login logic; the pg query inside becomes a child span automatically
+  }, {
+    'enduser.id': userId ?? 'unknown',   // an opaque id, resolvable only by you
+    'auth.method': 'password',
+  });
 }
 ```
 

@@ -1,40 +1,19 @@
 {
   "generatedFrom": "scripts/verify-code.ts",
   "defectsByClass": {
-    "syntax": 51,
-    "undefined-identifier": 449,
+    "undefined-identifier": 423,
     "implicit-any": 23,
-    "type-error": 278
+    "type-error": 250
   },
   "totals": {
-    "fences": 162,
-    "clean": 23,
-    "onlyMissingModules": 19,
-    "failing": 120,
-    "lessonsAffected": 120,
-    "privateAliasImports": 17
+    "fences": 161,
+    "clean": 25,
+    "onlyMissingModules": 22,
+    "failing": 114,
+    "lessonsAffected": 114,
+    "privateAliasImports": 16
   },
   "lessons": [
-    {
-      "lesson": "advanced-deep-dive-topics/105_cryptography_fundamentals.md",
-      "lessonId": 105,
-      "title": "Cryptography Fundamentals — Beyond bcrypt",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 22,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS1192",
-              "line": 1,
-              "message": "Module '\"crypto\"' has no default export.",
-              "class": "syntax"
-            }
-          ]
-        }
-      ]
-    },
     {
       "lesson": "advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md",
       "lessonId": 106,
@@ -76,32 +55,6 @@
               "line": 40,
               "message": "Cannot find name 'TenantService'.",
               "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "advanced-deep-dive-topics/109_performance_profiling.md",
-      "lessonId": 109,
-      "title": "Performance Profiling — Flame Graphs, Heap Snapshots, Memory Leak Detection",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 73,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS1192",
-              "line": 2,
-              "message": "Module '\"v8\"' has no default export.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1259",
-              "line": 3,
-              "message": "Module '\"process\"' can only be default-imported using the 'allowSyntheticDefaultImports' flag",
-              "class": "syntax"
             }
           ]
         }
@@ -579,16 +532,10 @@
       "title": "Prompt Injection Defense and Untrusted Content Handling",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS1005",
-              "line": 23,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
             {
               "code": "TS2304",
               "line": 2,
@@ -596,22 +543,10 @@
               "class": "undefined-identifier"
             },
             {
-              "code": "TS2362",
+              "code": "TS2875",
               "line": 23,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2693",
-              "line": 23,
-              "message": "'never' only refers to a type, but is being used as a value here.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 23,
-              "message": "Cannot find name 'dangerouslySetInnerHTML'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -1420,12 +1355,6 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS1259",
-              "line": 8,
-              "message": "Module '\"path\"' can only be default-imported using the 'allowSyntheticDefaultImports' flag",
-              "class": "syntax"
-            },
-            {
               "code": "TS2304",
               "line": 108,
               "message": "Cannot find name 'stripeProvider'.",
@@ -1517,19 +1446,25 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 17,
+              "line": 21,
               "message": "Cannot find name 'Tenant'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 22,
+              "line": 30,
               "message": "Cannot find name 'TenantMember'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 32,
+              "line": 35,
+              "message": "Cannot find name 'DEFAULT_SEAT_LIMIT'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 41,
               "message": "Cannot find name 'TenantMember'.",
               "class": "undefined-identifier"
             }
@@ -1575,7 +1510,7 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 75,
+              "line": 88,
               "message": "Cannot find name 'getAllTenantIds'.",
               "class": "undefined-identifier"
             }
@@ -1696,12 +1631,6 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS1192",
-              "line": 23,
-              "message": "Module '\"crypto\"' has no default export.",
-              "class": "syntax"
-            },
-            {
               "code": "TS2304",
               "line": 61,
               "message": "Cannot find name 'getTenantDataSource'.",
@@ -1763,12 +1692,6 @@
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS1192",
-              "line": 4,
-              "message": "Module '\"crypto\"' has no default export.",
-              "class": "syntax"
-            },
             {
               "code": "TS2304",
               "line": 22,
@@ -2233,46 +2156,10 @@
       "title": "CDN Cache Strategy — Cache-Control, stale-while-revalidate",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS1005",
-              "line": 53,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 53,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 53,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 62,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 62,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 62,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
             {
               "code": "TS2323",
               "line": 7,
@@ -2356,6 +2243,12 @@
               "line": 52,
               "message": "Cannot find name 'db'.",
               "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2875",
+              "line": 53,
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
+              "class": "type-error"
             },
             {
               "code": "TS2304",
@@ -2491,33 +2384,63 @@
           "defects": [
             {
               "code": "TS2304",
-              "line": 33,
+              "line": 34,
               "message": "Cannot find name 'createTenant'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 45,
+              "line": 49,
               "message": "Cannot find name 'chargeCard'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 60,
+              "line": 69,
+              "message": "Cannot find name 'isDefiniteFailure'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 76,
+              "message": "Cannot find name 'findChargeByIdempotencyKey'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 93,
               "message": "Cannot find name 'allocateSeats'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 70,
+              "line": 113,
+              "message": "Cannot find name 'sendWelcomeEmail'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 120,
+              "message": "Cannot find name 'markSagaCompleted'.",
+              "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2304",
+              "line": 124,
               "message": "Cannot find name 'refundCharge'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 75,
+              "line": 129,
               "message": "Cannot find name 'deleteTenant'.",
               "class": "undefined-identifier"
+            },
+            {
+              "code": "TS2322",
+              "line": 136,
+              "message": "Type 'any' is not assignable to type 'never'.",
+              "class": "type-error"
             }
           ]
         }
@@ -2580,12 +2503,6 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS1192",
-              "line": 6,
-              "message": "Module '\"crypto\"' has no default export.",
-              "class": "syntax"
-            },
-            {
               "code": "TS2304",
               "line": 49,
               "message": "Cannot find name 'redis'.",
@@ -2629,12 +2546,6 @@
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS1192",
-              "line": 3,
-              "message": "Module '\"crypto\"' has no default export.",
-              "class": "syntax"
-            },
             {
               "code": "TS2304",
               "line": 78,
@@ -3538,12 +3449,6 @@
               "class": "type-error"
             },
             {
-              "code": "TS1192",
-              "line": 93,
-              "message": "Module '\"http\"' has no default export.",
-              "class": "syntax"
-            },
-            {
               "code": "TS2300",
               "line": 96,
               "message": "Duplicate identifier 'env'.",
@@ -3610,72 +3515,6 @@
               "line": 33,
               "message": "Duplicate identifier 'User'.",
               "class": "type-error"
-            },
-            {
-              "code": "TS2582",
-              "line": 36,
-              "message": "Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 40,
-              "message": "Cannot find name 'beforeAll'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 45,
-              "message": "Cannot find name 'afterAll'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2582",
-              "line": 52,
-              "message": "Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 58,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 59,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2582",
-              "line": 62,
-              "message": "Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 67,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2582",
-              "line": 70,
-              "message": "Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 76,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 77,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
             }
           ]
         }
@@ -3803,34 +3642,10 @@
       "title": "React Native: Zustand + MMKV State Management",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS1005",
-              "line": 65,
-              "message": "',' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 65,
-              "message": "',' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1110",
-              "line": 65,
-              "message": "Type expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1128",
-              "line": 66,
-              "message": "Declaration or statement expected.",
-              "class": "syntax"
-            },
             {
               "code": "TS2395",
               "line": 3,
@@ -3856,21 +3671,15 @@
               "class": "type-error"
             },
             {
-              "code": "TS2352",
+              "code": "TS2875",
               "line": 65,
-              "message": "Conversion of type '{ user: any; fullName: any; }' to type 'Text' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.   Type '{ user: any; fullName: any; }' is missing the following properties from type 'Text': wholeText, splitText, data, length, and 62 more.",
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
             },
             {
-              "code": "TS2869",
+              "code": "TS2786",
               "line": 65,
-              "message": "Right operand of ?? is unreachable because the left operand is never nullish.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS18004",
-              "line": 65,
-              "message": "No value exists in scope for the shorthand property 'fullName'. Either declare one or provide an initializer.",
+              "message": "'Text' cannot be used as a JSX component.   Its type '{ new (data?: string | undefined): Text; prototype: Text; }' is not a valid JSX element type.     Type '{ new (data?: string | undefined): Text; prototype: Text; }' is not assignable to type 'new (props: any, context: any) => Component<any, any, any>'.       Type 'Text' is missing the following properties from type 'Component<any, any, any>': context, setState, forceUpdate, render, and 2 more.",
               "class": "type-error"
             }
           ]
@@ -4096,236 +3905,6 @@
       ]
     },
     {
-      "lesson": "framework-deep-dives/420_reactnative_testing_jest_rntl_and_maestro.md",
-      "lessonId": 420,
-      "title": "React Native: Testing with Jest, React Native Testing Library, and Maestro",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS1005",
-              "line": 3,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 4,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 5,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 6,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 6,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 59,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS2695",
-              "line": 4,
-              "message": "Left side of comma operator is unused and has no side effects.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2695",
-              "line": 5,
-              "message": "Left side of comma operator is unused and has no side effects.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 11,
-              "message": "Cannot find name 'jest'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 11,
-              "message": "Cannot find name 'jest'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 11,
-              "message": "Cannot find name 'jest'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 12,
-              "message": "Cannot find name 'jest'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 13,
-              "message": "Cannot find name 'jest'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2300",
-              "line": 16,
-              "message": "Duplicate identifier 'waitFor'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 17,
-              "message": "Duplicate identifier 'http'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 17,
-              "message": "Duplicate identifier 'HttpResponse'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 18,
-              "message": "Duplicate identifier 'server'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2582",
-              "line": 21,
-              "message": "Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2582",
-              "line": 22,
-              "message": "Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 28,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 30,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 31,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2582",
-              "line": 34,
-              "message": "Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 38,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 40,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2300",
-              "line": 45,
-              "message": "Duplicate identifier 'waitFor'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 46,
-              "message": "Duplicate identifier 'http'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 46,
-              "message": "Duplicate identifier 'HttpResponse'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2300",
-              "line": 47,
-              "message": "Duplicate identifier 'server'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'jest'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2582",
-              "line": 55,
-              "message": "Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2582",
-              "line": 56,
-              "message": "Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 61,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 68,
-              "message": "Cannot find name 'afterEach'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2582",
-              "line": 72,
-              "message": "Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 74,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "lesson": "framework-deep-dives/421_electron_process_model_and_typed_ipc.md",
       "lessonId": 421,
       "title": "Electron: Process Model and Typed IPC Channels",
@@ -4436,26 +4015,6 @@
       ]
     },
     {
-      "lesson": "framework-deep-dives/422_electron_preload_and_context_isolation.md",
-      "lessonId": 422,
-      "title": "Electron: Preload Scripts and Context Isolation",
-      "fences": [
-        {
-          "lang": "tsx",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS1259",
-              "line": 3,
-              "message": "Module '\"node:path\"' can only be default-imported using the 'allowSyntheticDefaultImports' flag",
-              "class": "syntax"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "lesson": "framework-deep-dives/423_electron_main_process_lifecycle_and_window_management.md",
       "lessonId": 423,
       "title": "Electron: Main Process Lifecycle and Window Management",
@@ -4476,12 +4035,6 @@
               "line": 35,
               "message": "Duplicate identifier 'BrowserWindow'.",
               "class": "type-error"
-            },
-            {
-              "code": "TS1259",
-              "line": 36,
-              "message": "Module '\"node:path\"' can only be default-imported using the 'allowSyntheticDefaultImports' flag",
-              "class": "syntax"
             },
             {
               "code": "TS2304",
@@ -4549,69 +4102,15 @@
       "title": "Electron: Renderer Architecture — React, Client Routing, and Vendoring a Design System",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS1005",
+              "code": "TS2875",
               "line": 7,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 8,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 12,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 12,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 12,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 50,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 50,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 50,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 50,
-              "message": "Expression expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1109",
-              "line": 50,
-              "message": "Expression expected.",
-              "class": "syntax"
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
+              "class": "type-error"
             },
             {
               "code": "TS2395",
@@ -4635,24 +4134,6 @@
               "code": "TS2395",
               "line": 43,
               "message": "Individual declarations in merged declaration 'useUsers' must be all exported or all local.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2588",
-              "line": 50,
-              "message": "Cannot assign to 'loading' because it is a constant.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 50,
-              "message": "Cannot find name 'onPage'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2362",
-              "line": 50,
-              "message": "The left-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.",
               "class": "type-error"
             }
           ]
@@ -4830,18 +4311,6 @@
               "class": "type-error"
             },
             {
-              "code": "TS2304",
-              "line": 64,
-              "message": "Cannot find name 'beforeEach'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 66,
-              "message": "Cannot find name 'vi'.",
-              "class": "undefined-identifier"
-            },
-            {
               "code": "TS2300",
               "line": 71,
               "message": "Duplicate identifier 'test'.",
@@ -4925,52 +4394,10 @@
       "title": "Electron: Menus, Shortcuts, Tray, Dialogs, and File/Offline UX",
       "fences": [
         {
-          "lang": "typescript",
+          "lang": "tsx",
           "line": 21,
           "section": "Example Code",
           "defects": [
-            {
-              "code": "TS1005",
-              "line": 33,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 33,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 33,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 69,
-              "message": "'>' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 69,
-              "message": "';' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1005",
-              "line": 69,
-              "message": "',' expected.",
-              "class": "syntax"
-            },
-            {
-              "code": "TS1161",
-              "line": 69,
-              "message": "Unterminated regular expression literal.",
-              "class": "syntax"
-            },
             {
               "code": "TS2300",
               "line": 2,
@@ -5008,27 +4435,9 @@
               "class": "undefined-identifier"
             },
             {
-              "code": "TS2304",
+              "code": "TS2875",
               "line": 33,
-              "message": "Cannot find name 'kbd'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 33,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 33,
-              "message": "Operator '>' cannot be applied to types 'string' and '{ keys: string; }'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 33,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
+              "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
             },
             {
@@ -5048,30 +4457,6 @@
               "line": 61,
               "message": "Cannot find name 'showToast'.",
               "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 69,
-              "message": "Cannot find name 'span'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 69,
-              "message": "Cannot find name 'className'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2365",
-              "line": 69,
-              "message": "Operator '>' cannot be applied to types 'string' and '{ online: boolean; Synced: string; }'.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2365",
-              "line": 69,
-              "message": "Operator '<' cannot be applied to types 'boolean' and 'RegExp'.",
-              "class": "type-error"
             }
           ]
         }
@@ -5656,51 +5041,9 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS2582",
-              "line": 7,
-              "message": "Cannot find name 'describe'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2582",
-              "line": 8,
-              "message": "Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 9,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2582",
-              "line": 12,
-              "message": "Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
-              "code": "TS2304",
-              "line": 13,
-              "message": "Cannot find name 'expect'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2582",
-              "line": 29,
-              "message": "Cannot find name 'it'. Do you need to install type definitions for a test runner? Try `npm i --save-dev @types/jest` or `npm i --save-dev @types/mocha`.",
-              "class": "type-error"
-            },
-            {
               "code": "TS2304",
               "line": 31,
               "message": "Cannot find name 'RegistrationService'.",
-              "class": "undefined-identifier"
-            },
-            {
-              "code": "TS2304",
-              "line": 32,
-              "message": "Cannot find name 'expect'.",
               "class": "undefined-identifier"
             }
           ]
@@ -5812,6 +5155,26 @@
       ]
     },
     {
+      "lesson": "observability-deployment/53_opentelemetry.md",
+      "lessonId": 53,
+      "title": "OpenTelemetry — Traces, Metrics, Logs Triad",
+      "fences": [
+        {
+          "lang": "typescript",
+          "line": 25,
+          "section": "Example Code",
+          "defects": [
+            {
+              "code": "TS2304",
+              "line": 75,
+              "message": "Cannot find name 'lookupUserIdByEmail'.",
+              "class": "undefined-identifier"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "lesson": "observability-deployment/54_distributed_tracing.md",
       "lessonId": 54,
       "title": "Distributed Tracing — Following a Request Across Services",
@@ -5868,26 +5231,6 @@
               "line": 49,
               "message": "Duplicate identifier 'trace'.",
               "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "observability-deployment/56_canary_deployment_feature_flags.md",
-      "lessonId": 56,
-      "title": "Canary Deployment and Feature Flag Integration",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS1192",
-              "line": 5,
-              "message": "Module '\"crypto\"' has no default export.",
-              "class": "syntax"
             }
           ]
         }
@@ -5990,26 +5333,6 @@
               "line": 91,
               "message": "This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.",
               "class": "type-error"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "lesson": "saas-business-skills/91_mobile_first_api_design.md",
-      "lessonId": 91,
-      "title": "Mobile-First API Design — Bandwidth, Offline-First Thinking",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 22,
-          "section": "Example Code or Template",
-          "defects": [
-            {
-              "code": "TS1192",
-              "line": 121,
-              "message": "Module '\"crypto\"' has no default export.",
-              "class": "syntax"
             }
           ]
         }
@@ -6250,12 +5573,6 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS1192",
-              "line": 8,
-              "message": "Module '\"fs\"' has no default export.",
-              "class": "syntax"
-            },
-            {
               "code": "TS2304",
               "line": 15,
               "message": "Cannot find name 'TokenPayload'.",
@@ -6350,26 +5667,6 @@
       ]
     },
     {
-      "lesson": "security/33_ssrf_server_side_request_forgery.md",
-      "lessonId": 33,
-      "title": "SSRF (Server-Side Request Forgery)",
-      "fences": [
-        {
-          "lang": "typescript",
-          "line": 21,
-          "section": "Example Code",
-          "defects": [
-            {
-              "code": "TS1192",
-              "line": 5,
-              "message": "Module '\"dns/promises\"' has no default export.",
-              "class": "syntax"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "lesson": "security/34_timing_attack_constant_time_comparison.md",
       "lessonId": 34,
       "title": "Timing Attack — Constant-Time String Comparison",
@@ -6380,38 +5677,32 @@
           "section": "Example Code",
           "defects": [
             {
-              "code": "TS1192",
-              "line": 2,
-              "message": "Module '\"crypto\"' has no default export.",
-              "class": "syntax"
-            },
-            {
               "code": "TS2304",
-              "line": 56,
+              "line": 66,
               "message": "Cannot find name 'bcrypt'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 56,
+              "line": 66,
               "message": "Cannot find name 'plainPassword'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 56,
+              "line": 66,
               "message": "Cannot find name 'hashedPassword'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 65,
+              "line": 75,
               "message": "Cannot find name 'rawToken'.",
               "class": "undefined-identifier"
             },
             {
               "code": "TS2304",
-              "line": 66,
+              "line": 76,
               "message": "Cannot find name 'repo'.",
               "class": "undefined-identifier"
             }
@@ -6440,12 +5731,6 @@
               "line": 4,
               "message": "Duplicate identifier 'NextResponse'.",
               "class": "type-error"
-            },
-            {
-              "code": "TS1192",
-              "line": 5,
-              "message": "Module '\"crypto\"' has no default export.",
-              "class": "syntax"
             },
             {
               "code": "TS2875",

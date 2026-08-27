@@ -19,33 +19,43 @@ Constant-time comparison algorithms compare every byte of both strings regardles
 
 ## Example Code
 ```typescript
-// libs/crypto/constant-time.ts
+// lib/crypto/constant-time.ts
 import crypto from 'crypto';
 
+// ❌ The version almost everyone writes first, and why it does not work:
+//
+//   if (bufA.length !== bufB.length) {
+//     crypto.timingSafeEqual(bufA, bufA);  // "burn the same time"
+//     return false;
+//   }
+//
+// The guard exists because crypto.timingSafeEqual throws on a length mismatch,
+// so it has to be there. The dummy comparison is the part that is wrong: the
+// work it does still scales with a buffer whose length the attacker chose, and
+// Buffer.from() above it already allocated proportionally to that input. The
+// length difference is still measurable — it just moved.
+//
+// You cannot hide a length by comparing carefully. You hide it by removing it.
+
 /**
- * Constant-time string comparison.
- * Prevents timing attacks when comparing secrets, HMAC digests, or tokens.
- * Both strings are converted to the same length before comparison.
+ * Constant-time comparison for secrets of any length.
+ *
+ * Both sides are HMAC'd to a fixed 32 bytes first, so the comparison always
+ * examines exactly 32 bytes and the caller's input length is no longer
+ * observable. The key is random per process: without it an attacker could
+ * precompute digests offline and compare those instead.
  */
-export function timingSafeEqual(a: string, b: string): boolean {
-  // Convert to buffers using the same encoding
-  const bufA = Buffer.from(a, 'utf8');
-  const bufB = Buffer.from(b, 'utf8');
+const COMPARISON_KEY = crypto.randomBytes(32);
 
-  // If lengths differ, the strings cannot be equal.
-  // We still run the comparison on equal-length buffers to avoid leaking
-  // information about which is longer.
-  if (bufA.length !== bufB.length) {
-    // Compare bufA against itself to burn the same time, then return false.
-    // This prevents leaking length information via timing.
-    crypto.timingSafeEqual(bufA, bufA);
-    return false;
-  }
-
-  return crypto.timingSafeEqual(bufA, bufB);
+function fixedLengthDigest(value: string): Buffer {
+  return crypto.createHmac('sha256', COMPARISON_KEY).update(value, 'utf8').digest();
 }
 
-// ─── Where to use this in your codebase ───────────────────────────────────
+export function timingSafeEqual(a: string, b: string): boolean {
+  return crypto.timingSafeEqual(fixedLengthDigest(a), fixedLengthDigest(b));
+}
+
+// ─── Where this belongs ───────────────────────────────────────────────────
 
 // 1. Webhook signature verification (Stripe, GitHub, etc.)
 function verifyStripeWebhook(payload: string, signature: string, secret: string): boolean {
@@ -100,12 +110,13 @@ const session = await repo.findOne({ where: { refreshToken: hashedIncoming } });
 - Any comparison where the value being compared is a secret that an attacker is trying to guess by probing
 
 ## Common Mistakes
-- **Length check before constant-time comparison** — `if (a.length !== b.length) return false` leaks whether the lengths match; include the length check inside the constant-time logic as shown above
+- **Trying to hide a length difference with a dummy comparison** — running `timingSafeEqual(a, a)` before returning `false` feels like it burns matching time, but the work still scales with attacker-controlled input and the buffer allocation above it already did. Hash both sides to a fixed length instead; that is the only version where the length genuinely stops being observable.
+- **Reaching for a raw `===` on a digest** — `signature === expected` short-circuits on the first differing byte, which is exactly the signal an attacker measures
 - **Using constant-time comparison for non-secrets** — You don't need it for comparing user IDs, email addresses, or other non-secret data; it adds no security value there and adds unnecessary code complexity
 - **Forgetting that `crypto.timingSafeEqual` throws on length mismatch** — The built-in throws a `TypeError` if buffers have different byte lengths; always handle length differences before calling it
 - **Treating bcrypt hashes as needing constant-time comparison** — bcrypt's verification is already timing-safe by design; adding `timingSafeEqual` on top is redundant and signals a misunderstanding
 
 ## Further Reading
 - [Node.js `crypto.timingSafeEqual` documentation](https://nodejs.org/api/crypto.html#cryptotimingsafeequala-b)
-- [Cryptographic timing attacks explained (Paul Kehrer)](https://crypto.io/timing_attacks/)
+- [OWASP Cryptographic Storage Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html) — the comparison and key-handling sections
 - [OWASP: Don't use string equality to compare secrets](https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html)

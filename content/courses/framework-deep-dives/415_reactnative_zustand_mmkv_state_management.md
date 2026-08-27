@@ -18,7 +18,7 @@ Reading from a store correctly matters as much as writing to it. `useAuthStore((
 - **MMKV requires a native module**: it doesn't work inside Expo Go — development requires an `expo-dev-client` build
 
 ## Example Code
-```typescript
+```tsx
 // libs/mmkv.ts
 import { MMKV } from "react-native-mmkv";
 export const mmkv = new MMKV({ id: "app-storage" });

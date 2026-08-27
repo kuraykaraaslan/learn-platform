@@ -21,10 +21,23 @@ For your multi-tenant setup, zero-downtime migrations have an additional dimensi
 ```typescript
 // ─── Example: Adding a NOT NULL column safely ─────────────────────────────
 // Goal: Add `tenantSlug VARCHAR NOT NULL` to the tenants table
-// Naive approach (BAD): ALTER TABLE tenants ADD COLUMN slug VARCHAR NOT NULL DEFAULT '';
-//   This rewrites the entire table, holding an exclusive lock.
+// A common claim about the naive approach is wrong, and it matters:
+//   ALTER TABLE tenants ADD COLUMN slug VARCHAR NOT NULL DEFAULT '';
+// Since PostgreSQL 11 this does NOT rewrite the table — a non-volatile default
+// is stored in the catalog and applied on read. What it still does is take an
+// ACCESS EXCLUSIVE lock, and that is the actual risk: the lock itself is brief,
+// but it queues behind every in-flight query on the table and blocks every new
+// one while it waits. On a busy table that is an outage, from a statement whose
+// own duration is milliseconds. Always set a lock_timeout so the migration
+// fails fast instead of forming a queue:
+//   SET lock_timeout = '3s';
+//
+// The real reason to expand-and-contract is not the rewrite. It is that old and
+// new application code must both work against the schema during a rolling
+// deploy — a NOT NULL column the previous version does not know how to populate
+// breaks every insert it makes.
 
-// Phase 1 — Expand: add as nullable (no lock, instant in PostgreSQL 11+)
+// Phase 1 — Expand: add as nullable (no default, no backfill, no lock held)
 // Migration file: 001_add_tenant_slug_nullable.sql
 /*
   ALTER TABLE tenants ADD COLUMN IF NOT EXISTS slug VARCHAR;
