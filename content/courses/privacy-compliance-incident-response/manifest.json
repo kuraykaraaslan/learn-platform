@@ -1,0 +1,98 @@
+{
+  "slug": "privacy-compliance-incident-response",
+  "title": "Privacy, Compliance & Incident Response",
+  "description": "The process layer around security: vendor risk, incident response, and privacy governance — complements the Security course's technical depth.",
+  "items": [
+    {
+      "id": 356,
+      "file": "356_risk_based_security_scoping_threat_model_lite.md",
+      "title": "Risk-Based Security Scoping & Threat Model Lite",
+      "bracket": "3-7",
+      "category": "Privacy, Compliance & Incident Response"
+    },
+    {
+      "id": 357,
+      "file": "357_government_regulated_sector_security_baselines.md",
+      "title": "Government & Regulated-Sector Security Baselines",
+      "bracket": "7-10",
+      "category": "Privacy, Compliance & Incident Response"
+    },
+    {
+      "id": 358,
+      "file": "358_data_classification_storage_residency_tiers.md",
+      "title": "Data Classification & Storage Residency Tiers",
+      "bracket": "3-7",
+      "category": "Privacy, Compliance & Incident Response"
+    },
+    {
+      "id": 359,
+      "file": "359_privacy_by_design_process_multi_jurisdiction_basis.md",
+      "title": "Privacy by Design — Process, Artifacts & Multi-Jurisdiction Legal Basis",
+      "bracket": "3-7",
+      "category": "Privacy, Compliance & Incident Response"
+    },
+    {
+      "id": 360,
+      "file": "360_cookie_consent_tracking_governance.md",
+      "title": "Cookie Consent & Tracking Governance",
+      "bracket": "3-7",
+      "category": "Privacy, Compliance & Incident Response"
+    },
+    {
+      "id": 361,
+      "file": "361_vulnerability_management_lifecycle_patch_slas.md",
+      "title": "Vulnerability Management Lifecycle & Patch SLAs",
+      "bracket": "3-7",
+      "category": "Privacy, Compliance & Incident Response"
+    },
+    {
+      "id": 362,
+      "file": "362_incident_response_process_detection_to_postmortem.md",
+      "title": "Incident Response Process — Detection Through Containment",
+      "bracket": "3-7",
+      "category": "Privacy, Compliance & Incident Response"
+    },
+    {
+      "id": 363,
+      "file": "363_breach_notification_requirements_across_jurisdictions.md",
+      "title": "Breach Notification Requirements Across Jurisdictions",
+      "bracket": "7-10",
+      "category": "Privacy, Compliance & Incident Response"
+    },
+    {
+      "id": 364,
+      "file": "364_third_party_vendor_risk_data_processing_agreements.md",
+      "title": "Third-Party Vendor Risk & Data Processing Agreements",
+      "bracket": "3-7",
+      "category": "Privacy, Compliance & Incident Response"
+    },
+    {
+      "id": 365,
+      "file": "365_childrens_data_compliance_age_verification_parental_consent.md",
+      "title": "Children's Data Compliance — Age Verification & Parental Consent",
+      "bracket": "7-10",
+      "category": "Privacy, Compliance & Incident Response"
+    },
+    {
+      "id": 366,
+      "file": "366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
+      "title": "Health Data Compliance — HIPAA, NHS & KVKK Sağlık Verileri",
+      "bracket": "7-10",
+      "category": "Privacy, Compliance & Incident Response"
+    },
+    {
+      "id": 367,
+      "file": "367_security_handover_access_transition_checklist.md",
+      "title": "Security Handover & Access Transition Checklist",
+      "bracket": "3-7",
+      "category": "Privacy, Compliance & Incident Response"
+    },
+    {
+      "id": 368,
+      "file": "368_client_facing_security_communication_risk_framing.md",
+      "title": "Client-Facing Security Communication — Risk Framing & Scope Boundaries",
+      "bracket": "3-7",
+      "category": "Privacy, Compliance & Incident Response"
+    }
+  ]
+}

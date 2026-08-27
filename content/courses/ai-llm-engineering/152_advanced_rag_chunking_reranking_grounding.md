@@ -1,0 +1,86 @@
+# 152. Advanced RAG: Chunking, Reranking, and Grounding Verification
+
+## Coverage Level
+**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/rag-and-retrieval.md material, building on the introductory RAG coverage in item 140; no existing coverage data for your own practice.
+
+## What It Is
+The basic RAG loop — embed a query, fetch nearest chunks, stuff them into the prompt — is the easy 20% of building a retrieval system. The other 80% is retrieval quality engineering, and it's where most RAG features actually live or die, because a language model given the wrong context will confidently generate a wrong answer from it. The first quality lever is chunking strategy: how you split source documents before embedding directly determines what can ever be retrieved. Fixed-size chunking with overlap (e.g., 500 tokens per chunk, 50 tokens of overlap) is the simple baseline, but naive splitting can cut a sentence or a table row in half; the better version splits at semantic boundaries — section headers, paragraph breaks — so no chunk starts or ends mid-thought.
+
+The second lever is retrieval precision, and pure vector similarity search is often not enough on its own. Hybrid search — combining dense vector retrieval with keyword-based search like BM25 — catches cases where the right answer uses specific terminology that embeddings alone under-weight (product SKUs, exact error codes, proper nouns). A reranking pass after initial retrieval (a cross-encoder scoring each candidate chunk against the query more precisely than the embedding's cosine similarity) further improves precision when you can afford the extra latency. And a similarity score threshold — discarding chunks below roughly 0.75 cosine similarity — prevents low-relevance chunks from diluting the context just because they were the "best available" among a bad set.
+
+The third and most underused lever is grounding verification: an explicit check, after generation, that the model's answer is actually supported by the retrieved context, rather than trusting that "we gave it good context" is sufficient. For high-stakes domains — legal, medical, financial — a second, cheap model call (Haiku is the right tier here) that answers only "GROUNDED" or "NOT GROUNDED" against the retrieved text catches hallucination that survives good retrieval. RAG narrows what the model *can* draw from; it does not guarantee what it *actually did* draw from, and treating retrieval quality as a substitute for output validation is the single most common RAG production bug.
+
+## Key Concepts
+- **Chunk at semantic boundaries, not fixed character counts**: split at headers/paragraphs where possible; use overlap (~10% of chunk size) to avoid losing context at boundaries
+- **Hybrid search**: combine dense vector similarity with keyword/BM25 search to catch exact-term queries embeddings miss
+- **Reranking**: a cross-encoder pass over the top candidates after initial retrieval, trading latency for precision
+- **Similarity score threshold**: discard chunks below a minimum relevance score rather than always returning the top-k regardless of quality
+- **Top-k discipline**: 3-5 chunks is typically sufficient; more chunks add cost and dilute what the model attends to, they don't improve answer quality
+- **Grounding verification**: a second, cheaper model call that checks whether the generated answer is actually supported by the retrieved context
+- **Embedding model consistency**: never mix vectors from different embedding models in one index — changing embedding models requires re-embedding the entire corpus
+- **Context placement**: retrieved chunks go in the user message (with source tags for citation), not the system prompt, so they don't pollute prompt caching
+
+## Example Code
+```typescript
+const MIN_SIMILARITY = 0.75;
+const TOP_K = 4;
+
+async function retrieveRelevantChunks(queryVector: number[]) {
+  const candidates = await vectorStore.search(queryVector, { topK: TOP_K * 3 });
+  const aboveThreshold = candidates.filter((c) => c.score >= MIN_SIMILARITY);
+  const reranked = await rerank(candidates.query, aboveThreshold); // cross-encoder pass
+  return reranked.slice(0, TOP_K);
+}
+
+function buildRAGUserMessage(query: string, chunks: RetrievedChunk[]): string {
+  const context = chunks
+    .map((c, i) => `<source id="${i + 1}" file="${c.filename}">\n${c.text}\n</source>`)
+    .join('\n\n');
+  return `<context>\n${context}\n</context>\n\nQuestion: ${query}`;
+}
+
+// Grounding verification — only for high-stakes features (legal, medical, financial)
+async function verifyGrounding(context: string, answer: string): Promise<boolean> {
+  const response = await anthropic.messages.create({
+    model: 'claude-haiku-4-5-20251001', // cheap tier — this is a binary check, not generation
+    max_tokens: 10,
+    system: 'You are a fact-checker. Answer only "GROUNDED" or "NOT GROUNDED".',
+    messages: [{
+      role: 'user',
+      content: `Context:\n${context}\n\nClaim: "${answer}"\n\nIs this claim fully supported by the context?`,
+    }],
+  });
+  return extractText(response).trim().toUpperCase().startsWith('GROUNDED');
+}
+
+export async function answerWithGroundingCheck(question: string): Promise<{ answer: string; grounded: boolean }> {
+  const chunks = await retrieveRelevantChunks(await embed(question));
+  const userMessage = buildRAGUserMessage(question, chunks);
+  const response = await anthropic.messages.create({
+    model: 'claude-sonnet-4-6',
+    max_tokens: 500,
+    system: RAG_SYSTEM_PROMPT,
+    messages: [{ role: 'user', content: userMessage }],
+  });
+  const answer = extractText(response);
+  const context = chunks.map((c) => c.text).join('\n');
+  return { answer, grounded: await verifyGrounding(context, answer) };
+}
+```
+
+## When to Use
+- After a basic RAG feature is live and eval results show retrieval misses (right document exists, but the wrong chunk was retrieved)
+- Any corpus with exact-match-sensitive content (SKUs, error codes, IDs) where pure vector similarity underperforms
+- High-stakes domains (legal, medical, financial, compliance) where an ungrounded hallucination has real consequences
+- When top-k is set high (>8) to "be safe" and answer quality hasn't improved — that's a signal to add a threshold and reranking instead
+
+## Common Mistakes
+- Chunking purely by fixed character/token count with no regard for section or paragraph boundaries, fragmenting meaning across chunks
+- Assuming that good retrieval automatically means a grounded answer — the model can still ignore, misread, or extrapolate beyond the provided context
+- Increasing top-k to compensate for poor retrieval precision instead of fixing chunking, hybrid search, or the similarity threshold
+- Re-embedding only new documents after switching embedding models, leaving old and new vectors incompatible in the same index
+
+## Further Reading
+- Pinecone — "Chunking Strategies for LLM Applications" (learn.pinecone.io)
+- Anthropic — "Contextual Retrieval" cookbook/blog post on improving RAG chunk relevance
+- Voyage AI documentation on embedding models and reranking (voyage AI is Anthropic's recommended embedding partner)

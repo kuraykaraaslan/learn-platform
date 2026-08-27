@@ -1,0 +1,89 @@
+# 362. Incident Response Process — Detection Through Containment
+
+## Coverage Level
+**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
+
+## What It Is
+A security or privacy incident is a different animal from a normal production outage, and it needs a different first response even though both eventually get written up afterward. Blameless Post-Mortem (course #79) covers the retrospective — timeline reconstruction, contributing factors, action items — for any significant failure, technical or otherwise. This lesson covers what happens *before* that retrospective is written: the specific, time-pressured flow for suspected unauthorized access, data exposure, account takeover, or any event where personal or sensitive data might be involved, where the first hour's actions determine whether evidence survives and whether the exposure gets worse. Incidents in this category include unauthorized admin access, account takeover, a data export or leak, a public storage bucket exposure, lost or deleted data, upload/malware abuse, payment or webhook manipulation, secrets committed or exposed in a repository, and third-party provider compromise — a broader list than "the site is down."
+
+The response flow is a fixed sequence: detect, preserve evidence, contain, assess impact, eradicate the root cause, recover service and data, communicate to stakeholders, support a legal/privacy assessment, and document lessons learned. The reason evidence preservation comes second — before containment — is that the instinct to immediately fix things (delete a compromised file, roll back a database, kill a suspicious process) can destroy the exact logs, timestamps, and snapshots needed to later determine scope, and scope determination is what a breach-notification decision depends on. A first-hour checklist keeps a real incident from becoming a panic response: confirm the incident is real, capture timestamps and symptoms, avoid deleting anything, restrict the compromised account or rotate the exposed secret, block the affected endpoint or feature if needed, check logs for scope, notify the decision owner, and specifically ask whether personal data may be involved — because that single question is what triggers the separate breach-notification clock (see lesson #363).
+
+Evidence preservation itself has a concrete checklist: logs, audit records, provider alerts, screenshots, timestamps, affected user or resource IDs, configuration snapshots, and commit/deploy history around the incident window. Communication during an active incident follows a specific, deliberately narrow pattern — what we know, what we don't know yet, what containment has already happened, what impact is suspected, what's needed from anyone else, and what happens next — because speculating publicly about scope or cause before the facts are confirmed routinely turns out to be wrong and has to be walked back. A handful of actions are flatly forbidden regardless of pressure: never delete logs to hide an error, never notify users before the facts are known unless legally required to move faster, never draw legal conclusions ("this was not a breach") without an actual investigation, and never keep using a secret that's known to be exposed while "confirming" whether it was actually misused.
+
+## Key Concepts
+- **Incident types beyond outages**: unauthorized admin access, account takeover, data export/leak, public bucket exposure, secrets exposure, third-party compromise — a broader category than a downtime incident
+- **Response flow**: detect → preserve evidence → contain → assess impact → eradicate → recover → communicate → support legal/privacy assessment → document lessons learned
+- **Evidence before containment**: preserve logs, timestamps, and snapshots before taking actions (deleting, rolling back) that could destroy them — scope determination depends on this evidence
+- **First-hour checklist**: confirm it's real, capture timestamps, don't delete anything, restrict compromised access, rotate exposed secrets, check logs for scope, notify the decision owner, ask whether personal data is involved
+- **The personal-data trigger question**: "might personal data be involved" is the single question that starts the separate, time-bound breach-notification process
+- **Calm, factual communication pattern**: known facts, unknowns, containment done, suspected impact, what's needed, next step — never public speculation about cause or scope
+- **Forbidden patterns during response**: deleting logs, premature notification, drawing legal conclusions without investigation, continuing to use an exposed secret
+- **Incident report artifact**: summary, timeline, affected systems, data potentially affected, root cause, containment actions, recovery actions, required legal actions, residual risk — the structured record the response produces
+
+## Example Code
+```markdown
+# Incident Response Runbook — Security / Privacy Incidents
+
+## Trigger
+Any suspected: unauthorized access, data exposure, account takeover, leaked
+secret, public storage misconfiguration, or third-party provider compromise.
+
+## First Hour
+- [ ] Confirm the incident is real (not a false alarm / expected behavior)
+- [ ] Capture exact timestamps and symptoms as first observed
+- [ ] Do NOT delete logs, rows, files, or processes yet — evidence first
+- [ ] Restrict/disable the compromised account or session
+- [ ] Rotate any exposed secret immediately (do not wait for "full confirmation")
+- [ ] Block the affected endpoint/feature if actively being abused
+- [ ] Pull logs for the affected window; identify scope (which users/tenants/records)
+- [ ] Notify the incident decision owner (on-call lead / eng manager)
+- [ ] Ask explicitly: "Could personal data be involved?" → if yes, start the
+      breach-notification clock in parallel (see lesson #363)
+
+## Evidence to Preserve (before any remediation that could alter them)
+- [ ] Application + access logs for the affected window
+- [ ] Audit log entries (who did what, when)
+- [ ] Provider/security alerts (hosting, WAF, email provider abuse notices)
+- [ ] Screenshots of the exposure if externally visible (e.g. public bucket listing)
+- [ ] Affected user/resource IDs
+- [ ] Configuration snapshot at time of incident
+- [ ] Commit and deploy history around the incident window
+
+## Containment → Eradication → Recovery
+- [ ] Contain: stop ongoing damage (revoke access, disable feature, isolate system)
+- [ ] Eradicate: fix the root cause (patch, close misconfiguration, remove backdoor)
+- [ ] Recover: restore service/data from a known-good state; verify integrity
+
+## Communication (internal + external, as scoped)
+Use only this pattern — no speculation beyond it:
+1. What we know
+2. What we do not know yet
+3. What containment action has already been taken
+4. What impact is suspected
+5. What we need from you/them
+6. What happens next
+
+## Incident Report (filed after stabilization, feeds the post-mortem)
+# Incident Report — [short title] — [date]
+## Summary / Timeline / Affected systems / Data potentially affected
+## Root cause / Containment actions / Recovery actions
+## Legal/privacy actions required / Residual risk
+```
+
+## When to Use
+- The moment any of the trigger conditions above is suspected — even before it's confirmed, since evidence preservation has to start immediately
+- When a secret (API key, database credential, signing key) is found committed to a repository or pasted somewhere it shouldn't be
+- When a customer, security researcher, or automated alert reports suspicious access patterns or a possible data exposure
+- When a third-party vendor discloses their own security incident and you need to determine whether your data was affected
+- As the input to the blameless post-mortem (#79) once the incident is stabilized — this runbook produces the timeline and evidence the post-mortem analyzes
+
+## Common Mistakes
+- Rushing to fix or delete the compromised state before preserving logs and evidence, destroying the ability to later determine scope
+- Treating "the personal data question" as an afterthought instead of asking it explicitly in the first hour, delaying the separate breach-notification clock
+- Making public statements about cause or scope before the facts are confirmed, then having to retract or contradict an earlier statement
+- Continuing to use a secret or credential that is known or suspected to be exposed while still "investigating" whether it was actually misused
+
+## Further Reading
+- [NIST SP 800-61 Rev. 2 — Computer Security Incident Handling Guide](https://csrc.nist.gov/pubs/sp/800/61/r2/final)
+- [SANS Incident Handler's Handbook](https://www.sans.org/white-papers/33901/)
+- Course #79 — *Blameless Post-Mortem — Writing and Running One* (the retrospective process this runbook feeds into)

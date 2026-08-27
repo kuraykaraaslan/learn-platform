@@ -1,0 +1,55 @@
+# 381. Success Metrics and Criteria
+
+## Coverage Level
+**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `metrics-and-success-criteria.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
+
+## What It Is
+MVP scoping (lesson 375) asks for a single success metric because an MVP needs one clear thing to prove. Once you're past MVP — evaluating a feature, a pilot, or a full release — one metric usually isn't enough, and "success" needs to be defined before delivery or it gets decided afterward by whoever is most invested in a particular answer. That's the core failure mode this lesson exists to prevent: a project is not successful because it was delivered, because the client liked the demo, or because "everything works." Those are not measurements, they're impressions, and impressions can be argued with equal confidence in either direction.
+
+A complete metrics definition draws from six categories, using whichever are relevant to the thing being measured: business metrics (paid orders, conversion rate, manual hours saved), user behavior metrics (activation rate, first task completion, repeat usage, abandonment), operational metrics (approval time, processing time, reconciliation count), quality metrics (bug count, error rate, uptime, support volume after launch), learning metrics (was the core assumption validated or not), and delivery metrics (did the phase land on time and in scope). Picking metrics from only one category is how teams end up proving the wrong thing — a feature can hit every quality metric and still fail on the business metric it was actually built to move.
+
+The three-part success criteria rule turns a metric into a real decision tool: minimum success (the bar below which the effort didn't pay off), strong success (the bar that justifies doubling down), and a failure signal (a specific, observable sign that the assumption was wrong, not just "it didn't feel great"). "Minimum success: 3 pilot organizers can publish events and sell tickets without manual order tracking. Strong success: 80% of attendees complete purchase without support. Failure signal: organizers still maintain a parallel spreadsheet because admin visibility is insufficient" gives you three different, actionable outcomes instead of one vague verdict. Without the failure signal in particular, teams tend to quietly redefine "success" after the fact to match whatever actually happened.
+
+## Key Concepts
+- **Six metric categories**: business, user behavior, operational, quality, learning, delivery — pick the ones relevant to what's being evaluated, not just one
+- **Minimum / strong / failure signal triad**: every MVP, feature, pilot, or release needs all three defined before launch, not just a single target
+- **Metrics defined before delivery, not after**: success measured retroactively tends to match whatever happened, which defeats the purpose of measuring
+- **Forbidden success claims**: "project delivered," "client liked it," "design looks modern," "everything works" — none of these are metrics
+- **A failure signal is a specific observable**, not a feeling — "organizers still keep a parallel spreadsheet" is falsifiable; "it didn't feel successful" is not
+- **Learning metrics matter even on failure**: a pilot that fails its minimum success bar but produces a clear failure signal has still done its job
+- **Metrics connect back to the problem statement** (lesson 372): a metric that doesn't map to the original pain being solved is measuring the wrong thing
+
+## Example Code
+```markdown
+## Success Metrics — Crew Scheduler Pilot
+
+**Primary product metric:** Double-booking incidents per week
+**Business metric:** Hours of manual reconciliation saved per week
+**User behavior metric:** % of reassignments completed by the coordinator without a phone call
+**Operational metric:** Average time from conflict detection to resolved reassignment
+**Quality metric:** SMS delivery failure rate
+
+**Minimum success:** Double-booking incidents drop from current baseline (3-5/week) to 1 or fewer
+across the 2-week pilot, with the coordinator using the tool as the sole schedule source.
+**Strong success:** Zero double-booking incidents, and average reassignment time drops from
+~20 minutes to under 2 minutes.
+**Failure signal:** Coordinator reverts to checking the shared spreadsheet "just to be sure,"
+indicating the tool hasn't earned enough trust to be the single source of truth.
+```
+
+## When to Use
+- Before delivery of any MVP, feature, pilot, or release — never as a retroactive judgment call
+- Whenever "it worked" is being claimed without a metric attached to back it up
+- When scoping a pilot (ties directly into lesson 385's release strategy) — the pilot's go/no-go decision should reference these criteria
+- When a stakeholder disagrees about whether something succeeded — the minimum/strong/failure triad settles the argument in advance instead of after
+
+## Common Mistakes
+- Declaring success based on delivery or subjective impression instead of a predefined metric
+- Measuring only one category (usually quality or delivery) and ignoring whether the business or behavior outcome actually moved
+- Defining a target with no failure signal, so a disappointing result gets quietly reframed as acceptable after the fact
+- Choosing metrics nobody will actually track after launch, which is the same as having no metric at all
+
+## Further Reading
+- John Doerr — "Measure What Matters" (on outcome-based goal setting, the OKR framing behind minimum/strong success)
+- Avinash Kaushik — "Web Analytics 2.0" (on distinguishing actionable metrics from vanity metrics)
+- Sean Ellis & Morgan Brown — "Hacking Growth" (on defining a single measurable "North Star" alongside supporting metrics)

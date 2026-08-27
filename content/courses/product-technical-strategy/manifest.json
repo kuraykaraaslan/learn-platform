@@ -1,0 +1,182 @@
+{
+  "slug": "product-technical-strategy",
+  "title": "Product & Technical Strategy",
+  "description": "MVP scoping, PRDs, and org-level technology/architecture decisions — the strategic layer above day-to-day code architecture.",
+  "items": [
+    {
+      "id": 371,
+      "file": "371_product_strategy_operating_system.md",
+      "title": "Product Strategy Operating System — From Problem to Roadmap",
+      "bracket": "7-10",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 372,
+      "file": "372_problem_framing.md",
+      "title": "Problem Framing — Converting Vague Requests into Problem Statements",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 373,
+      "file": "373_personas_role_mapping.md",
+      "title": "Personas & Role Mapping — Buyer, User, Admin, and Operator",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 374,
+      "file": "374_jtbd_value_proposition.md",
+      "title": "Jobs to Be Done & Value Proposition — From User Motivation to Product Promise",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 375,
+      "file": "375_mvp_scoping.md",
+      "title": "MVP Scoping — Valuable, Usable, Testable, Deliverable",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 376,
+      "file": "376_feature_prioritization.md",
+      "title": "Feature Prioritization — Scoring Beyond Stakeholder Excitement",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 377,
+      "file": "377_scope_boundaries.md",
+      "title": "Scope Boundaries — In Scope, Out of Scope, and Change Triggers",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 378,
+      "file": "378_product_requirements_document.md",
+      "title": "Product Requirements Document (PRD)",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 379,
+      "file": "379_user_stories_acceptance_criteria.md",
+      "title": "User Stories and Acceptance Criteria",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 380,
+      "file": "380_user_journey_flow_mapping.md",
+      "title": "User Journey and Flow Mapping",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 381,
+      "file": "381_success_metrics_criteria.md",
+      "title": "Success Metrics and Criteria",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 382,
+      "file": "382_roadmap_planning.md",
+      "title": "Roadmap Planning — Sequencing MVP Through Scale",
+      "bracket": "7-10",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 383,
+      "file": "383_feedback_and_validation_loops.md",
+      "title": "Feedback and Validation Loops — Testing Assumptions Before and After Launch",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 384,
+      "file": "384_market_and_competitive_positioning.md",
+      "title": "Market and Competitive Positioning — Build, Buy, or Differentiate",
+      "bracket": "7-10",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 385,
+      "file": "385_product_risk_and_assumption_log.md",
+      "title": "Product Risk and Assumption Log",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 386,
+      "file": "386_release_strategy.md",
+      "title": "Release Strategy — Alpha, Beta, Pilot, and Rollout",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 387,
+      "file": "387_technical_architecture_operating_system.md",
+      "title": "Technical Architecture Operating System, Principles, and Decision Gates",
+      "bracket": "7-10",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 388,
+      "file": "388_requirements_to_architecture_translation.md",
+      "title": "Requirements-to-Architecture Translation and System Context Mapping",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 389,
+      "file": "389_domain_modeling_module_boundaries_scaling_path.md",
+      "title": "Domain Modeling, Module Boundaries, and the Staged Scaling Path",
+      "bracket": "7-10",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 390,
+      "file": "390_technology_selection_governance.md",
+      "title": "Technology Selection and New-Technology Governance",
+      "bracket": "7-10",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 391,
+      "file": "391_nfr_production_readiness_strategy.md",
+      "title": "Non-Functional Requirements and Production Readiness Strategy",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 392,
+      "file": "392_data_architecture_ownership_lifecycle.md",
+      "title": "Data Architecture — Ownership, Source of Truth, and Lifecycle Strategy",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 393,
+      "file": "393_api_integration_event_driven_decisions.md",
+      "title": "API, Integration, and Event-Driven Architecture Decisions",
+      "bracket": "3-7",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 394,
+      "file": "394_auth_identity_multi_tenancy_decisions.md",
+      "title": "Auth, Identity, and Multi-Tenancy Architecture Decisions",
+      "bracket": "7-10",
+      "category": "Product & Technical Strategy"
+    },
+    {
+      "id": 395,
+      "file": "395_legacy_system_migration_strategy.md",
+      "title": "Legacy System Assessment and Migration Strategy",
+      "bracket": "7-10",
+      "category": "Product & Technical Strategy"
+    }
+  ]
+}

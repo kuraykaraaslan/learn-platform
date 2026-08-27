@@ -1,0 +1,252 @@
+{
+  "slug": "framework-deep-dives",
+  "title": "Framework Deep Dives",
+  "description": "Express, Spring Boot, React Native, and Electron — the same engineering rigor applied outside the React/Next.js stack.",
+  "items": [
+    {
+      "id": 396,
+      "file": "396_express_two_layer_architecture.md",
+      "title": "Express: Two-Layer Architecture — Routes and Static Services",
+      "bracket": "1-3",
+      "category": "Framework Deep Dives — Express"
+    },
+    {
+      "id": 397,
+      "file": "397_express_middleware_pipeline_and_security.md",
+      "title": "Express: Middleware Pipeline, CORS, and Rate Limiting",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Express"
+    },
+    {
+      "id": 398,
+      "file": "398_express_curried_auth_middleware.md",
+      "title": "Express: Curried Auth Middleware and Typed Request Augmentation",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Express"
+    },
+    {
+      "id": 399,
+      "file": "399_express_centralized_error_handling.md",
+      "title": "Express: Centralized Error Handling with AppError",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Express"
+    },
+    {
+      "id": 400,
+      "file": "400_express_validation_and_response_conventions.md",
+      "title": "Express: Zod Validation and Response Envelope Conventions",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Express"
+    },
+    {
+      "id": 401,
+      "file": "401_express_realtime_sse_and_socketio.md",
+      "title": "Express: Real-Time Updates with SSE and Socket.io",
+      "bracket": "7-10",
+      "category": "Framework Deep Dives — Express"
+    },
+    {
+      "id": 402,
+      "file": "402_express_testing_with_jest_and_supertest.md",
+      "title": "Express: Integration Testing with Jest and Supertest",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Express"
+    },
+    {
+      "id": 403,
+      "file": "403_springboot_three_layer_architecture.md",
+      "title": "Spring Boot: Three-Layer Architecture — Controller, Service, and Repository",
+      "bracket": "1-3",
+      "category": "Framework Deep Dives — Spring Boot"
+    },
+    {
+      "id": 404,
+      "file": "404_springboot_response_entity_and_records.md",
+      "title": "Spring Boot: ResponseEntity and Standard Response Records",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Spring Boot"
+    },
+    {
+      "id": 405,
+      "file": "405_springboot_bean_validation.md",
+      "title": "Spring Boot: Bean Validation with @Valid, @Validated, and Custom Constraints",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Spring Boot"
+    },
+    {
+      "id": 406,
+      "file": "406_springboot_service_layer_transactional.md",
+      "title": "Spring Boot: Service Layer Beans and @Transactional Scoping",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Spring Boot"
+    },
+    {
+      "id": 407,
+      "file": "407_springboot_security_filter_chain.md",
+      "title": "Spring Boot: Security Filter Chain, CORS, and Rate Limiting",
+      "bracket": "7-10",
+      "category": "Framework Deep Dives — Spring Boot"
+    },
+    {
+      "id": 408,
+      "file": "408_springboot_jwt_auth_integration.md",
+      "title": "Spring Boot: JWT Authentication with OncePerRequestFilter and @PreAuthorize",
+      "bracket": "7-10",
+      "category": "Framework Deep Dives — Spring Boot"
+    },
+    {
+      "id": 409,
+      "file": "409_springboot_controller_advice_error_handling.md",
+      "title": "Spring Boot: Centralized Error Handling with @ControllerAdvice",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Spring Boot"
+    },
+    {
+      "id": 410,
+      "file": "410_springboot_jpa_entities_and_n_plus_one.md",
+      "title": "Spring Boot: JPA Entities, Repositories, and N+1 Prevention",
+      "bracket": "7-10",
+      "category": "Framework Deep Dives — Spring Boot"
+    },
+    {
+      "id": 411,
+      "file": "411_springboot_flyway_migrations.md",
+      "title": "Spring Boot: Flyway Migrations and Zero-Downtime Schema Changes",
+      "bracket": "7-10",
+      "category": "Framework Deep Dives — Spring Boot"
+    },
+    {
+      "id": 412,
+      "file": "412_springboot_testing_mockmvc_testcontainers.md",
+      "title": "Spring Boot: Testing with MockMvc, @WebMvcTest, and TestContainers",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Spring Boot"
+    },
+    {
+      "id": 413,
+      "file": "413_reactnative_file_organization_and_banned_patterns.md",
+      "title": "React Native: File Organization and Banned Patterns for Expo Apps",
+      "bracket": "1-3",
+      "category": "Framework Deep Dives — React Native"
+    },
+    {
+      "id": 414,
+      "file": "414_reactnative_expo_router_navigation.md",
+      "title": "React Native: Expo Router Navigation and Protected Routes",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — React Native"
+    },
+    {
+      "id": 415,
+      "file": "415_reactnative_zustand_mmkv_state_management.md",
+      "title": "React Native: Zustand + MMKV State Management",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — React Native"
+    },
+    {
+      "id": 416,
+      "file": "416_reactnative_data_fetching_and_offline.md",
+      "title": "React Native: Data Fetching, Loading States, and Offline Detection",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — React Native"
+    },
+    {
+      "id": 417,
+      "file": "417_reactnative_expo_config_permissions_and_native_apis.md",
+      "title": "React Native: Expo Config, Permissions, and Native Device APIs",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — React Native"
+    },
+    {
+      "id": 418,
+      "file": "418_reactnative_nativewind_styling_tokens_and_dark_mode.md",
+      "title": "React Native: NativeWind Styling, Design Tokens, and Dark Mode",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — React Native"
+    },
+    {
+      "id": 419,
+      "file": "419_reactnative_accessibility_and_feedback_patterns.md",
+      "title": "React Native: Accessibility and Feedback Patterns",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — React Native"
+    },
+    {
+      "id": 420,
+      "file": "420_reactnative_testing_jest_rntl_and_maestro.md",
+      "title": "React Native: Testing with Jest, React Native Testing Library, and Maestro",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — React Native"
+    },
+    {
+      "id": 421,
+      "file": "421_electron_process_model_and_typed_ipc.md",
+      "title": "Electron: Process Model and Typed IPC Channels",
+      "bracket": "7-10",
+      "category": "Framework Deep Dives — Electron"
+    },
+    {
+      "id": 422,
+      "file": "422_electron_preload_and_context_isolation.md",
+      "title": "Electron: Preload Scripts and Context Isolation",
+      "bracket": "7-10",
+      "category": "Framework Deep Dives — Electron"
+    },
+    {
+      "id": 423,
+      "file": "423_electron_main_process_lifecycle_and_window_management.md",
+      "title": "Electron: Main Process Lifecycle and Window Management",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Electron"
+    },
+    {
+      "id": 424,
+      "file": "424_electron_project_structure_and_vite_build_config.md",
+      "title": "Electron: Project Structure and electron-vite Build Configuration",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Electron"
+    },
+    {
+      "id": 425,
+      "file": "425_electron_renderer_react_and_kuireact_fork.md",
+      "title": "Electron: Renderer Architecture — React, Client Routing, and the KUIreact Fork",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Electron"
+    },
+    {
+      "id": 426,
+      "file": "426_electron_native_modules_and_os_integration.md",
+      "title": "Electron: Native Modules and OS API Integration",
+      "bracket": "7-10",
+      "category": "Framework Deep Dives — Electron"
+    },
+    {
+      "id": 427,
+      "file": "427_electron_environment_secrets_and_auto_updates.md",
+      "title": "Electron: Environment, Secrets, Auto-Updates, and Packaging",
+      "bracket": "7-10",
+      "category": "Framework Deep Dives — Electron"
+    },
+    {
+      "id": 428,
+      "file": "428_electron_error_handling_crash_reporting_and_performance.md",
+      "title": "Electron: Error Handling, Crash Reporting, Performance, and Testing",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Electron"
+    },
+    {
+      "id": 429,
+      "file": "429_electron_window_chrome_and_desktop_layout.md",
+      "title": "Electron: Window Chrome, Multi-Window UX, and Desktop Layout",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Electron"
+    },
+    {
+      "id": 430,
+      "file": "430_electron_menus_shortcuts_tray_and_dialogs.md",
+      "title": "Electron: Menus, Shortcuts, Tray, Dialogs, and File/Offline UX",
+      "bracket": "3-7",
+      "category": "Framework Deep Dives — Electron"
+    }
+  ]
+}

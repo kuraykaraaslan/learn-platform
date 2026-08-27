@@ -1,0 +1,65 @@
+# 283. Metadata, Titles, Descriptions and Canonical URL Strategy
+
+## Coverage Level
+**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (metadata-title-description.md, canonical-urls-and-duplicates.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
+
+## What It Is
+Metadata is the layer search engines and social platforms read before (or instead of) rendering the full page, so it has to carry the page's intent accurately in a very small space. Every indexable page needs a unique title, a useful meta description, a canonical URL, and — for anything meant to be shared — Open Graph tags. The title should match search intent, name the topic naturally, communicate value, stay unique across the site, and avoid keyword stuffing; a useful template is `<Service> for <Audience> | <Brand>` or `<Case Study: Outcome> | <Brand>`. The meta description should summarize the page accurately, name the audience or problem, and avoid clickbait, since its real job is improving click quality, not click quantity. A frequently missed detail: the H1 has to actually confirm the promise made by the title — a title reading "Custom SaaS MVP Development for SMEs" paired with an H1 reading "Welcome to My Website" breaks the reader's trust in the first two seconds and confuses ranking systems about what the page is actually about.
+
+Canonicalization solves a different but related problem: telling search systems which URL represents a page when duplicates or near-duplicates exist. Duplicates show up constantly and often invisibly — `/page` vs `/page/`, tracking-parameter variants like `/page?utm_source=linkedin`, `www` vs non-`www`, and `http` vs `https` versions. Every unique, indexable page should have a self-referencing canonical tag; when true duplicates exist, pick one canonical URL and make sure every internal link points to it directly, not to a non-canonical variant that then relies on the canonical tag to sort itself out. Canonical and noindex solve different problems and shouldn't be used interchangeably: canonical says "these are duplicates, consolidate signals to this one," while noindex says "don't show this in search at all" — a noindexed page may not reliably pass canonical signals the way people expect, so using both casually on the same page is a common source of confusing index behavior.
+
+For a multilingual site, canonical URLs should point to the same-language version of a page, not silently default to one language, with `hreflang` used to connect the language variants. And if content gets syndicated or cross-posted (to Medium, to a partner blog, to LinkedIn articles), the freelancer's own domain should generally publish the canonical, original version first — publishing elsewhere first and your own site second undermines your own site's authority for content you actually wrote.
+
+## Key Concepts
+- **Title formula and uniqueness**: `<Service/Topic> for <Audience> | <Brand>` patterns that stay unique per page and match the intent driving the search.
+- **Title-to-H1 alignment**: the H1 must confirm, not contradict or dilute, the promise the title made — mismatches erode trust and confuse intent signals.
+- **Meta description as a click-quality lever**: accurate, benefit-stated, non-clickbait summaries earn the right visitor, not just any visitor.
+- **Open Graph for shareability**: og:title, og:description, og:image, og:url, and og:type matter specifically for how a page looks when shared on LinkedIn or other social platforms.
+- **Self-referencing canonical by default**: every unique indexable page should canonicalize to itself unless there's a deliberate reason to point elsewhere.
+- **Canonical vs. noindex are different tools**: canonical consolidates duplicate signals; noindex removes a page from search entirely — don't use both casually on one page.
+- **Internal link consistency**: always link internally to the canonical URL directly, never to a parameterized or non-canonical variant.
+- **Multilingual canonical rule**: canonical should point to the same-language version, with hreflang connecting language variants — never default to a single "master" language.
+
+## Example Code
+```md
+## Metadata Plan
+
+**URL:** /services/saas-mvp-development
+**Primary intent:** commercial
+**Title:** Custom SaaS MVP Development for SMEs | Kuray Karaaslan
+**Meta description:** A practical service for founders and SMEs who need a
+production-ready SaaS MVP: clear scope, clean architecture, and a realistic
+first version built to prove the product, not the whole roadmap.
+**H1:** Build a Realistic SaaS MVP with Clean Scope and Production-Ready Architecture
+**OG title:** Custom SaaS MVP Development for SMEs
+**OG description:** (same as meta description, trimmed for social preview)
+**OG image idea:** branded card with project type + outcome statement
+
+## Canonical Handling
+
+<link rel="canonical" href="https://example.com/services/saas-mvp-development" />
+
+Known duplicate variants to redirect or canonicalize:
+- /services/saas-mvp-development/          → redirect to canonical (no trailing slash)
+- /services/saas-mvp-development?ref=li    → canonical points to clean URL
+- https://www.example.com/... vs https://example.com/...  → pick one, 301 the other
+```
+
+## When to Use
+- Whenever a new indexable page is created — metadata is not an afterthought step, it's part of the page brief
+- When Search Console shows a page's title/snippet being rewritten or ignored — usually a sign the title doesn't match intent or is duplicated elsewhere
+- When auditing a site for duplicate content warnings or split ranking signals across near-identical URLs
+- Before republishing or cross-posting content to LinkedIn, Medium, or a partner site
+- When migrating to a new domain, `www`/non-`www` scheme, or trailing-slash convention
+
+## Common Mistakes
+- Using the same title template so literally that many pages end up duplicating each other
+- Writing a meta description that oversells or misrepresents what the page actually delivers
+- Canonicalizing every page to the homepage "to be safe," which erases the site's actual page-level signals
+- Using canonical tags to try to hide thin or low-quality pages instead of improving or noindexing them
+- Linking internally to a parameterized or non-canonical URL, undermining the canonical tag's own signal
+
+## Further Reading
+- Google Search Central's "Canonicalization" and "Title Links" documentation — the primary source on how canonical signals and title rewriting actually work
+- Moz's Beginner's Guide to SEO, metadata chapter — a practical, widely used reference for writing titles and descriptions
+- The Open Graph protocol documentation (ogp.me) — the spec behind how social platforms read shared-link previews
