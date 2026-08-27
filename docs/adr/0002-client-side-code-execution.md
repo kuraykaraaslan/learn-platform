@@ -98,6 +98,33 @@ olduğu için tarayıcıda hiçbir koşulda ayağa kalkmaz.
 WebContainer'dan vazgeçmek `vercel.json`'daki başlıkları ve bir bileşeni silmek
 demektir; içerik ve diğer 11 mekanizma etkilenmez.
 
+## P9 uygulaması — kayda geçen iki karar (2026-08-27)
+
+**Lisans / API key.** `NEXT_PUBLIC_WEBCONTAINER_API_KEY` — `.env.local`'da
+(gitignored), `.env.example`'da yalnız boş placeholder olarak. `configureAPIKey()`
+istemci tarafında çağrılmak üzere tasarlanmış (SDK'nın kendi imzası), yani
+tarayıcı paketine gitmesi beklenen bir Stripe publishable-key benzeri bir
+değer — sunucu tarafı bir sır değil. **Anahtarın var olması, StackBlitz'in
+kurumsal ToS anlaşmasının var olduğu anlamına gelmez** — bunlar ayrı şeyler;
+bu projeyi uygulayan ajan ikincisini doğrulayamadı, o, deponun sahibinin
+sorumluluğunda kaldı.
+
+**COOP/COEP: site geneli değil, `/courses/[courseSlug]/[lessonSlug]`'a
+kapsamlandı.** Planın kendi ilk-gün talimatı ("başlıkları ekle, 412 sayfayı
+gez, kırılma var mı ölç") bir tarayıcı gerektiriyor; onu uygulayan ajanın bu
+oturumda tarayıcı otomasyonu yoktu, dolayısıyla o ölçümü yapamadı. Statik
+analiz (`next/font/google` kendinden barındırılıyor, korpusta harici görsel
+`0`, `<img>`/`<Image>` hiç kullanılmıyor, `@vercel/analytics` yüklü değil, tek
+`@import` yerel Tailwind) COEP'in bugün görünür bir şeyi kırma ihtimalini
+düşük gösteriyor, ama bu bir tarayıcı doğrulamasının yerini tutmaz. Sonuç:
+planın kendi "kırılma varsa kapsamlandır" acil durum planı, ölçüm hiç
+yapılamadığı için **varsayılan** olarak alındı — 412 sayfanın ~30'u (kurs
+listesi, ana sayfa, API route) hiç etkilenmiyor, geri kalan ~412 ders sayfası
+etkileniyor (bugün üzerlerinde tek bir `run project` bloğu olmasa bile, Next'in
+statik başlık eşleştirmesi rota bazlı, sayfa içeriği bazlı değil). Gerçek bir
+tarayıcı taraması yapılınca ve temiz çıkarsa, `next.config.ts`'teki `source`
+deseni `/(.*)`'e genişletilebilir.
+
 ## Related
 - `docs/adr/0001-no-backend-markdown-content.md` — genişletilen karar
 - `docs/phases/08-live-js-runner.md`, `09-webcontainer.md`, `10-pglite-sql.md`,

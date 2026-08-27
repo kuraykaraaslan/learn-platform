@@ -13,6 +13,7 @@ import { TemplateFormCard } from './widgets/TemplateFormCard';
 import { ChecklistCard } from './widgets/ChecklistCard';
 import { MermaidBlock } from './MermaidBlock';
 import { RunMount } from './RunMount';
+import { ProjectRunner } from './ProjectRunner';
 
 // Tried next/dynamic() here to keep this JS out of the ~324 lesson pages
 // with no widget block — measured worse (8.59 kB vs 7.22 kB gz) and, per
@@ -74,6 +75,12 @@ function BlockView({
       // import of 'mermaid', so this branch costs ~nothing on the 412 pages
       // that never hit it.
       if (block.lang === 'mermaid') return <MermaidBlock source={block.source} html={block.html} />;
+      // `run project` (P9, WebContainer — real npm install + server) takes
+      // priority over plain `run` (P8, browser sandbox): the corpus's own
+      // fence syntax marks both tokens together (`run project entry=...`),
+      // and a project needs the heavier runner, not the transpile-in-an-
+      // iframe one.
+      if (block.meta.project) return <ProjectRunner block={block} />;
       // RunMount replaces the plain highlighted+copy display for a `run`
       // fence — it has its own editable textarea and Run button. The actual
       // sandbox (CodeRunner) inside it is not imported until that button is

@@ -12,7 +12,7 @@ function codeBlock(overrides: Partial<Extract<LessonBlock, { kind: 'code' }>> = 
     kind: 'code',
     id: 'exampleCode-0',
     lang: 'typescript',
-    meta: { run: true, opts: {} },
+    meta: { run: true, project: false, opts: {} },
     source: 'console.log(1 + 1);',
     html: '<pre><code>console.log(1 + 1);</code></pre>',
     ...overrides,

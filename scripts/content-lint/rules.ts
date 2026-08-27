@@ -497,7 +497,7 @@ export const RULES: Rule[] = [
     id: 'run/marker-on-unrunnable-lang',
     severity: 'error',
     description:
-      'A `run` fence tagged with a language the sandbox cannot execute (course_content.transpile.ts\'s RUNNABLE_LANGS is exactly typescript/ts/javascript/js — no bash, yaml, java, dockerfile, hcl, tsx, or jsx).',
+      'A `run` fence tagged with a language the sandbox cannot execute (course_content.transpile.ts\'s RUNNABLE_LANGS is exactly typescript/ts/javascript/js — no bash, yaml, java, dockerfile, hcl, tsx, or jsx). Applies to `run project` fences too — WebContainer still needs a real Node entry file.',
     lesson: (file) =>
       file.fences
         .filter((f) => parseFenceMeta(f.meta).run && !RUNNABLE_LANGS.has(f.lang))
@@ -513,11 +513,14 @@ export const RULES: Rule[] = [
     id: 'run/no-observable-output',
     severity: 'error',
     description:
-      'A `run` fence with no console.log/warn/error/table call writes nothing when Run is clicked — this is the rule that catches the "44 no-import TS fences, only 5 actually print anything" trap docs/phases/08-live-js-runner.md measured. A dead Run button is worse than no Run button.',
+      'A plain `run` fence (P8 sandbox, not `run project`) with no console.log/warn/error/table call writes nothing when Run is clicked — this is the rule that catches the "44 no-import TS fences, only 5 actually print anything" trap docs/phases/08-live-js-runner.md measured. A dead Run button is worse than no Run button. Not applied to `run project`: a server\'s observable output is its HTTP response in the preview iframe, not a console call.',
     lesson: (file) => {
       const OUTPUT_CALL = /\bconsole\.(log|warn|error|table|info)\s*\(/;
       return file.fences
-        .filter((f) => parseFenceMeta(f.meta).run && !OUTPUT_CALL.test(f.code))
+        .filter((f) => {
+          const meta = parseFenceMeta(f.meta);
+          return meta.run && !meta.project && !OUTPUT_CALL.test(f.code);
+        })
         .map((f) => ({
           rule: 'run/no-observable-output',
           severity: 'error' as const,
@@ -531,11 +534,14 @@ export const RULES: Rule[] = [
     id: 'run/not-self-contained',
     severity: 'error',
     description:
-      'A `run` fence that imports something. The sandbox iframe has no network access at all (default-src \'none\') and no module loader, so any import fails at execution time regardless of whether the package exists — a `run` fence must be fully self-contained.',
+      'A plain `run` fence (P8 sandbox) that imports something. That sandbox\'s iframe has no network access at all (default-src \'none\') and no module loader, so any import fails at execution time regardless of whether the package exists. Does not apply to `run project` — WebContainer runs a real `npm install`, so imports are the entire point.',
     lesson: (file) => {
       const IMPORT_OR_REQUIRE = /^\s*import\b|\brequire\s*\(/m;
       return file.fences
-        .filter((f) => parseFenceMeta(f.meta).run && IMPORT_OR_REQUIRE.test(f.code))
+        .filter((f) => {
+          const meta = parseFenceMeta(f.meta);
+          return meta.run && !meta.project && IMPORT_OR_REQUIRE.test(f.code);
+        })
         .map((f) => ({
           rule: 'run/not-self-contained',
           severity: 'error' as const,
@@ -543,6 +549,38 @@ export const RULES: Rule[] = [
           line: f.line,
           message: '`run` fence imports something — the sandbox has no network access and no module loader',
         }));
+    },
+  },
+  {
+    id: 'run/needs-native',
+    severity: 'error',
+    description:
+      'A `run project` fence importing a package WebContainer cannot run: @prisma/client and typeorm need a native query engine or a real DB server, electron needs a desktop runtime, bullmq/ioredis need Redis, pg needs Postgres, expo/react-native need a mobile runtime, and bcrypt is a native addon (bcryptjs is fine — pure JS). Measured in docs/phases/09-webcontainer.md; none of these get fixed by trying harder inside a WebContainer, the runtime itself cannot do it.',
+    lesson: (file) => {
+      const NATIVE_PACKAGES: Array<{ pattern: RegExp; name: string }> = [
+        { pattern: /['"]@prisma\/client['"]/, name: '@prisma/client' },
+        { pattern: /['"]typeorm['"]/, name: 'typeorm' },
+        { pattern: /['"]electron['"]/, name: 'electron' },
+        { pattern: /['"]bullmq['"]/, name: 'bullmq' },
+        { pattern: /['"]ioredis['"]/, name: 'ioredis' },
+        { pattern: /['"]pg['"]/, name: 'pg' },
+        { pattern: /['"]expo['"]/, name: 'expo' },
+        { pattern: /['"]react-native['"]/, name: 'react-native' },
+        // Word boundary + not followed by "js": bcrypt (native) is banned,
+        // bcryptjs (pure JS, fine) must not be caught by the same pattern.
+        { pattern: /['"]bcrypt['"]/, name: 'bcrypt' },
+      ];
+      return file.fences
+        .filter((f) => parseFenceMeta(f.meta).project)
+        .flatMap((f) =>
+          NATIVE_PACKAGES.filter((p) => p.pattern.test(f.code)).map((p) => ({
+            rule: 'run/needs-native',
+            severity: 'error' as const,
+            target: file.target,
+            line: f.line,
+            message: `\`run project\` fence imports \`${p.name}\`, which WebContainer cannot run`,
+          }))
+        );
     },
   },
 ];
