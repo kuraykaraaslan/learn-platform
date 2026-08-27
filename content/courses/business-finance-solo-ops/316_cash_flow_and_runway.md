@@ -1,6 +1,8 @@
 # 316. Cash Flow and Runway: Why Profit Isn't Cash
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Reserve percentages, runway targets, and payment norms vary by jurisdiction and business stage — confirm specifics with your own accountant.
+
 Cash flow is the timing of money moving in and out of your business — not the total amount you've earned or spent, but when each amount actually clears your account. A project can be profitable on paper and still sink you, because a signed €15,000 contract with a "100% on delivery" payment term produces zero cash for the eight weeks you're building it, while your hosting bill, your accountant, and your own rent all come due on their own schedules regardless of when the client pays.
 
 The core discipline is separating four numbers that freelancers habitually collapse into one: cash collected (money that has actually cleared), cash expected (invoiced or verbally agreed but not yet received), cash reserved (set aside for taxes and obligations, not available to spend), and cash spendable (what's genuinely free to use after the first three are accounted for). Most freelance financial stress comes from treating "cash expected" as if it were "cash spendable" — spending against a milestone payment that is two weeks late, or a client that quietly churns before paying a final invoice.
@@ -59,4 +61,3 @@ The value isn't the spreadsheet — it's that the quarterly tax settlement in Ju
 ## Further Reading
 - *Profit First* — Mike Michalowicz: a percentage-based cash allocation system built specifically around separating spendable cash from tax and profit reserves.
 - *Financial Intelligence* — Karen Berman and Joe Knight: a plain-language guide to the difference between profit, cash, and the assumptions behind financial statements, written for non-finance managers.
-- This lesson is general education, not financial or tax advice. Reserve percentages, runway targets, and payment norms vary by jurisdiction and business stage — confirm specifics with your own accountant.

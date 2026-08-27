@@ -1,6 +1,8 @@
 # 345. Pipeline Forecasting for Solo Operators
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Weighted forecasts are planning tools, not guarantees — treat unclosed revenue as provisional until a contract and deposit are in hand.
+
 Pipeline forecasting is how a solo operator avoids discovering, too late, that next month has no confirmed revenue. It works by assigning every open opportunity a stage and a realistic probability, rather than treating every lead in the pipeline as equally likely to close. A typical weighted ladder runs from a new lead at 10% probability, through qualified (25%), discovery completed (40%), proposal sent (60%), verbal yes (80%), up to contract and deposit received at 100% — and revenue should never be counted as real, for planning purposes, until it hits that 100% stage. Multiplying each opportunity's value by its stage probability produces a weighted forecast that is far more honest than simply summing every quoted number in the pipeline.
 
 Forecasting only matters if it feeds a real decision, so the monthly view separates confirmed revenue (signed projects and retainers), likely revenue (proposals with a strong buying signal), and possible revenue (qualified leads not yet proposed) — and every one of those numbers needs a matching capacity check. Revenue and time are the same forecast viewed from two sides: project delivery days, meeting load, support obligations, admin time, business development time, and a buffer all draw from the same finite week, so a healthy-looking revenue forecast that ignores capacity is not actually a plan, it's a wish.
@@ -69,4 +71,3 @@ The forecast didn't just total the numbers — it caught a capacity conflict and
 ## Further Reading
 - *Predictable Revenue* — Aaron Ross and Marylou Tyler: on building a disciplined, stage-based approach to pipeline instead of relying on sporadic effort.
 - *Sales Management. Simplified.* — Mike Weinberg: practical discipline around pipeline reviews and forecasting accuracy, scaled down for a one-person operation.
-- This lesson is general education, not financial or tax advice. Weighted forecasts are planning tools, not guarantees — treat unclosed revenue as provisional until a contract and deposit are in hand.

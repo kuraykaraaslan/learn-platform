@@ -130,6 +130,6 @@ FOR EACH ROW EXECUTE FUNCTION notify_outbox_insert();
 - **Publishing outside the transaction "for performance"**: The entire point of the outbox is atomic write-and-enqueue; moving the `outboxMessage.create()` outside the transaction defeats the pattern entirely
 
 ## Further Reading
-- **"Transactional Outbox Pattern" by Chris Richardson (microservices.io/patterns/data/transactional-outbox.html)** — The canonical definition with a clear diagram; the microservices.io pattern catalog is an excellent reference
-- **"Reliable Messaging with the Outbox Pattern" by Kamil Grzybek (kamilgrzybek.com)** — Detailed implementation walkthrough with .NET examples that translate well to TypeScript
-- **Debezium documentation (debezium.io)** — Change Data Capture tool that implements the outbox relay by reading PostgreSQL WAL directly; relevant if you want a high-throughput relay without polling
+- [**"Transactional Outbox Pattern" by Chris Richardson](https://microservices.io/patterns/data/transactional-outbox.html)** — The canonical definition with a clear diagram; the microservices.io pattern catalog is an excellent reference
+- [**"Reliable Messaging with the Outbox Pattern" by Kamil Grzybek](https://kamilgrzybek.com)** — Detailed implementation walkthrough with .NET examples that translate well to TypeScript
+- [**Debezium documentation](https://debezium.io)** — Change Data Capture tool that implements the outbox relay by reading PostgreSQL WAL directly; relevant if you want a high-throughput relay without polling

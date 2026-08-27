@@ -1,6 +1,8 @@
 # 317. Invoicing and Payment Tracking Systems
 
 ## What It Is
+> This lesson is general education, not legal or accounting advice. Invoice numbering rules, required fields, and tax treatment vary by jurisdiction — confirm specifics with your own accountant.
+
 An invoice is not a formality you send after the fact — it's a delivery control mechanism. When invoicing is treated as an administrative afterthought, freelancers lose money in entirely predictable ways: milestones get delivered without a corresponding invoice going out, invoices get sent but never followed up when they go unpaid, and "the client said they'd pay soon" quietly becomes a permanent unresolved balance because nobody wrote down when "soon" was supposed to be.
 
 The fix is treating every invoice as a tracked object with a lifecycle, the same way you'd track a bug or a ticket. Each invoice needs a number, a status that changes over time (draft → issued → sent → paid, with partially_paid and overdue as real states, not exceptions), a due date, and a next action if that due date passes. This turns "did the client pay?" from a question you have to reconstruct from memory or chat history into a fact you can look up in five seconds.
@@ -57,4 +59,3 @@ If it reaches day +14 with no resolution, the pre-agreed consequence fires autom
 ## Further Reading
 - Stripe's guide to invoicing and payment terms for freelancers and small businesses (stripe.com/resources) — practical, vendor-neutral coverage of milestone billing and payment terms.
 - *Company of One* — Paul Jarvis: makes the case for tight, boring, repeatable financial administration as a competitive advantage for solo businesses, not a chore to minimize.
-- This lesson is general education, not legal or accounting advice. Invoice numbering rules, required fields, and tax treatment vary by jurisdiction — confirm specifics with your own accountant.

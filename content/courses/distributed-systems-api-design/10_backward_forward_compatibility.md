@@ -108,5 +108,5 @@ function processGoodEvent(rawEvent: unknown) {
 
 ## Further Reading
 - **"Designing Data-Intensive Applications" by Martin Kleppmann** — Chapter 4 (Encoding and Evolution) is the definitive treatment of schema evolution for both storage and messaging
-- **"Evolutionary Database Design" by Martin Fowler & Pramod Sadalage (martinfowler.com)** — The original article on expand-then-contract and the full catalog of database refactoring patterns; free online
+- [**"Evolutionary Database Design" by Martin Fowler & Pramod Sadalage](https://martinfowler.com)** — The original article on expand-then-contract and the full catalog of database refactoring patterns; free online
 - **Prisma documentation — "Customizing migrations"** — Covers how to write custom SQL in Prisma migrations, which is necessary for multi-step expand-then-contract migrations that Prisma's auto-generator can't express

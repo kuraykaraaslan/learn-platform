@@ -36,7 +36,7 @@
         "exampleCode": "141f5a79a69badd8",
         "whenToUse": "af4964409c2a4cbf",
         "commonMistakes": "97bbb0c96c3554f2",
-        "furtherReading": "1e4a250877c02114"
+        "furtherReading": "b48e47b4843facd2"
       },
       "105_cryptography_fundamentals.md": {
         "title": "3642d5e4894a35d2",
@@ -45,7 +45,7 @@
         "exampleCode": "383f3830facf677e",
         "whenToUse": "da3b47ba155f7267",
         "commonMistakes": "83a4e5fd46e2bdf4",
-        "furtherReading": "07c64496b37a0ec2"
+        "furtherReading": "2e986228fd117fa4"
       },
       "106_event_streaming_kafka_vs_bullmq.md": {
         "title": "ee4021291a9c139a",
@@ -54,7 +54,7 @@
         "exampleCode": "9ab61c87e946568e",
         "whenToUse": "a9e35639847d8441",
         "commonMistakes": "bac062e39a7e59ff",
-        "furtherReading": "7049eceff9a853e5"
+        "furtherReading": "64aad25ae278e16d"
       },
       "107_api_design_philosophy.md": {
         "title": "44a89c23d7212220",
@@ -63,7 +63,7 @@
         "exampleCode": "0107ff32e709e3d5",
         "whenToUse": "73ca241d46dc8d97",
         "commonMistakes": "488d81a4e106609b",
-        "furtherReading": "a972fb110391e802"
+        "furtherReading": "4c77c19107d6f827"
       },
       "108_monorepo_tooling.md": {
         "title": "77e89be6c68089f3",
@@ -72,7 +72,7 @@
         "exampleCode": "f4da6b7f21a032d1",
         "whenToUse": "96c3470683f59687",
         "commonMistakes": "92ebbae017e9eeb2",
-        "furtherReading": "758e14f9e00a0dda"
+        "furtherReading": "f2647e90fbccd9cc"
       },
       "109_performance_profiling.md": {
         "title": "d65ffc19f031bc6a",
@@ -81,7 +81,7 @@
         "exampleCode": "a1e23f1965def303",
         "whenToUse": "2ea2f0d978dc1de2",
         "commonMistakes": "2a25e8a184eb7f86",
-        "furtherReading": "39e51ca40fcdbca1"
+        "furtherReading": "a1303fae6f50fde1"
       },
       "110_reading_large_codebases.md": {
         "title": "2dc09ad1cd89e690",
@@ -108,7 +108,7 @@
         "exampleCode": "1d3ed82132a5dc59",
         "whenToUse": "3e5fc7abb9f0d6ee",
         "commonMistakes": "5a5cad4eec598250",
-        "furtherReading": "fc40a91669b26e73"
+        "furtherReading": "74e0415d7e0322ab"
       },
       "113_systems_thinking.md": {
         "title": "4e1ab641c6ea1b01",
@@ -128,7 +128,7 @@
         "exampleCode": "d589ba943a643aba",
         "whenToUse": "eb6e6ad43db6d8ec",
         "commonMistakes": "b5f658e061eefc83",
-        "furtherReading": "d555ac2c318b5281"
+        "furtherReading": "12992b8b9bcfd61f"
       },
       "146_when_to_add_ai.md": {
         "title": "7a159b833f13dda7",
@@ -143,16 +143,16 @@
         "title": "2cb29dc7176bbb73",
         "whatItIs": "2f85e6a7439fa4aa",
         "keyConcepts": "a13fee3e5f5c7e61",
-        "exampleCode": "e1325482177e214a",
+        "exampleCode": "4501b9fc2f4a42a4",
         "whenToUse": "123037a57d740327",
         "commonMistakes": "a898aa9841079bc9",
-        "furtherReading": "c13423023f2e4685"
+        "furtherReading": "bbfad88198ffcbe3"
       },
       "148_prompts_as_versioned_code.md": {
         "title": "3df96537602c8e11",
         "whatItIs": "acd2e3ff23fb4b95",
         "keyConcepts": "4cda087ee9ffcc22",
-        "exampleCode": "c9f8e958c4bf03f1",
+        "exampleCode": "105657c58a3e6360",
         "whenToUse": "28a8acc0dc25b895",
         "commonMistakes": "45444849b5337302",
         "furtherReading": "53aaf5065c491cdc"
@@ -161,16 +161,16 @@
         "title": "493b14593dfce762",
         "whatItIs": "98f0ecb924a66fd4",
         "keyConcepts": "cc23164983a5f15a",
-        "exampleCode": "0f9e2b1e1e3ba2f8",
+        "exampleCode": "e32b554aebbd8dfd",
         "whenToUse": "2a238bc5c9861e24",
         "commonMistakes": "080578ab68682ead",
-        "furtherReading": "953dd89684674dd7"
+        "furtherReading": "a023e60c4d56d14c"
       },
       "150_context_window_conversation_management.md": {
         "title": "f1556fde6bcf68c6",
         "whatItIs": "640f254dcb1a7a09",
         "keyConcepts": "8156ac177c98f568",
-        "exampleCode": "54d1a8fe70dd2c3b",
+        "exampleCode": "93a54e0cb1852f3d",
         "whenToUse": "17cd2511fa12bd22",
         "commonMistakes": "cff228f22f6c2f1e",
         "furtherReading": "171d9d839087287e"
@@ -179,7 +179,7 @@
         "title": "04ccd2ac3debb243",
         "whatItIs": "018fd4a78b5848b2",
         "keyConcepts": "1d107e7e471c4128",
-        "exampleCode": "7f8bc7f70612b49d",
+        "exampleCode": "d5ceb3a28cf53180",
         "whenToUse": "feb47cc0419fe74d",
         "commonMistakes": "7d1be0aeb0b2a628",
         "furtherReading": "ce2c2bacd2403521"
@@ -188,7 +188,7 @@
         "title": "5a3b59e35e3f00a4",
         "whatItIs": "c75b5b0677d28439",
         "keyConcepts": "9ab5aed67c89063c",
-        "exampleCode": "7a6bccdb0ecdba3c",
+        "exampleCode": "bb1c7683f7a2cf2b",
         "whenToUse": "08394a8382ffebb8",
         "commonMistakes": "5ec06fea48d6c17c",
         "furtherReading": "906a5a3d2f0888c1"
@@ -196,26 +196,26 @@
       "153_model_selection_strategy.md": {
         "title": "b2a3cde24da6d6e7",
         "whatItIs": "81b34eeeb249d6d1",
-        "keyConcepts": "89a8d5206be46333",
-        "exampleCode": "af94c565dd8d4636",
+        "keyConcepts": "3c3f63a5d13c03f8",
+        "exampleCode": "f5768f452d0505b8",
         "whenToUse": "b11118546093d9d3",
         "commonMistakes": "2c314ffb6f0289e3",
-        "furtherReading": "ea885353ecf4b0a4"
+        "furtherReading": "3c86d67e83548919"
       },
       "154_token_budget_cost_engineering.md": {
         "title": "8eae8a104690fb77",
         "whatItIs": "53c1d15a3d08f2da",
         "keyConcepts": "5f6d9bc711cf1d2e",
-        "exampleCode": "3bcd6bd35ba9efad",
+        "exampleCode": "7035b5cccd5bd539",
         "whenToUse": "67870864714f9f99",
         "commonMistakes": "8e70b5b4b7c6ea6a",
-        "furtherReading": "306bade5e71ea586"
+        "furtherReading": "3b2d47ef35efcbdb"
       },
       "155_streaming_ai_responses_production.md": {
         "title": "3448a9a90624f62e",
         "whatItIs": "1f63c7adef1eb3ce",
         "keyConcepts": "cc921a1b3838d3b1",
-        "exampleCode": "f7ff6d92565b795f",
+        "exampleCode": "6046018e1e314055",
         "whenToUse": "dd3c272895a446c1",
         "commonMistakes": "00773d67e397d06e",
         "furtherReading": "bd8c1fd66200b845"
@@ -224,7 +224,7 @@
         "title": "3a8c68fbfaf13b13",
         "whatItIs": "a3322592b39a9bd6",
         "keyConcepts": "0bcb8fb011d8076d",
-        "exampleCode": "64a167bb1b33118c",
+        "exampleCode": "49eca9c72c0f3965",
         "whenToUse": "1d886d63875a6916",
         "commonMistakes": "bf5a2d30fe0d4cb7",
         "furtherReading": "22897731cb56f90e"
@@ -236,13 +236,13 @@
         "exampleCode": "d1e2fbe9c6f8beca",
         "whenToUse": "ee2e84a01b6daf9a",
         "commonMistakes": "9518a457032c5145",
-        "furtherReading": "dd62244d55b89e99"
+        "furtherReading": "441553f1812605bb"
       },
       "158_observability_logging_ai_features.md": {
         "title": "4b93ccbec3db45c6",
         "whatItIs": "65fe7c0f083d1fb8",
         "keyConcepts": "4fab0da0d806cb15",
-        "exampleCode": "cabd6dc7e2983772",
+        "exampleCode": "3797b3336cad9db8",
         "whenToUse": "992b5b2930ee4651",
         "commonMistakes": "2f8068d04ffff6fa",
         "furtherReading": "9e5874b71745724d"
@@ -254,7 +254,7 @@
         "exampleCode": "ba0f61fe1d5647de",
         "whenToUse": "efd4a122c6b4bf81",
         "commonMistakes": "10d0257fedd879d4",
-        "furtherReading": "25ab05f181269887"
+        "furtherReading": "df35039167202b78"
       },
       "160_ai_data_privacy_regulatory_compliance.md": {
         "title": "58ec7fe433dabc40",
@@ -281,7 +281,7 @@
         "exampleCode": "6d704cbf1303cac9",
         "whenToUse": "03c181ea5dd2471a",
         "commonMistakes": "99aad3209ad28430",
-        "furtherReading": "4071b02e9c9196b4"
+        "furtherReading": "5772e8fb21b6029d"
       },
       "163_mcp_server_auth_error_idempotency.md": {
         "title": "8330d819acfdf55d",
@@ -296,7 +296,7 @@
         "title": "807032ad0dd5681a",
         "whatItIs": "a506de6931457448",
         "keyConcepts": "bee2a38770d6cf80",
-        "exampleCode": "f071b47ad1c3090f",
+        "exampleCode": "3b59580e1cf576d6",
         "whenToUse": "8f9d1579ca6370a1",
         "commonMistakes": "d814f38c96ad54ef",
         "furtherReading": "5132abf35ce1a2de"
@@ -319,7 +319,7 @@
         "exampleCode": "4f9400b3558d1c2f",
         "whenToUse": "4f7983e8e518e15e",
         "commonMistakes": "ff3c93b18c09a25f",
-        "furtherReading": "69c18a9a51aca8d5"
+        "furtherReading": "882a986579b16233"
       },
       "130_data_structures_algorithms_practice.md": {
         "title": "c5101c905fe8c9b7",
@@ -438,7 +438,7 @@
         "exampleCode": "abe4c0f4f7174c9d",
         "whenToUse": "399a9dd770a13262",
         "commonMistakes": "f26357cbc77def07",
-        "furtherReading": "e9a733cf6caf425b"
+        "furtherReading": "a8cf8af77ffcbf79"
       },
       "134_domain_driven_design.md": {
         "title": "7ffa4f6ca0e35470",
@@ -447,7 +447,7 @@
         "exampleCode": "d156e3b93674c6e4",
         "whenToUse": "f4c5dfbe4ab17788",
         "commonMistakes": "e778263b55c347a4",
-        "furtherReading": "2f433b53e7456465"
+        "furtherReading": "d36aaae9397550c5"
       },
       "142_capacity_planning_estimation.md": {
         "title": "3ed073bed143c1c1",
@@ -462,363 +462,363 @@
     "business-finance-solo-ops": {
       "316_cash_flow_and_runway.md": {
         "title": "3dcec50d43a17618",
-        "whatItIs": "3aea03840bee23b5",
+        "whatItIs": "222aa6348b3b4b9d",
         "keyConcepts": "e5bf36238324bc8e",
         "exampleCode": "0162040df47359ce",
         "whenToUse": "9a0dbd50802affed",
         "commonMistakes": "34dc3c852bf3c43d",
-        "furtherReading": "7d3a0bddb7fe0f66"
+        "furtherReading": "8e1d809c22acae22"
       },
       "317_invoicing_and_payment_tracking.md": {
         "title": "a0259b9ad94701c9",
-        "whatItIs": "61854915027eff87",
+        "whatItIs": "c5a5853b19f32560",
         "keyConcepts": "14061be6db9c7a76",
         "exampleCode": "1b38230b4488cf67",
         "whenToUse": "a29ef13ea0900d21",
         "commonMistakes": "3ab6d2f65809d900",
-        "furtherReading": "1be2abbc54998244"
+        "furtherReading": "09d33cc787ad0dda"
       },
       "318_banking_and_payment_methods.md": {
         "title": "05d8fe1d37977696",
-        "whatItIs": "8f1a975801a24073",
+        "whatItIs": "05f47c38ea219c36",
         "keyConcepts": "41bfb5f161110dbc",
         "exampleCode": "555e510f2bef98dc",
         "whenToUse": "2a33d46476908cd5",
         "commonMistakes": "e9606da5ab2a8ffe",
-        "furtherReading": "a9f7d35e61ea85b4"
+        "furtherReading": "017acb5640323613"
       },
       "319_tax_and_accounting_readiness.md": {
         "title": "b4cfba11e4079472",
-        "whatItIs": "88938b90398ba7c1",
+        "whatItIs": "f15cc3b704c143d0",
         "keyConcepts": "51be3af7bb7ab120",
         "exampleCode": "c7eb3de8796db938",
         "whenToUse": "1629b5d36323d54d",
         "commonMistakes": "aaab84b94091cf3b",
-        "furtherReading": "4909dead429bc05f"
+        "furtherReading": "936a778ca7b7a67c"
       },
       "320_expense_and_subscription_control.md": {
         "title": "ea27f4fd547ca013",
-        "whatItIs": "606b8c34249a7708",
+        "whatItIs": "27ce0f288f9b3c0d",
         "keyConcepts": "4e4d235e1e823669",
         "exampleCode": "98f99566689b9c9b",
         "whenToUse": "dd3db7a7a3fdcbdd",
         "commonMistakes": "900da50bbf130ee2",
-        "furtherReading": "ab98942004ae9ba0"
+        "furtherReading": "580000cf16391644"
       },
       "321_project_accounting_and_costing.md": {
         "title": "e6a6f26a1e7d3f12",
-        "whatItIs": "d5d50b22c6197b61",
+        "whatItIs": "0d60acdd299ca57f",
         "keyConcepts": "7fa6c17389210e42",
         "exampleCode": "a5aa3ffeceac416f",
         "whenToUse": "b76f754d8ed5f647",
         "commonMistakes": "8c20f87150c8f8ca",
-        "furtherReading": "d4535eefa05000dc"
+        "furtherReading": "7423305e5271d8ee"
       },
       "322_time_tracking_and_effective_rate.md": {
         "title": "317a6dcf063c1a5b",
-        "whatItIs": "1f36b93dea1bff9e",
+        "whatItIs": "5124e2497ba264ef",
         "keyConcepts": "39b21e5107a1e406",
         "exampleCode": "b393d1e6b7570f78",
         "whenToUse": "549593fedee8e31c",
         "commonMistakes": "6047ffd96efd1a4b",
-        "furtherReading": "8e87e17c204e2082"
+        "furtherReading": "8b1f7828e1010ce1"
       },
       "323_revenue_stream_design.md": {
         "title": "899e00fa5e5b18f5",
-        "whatItIs": "00014730a4dfd3db",
+        "whatItIs": "16e6961f3c944d56",
         "keyConcepts": "9bb9fda7d4867de0",
         "exampleCode": "575b120b33579260",
         "whenToUse": "6272a58bee681019",
         "commonMistakes": "73a11250c3d57140",
-        "furtherReading": "5d10f2f66470c1d1"
+        "furtherReading": "4e595d8018ff78cb"
       },
       "324_monthly_financial_close.md": {
         "title": "97518040de372377",
-        "whatItIs": "dfdebfb96ab8dd1c",
+        "whatItIs": "6a9b5833811854d3",
         "keyConcepts": "9def00bb0dedc82d",
         "exampleCode": "4d6ece3669bb04a1",
         "whenToUse": "0fd0052ebe4095e5",
         "commonMistakes": "2a47aa4b6f6fe9e3",
-        "furtherReading": "828b8e2a8e1d758f"
+        "furtherReading": "71c8d69bec8a6ee7"
       },
       "325_finance_dashboard_and_kpis.md": {
         "title": "9db09a7d410b0222",
-        "whatItIs": "d5756a378b64fca7",
+        "whatItIs": "ee2aa2cb31d2aa72",
         "keyConcepts": "a979280ec660f524",
         "exampleCode": "2554668f24ff71ec",
         "whenToUse": "8f43f7f291a794ec",
         "commonMistakes": "229577e77ca3f03b",
-        "furtherReading": "ba1eb09f2fceb56b"
+        "furtherReading": "85ff683462636977"
       },
       "326_business_records_and_file_system.md": {
         "title": "dcef70fe494ce0a5",
-        "whatItIs": "c59f28b456c99193",
+        "whatItIs": "987c34a8601e509c",
         "keyConcepts": "c103e19520d39edb",
         "exampleCode": "5a1f435442c0b8c2",
         "whenToUse": "cf124000b040dd62",
         "commonMistakes": "2e8d5a6659d963c1",
-        "furtherReading": "07015c29bba71215"
+        "furtherReading": "5a3e2abe868e31e3"
       },
       "327_risk_reserve_and_contingency.md": {
         "title": "e985f8af754cac79",
-        "whatItIs": "39e1aa98dde46062",
+        "whatItIs": "97197d81d0dd0830",
         "keyConcepts": "9aea4081ddbf4821",
         "exampleCode": "225dde1a2a431654",
         "whenToUse": "1a77b0ef8b7cfbce",
         "commonMistakes": "f715f90f0ff12806",
-        "furtherReading": "4a3b2a72392ba762"
+        "furtherReading": "eaa1dd4c626a458d"
       },
       "328_procurement_and_vendor_management.md": {
         "title": "16e72bbc06a56ee3",
-        "whatItIs": "c47af54eb3f83c6d",
+        "whatItIs": "a0e4cfad1e6fe7cc",
         "keyConcepts": "993ecb775bb00197",
         "exampleCode": "dfb7bf1540408185",
         "whenToUse": "c9f08bcccd52e43e",
         "commonMistakes": "4ce966793026a80c",
-        "furtherReading": "9c2a472ca7817f88"
+        "furtherReading": "209bf1b857658b93"
       },
       "329_operations_sops_and_admin_calendar.md": {
         "title": "190e8941ff166d02",
-        "whatItIs": "868e51f33035cff9",
+        "whatItIs": "10ba31ec8af38983",
         "keyConcepts": "2ec1f68a603fa7e9",
         "exampleCode": "82af33bc540858cf",
         "whenToUse": "af9ba7567f5eb951",
         "commonMistakes": "6a535db3ace715e2",
-        "furtherReading": "eb0632f4094f8507"
+        "furtherReading": "dde7ecac0863bb0b"
       },
       "330_pricing_for_margin.md": {
         "title": "70d448564f91e43e",
-        "whatItIs": "cec9b8edda76f9a3",
+        "whatItIs": "ef94f1dcbe2cd525",
         "keyConcepts": "ec2128c0195e7b47",
         "exampleCode": "beff36005e0916f4",
         "whenToUse": "f78fdc85cc9f27a4",
         "commonMistakes": "7284833e383a3a4e",
-        "furtherReading": "04e09b1cdd7227cb"
+        "furtherReading": "e8da60636872a17c"
       },
       "331_productized_offer_catalog.md": {
         "title": "4fdbf50dc34b0835",
-        "whatItIs": "7e1b682db3ae5ab6",
+        "whatItIs": "b59bb1056a8ec96c",
         "keyConcepts": "91b701942810ace2",
         "exampleCode": "e8c5e9e45254c6a5",
         "whenToUse": "475d8ea314f93247",
         "commonMistakes": "5ee6415d936bd793",
-        "furtherReading": "2efa00ad782d4f17"
+        "furtherReading": "da21184163c8dbf7"
       },
       "332_paid_audit_as_door_opener.md": {
         "title": "9ec59a2789943b73",
-        "whatItIs": "1748a280ea90b678",
+        "whatItIs": "a03d301958ea6c37",
         "keyConcepts": "fb77a81b8f67e950",
         "exampleCode": "6805c34e256c7c29",
         "whenToUse": "94ddc4d741b5ee83",
         "commonMistakes": "9fb2508cce7c9c66",
-        "furtherReading": "0bf6b35952b038ac"
+        "furtherReading": "7eb74f5191fd118c"
       },
       "333_retainers_vs_maintenance.md": {
         "title": "c4a3da80b01bdda1",
-        "whatItIs": "d2862ce47c2dc18d",
+        "whatItIs": "8ac23333dde6a970",
         "keyConcepts": "ed8fe10b6445db35",
         "exampleCode": "fd30cb35467b790d",
         "whenToUse": "682d500529c1b606",
         "commonMistakes": "6f3cf4e057c53df6",
-        "furtherReading": "fc7461f4e346f88b"
+        "furtherReading": "f44542ae839fc507"
       },
       "334_retainer_renewal_and_negotiation.md": {
         "title": "76955d26039684cb",
-        "whatItIs": "f5f587c3068b8687",
+        "whatItIs": "8a4d6a6337389e41",
         "keyConcepts": "146b6d30d12a87ad",
         "exampleCode": "0336d9bd7be1a907",
         "whenToUse": "046ce273470f7c09",
         "commonMistakes": "40b587ed75f8ad58",
-        "furtherReading": "6528db63363c76ff"
+        "furtherReading": "f62ca14fe0e11205"
       },
       "335_custom_bundle_design.md": {
         "title": "b764a50674440938",
-        "whatItIs": "ef83666f49cc3b17",
+        "whatItIs": "f83a5111035fc59a",
         "keyConcepts": "236ea270fb21a705",
         "exampleCode": "cc074c9c0852f183",
         "whenToUse": "15b6417e53cafe65",
         "commonMistakes": "c41bb1b572a4f848",
-        "furtherReading": "59a827f65f303479"
+        "furtherReading": "228dde16dd62c668"
       },
       "336_scoping_fixed_price_projects.md": {
         "title": "289eb035ffe8861e",
-        "whatItIs": "7fd9d4f5503cb5d8",
+        "whatItIs": "4d197722f3ce6f0f",
         "keyConcepts": "5b98458d010e5e3c",
         "exampleCode": "2eaa915d5cd93822",
         "whenToUse": "7b2ffbe6e7a6276e",
         "commonMistakes": "cbe6590fee7512e2",
-        "furtherReading": "3aec7d944179aa58"
+        "furtherReading": "2a4c3352b1bfe56d"
       },
       "337_selling_without_a_reference.md": {
         "title": "c4b2f8b1f0227555",
-        "whatItIs": "82cdabb0d1faabc0",
+        "whatItIs": "fd3df88118c88417",
         "keyConcepts": "8de239c78e0e30d7",
         "exampleCode": "818c3fda88fc10ab",
         "whenToUse": "07a9708f825b7c68",
         "commonMistakes": "9f36db5a85ce7a22",
-        "furtherReading": "147525112bb42f75"
+        "furtherReading": "01e5d02a88d63a29"
       },
       "338_growth_focus_and_bets.md": {
         "title": "209451389c047910",
-        "whatItIs": "6794900c10e35b1c",
+        "whatItIs": "3deac8380ddf1e43",
         "keyConcepts": "82ef247a1a955815",
         "exampleCode": "883c7ce89418e001",
         "whenToUse": "552c3140317eb320",
         "commonMistakes": "0ac80834044f3dea",
-        "furtherReading": "b60abcfb1f53f539"
+        "furtherReading": "efa52717b9b38035"
       },
       "339_growth_risk_and_concentration.md": {
         "title": "2faa1abd7ea5efee",
-        "whatItIs": "ee66198d2a9d39de",
+        "whatItIs": "829f4e6a88678dbd",
         "keyConcepts": "d86d473d619e3db1",
         "exampleCode": "10580b35bf6ad869",
         "whenToUse": "ddcc04bed4ee74c3",
         "commonMistakes": "e605cd6f4044fdb6",
-        "furtherReading": "38cb650302ebba43"
+        "furtherReading": "6ffcacab78c24b78"
       },
       "340_scaling_with_contractors.md": {
         "title": "5048550146cd3865",
-        "whatItIs": "70bf6d82ea62ed95",
+        "whatItIs": "508b43caa38f3a74",
         "keyConcepts": "09929d93161bf47e",
         "exampleCode": "5db2e01a2c865460",
         "whenToUse": "6cbb9b99ac75d3f8",
         "commonMistakes": "06edb85b29f5652c",
-        "furtherReading": "4dccf80e3c5e81bb"
+        "furtherReading": "f452aa45c4e0c49a"
       },
       "341_strategic_repositioning.md": {
         "title": "e12b2c12857307df",
-        "whatItIs": "14e360becc5a0feb",
+        "whatItIs": "0da6d46c225511c8",
         "keyConcepts": "4a4ff30e1b7fb559",
         "exampleCode": "7a7e2112fed4676f",
         "whenToUse": "64cf83bdb63a2e36",
         "commonMistakes": "6ac6aa0aa4f146e8",
-        "furtherReading": "ffeef2a200af0423"
+        "furtherReading": "5d7dba4f65c8ab6e"
       },
       "342_account_health_management.md": {
         "title": "a0b7f026044c8e88",
-        "whatItIs": "3c69d5295fab90c6",
+        "whatItIs": "bdaa4046833cc5a6",
         "keyConcepts": "2f7bda321dc602b8",
         "exampleCode": "1c6e41a416f4075d",
         "whenToUse": "d59cab9f29ac02fc",
         "commonMistakes": "bcf62e9b70a293bd",
-        "furtherReading": "302fc1839adccc98"
+        "furtherReading": "141a21f2ae0561b9"
       },
       "343_expansion_signals_and_upsell.md": {
         "title": "d09846003c758ecc",
-        "whatItIs": "d8a94a35ccefe3ce",
+        "whatItIs": "53b9130fc7de9caa",
         "keyConcepts": "d6dffee7dc86a530",
         "exampleCode": "73c81fafb891da02",
         "whenToUse": "9317ca88129394af",
         "commonMistakes": "726563e4501be9e2",
-        "furtherReading": "ab50e96b19f8abdf"
+        "furtherReading": "a0079e2d0f9a824f"
       },
       "344_referral_and_partner_channels.md": {
         "title": "548a4d370a9efed6",
-        "whatItIs": "acb1f31c483188c0",
+        "whatItIs": "cecc7e2404873607",
         "keyConcepts": "0a263439fb337d71",
         "exampleCode": "b8a8fc457503f135",
         "whenToUse": "c9673f460d1b1b4a",
         "commonMistakes": "a3a6c0e2211b228c",
-        "furtherReading": "afb237b434049032"
+        "furtherReading": "eb433c37878107c5"
       },
       "345_pipeline_forecasting.md": {
         "title": "2c574c64e9dd84ca",
-        "whatItIs": "37af453bacf9eb8a",
+        "whatItIs": "9a87f7245816c7c6",
         "keyConcepts": "fb6caf9401a388ae",
         "exampleCode": "12ce8a50fc935d3b",
         "whenToUse": "30a9ef469e671733",
         "commonMistakes": "8e2f1663de299bb8",
-        "furtherReading": "ffc8e48a5965d577"
+        "furtherReading": "1c7680c3ece16715"
       },
       "346_case_study_and_proof_loop.md": {
         "title": "87c6f863c08f0a98",
-        "whatItIs": "333a5ca5fdd4785d",
+        "whatItIs": "1abcacdfeb888dab",
         "keyConcepts": "60912b2292a30599",
         "exampleCode": "bd84c65311bffbe3",
         "whenToUse": "025360b2f41684f8",
         "commonMistakes": "03f3c725b5b5483e",
-        "furtherReading": "ecfb49a1520274fa"
+        "furtherReading": "e862d0b8bce03e0e"
       },
       "347_growth_model_and_north_star.md": {
         "title": "749639968c9975de",
-        "whatItIs": "386bd5291cdfea25",
+        "whatItIs": "5f45493bcad30864",
         "keyConcepts": "b365ecec58aa0970",
         "exampleCode": "000fd42c6489a051",
         "whenToUse": "02abeab53ed257fc",
         "commonMistakes": "c94e8c5c978fb961",
-        "furtherReading": "85e2e6f8e505f491"
+        "furtherReading": "fa6f6d9336e93177"
       },
       "348_acquisition_funnel_and_attribution.md": {
         "title": "51266ed0454c5516",
-        "whatItIs": "d0ce34df3d3c3e2c",
+        "whatItIs": "f77bfd0b35b6fe33",
         "keyConcepts": "a999f71ecca08559",
         "exampleCode": "d3a85b3bcfa35c7d",
         "whenToUse": "e77e12778463e4cb",
         "commonMistakes": "2e1ebc6e293308a3",
-        "furtherReading": "54ecfc22a0859e36"
+        "furtherReading": "24c2e700fd1d4e64"
       },
       "349_growth_experiment_design.md": {
         "title": "32dd890ec2921c86",
-        "whatItIs": "51ea3f0110440483",
+        "whatItIs": "12241453bf95d8f8",
         "keyConcepts": "3a732d658f84186d",
         "exampleCode": "9553d0a1c429e9a3",
         "whenToUse": "d58f077d802949e7",
         "commonMistakes": "692f46e6603af0d4",
-        "furtherReading": "9d05344bc387287c"
+        "furtherReading": "a3d6da167c419e85"
       },
       "350_decision_rules_and_scaling.md": {
         "title": "05383e4cb7b5ee02",
-        "whatItIs": "c031e6d118e231f5",
+        "whatItIs": "feddaa4679256b52",
         "keyConcepts": "3031c483498b8d77",
         "exampleCode": "76aed7df54dabd2a",
         "whenToUse": "efd1ec3c402467f7",
         "commonMistakes": "8f25ef64f4dc83d0",
-        "furtherReading": "d3005bce41d37e53"
+        "furtherReading": "75050be522319d8a"
       },
       "351_weekly_monthly_business_review.md": {
         "title": "9b927a732ad682fb",
-        "whatItIs": "67f94f3c136f5b12",
+        "whatItIs": "50c76312a76dabec",
         "keyConcepts": "3b8552def4d6bbee",
         "exampleCode": "b1f600b4b1580ec2",
         "whenToUse": "3e84b3a7df4077ea",
         "commonMistakes": "86bc9beab021578c",
-        "furtherReading": "c59639965c4f619a"
+        "furtherReading": "4e109aed51f95d94"
       },
       "352_ethical_growth_guardrails.md": {
         "title": "8671c2772803190f",
-        "whatItIs": "0a124d44c1fba823",
+        "whatItIs": "8260edd2165922b0",
         "keyConcepts": "291473d295231df1",
         "exampleCode": "59030856472905a7",
         "whenToUse": "a420232103cd7ee9",
         "commonMistakes": "9d291448e99cf0e0",
-        "furtherReading": "6760c17558a4e08e"
+        "furtherReading": "fa1598b73ca76ae9"
       },
       "353_business_continuity_planning.md": {
         "title": "157627873a100818",
-        "whatItIs": "e1f26b42b41f9dc1",
+        "whatItIs": "2fae7cfc6ab987c6",
         "keyConcepts": "6184861ac2747307",
         "exampleCode": "f2eabc2f71d1554d",
         "whenToUse": "15481516d0b33b4b",
         "commonMistakes": "85433a1735082e85",
-        "furtherReading": "af662cb5b14abfad"
+        "furtherReading": "a0b3fc44e00ee821"
       },
       "354_non_negotiable_operating_rules.md": {
         "title": "27b2224055b406f9",
-        "whatItIs": "5d806ae97eab873c",
+        "whatItIs": "365ecb2973b5d89d",
         "keyConcepts": "f175da17eab5653d",
         "exampleCode": "68be0d552e4d478c",
         "whenToUse": "541fb4d7aa5d0a9d",
         "commonMistakes": "a9413bc3211bc43a",
-        "furtherReading": "ac469d2ebb590c9d"
+        "furtherReading": "c824b4ac7c7fca5f"
       },
       "355_burnout_as_a_business_risk.md": {
         "title": "84d07e5dde9510e2",
-        "whatItIs": "e91e4a43e5ee61b4",
+        "whatItIs": "167696348cad457a",
         "keyConcepts": "f0675604fddebdd6",
         "exampleCode": "630837d4d6fa5d57",
         "whenToUse": "bbf5b0fa34634b8d",
         "commonMistakes": "6d904dadee481554",
-        "furtherReading": "606592c37ac5ee16"
+        "furtherReading": "1af503850b8a45fb"
       }
     },
     "career-entrepreneurship": {
@@ -856,7 +856,7 @@
         "exampleCode": "955e7064ecb4cfe8",
         "whenToUse": "136c6bbb814ed6fd",
         "commonMistakes": "98cab54090b8bc13",
-        "furtherReading": "98c81960c395a8c6"
+        "furtherReading": "ca324b1087fcd399"
       },
       "118_building_in_public.md": {
         "title": "7ea8649c868b3e2b",
@@ -1402,7 +1402,7 @@
         "exampleCode": "f36fdfc7712b9d7f",
         "whenToUse": "ec7b924b24616064",
         "commonMistakes": "19a33542fc370d31",
-        "furtherReading": "f7b0d8d65cd7c41e"
+        "furtherReading": "7a9e64fe0b722645"
       },
       "272_idea_capture_system.md": {
         "title": "be249a0542050f81",
@@ -1411,7 +1411,7 @@
         "exampleCode": "7b816b87e91f2b06",
         "whenToUse": "b0ee3672c0f32964",
         "commonMistakes": "932fc29ea3e9b8d2",
-        "furtherReading": "8b54ce335927b61f"
+        "furtherReading": "d36318aef4cb9831"
       },
       "273_audience_and_intent_mapping.md": {
         "title": "91a7908aa8bd22ff",
@@ -1438,7 +1438,7 @@
         "exampleCode": "f9e18fa756790429",
         "whenToUse": "f40a0fb5e81ee16e",
         "commonMistakes": "3708068e830f7606",
-        "furtherReading": "d1e8082bc7e9d11a"
+        "furtherReading": "29825217902fb791"
       },
       "276_content_repurposing_one_idea_many_assets.md": {
         "title": "3d42370ce267e9be",
@@ -1456,7 +1456,7 @@
         "exampleCode": "bb11a2e13c9b678a",
         "whenToUse": "ad10b0293f539c54",
         "commonMistakes": "9c4d73d1f8bb168d",
-        "furtherReading": "6b443944f1a9710d"
+        "furtherReading": "46aaf8cb9510a6fd"
       },
       "278_ai_assisted_content_without_losing_your_voice.md": {
         "title": "624db113c3cd6f85",
@@ -1465,7 +1465,7 @@
         "exampleCode": "6b0b40f0e504f18a",
         "whenToUse": "e7e09ff94b4d03d5",
         "commonMistakes": "d5b29d596727a62d",
-        "furtherReading": "0f01657f1ebbc9d9"
+        "furtherReading": "3cd88f28c32420de"
       },
       "279_content_analytics_library_and_asset_management.md": {
         "title": "466d92ff24ef66c2",
@@ -1474,7 +1474,7 @@
         "exampleCode": "c10123e0bf121d29",
         "whenToUse": "8d134d6a1e88d99c",
         "commonMistakes": "efa1129a430eadec",
-        "furtherReading": "e84ccbb56f4b95c4"
+        "furtherReading": "2f99889487f1be3f"
       },
       "280_seo_and_aeo_as_one_visibility_system.md": {
         "title": "b9527e106612ece2",
@@ -1483,7 +1483,7 @@
         "exampleCode": "4143f931f842c5d1",
         "whenToUse": "c080860f682d55ba",
         "commonMistakes": "dabc07e5ce7bb11e",
-        "furtherReading": "46ff71e9960c8275"
+        "furtherReading": "c8b06babb4558867"
       },
       "281_search_intent_topic_clusters_and_keyword_query_mapping.md": {
         "title": "af28a8d6a8f1efaf",
@@ -1492,7 +1492,7 @@
         "exampleCode": "bd8a165b91378410",
         "whenToUse": "ba17744896f5f32d",
         "commonMistakes": "3d87c555ffe20d3c",
-        "furtherReading": "9efb662e6e196556"
+        "furtherReading": "f73ff761512bd64d"
       },
       "282_technical_seo_foundations_crawl_render_index.md": {
         "title": "b424a1b0cdd0b015",
@@ -1501,7 +1501,7 @@
         "exampleCode": "883352033224fbcd",
         "whenToUse": "3f4258828ffe7a34",
         "commonMistakes": "27bd0d8e81a066f3",
-        "furtherReading": "fcd2f9a0e456b13f"
+        "furtherReading": "7be8492fea4401c4"
       },
       "283_metadata_titles_descriptions_and_canonical_url_strategy.md": {
         "title": "19a32a42abff167d",
@@ -1510,7 +1510,7 @@
         "exampleCode": "239009e489ef0c6b",
         "whenToUse": "52e09e00c62205ab",
         "commonMistakes": "ab7e0427003fcfec",
-        "furtherReading": "145c0dbe7e363482"
+        "furtherReading": "1b6585c14e98fbc0"
       },
       "284_robots_snippet_controls_and_structured_data.md": {
         "title": "f522fdfd6c04fbf4",
@@ -1519,7 +1519,7 @@
         "exampleCode": "5641e5df1bdc6bf9",
         "whenToUse": "5a1a20557304d0f7",
         "commonMistakes": "ace8390f8dd1c854",
-        "furtherReading": "43f83c8c4d463b6d"
+        "furtherReading": "ec6ac783f5eaf513"
       },
       "285_ai_search_and_answer_engine_optimization.md": {
         "title": "2ec0c992e28c955e",
@@ -1528,7 +1528,7 @@
         "exampleCode": "20dd393da5317568",
         "whenToUse": "d7f084d8f28cac02",
         "commonMistakes": "b0212a5e30bbbf91",
-        "furtherReading": "70474787fe768d21"
+        "furtherReading": "6fd2e3ee74aa1008"
       },
       "286_entity_clarity_and_eeat_trust_signals.md": {
         "title": "92bc246a58bc6b34",
@@ -1537,7 +1537,7 @@
         "exampleCode": "70687e7cb5a98e4d",
         "whenToUse": "fcceeefc3238292b",
         "commonMistakes": "7f05b3c4edacefcd",
-        "furtherReading": "f2a69a85ddfad5a4"
+        "furtherReading": "abd0043703521443"
       },
       "287_content_briefs_page_templates_and_blog_seo.md": {
         "title": "3b73a90bf15537ee",
@@ -1546,7 +1546,7 @@
         "exampleCode": "cceeaecd1a480663",
         "whenToUse": "76f2405c0474b674",
         "commonMistakes": "b3f4c135e4954a71",
-        "furtherReading": "9a729ae82e2eb7e1"
+        "furtherReading": "98658000f9001edf"
       },
       "288_landing_page_local_and_service_seo.md": {
         "title": "e57a351eb3a17f08",
@@ -1555,7 +1555,7 @@
         "exampleCode": "aa25f2adbb3d420a",
         "whenToUse": "ec0e99f593e4dfcc",
         "commonMistakes": "cb26486c35cb072a",
-        "furtherReading": "302e342c1623b147"
+        "furtherReading": "45c3d4f9395e5690"
       },
       "289_internal_linking_information_architecture_and_rich_media_seo.md": {
         "title": "037ee5047364c883",
@@ -1564,7 +1564,7 @@
         "exampleCode": "0990e66050a7ba26",
         "whenToUse": "b70a3d70b2b438a1",
         "commonMistakes": "f706f21a6e82e527",
-        "furtherReading": "60068d88040332d4"
+        "furtherReading": "90a1607cc57a9efa"
       },
       "290_content_operations_at_scale_programmatic_seo_refresh_and_search_console_review.md": {
         "title": "ce41d366dc3a4c6a",
@@ -1573,7 +1573,7 @@
         "exampleCode": "0fbeaeacafa29f3f",
         "whenToUse": "63668f56270f7303",
         "commonMistakes": "262b13b8a4f29031",
-        "furtherReading": "74d19e8d8ff78113"
+        "furtherReading": "589bcc3ace47c35f"
       },
       "291_seo_qa_and_launch_checklist.md": {
         "title": "a12653caf4073661",
@@ -1591,7 +1591,7 @@
         "exampleCode": "ded2bcd2d97cc674",
         "whenToUse": "bab7ba51c3ee429f",
         "commonMistakes": "ad9e656141dc9943",
-        "furtherReading": "47002690e15d325f"
+        "furtherReading": "326bf08dd970a07c"
       },
       "293_linkedin_profile_positioning_headline_and_about_section.md": {
         "title": "f1b1cc1fc5f3066a",
@@ -1609,7 +1609,7 @@
         "exampleCode": "a680bbed2b81aeaf",
         "whenToUse": "b54500f136c50f39",
         "commonMistakes": "c23bb2f9905e8790",
-        "furtherReading": "233696e49ded85a3"
+        "furtherReading": "53d2898e2aeaebbd"
       },
       "295_technical_post_frameworks_and_case_study_posts.md": {
         "title": "b98cab9afcedc910",
@@ -1618,7 +1618,7 @@
         "exampleCode": "486161500ab87e9e",
         "whenToUse": "214439d60fb3740a",
         "commonMistakes": "192ca3e6a1b754c9",
-        "furtherReading": "0c8fe8767f7e838a"
+        "furtherReading": "29f6b5326957b159"
       },
       "296_problem_solution_founder_story_carousel_and_video_posts.md": {
         "title": "afc7e265cf1fd648",
@@ -1627,7 +1627,7 @@
         "exampleCode": "857a2edc283c3d6a",
         "whenToUse": "d4b9f07ad9237729",
         "commonMistakes": "f9d2c91e83c2edb4",
-        "furtherReading": "2c4f0e1eacfc3411"
+        "furtherReading": "f651e31aed3c7705"
       },
       "297_comment_strategy_dms_and_networking.md": {
         "title": "a4bfbc35ace59fb5",
@@ -1636,7 +1636,7 @@
         "exampleCode": "4511b06ba49716ab",
         "whenToUse": "901cd4eb76bafbc5",
         "commonMistakes": "b625385aa269f36c",
-        "furtherReading": "a6314a3d7bcc6d64"
+        "furtherReading": "fcbe1de2c465c339"
       },
       "298_soft_pitching_repurposing_and_analytics_on_linkedin.md": {
         "title": "92d26bad4f3cd118",
@@ -1645,7 +1645,7 @@
         "exampleCode": "f438b02f6b6b7367",
         "whenToUse": "dc2b460220245358",
         "commonMistakes": "81669df610d1cd31",
-        "furtherReading": "b124e54fdeee56b9"
+        "furtherReading": "291feadbb032a21c"
       },
       "299_email_list_strategy_audience_consent_and_opt_in_design.md": {
         "title": "88bd6fb31c9d8e8b",
@@ -1654,7 +1654,7 @@
         "exampleCode": "9d2a3cdd2a108ba1",
         "whenToUse": "9b17adb5e1e68bac",
         "commonMistakes": "fb46eb0a6a888694",
-        "furtherReading": "3c437da5e668209c"
+        "furtherReading": "2b68a19d1f6000df"
       },
       "300_newsletter_system_architecture_and_editorial_strategy.md": {
         "title": "bc46b5d8ee4032c6",
@@ -1663,7 +1663,7 @@
         "exampleCode": "95ab90b60867d2cc",
         "whenToUse": "3a1a091df3ca9e88",
         "commonMistakes": "7b4594fc9ff075d8",
-        "furtherReading": "7b68d8adbd1c9bc7"
+        "furtherReading": "a355989bbfcec74e"
       },
       "301_welcome_and_nurture_sequence_design.md": {
         "title": "56c1c415b486bb55",
@@ -1672,7 +1672,7 @@
         "exampleCode": "daad7b61b0210250",
         "whenToUse": "eea9e6cda5a55eb3",
         "commonMistakes": "db06a9d031e5c234",
-        "furtherReading": "ec267020e9d77f92"
+        "furtherReading": "d0964497d3b19482"
       },
       "302_email_copywriting_voice_subject_lines_and_ctas.md": {
         "title": "f39e6de9ec0cec21",
@@ -1681,7 +1681,7 @@
         "exampleCode": "890802323e6a8da9",
         "whenToUse": "df0db600f596dc60",
         "commonMistakes": "e69200c87f8bdc9f",
-        "furtherReading": "0f75a669315f37c8"
+        "furtherReading": "06c675429f1e0078"
       },
       "303_proof_emails_and_ready_to_use_templates.md": {
         "title": "79e038a8e0fe7548",
@@ -1690,7 +1690,7 @@
         "exampleCode": "36850980b091bf16",
         "whenToUse": "b82ff54232c709e0",
         "commonMistakes": "ced5d7bcb36b7091",
-        "furtherReading": "7997f60dffcef495"
+        "furtherReading": "dcb949548deeb2d6"
       },
       "304_segmentation_crm_automation_and_sales_handoff.md": {
         "title": "203c6e093e8335ec",
@@ -1699,7 +1699,7 @@
         "exampleCode": "59e00e0be27efc13",
         "whenToUse": "bf6c1f971b3408a7",
         "commonMistakes": "d9a0506bcb742682",
-        "furtherReading": "88f5d0e3e4fe746a"
+        "furtherReading": "71946f79aceecfcf"
       },
       "305_deliverability_list_hygiene_reengagement_and_metrics.md": {
         "title": "4bb34a19542302ff",
@@ -1708,7 +1708,7 @@
         "exampleCode": "f8dce83f703bc4e6",
         "whenToUse": "f3ea03e4e56e3769",
         "commonMistakes": "5fc75327f179f684",
-        "furtherReading": "c65a996f3ca96a12"
+        "furtherReading": "aa855ad4a14ce7b5"
       },
       "306_case_study_structure_narrative_arc_and_operating_system.md": {
         "title": "27484b274f628cc7",
@@ -1717,7 +1717,7 @@
         "exampleCode": "6b9c2f020b52c826",
         "whenToUse": "cfd1664a9a07126d",
         "commonMistakes": "ddce254a350d1634",
-        "furtherReading": "0f8aa1923ccd5b53"
+        "furtherReading": "97707ac83a37e7e4"
       },
       "307_confidentiality_anonymization_and_technical_depth_calibration.md": {
         "title": "f3febe643634420c",
@@ -1726,7 +1726,7 @@
         "exampleCode": "238632402c04cfcd",
         "whenToUse": "56b23ae1b0248cdd",
         "commonMistakes": "34fcf7e6e96fafe0",
-        "furtherReading": "fc71fcd3f70d9545"
+        "furtherReading": "cbfaefb34f252c66"
       },
       "308_case_study_metrics_outcomes_and_evidence_levels.md": {
         "title": "6151fe1d8f6377f0",
@@ -1735,7 +1735,7 @@
         "exampleCode": "59a6f74b85c7bf0c",
         "whenToUse": "93b35773a60ba7cc",
         "commonMistakes": "68e510c2c4ca089c",
-        "furtherReading": "4b7b313b85edb162"
+        "furtherReading": "a964e9d9114c8d1b"
       },
       "309_project_selection_and_portfolio_auditing.md": {
         "title": "b2424ebc7bc1f011",
@@ -1753,7 +1753,7 @@
         "exampleCode": "007925ee3fe19642",
         "whenToUse": "fbbf06c9d30b9346",
         "commonMistakes": "0518b7f09005b543",
-        "furtherReading": "d31903fb9610036c"
+        "furtherReading": "a542f4d357715911"
       },
       "311_testimonials_and_github_as_proof.md": {
         "title": "bf62c73994f1fb8d",
@@ -1762,7 +1762,7 @@
         "exampleCode": "c80739ab202ec982",
         "whenToUse": "d34f327adee660c4",
         "commonMistakes": "a4070de475e95d4c",
-        "furtherReading": "1316d4947b351a8c"
+        "furtherReading": "f1a5bef8abc63554"
       },
       "312_portfolio_page_structure_and_seo.md": {
         "title": "3b18d1d749bc2b03",
@@ -1771,7 +1771,7 @@
         "exampleCode": "7703c5d6b985b9bf",
         "whenToUse": "243dd88354ca25ce",
         "commonMistakes": "ff47d67c4142a65f",
-        "furtherReading": "2376c41c3252c5aa"
+        "furtherReading": "85d9f8b4b85ace45"
       },
       "313_proof_asset_repurposing_one_case_study_many_assets.md": {
         "title": "fdffe184d7ac2f36",
@@ -1780,7 +1780,7 @@
         "exampleCode": "bf2af80758b8c71d",
         "whenToUse": "4a7be962d6e46e71",
         "commonMistakes": "79efa92c9dbe3128",
-        "furtherReading": "ec3b21bdae8304c5"
+        "furtherReading": "14136d8d721705b5"
       }
     },
     "contracts-pricing-legal": {
@@ -1791,7 +1791,7 @@
         "exampleCode": "f2c48ebb48c2dde9",
         "whenToUse": "fa7e4df16178f2b3",
         "commonMistakes": "0db768c55e41926e",
-        "furtherReading": "16bd3e966736bac9"
+        "furtherReading": "a600b8cbb6636209"
       },
       "202_pricing_models.md": {
         "title": "7aa9f413dca9cfc9",
@@ -1800,7 +1800,7 @@
         "exampleCode": "171083aa43df7b59",
         "whenToUse": "22415c5a31261357",
         "commonMistakes": "67ac48c8c5180aa7",
-        "furtherReading": "4b960843add591d2"
+        "furtherReading": "7949275f27ecbc8c"
       },
       "203_scope_to_price_mapping.md": {
         "title": "fcbc503f9bacedd6",
@@ -1962,7 +1962,7 @@
         "exampleCode": "77eabce4cedd432b",
         "whenToUse": "a0099828d564cf81",
         "commonMistakes": "1406e775076e96bb",
-        "furtherReading": "397feff2c95ab6e6"
+        "furtherReading": "c0d646c29ae468b9"
       },
       "221_client_responsibilities_and_decision_maker_rule.md": {
         "title": "2b2d7ee7ac5634ed",
@@ -2200,7 +2200,7 @@
         "exampleCode": "8bec06bbc2ac6186",
         "whenToUse": "82623b40ea9c72b3",
         "commonMistakes": "ec523975f9f4e017",
-        "furtherReading": "e1ea244d358e91a9"
+        "furtherReading": "ab959b2f927e5dd6"
       },
       "17_database_index_strategy.md": {
         "title": "a551e2011d930ae8",
@@ -2209,7 +2209,7 @@
         "exampleCode": "7679ac50b9237c10",
         "whenToUse": "c681da75fa0894ef",
         "commonMistakes": "5e3691d2149ea4c6",
-        "furtherReading": "41e0d65f02cdc450"
+        "furtherReading": "594f139969e27801"
       },
       "18_query_plan_analysis.md": {
         "title": "4422a6d89ccfe51b",
@@ -2218,7 +2218,7 @@
         "exampleCode": "b1c7d8614d25cec0",
         "whenToUse": "085f93aed425acb2",
         "commonMistakes": "a7c179d851afcaf4",
-        "furtherReading": "e133561230acf114"
+        "furtherReading": "8a339162a236ff60"
       },
       "19_connection_pool_tuning.md": {
         "title": "1a63810dea4e7cd4",
@@ -2227,7 +2227,7 @@
         "exampleCode": "44b08b4b23bfea42",
         "whenToUse": "ce7165ce4b83e08b",
         "commonMistakes": "8b8b994ce7fcd211",
-        "furtherReading": "03cf5837bd674f42"
+        "furtherReading": "ef871e68279e3db3"
       },
       "20_redis_cache_strategies.md": {
         "title": "4816350e2ec1814d",
@@ -2236,7 +2236,7 @@
         "exampleCode": "2854bd95d437c562",
         "whenToUse": "9275d4b49c7c0a4e",
         "commonMistakes": "12a5cde600feeff8",
-        "furtherReading": "a8d3cabf22d6dca0"
+        "furtherReading": "f6a5a5d4d8967807"
       },
       "21_cdn_cache_strategy.md": {
         "title": "00475f1f942fb875",
@@ -2265,7 +2265,7 @@
         "exampleCode": "82a1a5d54e24139c",
         "whenToUse": "b3c8c7a783916667",
         "commonMistakes": "289fcf8e59e4c4db",
-        "furtherReading": "e1b3f2d38153e027"
+        "furtherReading": "35e9c3bfe0e33ffa"
       },
       "03_saga_pattern.md": {
         "title": "f8ebbc04e935ea28",
@@ -2292,7 +2292,7 @@
         "exampleCode": "455694f5f67df0a5",
         "whenToUse": "66abbdf290a967c3",
         "commonMistakes": "e1a42af03ec187d0",
-        "furtherReading": "24b43b8e6521c838"
+        "furtherReading": "cc87c141e2771df0"
       },
       "06_distributed_locking.md": {
         "title": "030162e56f046621",
@@ -2301,7 +2301,7 @@
         "exampleCode": "4b486e089e2b1fc7",
         "whenToUse": "9200349a487eece9",
         "commonMistakes": "ef691c8c739eaec7",
-        "furtherReading": "a3ced7ec006fbe05"
+        "furtherReading": "9c50353772fe768e"
       },
       "07_idempotency_key_pattern.md": {
         "title": "b46a8414d0dd0745",
@@ -2319,7 +2319,7 @@
         "exampleCode": "2d1148366cb13333",
         "whenToUse": "e783a5f7637c4b08",
         "commonMistakes": "86ff0b3c6c44833e",
-        "furtherReading": "01267a4e16c35232"
+        "furtherReading": "d98b1ef7114af8ec"
       },
       "09_api_versioning_strategies.md": {
         "title": "0fbe604bfd4b9124",
@@ -2328,7 +2328,7 @@
         "exampleCode": "df2d4e06238a3b4d",
         "whenToUse": "84729fab83e063fc",
         "commonMistakes": "888323068cf447d1",
-        "furtherReading": "185f3de67850103d"
+        "furtherReading": "653f4c2cfa904145"
       },
       "10_backward_forward_compatibility.md": {
         "title": "4adaced350c3fb07",
@@ -2337,7 +2337,7 @@
         "exampleCode": "144341d8733010f1",
         "whenToUse": "1b78e54c049aa542",
         "commonMistakes": "80c8bf884a69dcdf",
-        "furtherReading": "291f56dfeb6d0e9c"
+        "furtherReading": "c79d33eb04febc1f"
       },
       "11_read_replica_routing.md": {
         "title": "5909b748342da825",
@@ -2364,7 +2364,7 @@
         "exampleCode": "4813eee6d5b31921",
         "whenToUse": "85911af322b2bdea",
         "commonMistakes": "e0b4015fd2f6755f",
-        "furtherReading": "614d0908fded128b"
+        "furtherReading": "4c0a9d1bec0139e9"
       },
       "14_outbox_pattern.md": {
         "title": "a05b66a947f0190c",
@@ -2373,7 +2373,7 @@
         "exampleCode": "d243dd242820b8bb",
         "whenToUse": "ece0ea4701305a88",
         "commonMistakes": "2f00066805573106",
-        "furtherReading": "81a3fcf932af3ccf"
+        "furtherReading": "213086b79a76362f"
       },
       "15_two_phase_commit_eventual_consistency.md": {
         "title": "5d9f9edaf4e453de",
@@ -2382,7 +2382,7 @@
         "exampleCode": "ba011307a155b9ed",
         "whenToUse": "26b3985faff0ed21",
         "commonMistakes": "9a6abc05b1cc7208",
-        "furtherReading": "5595e64776a7946d"
+        "furtherReading": "a110ea09febc6e59"
       },
       "131_message_queues_101.md": {
         "title": "df839942cb44ce58",
@@ -2391,7 +2391,7 @@
         "exampleCode": "5bb431a3f0d5e45e",
         "whenToUse": "2980ca32207eb676",
         "commonMistakes": "6a51aeb450697bcc",
-        "furtherReading": "ff74a006f8511c41"
+        "furtherReading": "94a6aa60b478c2f6"
       },
       "135_microservices_vs_monolith.md": {
         "title": "117f95ec3d34ccfa",
@@ -2400,7 +2400,7 @@
         "exampleCode": "1e8c712358fbc3f1",
         "whenToUse": "5b18091bea5b501c",
         "commonMistakes": "5099afae4158eeaa",
-        "furtherReading": "317aa4fe8cc354f3"
+        "furtherReading": "d076d7b811798075"
       },
       "136_api_gateway_bff.md": {
         "title": "40fa83810443928e",
@@ -2409,7 +2409,7 @@
         "exampleCode": "f680c9a9d70fefd6",
         "whenToUse": "d13007293ee083f0",
         "commonMistakes": "abf3048852812121",
-        "furtherReading": "212a083a553b2305"
+        "furtherReading": "31bce6640650f119"
       }
     },
     "framework-deep-dives": {
@@ -2746,7 +2746,7 @@
         "exampleCode": "4fb0d7dfb471b1dd",
         "whenToUse": "dcd352656c7a702b",
         "commonMistakes": "7760a39ce887b3e1",
-        "furtherReading": "aa73ffa49231317c"
+        "furtherReading": "72dde462c3e6e998"
       },
       "24_bundle_size_optimization.md": {
         "title": "61c08f113d4b3186",
@@ -2755,7 +2755,7 @@
         "exampleCode": "f3f386b73b9b68db",
         "whenToUse": "3bfb89c57a8ae57e",
         "commonMistakes": "fc8c2e04b86e5a94",
-        "furtherReading": "926a42ec9bfae2c8"
+        "furtherReading": "c69616dc1daa489c"
       },
       "25_web_vitals.md": {
         "title": "db5e62c36fa0b886",
@@ -2847,7 +2847,7 @@
         "exampleCode": "cb5c82b9ed2961d9",
         "whenToUse": "39c84e10bf5d8721",
         "commonMistakes": "109043bb0d37ba15",
-        "furtherReading": "d3db5b9514ce980a"
+        "furtherReading": "1b45f26dc46e357d"
       },
       "124_unit_testing_basics.md": {
         "title": "9f6410c6e97fddd5",
@@ -2865,7 +2865,7 @@
         "exampleCode": "cdaaa1a12679aa3b",
         "whenToUse": "8202f8030e30a29f",
         "commonMistakes": "8e5efce6d23f7cae",
-        "furtherReading": "d872117f751a9b0a"
+        "furtherReading": "1331af94a73951ca"
       },
       "126_cli_dev_environment_basics.md": {
         "title": "bbae16599eb4c9e9",
@@ -2883,7 +2883,7 @@
         "exampleCode": "8e6a13eb68c73a49",
         "whenToUse": "a89681133a52a45b",
         "commonMistakes": "793cf4f863eb042c",
-        "furtherReading": "8e11b72d51ecef0e"
+        "furtherReading": "13a67ff1e8874fa8"
       },
       "128_clean_code_basics.md": {
         "title": "0e5ac38f5fee117f",
@@ -3040,7 +3040,7 @@
         "exampleCode": "75d90a8935cca3ca",
         "whenToUse": "229f5462bac32df4",
         "commonMistakes": "257d023cb2d2dfe3",
-        "furtherReading": "9eba9b4f8ce9f55e"
+        "furtherReading": "58b3925db7364d4e"
       },
       "95_publishing_maintaining_oss_tool.md": {
         "title": "2f738f75cefc7fca",
@@ -3049,7 +3049,7 @@
         "exampleCode": "4edd83ba2d1cd70f",
         "whenToUse": "e52c8a53277951ac",
         "commonMistakes": "8868f45ba74957e2",
-        "furtherReading": "3404466e934fd59f"
+        "furtherReading": "25d9bda6c34e4b9e"
       },
       "96_semver_changelog_management.md": {
         "title": "8e6ee48785811b98",
@@ -3058,7 +3058,7 @@
         "exampleCode": "17e4bbf788fab1ae",
         "whenToUse": "7552f83b61cca7f9",
         "commonMistakes": "95d5ecbda183cd2a",
-        "furtherReading": "b66468a90646c539"
+        "furtherReading": "bf5c6ce119737d08"
       },
       "97_publishing_npm_github_packages.md": {
         "title": "8de77cc381db0cb3",
@@ -3067,7 +3067,7 @@
         "exampleCode": "397af3473734fa4d",
         "whenToUse": "57214b7e928da4ef",
         "commonMistakes": "2b74f30d1aa44715",
-        "furtherReading": "62e0ff6f1d0f2ba5"
+        "furtherReading": "50826dff9c04926b"
       },
       "98_writing_stack_overflow_answers.md": {
         "title": "0fbfe02acb9b6ce7",
@@ -3076,7 +3076,7 @@
         "exampleCode": "614d6a4e5ef29136",
         "whenToUse": "904300d11101a6be",
         "commonMistakes": "c46381ddc17ffc19",
-        "furtherReading": "0125a6351271055a"
+        "furtherReading": "9ecb61eb6d3faf90"
       },
       "99_conference_meetup_speaking.md": {
         "title": "3c5e8962d8d65b56",
@@ -3085,7 +3085,7 @@
         "exampleCode": "b52916061e5fe868",
         "whenToUse": "af0b76658c811948",
         "commonMistakes": "9c7a59219f6b98c1",
-        "furtherReading": "77a23baaa1271214"
+        "furtherReading": "6ebc3659fcd0af6c"
       },
       "100_creating_reference_resource.md": {
         "title": "a1d389e442b4ee1a",
@@ -3094,7 +3094,7 @@
         "exampleCode": "8d838484b5a43a10",
         "whenToUse": "ec7838506c378c6b",
         "commonMistakes": "65225b5909cc40d7",
-        "furtherReading": "27593310974c2691"
+        "furtherReading": "bb4a339bb18af6f7"
       }
     },
     "privacy-compliance-incident-response": {
@@ -3233,7 +3233,7 @@
         "exampleCode": "68ef21aa0c1ad8cf",
         "whenToUse": "195f4fe6b5b972d7",
         "commonMistakes": "6e1ff840d2e834d5",
-        "furtherReading": "4cf1b1d2e95a704a"
+        "furtherReading": "64c5978b53ea686b"
       },
       "77_technical_debt_prioritization.md": {
         "title": "507806597fd1b9df",
@@ -3242,7 +3242,7 @@
         "exampleCode": "5a1449d613e99ccb",
         "whenToUse": "1798d5ab4edb0e44",
         "commonMistakes": "4717a9f2c88d445d",
-        "furtherReading": "01e224247388c28d"
+        "furtherReading": "935ba3718b3935e6"
       },
       "78_code_review_culture.md": {
         "title": "ba8b6c269aaf9f87",
@@ -3251,7 +3251,7 @@
         "exampleCode": "c8526cecb0579e54",
         "whenToUse": "9c90e6c2d2a3456f",
         "commonMistakes": "662222269b890a15",
-        "furtherReading": "aee02a67babb5774"
+        "furtherReading": "e17135fc8baa6f89"
       },
       "79_blameless_post_mortem.md": {
         "title": "0a6d79c1fa05d303",
@@ -3260,7 +3260,7 @@
         "exampleCode": "ecb10d4285e6904f",
         "whenToUse": "5a2c6740a886e91c",
         "commonMistakes": "ff93c6abc322da12",
-        "furtherReading": "c3392b6f82c59687"
+        "furtherReading": "0951481558677b8e"
       },
       "80_mentorship.md": {
         "title": "c7656b9c48db0b37",
@@ -3269,7 +3269,7 @@
         "exampleCode": "457b696b412eb212",
         "whenToUse": "5788b0aaab6947eb",
         "commonMistakes": "cfe1a0b323687c10",
-        "furtherReading": "6c6e5fef2dbeaa1b"
+        "furtherReading": "aedc62ce803a0738"
       },
       "81_explaining_technical_concepts.md": {
         "title": "78ba5f3dbea12637",
@@ -3278,7 +3278,7 @@
         "exampleCode": "0c1ef9b687b432ae",
         "whenToUse": "9d1a6b5446525110",
         "commonMistakes": "2c1c9ca6e3d6ac0f",
-        "furtherReading": "a19234cfae586a73"
+        "furtherReading": "bbbb5fefc86962e7"
       },
       "82_estimation.md": {
         "title": "58c995a42596f693",
@@ -3343,7 +3343,7 @@
         "exampleCode": "414422067598e36f",
         "whenToUse": "ae3ef9d57bce8c6b",
         "commonMistakes": "5c0be9a7b5e1aca7",
-        "furtherReading": "11a34063c99d3140"
+        "furtherReading": "405a9a96700ecfb9"
       },
       "372_problem_framing.md": {
         "title": "7f2bd3f201c5cc4d",
@@ -3406,7 +3406,7 @@
         "exampleCode": "ce8a373ac97d8471",
         "whenToUse": "213c0f1cf2f0d5b1",
         "commonMistakes": "f03b4437df737119",
-        "furtherReading": "c49efb8a6d0a30b9"
+        "furtherReading": "afe9508aa63acb83"
       },
       "379_user_stories_acceptance_criteria.md": {
         "title": "6d9257b6087b16aa",
@@ -3415,7 +3415,7 @@
         "exampleCode": "2d5855c7ef5b1919",
         "whenToUse": "fafbfda1c5ea48f8",
         "commonMistakes": "e8619d1fd6fd9eb4",
-        "furtherReading": "72c0f4219bb1b57c"
+        "furtherReading": "705fd3167d91d5ec"
       },
       "380_user_journey_flow_mapping.md": {
         "title": "8b73f59cb2fdc33c",
@@ -3424,7 +3424,7 @@
         "exampleCode": "7c2b8a297d600f3e",
         "whenToUse": "dc506128fea71f38",
         "commonMistakes": "8381de0eb0f1ed63",
-        "furtherReading": "067d897473bc92a3"
+        "furtherReading": "2fbb935574b776a0"
       },
       "381_success_metrics_criteria.md": {
         "title": "664e05fae0108ce3",
@@ -3570,7 +3570,7 @@
         "exampleCode": "b2167231c23bca9c",
         "whenToUse": "a945f3b6c080b1ac",
         "commonMistakes": "431ee8c8dffeedc1",
-        "furtherReading": "c5a574fef5487a0a"
+        "furtherReading": "a7237af83372d965"
       },
       "87_payment_integration_depth.md": {
         "title": "30147502360c07f5",
@@ -3579,7 +3579,7 @@
         "exampleCode": "2714f571e0c8ee02",
         "whenToUse": "c578c9d90c2ad682",
         "commonMistakes": "94b15acd189fc0b4",
-        "furtherReading": "20f0455a50d4c0ac"
+        "furtherReading": "38eb377ba95e5551"
       },
       "88_email_deliverability.md": {
         "title": "61f60e93e175e185",
@@ -3588,7 +3588,7 @@
         "exampleCode": "bd1b4e771c87a3b1",
         "whenToUse": "87250a3b71b540d0",
         "commonMistakes": "0dcc77b70ab2bc76",
-        "furtherReading": "7e8c8df9cb77afdc"
+        "furtherReading": "6d401579e797b935"
       },
       "89_internationalization.md": {
         "title": "b7cbc9eaa2f2318d",
@@ -3597,7 +3597,7 @@
         "exampleCode": "8e4235847b425af6",
         "whenToUse": "649b774e63869e20",
         "commonMistakes": "6e4d8b907cca4d89",
-        "furtherReading": "bb3f105ef9ff9218"
+        "furtherReading": "8446153d1f31c09c"
       },
       "90_accessibility.md": {
         "title": "1cfddaafe8ea82cf",
@@ -3606,7 +3606,7 @@
         "exampleCode": "d78f46570d0bb8d4",
         "whenToUse": "0cdc876f8532c278",
         "commonMistakes": "aa69ef32f4211434",
-        "furtherReading": "9c5d1a11d94b4db7"
+        "furtherReading": "67a2871a53915a8f"
       },
       "91_mobile_first_api_design.md": {
         "title": "fea79b7f6cea9936",
@@ -3615,7 +3615,7 @@
         "exampleCode": "591ecea8d38ab4b9",
         "whenToUse": "b0cf8cd9f4f8a721",
         "commonMistakes": "6338c5b0f33d44da",
-        "furtherReading": "91dd3a5d68937918"
+        "furtherReading": "851138e099c68c0b"
       },
       "92_analytics_integration.md": {
         "title": "0d6e9d144b491908",
@@ -3624,7 +3624,7 @@
         "exampleCode": "ecaee60bd1612021",
         "whenToUse": "edec68604ac61910",
         "commonMistakes": "34fa7e9bfd7d5236",
-        "furtherReading": "7620208c58632e55"
+        "furtherReading": "7fd28ddb8eb11697"
       },
       "93_ab_test_infrastructure.md": {
         "title": "8941a6d9009f7510",
@@ -3633,7 +3633,7 @@
         "exampleCode": "92024b76a0c09f31",
         "whenToUse": "60c78a7795ed459a",
         "commonMistakes": "86a5aeb91bbd553b",
-        "furtherReading": "10ab3644d5f5ad30"
+        "furtherReading": "3f4fe8ccce47a50a"
       }
     },
     "security": {
@@ -3752,7 +3752,7 @@
         "exampleCode": "eacb1b81ccd366dd",
         "whenToUse": "c60cee1318005bc4",
         "commonMistakes": "3f2722eb28b68202",
-        "furtherReading": "ab1a2e8b745230c5"
+        "furtherReading": "20e67f6a67dfa713"
       }
     }
   }

@@ -70,5 +70,5 @@ Comment angle: mention hidden complexity under event-tech posts.
 
 ## Further Reading
 - Justin Welsh's content-repurposing frameworks — a widely used, current practitioner system for turning one idea into a week of content
-- LinkedIn's Analytics documentation (linkedin.com/help) — first-party detail on what each metric in the native dashboard actually measures
+- [LinkedIn's Analytics documentation](https://linkedin.com/help) — first-party detail on what each metric in the native dashboard actually measures
 - *They Ask, You Answer* — Marcus Sheridan: useful again here for how "soft, problem-first" offers outperform aggressive pitching in trust-based sales

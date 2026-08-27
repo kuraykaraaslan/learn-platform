@@ -66,5 +66,5 @@ should usually wait unless they are essential to the first use case.
 
 ## Further Reading
 - Aleyda Solis' SEO FOMO newsletter and Orainti's AI-search research — a consistently current, practitioner-level source on AEO specifically
-- Google's "AI features and your website" documentation (developers.google.com/search) — the primary source on how Google's own AI search features work
+- [Google's "AI features and your website" documentation](https://developers.google.com/search) — the primary source on how Google's own AI search features work
 - Search Engine Land's ongoing AEO/AI-search coverage — for tracking how answer engines beyond Google are evolving

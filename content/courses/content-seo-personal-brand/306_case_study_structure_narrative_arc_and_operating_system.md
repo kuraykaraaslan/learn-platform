@@ -82,5 +82,5 @@ Format length should match placement rather than being fixed everywhere: a 150�
 
 ## Further Reading
 - *Made to Stick* — Chip Heath & Dan Heath: the underlying research on why concrete, story-shaped explanations outperform abstract claims
-- Nielsen Norman Group's guidance on writing effective case studies (nngroup.com) — evidence-based structure advice that applies directly to portfolio writing
-- Harvard Business Review's "How to Write a Case Study" guidance (hbr.org) — a classic reference for structuring a business narrative around a real decision under constraint
+- [Nielsen Norman Group's guidance on writing effective case studies](https://nngroup.com) — evidence-based structure advice that applies directly to portfolio writing
+- [Harvard Business Review's "How to Write a Case Study" guidance](https://hbr.org) — a classic reference for structuring a business narrative around a real decision under constraint

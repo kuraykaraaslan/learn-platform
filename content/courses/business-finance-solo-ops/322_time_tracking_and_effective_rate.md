@@ -1,6 +1,8 @@
 # 322. Time Tracking and Your Real Effective Hourly Rate
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Time-tracking data is a management tool for your own pricing and capacity decisions, not a substitute for any client-facing timesheet requirements your contracts may specify.
+
 Time is the actual capacity constraint of a solo operator — not money, not tools, not even client demand. If time isn't tracked with any rigor, every pricing decision and every "can I take this on" decision becomes a guess dressed up as intuition. Time tracking here is not about surveillance or maximizing every billable minute; it's about knowing, with real numbers, where the week actually goes.
 
 The trap most solo operators fall into is tracking only coding time, which makes every project and every week look more profitable and more available than it is. A week that feels "mostly client work" often turns out to be 55% delivery, 15% communication, 10% admin, and the rest split between sales and firefighting — none of which shows up if the only thing being logged is git commits. The categories matter more than the tool: date, project, category, duration, a short note, and a billable yes/no is enough to run every calculation in this lesson.
@@ -52,4 +54,3 @@ The number that matters isn't the 54% in isolation — it's noticing that "unpla
 ## Further Reading
 - *Getting Things Done* — David Allen: not time-tracking specific, but the underlying discipline of capturing everything rather than trusting memory applies directly here.
 - A plain spreadsheet or a lightweight timer app (Toggl, Clockify) is sufficient — the value is in the weekly five-minute rollup habit, not the software.
-- This lesson is general education, not financial or tax advice. Time-tracking data is a management tool for your own pricing and capacity decisions, not a substitute for any client-facing timesheet requirements your contracts may specify.

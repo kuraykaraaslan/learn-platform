@@ -1,6 +1,8 @@
 # 346. Turning Delivered Work into Proof: The Case Study Loop
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Always confirm what a client will allow to be published, in writing, before using their name, logo, or specific results as proof.
+
 Completed work should compound. Every successful project can create proof that improves future acquisition, pricing power, and trust — but only if that proof is deliberately captured, because it does not appear on its own. The proof loop runs: deliver value → collect feedback → request a testimonial → document the business problem → create a case study → extract content from it → update the portfolio → use it in outreach and proposals. Skipping the loop is the default; a freelancer who finishes ten strong projects with no captured proof has ten times fewer sales assets than one who ran the loop each time, even though the underlying work was identical.
 
 Feedback should be collected at defined points rather than only when something goes wrong: after discovery, when a proposal is won or lost, after a project milestone, after delivery, and when asking for a testimonial. Real client language collected this way becomes reusable material — an objection turns into an FAQ answer, a positive result becomes a testimonial, a clear before/after becomes a case study, a point of confusion becomes a clearer landing page section, and a lost-deal reason becomes an input into pricing or offer changes. Testimonials specifically should be requested close to the moment of value, not months later — right after a "thank you," a milestone approval, a go-live, or a successfully resolved issue, using a simple prompt that gives the client a format to fill in rather than a blank page to write from scratch.
@@ -84,4 +86,3 @@ struggled with <problem>. He helped us <result>. The process was
 ## Further Reading
 - *Building a StoryBrand* — Donald Miller: a framework for turning a client's problem-to-result journey into a clear, persuasive narrative.
 - *Made to Stick* — Chip Heath and Dan Heath: on what makes an idea or story memorable enough to actually influence a future prospect's decision.
-- This lesson is general education, not financial or tax advice. Always confirm what a client will allow to be published, in writing, before using their name, logo, or specific results as proof.

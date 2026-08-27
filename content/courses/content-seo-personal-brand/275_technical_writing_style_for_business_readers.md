@@ -59,5 +59,5 @@ human memory."
 
 ## Further Reading
 - *On Writing Well* — William Zinsser: the classic general reference for clear, jargon-aware nonfiction prose, directly applicable to technical writing for mixed audiences
-- Julia Evans' technical zines and blog (jvns.ca) — a widely cited example of explaining deep technical mechanisms in plain, concrete language without dumbing them down
-- Google's Technical Writing courses (developers.google.com/tech-writing) — a free, practical curriculum on writing for both technical and non-technical readers
+- [Julia Evans' technical zines and blog](https://jvns.ca) — a widely cited example of explaining deep technical mechanisms in plain, concrete language without dumbing them down
+- [Google's Technical Writing courses](https://developers.google.com/tech-writing) — a free, practical curriculum on writing for both technical and non-technical readers

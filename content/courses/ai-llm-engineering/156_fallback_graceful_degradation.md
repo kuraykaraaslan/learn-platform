@@ -33,7 +33,7 @@ const AI_ERROR_MESSAGES = {
 export async function generateSummary(text: string): Promise<string> {
   try {
     const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-6',
+      model: 'claude-sonnet-5',
       max_tokens: 300,
       system: SUMMARY_SYSTEM_PROMPT,
       messages: [{ role: 'user', content: text }],

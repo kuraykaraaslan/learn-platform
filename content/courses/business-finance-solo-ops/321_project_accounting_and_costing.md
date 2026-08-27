@@ -1,6 +1,8 @@
 # 321. Project-Level Accounting: Is This Client Actually Profitable?
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Treat effective hourly rate as an internal management metric, not a formal accounting figure — confirm bookkeeping treatment of costs with your accountant.
+
 Project-level accounting is the discipline of closing every project financially, not just technically. A project can be "done" the moment code is deployed, but it is not financially closed until every invoice is issued, every payment is reconciled, every direct cost is recorded, and actual hours are compared against the estimate. Most freelancers skip this step — they ship, get paid eventually, and move on without ever learning whether the project actually made money.
 
 The core diagnostic is the effective hourly rate: net project revenue divided by total actual hours. Total actual hours must include everything, not just development — unpaid discovery calls, planning, every email thread, QA, deployment, handover, and any support given after delivery. A €8,000 project that looks great on the invoice can quietly produce a €22/hour effective rate once forty hours of "quick calls" and "small fixes" are counted honestly. This is not an argument for pricing everything hourly — it is a diagnostic that tells you whether your fixed-price estimates and client-selection instincts are actually working.
@@ -55,4 +57,3 @@ Same contract value, wildly different real return — the difference is entirely
 ## Further Reading
 - *Pricing Creativity: A Guide to Profit Beyond the Billable Hour* — Blair Enns: a sharp argument for pricing on value while still knowing your real numbers underneath.
 - *Getting to Yes* is not needed here, but a simple recurring spreadsheet or Notion database with the fields above is enough — the discipline matters more than the tool.
-- This lesson is general education, not financial or tax advice. Treat effective hourly rate as an internal management metric, not a formal accounting figure — confirm bookkeeping treatment of costs with your accountant.

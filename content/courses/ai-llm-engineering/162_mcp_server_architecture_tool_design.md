@@ -80,6 +80,6 @@ server.resource('project-member', 'project://{projectId}/members/{userId}', asyn
 - Shipping a tool description that omits preconditions or error cases, leaving the model to guess when the tool is safe to call
 
 ## Further Reading
-- Model Context Protocol specification (modelcontextprotocol.io) — the authoritative reference for Tool, Resource, and Prompt semantics
+- [Model Context Protocol specification](https://modelcontextprotocol.io) — the authoritative reference for Tool, Resource, and Prompt semantics
 - Anthropic — "Model Context Protocol" documentation and reference server implementations
 - Anthropic — "Building effective agents," for the broader design philosophy of giving a model well-scoped, well-described capabilities

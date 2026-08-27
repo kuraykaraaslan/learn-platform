@@ -112,5 +112,5 @@ async function explainQuery(db: PrismaClient, tenantId: string) {
 
 ## Further Reading
 - **PostgreSQL documentation — "Indexes"** — Chapters 11–12 in the official docs; covers B-tree, partial, covering, and multicolumn indexes with examples
-- **"Use the Index, Luke" (use-the-index-luke.com)** — The best free online guide to SQL indexing; vendor-neutral, database-agnostic, and written for application developers rather than DBAs
+- [**"Use the Index, Luke"](https://use-the-index-luke.com)** — The best free online guide to SQL indexing; vendor-neutral, database-agnostic, and written for application developers rather than DBAs
 - **"Indexing in Postgres: What You Need to Know" by Brandur Leach** — Covers Prisma + PostgreSQL indexing patterns specifically; discusses covering indexes and the cases where Prisma's auto-migration falls short

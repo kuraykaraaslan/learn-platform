@@ -69,5 +69,5 @@ Later:  reuse in proposals and discovery follow-ups
 
 ## Further Reading
 - *Jab, Jab, Jab, Right Hook* — Gary Vaynerchuk: the underlying logic of giving value repeatedly across formats before ever asking for something, directly applicable to a repurposing cadence
-- Buffer's guide to content repurposing (buffer.com) — practical, current detail on turning one asset into a multi-format content plan
-- HubSpot's guide to case-study-driven proposal writing (blog.hubspot.com) — useful for the proposal-proof-snippet use case specifically
+- [Buffer's guide to content repurposing](https://buffer.com) — practical, current detail on turning one asset into a multi-format content plan
+- [HubSpot's guide to case-study-driven proposal writing](https://blog.hubspot.com) — useful for the proposal-proof-snippet use case specifically

@@ -1,6 +1,8 @@
 # 343. Reading Expansion Signals: When to Upsell
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Expansion pricing and scope should still go through your standard proposal and contract process before work begins.
+
 An expansion signal is observable evidence that a client's situation has changed in a way that creates real demand for your next offer. Timing matters as much as the offer itself — a well-timed ask on a genuine signal outperforms even the best-crafted pitch delivered at the wrong moment. Calendar-based check-ins at 30, 60, and 90 days create the opportunity to listen, but they should not be the trigger for pitching; the signal is the trigger. Signals fall into five categories: delivery completion (the client asks "what's next?"), usage and adoption ("we're doing this manually still"), business growth (the client is hiring, launching, or entering a new market), relationship health (fast responses, proactive contact, on-time payment), and risk — the negative category that means slow down rather than pitch, such as slow responses, budget contraction language, or a leadership change.
 
 Once a signal is identified, it needs to connect to real value, not just be an opportunity to sell something. Every legitimate upsell ties to one of: more revenue, less manual work, less operational risk, better reporting, better customer experience, higher reliability, better security, or a faster internal workflow. The six expansion categories that map to those values are new modules, automation, integrations, security improvements, performance improvements, and growth features — recommending something outside these categories, or recommending a fix to something that was already in the original scope, is not an upsell, it's either scope creep disguised as a sale or an admission that the original delivery was incomplete.
@@ -66,4 +68,3 @@ The score justified opening the conversation, but the actual ask still waited fo
 ## Further Reading
 - *The Challenger Customer* — Brent Adamson, Matthew Dixon, Pat Spenner, and Nick Toman: on recognizing genuine buying signals inside an account rather than guessing at readiness.
 - *Farm Don't Hunt* — Guy Nirpaz: a customer-success-driven view of growing existing accounts through observed value rather than sales pressure.
-- This lesson is general education, not financial or tax advice. Expansion pricing and scope should still go through your standard proposal and contract process before work begins.

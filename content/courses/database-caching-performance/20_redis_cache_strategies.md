@@ -127,6 +127,6 @@ async function invalidateTenantCache(tenantId: string, redis: Redis) {
 - **Write-behind for financial data**: If Redis crashes between a write-behind and the DB flush, you've lost the data permanently; write-behind is only for ephemeral, loss-tolerant data
 
 ## Further Reading
-- **AWS documentation — "Caching strategies" (docs.aws.amazon.com/AmazonElastiCache)** — Clear diagrams and explanations of all four caching patterns; language-agnostic and directly applicable
+- [**AWS documentation — "Caching strategies"](https://docs.aws.amazon.com/AmazonElastiCache)** — Clear diagrams and explanations of all four caching patterns; language-agnostic and directly applicable
 - **"Redis Explained" by Thorsten Höger** — A concise e-book covering Redis data structures and caching patterns; free online edition available
 - **"The Thundering Herd Problem" by Facebook Engineering blog** — Facebook's approach to preventing cache stampedes at scale; the probabilistic early expiration technique described is directly applicable to your TTL strategy

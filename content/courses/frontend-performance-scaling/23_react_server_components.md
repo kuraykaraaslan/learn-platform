@@ -143,5 +143,5 @@ export function DisplayNameForm() {
 
 ## Further Reading
 - **Next.js documentation — "Server Components" and "Client Components"** — The official docs now include excellent decision flow charts and the "passing Server Components to Client Components as props" pattern
-- **"Making Sense of React Server Components" by Josh Comeau (joshwcomeau.com)** — The clearest conceptual explanation of RSC mental model; covers the rendering lifecycle with diagrams
+- [**"Making Sense of React Server Components" by Josh Comeau](https://joshwcomeau.com)** — The clearest conceptual explanation of RSC mental model; covers the rendering lifecycle with diagrams
 - **"React Server Components From Scratch" by Dan Abramov (GitHub: reactjs/server-components-demo)** — The original demo repository with detailed explanations; reading the commit history shows the design rationale

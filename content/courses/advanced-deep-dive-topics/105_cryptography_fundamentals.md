@@ -88,4 +88,4 @@ const recovered = decrypt(ciphertext, iv, tag, key);
 ## Further Reading
 - *Serious Cryptography* — Jean-Philippe Aumasson: best practical cryptography book for developers, no math degree required
 - Node.js `crypto` docs — covers all primitives used above with API reference
-- *Cryptopals Challenges* (cryptopals.com) — hands-on exercises that break bad cryptography to teach correct usage
+- [*Cryptopals Challenges*](https://cryptopals.com) — hands-on exercises that break bad cryptography to teach correct usage

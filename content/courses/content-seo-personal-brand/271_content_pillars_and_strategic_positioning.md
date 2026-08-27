@@ -63,4 +63,4 @@ sound impressive? If yes, discard or rewrite grounded in a real pattern.
 ## Further Reading
 - *Building a StoryBrand* — Donald Miller: not content-specific, but the clearest explanation of why audience-value framing beats feature/topic framing in any positioning work
 - *They Ask, You Answer* — Marcus Sheridan: a practical case for building content pillars around the actual questions buyers ask before purchasing
-- HubSpot's guide to "pillar pages and topic clusters" (blog.hubspot.com) — the SEO-adjacent version of the same idea, useful for seeing how pillars and search topics reinforce each other
+- [HubSpot's guide to "pillar pages and topic clusters"](https://blog.hubspot.com) — the SEO-adjacent version of the same idea, useful for seeing how pillars and search topics reinforce each other

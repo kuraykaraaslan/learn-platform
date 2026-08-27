@@ -53,5 +53,5 @@ git bisect reset
 
 ## Further Reading
 - "Debugging" by David J. Agans — the general-purpose methodology, works outside software too
-- VS Code Debugging docs (code.visualstudio.com/docs/editor/debugging)
-- `git bisect` documentation (git-scm.com)
+- [VS Code Debugging docs](https://code.visualstudio.com/docs/editor/debugging)
+- [`git bisect` documentation](https://git-scm.com)

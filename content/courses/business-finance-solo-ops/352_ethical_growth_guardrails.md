@@ -1,6 +1,8 @@
 # 352. Ethical Growth: What Not to Do
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Data collection and consent requirements vary by jurisdiction — confirm specific privacy obligations with a qualified advisor if handling any sensitive personal data.
+
 Growth tactics for a freelance or solo software business should increase trust, not manipulate people — and this isn't just a values statement, it's a practical constraint, because a reputation-dependent business that gets caught using deceptive growth tactics loses far more than any single tactic could have gained. The standard every growth tactic must meet is: truthful, permission-aware, privacy-conscious, non-deceptive, respectful of boundaries, and aligned with real capabilities. Clear positioning, useful technical content, honest case studies, permission-based testimonials, respectful outbound, transparent calls-to-action, reasonable follow-up, and privacy-conscious analytics are all allowed and encouraged — none of them require manipulation to work.
 
 A specific list of tactics is simply off-limits regardless of how effective they might seem: fake testimonials, fake scarcity, fake client logos, fake metrics, scraped personal data abuse, spam automation, misleading guarantees, bait-and-switch pricing, dark-pattern lead capture, and using confidential client data as proof without permission. Any public claim also needs to survive a verification test — "I guarantee your SaaS will succeed" is an unsupportable promise that invites exactly the kind of scrutiny that destroys credibility, while "I help reduce delivery risk by clarifying scope, defining MVP workflows, and documenting handover" is specific, honest, and defensible under questioning. The same discipline applies to data: collect only what's needed for qualification and follow-up, and never store sensitive personal data without a clear project reason and appropriate consent — and to outreach: personalized and relevant is fine, aggressive sequences, misleading subject lines, and pressure-based messaging are not.
@@ -66,4 +68,3 @@ Each rewrite keeps the persuasive intent of the original tactic while removing t
 ## Further Reading
 - *Influence* — Robert Cialdini: the foundational text on persuasion principles, useful precisely because it shows how easily the same techniques tip into manipulation.
 - *This Is Marketing* — Seth Godin: a case for permission-based, trust-building marketing as a durable strategy rather than a compliance burden.
-- This lesson is general education, not financial or tax advice. Data collection and consent requirements vary by jurisdiction — confirm specific privacy obligations with a qualified advisor if handling any sensitive personal data.

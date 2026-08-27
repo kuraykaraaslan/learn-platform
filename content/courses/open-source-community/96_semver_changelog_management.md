@@ -135,4 +135,4 @@ conventional-changelog -p angular -i CHANGELOG.md -s
 ## Further Reading
 - **semver.org** — The full semver specification; short and worth reading completely; the FAQ section addresses edge cases like "what counts as a public API" for libraries
 - **keepachangelog.com** — The standard for human-readable changelogs; includes the full format, a manifesto for why automated git log changelogs are insufficient, and examples
-- **Conventional Commits specification (conventionalcommits.org)** — The commit message format that enables automated semver calculation and changelog generation; includes examples of all commit types and the BREAKING CHANGE footer syntax
+- [**Conventional Commits specification](https://conventionalcommits.org)** — The commit message format that enables automated semver calculation and changelog generation; includes examples of all commit types and the BREAKING CHANGE footer syntax

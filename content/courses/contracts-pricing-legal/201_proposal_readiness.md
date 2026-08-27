@@ -59,4 +59,4 @@ This lesson is a discipline lesson, not a legal one — but the habits here dire
 ## Further Reading
 - Alan Weiss, *Value-Based Fees* — on qualifying a client's real decision authority and budget before proposing.
 - Blair Enns, *Pricing Creativity: A Guide to Profit Beyond the Billable Hour* — on why scoping precedes pricing, not the other way around.
-- Jonathan Stark's writing and podcast on "hourly billing is nuts" and proposal timing for consulting engagements (jonathanstark.com).
+- [Jonathan Stark's writing and podcast on "hourly billing is nuts" and proposal timing for consulting engagements](https://jonathanstark.com).

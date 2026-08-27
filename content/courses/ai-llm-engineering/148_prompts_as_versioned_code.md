@@ -33,7 +33,7 @@ Constraints:
 `.trim();
 
 export const SUMMARY_CONFIG = {
-  model: 'claude-sonnet-4-6',
+  model: 'claude-sonnet-5',
   max_tokens: 200,      // ~150 words output budget, with headroom
   temperature: 0.3,     // deterministic-leaning; this is a factual summary, not prose
 } as const;

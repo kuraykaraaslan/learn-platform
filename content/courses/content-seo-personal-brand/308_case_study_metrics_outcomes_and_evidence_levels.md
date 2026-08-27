@@ -64,5 +64,5 @@ reduced risk of overlapping bookings."
 
 ## Further Reading
 - *How to Measure Anything* — Douglas Hubbard: a rigorous, practical approach to quantifying outcomes honestly even under real uncertainty
-- The FTC's endorsement and testimonial guidelines (ftc.gov) — a first-party baseline for truth-in-advertising that applies directly to published outcome and testimonial claims
+- [The FTC's endorsement and testimonial guidelines](https://ftc.gov) — a first-party baseline for truth-in-advertising that applies directly to published outcome and testimonial claims
 - A practical primer on distinguishing correlation from attributed impact in product/analytics contexts — useful for calibrating Level 2 vs. Level 3 claims honestly

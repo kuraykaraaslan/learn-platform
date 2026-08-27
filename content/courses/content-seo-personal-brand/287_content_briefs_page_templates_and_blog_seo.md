@@ -78,6 +78,6 @@ Organic sessions to page + scope-review form submissions from this page
 - Treating keyword choice as a final polish step instead of a brief-stage decision
 
 ## Further Reading
-- HubSpot's content brief templates and blog SEO guidance (blog.hubspot.com) — practical, widely used starting points for brief structure
-- Google's "Helpful Content" self-assessment questions (developers.google.com/search) — a useful checklist for whether a draft actually serves the reader
+- [HubSpot's content brief templates and blog SEO guidance](https://blog.hubspot.com) — practical, widely used starting points for brief structure
+- [Google's "Helpful Content" self-assessment questions](https://developers.google.com/search) — a useful checklist for whether a draft actually serves the reader
 - *Everybody Writes* — Ann Handley: a strong general reference for writing web content that stays clear and useful across technical and non-technical audiences

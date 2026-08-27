@@ -1,6 +1,8 @@
 # 344. Building a Referral and Partner Channel
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Referral fee arrangements may have tax or disclosure implications depending on your jurisdiction — confirm with your accountant before formalizing a fee-based partnership.
+
 Referrals should not be left to luck. A deliberate referral engine makes it easy for satisfied clients, past colleagues, and adjacent service providers to introduce the right kind of prospect, at the right time, with almost no effort on their part. A good referral ask is specific about the ideal client (not "anyone who needs a developer"), easy to forward as-is, timed after value has clearly been delivered, and respectful of the relationship — never pressuring, never vague. The best moments to ask are when a client confirms satisfaction, a system successfully launches, a support interaction goes well, or a testimonial has just been given; asking during an unresolved issue undermines both the ask and the relationship.
 
 A partner channel is a step beyond a one-off referral ask: it's a recurring relationship with someone who has ongoing access to your ideal client type and is motivated to refer consistently — freelance designers, accountants, digital agencies without in-house dev capacity, or industry-specific advisors. A relationship should not be formalized into a partnership until it has already produced at least one real, qualified referral; formalizing on hope rather than evidence wastes effort on relationships that were never going to be reciprocal. Once qualified, arrangements take one of three shapes: reciprocal referral with no money involved, a referral fee (commonly 5-10% of the first project's value only, paid on contract signature, capped at a defined maximum), or simple cross-promotion to each other's audiences.
@@ -76,4 +78,3 @@ The partnership email was only sent after Marcus had already produced one real, 
 ## Further Reading
 - *The Referral Engine* — John Jantsch: a full framework for building word-of-mouth systems deliberately rather than hoping they happen.
 - *Give and Take* — Adam Grant: on how reciprocity and genuinely generous relationship-building outperform transactional networking over time.
-- This lesson is general education, not financial or tax advice. Referral fee arrangements may have tax or disclosure implications depending on your jurisdiction — confirm with your accountant before formalizing a fee-based partnership.

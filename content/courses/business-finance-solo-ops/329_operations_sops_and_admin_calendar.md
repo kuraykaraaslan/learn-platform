@@ -1,6 +1,8 @@
 # 329. Turning Recurring Admin Work into SOPs
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Calendar cadences and SOP content here are operational suggestions — adapt frequency to your actual obligation deadlines and jurisdiction requirements.
+
 A solo operator has no colleague to catch a forgotten renewal or a missed follow-up — memory is the only backstop, and memory is unreliable under delivery pressure. The fix is to convert recurring admin work into standard operating procedures (SOPs) tied to a fixed calendar, so obligations don't depend on remembering to remember them.
 
 The areas that most benefit from an SOP are the ones that repeat with real consequences if skipped: new client onboarding, invoice issuing, payment follow-up, expense recording, subscription review, the monthly close, project financial close, accountant handoff, backing up finance records, client offboarding, and support request intake. Each SOP needs the same seven fields regardless of topic — purpose, trigger, owner, frequency, inputs, steps, and outputs plus a storage location and a quality check — so that any of them can be picked up cold, including by you six months from now with no memory of writing it.
@@ -58,4 +60,3 @@ This single document is what turns "did I do the close this month?" from a memor
 ## Further Reading
 - *The E-Myth Revisited* — Michael E. Gerber: the foundational argument for why even a one-person business benefits from documented, repeatable systems.
 - *Work the System* — Sam Carpenter: a practical framework for converting recurring chaos into simple, written procedures.
-- This lesson is general education, not financial or tax advice. Calendar cadences and SOP content here are operational suggestions — adapt frequency to your actual obligation deadlines and jurisdiction requirements.

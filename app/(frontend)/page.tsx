@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <div>
       <h1 className="text-2xl font-semibold text-text-primary mb-2">Courses</h1>
-      <p className="text-text-secondary mb-8">A course platform for interns and employees.</p>
+      <p className="text-text-secondary mb-8">Path to the software business era.</p>
 
       <div className="grid gap-4 sm:grid-cols-2">
         {courses.map((course) => (

@@ -185,6 +185,6 @@ dig TXT _dmarc.yourdomain.com
 - **Forgetting email authentication when switching providers**: Each provider has its own DKIM key; switching from SendGrid to Resend requires adding new DKIM DNS records before removing old ones — gaps in DKIM coverage cause deliverability drops
 
 ## Further Reading
-- **"Email Deliverability Guide" — Resend (resend.com/docs/knowledge-base/email-deliverability)** — Provider-specific but covers universal principles; includes DNS record templates and testing tools
-- **"Postmaster Tools" — Google (postmaster.google.com)** — Free tool from Google that shows your domain and IP reputation as Gmail sees it; sign up and verify your domain before your first real send
-- **MxToolbox (mxtoolbox.com/EmailHeaders.aspx)** — Free tool for testing SPF, DKIM, and DMARC configuration; paste an email header and see whether authentication passed or failed and why
+- [Resend: domain setup and authentication docs](https://resend.com/docs/dashboard/domains/introduction) — provider-specific but covers the universal principles; includes the SPF/DKIM/DMARC records you actually have to publish
+- [**"Postmaster Tools" — Google](https://postmaster.google.com)** — Free tool from Google that shows your domain and IP reputation as Gmail sees it; sign up and verify your domain before your first real send
+- [**MxToolbox](https://mxtoolbox.com/EmailHeaders.aspx)** — Free tool for testing SPF, DKIM, and DMARC configuration; paste an email header and see whether authentication passed or failed and why

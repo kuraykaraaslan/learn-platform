@@ -1,6 +1,8 @@
 # 332. The Paid Audit as a Sales and Risk-Reduction Tool
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Price bands here are illustrative — set your own audit pricing based on your delivery time and local market rates.
+
 A paid audit is a small, bounded diagnostic engagement — a technical debt review, a performance and security check, an SEO review, a pre-launch readiness check — sold as a standalone product rather than folded into a larger proposal. It solves two problems at once: it gives a skeptical or budget-cautious prospect a low-commitment way to start working with you, and it gives you a real look inside a system before committing to a large fixed-price quote against unknowns.
 
 The reason audits convert so well into larger projects is structural, not accidental: a good audit report doesn't just list problems, it prioritizes them (critical, high, medium, low) and closes with a findings call where the natural next question is "what would it take to fix the top three?" That question turns directly into a remediation or rebuild proposal, and because the audit already proved competence and surfaced concrete evidence, close rates from audit to project are typically strong — commonly 70% or higher when the audit is well delivered.
@@ -61,4 +63,3 @@ The report structure alone does most of the selling — a client who has just re
 ## Further Reading
 - *The Trusted Advisor* — David H. Maister, Charles H. Green, Robert M. Galford: on why a diagnostic-first engagement builds the trust that larger project sales depend on.
 - The Offer_Library audit package examples (Technical Debt, Performance & Security, SEO & Web Vitals, Pre-Launch Readiness) are worth using directly as starting templates.
-- This lesson is general education, not financial or tax advice. Price bands here are illustrative — set your own audit pricing based on your delivery time and local market rates.

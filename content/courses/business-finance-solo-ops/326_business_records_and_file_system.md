@@ -1,6 +1,8 @@
 # 326. Business Records and File Organization for Accountant Handoff
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Confirm with your accountant or local regulations how long specific record types must legally be retained in your jurisdiction.
+
 A business record that can't be found within a few minutes is, for practical purposes, the same as a record that doesn't exist. File organization is not administrative busywork — it's what makes accounting handoff painless, what protects you in a client dispute, and what lets future-you reconstruct exactly what happened with a project or a payment eighteen months later without relying on memory.
 
 The fix is a predictable, hierarchical folder structure and a consistent file-naming convention applied without exception. Finance records live under a dated structure (year, then month), client records live under client-then-project folders with contract, proposal, finance, delivery, and handover subfolders, and vendor records get their own space. File names follow a fixed pattern — date, client or vendor, project, document type, and version — so that a file's identity is legible from its name alone, without opening it. "final_final_real.pdf" is the canonical failure mode this convention exists to prevent.
@@ -54,4 +56,3 @@ Anyone — including a future accountant or a version of you eighteen months fro
 ## Further Reading
 - *Getting Things Done* — David Allen: the broader organizational discipline (capture everything, file predictably) applies directly to financial record-keeping.
 - Most cloud storage providers (Google Drive, Dropbox) support this folder structure natively — the convention matters more than the specific tool.
-- This lesson is general education, not financial or tax advice. Confirm with your accountant or local regulations how long specific record types must legally be retained in your jurisdiction.

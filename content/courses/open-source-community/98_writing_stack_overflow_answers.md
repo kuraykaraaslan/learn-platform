@@ -121,6 +121,6 @@ If you spent > 2 hours solving a problem this week:
 - **Answering questions outside your confidence zone to gain reputation**: Wrong answers that get accepted are the most damaging contribution you can make; if you are not confident, ask a clarifying question in comments rather than posting a speculative answer
 
 ## Further Reading
-- **Stack Overflow: How to Write a Good Answer (stackoverflow.com/help/how-to-answer)** — The official guide; covers the expected format, how to handle questions where you think a different approach is better, and how to handle comments on your answers
+- [**Stack Overflow: How to Write a Good Answer](https://stackoverflow.com/help/how-to-answer)** — The official guide; covers the expected format, how to handle questions where you think a different approach is better, and how to handle comments on your answers
 - **"Stack Overflow for Teams: The Complete Guide" — Prashanth Chandrasekar** — Not about SO Teams as a product, but about why technical knowledge bases have leverage; applicable to understanding why writing answers compounds
-- **"How to Ask" (stackoverflow.com/help/how-to-ask)** — Counterintuitively, reading the question-writing guide makes you a better answer-writer; you understand what context answerers need, which makes you better at providing context in self-answered pairs
+- [**"How to Ask"](https://stackoverflow.com/help/how-to-ask)** — Counterintuitively, reading the question-writing guide makes you a better answer-writer; you understand what context answerers need, which makes you better at providing context in self-answered pairs

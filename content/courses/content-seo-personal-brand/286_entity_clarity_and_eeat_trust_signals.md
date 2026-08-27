@@ -63,6 +63,6 @@ Discovery → scope → architecture → build → test → deploy → handover.
 - Treating the About page as a formality instead of the highest-leverage trust asset on the site
 
 ## Further Reading
-- Google's "Creating Helpful, Reliable, People-First Content" and E-E-A-T documentation (developers.google.com/search) — the primary source defining these signals
+- [Google's "Creating Helpful, Reliable, People-First Content" and E-E-A-T documentation](https://developers.google.com/search) — the primary source defining these signals
 - Google's Search Quality Rater Guidelines (public PDF) — the document search quality raters actually use, useful for seeing E-E-A-T evaluated in practice
 - *Trust Me, I'm Lying* — Ryan Holiday: a useful (if cynical) look at how authority and credibility signals get manufactured online, worth reading precisely to avoid doing it

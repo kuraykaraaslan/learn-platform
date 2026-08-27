@@ -1,6 +1,8 @@
 # 334. Retainer Renewal, Renegotiation, and Graceful Cancellation
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Any price change or scope amendment should be confirmed in writing and reflected in your contract terms.
+
 A retainer that's allowed to just quietly continue or quietly lapse is a retainer being managed by default rather than by design. Renewal needs to be initiated proactively — 30 days before the end date for retainers under six months, 60 days before for longer ones — because waiting for the client to raise it first signals disorganization exactly when you'd want to project the opposite.
 
 The renewal conversation isn't a single script; it branches based on evidence. An upgrade conversation is justified only when there's a pattern — at least three out-of-scope requests in the current term — not a hunch. A downgrade conversation should often be offered proactively when usage has clearly dropped, because volunteering it before the client asks builds more long-term trust than waiting to be asked. A pause request needs defined terms (a bounded pause period, explicit notice required to resume) rather than an open-ended "sure, whenever." And a cancellation conversation should never be argued — the goal is to listen, understand the real reason, and preserve the relationship for a future re-engagement or referral, not to win the client back on the spot.
@@ -56,4 +58,3 @@ The upgrade wasn't pitched from a hunch that the client "seemed busier" — it w
 ## Further Reading
 - *Never Split the Difference* — Chris Voss: negotiation principles (labeling, calibrated questions, listening first) that map directly onto renewal and cancellation conversations.
 - *The Trusted Advisor* — David H. Maister, Charles H. Green, Robert M. Galford: on why proactive, evidence-based conversations build more long-term trust than reactive ones.
-- This lesson is general education, not financial or tax advice. Any price change or scope amendment should be confirmed in writing and reflected in your contract terms.

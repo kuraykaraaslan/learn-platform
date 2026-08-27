@@ -329,9 +329,10 @@ export const RULES: Rule[] = [
       for (const slug of listCourseSlugs())
         for (const item of readCourseManifest(slug).items) ids.add(item.id);
 
-      // Mirrors remark-lesson-refs: these are the forms that DO become links.
+      // Mirrors remark-lesson-refs: a bare id becomes a link unless a counter
+      // noun precedes it. Anything this masks out is already linked.
       const linked =
-        /\(#\d{1,3}\)|\b(?:see|See|ties to|also see|counterpart to|covered in|described in)\s+#\d{1,3}\b|\bLessons?\s+\d{1,3}\b/g;
+        /(?<!\b(?:rule|issue|step|item|no|num|number|pr|ticket|bug|chapter|figure|part|point|phase|option|version|week|day)\.?\s)#\d{1,3}\b|\b(?:Lessons?|Courses?)\s+\d{1,3}\b/gi;
 
       const out: Finding[] = [];
       for (const { line, index, inFence } of walkLines(file.lines)) {

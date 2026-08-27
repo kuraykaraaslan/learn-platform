@@ -1,6 +1,8 @@
 # 331. Building a Productized Offer Catalog with Real Price Bands
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Price bands shown here are illustrative examples — validate your own pricing against your market, cost base, and actual delivery hours.
+
 A productized service turns repeated freelance work into something easier to buy, sell, and deliver — without becoming fully custom again. It doesn't eliminate customization; it bounds it. A landing page package that flexes on colors and copy but always delivers six fixed sections, a contact form, and analytics setup is productized. A landing page package that might become a five-page site, might include a CMS, and might need a client portal depending on the conversation is not — it's a custom project wearing a productized label.
 
 Every entry in a real offer catalog needs the same structure: a clear problem it solves, an ideal buyer, defined input requirements, fixed or tightly bounded deliverables, a repeatable process, a realistic timeline range, clear price logic, explicit exclusions, and a next-step upgrade path. A catalog built this way reads like a menu: a prospect can self-select the right package from the problem description alone, without a scoping call to understand what they'd even be buying.
@@ -73,4 +75,3 @@ The price band and exclusions are visible before a single call happens — a pro
 ## Further Reading
 - *Built to Sell* — John Warrillow: the case for productizing expertise into something that can be sold and delivered repeatably.
 - The Offer_Library fixed-price package examples (Landing Page Pro, Admin Panel MVP, API Integration Package) are worth studying as fully worked templates of this structure.
-- This lesson is general education, not financial or tax advice. Price bands shown here are illustrative examples — validate your own pricing against your market, cost base, and actual delivery hours.

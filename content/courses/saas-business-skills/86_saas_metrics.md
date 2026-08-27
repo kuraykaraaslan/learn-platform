@@ -169,6 +169,6 @@ ORDER BY base_month;
 - **LTV without gross margin**: LTV calculated on revenue, not gross profit, overstates true customer value; subtract hosting, payment processing, and support costs from MRR before calculating LTV
 
 ## Further Reading
-- **"SaaS Metrics 2.0" — David Skok (forentrepreneurs.com)** — The most comprehensive freely available guide to SaaS metrics; includes formulas, benchmarks, and investor expectations by stage
+- [**"SaaS Metrics 2.0" — David Skok](https://forentrepreneurs.com)** — The most comprehensive freely available guide to SaaS metrics; includes formulas, benchmarks, and investor expectations by stage
 - **"Winning by Design" — Jacco van der Kooij** — Revenue operations framework including NRR optimization and the metrics that predict scalable growth
 - **"The SaaS CFO" — Ben Murray (thesaascfo.com)** — Practical financial modeling for SaaS founders; includes downloadable spreadsheet templates for MRR tracking and cohort analysis

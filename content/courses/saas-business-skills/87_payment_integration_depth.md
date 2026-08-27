@@ -215,6 +215,6 @@ async function handlePaymentFailed(_invoice: Stripe.Invoice) { /* ... */ }
 - **Waiting to collect dispute evidence**: The dispute window (7–21 days) feels long but Stripe requires evidence before the deadline; automate evidence collection on `charge.dispute.created` so the evidence is always ready when you need to submit
 
 ## Further Reading
-- **Stripe Webhook Documentation (stripe.com/docs/webhooks)** — The canonical reference; the "Best practices" section covers idempotency, retry handling, and signature verification with production-grade examples
+- [**Stripe Webhook Documentation](https://stripe.com/docs/webhooks)** — The canonical reference; the "Best practices" section covers idempotency, retry handling, and signature verification with production-grade examples
 - **"Stripe's Approach to Idempotency" — stripe.com/blog/idempotency** — Stripe's own engineering blog post explaining the full theory of idempotency keys and how they implement it at scale; directly applicable to your own API design
-- **PayPal Webhook Verification Documentation (developer.paypal.com)** — The equivalent reference for PayPal; their verification approach differs from Stripe (certificate-based rather than HMAC) — worth reading if you extend your PayPal integration
+- [**PayPal Webhook Verification Documentation](https://developer.paypal.com)** — The equivalent reference for PayPal; their verification approach differs from Stripe (certificate-based rather than HMAC) — worth reading if you extend your PayPal integration

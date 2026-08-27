@@ -63,6 +63,6 @@ Email 6: Soft invitation to a project review
 - Promising a cadence (e.g., daily emails) the sequence design can't actually sustain
 
 ## Further Reading
-- HubSpot's guide to lead nurturing campaigns (blog.hubspot.com) — a practical, tool-agnostic reference for stage-matched nurture design
+- [HubSpot's guide to lead nurturing campaigns](https://blog.hubspot.com) — a practical, tool-agnostic reference for stage-matched nurture design
 - *Predictable Revenue* — Aaron Ross: the origin of much modern thinking on qualifying and moving leads through defined stages before a sales conversation
-- ActiveCampaign's documentation on customer journey automation (activecampaign.com) — concrete detail on building exit conditions and branching logic once a sequence needs it
+- [ActiveCampaign's documentation on customer journey automation](https://activecampaign.com) — concrete detail on building exit conditions and branching logic once a sequence needs it

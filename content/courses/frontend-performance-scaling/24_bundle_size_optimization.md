@@ -127,4 +127,4 @@ import { Modal } from '@/components/ui/modal';
 ## Further Reading
 - **Next.js documentation — "Optimizing: Bundle Analyzer"** — Official setup guide for `@next/bundle-analyzer`; the starting point for any bundle size investigation
 - **"How We Reduced Our JavaScript Bundle Size by 33%" by Storybook Blog** — A real-world case study; the techniques (barrel file elimination, dynamic imports) apply directly to Next.js apps
-- **"Bundlephobia" (bundlephobia.com)** — Check any npm package's bundle size, tree-shaking support, and whether it's ES module compatible before installing it
+- [**"Bundlephobia"](https://bundlephobia.com)** — Check any npm package's bundle size, tree-shaking support, and whether it's ES module compatible before installing it

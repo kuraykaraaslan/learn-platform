@@ -2,19 +2,18 @@
   "generatedFrom": "scripts/content-lint",
   "lessons": 412,
   "totals": {
-    "findings": 630,
+    "findings": 274,
     "errors": 0,
-    "warnings": 630,
-    "waived": 0
+    "warnings": 274,
+    "waived": 4
   },
   "byRule": {
-    "sources/no-url": 282,
-    "sources/bare-domain": 166,
-    "links/unlinked-lesson-ref": 47,
+    "sources/no-url": 172,
     "code/private-alias": 45,
-    "sources/disclaimer-as-source": 40,
     "code/unlabeled-fence": 35,
-    "sources/quota-signature": 15
+    "sources/quota-signature": 15,
+    "sources/bare-domain": 6,
+    "links/unlinked-lesson-ref": 1
   },
   "findings": [
     {
@@ -364,147 +363,147 @@
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/316_cash_flow_and_runway.md",
-      "line": 23,
+      "line": 25,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/317_invoicing_and_payment_tracking.md",
-      "line": 22,
+      "line": 24,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/317_invoicing_and_payment_tracking.md",
-      "line": 33,
+      "line": 35,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/318_banking_and_payment_methods.md",
-      "line": 22,
+      "line": 24,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/318_banking_and_payment_methods.md",
-      "line": 41,
-      "message": "fence has no language tag"
-    },
-    {
-      "rule": "code/unlabeled-fence",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/319_tax_and_accounting_readiness.md",
-      "line": 22,
-      "message": "fence has no language tag"
-    },
-    {
-      "rule": "code/unlabeled-fence",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/319_tax_and_accounting_readiness.md",
       "line": 43,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
-      "target": "business-finance-solo-ops/320_expense_and_subscription_control.md",
-      "line": 22,
+      "target": "business-finance-solo-ops/319_tax_and_accounting_readiness.md",
+      "line": 24,
+      "message": "fence has no language tag"
+    },
+    {
+      "rule": "code/unlabeled-fence",
+      "severity": "warn",
+      "target": "business-finance-solo-ops/319_tax_and_accounting_readiness.md",
+      "line": 45,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/320_expense_and_subscription_control.md",
-      "line": 36,
+      "line": 24,
+      "message": "fence has no language tag"
+    },
+    {
+      "rule": "code/unlabeled-fence",
+      "severity": "warn",
+      "target": "business-finance-solo-ops/320_expense_and_subscription_control.md",
+      "line": 38,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/321_project_accounting_and_costing.md",
-      "line": 22,
+      "line": 24,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/322_time_tracking_and_effective_rate.md",
-      "line": 21,
+      "line": 23,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/323_revenue_stream_design.md",
-      "line": 21,
+      "line": 23,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/324_monthly_financial_close.md",
-      "line": 20,
+      "line": 22,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/325_finance_dashboard_and_kpis.md",
-      "line": 22,
+      "line": 24,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/326_business_records_and_file_system.md",
-      "line": 21,
+      "line": 23,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/327_risk_reserve_and_contingency.md",
-      "line": 21,
+      "line": 23,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/328_procurement_and_vendor_management.md",
-      "line": 21,
+      "line": 23,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/330_pricing_for_margin.md",
-      "line": 21,
+      "line": 23,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/334_retainer_renewal_and_negotiation.md",
-      "line": 22,
+      "line": 24,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/345_pipeline_forecasting.md",
-      "line": 21,
+      "line": 23,
       "message": "fence has no language tag"
     },
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
       "target": "business-finance-solo-ops/348_acquisition_funnel_and_attribution.md",
-      "line": 21,
+      "line": 23,
       "message": "fence has no language tag"
     },
     {
@@ -580,42 +579,6 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "advanced-deep-dive-topics/104_database_internals.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/105_cryptography_fundamentals.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/107_api_design_philosophy.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/108_monorepo_tooling.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/109_performance_profiling.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "advanced-deep-dive-topics/110_reading_large_codebases.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
@@ -628,19 +591,7 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "advanced-deep-dive-topics/112_technical_writing.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "advanced-deep-dive-topics/113_systems_thinking.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "ai-llm-engineering/140_ai_llm_integration.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -652,19 +603,7 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "ai-llm-engineering/147_anthropic_api_client_architecture.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "ai-llm-engineering/148_prompts_as_versioned_code.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "ai-llm-engineering/149_structured_output_schema_validation.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -688,18 +627,6 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "ai-llm-engineering/153_model_selection_strategy.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "ai-llm-engineering/154_token_budget_cost_engineering.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "ai-llm-engineering/155_streaming_ai_responses_production.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
@@ -712,19 +639,7 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "ai-llm-engineering/157_building_eval_pipeline.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "ai-llm-engineering/158_observability_logging_ai_features.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "ai-llm-engineering/159_prompt_injection_defense.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -737,12 +652,6 @@
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "ai-llm-engineering/161_ai_feature_ux_patterns.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "ai-llm-engineering/162_mcp_server_architecture_tool_design.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -766,25 +675,7 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "algorithms-concurrency/129_concurrency_async_fundamentals.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "algorithms-concurrency/130_data_structures_algorithms_practice.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "architecture-design-patterns-testing/134_domain_driven_design.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -797,241 +688,223 @@
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/316_cash_flow_and_runway.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/317_invoicing_and_payment_tracking.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/318_banking_and_payment_methods.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/319_tax_and_accounting_readiness.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/320_expense_and_subscription_control.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/321_project_accounting_and_costing.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/322_time_tracking_and_effective_rate.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/323_revenue_stream_design.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/324_monthly_financial_close.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/325_finance_dashboard_and_kpis.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/326_business_records_and_file_system.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/327_risk_reserve_and_contingency.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/328_procurement_and_vendor_management.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/329_operations_sops_and_admin_calendar.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/330_pricing_for_margin.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/331_productized_offer_catalog.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/332_paid_audit_as_door_opener.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/333_retainers_vs_maintenance.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/334_retainer_renewal_and_negotiation.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/335_custom_bundle_design.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/336_scoping_fixed_price_projects.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/337_selling_without_a_reference.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/338_growth_focus_and_bets.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/339_growth_risk_and_concentration.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/340_scaling_with_contractors.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/341_strategic_repositioning.md",
-      "message": "4 Further Reading bullets, none with a URL"
+      "message": "3 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/342_account_health_management.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/343_expansion_signals_and_upsell.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/344_referral_and_partner_channels.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/345_pipeline_forecasting.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/346_case_study_and_proof_loop.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/347_growth_model_and_north_star.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/348_acquisition_funnel_and_attribution.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/349_growth_experiment_design.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/350_decision_rules_and_scaling.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/351_weekly_monthly_business_review.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/352_ethical_growth_guardrails.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/353_business_continuity_planning.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/354_non_negotiable_operating_rules.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "business-finance-solo-ops/355_burnout_as_a_business_risk.md",
-      "message": "3 Further Reading bullets, none with a URL"
+      "message": "2 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
@@ -1049,12 +922,6 @@
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "career-entrepreneurship/116_legal_literacy.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "career-entrepreneurship/117_financial_literacy.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -1240,18 +1107,6 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "content-seo-personal-brand/271_content_pillars_and_strategic_positioning.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/272_idea_capture_system.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "content-seo-personal-brand/273_audience_and_intent_mapping.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
@@ -1264,97 +1119,7 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "content-seo-personal-brand/275_technical_writing_style_for_business_readers.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "content-seo-personal-brand/276_content_repurposing_one_idea_many_assets.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/277_content_calendar_cadence_and_quality_gate.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/278_ai_assisted_content_without_losing_your_voice.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/279_content_analytics_library_and_asset_management.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/280_seo_and_aeo_as_one_visibility_system.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/281_search_intent_topic_clusters_and_keyword_query_mapping.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/282_technical_seo_foundations_crawl_render_index.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/283_metadata_titles_descriptions_and_canonical_url_strategy.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/284_robots_snippet_controls_and_structured_data.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/285_ai_search_and_answer_engine_optimization.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/286_entity_clarity_and_eeat_trust_signals.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/287_content_briefs_page_templates_and_blog_seo.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/288_landing_page_local_and_service_seo.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/289_internal_linking_information_architecture_and_rich_media_seo.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/290_content_operations_at_scale_programmatic_seo_refresh_and_search_console_review.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -1366,145 +1131,13 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "content-seo-personal-brand/292_linkedin_authority_operating_system_pillars_and_weekly_cadence.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "content-seo-personal-brand/293_linkedin_profile_positioning_headline_and_about_section.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "content-seo-personal-brand/294_featured_section_proof_assets_and_credibility_signals.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/295_technical_post_frameworks_and_case_study_posts.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/296_problem_solution_founder_story_carousel_and_video_posts.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/297_comment_strategy_dms_and_networking.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/298_soft_pitching_repurposing_and_analytics_on_linkedin.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/299_email_list_strategy_audience_consent_and_opt_in_design.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/300_newsletter_system_architecture_and_editorial_strategy.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/301_welcome_and_nurture_sequence_design.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/302_email_copywriting_voice_subject_lines_and_ctas.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/303_proof_emails_and_ready_to_use_templates.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/304_segmentation_crm_automation_and_sales_handoff.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/305_deliverability_list_hygiene_reengagement_and_metrics.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/306_case_study_structure_narrative_arc_and_operating_system.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/307_confidentiality_anonymization_and_technical_depth_calibration.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/308_case_study_metrics_outcomes_and_evidence_levels.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "content-seo-personal-brand/309_project_selection_and_portfolio_auditing.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/310_visual_proof_screenshots_and_demo_videos.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/311_testimonials_and_github_as_proof.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/312_portfolio_page_structure_and_seo.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/313_proof_asset_repurposing_one_case_study_many_assets.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "contracts-pricing-legal/201_proposal_readiness.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "contracts-pricing-legal/202_pricing_models.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -1612,12 +1245,6 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "contracts-pricing-legal/220_third_party_services_and_license_risk.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "contracts-pricing-legal/221_client_responsibilities_and_decision_maker_rule.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
@@ -1696,36 +1323,6 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "database-caching-performance/16_n_plus_1_query_problem.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "database-caching-performance/17_database_index_strategy.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "database-caching-performance/18_query_plan_analysis.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "database-caching-performance/19_connection_pool_tuning.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "database-caching-performance/20_redis_cache_strategies.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "database-caching-performance/21_cdn_cache_strategy.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
@@ -1733,12 +1330,6 @@
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "distributed-systems-api-design/01_cap_theorem.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/02_event_sourcing_cqrs.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -1756,37 +1347,7 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "distributed-systems-api-design/05_rate_limiting_strategies.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/06_distributed_locking.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "distributed-systems-api-design/07_idempotency_key_pattern.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/08_webhook_security_retry.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/09_api_versioning_strategies.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/10_backward_forward_compatibility.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -1804,55 +1365,7 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "distributed-systems-api-design/13_cqrs_read_model_optimization.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/14_outbox_pattern.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/15_two_phase_commit_eventual_consistency.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/131_message_queues_101.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/136_api_gateway_bff.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "frontend-performance-scaling/22_http2_multiplexing.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "frontend-performance-scaling/23_react_server_components.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "frontend-performance-scaling/24_bundle_size_optimization.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -1894,31 +1407,13 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "fundamentals-tools/123_debugging_fundamentals.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "fundamentals-tools/124_unit_testing_basics.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "fundamentals-tools/125_rest_api_basics.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "fundamentals-tools/126_cli_dev_environment_basics.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "fundamentals-tools/127_auth_basics.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -1949,84 +1444,6 @@
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "observability-deployment/141_cloud_architecture_well_architected.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "open-source-community/94_contributing_to_open_source.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "open-source-community/95_publishing_maintaining_oss_tool.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "open-source-community/96_semver_changelog_management.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "open-source-community/97_publishing_npm_github_packages.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "open-source-community/98_writing_stack_overflow_answers.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "open-source-community/99_conference_meetup_speaking.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "open-source-community/100_creating_reference_resource.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "process-soft-skills/76_rfc_process.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "process-soft-skills/77_technical_debt_prioritization.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "process-soft-skills/78_code_review_culture.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "process-soft-skills/79_blameless_post_mortem.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "process-soft-skills/80_mentorship.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "process-soft-skills/81_explaining_technical_concepts.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -2068,12 +1485,6 @@
     {
       "rule": "sources/no-url",
       "severity": "warn",
-      "target": "product-technical-strategy/371_product_strategy_operating_system.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
       "target": "product-technical-strategy/372_problem_framing.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
@@ -2105,24 +1516,6 @@
       "rule": "sources/no-url",
       "severity": "warn",
       "target": "product-technical-strategy/377_scope_boundaries.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "product-technical-strategy/378_product_requirements_document.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "product-technical-strategy/379_user_stories_acceptance_criteria.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "product-technical-strategy/380_user_journey_flow_mapping.md",
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
@@ -2216,598 +1609,10 @@
       "message": "3 Further Reading bullets, none with a URL"
     },
     {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "saas-business-skills/86_saas_metrics.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "saas-business-skills/87_payment_integration_depth.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "saas-business-skills/88_email_deliverability.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "saas-business-skills/89_internationalization.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "saas-business-skills/90_accessibility.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "saas-business-skills/91_mobile_first_api_design.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "saas-business-skills/92_analytics_integration.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "saas-business-skills/93_ab_test_infrastructure.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/no-url",
-      "severity": "warn",
-      "target": "security/143_compliance_frameworks.md",
-      "message": "3 Further Reading bullets, none with a URL"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/104_database_internals.md",
-      "message": "bare domain renders as text, not a link: - *Use The Index, Luke* (use-the-index-luke.com) — practical B-tree index design, vendor-n"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/105_cryptography_fundamentals.md",
-      "message": "bare domain renders as text, not a link: - *Cryptopals Challenges* (cryptopals.com) — hands-on exercises that break bad cryptograph"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md",
-      "message": "bare domain renders as text, not a link: - BullMQ docs (docs.bullmq.io) — covers patterns, flows, and sandboxed processors"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md",
-      "message": "bare domain renders as text, not a link: - Confluent's Kafka tutorials (developer.confluent.io) — free, hands-on, producer/consumer"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/107_api_design_philosophy.md",
-      "message": "bare domain renders as text, not a link: - tRPC docs (trpc.io) — especially the Next.js App Router integration guide"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/107_api_design_philosophy.md",
-      "message": "bare domain renders as text, not a link: - Google's API Design Guide (cloud.google.com/apis/design) — REST best practices from Goog"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/108_monorepo_tooling.md",
-      "message": "bare domain renders as text, not a link: - Turborepo docs (turbo.build/repo) — quickstart is well-written, 30-minute setup"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/108_monorepo_tooling.md",
-      "message": "bare domain renders as text, not a link: - Nx docs (nx.dev) — choose Nx over Turborepo if you need code generation and strict bound"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/109_performance_profiling.md",
-      "message": "bare domain renders as text, not a link: - clinic.js (clinicjs.org) — the fastest path to a Node.js flame graph, zero config"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/112_technical_writing.md",
-      "message": "bare domain renders as text, not a link: - Google's SRE Workbook (sre.google/workbook) — Chapter 8 covers on-call and runbook best "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "advanced-deep-dive-topics/112_technical_writing.md",
-      "message": "bare domain renders as text, not a link: - Swagger/OpenAPI docs (swagger.io/docs) — reference for writing OpenAPI 3.0 specs"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "ai-llm-engineering/140_ai_llm_integration.md",
-      "message": "bare domain renders as text, not a link: - \"Building LLM Applications for Production\" by Chip Huyen (huyenchip.com)"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "ai-llm-engineering/147_anthropic_api_client_architecture.md",
-      "message": "bare domain renders as text, not a link: - Anthropic — official TypeScript/Node SDK documentation and README (github.com/anthropics"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "ai-llm-engineering/149_structured_output_schema_validation.md",
-      "message": "bare domain renders as text, not a link: - Zod official documentation (zod.dev) — schema definition and `safeParse`"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "ai-llm-engineering/152_advanced_rag_chunking_reranking_grounding.md",
-      "message": "bare domain renders as text, not a link: - Pinecone — \"Chunking Strategies for LLM Applications\" (learn.pinecone.io)"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "ai-llm-engineering/153_model_selection_strategy.md",
-      "message": "bare domain renders as text, not a link: - Anthropic — \"Models overview\" and pricing page (anthropic.com/pricing) — verify current "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "ai-llm-engineering/154_token_budget_cost_engineering.md",
-      "message": "bare domain renders as text, not a link: - Anthropic pricing page (anthropic.com/pricing) — always verify current rates before writ"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "ai-llm-engineering/157_building_eval_pipeline.md",
-      "message": "bare domain renders as text, not a link: - Chip Huyen — \"Designing Machine Learning Systems\" and her AI Engineering writing on eval"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "ai-llm-engineering/157_building_eval_pipeline.md",
-      "message": "bare domain renders as text, not a link: - OpenAI Evals framework (github.com/openai/evals) — a widely referenced open-source patte"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "ai-llm-engineering/159_prompt_injection_defense.md",
-      "message": "bare domain renders as text, not a link: - Simon Willison — extensive public writing on prompt injection, coined much of the common"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "ai-llm-engineering/162_mcp_server_architecture_tool_design.md",
-      "message": "bare domain renders as text, not a link: - Model Context Protocol specification (modelcontextprotocol.io) — the authoritative refer"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "algorithms-concurrency/129_concurrency_async_fundamentals.md",
-      "message": "bare domain renders as text, not a link: - Jake Archibald — \"Tasks, microtasks, queues and schedules\" (jakearchibald.com)"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
-      "message": "bare domain renders as text, not a link: - k6 documentation (k6.io/docs) — test types explained with runnable examples"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "architecture-design-patterns-testing/134_domain_driven_design.md",
-      "message": "bare domain renders as text, not a link: - Martin Fowler — \"AggregateOrientedDatabase\" and \"BoundedContext\" articles (martinfowler."
-    },
-    {
       "rule": "sources/bare-domain",
       "severity": "warn",
       "target": "business-finance-solo-ops/317_invoicing_and_payment_tracking.md",
       "message": "bare domain renders as text, not a link: - Stripe's guide to invoicing and payment terms for freelancers and small businesses (stri"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/318_banking_and_payment_methods.md",
-      "message": "bare domain renders as text, not a link: - Wise's guide to receiving international payments as a freelancer (wise.com/gb/blog) — pr"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/319_tax_and_accounting_readiness.md",
-      "message": "bare domain renders as text, not a link: - IRS instructions for Form W-8BEN (irs.gov) — the authoritative source for foreign-contra"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/320_expense_and_subscription_control.md",
-      "message": "bare domain renders as text, not a link: - Ramit Sethi's writing on \"conscious spending\" (iwillteachyoutoberich.com) — though aimed"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "career-entrepreneurship/117_financial_literacy.md",
-      "message": "bare domain renders as text, not a link: - Turkish Revenue Administration (gib.gov.tr) — source of truth for KDV on exported servic"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/271_content_pillars_and_strategic_positioning.md",
-      "message": "bare domain renders as text, not a link: - HubSpot's guide to \"pillar pages and topic clusters\" (blog.hubspot.com) — the SEO-adjace"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/272_idea_capture_system.md",
-      "message": "bare domain renders as text, not a link: - Julian Shapiro's essay \"How to Write Useful Blog Posts\" (julian.com) — a working writer'"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/275_technical_writing_style_for_business_readers.md",
-      "message": "bare domain renders as text, not a link: - Julia Evans' technical zines and blog (jvns.ca) — a widely cited example of explaining d"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/275_technical_writing_style_for_business_readers.md",
-      "message": "bare domain renders as text, not a link: - Google's Technical Writing courses (developers.google.com/tech-writing) — a free, practi"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/277_content_calendar_cadence_and_quality_gate.md",
-      "message": "bare domain renders as text, not a link: - CoSchedule's \"Content Calendar\" templates and guidance (coschedule.com/marketing-calenda"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/278_ai_assisted_content_without_losing_your_voice.md",
-      "message": "bare domain renders as text, not a link: - Anthropic's guide to prompting Claude (docs.claude.com) — practical, current guidance on"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/279_content_analytics_library_and_asset_management.md",
-      "message": "bare domain renders as text, not a link: - HubSpot's \"Marketing Analytics\" guidance (blog.hubspot.com/marketing/analytics) — a prac"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/280_seo_and_aeo_as_one_visibility_system.md",
-      "message": "bare domain renders as text, not a link: - Google Search Central documentation (developers.google.com/search) — the primary source "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/281_search_intent_topic_clusters_and_keyword_query_mapping.md",
-      "message": "bare domain renders as text, not a link: - HubSpot's \"Topic Clusters\" guide (blog.hubspot.com) — a practical, widely cited explanat"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/282_technical_seo_foundations_crawl_render_index.md",
-      "message": "bare domain renders as text, not a link: - Google Search Central's \"Crawling and Indexing\" documentation (developers.google.com/sea"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/283_metadata_titles_descriptions_and_canonical_url_strategy.md",
-      "message": "bare domain renders as text, not a link: - The Open Graph protocol documentation (ogp.me) — the spec behind how social platforms re"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/284_robots_snippet_controls_and_structured_data.md",
-      "message": "bare domain renders as text, not a link: - Schema.org's own documentation and type hierarchy (schema.org) — for checking a type's e"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/284_robots_snippet_controls_and_structured_data.md",
-      "message": "bare domain renders as text, not a link: - Google's Rich Results Test tool (search.google.com/test/rich-results) — for validating m"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/285_ai_search_and_answer_engine_optimization.md",
-      "message": "bare domain renders as text, not a link: - Google's \"AI features and your website\" documentation (developers.google.com/search) — t"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/286_entity_clarity_and_eeat_trust_signals.md",
-      "message": "bare domain renders as text, not a link: - Google's \"Creating Helpful, Reliable, People-First Content\" and E-E-A-T documentation (d"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/287_content_briefs_page_templates_and_blog_seo.md",
-      "message": "bare domain renders as text, not a link: - HubSpot's content brief templates and blog SEO guidance (blog.hubspot.com) — practical, "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/287_content_briefs_page_templates_and_blog_seo.md",
-      "message": "bare domain renders as text, not a link: - Google's \"Helpful Content\" self-assessment questions (developers.google.com/search) — a "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/288_landing_page_local_and_service_seo.md",
-      "message": "bare domain renders as text, not a link: - Google's guidance on \"duplicate content\" and \"doorway pages\" (developers.google.com/sear"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/289_internal_linking_information_architecture_and_rich_media_seo.md",
-      "message": "bare domain renders as text, not a link: - Google Search Central's \"Site Structure\" and \"Internal Linking\" guidance (developers.goo"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/289_internal_linking_information_architecture_and_rich_media_seo.md",
-      "message": "bare domain renders as text, not a link: - web.dev's image and video optimization guides (web.dev) — current, framework-agnostic de"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/290_content_operations_at_scale_programmatic_seo_refresh_and_search_console_review.md",
-      "message": "bare domain renders as text, not a link: - Google Search Console Help documentation (support.google.com/webmasters) — for current d"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/292_linkedin_authority_operating_system_pillars_and_weekly_cadence.md",
-      "message": "bare domain renders as text, not a link: - LinkedIn's own Creator resources (linkedin.com/business/marketing) — for platform-specif"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/294_featured_section_proof_assets_and_credibility_signals.md",
-      "message": "bare domain renders as text, not a link: - LinkedIn's help documentation on the Featured section (linkedin.com/help) — first-party "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/295_technical_post_frameworks_and_case_study_posts.md",
-      "message": "bare domain renders as text, not a link: - Julia Evans' technical zines and blog (jvns.ca) — a widely cited example of explaining d"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/296_problem_solution_founder_story_carousel_and_video_posts.md",
-      "message": "bare domain renders as text, not a link: - LinkedIn's own video best-practices documentation (linkedin.com/business/marketing) — fi"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/297_comment_strategy_dms_and_networking.md",
-      "message": "bare domain renders as text, not a link: - LinkedIn's own messaging and networking guidelines (linkedin.com/help) — first-party rul"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/298_soft_pitching_repurposing_and_analytics_on_linkedin.md",
-      "message": "bare domain renders as text, not a link: - LinkedIn's Analytics documentation (linkedin.com/help) — first-party detail on what each"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/299_email_list_strategy_audience_consent_and_opt_in_design.md",
-      "message": "bare domain renders as text, not a link: - The CAN-SPAM Act compliance guide (business.ftc.gov) — the first-party US baseline for c"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/299_email_list_strategy_audience_consent_and_opt_in_design.md",
-      "message": "bare domain renders as text, not a link: - GDPR's guidance on lawful basis for marketing consent (gdpr.eu) — relevant for any freel"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/300_newsletter_system_architecture_and_editorial_strategy.md",
-      "message": "bare domain renders as text, not a link: - ConvertKit's Creator's Guide to Email Marketing (convertkit.com) — a current, practition"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/300_newsletter_system_architecture_and_editorial_strategy.md",
-      "message": "bare domain renders as text, not a link: - HubSpot's guide to lifecycle marketing stages (blog.hubspot.com) — useful for mapping th"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/301_welcome_and_nurture_sequence_design.md",
-      "message": "bare domain renders as text, not a link: - HubSpot's guide to lead nurturing campaigns (blog.hubspot.com) — a practical, tool-agnos"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/301_welcome_and_nurture_sequence_design.md",
-      "message": "bare domain renders as text, not a link: - ActiveCampaign's documentation on customer journey automation (activecampaign.com) — con"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/302_email_copywriting_voice_subject_lines_and_ctas.md",
-      "message": "bare domain renders as text, not a link: - Copyhackers' guide to subject lines (copyhackers.com) — current, tested detail on subjec"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/303_proof_emails_and_ready_to_use_templates.md",
-      "message": "bare domain renders as text, not a link: - HubSpot's guide to writing case-study-driven sales emails (blog.hubspot.com) — practical"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/303_proof_emails_and_ready_to_use_templates.md",
-      "message": "bare domain renders as text, not a link: - Copyhackers' guide to proof-driven copywriting (copyhackers.com) — tactical patterns for"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/304_segmentation_crm_automation_and_sales_handoff.md",
-      "message": "bare domain renders as text, not a link: - HubSpot's documentation on lead scoring models (hubspot.com) — first-party detail on bal"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/304_segmentation_crm_automation_and_sales_handoff.md",
-      "message": "bare domain renders as text, not a link: - Customer.io's guide to automation triggers and exit conditions (customer.io) — concrete,"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/305_deliverability_list_hygiene_reengagement_and_metrics.md",
-      "message": "bare domain renders as text, not a link: - Google's sender guidelines for bulk email (support.google.com/mail) — first-party detail"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/305_deliverability_list_hygiene_reengagement_and_metrics.md",
-      "message": "bare domain renders as text, not a link: - Litmus's guide to email deliverability (litmus.com) — a current, practitioner-level refe"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/306_case_study_structure_narrative_arc_and_operating_system.md",
-      "message": "bare domain renders as text, not a link: - Nielsen Norman Group's guidance on writing effective case studies (nngroup.com) — eviden"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/306_case_study_structure_narrative_arc_and_operating_system.md",
-      "message": "bare domain renders as text, not a link: - Harvard Business Review's \"How to Write a Case Study\" guidance (hbr.org) — a classic ref"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/307_confidentiality_anonymization_and_technical_depth_calibration.md",
-      "message": "bare domain renders as text, not a link: - OWASP's guidance on information disclosure risks (owasp.org) — a useful technical ground"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/308_case_study_metrics_outcomes_and_evidence_levels.md",
-      "message": "bare domain renders as text, not a link: - The FTC's endorsement and testimonial guidelines (ftc.gov) — a first-party baseline for "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/310_visual_proof_screenshots_and_demo_videos.md",
-      "message": "bare domain renders as text, not a link: - Wistia's guide to product demo videos (wistia.com) — current, practical detail on struct"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/310_visual_proof_screenshots_and_demo_videos.md",
-      "message": "bare domain renders as text, not a link: - OWASP's guidance on sanitizing screenshots and redacting sensitive data (owasp.org) — a "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/311_testimonials_and_github_as_proof.md",
-      "message": "bare domain renders as text, not a link: - GitHub's official guide to writing a great README (docs.github.com) — first-party, curre"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/311_testimonials_and_github_as_proof.md",
-      "message": "bare domain renders as text, not a link: - Choose a License's plain-language overview of open-source licensing (choosealicense.com)"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/312_portfolio_page_structure_and_seo.md",
-      "message": "bare domain renders as text, not a link: - Baymard Institute's research on portfolio and work-page UX patterns (baymard.com) — evid"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/312_portfolio_page_structure_and_seo.md",
-      "message": "bare domain renders as text, not a link: - Google Search Central's guidance on titles and structured page content (developers.googl"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/313_proof_asset_repurposing_one_case_study_many_assets.md",
-      "message": "bare domain renders as text, not a link: - Buffer's guide to content repurposing (buffer.com) — practical, current detail on turnin"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "content-seo-personal-brand/313_proof_asset_repurposing_one_case_study_many_assets.md",
-      "message": "bare domain renders as text, not a link: - HubSpot's guide to case-study-driven proposal writing (blog.hubspot.com) — useful for th"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "contracts-pricing-legal/201_proposal_readiness.md",
-      "message": "bare domain renders as text, not a link: - Jonathan Stark's writing and podcast on \"hourly billing is nuts\" and proposal timing for"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "contracts-pricing-legal/202_pricing_models.md",
-      "message": "bare domain renders as text, not a link: - Rafael Corrales / a16z-style writing on SaaS and service pricing models is widely availa"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "contracts-pricing-legal/220_third_party_services_and_license_risk.md",
-      "message": "bare domain renders as text, not a link: - The Open Source Initiative's license list and comparison guide (opensource.org) for unde"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "database-caching-performance/16_n_plus_1_query_problem.md",
-      "message": "bare domain renders as text, not a link: - **\"The N+1 Problem\" by Dataloader GitHub README (github.com/graphql/dataloader)** — The "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "database-caching-performance/17_database_index_strategy.md",
-      "message": "bare domain renders as text, not a link: - **\"Use the Index, Luke\" (use-the-index-luke.com)** — The best free online guide to SQL i"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "database-caching-performance/18_query_plan_analysis.md",
-      "message": "bare domain renders as text, not a link: - **\"Use the Index, Luke\" — \"Execution Plans\" section (use-the-index-luke.com/sql/explain-"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "database-caching-performance/19_connection_pool_tuning.md",
-      "message": "bare domain renders as text, not a link: - **pgBouncer documentation (pgbouncer.org)** — The official configuration reference; the "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "database-caching-performance/19_connection_pool_tuning.md",
-      "message": "bare domain renders as text, not a link: - **\"Why your Prisma app is failing in production\" by Lee Robinson (leerob.io)** — Next.js"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "database-caching-performance/20_redis_cache_strategies.md",
-      "message": "bare domain renders as text, not a link: - **AWS documentation — \"Caching strategies\" (docs.aws.amazon.com/AmazonElastiCache)** — C"
     },
     {
       "rule": "sources/bare-domain",
@@ -2818,140 +1623,8 @@
     {
       "rule": "sources/bare-domain",
       "severity": "warn",
-      "target": "distributed-systems-api-design/02_event_sourcing_cqrs.md",
-      "message": "bare domain renders as text, not a link: - **EventStoreDB documentation (eventstore.com)** — Even if you use PostgreSQL as your eve"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/05_rate_limiting_strategies.md",
-      "message": "bare domain renders as text, not a link: - **\"An alternative approach to rate limiting\" by Cloudflare Blog (cloudflare.com/blog)** "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/06_distributed_locking.md",
-      "message": "bare domain renders as text, not a link: - **\"How to do distributed locking\" by Martin Kleppmann (martin.kleppmann.com/2016/02/08)*"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/06_distributed_locking.md",
-      "message": "bare domain renders as text, not a link: - **\"Distributed Locks with Redis\" (redis.io/docs/manual/patterns/distributed-locks)** — T"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/08_webhook_security_retry.md",
-      "message": "bare domain renders as text, not a link: - **Stripe Webhook documentation (stripe.com/docs/webhooks)** — The best-written webhook s"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/08_webhook_security_retry.md",
-      "message": "bare domain renders as text, not a link: - **\"Webhook Security\" by ngrok blog (ngrok.com/blog)** — Covers signature verification, r"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/08_webhook_security_retry.md",
-      "message": "bare domain renders as text, not a link: - **Standard Webhooks specification (standard-webhooks.com)** — An emerging open standard "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/09_api_versioning_strategies.md",
-      "message": "bare domain renders as text, not a link: - **Stripe API documentation — versioning policy (stripe.com/docs/upgrades)** — The gold s"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/09_api_versioning_strategies.md",
-      "message": "bare domain renders as text, not a link: - **\"RESTful API Design\" by Apigee (cloud.google.com/apis/design)** — Google's API Design "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/09_api_versioning_strategies.md",
-      "message": "bare domain renders as text, not a link: - **\"API Versioning Has No Right Way\" by Troy Hunt (troyhunt.com)** — An honest breakdown "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/10_backward_forward_compatibility.md",
-      "message": "bare domain renders as text, not a link: - **\"Evolutionary Database Design\" by Martin Fowler & Pramod Sadalage (martinfowler.com)**"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/13_cqrs_read_model_optimization.md",
-      "message": "bare domain renders as text, not a link: - **\"CQRS Journey\" by Microsoft Patterns & Practices (microsoft.com/en-us/download/details"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/13_cqrs_read_model_optimization.md",
-      "message": "bare domain renders as text, not a link: - **\"Denormalization Is OK\" by Brandur Leach (brandur.org)** — A pragmatic argument for re"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/14_outbox_pattern.md",
-      "message": "bare domain renders as text, not a link: - **\"Transactional Outbox Pattern\" by Chris Richardson (microservices.io/patterns/data/tra"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/14_outbox_pattern.md",
-      "message": "bare domain renders as text, not a link: - **\"Reliable Messaging with the Outbox Pattern\" by Kamil Grzybek (kamilgrzybek.com)** — D"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/14_outbox_pattern.md",
-      "message": "bare domain renders as text, not a link: - **Debezium documentation (debezium.io)** — Change Data Capture tool that implements the "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/15_two_phase_commit_eventual_consistency.md",
-      "message": "bare domain renders as text, not a link: - **\"Starbucks Does Not Use Two-Phase Commit\" by Gregor Hohpe (enterpriseintegrationpatter"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/131_message_queues_101.md",
-      "message": "bare domain renders as text, not a link: - RabbitMQ tutorials (rabbitmq.com/getstarted.html) — hands-on, covers both queue and topi"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
-      "message": "bare domain renders as text, not a link: - Martin Fowler — \"MonolithFirst\" (martinfowler.com) — the case for starting with a monoli"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/136_api_gateway_bff.md",
-      "message": "bare domain renders as text, not a link: - Sam Newman — \"Pattern: Backends For Frontends\" (samnewman.io)"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
       "target": "frontend-performance-scaling/22_http2_multiplexing.md",
       "message": "bare domain renders as text, not a link: - **\"HTTP/3 explained\" (http3-explained.haxx.se)** — Free online book by Daniel Stenberg ("
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "frontend-performance-scaling/23_react_server_components.md",
-      "message": "bare domain renders as text, not a link: - **\"Making Sense of React Server Components\" by Josh Comeau (joshwcomeau.com)** — The cle"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "frontend-performance-scaling/24_bundle_size_optimization.md",
-      "message": "bare domain renders as text, not a link: - **\"Bundlephobia\" (bundlephobia.com)** — Check any npm package's bundle size, tree-shakin"
     },
     {
       "rule": "sources/bare-domain",
@@ -2962,548 +1635,14 @@
     {
       "rule": "sources/bare-domain",
       "severity": "warn",
-      "target": "fundamentals-tools/123_debugging_fundamentals.md",
-      "message": "bare domain renders as text, not a link: - VS Code Debugging docs (code.visualstudio.com/docs/editor/debugging)"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "fundamentals-tools/123_debugging_fundamentals.md",
-      "message": "bare domain renders as text, not a link: - `git bisect` documentation (git-scm.com)"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "fundamentals-tools/125_rest_api_basics.md",
-      "message": "bare domain renders as text, not a link: - Microsoft REST API Guidelines (github.com/microsoft/api-guidelines)"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "fundamentals-tools/126_cli_dev_environment_basics.md",
-      "message": "bare domain renders as text, not a link: - MIT's \"The Missing Semester of Your CS Education\" (missing.semester.mit.edu) — shell, en"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "fundamentals-tools/127_auth_basics.md",
-      "message": "bare domain renders as text, not a link: - OWASP Authentication Cheat Sheet (cheatsheetseries.owasp.org)"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/94_contributing_to_open_source.md",
-      "message": "bare domain renders as text, not a link: - **\"First Contributions\" (github.com/firstcontributions/first-contributions)** — A live-p"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/95_publishing_maintaining_oss_tool.md",
-      "message": "bare domain renders as text, not a link: - **\"Small, Sharp Software Tools\" — Mike Perham (mikeperham.com)** — Essay on the philosop"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/95_publishing_maintaining_oss_tool.md",
-      "message": "bare domain renders as text, not a link: - **`tsup` documentation (tsup.egoist.dev)** — The fastest way to build a TypeScript npm p"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/96_semver_changelog_management.md",
-      "message": "bare domain renders as text, not a link: - **Conventional Commits specification (conventionalcommits.org)** — The commit message fo"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/97_publishing_npm_github_packages.md",
-      "message": "bare domain renders as text, not a link: - **npm Documentation: Creating and Publishing Packages (docs.npmjs.com)** — The authorita"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/97_publishing_npm_github_packages.md",
-      "message": "bare domain renders as text, not a link: - **`tsup` documentation (tsup.egoist.dev)** — The simplest TypeScript build tool for libr"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/97_publishing_npm_github_packages.md",
-      "message": "bare domain renders as text, not a link: - **\"Publishing TypeScript Packages\" — Matt Pocock (total-typescript.com)** — The most cur"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/98_writing_stack_overflow_answers.md",
-      "message": "bare domain renders as text, not a link: - **Stack Overflow: How to Write a Good Answer (stackoverflow.com/help/how-to-answer)** — "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/98_writing_stack_overflow_answers.md",
-      "message": "bare domain renders as text, not a link: - **\"How to Ask\" (stackoverflow.com/help/how-to-ask)** — Counterintuitively, reading the q"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/99_conference_meetup_speaking.md",
-      "message": "bare domain renders as text, not a link: - **\"Demystifying Public Speaking\" — Lara Hogan (larahogan.me)** — The most practical guid"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/99_conference_meetup_speaking.md",
-      "message": "bare domain renders as text, not a link: - **\"Speaking.io\" — Zach Holman (speaking.io)** — A curated collection of advice from expe"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/99_conference_meetup_speaking.md",
-      "message": "bare domain renders as text, not a link: - **Notist (noti.st) and Speakerdeck (speakerdeck.com)** — Platforms for hosting and shari"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "open-source-community/100_creating_reference_resource.md",
-      "message": "bare domain renders as text, not a link: - **\"Productize Yourself\" — Paul Jarvis (pjrvs.com/productize)** — The foundational essay "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "process-soft-skills/76_rfc_process.md",
-      "message": "bare domain renders as text, not a link: - **Rust RFC process documentation (github.com/rust-lang/rfcs)** — The most well-documente"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "process-soft-skills/77_technical_debt_prioritization.md",
-      "message": "bare domain renders as text, not a link: - **\"Technical Debt Quadrant\" — Martin Fowler (martinfowler.com)** — Fowler's two-axis mod"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "process-soft-skills/78_code_review_culture.md",
-      "message": "bare domain renders as text, not a link: - **\"How to Do Code Reviews Like a Human\" — Michael Lynch (mtlynch.io)** — The most practi"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "process-soft-skills/78_code_review_culture.md",
-      "message": "bare domain renders as text, not a link: - **\"Google's Code Review Developer Guide\" (google.github.io/eng-practices)** — Google's p"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "process-soft-skills/78_code_review_culture.md",
-      "message": "bare domain renders as text, not a link: - **\"Conventional Comments\" (conventionalcomments.org)** — The prefix convention used in t"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "process-soft-skills/79_blameless_post_mortem.md",
-      "message": "bare domain renders as text, not a link: - **\"Site Reliability Engineering\" — Google (sre.google/sre-book)** — Chapter 15 covers th"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "process-soft-skills/79_blameless_post_mortem.md",
-      "message": "bare domain renders as text, not a link: - **\"Debriefing Facilitation Guide\" — Etsy (github.com/etsy/DebriefingFacilitationGuide)**"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "process-soft-skills/80_mentorship.md",
-      "message": "bare domain renders as text, not a link: - **\"Being Glue\" — Tanya Reilly (noidea.dog/glue)** — A talk and essay about the non-codin"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "process-soft-skills/81_explaining_technical_concepts.md",
-      "message": "bare domain renders as text, not a link: - **\"Translating Tech\" — Catt Small (cattsmall.com)** — A practical guide specifically for"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
       "target": "process-soft-skills/85_technical_blog_conference_talk.md",
       "message": "bare domain renders as text, not a link: - **\"Technical Writing for Developers\" — Josh Comeau (joshwcomeau.com/blog/how-i-write)** "
     },
     {
       "rule": "sources/bare-domain",
       "severity": "warn",
-      "target": "product-technical-strategy/371_product_strategy_operating_system.md",
-      "message": "bare domain renders as text, not a link: - Y Combinator's \"How to Talk to Users\" essay/video (ycombinator.com) — practical groundin"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "product-technical-strategy/378_product_requirements_document.md",
-      "message": "bare domain renders as text, not a link: - Atlassian's Product Requirements template documentation (atlassian.com) — a widely used "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "product-technical-strategy/379_user_stories_acceptance_criteria.md",
-      "message": "bare domain renders as text, not a link: - Dan North — \"Introducing BDD\" (dannorth.net) — the original source of the Given/When/The"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "product-technical-strategy/380_user_journey_flow_mapping.md",
-      "message": "bare domain renders as text, not a link: - Nielsen Norman Group — articles on user flow diagrams and task analysis (nngroup.com)"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/86_saas_metrics.md",
-      "message": "bare domain renders as text, not a link: - **\"SaaS Metrics 2.0\" — David Skok (forentrepreneurs.com)** — The most comprehensive free"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
       "target": "saas-business-skills/86_saas_metrics.md",
       "message": "bare domain renders as text, not a link: - **\"The SaaS CFO\" — Ben Murray (thesaascfo.com)** — Practical financial modeling for SaaS"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/87_payment_integration_depth.md",
-      "message": "bare domain renders as text, not a link: - **Stripe Webhook Documentation (stripe.com/docs/webhooks)** — The canonical reference; t"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/87_payment_integration_depth.md",
-      "message": "bare domain renders as text, not a link: - **PayPal Webhook Verification Documentation (developer.paypal.com)** — The equivalent re"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/88_email_deliverability.md",
-      "message": "bare domain renders as text, not a link: - **\"Email Deliverability Guide\" — Resend (resend.com/docs/knowledge-base/email-deliverabi"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/88_email_deliverability.md",
-      "message": "bare domain renders as text, not a link: - **\"Postmaster Tools\" — Google (postmaster.google.com)** — Free tool from Google that sho"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/88_email_deliverability.md",
-      "message": "bare domain renders as text, not a link: - **MxToolbox (mxtoolbox.com/EmailHeaders.aspx)** — Free tool for testing SPF, DKIM, and D"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/89_internationalization.md",
-      "message": "bare domain renders as text, not a link: - **`next-intl` documentation (next-intl.dev)** — The most complete i18n solution for Next"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/89_internationalization.md",
-      "message": "bare domain renders as text, not a link: - **MDN Web Docs: Intl (developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_O"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/89_internationalization.md",
-      "message": "bare domain renders as text, not a link: - **\"Internationalization Best Practices for Spec Developers\" — W3C (w3.org/International)"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/90_accessibility.md",
-      "message": "bare domain renders as text, not a link: - **\"Inclusive Components\" — Heydon Pickering (inclusive-components.design)** — Pattern li"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/90_accessibility.md",
-      "message": "bare domain renders as text, not a link: - **WebAIM (webaim.org)** — The most practical accessibility resource for web developers; "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/90_accessibility.md",
-      "message": "bare domain renders as text, not a link: - **axe DevTools browser extension (deque.com/axe/devtools)** — The fastest way to audit a"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/91_mobile_first_api_design.md",
-      "message": "bare domain renders as text, not a link: - **\"Offline First\" — Alex Feyerke and others (offlinefirst.org)** — The community resourc"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/92_analytics_integration.md",
-      "message": "bare domain renders as text, not a link: - **PostHog Documentation (posthog.com/docs)** — PostHog is the best self-hostable analyti"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/92_analytics_integration.md",
-      "message": "bare domain renders as text, not a link: - **Segment Analytics Academy (segment.com/academy)** — Free course on event tracking taxo"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/93_ab_test_infrastructure.md",
-      "message": "bare domain renders as text, not a link: - **\"Statistical Significance and the Peeking Problem\" — Evan Miller (evanmiller.org)** — "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/93_ab_test_infrastructure.md",
-      "message": "bare domain renders as text, not a link: - **PostHog Experiments Documentation (posthog.com/docs/experiments)** — End-to-end guide "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "security/143_compliance_frameworks.md",
-      "message": "bare domain renders as text, not a link: - ISO/IEC 27001 overview (iso.org) — the standard itself is paywalled, but the structure/s"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/316_cash_flow_and_runway.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Reserve percent"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/317_invoicing_and_payment_tracking.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not legal or accounting advice. Invoice numb"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/318_banking_and_payment_methods.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not accounting advice. Currency conversion t"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/319_tax_and_accounting_readiness.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not tax or legal advice. It does not replace"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/320_expense_and_subscription_control.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not accounting advice. Whether a given expen"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/321_project_accounting_and_costing.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Treat effective"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/322_time_tracking_and_effective_rate.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Time-tracking d"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/323_revenue_stream_design.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Revenue classif"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/324_monthly_financial_close.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. The monthly clo"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/325_finance_dashboard_and_kpis.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. These KPIs are "
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/326_business_records_and_file_system.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Confirm with yo"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/327_risk_reserve_and_contingency.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Reserve sizing "
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/328_procurement_and_vendor_management.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Contract terms "
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/329_operations_sops_and_admin_calendar.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Calendar cadenc"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/330_pricing_for_margin.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Margin targets "
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/331_productized_offer_catalog.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Price bands sho"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/332_paid_audit_as_door_opener.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Price bands her"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/333_retainers_vs_maintenance.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Cancellation an"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/334_retainer_renewal_and_negotiation.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Any price chang"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/335_custom_bundle_design.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Confirm any cus"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/336_scoping_fixed_price_projects.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Scope and chang"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/337_selling_without_a_reference.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Any client-faci"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/338_growth_focus_and_bets.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Trial-period le"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/339_growth_risk_and_concentration.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Concentration t"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/340_scaling_with_contractors.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Contractor agre"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/341_strategic_repositioning.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Any public clai"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/342_account_health_management.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Refund, credit,"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/343_expansion_signals_and_upsell.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Expansion prici"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/344_referral_and_partner_channels.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Referral fee ar"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/345_pipeline_forecasting.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Weighted foreca"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/346_case_study_and_proof_loop.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Always confirm "
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/347_growth_model_and_north_star.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Directional tar"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/348_acquisition_funnel_and_attribution.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Attribution per"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/349_growth_experiment_design.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Directional sig"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/350_decision_rules_and_scaling.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Capacity and sc"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/351_weekly_monthly_business_review.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Revenue and mar"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/352_ethical_growth_guardrails.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Data collection"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/353_business_continuity_planning.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. SLA remedy comm"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/354_non_negotiable_operating_rules.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Specific capaci"
-    },
-    {
-      "rule": "sources/disclaimer-as-source",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/355_burnout_as_a_business_risk.md",
-      "message": "disclaimer in Further Reading: - This lesson is general education, not financial, tax, or medical advice. Persi"
     },
     {
       "rule": "sources/quota-signature",
@@ -3598,331 +1737,9 @@
     {
       "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
-      "target": "ai-llm-engineering/140_ai_llm_integration.md",
-      "line": 6,
-      "message": "\"#29\" matches a lesson but has no cue, so it renders as plain text: **Tool/function calling** extends this from \"answer using retrieved text\" to \"ta"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "ai-llm-engineering/140_ai_llm_integration.md",
-      "line": 16,
-      "message": "\"#29\" matches a lesson but has no cue, so it renders as plain text: - **Prompt injection**: untrusted retrieved or user-supplied content containing "
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
       "target": "ai-llm-engineering/146_when_to_add_ai.md",
       "line": 59,
       "message": "\"#1\" matches a lesson but has no cue, so it renders as plain text: - Google's \"Rules of Machine Learning\" (Martin Zinkevich) — rule #1 is \"don't be"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "architecture-design-patterns-testing/134_domain_driven_design.md",
-      "line": 14,
-      "message": "\"#14\" matches a lesson but has no cue, so it renders as plain text: - **Domain event**: something meaningful that happened in the domain (`OrderShip"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "architecture-design-patterns-testing/134_domain_driven_design.md",
-      "line": 59,
-      "message": "\"#135\" matches a lesson but has no cue, so it renders as plain text: - Deciding service/module boundaries for #135 (Microservices vs Monolith) — boun"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "architecture-design-patterns-testing/142_capacity_planning_estimation.md",
-      "line": 44,
-      "message": "\"#12\" matches a lesson but has no cue, so it renders as plain text: - Deciding whether a specific piece of complexity (sharding #12, a read replica "
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "architecture-design-patterns-testing/142_capacity_planning_estimation.md",
-      "line": 44,
-      "message": "\"#11\" matches a lesson but has no cue, so it renders as plain text: - Deciding whether a specific piece of complexity (sharding #12, a read replica "
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "architecture-design-patterns-testing/142_capacity_planning_estimation.md",
-      "line": 44,
-      "message": "\"#20\" matches a lesson but has no cue, so it renders as plain text: - Deciding whether a specific piece of complexity (sharding #12, a read replica "
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/131_message_queues_101.md",
-      "line": 6,
-      "message": "\"#7\" matches a lesson but has no cue, so it renders as plain text: Delivery guarantees are the part that bites people in production. Most brokers o"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
-      "line": 6,
-      "message": "\"#134\" matches a lesson but has no cue, so it renders as plain text: The **modular monolith** is the underrated middle step: a single deployable, but"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
-      "line": 14,
-      "message": "\"#1\" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
-      "line": 14,
-      "message": "\"#3\" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
-      "line": 14,
-      "message": "\"#14\" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
-      "line": 14,
-      "message": "\"#15\" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "framework-deep-dives/400_express_validation_and_response_conventions.md",
-      "line": 131,
-      "message": "\"#9\" matches a lesson but has no cue, so it renders as plain text: - REST API pagination patterns (Microsoft REST API guidelines): https://github.c"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "fundamentals-tools/139_git_internals_advanced_workflows.md",
-      "line": 16,
-      "message": "\"#120\" matches a lesson but has no cue, so it renders as plain text: - **Rebase vs merge in a monorepo**: rebasing across many unrelated package chan"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "observability-deployment/141_cloud_architecture_well_architected.md",
-      "line": 4,
-      "message": "\"#49\" matches a lesson but has no cue, so it renders as plain text: Cloud architecture decisions live above any individual service, and the most con"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "observability-deployment/141_cloud_architecture_well_architected.md",
-      "line": 4,
-      "message": "\"#1\" matches a lesson but has no cue, so it renders as plain text: Cloud architecture decisions live above any individual service, and the most con"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md",
-      "line": 4,
-      "message": "\"#79\" matches a lesson but has no cue, so it renders as plain text: A security or privacy incident is a different animal from a normal production ou"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md",
-      "line": 6,
-      "message": "\"#363\" matches a lesson but has no cue, so it renders as plain text: The response flow is a fixed sequence: detect, preserve evidence, contain, asses"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md",
-      "line": 86,
-      "message": "\"#79\" matches a lesson but has no cue, so it renders as plain text: - Course #79 — *Blameless Post-Mortem — Writing and Running One* (the retrospect"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/363_breach_notification_requirements_across_jurisdictions.md",
-      "line": 4,
-      "message": "\"#362\" matches a lesson but has no cue, so it renders as plain text: Once an incident response process (lesson #362) confirms personal data may have "
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md",
-      "line": 4,
-      "message": "\"#359\" matches a lesson but has no cue, so it renders as plain text: Every third-party provider a system talks to — hosting, managed database, object"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md",
-      "line": 52,
-      "message": "\"#359\" matches a lesson but has no cue, so it renders as plain text: - During a security questionnaire or enterprise procurement review — the vendor "
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md",
-      "line": 64,
-      "message": "\"#359\" matches a lesson but has no cue, so it renders as plain text: - Course #359 — *Privacy by Design — Process, Artifacts & Multi-Jurisdiction Leg"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/365_childrens_data_compliance_age_verification_parental_consent.md",
-      "line": 8,
-      "message": "\"#358\" matches a lesson but has no cue, so it renders as plain text: The practical shape of compliance is the same regardless of jurisdiction, even t"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
-      "line": 4,
-      "message": "\"#358\" matches a lesson but has no cue, so it renders as plain text: Health data sits at the top of the classification hierarchy from lesson #358 — \""
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
-      "line": 6,
-      "message": "\"#358\" matches a lesson but has no cue, so it renders as plain text: The specifics diverge sharply by jurisdiction, but three structural obligations "
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
-      "line": 8,
-      "message": "\"#363\" matches a lesson but has no cue, so it renders as plain text: The audit-logging and dev-data rules are consistent across all three regimes eve"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
-      "line": 17,
-      "message": "\"#358\" matches a lesson but has no cue, so it renders as plain text: - **Real health data never in dev/staging**: synthetic generators (NHS Synth, Fa"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
-      "line": 18,
-      "message": "\"#363\" matches a lesson but has no cue, so it renders as plain text: - **Breach notification follows lesson #363's timelines**: 72 hours (KVKK/UK GDP"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
-      "line": 69,
-      "message": "\"#358\" matches a lesson but has no cue, so it renders as plain text: - When a teammate or client sends a \"sample\" dataset containing real patient rec"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
-      "line": 82,
-      "message": "\"#358\" matches a lesson but has no cue, so it renders as plain text: - Course #358 — *Data Classification & Storage Residency Tiers* (the sovereign-s"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
-      "line": 83,
-      "message": "\"#363\" matches a lesson but has no cue, so it renders as plain text: - Course #363 — *Breach Notification Requirements Across Jurisdictions* (the not"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md",
-      "line": 6,
-      "message": "\"#364\" matches a lesson but has no cue, so it renders as plain text: The handover package has a fixed shape: repository link, production and staging "
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md",
-      "line": 6,
-      "message": "\"#361\" matches a lesson but has no cue, so it renders as plain text: The handover package has a fixed shape: repository link, production and staging "
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md",
-      "line": 17,
-      "message": "\"#364\" matches a lesson but has no cue, so it renders as plain text: - **Account ownership transfer**: production accounts should end up owned by the"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md",
-      "line": 79,
-      "message": "\"#364\" matches a lesson but has no cue, so it renders as plain text: - Course #364 — *Third-Party Vendor Risk & Data Processing Agreements* (the vend"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md",
-      "line": 80,
-      "message": "\"#361\" matches a lesson but has no cue, so it renders as plain text: - Course #361 — *Vulnerability Management Lifecycle & Patch SLAs* (the maintenan"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
-      "line": 8,
-      "message": "\"#362\" matches a lesson but has no cue, so it renders as plain text: Incident communication to a client or end user is a distinct moment with its own"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
-      "line": 8,
-      "message": "\"#363\" matches a lesson but has no cue, so it renders as plain text: Incident communication to a client or end user is a distinct moment with its own"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
-      "line": 16,
-      "message": "\"#362\" matches a lesson but has no cue, so it renders as plain text: - **Client-facing incident template**: what happened, what's known, what contain"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
-      "line": 66,
-      "message": "\"#362\" matches a lesson but has no cue, so it renders as plain text: - The moment an incident is confirmed to potentially involve a client's data or "
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
-      "line": 79,
-      "message": "\"#362\" matches a lesson but has no cue, so it renders as plain text: - Course #362 — *Incident Response Process — Detection Through Containment* (the"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
-      "line": 80,
-      "message": "\"#363\" matches a lesson but has no cue, so it renders as plain text: - Course #363 — *Breach Notification Requirements Across Jurisdictions* (what th"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "security/143_compliance_frameworks.md",
-      "line": 6,
-      "message": "\"#47\" matches a lesson but has no cue, so it renders as plain text: The practical trap is treating any of these as a security-team-only concern hand"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "security/143_compliance_frameworks.md",
-      "line": 6,
-      "message": "\"#36\" matches a lesson but has no cue, so it renders as plain text: The practical trap is treating any of these as a security-team-only concern hand"
     }
   ]
 }

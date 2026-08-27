@@ -1,6 +1,8 @@
 # 354. The Solo Operator's Non-Negotiable Rules: Capacity, Payment, Decisions
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Specific capacity, payment, and pricing thresholds here are illustrative — set your own based on your actual delivery history, market, and risk tolerance.
+
 A solo operator has no team to absorb a bad decision, so a small set of rules need to be treated as genuinely non-negotiable rather than defaults that bend under enough pressure. Three domains carry this weight: capacity, payment, and decision-making. Capacity has a hard ceiling — no more than three active client responsibilities at once, commonly configured as two main projects plus one maintenance client, or two retainers plus one project. Exceeding this ceiling doesn't produce proportionally more revenue; it degrades delivery quality across every commitment at once, because attention, not time alone, is the actual constrained resource. A minimum engagement value threshold works alongside the ceiling: below a defined floor, a project consumes disproportionate admin overhead relative to what it pays, and exceptions should be rare, deliberate, and still carry a full written scope and payment terms.
 
 Payment discipline is equally rigid: work does not start before the first milestone payment clears, with no exceptions for referrals, trusted contacts, or urgent timelines — "I'll pay after I see the first version" is not an accepted arrangement, no matter how the request is framed. Small projects are paid in full upfront; medium and large projects are paid on a milestone schedule, first payment before work begins; retainers are invoiced monthly with a short, fixed due window. A defined overdue escalation ladder — reminder, formal notice, work stoppage, project suspension — removes the awkward, case-by-case negotiation that otherwise happens every time a payment slips, because the response was already decided before the first invoice went out.
@@ -70,4 +72,3 @@ None of the three rules were bent, and the response still left the door open for
 ## Further Reading
 - *Boundaries* — Henry Cloud and John Townsend: a foundational framework for defining and holding firm limits in professional relationships without unnecessary conflict.
 - *The Effective Executive* — Peter Drucker: on the discipline of decision-making and the cost of decisions made under poor conditions or incomplete information.
-- This lesson is general education, not financial or tax advice. Specific capacity, payment, and pricing thresholds here are illustrative — set your own based on your actual delivery history, market, and risk tolerance.

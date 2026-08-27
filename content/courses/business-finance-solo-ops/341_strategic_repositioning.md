@@ -1,6 +1,8 @@
 # 341. Repositioning Your Business for Higher-Value Work
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Any public claims about experience, results, or expertise should remain strictly accurate and verifiable.
+
 Strategic repositioning is the deliberate act of changing what the market believes you are best at, so that you can charge more and attract better-fit clients. It is not a rebrand or a new logo — it is a shift in the sentence a prospect would use to describe you, from something generic ("I build websites and apps") to something specific and valuable ("I help a specific buyer solve a specific high-value problem with a repeatable process"). Four common moves cover most solo software businesses: generic developer to product partner, website builder to business platform builder, one-off freelancer to technical partner, and solo freelancer to solo-led studio. Each requires a different kind of proof to be credible.
 
 The discipline that keeps repositioning honest is proof gap analysis: naming the desired position, listing what proof already exists, identifying exactly what's missing, and finding the fastest legitimate way to close that gap. A messaging upgrade should never outrun the proof behind it — moving from "I build modern websites and apps" straight to "I'm the go-to technical partner for SaaS founders" without a single relevant case study invites the first hard question to collapse the claim. Positioning strength is earned in stages: weak, better, stronger — each stage backed by real deliverables, not aspiration.
@@ -74,4 +76,3 @@ Nothing here is fabricated — the interim pitch states only what is already tru
 - *Obviously Awesome* — April Dunford: a practical framework for positioning products and services around the value a specific buyer already cares about.
 - *Blue Ocean Strategy* — W. Chan Kim and Renée Mauborgne: on finding uncontested market space instead of competing on the same terms as everyone else.
 - See also Lesson 337 (Selling Into a New Vertical Without a Case Study) for the sales-side mechanics of pitching before the repositioning proof fully exists.
-- This lesson is general education, not financial or tax advice. Any public claims about experience, results, or expertise should remain strictly accurate and verifiable.

@@ -47,7 +47,7 @@ import { extractText } from '@/libs/ai/extract-text';
 
 export async function generateSummary(text: string): Promise<string> {
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-6',
+    model: 'claude-sonnet-5',
     max_tokens: 500,
     system: 'Summarize the input in 3-5 sentences.',
     messages: [{ role: 'user', content: text }],
@@ -70,6 +70,6 @@ export async function generateSummary(text: string): Promise<string> {
 - Skipping the fail-fast check and letting a missing API key surface as a confusing runtime error deep inside a request handler
 
 ## Further Reading
-- Anthropic — official TypeScript/Node SDK documentation and README (github.com/anthropics/anthropic-sdk-typescript)
+- [Anthropic — official TypeScript/Node SDK documentation and README](https://github.com/anthropics/anthropic-sdk-typescript)
 - Anthropic API reference — Messages API and client configuration options
 - The Twelve-Factor App, "Config" — the underlying principle for env-var-based secret management

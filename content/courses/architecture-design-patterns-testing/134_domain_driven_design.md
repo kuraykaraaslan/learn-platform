@@ -68,4 +68,4 @@ class Money {
 ## Further Reading
 - "Domain-Driven Design Distilled" by Vaughn Vernon — the practical, shorter entry point
 - Eric Evans — "Domain-Driven Design" (the original, denser "blue book")
-- Martin Fowler — "AggregateOrientedDatabase" and "BoundedContext" articles (martinfowler.com)
+- [Martin Fowler — "AggregateOrientedDatabase" and "BoundedContext" articles](https://martinfowler.com)

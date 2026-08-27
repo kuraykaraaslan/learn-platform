@@ -70,6 +70,6 @@ workflow audits. Do not imply guaranteed savings."
 - Letting AI-typical phrases ("unlock the power of," "game-changer") slip into published content unnoticed because the edit pass was skipped
 
 ## Further Reading
-- Anthropic's guide to prompting Claude (docs.claude.com) — practical, current guidance on providing the context a model needs to produce specific rather than generic output
+- [Anthropic's guide to prompting Claude](https://docs.claude.com) — practical, current guidance on providing the context a model needs to produce specific rather than generic output
 - Nicolas Cole and Dickie Bush's writing on "AI-assisted vs. AI-generated" content (via Ship 30 for 30 / Category Pirates) — a widely referenced practitioner take on where the human-injection line belongs
 - Wharton's "Practical AI for Business" course materials or similar university-issued guidance on responsible AI use in marketing content, useful as a sanity check against overclaiming

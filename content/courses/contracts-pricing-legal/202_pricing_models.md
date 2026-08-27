@@ -54,4 +54,4 @@ This is general business education, not legal advice; nothing here should be rea
 ## Further Reading
 - Jonathan Stark, *Hourly Billing Is Nuts* — a practical case for outcome- and scope-based pricing over time-based billing.
 - Blair Enns, *Pricing Creativity: A Guide to Profit Beyond the Billable Hour*.
-- Rafael Corrales / a16z-style writing on SaaS and service pricing models is widely available, but for freelance/agency-specific pricing, Jonathan Stark's "Ditching Hourly" newsletter and podcast archive is a solid, free primary source (ditchinghourly.com).
+- [Rafael Corrales / a16z-style writing on SaaS and service pricing models is widely available, but for freelance/agency-specific pricing, Jonathan Stark's "Ditching Hourly" newsletter and podcast archive is a solid, free primary source](https://ditchinghourly.com).

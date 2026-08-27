@@ -122,6 +122,6 @@ export async function deductCreditsWithAdvisoryLock(
 - **Using Redlock for very short operations**: For operations entirely within a PostgreSQL transaction, `pg_advisory_xact_lock` is simpler, safer (ACID), and has no TTL management — prefer it over Redis locks for DB-scoped critical sections
 
 ## Further Reading
-- **"How to do distributed locking" by Martin Kleppmann (martin.kleppmann.com/2016/02/08)** — A critical analysis of Redlock's safety guarantees; essential reading before using it in production for high-stakes operations
-- **"Distributed Locks with Redis" (redis.io/docs/manual/patterns/distributed-locks)** — The official Redis documentation on Redlock; covers the algorithm and multi-node version
+- [How to do distributed locking — Martin Kleppmann](https://martin.kleppmann.com/2016/02/08/how-to-do-distributed-locking.html) — a critical analysis of Redlock's safety guarantees; essential reading before using it in production for high-stakes operations
+- [**"Distributed Locks with Redis"](https://redis.io/docs/manual/patterns/distributed-locks)** — The official Redis documentation on Redlock; covers the algorithm and multi-node version
 - **`redlock` npm package documentation** — The standard Node.js implementation; the README explains the five-node quorum algorithm and the tradeoffs

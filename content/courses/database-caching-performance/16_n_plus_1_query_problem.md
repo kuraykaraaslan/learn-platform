@@ -114,5 +114,5 @@ async function assertQueryCount(
 
 ## Further Reading
 - **Prisma documentation — "Select fields and include relations"** — Explains how Prisma batches included relations and how to use `select` to minimize data transfer
-- **"The N+1 Problem" by Dataloader GitHub README (github.com/graphql/dataloader)** — The DataLoader README explains batching and caching clearly; applies equally to REST and GraphQL
+- [**"The N+1 Problem" by Dataloader GitHub README](https://github.com/graphql/dataloader)** — The DataLoader README explains batching and caching clearly; applies equally to REST and GraphQL
 - **"Solving the N+1 Problem in Rails" by thoughtbot** — Though Rails-specific, the conceptual explanation is language-agnostic and includes clear diagrams; the SQL patterns translate directly to PostgreSQL

@@ -85,6 +85,6 @@ jobs:
 - Treating unit test coverage as equivalent to eval coverage — they test different things and neither substitutes for the other
 
 ## Further Reading
-- Chip Huyen — "Designing Machine Learning Systems" and her AI Engineering writing on eval-driven development (huyenchip.com)
+- [Chip Huyen — "Designing Machine Learning Systems" and her AI Engineering writing on eval-driven development](https://huyenchip.com)
 - Anthropic — "Building evals" and "Empirical approach to prompt engineering" (official documentation)
-- OpenAI Evals framework (github.com/openai/evals) — a widely referenced open-source pattern for structuring golden datasets, model-agnostic in approach
+- [OpenAI Evals framework](https://github.com/openai/evals) — a widely referenced open-source pattern for structuring golden datasets, model-agnostic in approach

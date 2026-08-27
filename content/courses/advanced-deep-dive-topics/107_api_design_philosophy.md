@@ -81,6 +81,6 @@ const tenantLoader = new DataLoader(async (tenantIds: readonly string[]) => {
 - Not using DataLoader with GraphQL — N+1 queries will kill performance under any real load
 
 ## Further Reading
-- tRPC docs (trpc.io) — especially the Next.js App Router integration guide
+- [tRPC docs](https://trpc.io) — especially the Next.js App Router integration guide
 - *Production Ready GraphQL* — Marc-André Giroux: the definitive guide to GraphQL API design
-- Google's API Design Guide (cloud.google.com/apis/design) — REST best practices from Google's internal standards
+- [Google's API Design Guide](https://cloud.google.com/apis/design) — REST best practices from Google's internal standards

@@ -174,6 +174,6 @@ git push origin v0.1.0
 - **Scope expansion under community pressure**: When your small, well-focused tool starts getting stars, community members will open issues requesting features that expand the scope; it is healthy to say "that is out of scope for this package — here is why" in the issue
 
 ## Further Reading
-- **"Small, Sharp Software Tools" — Mike Perham (mikeperham.com)** — Essay on the philosophy of building focused, well-maintained tools rather than ambitious frameworks; the reference for thinking about scope
-- **`tsup` documentation (tsup.egoist.dev)** — The fastest way to build a TypeScript npm package with ESM and CJS output and type declarations; used by the majority of new TypeScript packages in 2024–2025
+- [**"Small, Sharp Software Tools" — Mike Perham](https://mikeperham.com)** — Essay on the philosophy of building focused, well-maintained tools rather than ambitious frameworks; the reference for thinking about scope
+- [**`tsup` documentation](https://tsup.egoist.dev)** — The fastest way to build a TypeScript npm package with ESM and CJS output and type declarations; used by the majority of new TypeScript packages in 2024–2025
 - **"Maintainer's Guide to Staying Positive" — Josh Comeau and others** — Resources on handling the psychological load of public-facing OSS maintenance; important before you release something that gets significant adoption

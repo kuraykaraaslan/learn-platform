@@ -109,6 +109,6 @@ export async function GET(req: NextRequest, { params }: { params: { id: string }
 - **Versioning every endpoint separately**: If you have `/api/v1/users` and `/api/v2/users` but `/api/v1/tenants` never got updated, the version signal is meaningless — version the API as a whole, not per-resource
 
 ## Further Reading
-- **Stripe API documentation — versioning policy (stripe.com/docs/upgrades)** — The gold standard for API versioning UX; their date-based versioning and changelog approach is worth emulating
-- **"RESTful API Design" by Apigee (cloud.google.com/apis/design)** — Google's API Design Guide covers versioning, backward compatibility, and breaking changes with concrete examples
-- **"API Versioning Has No Right Way" by Troy Hunt (troyhunt.com)** — An honest breakdown of tradeoffs for each approach; pragmatic and not dogmatic
+- [**Stripe API documentation — versioning policy](https://stripe.com/docs/upgrades)** — The gold standard for API versioning UX; their date-based versioning and changelog approach is worth emulating
+- [**"RESTful API Design" by Apigee](https://cloud.google.com/apis/design)** — Google's API Design Guide covers versioning, backward compatibility, and breaking changes with concrete examples
+- [**"API Versioning Has No Right Way" by Troy Hunt](https://troyhunt.com)** — An honest breakdown of tradeoffs for each approach; pragmatic and not dogmatic

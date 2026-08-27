@@ -70,5 +70,5 @@ Weak:  "screenshot1" / "image" / "project photo"
 
 ## Further Reading
 - *Show Your Work* — Austin Kleon: a useful mindset shift for treating process visibility itself as proof worth sharing, relevant to both screenshots and demos
-- Wistia's guide to product demo videos (wistia.com) — current, practical detail on structuring and pacing a demo for different audiences and lengths
-- OWASP's guidance on sanitizing screenshots and redacting sensitive data (owasp.org) — a technical baseline for what genuinely needs to be hidden before a screen recording or screenshot goes public
+- [Wistia's guide to product demo videos](https://wistia.com) — current, practical detail on structuring and pacing a demo for different audiences and lengths
+- [OWASP's guidance on sanitizing screenshots and redacting sensitive data](https://owasp.org) — a technical baseline for what genuinely needs to be hidden before a screen recording or screenshot goes public

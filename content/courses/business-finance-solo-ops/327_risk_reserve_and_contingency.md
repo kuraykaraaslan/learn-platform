@@ -1,6 +1,8 @@
 # 327. Building Financial Reserves and a Contingency Plan
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Reserve sizing and tax-reserve percentages should be set with your own accountant based on your jurisdiction and actual obligations.
+
 Freelance income is structurally uneven — a great quarter can be followed by a quiet one, a reliable client can suddenly go dark, and a laptop can fail at the worst possible moment. A professional solo business prepares for disruption before it happens, rather than treating every disruption as a surprise emergency. That preparation takes the concrete form of financial reserves, each with a distinct purpose, plus written contingency plans for the risks that are foreseeable even if their timing isn't.
 
 Five reserve types cover most of the exposure: a tax/obligation reserve (money that was never really spendable), an emergency runway reserve (covers income gaps and fixed costs), an equipment reserve (replacing a failed work-critical device), a professional services reserve (accountant, lawyer, consultant support when something goes sideways), and an operations reserve (hosting, tools, and domain renewals that must never lapse). These are separate pools with separate purposes — raiding the tax reserve to cover a slow month just relocates the emergency to tax season.
@@ -55,4 +57,3 @@ Neither of these risks required an emergency to identify — both were visible i
 ## Further Reading
 - *Profit First* — Mike Michalowicz: a concrete percentage-based system for building multiple reserves automatically rather than relying on discipline alone.
 - *The Black Swan* — Nassim Nicholas Taleb: broader framing on preparing for foreseeable-but-unscheduled disruption rather than predicting exact timing.
-- This lesson is general education, not financial or tax advice. Reserve sizing and tax-reserve percentages should be set with your own accountant based on your jurisdiction and actual obligations.

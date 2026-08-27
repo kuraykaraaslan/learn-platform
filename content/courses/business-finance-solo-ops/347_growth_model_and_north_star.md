@@ -1,6 +1,8 @@
 # 347. Choosing a Growth Model and North Star Metric
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Directional targets here are illustrative starting points — recalibrate them against your own historical close rate and capacity.
+
 Before selecting metrics, building a dashboard, or planning content, a solo software business needs to define what "growth" actually means for it — and growth is not audience size. For a one-person operation, growth means a repeatable path from visibility to qualified revenue, and that path deserves a single North Star metric that everything else supports. The recommended North Star for a solo software business is qualified project opportunities per month, where "qualified" has a specific, non-negotiable definition: a lead with a clear business problem, a relevant service fit, a budget signal, a timeline signal, and access to or influence over the decision-maker. A metric that doesn't meet all five criteria isn't a qualified opportunity yet, no matter how promising the conversation felt.
 
 The growth model behind that North Star is a chain of stages, each with its own supporting metrics: audience reach (impressions, profile views, search clicks) leads to trust asset engagement (saves, comments, case-study views), which leads to lead capture (form submissions, DMs, inquiries), then qualification, then a discovery call, then a proposal, then closed revenue, and finally referral or retainer — which feeds back into reach. Metrics should be kept in three distinct levels so activity never gets confused with outcome: business metrics (revenue, qualified leads, close rate) are what actually matter; pipeline metrics (discovery calls, proposals, follow-ups) are the leading indicators; activity metrics (posts published, messages sent, referrals asked) are inputs that only matter if they move the levels above them.
@@ -61,4 +63,3 @@ Every dashboard, weekly review, and experiment built afterward is checked agains
 ## Further Reading
 - *Lean Analytics* — Alistair Croll and Benjamin Yoskovitz: the original case for choosing One Metric That Matters and building a growth model around it.
 - *Traction* — Gabriel Weinberg and Justin Mares: a systematic framework for testing and choosing growth channels rather than guessing.
-- This lesson is general education, not financial or tax advice. Directional targets here are illustrative starting points — recalibrate them against your own historical close rate and capacity.

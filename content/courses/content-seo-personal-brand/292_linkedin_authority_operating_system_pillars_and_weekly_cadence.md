@@ -59,4 +59,4 @@ Friday:    1 process/trust/personal post + weekly analytics review
 ## Further Reading
 - Justin Welsh's LinkedIn content frameworks and newsletter — a widely followed, current practitioner source specifically for solo/creator LinkedIn strategy
 - *Influence* — Robert Cialdini: the foundational reference for why specific, consistent signals build more trust than broad, generic ones
-- LinkedIn's own Creator resources (linkedin.com/business/marketing) — for platform-specific, first-party guidance that stays current with algorithm changes
+- [LinkedIn's own Creator resources](https://linkedin.com/business/marketing) — for platform-specific, first-party guidance that stays current with algorithm changes

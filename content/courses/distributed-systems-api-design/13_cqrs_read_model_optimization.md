@@ -113,5 +113,5 @@ async function listTenantsWithCounts() {
 
 ## Further Reading
 - **PostgreSQL documentation — "Materialized Views"** — Covers `CREATE MATERIALIZED VIEW`, refresh options, and the `CONCURRENTLY` requirement; short and definitive
-- **"CQRS Journey" by Microsoft Patterns & Practices (microsoft.com/en-us/download/details.aspx?id=34774)** — A free e-book walking through the full CQRS read model pattern; even the non-event-sourced parts are directly applicable
-- **"Denormalization Is OK" by Brandur Leach (brandur.org)** — A pragmatic argument for read-model denormalization in PostgreSQL applications; resonates well for a solo developer who values simplicity
+- [**"CQRS Journey" by Microsoft Patterns & Practices](https://microsoft.com/en-us/download/details.aspx?id=34774)** — A free e-book walking through the full CQRS read model pattern; even the non-event-sourced parts are directly applicable
+- [**"Denormalization Is OK" by Brandur Leach](https://brandur.org)** — A pragmatic argument for read-model denormalization in PostgreSQL applications; resonates well for a solo developer who values simplicity

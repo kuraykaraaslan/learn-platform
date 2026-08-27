@@ -168,5 +168,5 @@ const results = calculateSignificance({
 
 ## Further Reading
 - **"Trustworthy Online Controlled Experiments" — Kohavi, Tang, Xu** — The definitive textbook on A/B testing at scale, written by Microsoft and Google experimentation teams; the chapters on the peeking problem and sample ratio mismatch are essential
-- **"Statistical Significance and the Peeking Problem" — Evan Miller (evanmiller.org)** — The most readable explanation of why peeking inflates false-positive rates; includes an interactive visualization; free to read online
-- **PostHog Experiments Documentation (posthog.com/docs/experiments)** — End-to-end guide to running A/B tests with PostHog; covers feature flag setup, result analysis, and the statistical method PostHog uses internally
+- [**"Statistical Significance and the Peeking Problem" — Evan Miller](https://evanmiller.org)** — The most readable explanation of why peeking inflates false-positive rates; includes an interactive visualization; free to read online
+- [**PostHog Experiments Documentation](https://posthog.com/docs/experiments)** — End-to-end guide to running A/B tests with PostHog; covers feature flag setup, result analysis, and the statistical method PostHog uses internally

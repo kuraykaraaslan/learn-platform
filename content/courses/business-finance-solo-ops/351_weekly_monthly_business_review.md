@@ -1,6 +1,8 @@
 # 351. Running a Weekly and Monthly Business Review
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Revenue and margin figures reviewed here should be reconciled against your actual bookkeeping records, not tracked separately from them.
+
 A weekly review and a monthly review answer different questions, and conflating them is why many solo operators either review too often to see real patterns or too rarely to catch problems while they're small. The weekly review is lightweight and tactical: what happened, what created signal, what needs follow-up, and what should change next week. It tracks new leads, qualified leads, discovery calls booked, proposals sent, deals won or lost, follow-ups sent and overdue, content published, and experiment status — and it deliberately limits next-week actions to three to five items, because a solo operator genuinely cannot execute twenty growth actions while also delivering client work.
 
 The monthly review looks for patterns invisible at weekly resolution: channel quality, qualified lead sources, proposal conversion rate, content themes that actually built trust, offer clarity, and the reasons behind lost deals. It should conclude with exactly one primary growth theme for the coming month — increase qualified inbound, improve offer clarity, increase referrals, improve follow-up discipline — plus two or three supporting actions, not a long list of parallel initiatives that dilute focus. Both reviews should track metrics across five categories: revenue, pipeline, retention, proof, and capacity — and specific metric combinations carry diagnostic meaning on their own: revenue up with margin down usually points to underpricing or scope creep; leads up with close rate down usually points to a wrong ICP or weak qualification; close rate high with capacity full is actually a signal to raise prices or productize, not a problem to solve by working more hours; and low recurring revenue is a signal to offer maintenance, reactivate old clients, or create an advisory retainer.
@@ -80,4 +82,3 @@ The weekly overdue-follow-up flag and the monthly lost-deal pattern pointed to t
 ## Further Reading
 - *Traction: Get a Grip on Your Business* — Gino Wickman: the EOS framework's weekly and quarterly review rhythm, scalable down to a one-person operation.
 - *The 12 Week Year* — Brian Moran and Michael Lennington: on compressing planning cycles to make review and course-correction genuinely actionable.
-- This lesson is general education, not financial or tax advice. Revenue and margin figures reviewed here should be reconciled against your actual bookkeeping records, not tracked separately from them.

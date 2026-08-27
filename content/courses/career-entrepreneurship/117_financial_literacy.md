@@ -90,4 +90,4 @@ If you charge fixed-price €12,000 for an 8-week project:
 ## Further Reading
 - *Profit First* — Mike Michalowicz: simple cash management system that forces tax and profit reservations
 - Intuit's freelancer tax guide — even as a non-US freelancer, the framework for self-employment tax planning applies
-- Turkish Revenue Administration (gib.gov.tr) — source of truth for KDV on exported services; find a Turkish tax accountant who works with international freelancers
+- [Turkish Revenue Administration](https://gib.gov.tr) — source of truth for KDV on exported services; find a Turkish tax accountant who works with international freelancers

@@ -1,6 +1,8 @@
 # 336. Scoping Fixed-Price Projects Without Scope Creep
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Scope and change-request terms should be reflected in your written contract — consult a lawyer for significant fixed-price engagements.
+
 Fixed-price projects are attractive to clients because the number never moves — which means all the risk of underestimation lands on you unless the scope is written with real precision. The discipline that prevents this isn't cleverness at pricing; it's discipline at defining, in writing, exactly what's included and exactly what isn't, before the contract is signed.
 
 A well-scoped fixed-price package states its inclusions and exclusions side by side as a table, not as prose buried in a proposal — "up to 6 sections" next to "no e-commerce," "2 revision rounds" next to "no custom animations." It defines the phases and their approximate durations, so both sides know what "on track" looks like partway through. And critically, it names its own red flags in advance: the client wants "just like competitor X" with no content ready, there's no existing domain or hosting, the client has an unusual number of stakeholders, or they've already signaled they'll want changes after the included revision rounds are used up. Naming these in advance means they're handled by the process ("that's a change request") instead of becoming an argument in week three.
@@ -61,4 +63,3 @@ The red-flag list did the real work here: "we actually have 15 entity types" is 
 ## Further Reading
 - *Managing Successful Projects with PRINCE2* (or any standard scope-management reference): the general discipline of defining boundaries before committing to a fixed number applies directly here.
 - The Offer_Library fixed-price-packages examples show fully worked inclusion/exclusion tables and phase breakdowns worth adapting directly.
-- This lesson is general education, not financial or tax advice. Scope and change-request terms should be reflected in your written contract — consult a lawyer for significant fixed-price engagements.

@@ -70,6 +70,6 @@ H2: Summary / Context / Problem / Solution / Technical Approach / Result /
 - Using placeholder alt text ("image," "screenshot1") on proof screenshots that actually need to describe real content
 
 ## Further Reading
-- Baymard Institute's research on portfolio and work-page UX patterns (baymard.com) — evidence-based guidance on how visitors actually scan project listings
-- Google Search Central's guidance on titles and structured page content (developers.google.com/search) — first-party detail on how case-study-style titles get parsed and displayed
+- [Baymard Institute's research on portfolio and work-page UX patterns](https://baymard.com) — evidence-based guidance on how visitors actually scan project listings
+- [Google Search Central's guidance on titles and structured page content](https://developers.google.com/search) — first-party detail on how case-study-style titles get parsed and displayed
 - A well-regarded developer-portfolio teardown or gallery roundup (e.g., from a respected design/dev publication) — useful as a model reference for featured-first, outcome-led portfolio structure

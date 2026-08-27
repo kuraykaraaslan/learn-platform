@@ -1,6 +1,8 @@
 # 337. Selling Into a New Vertical Without a Case Study
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Any client-facing claims about outcomes or experience should remain strictly accurate and verifiable.
+
 Every strategic move into higher-value work or a new market segment starts with the same uncomfortable gap: the positioning you want doesn't yet have the proof to back it up. You want to say "I build production-ready platforms for logistics companies," but your actual portfolio is three unrelated SaaS MVPs and an admin panel for a bakery chain. Selling into that gap honestly — without fabricating experience — is a specific, learnable skill, not a matter of waiting until the case study magically appears.
 
 The core move is a proof gap analysis: name the desired positioning, list existing proof honestly, identify exactly what's missing, and then find the fastest legitimate way to close that gap — often a smaller, lower-risk, possibly discounted first engagement in the new vertical, taken specifically to generate a real, referenceable case study, not for its revenue alone. This is different from lying about experience; it's deliberately trading margin or scope on one engagement for the proof asset the business needs to sell the next five at full price.
@@ -62,4 +64,3 @@ Nothing in the interim pitch is fabricated — it's the true adjacent experience
 ## Further Reading
 - *Positioning: The Battle for Your Mind* — Al Ries and Jack Trout: the classic framing of positioning as a claim that must be earned and defensible, not just declared.
 - *Winning Without Pitching* — Blair Enns: on building authority and proof deliberately rather than accidentally.
-- This lesson is general education, not financial or tax advice. Any client-facing claims about outcomes or experience should remain strictly accurate and verifiable.

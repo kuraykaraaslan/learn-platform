@@ -1,6 +1,8 @@
 # 328. Vendor and Procurement Decisions for a Solo Shop
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Contract terms with subcontractors and vendors, and any related liability questions, should be reviewed with a lawyer where the engagement is significant.
+
 Even a one-person software business depends on a web of vendors — hosting providers, domain registrars, payment processors, design and AI tools, analytics platforms, backup services, an accountant, a lawyer, occasionally a subcontractor. A bad vendor choice doesn't just cost money; it creates delivery risk, hidden cost, security exposure, and client dissatisfaction that's disproportionate to the size of the original decision.
 
 Every non-trivial vendor decision deserves the same lightweight evaluation: what's the actual business need, how reliable and well-supported is the vendor, is pricing clear and are invoices actually available for accounting, what's the security posture and who owns the data, can data be exported or backed up, how hard would it be to switch away later, and what happens to the client if this vendor fails entirely? Choosing purely on sticker price and skipping this evaluation is how solo operators end up locked into tools they can't leave and can't fully trust.
@@ -50,4 +52,3 @@ The €10/month price difference between the two providers was almost irrelevant
 ## Further Reading
 - *The Checklist Manifesto* — Atul Gawande: the underlying argument for why a short, repeatable evaluation checklist beats ad hoc judgment for recurring decisions like this.
 - Most cloud providers publish standard invoices and export tools — checking for these before signing up is a five-minute step that prevents a much larger later migration cost.
-- This lesson is general education, not financial or tax advice. Contract terms with subcontractors and vendors, and any related liability questions, should be reviewed with a lawyer where the engagement is significant.

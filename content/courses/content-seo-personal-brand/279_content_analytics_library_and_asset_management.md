@@ -63,5 +63,5 @@ case-study post
 
 ## Further Reading
 - *Building a Second Brain* — Tiago Forte: the general knowledge-management framework the content-library structure is adapted from
-- HubSpot's "Marketing Analytics" guidance (blog.hubspot.com/marketing/analytics) — a practical reference for distinguishing vanity metrics from business-outcome metrics
+- [HubSpot Marketing Blog](https://blog.hubspot.com/marketing) — a practical reference for distinguishing vanity metrics from business-outcome metrics
 - Notion's or Airtable's official template galleries for "content calendar" and "content library" — ready-made structures that map closely to the metadata fields described here

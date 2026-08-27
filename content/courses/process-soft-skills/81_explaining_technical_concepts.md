@@ -99,5 +99,5 @@ what they actually need: a path forward.
 
 ## Further Reading
 - **"The Pyramid Principle" — Barbara Minto** — The foundational framework for structuring communication for decision-makers; used internally at McKinsey; translates directly to client technical communication
-- **"Translating Tech" — Catt Small (cattsmall.com)** — A practical guide specifically for designers and developers communicating with non-technical stakeholders; includes worked examples from real product conversations
+- [**"Translating Tech" — Catt Small](https://cattsmall.com)** — A practical guide specifically for designers and developers communicating with non-technical stakeholders; includes worked examples from real product conversations
 - **"The McKinsey Way" — Ethan Rasiel** — Chapter on communication structure; highly applicable to how consultants (which is what you are) frame technical and strategic information for business stakeholders

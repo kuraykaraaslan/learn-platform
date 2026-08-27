@@ -128,4 +128,4 @@ Keep a running list:
 ## Further Reading
 - **"How to Contribute to Open Source" — opensource.guide** — The authoritative guide maintained by GitHub; covers every aspect from finding a project to handling rejections
 - **"How Open Source Maintainers Think" — Nadia Eghbal (Working in Public)** — Book-length treatment of the dynamics, incentives, and constraints of OSS maintenance; reading it makes you a better contributor because you understand what maintainers actually need
-- **"First Contributions" (github.com/firstcontributions/first-contributions)** — A live-practice repository specifically for making your first PR; use this to practice the mechanical workflow before doing it in a real project
+- [**"First Contributions"](https://github.com/firstcontributions/first-contributions)** — A live-practice repository specifically for making your first PR; use this to practice the mechanical workflow before doing it in a real project

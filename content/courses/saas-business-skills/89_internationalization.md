@@ -154,6 +154,6 @@ export function getTextDirection(locale: string): 'ltr' | 'rtl' {
 - **Single global locale**: In a multi-tenant SaaS, two tenants may use different languages, timezones, and currencies; locale must be a per-tenant (and optionally per-user) setting, not a single application-level configuration
 
 ## Further Reading
-- **`next-intl` documentation (next-intl.dev)** — The most complete i18n solution for Next.js App Router; covers routing, message loading, timezone-aware formatting, and RTL; read the "Getting Started" and "Formatting" sections first
-- **MDN Web Docs: Intl (developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)** — The canonical reference for JavaScript's built-in internationalization API; every method you need for dates, numbers, and currencies is here
-- **"Internationalization Best Practices for Spec Developers" — W3C (w3.org/International)** — The authoritative guide to i18n in web standards; the "Authoring HTML and CSS" section covers RTL, logical properties, and bidirectional text handling
+- [**`next-intl` documentation](https://next-intl.dev)** — The most complete i18n solution for Next.js App Router; covers routing, message loading, timezone-aware formatting, and RTL; read the "Getting Started" and "Formatting" sections first
+- [**MDN Web Docs: Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)** — The canonical reference for JavaScript's built-in internationalization API; every method you need for dates, numbers, and currencies is here
+- [**"Internationalization Best Practices for Spec Developers" — W3C](https://w3.org/International)** — The authoritative guide to i18n in web standards; the "Authoring HTML and CSS" section covers RTL, logical properties, and bidirectional text handling

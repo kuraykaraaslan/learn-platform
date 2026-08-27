@@ -70,4 +70,4 @@ Takeaway: <one lesson>.
 ## Further Reading
 - *Made to Stick* — Chip and Dan Heath: the standard reference for why concrete, specific stories and frameworks are remembered when abstract advice isn't
 - Justin Welsh's carousel and short-form content breakdowns — current, LinkedIn-specific examples of the exact formats described here
-- LinkedIn's own video best-practices documentation (linkedin.com/business/marketing) — first-party guidance on length, captioning, and format performance
+- [LinkedIn's own video best-practices documentation](https://linkedin.com/business/marketing) — first-party guidance on length, captioning, and format performance

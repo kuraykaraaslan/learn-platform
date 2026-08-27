@@ -70,5 +70,5 @@ then the system rejects it and names the conflicting job.
 
 ## Further Reading
 - Karl Wiegers & Joy Beatty — "Software Requirements" (the standard reference for the specific/testable/owned quality bar used here)
-- Atlassian's Product Requirements template documentation (atlassian.com) — a widely used practical structure
+- [Atlassian's Product Requirements template documentation](https://atlassian.com) — a widely used practical structure
 - Marty Cagan's writings on PRDs vs. "product specs" at svpg.com — on why a PRD should describe outcomes and constraints, not a locked blueprint

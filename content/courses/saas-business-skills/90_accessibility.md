@@ -176,6 +176,6 @@ export function AccessibleModal({
 - **Not managing focus in SPAs**: When a page changes in a Next.js application, the browser does not move focus to the new content — screen reader users hear nothing; use `router.events` or server component navigation callbacks to announce page changes and move focus to the main heading
 
 ## Further Reading
-- **"Inclusive Components" — Heydon Pickering (inclusive-components.design)** — Pattern library of accessible UI components with full explanations; each pattern includes the HTML, CSS, JavaScript, and ARIA used; the modal, dropdown, and card patterns are directly applicable to your SaaS
-- **WebAIM (webaim.org)** — The most practical accessibility resource for web developers; their contrast checker, screen reader survey, and WCAG quick reference are daily-use tools
-- **axe DevTools browser extension (deque.com/axe/devtools)** — The fastest way to audit a page; runs automated checks against WCAG 2.1 and reports violations with explanations and remediation guidance; the free browser extension catches roughly 30–40% of all WCAG issues automatically
+- [**"Inclusive Components" — Heydon Pickering](https://inclusive-components.design)** — Pattern library of accessible UI components with full explanations; each pattern includes the HTML, CSS, JavaScript, and ARIA used; the modal, dropdown, and card patterns are directly applicable to your SaaS
+- [**WebAIM](https://webaim.org)** — The most practical accessibility resource for web developers; their contrast checker, screen reader survey, and WCAG quick reference are daily-use tools
+- [**axe DevTools browser extension](https://deque.com/axe/devtools)** — The fastest way to audit a page; runs automated checks against WCAG 2.1 and reports violations with explanations and remediation guidance; the free browser extension catches roughly 30–40% of all WCAG issues automatically

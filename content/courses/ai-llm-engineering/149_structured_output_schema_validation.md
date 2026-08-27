@@ -49,7 +49,7 @@ async function callClassifier(text: string, isRetry: boolean) {
     ? '\n\nIMPORTANT: Your previous response was not valid JSON matching the schema. Output ONLY the JSON object.'
     : '';
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-6',
+    model: 'claude-sonnet-5',
     max_tokens: 150,
     temperature: 0,
     system: SYSTEM_PROMPT + correction,
@@ -82,6 +82,6 @@ export async function classifyTicket(text: string): Promise<Classification> {
 - Using free-text prompting for a decision that's really "pick one of N actions" — that's what tool use is for, not JSON-output prompting
 
 ## Further Reading
-- Zod official documentation (zod.dev) — schema definition and `safeParse`
+- [Zod official documentation](https://zod.dev) — schema definition and `safeParse`
 - Anthropic — "Increase output consistency with JSON output" (prompt engineering docs)
 - Anthropic — tool use documentation, for when structured output should become an actual function call instead

@@ -22,11 +22,12 @@ Controlling input volume is the other half of the budget, and it has three concr
 // libs/ai/prompts/summary.prompt.ts
 
 export const SUMMARY_CONFIG = {
-  model: 'claude-sonnet-4-6',
+  model: 'claude-sonnet-5',
   max_tokens: 300,
   // Budget: ~1,200 input tokens (400 system + 800 doc) + 300 output
-  // Cost/call = (1200 × $3.00/1M) + (300 × $15.00/1M) = $0.0036 + $0.0045 = $0.0081
-  // At 50 calls/day → ~$12.15/month. Verify current pricing at anthropic.com/pricing before relying on this.
+  // Cost/call = (1200 × $2.00/1M) + (300 × $10.00/1M) = $0.0024 + $0.0030 = $0.0054
+  // At 50 calls/day → ~$8.10/month. Rates move: re-check the pricing page before
+  // you quote this to anyone, and re-run the arithmetic rather than the conclusion.
 } as const;
 
 const MAX_INPUT_CHARS = 6_000; // ~1,500 tokens
@@ -78,6 +79,6 @@ export async function generateSummaryWithBudget(text: string): Promise<string> {
 - Running AI on every request for input that's deterministic and cacheable, instead of caching results (see the Observability lesson)
 
 ## Further Reading
-- Anthropic pricing page (anthropic.com/pricing) — always verify current rates before writing a cost spec, prices change
+- [Anthropic pricing page](https://anthropic.com/pricing) — always verify current rates before writing a cost spec, prices change
 - Anthropic — "Reduce costs" section of the prompt engineering documentation
 - Anthropic — prompt caching documentation, for reducing repeated system-prompt cost on high-volume features

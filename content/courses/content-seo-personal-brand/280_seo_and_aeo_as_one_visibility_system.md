@@ -62,6 +62,6 @@ A second, quieter discipline sits underneath all of this: resisting SEO folklore
 - Trusting a viral SEO tip over official documentation without checking whether it still applies
 
 ## Further Reading
-- Google Search Central documentation (developers.google.com/search) — the primary source for how Google actually treats crawling, indexing, and helpful content
+- [Google Search Central documentation](https://developers.google.com/search) — the primary source for how Google actually treats crawling, indexing, and helpful content
 - Schema.org and Google's Rich Results documentation — for verifying structured-data claims against the actual spec rather than secondhand advice
 - Aleyda Solis' SEO FOMO newsletter and Orainti research — a widely respected, current source specifically tracking AI search and AEO developments

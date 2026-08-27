@@ -75,5 +75,5 @@ What is intentionally not included.
 
 ## Further Reading
 - *Influence* — Robert Cialdini: the social-proof mechanics that explain precisely why a specific testimonial transfers trust and a generic one doesn't
-- GitHub's official guide to writing a great README (docs.github.com) — first-party, current guidance on the structure technical reviewers expect
-- Choose a License's plain-language overview of open-source licensing (choosealicense.com) — relevant for freelancers safely repurposing client-adjacent code under a personal license
+- [GitHub's official guide to writing a great README](https://docs.github.com) — first-party, current guidance on the structure technical reviewers expect
+- [Choose a License's plain-language overview of open-source licensing](https://choosealicense.com) — relevant for freelancers safely repurposing client-adjacent code under a personal license

@@ -62,7 +62,7 @@ export async function classifyWithCache(text: string, traceId: string): Promise<
   }
 
   const start = Date.now();
-  const response = await anthropic.messages.create({ model: 'claude-haiku-4-5-20251001', max_tokens: 20, ...CLASSIFY_CONFIG });
+  const response = await anthropic.messages.create({ model: 'claude-haiku-4-5', max_tokens: 20, ...CLASSIFY_CONFIG });
   logAiCall({
     feature: 'classification', model: response.model,
     inputTokens: response.usage.input_tokens, outputTokens: response.usage.output_tokens,

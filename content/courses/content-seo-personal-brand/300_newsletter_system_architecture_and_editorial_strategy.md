@@ -66,5 +66,5 @@ Cadence discipline closes the loop between architecture and editorial calendar: 
 
 ## Further Reading
 - *Superfans* — Pat Flynn: a practical framework for the tiered relationship-building a newsletter is meant to support, from casual reader to buyer
-- ConvertKit's Creator's Guide to Email Marketing (convertkit.com) — a current, practitioner-focused reference for the minimum-viable-system approach to list building
-- HubSpot's guide to lifecycle marketing stages (blog.hubspot.com) — useful for mapping the nine-stage nurture chain onto whatever tooling is actually in use
+- [ConvertKit's Creator's Guide to Email Marketing](https://convertkit.com) — a current, practitioner-focused reference for the minimum-viable-system approach to list building
+- [HubSpot's guide to lifecycle marketing stages](https://blog.hubspot.com) — useful for mapping the nine-stage nurture chain onto whatever tooling is actually in use

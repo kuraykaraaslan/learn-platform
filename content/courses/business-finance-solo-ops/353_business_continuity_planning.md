@@ -1,6 +1,8 @@
 # 353. Business Continuity Planning for a Solo Operator
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. SLA remedy commitments should always be checked against your actual signed contract terms before being offered to a client.
+
 A solo operator with client SLA obligations has to accept a specific structural fact: every system, credential, and process has exactly one owner. This is called a bus factor of one, and the honest goal is mitigation, not elimination — you cannot make yourself redundant, but you can make sure no single point of failure exists without a documented fallback, that every critical path has a "degraded mode" buying 48-72 hours, and that clients are told proactively before a commitment breaks, never after. Business continuity planning is the work of naming the realistic threats in advance — illness lasting one to three days, illness beyond three days, a stolen or failed laptop, an internet outage, a power outage, a mental health day, or an extreme weather event — and having a rehearsed response ready for each one rather than improvising during the actual disruption.
 
 The response always starts with the same question: is any client SLA at risk within the next 24 hours? If yes, the SLA breach protocol takes priority immediately — calculating how much of the response window is left, and sending a proactive notification before the window closes, not after. If no, a scenario-specific runbook takes over: a short illness triggers a limited-availability message within two hours and a check of anything due in the next 72 hours; an illness beyond three days escalates to briefing a trusted developer backup and sending daily micro-updates to affected clients; a stolen or failed laptop triggers a remote wipe, access to a pre-configured cloud dev environment, and credential rotation, with a recovery target of being productive again within 24 hours.
@@ -68,4 +70,3 @@ The SLA was never at risk of an undisclosed breach — the client was told proac
 ## Further Reading
 - *The E-Myth Revisited* — Michael Gerber: on building systems and documented processes into a small business so it doesn't depend entirely on improvisation by its owner.
 - *Antifragile* — Nassim Nicholas Taleb: a broader framework for building systems that don't just survive disorder but are structured to handle it by design.
-- This lesson is general education, not financial or tax advice. SLA remedy commitments should always be checked against your actual signed contract terms before being offered to a client.

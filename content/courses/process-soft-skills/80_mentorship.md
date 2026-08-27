@@ -104,4 +104,4 @@ One specific, completable outcome:
 ## Further Reading
 - **"The Coaching Habit" — Michael Bungay Stanier** — Seven questions that make you a better mentor in any context; the "What's the real challenge here for you?" question alone transforms how you approach junior developer guidance
 - **"Pair Programming Illuminated" — Laurie Williams and Robert Kessler** — The foundational academic text on pair programming; includes empirical data on its effectiveness and practical guidance on making it work
-- **"Being Glue" — Tanya Reilly (noidea.dog/glue)** — A talk and essay about the non-coding work that holds teams together; relevant when you are the senior person deciding how to invest mentorship time
+- [**"Being Glue" — Tanya Reilly](https://noidea.dog/glue)** — A talk and essay about the non-coding work that holds teams together; relevant when you are the senior person deciding how to invest mentorship time

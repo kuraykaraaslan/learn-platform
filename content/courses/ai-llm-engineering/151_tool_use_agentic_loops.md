@@ -58,7 +58,7 @@ export async function runAgentLoop(userMessage: string): Promise<string> {
 
   for (let step = 0; step < MAX_AGENT_STEPS; step++) {
     const response = await anthropic.messages.create({
-      model: 'claude-sonnet-4-6',
+      model: 'claude-sonnet-5',
       max_tokens: 1024,
       system: AGENT_SYSTEM_PROMPT,
       tools: [searchProductsTool],

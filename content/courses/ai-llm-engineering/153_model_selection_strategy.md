@@ -15,37 +15,37 @@ The other discipline worth internalizing: never use a model alias that can silen
 - **Opus is never for interactive, user-triggered latency-sensitive paths**: its response time is unsuitable for a user actively waiting
 - **Full versioned model IDs, never aliases**: aliases can resolve to a different model version over time, silently changing behavior in production
 - **Document the choice at the call site**: a comment or ADR entry stating model, reason, and volume — makes the decision auditable later
-- **Context window is not the constraint (200k across the board)** — cost is; do not conflate "the model can handle this much input" with "you should send this much input"
+- **Context window is rarely the constraint** — the current frontier models carry a 1M-token window and the small tier 200K, so cost is the real ceiling; never conflate "the model can handle this much input" with "you should send this much input"
 
 ## Example Code
 ```typescript
 // libs/ai/prompts/summary.prompt.ts
 
-// Model: claude-sonnet-4-6
+// Model: claude-sonnet-5
 // Reason: summary generation, ~500 output tokens, ~50 calls/day, open-ended prose
 // Evaluated: haiku was too terse on the golden eval set (see eval-pipeline lesson); opus unnecessary at this quality bar
 export const SUMMARY_CONFIG = {
-  model: 'claude-sonnet-4-6',
+  model: 'claude-sonnet-5',
   max_tokens: 600,
 } as const;
 
 // libs/ai/prompts/classification.prompt.ts
 
-// Model: claude-haiku-4-5-20251001
+// Model: claude-haiku-4-5
 // Reason: binary/enum classification, <20 output tokens, ~5,000 calls/day — cost and latency both favor Haiku
 // Evaluated: Haiku hits 96% agreement with Sonnet on the golden eval set at 1/4 the cost
 export const CLASSIFICATION_CONFIG = {
-  model: 'claude-haiku-4-5-20251001',
+  model: 'claude-haiku-4-5',
   max_tokens: 20,
 } as const;
 
 // libs/ai/prompts/architecture-review.prompt.ts
 
-// Model: claude-opus-4-7
+// Model: claude-opus-5
 // Reason: multi-file architecture review, ~40 page document, missed edge cases have real cost
 // This is triggered from a background job, never an interactive user-facing call — latency is acceptable here
 export const ARCHITECTURE_REVIEW_CONFIG = {
-  model: 'claude-opus-4-7',
+  model: 'claude-opus-5',
   max_tokens: 4000,
 } as const;
 ```
@@ -64,6 +64,6 @@ export const ARCHITECTURE_REVIEW_CONFIG = {
 - Never revisiting model choice after shipping, even as call volume or output requirements change significantly
 
 ## Further Reading
-- Anthropic — "Models overview" and pricing page (anthropic.com/pricing) — verify current tiers before writing a cost spec
+- [Anthropic — "Models overview" and pricing page](https://anthropic.com/pricing) — verify current tiers before writing a cost spec
 - Anthropic — "Choosing the right Claude model for your use case" (documentation)
 - Chip Huyen, "AI Engineering" — chapter on model selection tradeoffs across cost, latency, and quality

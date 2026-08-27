@@ -50,6 +50,6 @@ function withTimeout<T>(promise: Promise<T>, ms: number): Promise<T> {
 - Duplicating the same aggregation logic across a gateway *and* a BFF instead of picking clear ownership for each concern
 
 ## Further Reading
-- Sam Newman — "Pattern: Backends For Frontends" (samnewman.io)
+- [Sam Newman — "Pattern: Backends For Frontends"](https://samnewman.io)
 - ThoughtWorks Technology Radar — BFF pattern writeups (multiple years, worth the search)
 - Netflix Tech Blog — API gateway evolution at scale (real-world scaling lessons)

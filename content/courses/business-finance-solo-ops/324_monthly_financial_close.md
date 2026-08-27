@@ -1,6 +1,8 @@
 # 324. The Monthly Financial Close
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. The monthly close described here is a management practice, not a substitute for formal bookkeeping or tax filing — coordinate its outputs with your accountant.
+
 The monthly close is the process that turns a month of scattered invoices, payments, receipts, and half-remembered decisions into actual business intelligence. Without it, "how was this month?" gets answered with a feeling instead of a number, and problems that were visible in the data — an overdue invoice, a subscription nobody uses, a project quietly losing money — stay invisible until they become a crisis.
 
 A proper close covers revenue issued versus revenue actually collected, the list of unpaid and overdue receivables, categorized expenses, an updated profit estimate, the state of the tax/obligation reserve, current cash runway, a subscription review, updated project profitability notes, pipeline risk, and a short list of priorities for next month. This is deliberately not a full bookkeeping exercise — it's a management review that happens to produce clean inputs for whoever does the actual bookkeeping or tax filing.
@@ -65,4 +67,3 @@ Nothing here required more than twenty minutes once the invoice tracker and expe
 ## Further Reading
 - *Profit First* — Mike Michalowicz: pairs well with a monthly close by giving a concrete allocation system to act on what the close reveals.
 - *Financial Intelligence* — Karen Berman and Joe Knight: useful background on reading your own numbers without a finance background.
-- This lesson is general education, not financial or tax advice. The monthly close described here is a management practice, not a substitute for formal bookkeeping or tax filing — coordinate its outputs with your accountant.

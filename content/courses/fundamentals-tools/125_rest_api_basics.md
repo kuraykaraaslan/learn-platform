@@ -55,5 +55,5 @@ export async function DELETE(_req: Request, { params }: { params: { id: string }
 
 ## Further Reading
 - "REST API Design Rulebook" by Mark Massé
-- Microsoft REST API Guidelines (github.com/microsoft/api-guidelines)
+- [Microsoft REST API Guidelines](https://github.com/microsoft/api-guidelines)
 - Roy Fielding's dissertation, chapter 5 (the original source — dense, but worth skimming once)

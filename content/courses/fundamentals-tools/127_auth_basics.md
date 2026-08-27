@@ -50,6 +50,6 @@ async function loginSession(email: string, password: string) {
 - Rolling a custom crypto/auth scheme instead of using well-reviewed libraries (bcrypt/argon2, established JWT libraries)
 
 ## Further Reading
-- OWASP Authentication Cheat Sheet (cheatsheetseries.owasp.org)
+- [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org)
 - OWASP Password Storage Cheat Sheet
 - Auth0's "Cookies vs Tokens" comparison (vendor blog, but the tradeoff explanation is accurate and vendor-neutral)

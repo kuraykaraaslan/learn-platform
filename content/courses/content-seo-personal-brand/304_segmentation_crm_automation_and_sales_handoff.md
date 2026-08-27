@@ -62,6 +62,6 @@ stage:new-subscriber | stage:nurture | stage:discovery-ready | stage:client
 - Continuing to send generic marketing content to someone actively negotiating a project
 
 ## Further Reading
-- HubSpot's documentation on lead scoring models (hubspot.com) — first-party detail on balancing engagement signals against explicit intent signals
+- [HubSpot's documentation on lead scoring models](https://hubspot.com) — first-party detail on balancing engagement signals against explicit intent signals
 - *Predictable Revenue* — Aaron Ross: the origin of much current thinking on qualification stages and handoff discipline between marketing and sales
-- Customer.io's guide to automation triggers and exit conditions (customer.io) — concrete, tool-level detail on designing workflows that actually terminate correctly
+- [Customer.io's guide to automation triggers and exit conditions](https://customer.io) — concrete, tool-level detail on designing workflows that actually terminate correctly

@@ -130,6 +130,6 @@ why this topic is relevant now, why you are specifically qualified to give this 
 - **No clear takeaway**: A talk that ends with "and that's my experience building SaaS" gives the audience nothing to act on; define the one thing you want every attendee to do differently starting tomorrow and state it explicitly in the closing
 
 ## Further Reading
-- **"Demystifying Public Speaking" — Lara Hogan (larahogan.me)** — The most practical guide to conference speaking specifically for developers; covers finding your topic, writing the abstract, handling nerves, and post-talk follow-up
-- **"Speaking.io" — Zach Holman (speaking.io)** — A curated collection of advice from experienced conference speakers on every aspect of talk preparation and delivery; free to read online
-- **Notist (noti.st) and Speakerdeck (speakerdeck.com)** — Platforms for hosting and sharing your slide decks; publishing your slides after a talk gives the audience a reference and increases the talk's findability online
+- [**"Demystifying Public Speaking" — Lara Hogan](https://larahogan.me)** — The most practical guide to conference speaking specifically for developers; covers finding your topic, writing the abstract, handling nerves, and post-talk follow-up
+- [**"Speaking.io" — Zach Holman](https://speaking.io)** — A curated collection of advice from experienced conference speakers on every aspect of talk preparation and delivery; free to read online
+- [**Notist](https://noti.st) and Speakerdeck (speakerdeck.com)** — Platforms for hosting and sharing your slide decks; publishing your slides after a talk gives the audience a reference and increases the talk's findability online

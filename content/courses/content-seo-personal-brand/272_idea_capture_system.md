@@ -66,4 +66,4 @@ scope is not.
 ## Further Reading
 - *Building a Second Brain* — Tiago Forte: the general framework for lightweight capture-and-resurface systems that idea capture borrows its logic from
 - *Show Your Work* — Austin Kleon: a short, practical case for treating ordinary daily work as publishable material
-- Julian Shapiro's essay "How to Write Useful Blog Posts" (julian.com) — a working writer's account of mining real work for content ideas
+- [Julian Shapiro's essay "How to Write Useful Blog Posts"](https://julian.com) — a working writer's account of mining real work for content ideas

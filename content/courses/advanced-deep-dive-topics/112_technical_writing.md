@@ -124,6 +124,6 @@ paths:
 - Decision docs written as design proposals — a decision doc is about justification, not exploration
 
 ## Further Reading
-- Google's SRE Workbook (sre.google/workbook) — Chapter 8 covers on-call and runbook best practices
+- [Google's SRE Workbook](https://sre.google/workbook) — Chapter 8 covers on-call and runbook best practices
 - *Docs for Developers* — Bhatti et al.: practical technical writing guide aimed at engineers, not writers
-- Swagger/OpenAPI docs (swagger.io/docs) — reference for writing OpenAPI 3.0 specs
+- [Swagger/OpenAPI docs](https://swagger.io/docs) — reference for writing OpenAPI 3.0 specs

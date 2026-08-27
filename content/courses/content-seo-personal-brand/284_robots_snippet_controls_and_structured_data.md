@@ -56,5 +56,5 @@ Structured data (JSON-LD is the preferred format) adds explicit, machine-readabl
 
 ## Further Reading
 - Google Search Central's "Robots Meta Tags" and "Structured Data" documentation — the definitive reference for both topics
-- Schema.org's own documentation and type hierarchy (schema.org) — for checking a type's exact required/recommended properties
-- Google's Rich Results Test tool (search.google.com/test/rich-results) — for validating markup before it ships
+- [Schema.org's own documentation and type hierarchy](https://schema.org) — for checking a type's exact required/recommended properties
+- [Google's Rich Results Test tool](https://search.google.com/test/rich-results) — for validating markup before it ships

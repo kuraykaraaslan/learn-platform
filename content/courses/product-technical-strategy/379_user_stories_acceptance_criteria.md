@@ -55,5 +55,5 @@ so that I can sell different categories of tickets for the same event.
 
 ## Further Reading
 - Mike Cohn — "User Stories Applied" (the foundational text on story format and sizing)
-- Dan North — "Introducing BDD" (dannorth.net) — the original source of the Given/When/Then structure
+- [Dan North — "Introducing BDD"](https://dannorth.net) — the original source of the Given/When/Then structure
 - Bill Wake's INVEST mnemonic (Independent, Negotiable, Valuable, Estimable, Small, Testable) for judging whether a story is actually ready to build

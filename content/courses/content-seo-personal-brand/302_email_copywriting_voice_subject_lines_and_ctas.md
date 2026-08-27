@@ -67,4 +67,4 @@ Strong: "Many software projects become expensive because the first version
 ## Further Reading
 - *Everybody Writes* — Ann Handley: a practical, non-hype guide to writing marketing content that still sounds like a real person
 - *Made to Stick* — Chip Heath & Dan Heath: the research behind why concrete examples outperform abstract advice, directly relevant to the "one workflow" example pattern
-- Copyhackers' guide to subject lines (copyhackers.com) — current, tested detail on subject-line types and what actually earns opens without resorting to clickbait
+- [Copyhackers' guide to subject lines](https://copyhackers.com) — current, tested detail on subject-line types and what actually earns opens without resorting to clickbait

@@ -64,5 +64,5 @@ allocated?
 
 ## Further Reading
 - *Never Eat Alone* — Keith Ferrazzi: the standard reference for relationship-first networking that applies directly to comment and DM strategy
-- LinkedIn's own messaging and networking guidelines (linkedin.com/help) — first-party rules on what's appropriate in direct messaging
+- [LinkedIn's own messaging and networking guidelines](https://linkedin.com/help) — first-party rules on what's appropriate in direct messaging
 - Justin Welsh's commenting-strategy content — current, platform-specific tactics for making comments a lead-generation activity

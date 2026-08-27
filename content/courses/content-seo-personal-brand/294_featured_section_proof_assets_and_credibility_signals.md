@@ -59,5 +59,5 @@ A professional handover should include...
 
 ## Further Reading
 - *Influence* — Robert Cialdini: the standard reference for how specificity, authority, and consistency function as trust signals
-- LinkedIn's help documentation on the Featured section (linkedin.com/help) — first-party detail on formatting and item limits
+- [LinkedIn's help documentation on the Featured section](https://linkedin.com/help) — first-party detail on formatting and item limits
 - *Pitch Anything* — Oren Klaff: useful (in moderation) for thinking about how credibility gets established quickly with a skeptical audience

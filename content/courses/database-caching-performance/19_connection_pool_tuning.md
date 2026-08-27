@@ -120,6 +120,6 @@ async function checkPoolHealth() {
 - **Setting `connection_limit` too high on serverless**: A Vercel app with 200 concurrent functions and `connection_limit=10` presents 2,000 connections to pgBouncer or directly to PostgreSQL; use `connection_limit=1` or `2` on serverless and let the pooler do the multiplexing
 
 ## Further Reading
-- **pgBouncer documentation (pgbouncer.org)** — The official configuration reference; the FAQ section explains transaction mode limitations clearly
+- [**pgBouncer documentation](https://pgbouncer.org)** — The official configuration reference; the FAQ section explains transaction mode limitations clearly
 - **Prisma documentation — "Connection management"** — Covers `connection_limit`, `pool_timeout`, serverless deployment recommendations, and the `?pgbouncer=true` flag
-- **"Why your Prisma app is failing in production" by Lee Robinson (leerob.io)** — Next.js + Prisma + serverless connection pool exhaustion; walks through the exact problem and solutions including Prisma Accelerate
+- [**"Why your Prisma app is failing in production" by Lee Robinson](https://leerob.io)** — Next.js + Prisma + serverless connection pool exhaustion; walks through the exact problem and solutions including Prisma Accelerate

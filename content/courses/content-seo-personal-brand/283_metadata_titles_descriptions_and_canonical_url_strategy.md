@@ -59,4 +59,4 @@ Known duplicate variants to redirect or canonicalize:
 ## Further Reading
 - Google Search Central's "Canonicalization" and "Title Links" documentation — the primary source on how canonical signals and title rewriting actually work
 - Moz's Beginner's Guide to SEO, metadata chapter — a practical, widely used reference for writing titles and descriptions
-- The Open Graph protocol documentation (ogp.me) — the spec behind how social platforms read shared-link previews
+- [The Open Graph protocol documentation](https://ogp.me) — the spec behind how social platforms read shared-link previews

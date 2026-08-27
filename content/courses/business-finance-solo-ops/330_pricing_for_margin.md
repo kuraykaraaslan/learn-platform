@@ -1,6 +1,8 @@
 # 330. Pricing for Margin, Not Just Revenue
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Margin targets and rate benchmarks vary heavily by market and specialization — validate your own numbers against actual project-close data, not assumptions.
+
 Price protects the business, or it doesn't — and a project that looks profitable at the proposal stage frequently becomes unprofitable once revisions, meetings, deployment, support, and opportunity cost are counted honestly. The single biggest pricing mistake a solo operator makes is pricing only by estimated coding hours, which ignores everything else a project actually costs: analysis and planning, communication, QA and revision cycles, deployment and handover, a support buffer, technical and client risk, opportunity cost, the tax/reserve impact, tool costs, and the profit margin that's supposed to be the point of doing this at all.
 
 A useful mental model for the minimum acceptable price is additive: base effort cost, plus a risk buffer, plus project-management and admin cost, plus QA/deployment/handover cost, plus a support buffer, plus direct expenses, plus the desired profit margin. That minimum is then compared against the value the work creates for the client and the market's willingness to pay — the two numbers rarely land at the same place, and the higher one usually wins the negotiation, not the lower one.
@@ -54,4 +56,3 @@ The client's counteroffer was answered with a scope trade, not a margin cut — 
 ## Further Reading
 - *Value-Based Fees* — Alan Weiss: a thorough case for pricing on client value and outcomes rather than time or scope alone.
 - *Pricing Creativity: A Guide to Profit Beyond the Billable Hour* — Blair Enns: short, sharp guidance on holding price and trading scope instead of discounting.
-- This lesson is general education, not financial or tax advice. Margin targets and rate benchmarks vary heavily by market and specialization — validate your own numbers against actual project-close data, not assumptions.

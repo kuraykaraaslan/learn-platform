@@ -99,5 +99,5 @@ await consumer.run({
 
 ## Further Reading
 - *Designing Data-Intensive Applications* — Martin Kleppmann: chapters 10–11 cover stream processing and the log abstraction better than anything else
-- BullMQ docs (docs.bullmq.io) — covers patterns, flows, and sandboxed processors
-- Confluent's Kafka tutorials (developer.confluent.io) — free, hands-on, producer/consumer to Kafka Streams
+- [BullMQ docs](https://docs.bullmq.io) — covers patterns, flows, and sandboxed processors
+- [Confluent's Kafka tutorials](https://developer.confluent.io) — free, hands-on, producer/consumer to Kafka Streams

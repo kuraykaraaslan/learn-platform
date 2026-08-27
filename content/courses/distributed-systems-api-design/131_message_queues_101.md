@@ -49,4 +49,4 @@ eventBus.subscribe("order.placed", "analytics-service", async (event) => {
 ## Further Reading
 - "Designing Data-Intensive Applications" by Martin Kleppmann — chapter 11 (Stream Processing) covers this model precisely
 - AWS SQS documentation — "at-least-once" and DLQ concepts, explained vendor-neutral-enough to generalize
-- RabbitMQ tutorials (rabbitmq.com/getstarted.html) — hands-on, covers both queue and topic exchange patterns
+- [RabbitMQ tutorials](https://rabbitmq.com/getstarted.html) — hands-on, covers both queue and topic exchange patterns

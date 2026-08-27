@@ -50,6 +50,6 @@ export default function () {
 - Running a stress test against production without warning anyone — coordinate it like any other risky operation
 
 ## Further Reading
-- k6 documentation (k6.io/docs) — test types explained with runnable examples
+- [k6 documentation](https://k6.io/docs) — test types explained with runnable examples
 - "The Art of Capacity Planning" by John Allspaw
 - Artillery.io documentation — a JS/YAML-based alternative with a lower learning curve for simple scenarios

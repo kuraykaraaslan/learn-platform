@@ -125,5 +125,5 @@ async function transferFundsWith2PC(
 
 ## Further Reading
 - **"Designing Data-Intensive Applications" by Martin Kleppmann** — Chapters 7 and 9 cover transactions, 2PC, and consensus in depth; the most thorough treatment available
-- **"Starbucks Does Not Use Two-Phase Commit" by Gregor Hohpe (enterpriseintegrationpatterns.com)** — A short, memorable analogy for why eventual consistency is the practical choice in real-world systems
+- [**"Starbucks Does Not Use Two-Phase Commit" by Gregor Hohpe](https://enterpriseintegrationpatterns.com)** — A short, memorable analogy for why eventual consistency is the practical choice in real-world systems
 - **"Life Beyond Distributed Transactions" by Pat Helland (Microsoft Research, 2007)** — The original paper arguing that distributed transactions don't scale and entities + messaging is the correct model; available free online

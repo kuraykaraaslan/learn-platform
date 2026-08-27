@@ -1,6 +1,8 @@
 # 318. Banking, Payment Methods, and Currency Reconciliation
 
 ## What It Is
+> This lesson is general education, not accounting advice. Currency conversion treatment, fee deductibility, and required reconciliation records vary by jurisdiction — confirm specifics with your own accountant.
+
 Every payment method you accept — bank transfer, Wise, Payoneer, Stripe, PayPal — has a different fee structure, settlement speed, currency behavior, and paper trail. A freelancer who accepts "whatever's convenient for the client" without standardizing on a small set of methods ends up reconciling five different systems, each with its own fee deduction and exchange-rate quirk, and eventually loses track of which invoice a given incoming transfer actually corresponds to.
 
 The fix is to pick a small number of supported payment methods, document exactly how each one works (currency, fees, settlement time, what instructions the client needs), and require every incoming payment to be matched against an invoice before it's marked paid — not assumed paid because the client said they sent it. For cross-border work this matters even more: a €4,800 invoice might arrive as €4,762 after wire fees, or convert to a different local-currency amount depending on the exchange rate on the day it lands versus the day it was invoiced. If you don't record which rate applied and when, your own books stop matching what your accountant sees in the bank statement.
@@ -61,6 +63,5 @@ Reference/note: Please include "INV-0042" in the transfer memo.
 - Mixing client payments with personal transfers in the same account, which makes it impossible to hand clean records to an accountant at tax time.
 
 ## Further Reading
-- Wise's guide to receiving international payments as a freelancer (wise.com/gb/blog) — practical detail on fees, settlement times, and multi-currency accounts for independent contractors.
+- [Wise's guide to receiving international payments as a freelancer](https://wise.com/gb/blog) — practical detail on fees, settlement times, and multi-currency accounts for independent contractors.
 - *Profit First* — Mike Michalowicz: while focused on allocation rather than banking mechanics, its account-separation model (separate accounts for tax, profit, operating expenses) pairs directly with the "don't mix flows" principle here.
-- This lesson is general education, not accounting advice. Currency conversion treatment, fee deductibility, and required reconciliation records vary by jurisdiction — confirm specifics with your own accountant.

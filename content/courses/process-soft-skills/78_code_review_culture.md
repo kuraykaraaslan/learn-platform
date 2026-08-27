@@ -85,6 +85,6 @@ Use prefixes to signal intent. Only `blocker:` comments must be resolved before 
 - **Making the review about the reviewer**: "I never write it this way" is not a valid review comment unless "this way" is demonstrably incorrect or violates a documented standard
 
 ## Further Reading
-- **"How to Do Code Reviews Like a Human" — Michael Lynch (mtlynch.io)** — The most practical guide to writing actionable, non-adversarial review comments; referenced by engineering teams at Google and Stripe
-- **"Google's Code Review Developer Guide" (google.github.io/eng-practices)** — Google's public engineering practices documentation; the reviewer and author guides are both worth reading in full
-- **"Conventional Comments" (conventionalcomments.org)** — The prefix convention used in the template above; one-page reference that can be linked in your guidelines document
+- [**"How to Do Code Reviews Like a Human" — Michael Lynch](https://mtlynch.io)** — The most practical guide to writing actionable, non-adversarial review comments; referenced by engineering teams at Google and Stripe
+- [**"Google's Code Review Developer Guide"](https://google.github.io/eng-practices)** — Google's public engineering practices documentation; the reviewer and author guides are both worth reading in full
+- [**"Conventional Comments"](https://conventionalcomments.org)** — The prefix convention used in the template above; one-page reference that can be linked in your guidelines document

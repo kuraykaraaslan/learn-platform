@@ -104,6 +104,6 @@ npx turbo build --filter=...[HEAD^1]      # only build what changed since last c
 - Skipping the `^build` dependency notation — causes non-deterministic build order
 
 ## Further Reading
-- Turborepo docs (turbo.build/repo) — quickstart is well-written, 30-minute setup
+- [Turborepo docs](https://turbo.build/repo) — quickstart is well-written, 30-minute setup
 - *Monorepo.tools* — comparison of all monorepo tools with feature matrix
-- Nx docs (nx.dev) — choose Nx over Turborepo if you need code generation and strict boundary enforcement
+- [Nx docs](https://nx.dev) — choose Nx over Turborepo if you need code generation and strict boundary enforcement

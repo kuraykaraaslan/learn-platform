@@ -1,6 +1,8 @@
 # 340. Scaling with Contractors Without Losing Quality
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Contractor agreements, confidentiality terms, and worker-classification rules vary by jurisdiction — confirm with a lawyer before formalizing any ongoing contractor relationship.
+
 Bringing in a contractor — a designer, a QA specialist, a second developer — can increase capacity, but it introduces quality, communication, margin, and reputation risk that a solo operator absorbs personally, because the freelancer remains accountable for final quality unless the client has directly and separately contracted that person. Delegation done carelessly doesn't multiply capacity; it multiplies risk under your own name.
 
 The safest entry point is task delegation — a small, clearly defined piece of work like UI design for one specific flow, QA execution against a checklist, or content migration — rather than jumping straight to module or client-facing delegation, which carry meaningfully higher risk. A useful filter for what not to delegate: unclear architecture, unstable core business logic, security-critical work without review, a large undefined scope, or anything you genuinely cannot evaluate once it comes back. If you can't judge the quality of the output, you can't safely be accountable for it.
@@ -61,4 +63,3 @@ The brief is deliberately narrow — three components against a documented inter
 ## Further Reading
 - *The E-Myth Revisited* — Michael E. Gerber: on building systems and delegation structures rather than staying the sole bottleneck indefinitely.
 - *Traction* (EOS) — Gino Wickman: process and accountability structures that scale down well to a solo-plus-contractors model.
-- This lesson is general education, not financial or tax advice. Contractor agreements, confidentiality terms, and worker-classification rules vary by jurisdiction — confirm with a lawyer before formalizing any ongoing contractor relationship.

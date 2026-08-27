@@ -102,6 +102,6 @@ export function getMemoryStats() {
 - Fixing symptoms instead of roots — increasing Node.js `--max-old-space-size` delays the crash, doesn't fix the leak
 
 ## Further Reading
-- clinic.js (clinicjs.org) — the fastest path to a Node.js flame graph, zero config
+- [clinic.js](https://clinicjs.org) — the fastest path to a Node.js flame graph, zero config
 - Chrome DevTools Memory docs — official guide to heap snapshots and allocation timelines
 - *Node.js Design Patterns* — Mario Casciaro: Chapter on performance covers V8 internals, streams, and profiling workflow

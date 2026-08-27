@@ -60,6 +60,6 @@ CTA (post-video): If your team handles approvals manually, start by
 - Embedding video or diagrams with no surrounding text explanation, leaving both crawlers and skimming readers without context
 
 ## Further Reading
-- Google Search Central's "Site Structure" and "Internal Linking" guidance (developers.google.com/search) — the primary source on how crawlers use internal links
+- [Google Search Central's "Site Structure" and "Internal Linking" guidance](https://developers.google.com/search) — the primary source on how crawlers use internal links
 - Nielsen Norman Group's research on information architecture and navigation — practical, evidence-based guidance on structuring a site for real users
-- web.dev's image and video optimization guides (web.dev) — current, framework-agnostic detail on formats, compression, and accessible media
+- [web.dev's image and video optimization guides](https://web.dev) — current, framework-agnostic detail on formats, compression, and accessible media

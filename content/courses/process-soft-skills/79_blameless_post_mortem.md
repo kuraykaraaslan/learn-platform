@@ -115,6 +115,6 @@ impact was. Write this so someone can understand the full story in 60 seconds.
 - **Never reading past post-mortems**: The entire value of writing post-mortems is destroyed if you never reference them; review them before major deploys and quarterly for pattern analysis
 
 ## Further Reading
-- **"Site Reliability Engineering" — Google (sre.google/sre-book)** — Chapter 15 covers the blameless post-mortem philosophy in depth; freely available online
+- [**"Site Reliability Engineering" — Google](https://sre.google/sre-book)** — Chapter 15 covers the blameless post-mortem philosophy in depth; freely available online
 - **"Each Failure is a Gift" — John Allspaw (Etsy engineering blog)** — The essay that popularized blameless post-mortems in the product engineering world; still the clearest articulation of why blame is counterproductive
-- **"Debriefing Facilitation Guide" — Etsy (github.com/etsy/DebriefingFacilitationGuide)** — Open-source guide for facilitating post-mortem discussions; useful even if you are running a solo post-mortem as a thinking exercise
+- [**"Debriefing Facilitation Guide" — Etsy](https://github.com/etsy/DebriefingFacilitationGuide)** — Open-source guide for facilitating post-mortem discussions; useful even if you are running a solo post-mortem as a thinking exercise

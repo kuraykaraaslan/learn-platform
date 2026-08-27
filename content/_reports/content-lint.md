@@ -2,151 +2,62 @@
 
 `npx tsx scripts/content-lint` — generated file, do not edit by hand.
 
-412 lessons · 630 findings · 0 waived
+412 lessons · 274 findings · 4 waived
 
 | Rule | Findings | Severity | What it means |
 |---|---:|---|---|
-| `sources/no-url` | 282 | warn | A Further Reading section with no followable link is a list of names, not sources. |
-| `sources/bare-domain` | 166 | warn | A bare domain in parentheses looks like a citation but renders as plain grey text — remark-gfm only autolinks bare URLs, not "(zod.dev)". |
-| `links/unlinked-lesson-ref` | 47 | warn | A "#N" that matches a real lesson but carries no reference cue is left as plain text by the markdown pipeline, because "rule #1" and "Top 10 #29" also exist. Parenthesise it as "(#N)" or add a cue ("see #N"). |
+| `sources/no-url` | 172 | warn | A Further Reading section with no followable link is a list of names, not sources. |
 | `code/private-alias` | 45 | warn | Snippets importing @/libs, @/modules, @/stores or @/components reference the first owner's private boilerplate; no reader can resolve them. |
-| `sources/disclaimer-as-source` | 40 | warn | A legal/financial disclaimer occupying a Further Reading slot is not a reference. |
 | `code/unlabeled-fence` | 35 | warn | An unlabeled fence gets no syntax highlighting and cannot be verified by tooling. |
 | `sources/quota-signature` | 15 | warn | Every lesson in a course carrying the same number of Further Reading bullets is a generation artifact, not a research result. |
+| `sources/bare-domain` | 6 | warn | A bare domain in parentheses looks like a citation but renders as plain grey text — remark-gfm only autolinks bare URLs, not "(zod.dev)". |
+| `links/unlinked-lesson-ref` | 1 | warn | A "#N" that matches a real lesson but carries no reference cue is left as plain text by the markdown pipeline, because "rule #1" and "Top 10 #29" also exist. Parenthesise it as "(#N)" or add a cue ("see #N"). |
 
 ## Findings by rule
 
-### `sources/no-url` — 282
+### `sources/no-url` — 172
 
-- advanced-deep-dive-topics/104_database_internals.md — 3 Further Reading bullets, none with a URL
-- advanced-deep-dive-topics/105_cryptography_fundamentals.md — 3 Further Reading bullets, none with a URL
-- advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md — 3 Further Reading bullets, none with a URL
-- advanced-deep-dive-topics/107_api_design_philosophy.md — 3 Further Reading bullets, none with a URL
-- advanced-deep-dive-topics/108_monorepo_tooling.md — 3 Further Reading bullets, none with a URL
-- advanced-deep-dive-topics/109_performance_profiling.md — 3 Further Reading bullets, none with a URL
 - advanced-deep-dive-topics/110_reading_large_codebases.md — 3 Further Reading bullets, none with a URL
 - advanced-deep-dive-topics/111_production_debugging.md — 3 Further Reading bullets, none with a URL
-- advanced-deep-dive-topics/112_technical_writing.md — 3 Further Reading bullets, none with a URL
 - advanced-deep-dive-topics/113_systems_thinking.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/140_ai_llm_integration.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/146_when_to_add_ai.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/147_anthropic_api_client_architecture.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/148_prompts_as_versioned_code.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/149_structured_output_schema_validation.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/150_context_window_conversation_management.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/151_tool_use_agentic_loops.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/152_advanced_rag_chunking_reranking_grounding.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/153_model_selection_strategy.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/154_token_budget_cost_engineering.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/155_streaming_ai_responses_production.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/156_fallback_graceful_degradation.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/157_building_eval_pipeline.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/158_observability_logging_ai_features.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/159_prompt_injection_defense.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/160_ai_data_privacy_regulatory_compliance.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/161_ai_feature_ux_patterns.md — 3 Further Reading bullets, none with a URL
-- ai-llm-engineering/162_mcp_server_architecture_tool_design.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/163_mcp_server_auth_error_idempotency.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/164_multi_agent_orchestration_workflow_chaining.md — 3 Further Reading bullets, none with a URL
 - ai-llm-engineering/165_human_in_the_loop_review_gates.md — 3 Further Reading bullets, none with a URL
-- algorithms-concurrency/129_concurrency_async_fundamentals.md — 3 Further Reading bullets, none with a URL
 - algorithms-concurrency/130_data_structures_algorithms_practice.md — 3 Further Reading bullets, none with a URL
-- architecture-design-patterns-testing/132_load_stress_testing_basics.md — 3 Further Reading bullets, none with a URL
-- architecture-design-patterns-testing/134_domain_driven_design.md — 3 Further Reading bullets, none with a URL
 - architecture-design-patterns-testing/142_capacity_planning_estimation.md — 3 Further Reading bullets, none with a URL
-- business-finance-solo-ops/316_cash_flow_and_runway.md — 3 Further Reading bullets, none with a URL
-- business-finance-solo-ops/317_invoicing_and_payment_tracking.md — 3 Further Reading bullets, none with a URL
-- business-finance-solo-ops/318_banking_and_payment_methods.md — 3 Further Reading bullets, none with a URL
-- business-finance-solo-ops/319_tax_and_accounting_readiness.md — 3 Further Reading bullets, none with a URL
-- …and 242 more (see content-lint.json)
-
-### `sources/bare-domain` — 166
-
-- advanced-deep-dive-topics/104_database_internals.md — bare domain renders as text, not a link: - *Use The Index, Luke* (use-the-index-luke.com) — practical B-tree index design, vendor-n
-- advanced-deep-dive-topics/105_cryptography_fundamentals.md — bare domain renders as text, not a link: - *Cryptopals Challenges* (cryptopals.com) — hands-on exercises that break bad cryptograph
-- advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md — bare domain renders as text, not a link: - BullMQ docs (docs.bullmq.io) — covers patterns, flows, and sandboxed processors
-- advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md — bare domain renders as text, not a link: - Confluent's Kafka tutorials (developer.confluent.io) — free, hands-on, producer/consumer
-- advanced-deep-dive-topics/107_api_design_philosophy.md — bare domain renders as text, not a link: - tRPC docs (trpc.io) — especially the Next.js App Router integration guide
-- advanced-deep-dive-topics/107_api_design_philosophy.md — bare domain renders as text, not a link: - Google's API Design Guide (cloud.google.com/apis/design) — REST best practices from Goog
-- advanced-deep-dive-topics/108_monorepo_tooling.md — bare domain renders as text, not a link: - Turborepo docs (turbo.build/repo) — quickstart is well-written, 30-minute setup
-- advanced-deep-dive-topics/108_monorepo_tooling.md — bare domain renders as text, not a link: - Nx docs (nx.dev) — choose Nx over Turborepo if you need code generation and strict bound
-- advanced-deep-dive-topics/109_performance_profiling.md — bare domain renders as text, not a link: - clinic.js (clinicjs.org) — the fastest path to a Node.js flame graph, zero config
-- advanced-deep-dive-topics/112_technical_writing.md — bare domain renders as text, not a link: - Google's SRE Workbook (sre.google/workbook) — Chapter 8 covers on-call and runbook best 
-- advanced-deep-dive-topics/112_technical_writing.md — bare domain renders as text, not a link: - Swagger/OpenAPI docs (swagger.io/docs) — reference for writing OpenAPI 3.0 specs
-- ai-llm-engineering/140_ai_llm_integration.md — bare domain renders as text, not a link: - "Building LLM Applications for Production" by Chip Huyen (huyenchip.com)
-- ai-llm-engineering/147_anthropic_api_client_architecture.md — bare domain renders as text, not a link: - Anthropic — official TypeScript/Node SDK documentation and README (github.com/anthropics
-- ai-llm-engineering/149_structured_output_schema_validation.md — bare domain renders as text, not a link: - Zod official documentation (zod.dev) — schema definition and `safeParse`
-- ai-llm-engineering/152_advanced_rag_chunking_reranking_grounding.md — bare domain renders as text, not a link: - Pinecone — "Chunking Strategies for LLM Applications" (learn.pinecone.io)
-- ai-llm-engineering/153_model_selection_strategy.md — bare domain renders as text, not a link: - Anthropic — "Models overview" and pricing page (anthropic.com/pricing) — verify current 
-- ai-llm-engineering/154_token_budget_cost_engineering.md — bare domain renders as text, not a link: - Anthropic pricing page (anthropic.com/pricing) — always verify current rates before writ
-- ai-llm-engineering/157_building_eval_pipeline.md — bare domain renders as text, not a link: - Chip Huyen — "Designing Machine Learning Systems" and her AI Engineering writing on eval
-- ai-llm-engineering/157_building_eval_pipeline.md — bare domain renders as text, not a link: - OpenAI Evals framework (github.com/openai/evals) — a widely referenced open-source patte
-- ai-llm-engineering/159_prompt_injection_defense.md — bare domain renders as text, not a link: - Simon Willison — extensive public writing on prompt injection, coined much of the common
-- ai-llm-engineering/162_mcp_server_architecture_tool_design.md — bare domain renders as text, not a link: - Model Context Protocol specification (modelcontextprotocol.io) — the authoritative refer
-- algorithms-concurrency/129_concurrency_async_fundamentals.md — bare domain renders as text, not a link: - Jake Archibald — "Tasks, microtasks, queues and schedules" (jakearchibald.com)
-- architecture-design-patterns-testing/132_load_stress_testing_basics.md — bare domain renders as text, not a link: - k6 documentation (k6.io/docs) — test types explained with runnable examples
-- architecture-design-patterns-testing/134_domain_driven_design.md — bare domain renders as text, not a link: - Martin Fowler — "AggregateOrientedDatabase" and "BoundedContext" articles (martinfowler.
-- business-finance-solo-ops/317_invoicing_and_payment_tracking.md — bare domain renders as text, not a link: - Stripe's guide to invoicing and payment terms for freelancers and small businesses (stri
-- business-finance-solo-ops/318_banking_and_payment_methods.md — bare domain renders as text, not a link: - Wise's guide to receiving international payments as a freelancer (wise.com/gb/blog) — pr
-- business-finance-solo-ops/319_tax_and_accounting_readiness.md — bare domain renders as text, not a link: - IRS instructions for Form W-8BEN (irs.gov) — the authoritative source for foreign-contra
-- business-finance-solo-ops/320_expense_and_subscription_control.md — bare domain renders as text, not a link: - Ramit Sethi's writing on "conscious spending" (iwillteachyoutoberich.com) — though aimed
-- career-entrepreneurship/117_financial_literacy.md — bare domain renders as text, not a link: - Turkish Revenue Administration (gib.gov.tr) — source of truth for KDV on exported servic
-- content-seo-personal-brand/271_content_pillars_and_strategic_positioning.md — bare domain renders as text, not a link: - HubSpot's guide to "pillar pages and topic clusters" (blog.hubspot.com) — the SEO-adjace
-- content-seo-personal-brand/272_idea_capture_system.md — bare domain renders as text, not a link: - Julian Shapiro's essay "How to Write Useful Blog Posts" (julian.com) — a working writer'
-- content-seo-personal-brand/275_technical_writing_style_for_business_readers.md — bare domain renders as text, not a link: - Julia Evans' technical zines and blog (jvns.ca) — a widely cited example of explaining d
-- content-seo-personal-brand/275_technical_writing_style_for_business_readers.md — bare domain renders as text, not a link: - Google's Technical Writing courses (developers.google.com/tech-writing) — a free, practi
-- content-seo-personal-brand/277_content_calendar_cadence_and_quality_gate.md — bare domain renders as text, not a link: - CoSchedule's "Content Calendar" templates and guidance (coschedule.com/marketing-calenda
-- content-seo-personal-brand/278_ai_assisted_content_without_losing_your_voice.md — bare domain renders as text, not a link: - Anthropic's guide to prompting Claude (docs.claude.com) — practical, current guidance on
-- content-seo-personal-brand/279_content_analytics_library_and_asset_management.md — bare domain renders as text, not a link: - HubSpot's "Marketing Analytics" guidance (blog.hubspot.com/marketing/analytics) — a prac
-- content-seo-personal-brand/280_seo_and_aeo_as_one_visibility_system.md — bare domain renders as text, not a link: - Google Search Central documentation (developers.google.com/search) — the primary source 
-- content-seo-personal-brand/281_search_intent_topic_clusters_and_keyword_query_mapping.md — bare domain renders as text, not a link: - HubSpot's "Topic Clusters" guide (blog.hubspot.com) — a practical, widely cited explanat
-- content-seo-personal-brand/282_technical_seo_foundations_crawl_render_index.md — bare domain renders as text, not a link: - Google Search Central's "Crawling and Indexing" documentation (developers.google.com/sea
-- content-seo-personal-brand/283_metadata_titles_descriptions_and_canonical_url_strategy.md — bare domain renders as text, not a link: - The Open Graph protocol documentation (ogp.me) — the spec behind how social platforms re
-- …and 126 more (see content-lint.json)
-
-### `links/unlinked-lesson-ref` — 47
-
-- ai-llm-engineering/140_ai_llm_integration.md:6 — "#29" matches a lesson but has no cue, so it renders as plain text: **Tool/function calling** extends this from "answer using retrieved text" to "ta
-- ai-llm-engineering/140_ai_llm_integration.md:16 — "#29" matches a lesson but has no cue, so it renders as plain text: - **Prompt injection**: untrusted retrieved or user-supplied content containing 
-- ai-llm-engineering/146_when_to_add_ai.md:59 — "#1" matches a lesson but has no cue, so it renders as plain text: - Google's "Rules of Machine Learning" (Martin Zinkevich) — rule #1 is "don't be
-- architecture-design-patterns-testing/134_domain_driven_design.md:14 — "#14" matches a lesson but has no cue, so it renders as plain text: - **Domain event**: something meaningful that happened in the domain (`OrderShip
-- architecture-design-patterns-testing/134_domain_driven_design.md:59 — "#135" matches a lesson but has no cue, so it renders as plain text: - Deciding service/module boundaries for #135 (Microservices vs Monolith) — boun
-- architecture-design-patterns-testing/142_capacity_planning_estimation.md:44 — "#12" matches a lesson but has no cue, so it renders as plain text: - Deciding whether a specific piece of complexity (sharding #12, a read replica 
-- architecture-design-patterns-testing/142_capacity_planning_estimation.md:44 — "#11" matches a lesson but has no cue, so it renders as plain text: - Deciding whether a specific piece of complexity (sharding #12, a read replica 
-- architecture-design-patterns-testing/142_capacity_planning_estimation.md:44 — "#20" matches a lesson but has no cue, so it renders as plain text: - Deciding whether a specific piece of complexity (sharding #12, a read replica 
-- distributed-systems-api-design/131_message_queues_101.md:6 — "#7" matches a lesson but has no cue, so it renders as plain text: Delivery guarantees are the part that bites people in production. Most brokers o
-- distributed-systems-api-design/135_microservices_vs_monolith.md:6 — "#134" matches a lesson but has no cue, so it renders as plain text: The **modular monolith** is the underrated middle step: a single deployable, but
-- distributed-systems-api-design/135_microservices_vs_monolith.md:14 — "#1" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode
-- distributed-systems-api-design/135_microservices_vs_monolith.md:14 — "#3" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode
-- distributed-systems-api-design/135_microservices_vs_monolith.md:14 — "#14" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode
-- distributed-systems-api-design/135_microservices_vs_monolith.md:14 — "#15" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode
-- framework-deep-dives/400_express_validation_and_response_conventions.md:131 — "#9" matches a lesson but has no cue, so it renders as plain text: - REST API pagination patterns (Microsoft REST API guidelines): https://github.c
-- fundamentals-tools/139_git_internals_advanced_workflows.md:16 — "#120" matches a lesson but has no cue, so it renders as plain text: - **Rebase vs merge in a monorepo**: rebasing across many unrelated package chan
-- observability-deployment/141_cloud_architecture_well_architected.md:4 — "#49" matches a lesson but has no cue, so it renders as plain text: Cloud architecture decisions live above any individual service, and the most con
-- observability-deployment/141_cloud_architecture_well_architected.md:4 — "#1" matches a lesson but has no cue, so it renders as plain text: Cloud architecture decisions live above any individual service, and the most con
-- privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md:4 — "#79" matches a lesson but has no cue, so it renders as plain text: A security or privacy incident is a different animal from a normal production ou
-- privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md:6 — "#363" matches a lesson but has no cue, so it renders as plain text: The response flow is a fixed sequence: detect, preserve evidence, contain, asses
-- privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md:86 — "#79" matches a lesson but has no cue, so it renders as plain text: - Course #79 — *Blameless Post-Mortem — Writing and Running One* (the retrospect
-- privacy-compliance-incident-response/363_breach_notification_requirements_across_jurisdictions.md:4 — "#362" matches a lesson but has no cue, so it renders as plain text: Once an incident response process (lesson #362) confirms personal data may have 
-- privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md:4 — "#359" matches a lesson but has no cue, so it renders as plain text: Every third-party provider a system talks to — hosting, managed database, object
-- privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md:52 — "#359" matches a lesson but has no cue, so it renders as plain text: - During a security questionnaire or enterprise procurement review — the vendor 
-- privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md:64 — "#359" matches a lesson but has no cue, so it renders as plain text: - Course #359 — *Privacy by Design — Process, Artifacts & Multi-Jurisdiction Leg
-- privacy-compliance-incident-response/365_childrens_data_compliance_age_verification_parental_consent.md:8 — "#358" matches a lesson but has no cue, so it renders as plain text: The practical shape of compliance is the same regardless of jurisdiction, even t
-- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:4 — "#358" matches a lesson but has no cue, so it renders as plain text: Health data sits at the top of the classification hierarchy from lesson #358 — "
-- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:6 — "#358" matches a lesson but has no cue, so it renders as plain text: The specifics diverge sharply by jurisdiction, but three structural obligations 
-- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:8 — "#363" matches a lesson but has no cue, so it renders as plain text: The audit-logging and dev-data rules are consistent across all three regimes eve
-- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:17 — "#358" matches a lesson but has no cue, so it renders as plain text: - **Real health data never in dev/staging**: synthetic generators (NHS Synth, Fa
-- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:18 — "#363" matches a lesson but has no cue, so it renders as plain text: - **Breach notification follows lesson #363's timelines**: 72 hours (KVKK/UK GDP
-- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:69 — "#358" matches a lesson but has no cue, so it renders as plain text: - When a teammate or client sends a "sample" dataset containing real patient rec
-- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:82 — "#358" matches a lesson but has no cue, so it renders as plain text: - Course #358 — *Data Classification & Storage Residency Tiers* (the sovereign-s
-- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:83 — "#363" matches a lesson but has no cue, so it renders as plain text: - Course #363 — *Breach Notification Requirements Across Jurisdictions* (the not
-- privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md:6 — "#364" matches a lesson but has no cue, so it renders as plain text: The handover package has a fixed shape: repository link, production and staging 
-- privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md:6 — "#361" matches a lesson but has no cue, so it renders as plain text: The handover package has a fixed shape: repository link, production and staging 
-- privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md:17 — "#364" matches a lesson but has no cue, so it renders as plain text: - **Account ownership transfer**: production accounts should end up owned by the
-- privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md:79 — "#364" matches a lesson but has no cue, so it renders as plain text: - Course #364 — *Third-Party Vendor Risk & Data Processing Agreements* (the vend
-- privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md:80 — "#361" matches a lesson but has no cue, so it renders as plain text: - Course #361 — *Vulnerability Management Lifecycle & Patch SLAs* (the maintenan
-- privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md:8 — "#362" matches a lesson but has no cue, so it renders as plain text: Incident communication to a client or end user is a distinct moment with its own
-- …and 7 more (see content-lint.json)
+- business-finance-solo-ops/316_cash_flow_and_runway.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/317_invoicing_and_payment_tracking.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/321_project_accounting_and_costing.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/322_time_tracking_and_effective_rate.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/323_revenue_stream_design.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/324_monthly_financial_close.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/325_finance_dashboard_and_kpis.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/326_business_records_and_file_system.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/327_risk_reserve_and_contingency.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/328_procurement_and_vendor_management.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/329_operations_sops_and_admin_calendar.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/330_pricing_for_margin.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/331_productized_offer_catalog.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/332_paid_audit_as_door_opener.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/333_retainers_vs_maintenance.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/334_retainer_renewal_and_negotiation.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/335_custom_bundle_design.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/336_scoping_fixed_price_projects.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/337_selling_without_a_reference.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/338_growth_focus_and_bets.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/339_growth_risk_and_concentration.md — 2 Further Reading bullets, none with a URL
+- business-finance-solo-ops/340_scaling_with_contractors.md — 2 Further Reading bullets, none with a URL
+- …and 132 more (see content-lint.json)
 
 ### `code/private-alias` — 45
 
@@ -192,76 +103,33 @@
 - saas-business-skills/88_email_deliverability.md:23 — imports a private alias: @/libs/db
 - …and 5 more (see content-lint.json)
 
-### `sources/disclaimer-as-source` — 40
-
-- business-finance-solo-ops/316_cash_flow_and_runway.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Reserve percent
-- business-finance-solo-ops/317_invoicing_and_payment_tracking.md — disclaimer in Further Reading: - This lesson is general education, not legal or accounting advice. Invoice numb
-- business-finance-solo-ops/318_banking_and_payment_methods.md — disclaimer in Further Reading: - This lesson is general education, not accounting advice. Currency conversion t
-- business-finance-solo-ops/319_tax_and_accounting_readiness.md — disclaimer in Further Reading: - This lesson is general education, not tax or legal advice. It does not replace
-- business-finance-solo-ops/320_expense_and_subscription_control.md — disclaimer in Further Reading: - This lesson is general education, not accounting advice. Whether a given expen
-- business-finance-solo-ops/321_project_accounting_and_costing.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Treat effective
-- business-finance-solo-ops/322_time_tracking_and_effective_rate.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Time-tracking d
-- business-finance-solo-ops/323_revenue_stream_design.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Revenue classif
-- business-finance-solo-ops/324_monthly_financial_close.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. The monthly clo
-- business-finance-solo-ops/325_finance_dashboard_and_kpis.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. These KPIs are 
-- business-finance-solo-ops/326_business_records_and_file_system.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Confirm with yo
-- business-finance-solo-ops/327_risk_reserve_and_contingency.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Reserve sizing 
-- business-finance-solo-ops/328_procurement_and_vendor_management.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Contract terms 
-- business-finance-solo-ops/329_operations_sops_and_admin_calendar.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Calendar cadenc
-- business-finance-solo-ops/330_pricing_for_margin.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Margin targets 
-- business-finance-solo-ops/331_productized_offer_catalog.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Price bands sho
-- business-finance-solo-ops/332_paid_audit_as_door_opener.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Price bands her
-- business-finance-solo-ops/333_retainers_vs_maintenance.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Cancellation an
-- business-finance-solo-ops/334_retainer_renewal_and_negotiation.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Any price chang
-- business-finance-solo-ops/335_custom_bundle_design.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Confirm any cus
-- business-finance-solo-ops/336_scoping_fixed_price_projects.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Scope and chang
-- business-finance-solo-ops/337_selling_without_a_reference.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Any client-faci
-- business-finance-solo-ops/338_growth_focus_and_bets.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Trial-period le
-- business-finance-solo-ops/339_growth_risk_and_concentration.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Concentration t
-- business-finance-solo-ops/340_scaling_with_contractors.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Contractor agre
-- business-finance-solo-ops/341_strategic_repositioning.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Any public clai
-- business-finance-solo-ops/342_account_health_management.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Refund, credit,
-- business-finance-solo-ops/343_expansion_signals_and_upsell.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Expansion prici
-- business-finance-solo-ops/344_referral_and_partner_channels.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Referral fee ar
-- business-finance-solo-ops/345_pipeline_forecasting.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Weighted foreca
-- business-finance-solo-ops/346_case_study_and_proof_loop.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Always confirm 
-- business-finance-solo-ops/347_growth_model_and_north_star.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Directional tar
-- business-finance-solo-ops/348_acquisition_funnel_and_attribution.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Attribution per
-- business-finance-solo-ops/349_growth_experiment_design.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Directional sig
-- business-finance-solo-ops/350_decision_rules_and_scaling.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Capacity and sc
-- business-finance-solo-ops/351_weekly_monthly_business_review.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Revenue and mar
-- business-finance-solo-ops/352_ethical_growth_guardrails.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Data collection
-- business-finance-solo-ops/353_business_continuity_planning.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. SLA remedy comm
-- business-finance-solo-ops/354_non_negotiable_operating_rules.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Specific capaci
-- business-finance-solo-ops/355_burnout_as_a_business_risk.md — disclaimer in Further Reading: - This lesson is general education, not financial, tax, or medical advice. Persi
-
 ### `code/unlabeled-fence` — 35
 
 - advanced-deep-dive-topics/108_monorepo_tooling.md:21 — fence has no language tag
 - advanced-deep-dive-topics/110_reading_large_codebases.md:24 — fence has no language tag
 - advanced-deep-dive-topics/111_production_debugging.md:24 — fence has no language tag
 - advanced-deep-dive-topics/113_systems_thinking.md:61 — fence has no language tag
-- business-finance-solo-ops/316_cash_flow_and_runway.md:23 — fence has no language tag
-- business-finance-solo-ops/317_invoicing_and_payment_tracking.md:22 — fence has no language tag
-- business-finance-solo-ops/317_invoicing_and_payment_tracking.md:33 — fence has no language tag
-- business-finance-solo-ops/318_banking_and_payment_methods.md:22 — fence has no language tag
-- business-finance-solo-ops/318_banking_and_payment_methods.md:41 — fence has no language tag
-- business-finance-solo-ops/319_tax_and_accounting_readiness.md:22 — fence has no language tag
-- business-finance-solo-ops/319_tax_and_accounting_readiness.md:43 — fence has no language tag
-- business-finance-solo-ops/320_expense_and_subscription_control.md:22 — fence has no language tag
-- business-finance-solo-ops/320_expense_and_subscription_control.md:36 — fence has no language tag
-- business-finance-solo-ops/321_project_accounting_and_costing.md:22 — fence has no language tag
-- business-finance-solo-ops/322_time_tracking_and_effective_rate.md:21 — fence has no language tag
-- business-finance-solo-ops/323_revenue_stream_design.md:21 — fence has no language tag
-- business-finance-solo-ops/324_monthly_financial_close.md:20 — fence has no language tag
-- business-finance-solo-ops/325_finance_dashboard_and_kpis.md:22 — fence has no language tag
-- business-finance-solo-ops/326_business_records_and_file_system.md:21 — fence has no language tag
-- business-finance-solo-ops/327_risk_reserve_and_contingency.md:21 — fence has no language tag
-- business-finance-solo-ops/328_procurement_and_vendor_management.md:21 — fence has no language tag
-- business-finance-solo-ops/330_pricing_for_margin.md:21 — fence has no language tag
-- business-finance-solo-ops/334_retainer_renewal_and_negotiation.md:22 — fence has no language tag
-- business-finance-solo-ops/345_pipeline_forecasting.md:21 — fence has no language tag
-- business-finance-solo-ops/348_acquisition_funnel_and_attribution.md:21 — fence has no language tag
+- business-finance-solo-ops/316_cash_flow_and_runway.md:25 — fence has no language tag
+- business-finance-solo-ops/317_invoicing_and_payment_tracking.md:24 — fence has no language tag
+- business-finance-solo-ops/317_invoicing_and_payment_tracking.md:35 — fence has no language tag
+- business-finance-solo-ops/318_banking_and_payment_methods.md:24 — fence has no language tag
+- business-finance-solo-ops/318_banking_and_payment_methods.md:43 — fence has no language tag
+- business-finance-solo-ops/319_tax_and_accounting_readiness.md:24 — fence has no language tag
+- business-finance-solo-ops/319_tax_and_accounting_readiness.md:45 — fence has no language tag
+- business-finance-solo-ops/320_expense_and_subscription_control.md:24 — fence has no language tag
+- business-finance-solo-ops/320_expense_and_subscription_control.md:38 — fence has no language tag
+- business-finance-solo-ops/321_project_accounting_and_costing.md:24 — fence has no language tag
+- business-finance-solo-ops/322_time_tracking_and_effective_rate.md:23 — fence has no language tag
+- business-finance-solo-ops/323_revenue_stream_design.md:23 — fence has no language tag
+- business-finance-solo-ops/324_monthly_financial_close.md:22 — fence has no language tag
+- business-finance-solo-ops/325_finance_dashboard_and_kpis.md:24 — fence has no language tag
+- business-finance-solo-ops/326_business_records_and_file_system.md:23 — fence has no language tag
+- business-finance-solo-ops/327_risk_reserve_and_contingency.md:23 — fence has no language tag
+- business-finance-solo-ops/328_procurement_and_vendor_management.md:23 — fence has no language tag
+- business-finance-solo-ops/330_pricing_for_margin.md:23 — fence has no language tag
+- business-finance-solo-ops/334_retainer_renewal_and_negotiation.md:24 — fence has no language tag
+- business-finance-solo-ops/345_pipeline_forecasting.md:23 — fence has no language tag
+- business-finance-solo-ops/348_acquisition_funnel_and_attribution.md:23 — fence has no language tag
 - career-entrepreneurship/114_niche_positioning.md:23 — fence has no language tag
 - career-entrepreneurship/114_niche_positioning.md:30 — fence has no language tag
 - career-entrepreneurship/117_financial_literacy.md:63 — fence has no language tag
@@ -290,3 +158,16 @@
 - product-technical-strategy — all 25 lessons have exactly 3 Further Reading bullets (zero variance)
 - saas-business-skills — all 8 lessons have exactly 3 Further Reading bullets (zero variance)
 - security — all 13 lessons have exactly 3 Further Reading bullets (zero variance)
+
+### `sources/bare-domain` — 6
+
+- business-finance-solo-ops/317_invoicing_and_payment_tracking.md — bare domain renders as text, not a link: - Stripe's guide to invoicing and payment terms for freelancers and small businesses (stri
+- database-caching-performance/21_cdn_cache_strategy.md — bare domain renders as text, not a link: - **"A Comprehensive Guide to HTTP Caching" by Jake Archibald (web.dev/http-cache)** — Cle
+- frontend-performance-scaling/22_http2_multiplexing.md — bare domain renders as text, not a link: - **"HTTP/3 explained" (http3-explained.haxx.se)** — Free online book by Daniel Stenberg (
+- frontend-performance-scaling/138_frontend_state_management.md — bare domain renders as text, not a link: - TkDodo (React Query maintainer) — "Practical React Query" blog series (tkdodo.eu/blog)
+- process-soft-skills/85_technical_blog_conference_talk.md — bare domain renders as text, not a link: - **"Technical Writing for Developers" — Josh Comeau (joshwcomeau.com/blog/how-i-write)** 
+- saas-business-skills/86_saas_metrics.md — bare domain renders as text, not a link: - **"The SaaS CFO" — Ben Murray (thesaascfo.com)** — Practical financial modeling for SaaS
+
+### `links/unlinked-lesson-ref` — 1
+
+- ai-llm-engineering/146_when_to_add_ai.md:59 — "#1" matches a lesson but has no cue, so it renders as plain text: - Google's "Rules of Machine Learning" (Martin Zinkevich) — rule #1 is "don't be

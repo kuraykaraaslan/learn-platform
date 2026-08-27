@@ -1,6 +1,8 @@
 # 333. Retainers vs. Maintenance: Designing Recurring Revenue Tiers
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Cancellation and rollover terms should be reflected in a written agreement, ideally reviewed against your local contract norms.
+
 "Retainer" and "maintenance" get used interchangeably in casual conversation, but they should be structurally different products. Maintenance means keeping a delivered system stable and current — dependency updates, minor bug fixes, hosting checks, backup verification, a monthly health report — and explicitly excludes new modules, redesigns, or major integrations. A retainer, by contrast, is ongoing development, improvement, or advisory capacity — ​new features within a monthly hour budget, UX refinements, roadmap review — priced and scoped as continuing work, not just upkeep.
 
 Both product types share the same non-negotiable structural requirement: a defined purpose, a defined monthly scope, a stated response time, an explicit list of what's included and excluded, a rule for unused capacity (it typically doesn't roll over, or rolls over only partially and non-cumulatively), a communication channel, billing terms, and cancellation terms. "Unlimited support" should never appear in either product — it converts a bounded offer into an open-ended liability that erodes margin the moment a client learns the boundary doesn't actually exist.
@@ -54,4 +56,3 @@ A client asking "can you also add a new reporting page?" under the Hosting & Upt
 ## Further Reading
 - *Recurring Revenue* — Roman Stanek and John Warrillow (concepts drawn from *The Automatic Customer*): the broader business case for recurring revenue structures.
 - The Offer_Library monthly-retainers and maintenance-packages tier examples are directly usable as starting templates for pricing and scope.
-- This lesson is general education, not financial or tax advice. Cancellation and rollover terms should be reflected in a written agreement, ideally reviewed against your local contract norms.

@@ -58,4 +58,4 @@ Flows aren't complete until they're accountable for screen state, not just scree
 ## Further Reading
 - Jesse James Garrett — "The Elements of User Experience" (the structural layers a flow sits inside)
 - Alan Cooper, Robert Reimann, David Cronin — "About Face: The Essentials of Interaction Design" (on screen-state completeness)
-- Nielsen Norman Group — articles on user flow diagrams and task analysis (nngroup.com)
+- [Nielsen Norman Group — articles on user flow diagrams and task analysis](https://nngroup.com)

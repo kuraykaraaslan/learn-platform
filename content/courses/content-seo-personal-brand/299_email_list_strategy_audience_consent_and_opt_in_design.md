@@ -72,5 +72,5 @@ CTA: Get the checklist
 
 ## Further Reading
 - *Permission Marketing* — Seth Godin: the foundational argument for why an opted-in, specific-promise list outperforms a broad, unpermissioned one, written before "email marketing" was even a category
-- The CAN-SPAM Act compliance guide (business.ftc.gov) — the first-party US baseline for consent, unsubscribe, and sender-identity requirements referenced throughout this material
-- GDPR's guidance on lawful basis for marketing consent (gdpr.eu) — relevant for any freelancer with EU-based subscribers or clients, even outside the EU
+- [The CAN-SPAM Act compliance guide](https://business.ftc.gov) — the first-party US baseline for consent, unsubscribe, and sender-identity requirements referenced throughout this material
+- [GDPR's guidance on lawful basis for marketing consent](https://gdpr.eu) — relevant for any freelancer with EU-based subscribers or clients, even outside the EU

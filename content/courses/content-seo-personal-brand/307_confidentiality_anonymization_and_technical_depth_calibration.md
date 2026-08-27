@@ -64,6 +64,6 @@ Result: The architecture separates fast operational availability from
 - Treating "more developer-level detail everywhere" as automatically more credible, regardless of who's actually reading
 
 ## Further Reading
-- OWASP's guidance on information disclosure risks (owasp.org) — a useful technical grounding for what's genuinely risky to publish about a system's architecture
+- [OWASP's guidance on information disclosure risks](https://owasp.org) — a useful technical grounding for what's genuinely risky to publish about a system's architecture
 - *Presenting to Win* — Jerry Weissman: a widely used framework for adapting the same message to different audience sophistication levels
 - A practical primer on privacy-by-design for client work (e.g., IAPP's foundational resources) — relevant background for handling client data responsibly in portfolio and case-study contexts

@@ -54,4 +54,4 @@ const failed = results.filter((r) => r.status === "rejected");
 ## Further Reading
 - Philip Roberts — "What the heck is the event loop anyway?" (JSConf talk, still the clearest visual explanation)
 - Node.js official docs — "The Node.js Event Loop, Timers, and process.nextTick()"
-- Jake Archibald — "Tasks, microtasks, queues and schedules" (jakearchibald.com)
+- [Jake Archibald — "Tasks, microtasks, queues and schedules"](https://jakearchibald.com)

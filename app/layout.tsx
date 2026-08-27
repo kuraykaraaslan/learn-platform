@@ -10,7 +10,7 @@ const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin']
 
 export const metadata = {
   title: 'learn.kuray.dev — Engineer Roadmap',
-  description: 'A course platform for interns and employees.',
+  description: 'Path to the software business era.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

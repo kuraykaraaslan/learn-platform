@@ -136,6 +136,6 @@ async function deliverWebhook(tenantId: string, eventId: string, event: object) 
 - **Exposing webhook endpoints without rate limiting**: Even with signature verification, an attacker can generate valid signatures with their own test keys; rate limit webhook endpoints by IP to prevent resource exhaustion
 
 ## Further Reading
-- **Stripe Webhook documentation (stripe.com/docs/webhooks)** — The best-written webhook security reference in the industry; their signature verification approach is worth treating as the standard
-- **"Webhook Security" by ngrok blog (ngrok.com/blog)** — Covers signature verification, replay prevention, and delivery guarantees across multiple providers
+- [**Stripe Webhook documentation](https://stripe.com/docs/webhooks)** — The best-written webhook security reference in the industry; their signature verification approach is worth treating as the standard
+- [**"Webhook Security" by ngrok blog](https://ngrok.com/blog)** — Covers signature verification, replay prevention, and delivery guarantees across multiple providers
 - **Standard Webhooks specification (standard-webhooks.com)** — An emerging open standard for webhook signatures and payloads; worth following as an interoperability baseline for your outgoing webhooks

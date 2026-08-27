@@ -41,7 +41,7 @@ export async function trimHistory(
 ): Promise<ConversationHistory> {
   const byTurns = trimToTurns(history);
   const { input_tokens } = await anthropic.messages.countTokens({
-    model: 'claude-sonnet-4-6',
+    model: 'claude-sonnet-5',
     system,
     messages: byTurns,
   });
@@ -68,7 +68,7 @@ export async function continueConversation(
   const messages: ConversationHistory = [...trimmed, { role: 'user', content: userMessage }];
 
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-6',
+    model: 'claude-sonnet-5',
     max_tokens: 1024,
     system,
     messages,

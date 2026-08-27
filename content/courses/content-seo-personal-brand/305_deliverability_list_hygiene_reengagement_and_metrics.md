@@ -79,6 +79,6 @@ Slow list growth           → fix opt-in placement, sharpen the lead magnet
 - Treating rising subscriber count as success while reply quality and business outcomes decline
 
 ## Further Reading
-- Google's sender guidelines for bulk email (support.google.com/mail) — first-party detail on the authentication and reputation thresholds that affect inbox placement
-- Litmus's guide to email deliverability (litmus.com) — a current, practitioner-level reference connecting technical setup to actual inbox outcomes
+- [Google's sender guidelines for bulk email](https://support.google.com/mail) — first-party detail on the authentication and reputation thresholds that affect inbox placement
+- [Litmus's guide to email deliverability](https://litmus.com) — a current, practitioner-level reference connecting technical setup to actual inbox outcomes
 - A practical guide to RFM (recency, frequency, monetary) segmentation — useful for deciding which inactive contacts are worth one more re-engagement attempt versus suppression

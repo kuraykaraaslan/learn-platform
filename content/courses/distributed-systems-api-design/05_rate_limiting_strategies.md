@@ -122,6 +122,6 @@ export async function tokenBucketRateLimit(
 - **Same limit for all tenants**: A free-tier tenant and a high-volume enterprise tenant should not share the same rate limit; make limits configurable per plan in your tenant settings
 
 ## Further Reading
-- **"An alternative approach to rate limiting" by Cloudflare Blog (cloudflare.com/blog)** — Describes the sliding window counter approximation; explains the math and the tradeoffs clearly
+- [**"An alternative approach to rate limiting" by Cloudflare Blog](https://cloudflare.com/blog)** — Describes the sliding window counter approximation; explains the math and the tradeoffs clearly
 - **"Rate Limiting" chapter in "Building Microservices" by Sam Newman (2nd edition)** — Covers rate limiting in the context of API gateways and service meshes; practical framing
 - **redis-rate-limiter-flexible (npm)** — Production-tested Node.js library supporting all four algorithms with Redis; reading the documentation surfaces the edge cases you'll need to handle in a custom implementation

@@ -51,5 +51,5 @@ async function placeOrder(input: PlaceOrderInput) {
 
 ## Further Reading
 - Sam Newman — "Monolith to Migration" (the practical how, not just the theory)
-- Martin Fowler — "MonolithFirst" (martinfowler.com) — the case for starting with a monolith
+- [Martin Fowler — "MonolithFirst"](https://martinfowler.com) — the case for starting with a monolith
 - Team Topologies by Matthew Skelton & Manuel Pais — the organizational side of the same decision

@@ -84,5 +84,5 @@ Description. Why was it rejected?
 
 ## Further Reading
 - **"A Toolbox for Scaling Engineering Decisions" — Gergely Orosz (Pragmatic Engineer)** — Practical breakdown of RFC, ADR, and design doc formats used at Uber, Stripe, and others
-- **Rust RFC process documentation (github.com/rust-lang/rfcs)** — The most well-documented public RFC process for a software project; the README explains the lifecycle clearly
+- [**Rust RFC process documentation](https://github.com/rust-lang/rfcs)** — The most well-documented public RFC process for a software project; the README explains the lifecycle clearly
 - **"Design Docs at Google" — Eugene Yan** — Google's internal equivalent of RFCs; explains how to write them concisely and what reviewers actually look for

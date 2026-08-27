@@ -65,5 +65,5 @@ workflow and I can tell you what I would clarify first.
 
 ## Further Reading
 - *Influence* — Robert Cialdini: the underlying psychology of why specific, evidence-backed proof persuades where vague claims don't
-- HubSpot's guide to writing case-study-driven sales emails (blog.hubspot.com) — practical detail on turning project proof into outreach copy
-- Copyhackers' guide to proof-driven copywriting (copyhackers.com) — tactical patterns for replacing generic claims with concrete, credible language
+- [HubSpot's guide to writing case-study-driven sales emails](https://blog.hubspot.com) — practical detail on turning project proof into outreach copy
+- [Copyhackers' guide to proof-driven copywriting](https://copyhackers.com) — tactical patterns for replacing generic claims with concrete, credible language

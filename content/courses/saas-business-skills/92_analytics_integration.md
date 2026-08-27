@@ -166,6 +166,6 @@ export const analytics = new AnalyticsService();
 - **No consent management**: In the EU, tracking users without explicit consent is a GDPR violation; gate all `analytics.identify()` and `analytics.track()` calls on a consent flag stored in localStorage or a cookie consent service
 
 ## Further Reading
-- **PostHog Documentation (posthog.com/docs)** — PostHog is the best self-hostable analytics platform for SaaS; their Next.js integration guide covers SSR-compatible setup, feature flags, and session recording in one document
+- [**PostHog Documentation](https://posthog.com/docs)** — PostHog is the best self-hostable analytics platform for SaaS; their Next.js integration guide covers SSR-compatible setup, feature flags, and session recording in one document
 - **"Measuring What Matters" — John Doerr** — OKR framework for product companies; the chapter on leading vs. lagging indicators directly addresses which product events to track and which business metrics to derive from them
-- **Segment Analytics Academy (segment.com/academy)** — Free course on event tracking taxonomy, identify/track/group patterns, and funnel design; written by the people who built the industry-standard analytics routing layer
+- [**Segment Analytics Academy](https://segment.com/academy)** — Free course on event tracking taxonomy, identify/track/group patterns, and funnel design; written by the people who built the industry-standard analytics routing layer

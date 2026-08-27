@@ -1,6 +1,8 @@
 # 323. Classifying and Balancing Your Revenue Streams
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Revenue classification here is a management and pricing tool, not an accounting standard — confirm how your accountant wants these categories mapped to your bookkeeping chart of accounts.
+
 Revenue is not one generic pile of money — different ways of earning it carry very different risk, effort, margin, and predictability, even when the monthly total looks identical. A solo software business typically earns through some mix of fixed-fee projects, time-and-materials work, paid discovery/audits, maintenance retainers, hosting/ops fees, advisory sessions, white-label delivery for agencies, productized services, and occasionally digital products or owned tools. Treating "any paid project is good" as the operating philosophy is how a business ends up busy, cash-positive on paper, and still fragile.
 
 The fix is to classify revenue before judging it. Each stream can be scored on five criteria — predictability, margin, fit with your strengths, control over delivery and payment terms, and growth potential toward larger or repeat work — each rated 1–5. A stream scoring 21–25 should be prioritized; 16–20 is good but needs better structure; 11–15 is acceptable only selectively; anything at 0–10 should be avoided unless there's a clear strategic reason to take it anyway (a portfolio-building loss-leader, for instance).
@@ -53,4 +55,3 @@ The quarterly total looked fine; the stream breakdown is what surfaced the one c
 ## Further Reading
 - *Built to Sell* — John Warrillow: makes the case for productized, recurring revenue as the foundation of a business that isn't entirely dependent on the owner's hours.
 - *The Business of Expertise* — David C. Baker: revenue-mix thinking specifically for solo and small consulting/technical practices.
-- This lesson is general education, not financial or tax advice. Revenue classification here is a management and pricing tool, not an accounting standard — confirm how your accountant wants these categories mapped to your bookkeeping chart of accounts.

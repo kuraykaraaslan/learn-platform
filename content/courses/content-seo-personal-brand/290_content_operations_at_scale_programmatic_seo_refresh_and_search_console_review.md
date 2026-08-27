@@ -69,5 +69,5 @@ Fail any box → noindex, merge with a related page, improve, or don't publish.
 
 ## Further Reading
 - Google Search Central's guidance on "Doorway Pages" and "Scaled Content Abuse" — the primary source on where programmatic SEO crosses into a policy violation
-- Google Search Console Help documentation (support.google.com/webmasters) — for current detail on every report referenced in review cadences
+- [Google Search Console Help documentation](https://support.google.com/webmasters) — for current detail on every report referenced in review cadences
 - Ahrefs' and Moz's blog series on "content decay" — practical, widely cited frameworks for prioritizing what to refresh first

@@ -1,6 +1,8 @@
 # 319. Tax and Accounting Readiness for International Freelancers
 
 ## What It Is
+> This lesson is general education, not tax or legal advice. It does not replace a qualified accountant familiar with your specific jurisdiction, entity type, and client mix — verify every rate, threshold, and form requirement before relying on it.
+
 Tax readiness isn't about knowing tax law — it's about never being the reason your accountant can't do their job. Most freelancers experience taxes as a once-a-quarter emergency because records were never organized as the year went along: receipts live in email, invoices live in chat exports, and foreign-currency payments have no note about which exchange rate applied. None of that is a tax problem; it's a filing-system problem that becomes a tax problem the week before a deadline.
 
 The fix is a standing folder structure and a monthly habit, not a year-end scramble. Every accounting period — typically a month — should accumulate issued invoices, received payments, expense receipts, bank exports, and subscription invoices in one predictable place, so that handing a period to your accountant is a matter of pointing at a folder, not reconstructing three months of history from memory.
@@ -64,6 +66,5 @@ Finance/
 - Waiting until a filing deadline to organize the year's invoices, receipts, and bank exports instead of keeping a running monthly folder.
 
 ## Further Reading
-- IRS instructions for Form W-8BEN (irs.gov) — the authoritative source for foreign-contractor withholding certification when invoicing US clients.
+- [IRS instructions for Form W-8BEN](https://irs.gov) — the authoritative source for foreign-contractor withholding certification when invoicing US clients.
 - UK Government guidance on VAT reverse charge for services (gov.uk, "VAT: reverse charge") — the authoritative source for B2B cross-border VAT treatment when invoicing UK clients.
-- This lesson is general education, not tax or legal advice. It does not replace a qualified accountant familiar with your specific jurisdiction, entity type, and client mix — verify every rate, threshold, and form requirement before relying on it.

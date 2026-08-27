@@ -1,6 +1,8 @@
 # 349. Designing Growth Experiments That Produce Real Signal
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Directional signal from small-sample experiments should be treated as suggestive, not statistically conclusive.
+
 A growth experiment has to test a specific hypothesis, or it produces noise and false confidence dressed up as progress. Every real experiment defines eight things before it starts: the hypothesis, the single variable being changed, the target audience or channel, the success metric, the baseline it's being measured against, the expected improvement, the duration, and — critically — the decision rule that says in advance what result leads to continuing, stopping, iterating, or scaling. "If I turn technical project posts into before-after case study posts, qualified DMs will increase because buyers understand business value faster" is an experiment. "Post more" or "try ads" or "make the website better" are initiatives, not experiments — they have no falsifiable claim and no way to know afterward whether they worked.
 
 Because a solo operator's traffic and lead volume are inherently small, growth experiments here should not require statistically perfect A/B tests — but they must stay honest about the resulting uncertainty rather than pretending small-sample results are conclusive. Valid early signals at low volume include more qualified replies, better discovery call quality, a stronger referral response, more case-study mentions in conversation, and fewer low-budget leads — directional evidence that a future decision can actually be made from, even without a statistically significant sample.
@@ -80,4 +82,3 @@ The decision rule was fixed before the first post went out — so whatever the r
 ## Further Reading
 - *Testing Business Ideas* — David J. Bland and Alexander Osterwalder: a structured catalog of experiment types matched to the strength of evidence they produce.
 - *The Lean Startup* — Eric Ries: the build-measure-learn loop that underlies treating growth tactics as testable hypotheses rather than permanent commitments.
-- This lesson is general education, not financial or tax advice. Directional signal from small-sample experiments should be treated as suggestive, not statistically conclusive.

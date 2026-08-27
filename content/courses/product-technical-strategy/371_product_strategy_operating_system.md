@@ -62,4 +62,4 @@ V2 (route optimization).
 ## Further Reading
 - Marty Cagan — "Inspired: How to Create Tech Products Customers Love" (the product operating model this sequence compresses)
 - Teresa Torres — "Continuous Discovery Habits" (on keeping the Problem → User steps alive after MVP, not just at kickoff)
-- Y Combinator's "How to Talk to Users" essay/video (ycombinator.com) — practical grounding for the Problem step
+- [Y Combinator's "How to Talk to Users" essay/video](https://ycombinator.com) — practical grounding for the Problem step

@@ -69,6 +69,6 @@ The value is not the table. The value is operational clarity.
 - Making a client look incompetent or exposing confidential details while telling a case study story
 
 ## Further Reading
-- Julia Evans' technical zines and blog (jvns.ca) — a widely cited example of explaining deep technical mechanisms in plain, concrete language
+- [Julia Evans' technical zines and blog](https://jvns.ca) — a widely cited example of explaining deep technical mechanisms in plain, concrete language
 - Michael Nygard's "Documenting Architecture Decisions" (the original ADR format article) — the direct source for the Architecture Decision Record framework
 - Justin Welsh's and Wes Kao's writing on technical/expertise-based LinkedIn content — current, practitioner-level examples of the hidden-complexity and mistake-consequence formats in practice

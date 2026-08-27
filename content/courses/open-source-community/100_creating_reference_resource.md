@@ -142,6 +142,6 @@ the assets with your own and the three options fall out the same way:
 - **Pricing out of fear**: Developers consistently under-price their knowledge resources; a $29 guide requires 10× more buyers than a $299 guide for the same revenue; pricing at what a single hour of your consulting time costs is a reasonable floor for a comprehensive resource
 
 ## Further Reading
-- **"Productize Yourself" — Paul Jarvis (pjrvs.com/productize)** — The foundational essay on turning individual expertise into scalable digital products; directly applicable to converting your rulesets into a resource
+- [**"Productize Yourself" — Paul Jarvis](https://pjrvs.com/productize)** — The foundational essay on turning individual expertise into scalable digital products; directly applicable to converting your rulesets into a resource
 - **"The Knowledge Commerce Blueprint" — Podia blog** — Practical guide to choosing formats, pricing, and platforms for digital knowledge products; includes data on conversion rates across formats
 - **"Show Your Work!" — Austin Kleon** — Short, motivating treatment of why sharing your process while building a resource creates an audience that your competitors who build in private never develop; essential reading before you start any build-in-public effort

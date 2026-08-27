@@ -60,5 +60,5 @@ for (const { question, mustContain } of evalCases) {
 
 ## Further Reading
 - Anthropic — prompt engineering documentation and "Building effective agents" guide
-- "Building LLM Applications for Production" by Chip Huyen (huyenchip.com)
+- ["Building LLM Applications for Production" by Chip Huyen](https://huyenchip.com)
 - OWASP Top 10 for LLM Applications (a direct LLM-era counterpart to #29)

@@ -28,7 +28,7 @@ const ReviewOutput = z.object({ verdict: z.enum(['approve', 'revise']), notes: z
 // Each stage: its own model tier, its own scoped system prompt, validated output
 async function classifyStage(ticketText: string) {
   const response = await anthropic.messages.create({
-    model: 'claude-haiku-4-5-20251001', // cheap — small structured decision, high volume
+    model: 'claude-haiku-4-5', // cheap — small structured decision, high volume
     max_tokens: 50,
     system: CLASSIFY_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: `<ticket>\n${ticketText}\n</ticket>` }],
@@ -38,7 +38,7 @@ async function classifyStage(ticketText: string) {
 
 async function draftStage(ticketText: string, category: string) {
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-6', // open-ended generation — the default tier
+    model: 'claude-sonnet-5', // open-ended generation — the default tier
     max_tokens: 500,
     system: DRAFT_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: `<ticket category="${category}">\n${ticketText}\n</ticket>` }],
@@ -48,7 +48,7 @@ async function draftStage(ticketText: string, category: string) {
 
 async function reviewStage(draft: string) {
   const response = await anthropic.messages.create({
-    model: 'claude-opus-4-7', // highest stakes stage — a missed issue here reaches the customer
+    model: 'claude-opus-5', // highest stakes stage — a missed issue here reaches the customer
     max_tokens: 300,
     system: REVIEW_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: `<draft>\n${draft}\n</draft>` }],

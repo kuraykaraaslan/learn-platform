@@ -177,6 +177,6 @@ export async function getTenantWithETag(request: NextRequest, tenantId: string) 
 - **Designing sync as "full re-download"**: A mobile app that fetches the full dataset every time it reconnects will be slow and drain battery; design delta sync endpoints from the start, even if the client does not use them immediately
 
 ## Further Reading
-- **"Offline First" — Alex Feyerke and others (offlinefirst.org)** — The community resource that popularized offline-first design; includes case studies, patterns, and a curated reading list
+- [**"Offline First" — Alex Feyerke and others](https://offlinefirst.org)** — The community resource that popularized offline-first design; includes case studies, patterns, and a curated reading list
 - **"HTTP APIs for Mobile" — Stripe Engineering Blog** — Stripe's internal guidelines for designing APIs that work well under mobile constraints; covers response shaping, pagination, and retry semantics
 - **"Building Offline-First Apps" — Nolan Lawson** — The most practical deep-dive into the technical challenges of offline-first: conflict resolution, sync protocols, and local storage options; originally a web article but fully applicable to PWA and mobile web

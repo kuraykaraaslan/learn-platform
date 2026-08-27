@@ -1,6 +1,8 @@
 # 325. Building a Finance Dashboard: Core KPIs for Solo Businesses
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. These KPIs are a management dashboard, not a formal financial statement — treat them as a decision aid alongside, not instead of, your accountant's records.
+
 A solo business doesn't need enterprise-grade finance analytics — it needs a small, reliable set of numbers that can be checked in under five minutes and trusted completely. A dashboard with forty metrics that nobody updates is worse than no dashboard at all; the goal here is the smallest set of numbers that would actually change a decision.
 
 The essential set covers monthly revenue issued and collected, outstanding and overdue receivables, monthly expenses, estimated profit, cash runway, average project value, effective hourly rate by project, billable utilization, subscription cost ratio, recurring revenue, and pipeline value. A few of these deserve precise definitions to stay useful: estimated profit is collected revenue minus expenses minus direct project costs minus reserve allocations (a management estimate, not a formal accounting statement); the subscription cost ratio is monthly subscription cost divided by monthly collected revenue, and a rising trend means tools are quietly eating margin.
@@ -55,4 +57,3 @@ Every other number is green — the dashboard's entire value this month is the o
 ## Further Reading
 - *Financial Intelligence* — Karen Berman and Joe Knight: useful grounding in what each of these numbers actually means and where they can mislead.
 - A simple spreadsheet, Notion database, or lightweight admin panel is sufficient — the discipline of updating it weekly matters far more than the tool.
-- This lesson is general education, not financial or tax advice. These KPIs are a management dashboard, not a formal financial statement — treat them as a decision aid alongside, not instead of, your accountant's records.

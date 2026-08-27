@@ -101,5 +101,5 @@ prioritized.forEach((item, i) => {
 
 ## Further Reading
 - **"Managing Technical Debt" by Philippe Kruchten, Robert Nord, and Ipek Ozkaya** — The most rigorous academic treatment of debt classification and scoring frameworks
-- **"Technical Debt Quadrant" — Martin Fowler (martinfowler.com)** — Fowler's two-axis model (reckless/prudent × deliberate/inadvertent) is a useful pre-filter before scoring
+- [**"Technical Debt Quadrant" — Martin Fowler](https://martinfowler.com)** — Fowler's two-axis model (reckless/prudent × deliberate/inadvertent) is a useful pre-filter before scoring
 - **"The Pragmatic Programmer" — Hunt & Thomas, Chapter on Broken Windows** — The psychological case for why unaddressed debt compounds socially, not just technically

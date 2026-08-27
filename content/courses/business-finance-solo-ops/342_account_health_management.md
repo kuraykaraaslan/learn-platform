@@ -1,6 +1,8 @@
 # 342. Managing Account Health: Green, Yellow, Red
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Refund, credit, and termination decisions should also be checked against your written contract terms before being offered.
+
 Account health is a simple three-state classification — green, yellow, red — that tells you whether an existing client relationship is safe to grow, needs attention, or needs recovery before anything else happens. Green means the client is responsive, payments are current, there are no unresolved issues, and sentiment is positive or neutral. Yellow means something has slipped: slow responses over 72 hours, a mild complaint, an unresolved scope question, a slightly late payment, or reduced engagement. Red means the relationship is in active trouble: no response in over a week, a formal complaint, an overdue payment, negative sentiment, or an outright dispute. The value of naming these states explicitly is that it removes guesswork about what you're allowed to do next with the account.
 
 The governing rule is that expansion is blocked on yellow or red. No upsell emails, no retainer proposals, no referral asks, no roadmap reviews — until health is restored to green. This isn't just politeness; pitching an unhappy or disengaged client damages trust faster than staying silent does, and it wastes effort on an account that isn't ready to buy anything. Recovery instead follows a defined path: diagnose what changed, reach out directly and without over-engineering the message, listen first without defending your work, resolve the specific issue with clear next steps, and confirm recovery in writing before touching the health status again.
@@ -64,4 +66,3 @@ No expansion conversation happened until every recovery signal was independently
 ## Further Reading
 - *The Trusted Advisor* — David Maister, Charles Green, and Robert Galford: on building the kind of credibility and trust that keeps accounts in green territory in the first place.
 - *Never Lose a Customer Again* — Joey Coleman: a structured approach to the early client relationship stages where most yellow-status drift actually begins.
-- This lesson is general education, not financial or tax advice. Refund, credit, and termination decisions should also be checked against your written contract terms before being offered.

@@ -50,4 +50,4 @@ async function grantAdminAccess(actorId: string, targetUserId: string, reason: s
 ## Further Reading
 - Vanta / Drata compliance automation guides (vendor-published, but the explanations of what auditors actually check are accurate)
 - The official SOC 2 Trust Services Criteria document (AICPA)
-- ISO/IEC 27001 overview (iso.org) — the standard itself is paywalled, but the structure/scope is well documented for free
+- [ISO/IEC 27001 overview](https://iso.org) — the standard itself is paywalled, but the structure/scope is well documented for free

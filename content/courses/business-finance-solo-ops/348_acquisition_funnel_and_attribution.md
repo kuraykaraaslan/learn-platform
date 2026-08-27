@@ -1,6 +1,8 @@
 # 348. Diagnosing Your Acquisition Funnel
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Attribution percentages and conversion benchmarks vary widely by niche and price point — use your own trailing data as the real baseline.
+
 An acquisition funnel is a simple way to see where attention becomes revenue, and where the process is actually breaking. The standard stages run: reach → visit/profile view → lead → qualified lead → discovery call → proposal → closed deal, and each stage should have a conversion rate to the next one wherever data exists. The minimum metrics worth tracking are new leads, qualified leads, discovery calls booked, proposals sent, deals won, proposal value, and revenue won; everything else — impressions, website sessions, form completion rate — is optional detail that only matters once the core numbers raise a question. The funnel's real value isn't the dashboard, it's the diagnosis: a funnel review is only complete once you can name the single biggest bottleneck and one concrete action to fix it.
 
 The diagnostic logic follows the funnel shape directly. If reach is low, the fix is more content, outbound, referrals, SEO, or community activity — not a better landing page. If visits are high but leads are low, the problem is the call-to-action, offer clarity, or the proof on the page, not the traffic source. If leads are high but qualified leads are low, positioning, ICP targeting, or pricing signals need tightening. If qualified leads are high but proposals are low, the discovery process itself — urgency, clarity of next steps — needs work. And if proposals are high but closes are low, the issue is almost always pricing, scope, trust proof, or how thoroughly objections were handled during the sales conversation — not the funnel's top.
@@ -68,4 +70,3 @@ The funnel numbers pointed to a specific, actionable bottleneck — more top-of-
 ## Further Reading
 - *Hacking Growth* — Sean Ellis and Morgan Brown: a systematic approach to funnel diagnosis and growth experimentation used widely in early-stage teams, scalable down to a solo operation.
 - *Web Analytics 2.0* — Avinash Kaushik: on building attribution and funnel measurement that actually drives decisions instead of vanity reporting.
-- This lesson is general education, not financial or tax advice. Attribution percentages and conversion benchmarks vary widely by niche and price point — use your own trailing data as the real baseline.

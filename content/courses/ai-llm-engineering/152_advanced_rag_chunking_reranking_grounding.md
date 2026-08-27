@@ -39,7 +39,7 @@ function buildRAGUserMessage(query: string, chunks: RetrievedChunk[]): string {
 // Grounding verification — only for high-stakes features (legal, medical, financial)
 async function verifyGrounding(context: string, answer: string): Promise<boolean> {
   const response = await anthropic.messages.create({
-    model: 'claude-haiku-4-5-20251001', // cheap tier — this is a binary check, not generation
+    model: 'claude-haiku-4-5', // cheap tier — this is a binary check, not generation
     max_tokens: 10,
     system: 'You are a fact-checker. Answer only "GROUNDED" or "NOT GROUNDED".',
     messages: [{
@@ -54,7 +54,7 @@ export async function answerWithGroundingCheck(question: string): Promise<{ answ
   const chunks = await retrieveRelevantChunks(await embed(question));
   const userMessage = buildRAGUserMessage(question, chunks);
   const response = await anthropic.messages.create({
-    model: 'claude-sonnet-4-6',
+    model: 'claude-sonnet-5',
     max_tokens: 500,
     system: RAG_SYSTEM_PROMPT,
     messages: [{ role: 'user', content: userMessage }],

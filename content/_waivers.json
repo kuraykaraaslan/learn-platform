@@ -1,4 +1,33 @@
 {
   "$comment": "Per-file exceptions to scripts/content-lint. Each waiver needs a reason, an owner and an expiry; an expired waiver is itself an error-severity finding, so a waiver can never quietly become permanent.",
-  "waivers": []
+  "waivers": [
+    {
+      "rule": "sources/bare-domain",
+      "target": "ai-llm-engineering/152_advanced_rag_chunking_reranking_grounding.md",
+      "reason": "host does not resolve from the build environment, so the URL could not be verified; left unlinked rather than guessed or deleted",
+      "owner": "kuray",
+      "expires": "2026-11-30"
+    },
+    {
+      "rule": "sources/bare-domain",
+      "target": "distributed-systems-api-design/08_webhook_security_retry.md",
+      "reason": "host does not resolve from the build environment, so the URL could not be verified; left unlinked rather than guessed or deleted",
+      "owner": "kuray",
+      "expires": "2026-11-30"
+    },
+    {
+      "rule": "sources/bare-domain",
+      "target": "fundamentals-tools/126_cli_dev_environment_basics.md",
+      "reason": "host does not resolve from the build environment, so the URL could not be verified; left unlinked rather than guessed or deleted",
+      "owner": "kuray",
+      "expires": "2026-11-30"
+    },
+    {
+      "rule": "sources/bare-domain",
+      "target": "open-source-community/97_publishing_npm_github_packages.md",
+      "reason": "host does not resolve from the build environment, so the URL could not be verified; left unlinked rather than guessed or deleted",
+      "owner": "kuray",
+      "expires": "2026-11-30"
+    }
+  ]
 }

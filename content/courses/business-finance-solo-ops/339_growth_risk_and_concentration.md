@@ -1,6 +1,8 @@
 # 339. Growth Risk Management: Client Concentration and Capacity
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Concentration thresholds here are directional guidance, not a formal risk-management standard.
+
 Growth can damage a solo business faster than it can build it, if complexity grows faster than the systems that manage it. Every growth decision — a new client, a bigger project, a contractor, a partnership, more public visibility — should be checked against the same set of risk categories: delivery, cash flow, scope, reputation, legal/security, capacity, and client concentration. Growth that increases revenue while quietly increasing any of these risks past a manageable point isn't really growth; it's borrowing against future stability.
 
 Client concentration deserves particular attention because it's the risk most likely to go unnoticed until it's already severe. The thresholds are concrete: 40% or more of revenue from one client warrants monitoring, 60% or more is a high-risk dependency, and 80% or more is a critical dependency that functions like an employment relationship without the protections one would normally get from being an employee. The correct response at each threshold isn't to panic or abandon the client — it's to deliberately increase acquisition effort, build retainer relationships elsewhere, and create proof assets that don't depend on that single relationship.
@@ -60,4 +62,3 @@ The checklist didn't reject the project — it surfaced two specific, manageable
 ## Further Reading
 - *The Millionaire Fastlane* is not needed here; better: *Company of One* — Paul Jarvis: makes the direct case for growth that protects quality and capacity rather than chasing scale for its own sake.
 - Revisit the risk-reserve-and-contingency material (Lesson 327) — concentration risk and reserve planning are two halves of the same problem.
-- This lesson is general education, not financial or tax advice. Concentration thresholds here are directional guidance, not a formal risk-management standard.

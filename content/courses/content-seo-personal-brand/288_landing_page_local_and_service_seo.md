@@ -59,6 +59,6 @@ across "software developer Istanbul / Ankara / Izmir" with no unique content.
 - Letting business name or description drift across LinkedIn, GitHub, and directory profiles
 
 ## Further Reading
-- Google's guidance on "duplicate content" and "doorway pages" (developers.google.com/search) — the primary source on why templated local pages get suppressed
+- [Google's guidance on "duplicate content" and "doorway pages"](https://developers.google.com/search) — the primary source on why templated local pages get suppressed
 - *Don't Make Me Think* — Steve Krug: a landing-page-relevant classic on removing friction between a visitor and the action you want them to take
 - Google Business Profile help documentation — for the specific, current rules on truthful local/service-area representation

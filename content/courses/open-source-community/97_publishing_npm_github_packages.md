@@ -179,6 +179,6 @@ GITHUB_TOKEN=your_token npm publish
 - **No version in the `v*` tag**: The convention is `v1.2.3` (with the `v` prefix) for release tags; the `npm version` command creates tags with the `v` prefix automatically; workflows filtering `v*` will miss tags without it
 
 ## Further Reading
-- **npm Documentation: Creating and Publishing Packages (docs.npmjs.com)** — The authoritative reference; the sections on package.json `exports` field and provenance attestation are worth reading even if you have published before
-- **`tsup` documentation (tsup.egoist.dev)** — The simplest TypeScript build tool for libraries; replaces Rollup + tsc for most package use cases; the configuration section covers dual ESM/CJS output and type declarations
+- [**npm Documentation: Creating and Publishing Packages](https://docs.npmjs.com)** — The authoritative reference; the sections on package.json `exports` field and provenance attestation are worth reading even if you have published before
+- [**`tsup` documentation](https://tsup.egoist.dev)** — The simplest TypeScript build tool for libraries; replaces Rollup + tsc for most package use cases; the configuration section covers dual ESM/CJS output and type declarations
 - **"Publishing TypeScript Packages" — Matt Pocock (total-typescript.com)** — The most current guide to the package.json `exports` field configuration for TypeScript packages that support both ESM and CJS consumers

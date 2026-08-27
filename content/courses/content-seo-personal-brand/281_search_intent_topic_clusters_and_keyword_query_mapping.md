@@ -62,6 +62,6 @@ For AEO, this same cluster thinking extends into natural-question form: each clu
 - Writing purely educational content with no next step, wasting a visitor who was actually ready to act
 
 ## Further Reading
-- HubSpot's "Topic Clusters" guide (blog.hubspot.com) — a practical, widely cited explanation of the pillar/cluster model
+- [HubSpot's "Topic Clusters" guide](https://blog.hubspot.com) — a practical, widely cited explanation of the pillar/cluster model
 - Google Search Central's "Understanding Search Intent" and query-matching documentation — the primary-source view of how intent shapes ranking
 - *They Ask, You Answer* — Marcus Sheridan: a strong case study in building an entire content strategy around the real questions buyers ask before purchasing

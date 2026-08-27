@@ -1,6 +1,8 @@
 # 338. Choosing One Growth Focus Instead of Five
 
 ## What It Is
+> This lesson is general education, not financial or tax advice. Trial-period lengths and objective choices here are directional guidance — adjust to your actual sales cycle and capacity.
+
 Growth fails for most solo operators not from lack of effort but from scattering effort across cold outreach, LinkedIn content, YouTube, SEO, agency partnerships, a side SaaS idea, a newsletter, and marketplaces all at once. None of these get done well enough to produce a real signal, and every channel gets abandoned right around the point where it might have started working. A solo business has no team to run five bets in parallel — it needs focus.
 
 At any given time, the healthy shape is exactly one primary growth objective, one primary channel, one secondary channel, one core offer being pushed, and one weekly review cadence. Everything else belongs in a backlog sorted into Now, Next, Later, and Not for this year — which protects good ideas from being lost without letting them hijack this month's execution. The objective itself should be chosen deliberately from a short list — more qualified leads, better deal size, more recurring revenue, better positioning, more referrals, more proof, better margins, reduced client concentration, offer productization — based on which one the business actually needs right now, not which one is most exciting.
@@ -59,4 +61,3 @@ Three other reasonable growth ideas got explicitly deferred to the backlog inste
 ## Further Reading
 - *Essentialism* — Greg McKeown: the broader case for disciplined focus over scattered effort, directly applicable to solo growth planning.
 - *Traction* — Gabriel Weinberg and Justin Mares: a structured approach to testing and committing to growth channels rather than guessing.
-- This lesson is general education, not financial or tax advice. Trial-period lengths and objective choices here are directional guidance — adjust to your actual sales cycle and capacity.

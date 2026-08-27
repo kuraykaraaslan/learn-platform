@@ -65,5 +65,5 @@ function flagSuspiciousDocument(text: string): boolean {
 
 ## Further Reading
 - OWASP Top 10 for LLM Applications — LLM01 Prompt Injection (the most directly relevant, actively maintained reference)
-- Simon Willison — extensive public writing on prompt injection, coined much of the common terminology (simonwillison.net)
+- [Simon Willison — extensive public writing on prompt injection, coined much of the common terminology](https://simonwillison.net)
 - Anthropic — "Mitigate jailbreaks and prompt injections" (official documentation)

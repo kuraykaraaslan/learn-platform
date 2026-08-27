@@ -64,4 +64,4 @@ Before anything gets published, it should pass a five-gate quality check: strate
 ## Further Reading
 - *Atomic Habits* — James Clear: the general framework for sustainable habit design that the cadence-level and missed-week rules are built on
 - Ali Abdaal's writing on "sustainable content systems" (aliabdaal.com blog) — a creator-economy perspective on cadence that survives real-world capacity constraints
-- CoSchedule's "Content Calendar" templates and guidance (coschedule.com/marketing-calendar) — a practical reference for structuring calendar fields and review cadence
+- [CoSchedule's "Content Calendar" templates and guidance](https://coschedule.com/marketing-calendar) — a practical reference for structuring calendar fields and review cadence

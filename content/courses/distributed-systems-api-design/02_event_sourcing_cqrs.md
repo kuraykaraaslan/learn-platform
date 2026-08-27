@@ -101,4 +101,4 @@ async function handleUpgradeSubscription(
 ## Further Reading
 - **"Designing Data-Intensive Applications" by Martin Kleppmann** — Chapter 11 (Stream Processing) covers event sourcing and CQRS in the context of real systems
 - **"Implementing Domain-Driven Design" by Vaughn Vernon** — Chapters 8 and 12 cover aggregates and event sourcing from a DDD perspective; pairs well with the pattern
-- **EventStoreDB documentation (eventstore.com)** — Even if you use PostgreSQL as your event store, reading the EventStoreDB docs gives you the canonical mental model of how an event log works
+- [**EventStoreDB documentation](https://eventstore.com)** — Even if you use PostgreSQL as your event store, reading the EventStoreDB docs gives you the canonical mental model of how an event log works

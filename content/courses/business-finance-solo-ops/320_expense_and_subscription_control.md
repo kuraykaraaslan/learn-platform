@@ -1,6 +1,8 @@
 # 320. Expense and Subscription Cost Control
 
 ## What It Is
+> This lesson is general education, not accounting advice. Whether a given expense is deductible, and how to categorize it, depends on your jurisdiction and entity type — confirm specifics with your own accountant.
+
 Expenses aren't the enemy — unreviewed expenses are. A $20/month tool doesn't feel like a decision worth scrutinizing, which is exactly why solo businesses accumulate a dozen of them: a design tool trialed once and never cancelled, a project-management app duplicating what Notion already does, an AI tool subscribed to "just in case." None of these individually breaks the business, but their sum quietly erodes margin every single month, invisibly, because no single charge is large enough to trigger a reaction.
 
 The discipline that fixes this is treating every recurring cost as something with an owner, a renewal date, and a decision — not a background hum. Every subscription should answer: what problem does this solve, is it used weekly, is there a cheaper or already-owned alternative, and what's the cancellation date if it stops earning its place? A subscription with no clear answer to "what does this solve" is a candidate for cancellation, not a fixture.
@@ -58,5 +60,4 @@ Decision: approve
 
 ## Further Reading
 - *Profit First* — Mike Michalowicz: frames every business cost as competing for a share of a deliberately scarce operating account, which naturally forces the keep/cancel discipline described here.
-- Ramit Sethi's writing on "conscious spending" (iwillteachyoutoberich.com) — though aimed at personal finance, the framework of cutting ruthlessly on things you don't value to spend freely on things you do maps directly onto subscription triage.
-- This lesson is general education, not accounting advice. Whether a given expense is deductible, and how to categorize it, depends on your jurisdiction and entity type — confirm specifics with your own accountant.
+- [Ramit Sethi's writing on "conscious spending"](https://iwillteachyoutoberich.com) — though aimed at personal finance, the framework of cutting ruthlessly on things you don't value to spend freely on things you do maps directly onto subscription triage.
