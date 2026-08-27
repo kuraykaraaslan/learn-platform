@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Badge } from '@kui/ui/Badge';
 import { BRACKET_LABELS, BRACKET_ORDER, type CourseSummary, type ManifestItem } from '../course_content.types';
 
 type Item = ManifestItem & { lessonSlug: string };
@@ -26,28 +27,29 @@ export function CourseOverviewPage({
         ))}
       </div>
 
-      {BRACKET_ORDER.filter((bracket) => items.some((i) => i.bracket === bracket)).map((bracket) => (
-        <div key={bracket} className="mb-6">
-          <h2 className="text-xs font-semibold uppercase tracking-wide text-text-secondary mb-2">
-            {BRACKET_LABELS[bracket]}
-          </h2>
-          <ul className="space-y-1">
-            {items
-              .filter((i) => i.bracket === bracket)
-              .sort((a, b) => a.id - b.id)
-              .map((item) => (
-                <li key={item.id}>
-                  <Link
-                    href={`/courses/${summary.slug}/${item.lessonSlug}`}
-                    className="block rounded-md px-3 py-2 text-sm text-text-primary hover:bg-surface-overlay transition-colors"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-          </ul>
-        </div>
-      ))}
+      {/* Authored order (manifest id), not bracket order: grouping by bracket
+          moved lessons up to 37 positions out of the sequence they were
+          written in. The bracket travels with the lesson as a badge. */}
+      <ol className="space-y-1">
+        {[...items]
+          .sort((a, b) => a.id - b.id)
+          .map((item, index) => (
+            <li key={item.id}>
+              <Link
+                href={`/courses/${summary.slug}/${item.lessonSlug}`}
+                className="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-text-primary hover:bg-surface-overlay transition-colors"
+              >
+                <span className="w-6 shrink-0 text-right text-xs tabular-nums text-text-disabled">
+                  {index + 1}
+                </span>
+                <span className="flex-1">{item.title}</span>
+                <Badge variant="neutral" size="sm">
+                  {BRACKET_LABELS[item.bracket]}
+                </Badge>
+              </Link>
+            </li>
+          ))}
+      </ol>
     </div>
   );
 }

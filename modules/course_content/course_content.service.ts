@@ -6,7 +6,6 @@ import {
 } from './course_content.manifest';
 import { parseLessonMarkdown } from './course_content.parser';
 import {
-  BRACKET_ORDER,
   type Bracket,
   type CourseSummary,
   type Lesson,
@@ -66,16 +65,17 @@ export class CourseContentService {
     };
   }
 
-  /** Sidebar nav: a single flat list, ordered by experience bracket then id —
-   * no collapsible per-bracket sections. The bracket is shown as a badge on
-   * the lesson page itself (see LessonPage.tsx), not as a sidebar grouping. */
+  /** Sidebar nav: a single flat list in AUTHORED order (manifest id).
+   *
+   * This used to sort by experience bracket first, which reordered 20 of the
+   * 23 courses and broke the sequence the lessons were written in — a reader
+   * opening business-finance-solo-ops landed on 352 "Ethical Growth" instead
+   * of 316 "Cash Flow and Runway", which every later lesson builds on. The
+   * bracket is a property of a lesson, not its position; it is shown as a
+   * badge (see CourseOverviewPage and LessonPage), never as an ordering. */
   static getSidebarNavGroups(courseSlug: string): AppSidebarNavGroup[] {
     const items = CourseContentService.listLessonItems(courseSlug);
-    const bracketRank = (b: Bracket) => BRACKET_ORDER.indexOf(b);
-
-    const sorted = [...items].sort(
-      (a, b) => bracketRank(a.bracket) - bracketRank(b.bracket) || a.id - b.id
-    );
+    const sorted = [...items].sort((a, b) => a.id - b.id);
 
     return [
       {

@@ -30,6 +30,32 @@ patterns** — see `docs/adr/0001-no-backend-markdown-content.md`.
 `next-intl` — this is a backend-less, account-less, fully static content
 site. See the ADR for the full rationale.
 
+## Content tooling
+
+The corpus is 412 markdown lessons, so every change to it is a bulk change. These
+guard it:
+
+```bash
+npm run content:check        # lint + code verification + tests
+npm run content:lint         # 12 rules over all lessons and manifests
+npm run content:verify-code  # typechecks every TS/TSX fence in the corpus
+npm test                     # parser, ordering, cross-reference tests
+npm run content:snapshot     # regenerate the render snapshot (intended changes only)
+```
+
+- **`content/_reports/parse-snapshot.json`** hashes the rendered HTML of all 412
+  lessons. Any mechanical pass over the corpus must leave it unchanged;
+  regenerate it only when a render change is intended, and say so in the commit.
+- **`content/_reports/code-verification.md`** lists every code fence that does
+  not typecheck. It uses the TypeScript compiler API per file, because the `tsc`
+  CLI suppresses all semantic errors whenever any file in the program has a
+  syntax error — which hid 120 broken snippets behind 19 mislabeled fences.
+- **`content/_waivers.json`** waives one rule for one file, with a reason, an
+  owner and an expiry. An expired waiver is itself an error.
+
+Rules ship as `warn` and are promoted to `error` once the corpus is clean of
+them, so the gate never blocks on a backlog it did not create.
+
 ## Setup
 
 ```bash

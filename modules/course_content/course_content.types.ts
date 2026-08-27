@@ -6,6 +6,10 @@ export type ManifestItem = {
   title: string;
   bracket: Bracket;
   category: string;
+  /** Minutes to read. Optional until measured for every lesson. */
+  minutes?: number;
+  /** Lesson ids (globally unique across all courses) this lesson assumes. */
+  prereqs?: number[];
 };
 
 export type CourseManifest = {

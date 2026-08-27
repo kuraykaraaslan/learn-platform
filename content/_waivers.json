@@ -1,0 +1,4 @@
+{
+  "$comment": "Per-file exceptions to scripts/content-lint. Each waiver needs a reason, an owner and an expiry; an expired waiver is itself an error-severity finding, so a waiver can never quietly become permanent.",
+  "waivers": []
+}

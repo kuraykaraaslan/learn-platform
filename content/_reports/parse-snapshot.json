@@ -1,0 +1,3759 @@
+{
+  "lessonCount": 412,
+  "courses": {
+    "advanced-deep-dive-topics": {
+      "101_realtime_systems.md": {
+        "title": "63de2f46d9592ed3",
+        "whatItIs": "527a41f3923c31c2",
+        "keyConcepts": "95eb18fea9ec43f0",
+        "exampleCode": "20c7bf0cf428e484",
+        "whenToUse": "4cbc6e293ba7ac5c",
+        "commonMistakes": "b4515cf9dc71d1b4",
+        "furtherReading": "cdd7fa6a9988ef6e"
+      },
+      "102_edge_computing.md": {
+        "title": "e5f463890f1b4c7c",
+        "whatItIs": "cddb94eeac0bbfb0",
+        "keyConcepts": "6dc51089893aa2e3",
+        "exampleCode": "eb62966f1eff8a9e",
+        "whenToUse": "f33842727cdf39be",
+        "commonMistakes": "8128414585ffe71f",
+        "furtherReading": "54bc45b5a3de330a"
+      },
+      "103_browser_internals.md": {
+        "title": "884762376b13eb3e",
+        "whatItIs": "ce08f417a6779ddf",
+        "keyConcepts": "1167fe8e8da69961",
+        "exampleCode": "161f86e01a2edab2",
+        "whenToUse": "322bd979f0e8e646",
+        "commonMistakes": "08231921ec720012",
+        "furtherReading": "d63fae3442f9cb5f"
+      },
+      "104_database_internals.md": {
+        "title": "805f793697488d3d",
+        "whatItIs": "6de0934d0184700b",
+        "keyConcepts": "e8b19284af22e85d",
+        "exampleCode": "141f5a79a69badd8",
+        "whenToUse": "af4964409c2a4cbf",
+        "commonMistakes": "97bbb0c96c3554f2",
+        "furtherReading": "1e4a250877c02114"
+      },
+      "105_cryptography_fundamentals.md": {
+        "title": "3642d5e4894a35d2",
+        "whatItIs": "78aec235b49e25f2",
+        "keyConcepts": "8d58b392a2f9ed4d",
+        "exampleCode": "383f3830facf677e",
+        "whenToUse": "da3b47ba155f7267",
+        "commonMistakes": "83a4e5fd46e2bdf4",
+        "furtherReading": "07c64496b37a0ec2"
+      },
+      "106_event_streaming_kafka_vs_bullmq.md": {
+        "title": "ee4021291a9c139a",
+        "whatItIs": "0f43ac5ba7cf429c",
+        "keyConcepts": "e86ec0e0faff0b24",
+        "exampleCode": "9ab61c87e946568e",
+        "whenToUse": "a9e35639847d8441",
+        "commonMistakes": "bac062e39a7e59ff",
+        "furtherReading": "7049eceff9a853e5"
+      },
+      "107_api_design_philosophy.md": {
+        "title": "44a89c23d7212220",
+        "whatItIs": "a0239dbe4bd39fb8",
+        "keyConcepts": "cca56df57e7ff22b",
+        "exampleCode": "0107ff32e709e3d5",
+        "whenToUse": "73ca241d46dc8d97",
+        "commonMistakes": "488d81a4e106609b",
+        "furtherReading": "a972fb110391e802"
+      },
+      "108_monorepo_tooling.md": {
+        "title": "77e89be6c68089f3",
+        "whatItIs": "4a6c93856c786e92",
+        "keyConcepts": "a56e34e846e96413",
+        "exampleCode": "033533298d5fe18e",
+        "whenToUse": "96c3470683f59687",
+        "commonMistakes": "92ebbae017e9eeb2",
+        "furtherReading": "758e14f9e00a0dda"
+      },
+      "109_performance_profiling.md": {
+        "title": "d65ffc19f031bc6a",
+        "whatItIs": "04e0edb2a054e47e",
+        "keyConcepts": "e6610fdfdf371631",
+        "exampleCode": "fd6653fd63a9d892",
+        "whenToUse": "2ea2f0d978dc1de2",
+        "commonMistakes": "2a25e8a184eb7f86",
+        "furtherReading": "39e51ca40fcdbca1"
+      },
+      "110_reading_large_codebases.md": {
+        "title": "2dc09ad1cd89e690",
+        "whatItIs": "2cc69e65f357df50",
+        "keyConcepts": "0380e4eb29a2e643",
+        "exampleCode": "ffa29440867c8c30",
+        "whenToUse": "97af4a82299349d0",
+        "commonMistakes": "7afb96f86209f33e",
+        "furtherReading": "22407d3214692733"
+      },
+      "111_production_debugging.md": {
+        "title": "0757a7590e858458",
+        "whatItIs": "94ab09f666976dfc",
+        "keyConcepts": "b7a8f6336e1ecb31",
+        "exampleCode": "a25b208c614a4de0",
+        "whenToUse": "82e77a95d10fc979",
+        "commonMistakes": "238bb0ee291f315d",
+        "furtherReading": "8a70e15fad7afdf9"
+      },
+      "112_technical_writing.md": {
+        "title": "6342a8255b04d011",
+        "whatItIs": "653e88a75abcf6cf",
+        "keyConcepts": "07be52460e2e2b53",
+        "exampleCode": "be8d2eaf5b61348e",
+        "whenToUse": "3e5fc7abb9f0d6ee",
+        "commonMistakes": "5a5cad4eec598250",
+        "furtherReading": "fc40a91669b26e73"
+      },
+      "113_systems_thinking.md": {
+        "title": "4e1ab641c6ea1b01",
+        "whatItIs": "952c535acef44ea9",
+        "keyConcepts": "b6685786b4045568",
+        "exampleCode": "857a343a06d3997e",
+        "whenToUse": "1d2e58f7a763453e",
+        "commonMistakes": "77fcce22f51d7a13",
+        "furtherReading": "dc892eba04da8320"
+      }
+    },
+    "ai-llm-engineering": {
+      "140_ai_llm_integration.md": {
+        "title": "0a2d117aba4039cc",
+        "whatItIs": "810ec50a26601d05",
+        "keyConcepts": "5613302cf96e8dcc",
+        "exampleCode": "d589ba943a643aba",
+        "whenToUse": "eb6e6ad43db6d8ec",
+        "commonMistakes": "b5f658e061eefc83",
+        "furtherReading": "8893f643d6d4ae3b"
+      },
+      "146_when_to_add_ai.md": {
+        "title": "7a159b833f13dda7",
+        "whatItIs": "feb12e02c64e4126",
+        "keyConcepts": "23b545bca1514323",
+        "exampleCode": "a5d2dabc19cbc29e",
+        "whenToUse": "2a67cf8f2d83e504",
+        "commonMistakes": "25475d70456381a7",
+        "furtherReading": "c867f05aa8435787"
+      },
+      "147_anthropic_api_client_architecture.md": {
+        "title": "2cb29dc7176bbb73",
+        "whatItIs": "2f85e6a7439fa4aa",
+        "keyConcepts": "a13fee3e5f5c7e61",
+        "exampleCode": "e1325482177e214a",
+        "whenToUse": "123037a57d740327",
+        "commonMistakes": "a898aa9841079bc9",
+        "furtherReading": "c13423023f2e4685"
+      },
+      "148_prompts_as_versioned_code.md": {
+        "title": "3df96537602c8e11",
+        "whatItIs": "acd2e3ff23fb4b95",
+        "keyConcepts": "4cda087ee9ffcc22",
+        "exampleCode": "c9f8e958c4bf03f1",
+        "whenToUse": "28a8acc0dc25b895",
+        "commonMistakes": "45444849b5337302",
+        "furtherReading": "53aaf5065c491cdc"
+      },
+      "149_structured_output_schema_validation.md": {
+        "title": "493b14593dfce762",
+        "whatItIs": "98f0ecb924a66fd4",
+        "keyConcepts": "cc23164983a5f15a",
+        "exampleCode": "0f9e2b1e1e3ba2f8",
+        "whenToUse": "2a238bc5c9861e24",
+        "commonMistakes": "080578ab68682ead",
+        "furtherReading": "953dd89684674dd7"
+      },
+      "150_context_window_conversation_management.md": {
+        "title": "f1556fde6bcf68c6",
+        "whatItIs": "640f254dcb1a7a09",
+        "keyConcepts": "8156ac177c98f568",
+        "exampleCode": "54d1a8fe70dd2c3b",
+        "whenToUse": "17cd2511fa12bd22",
+        "commonMistakes": "cff228f22f6c2f1e",
+        "furtherReading": "171d9d839087287e"
+      },
+      "151_tool_use_agentic_loops.md": {
+        "title": "04ccd2ac3debb243",
+        "whatItIs": "018fd4a78b5848b2",
+        "keyConcepts": "1d107e7e471c4128",
+        "exampleCode": "7f8bc7f70612b49d",
+        "whenToUse": "feb47cc0419fe74d",
+        "commonMistakes": "7d1be0aeb0b2a628",
+        "furtherReading": "ce2c2bacd2403521"
+      },
+      "152_advanced_rag_chunking_reranking_grounding.md": {
+        "title": "5a3b59e35e3f00a4",
+        "whatItIs": "c75b5b0677d28439",
+        "keyConcepts": "9ab5aed67c89063c",
+        "exampleCode": "7a6bccdb0ecdba3c",
+        "whenToUse": "08394a8382ffebb8",
+        "commonMistakes": "5ec06fea48d6c17c",
+        "furtherReading": "906a5a3d2f0888c1"
+      },
+      "153_model_selection_strategy.md": {
+        "title": "b2a3cde24da6d6e7",
+        "whatItIs": "81b34eeeb249d6d1",
+        "keyConcepts": "89a8d5206be46333",
+        "exampleCode": "af94c565dd8d4636",
+        "whenToUse": "b11118546093d9d3",
+        "commonMistakes": "2c314ffb6f0289e3",
+        "furtherReading": "ea885353ecf4b0a4"
+      },
+      "154_token_budget_cost_engineering.md": {
+        "title": "8eae8a104690fb77",
+        "whatItIs": "53c1d15a3d08f2da",
+        "keyConcepts": "5f6d9bc711cf1d2e",
+        "exampleCode": "3bcd6bd35ba9efad",
+        "whenToUse": "67870864714f9f99",
+        "commonMistakes": "8e70b5b4b7c6ea6a",
+        "furtherReading": "306bade5e71ea586"
+      },
+      "155_streaming_ai_responses_production.md": {
+        "title": "3448a9a90624f62e",
+        "whatItIs": "1f63c7adef1eb3ce",
+        "keyConcepts": "cc921a1b3838d3b1",
+        "exampleCode": "f7ff6d92565b795f",
+        "whenToUse": "dd3c272895a446c1",
+        "commonMistakes": "00773d67e397d06e",
+        "furtherReading": "bd8c1fd66200b845"
+      },
+      "156_fallback_graceful_degradation.md": {
+        "title": "3a8c68fbfaf13b13",
+        "whatItIs": "a3322592b39a9bd6",
+        "keyConcepts": "0bcb8fb011d8076d",
+        "exampleCode": "64a167bb1b33118c",
+        "whenToUse": "1d886d63875a6916",
+        "commonMistakes": "bf5a2d30fe0d4cb7",
+        "furtherReading": "22897731cb56f90e"
+      },
+      "157_building_eval_pipeline.md": {
+        "title": "f5055b66bd25fc95",
+        "whatItIs": "db7c940427f2afee",
+        "keyConcepts": "7c22bf2267fc4a3d",
+        "exampleCode": "d1e2fbe9c6f8beca",
+        "whenToUse": "ee2e84a01b6daf9a",
+        "commonMistakes": "9518a457032c5145",
+        "furtherReading": "dd62244d55b89e99"
+      },
+      "158_observability_logging_ai_features.md": {
+        "title": "4b93ccbec3db45c6",
+        "whatItIs": "65fe7c0f083d1fb8",
+        "keyConcepts": "4fab0da0d806cb15",
+        "exampleCode": "cabd6dc7e2983772",
+        "whenToUse": "992b5b2930ee4651",
+        "commonMistakes": "2f8068d04ffff6fa",
+        "furtherReading": "9e5874b71745724d"
+      },
+      "159_prompt_injection_defense.md": {
+        "title": "19dde995de495792",
+        "whatItIs": "f2991d9e104af8dc",
+        "keyConcepts": "c1b56b540baabb04",
+        "exampleCode": "ba0f61fe1d5647de",
+        "whenToUse": "efd4a122c6b4bf81",
+        "commonMistakes": "10d0257fedd879d4",
+        "furtherReading": "25ab05f181269887"
+      },
+      "160_ai_data_privacy_regulatory_compliance.md": {
+        "title": "58ec7fe433dabc40",
+        "whatItIs": "a1aff24131c0ae10",
+        "keyConcepts": "f1497e64d581fa54",
+        "exampleCode": "4c5f1a8b1f8c2010",
+        "whenToUse": "353d8d0d82d6d3e7",
+        "commonMistakes": "6ad4f8e48d39d162",
+        "furtherReading": "ac8a3b68afb81b5a"
+      },
+      "161_ai_feature_ux_patterns.md": {
+        "title": "e49afc426d414a4c",
+        "whatItIs": "c6c70f4447513b93",
+        "keyConcepts": "84d2be8504679cd4",
+        "exampleCode": "43a1c2c208292d1b",
+        "whenToUse": "57bfec8cb6da8ae2",
+        "commonMistakes": "7cd977e1b8a209d3",
+        "furtherReading": "25129358807c79b2"
+      },
+      "162_mcp_server_architecture_tool_design.md": {
+        "title": "03725d4c4b2103e5",
+        "whatItIs": "165aa3d265b5859c",
+        "keyConcepts": "3acde1aeda7e1bb0",
+        "exampleCode": "6d704cbf1303cac9",
+        "whenToUse": "03c181ea5dd2471a",
+        "commonMistakes": "99aad3209ad28430",
+        "furtherReading": "4071b02e9c9196b4"
+      },
+      "163_mcp_server_auth_error_idempotency.md": {
+        "title": "8330d819acfdf55d",
+        "whatItIs": "4fef60f3dc6797c0",
+        "keyConcepts": "65bf54ba094fa0b0",
+        "exampleCode": "335c7b22c47f1d80",
+        "whenToUse": "a93c61c82b752e64",
+        "commonMistakes": "dfc56079325b1dfe",
+        "furtherReading": "66fbc853617d7661"
+      },
+      "164_multi_agent_orchestration_workflow_chaining.md": {
+        "title": "807032ad0dd5681a",
+        "whatItIs": "a506de6931457448",
+        "keyConcepts": "bee2a38770d6cf80",
+        "exampleCode": "f071b47ad1c3090f",
+        "whenToUse": "8f9d1579ca6370a1",
+        "commonMistakes": "d814f38c96ad54ef",
+        "furtherReading": "5132abf35ce1a2de"
+      },
+      "165_human_in_the_loop_review_gates.md": {
+        "title": "af0ac3f29e1915f2",
+        "whatItIs": "3f35640b1c15a2f3",
+        "keyConcepts": "92e76a63140445ba",
+        "exampleCode": "885e77dcc507e667",
+        "whenToUse": "34330e5c388c6f2c",
+        "commonMistakes": "b9f678f726a1802d",
+        "furtherReading": "ed95b7d08db7590b"
+      }
+    },
+    "algorithms-concurrency": {
+      "129_concurrency_async_fundamentals.md": {
+        "title": "05bd5a6745d56140",
+        "whatItIs": "f512b1c7f3e83fd6",
+        "keyConcepts": "5421310b334deccf",
+        "exampleCode": "4f9400b3558d1c2f",
+        "whenToUse": "4f7983e8e518e15e",
+        "commonMistakes": "ff3c93b18c09a25f",
+        "furtherReading": "69c18a9a51aca8d5"
+      },
+      "130_data_structures_algorithms_practice.md": {
+        "title": "c5101c905fe8c9b7",
+        "whatItIs": "2d3cdffe81aa4da5",
+        "keyConcepts": "e07d5b3b2fe0d23f",
+        "exampleCode": "5f4f53413197c694",
+        "whenToUse": "e4c5e47bbd7f2844",
+        "commonMistakes": "588d25f593270283",
+        "furtherReading": "e236df05163dd7cf"
+      }
+    },
+    "architecture-design-patterns-testing": {
+      "64_solid_principles.md": {
+        "title": "52839825e69590c5",
+        "whatItIs": "5f4c2fd43e6ad207",
+        "keyConcepts": "d9d6972b2d71eed5",
+        "exampleCode": "6a0151923b746529",
+        "whenToUse": "2b01f1e6b0708a97",
+        "commonMistakes": "8a93dba6a588befb",
+        "furtherReading": "c19c098ffebc819c"
+      },
+      "65_hexagonal_architecture.md": {
+        "title": "6674c1db0943744c",
+        "whatItIs": "09e0a44b00f63198",
+        "keyConcepts": "2840abe2f1ff965a",
+        "exampleCode": "849c03402e2a5bf9",
+        "whenToUse": "7f1da85828d5dc6f",
+        "commonMistakes": "2aa88dceeefa20f2",
+        "furtherReading": "948074a3f573a769"
+      },
+      "66_dependency_injection_container.md": {
+        "title": "6ccbba8202cdfa0c",
+        "whatItIs": "9af4228c24a65622",
+        "keyConcepts": "b431255ea07629ca",
+        "exampleCode": "c1d7a251a9107cca",
+        "whenToUse": "d4cdd00dc28214e8",
+        "commonMistakes": "e42cf276d1423f19",
+        "furtherReading": "08ffdc4ada2d0a64"
+      },
+      "67_design_patterns.md": {
+        "title": "5637370cecf753d2",
+        "whatItIs": "930fcd5dfbaa2a1b",
+        "keyConcepts": "dabe26d956a7c8b7",
+        "exampleCode": "129445475cc76d63",
+        "whenToUse": "c3d556ee1c471b14",
+        "commonMistakes": "31ad786f6dda1d71",
+        "furtherReading": "d767908c98fbafff"
+      },
+      "68_big_o_analysis.md": {
+        "title": "61a54f373d9fb602",
+        "whatItIs": "43b42f2dc89d0b01",
+        "keyConcepts": "49fa698ba1182b62",
+        "exampleCode": "fb0e2540a2798928",
+        "whenToUse": "0219f5f38487c609",
+        "commonMistakes": "c7afe3b001391dd9",
+        "furtherReading": "483fbd8eb615ba62"
+      },
+      "69_tail_call_memoization_lazy_evaluation.md": {
+        "title": "699ee6991cd23773",
+        "whatItIs": "a0ba7a65ca35c175",
+        "keyConcepts": "89095be7a1b3fc2e",
+        "exampleCode": "b0ee4ecff92a2dfb",
+        "whenToUse": "a90f408498d7aca9",
+        "commonMistakes": "9592db28eeb67ca3",
+        "furtherReading": "b81312641bef8921"
+      },
+      "70_compiler_interpreter_fundamentals.md": {
+        "title": "c0576aac13b31e08",
+        "whatItIs": "eac2dfc8caeb9070",
+        "keyConcepts": "b0eab42dcdf4283b",
+        "exampleCode": "bfe34e94ebf96609",
+        "whenToUse": "31e5704372b543e6",
+        "commonMistakes": "2c60d2370df6673e",
+        "furtherReading": "4ecd5271acb02f90"
+      },
+      "71_test_pyramid.md": {
+        "title": "1ad84a9db7e73941",
+        "whatItIs": "47ec682c4bca9615",
+        "keyConcepts": "41fcfa668ec1c21a",
+        "exampleCode": "240d20f3bc93be9d",
+        "whenToUse": "840ad238f3723709",
+        "commonMistakes": "3fc2821bb52191a3",
+        "furtherReading": "8bb9fccfac95f398"
+      },
+      "72_property_based_testing.md": {
+        "title": "056f27aea12f20ca",
+        "whatItIs": "3e65cfca82e8a2cd",
+        "keyConcepts": "16543b3d4582b4e5",
+        "exampleCode": "138fbd7cff85f4ca",
+        "whenToUse": "075a1db11bcc3faa",
+        "commonMistakes": "081db722d164948a",
+        "furtherReading": "5f13f7588d73d4ed"
+      },
+      "73_contract_testing_pact.md": {
+        "title": "a781cdde6630fcfc",
+        "whatItIs": "c59d8a30d973985d",
+        "keyConcepts": "2d919cf5529701c1",
+        "exampleCode": "fb5123170e9308e3",
+        "whenToUse": "0ee42a426ddc1ecd",
+        "commonMistakes": "eea507f961909280",
+        "furtherReading": "8777a041785befff"
+      },
+      "74_tdd_cycle.md": {
+        "title": "d86a7a022ff56fed",
+        "whatItIs": "7850c8ca3fdc8212",
+        "keyConcepts": "757d17d00e17e2b6",
+        "exampleCode": "c97a89e1c5ffa8c3",
+        "whenToUse": "c153f8974eca64c2",
+        "commonMistakes": "d1a0311439b4c07f",
+        "furtherReading": "57947f5d477d2bef"
+      },
+      "132_load_stress_testing_basics.md": {
+        "title": "5e22d1437c34a531",
+        "whatItIs": "f7b44ec3609fe78e",
+        "keyConcepts": "a81a6098229addc0",
+        "exampleCode": "abe4c0f4f7174c9d",
+        "whenToUse": "399a9dd770a13262",
+        "commonMistakes": "f26357cbc77def07",
+        "furtherReading": "e9a733cf6caf425b"
+      },
+      "134_domain_driven_design.md": {
+        "title": "7ffa4f6ca0e35470",
+        "whatItIs": "a5f5b0bab39483b8",
+        "keyConcepts": "c8d52769bd69fda4",
+        "exampleCode": "d156e3b93674c6e4",
+        "whenToUse": "e7197fc9747c6c31",
+        "commonMistakes": "e778263b55c347a4",
+        "furtherReading": "2f433b53e7456465"
+      },
+      "142_capacity_planning_estimation.md": {
+        "title": "3ed073bed143c1c1",
+        "whatItIs": "5d723f5ee2762863",
+        "keyConcepts": "0cb72ea89d9d1372",
+        "exampleCode": "5b847ab3bc40fff4",
+        "whenToUse": "c2aef88a597d48eb",
+        "commonMistakes": "6d7437a5dfb9533a",
+        "furtherReading": "3a7beacf946b32d6"
+      }
+    },
+    "business-finance-solo-ops": {
+      "316_cash_flow_and_runway.md": {
+        "title": "3dcec50d43a17618",
+        "whatItIs": "3aea03840bee23b5",
+        "keyConcepts": "e5bf36238324bc8e",
+        "exampleCode": "0162040df47359ce",
+        "whenToUse": "9a0dbd50802affed",
+        "commonMistakes": "34dc3c852bf3c43d",
+        "furtherReading": "7d3a0bddb7fe0f66"
+      },
+      "317_invoicing_and_payment_tracking.md": {
+        "title": "a0259b9ad94701c9",
+        "whatItIs": "61854915027eff87",
+        "keyConcepts": "14061be6db9c7a76",
+        "exampleCode": "1b38230b4488cf67",
+        "whenToUse": "a29ef13ea0900d21",
+        "commonMistakes": "3ab6d2f65809d900",
+        "furtherReading": "1be2abbc54998244"
+      },
+      "318_banking_and_payment_methods.md": {
+        "title": "05d8fe1d37977696",
+        "whatItIs": "8f1a975801a24073",
+        "keyConcepts": "41bfb5f161110dbc",
+        "exampleCode": "555e510f2bef98dc",
+        "whenToUse": "2a33d46476908cd5",
+        "commonMistakes": "e9606da5ab2a8ffe",
+        "furtherReading": "a9f7d35e61ea85b4"
+      },
+      "319_tax_and_accounting_readiness.md": {
+        "title": "b4cfba11e4079472",
+        "whatItIs": "88938b90398ba7c1",
+        "keyConcepts": "51be3af7bb7ab120",
+        "exampleCode": "c7eb3de8796db938",
+        "whenToUse": "1629b5d36323d54d",
+        "commonMistakes": "aaab84b94091cf3b",
+        "furtherReading": "4909dead429bc05f"
+      },
+      "320_expense_and_subscription_control.md": {
+        "title": "ea27f4fd547ca013",
+        "whatItIs": "606b8c34249a7708",
+        "keyConcepts": "4e4d235e1e823669",
+        "exampleCode": "98f99566689b9c9b",
+        "whenToUse": "dd3db7a7a3fdcbdd",
+        "commonMistakes": "900da50bbf130ee2",
+        "furtherReading": "ab98942004ae9ba0"
+      },
+      "321_project_accounting_and_costing.md": {
+        "title": "e6a6f26a1e7d3f12",
+        "whatItIs": "d5d50b22c6197b61",
+        "keyConcepts": "7fa6c17389210e42",
+        "exampleCode": "a5aa3ffeceac416f",
+        "whenToUse": "b76f754d8ed5f647",
+        "commonMistakes": "8c20f87150c8f8ca",
+        "furtherReading": "d4535eefa05000dc"
+      },
+      "322_time_tracking_and_effective_rate.md": {
+        "title": "317a6dcf063c1a5b",
+        "whatItIs": "1f36b93dea1bff9e",
+        "keyConcepts": "39b21e5107a1e406",
+        "exampleCode": "b393d1e6b7570f78",
+        "whenToUse": "549593fedee8e31c",
+        "commonMistakes": "6047ffd96efd1a4b",
+        "furtherReading": "8e87e17c204e2082"
+      },
+      "323_revenue_stream_design.md": {
+        "title": "899e00fa5e5b18f5",
+        "whatItIs": "00014730a4dfd3db",
+        "keyConcepts": "9bb9fda7d4867de0",
+        "exampleCode": "575b120b33579260",
+        "whenToUse": "6272a58bee681019",
+        "commonMistakes": "73a11250c3d57140",
+        "furtherReading": "5d10f2f66470c1d1"
+      },
+      "324_monthly_financial_close.md": {
+        "title": "97518040de372377",
+        "whatItIs": "dfdebfb96ab8dd1c",
+        "keyConcepts": "9def00bb0dedc82d",
+        "exampleCode": "4d6ece3669bb04a1",
+        "whenToUse": "0fd0052ebe4095e5",
+        "commonMistakes": "2a47aa4b6f6fe9e3",
+        "furtherReading": "828b8e2a8e1d758f"
+      },
+      "325_finance_dashboard_and_kpis.md": {
+        "title": "9db09a7d410b0222",
+        "whatItIs": "d5756a378b64fca7",
+        "keyConcepts": "a979280ec660f524",
+        "exampleCode": "2554668f24ff71ec",
+        "whenToUse": "8f43f7f291a794ec",
+        "commonMistakes": "229577e77ca3f03b",
+        "furtherReading": "ba1eb09f2fceb56b"
+      },
+      "326_business_records_and_file_system.md": {
+        "title": "dcef70fe494ce0a5",
+        "whatItIs": "c59f28b456c99193",
+        "keyConcepts": "c103e19520d39edb",
+        "exampleCode": "5a1f435442c0b8c2",
+        "whenToUse": "cf124000b040dd62",
+        "commonMistakes": "2e8d5a6659d963c1",
+        "furtherReading": "07015c29bba71215"
+      },
+      "327_risk_reserve_and_contingency.md": {
+        "title": "e985f8af754cac79",
+        "whatItIs": "39e1aa98dde46062",
+        "keyConcepts": "9aea4081ddbf4821",
+        "exampleCode": "225dde1a2a431654",
+        "whenToUse": "1a77b0ef8b7cfbce",
+        "commonMistakes": "f715f90f0ff12806",
+        "furtherReading": "4a3b2a72392ba762"
+      },
+      "328_procurement_and_vendor_management.md": {
+        "title": "16e72bbc06a56ee3",
+        "whatItIs": "c47af54eb3f83c6d",
+        "keyConcepts": "993ecb775bb00197",
+        "exampleCode": "dfb7bf1540408185",
+        "whenToUse": "c9f08bcccd52e43e",
+        "commonMistakes": "4ce966793026a80c",
+        "furtherReading": "9c2a472ca7817f88"
+      },
+      "329_operations_sops_and_admin_calendar.md": {
+        "title": "190e8941ff166d02",
+        "whatItIs": "868e51f33035cff9",
+        "keyConcepts": "2ec1f68a603fa7e9",
+        "exampleCode": "82af33bc540858cf",
+        "whenToUse": "af9ba7567f5eb951",
+        "commonMistakes": "6a535db3ace715e2",
+        "furtherReading": "eb0632f4094f8507"
+      },
+      "330_pricing_for_margin.md": {
+        "title": "70d448564f91e43e",
+        "whatItIs": "cec9b8edda76f9a3",
+        "keyConcepts": "ec2128c0195e7b47",
+        "exampleCode": "beff36005e0916f4",
+        "whenToUse": "f78fdc85cc9f27a4",
+        "commonMistakes": "7284833e383a3a4e",
+        "furtherReading": "04e09b1cdd7227cb"
+      },
+      "331_productized_offer_catalog.md": {
+        "title": "4fdbf50dc34b0835",
+        "whatItIs": "7e1b682db3ae5ab6",
+        "keyConcepts": "91b701942810ace2",
+        "exampleCode": "e8c5e9e45254c6a5",
+        "whenToUse": "475d8ea314f93247",
+        "commonMistakes": "5ee6415d936bd793",
+        "furtherReading": "2efa00ad782d4f17"
+      },
+      "332_paid_audit_as_door_opener.md": {
+        "title": "9ec59a2789943b73",
+        "whatItIs": "1748a280ea90b678",
+        "keyConcepts": "fb77a81b8f67e950",
+        "exampleCode": "6805c34e256c7c29",
+        "whenToUse": "94ddc4d741b5ee83",
+        "commonMistakes": "9fb2508cce7c9c66",
+        "furtherReading": "0bf6b35952b038ac"
+      },
+      "333_retainers_vs_maintenance.md": {
+        "title": "c4a3da80b01bdda1",
+        "whatItIs": "d2862ce47c2dc18d",
+        "keyConcepts": "ed8fe10b6445db35",
+        "exampleCode": "fd30cb35467b790d",
+        "whenToUse": "682d500529c1b606",
+        "commonMistakes": "6f3cf4e057c53df6",
+        "furtherReading": "fc7461f4e346f88b"
+      },
+      "334_retainer_renewal_and_negotiation.md": {
+        "title": "76955d26039684cb",
+        "whatItIs": "f5f587c3068b8687",
+        "keyConcepts": "146b6d30d12a87ad",
+        "exampleCode": "0336d9bd7be1a907",
+        "whenToUse": "046ce273470f7c09",
+        "commonMistakes": "40b587ed75f8ad58",
+        "furtherReading": "6528db63363c76ff"
+      },
+      "335_custom_bundle_design.md": {
+        "title": "b764a50674440938",
+        "whatItIs": "ef83666f49cc3b17",
+        "keyConcepts": "236ea270fb21a705",
+        "exampleCode": "cc074c9c0852f183",
+        "whenToUse": "15b6417e53cafe65",
+        "commonMistakes": "c41bb1b572a4f848",
+        "furtherReading": "59a827f65f303479"
+      },
+      "336_scoping_fixed_price_projects.md": {
+        "title": "289eb035ffe8861e",
+        "whatItIs": "7fd9d4f5503cb5d8",
+        "keyConcepts": "5b98458d010e5e3c",
+        "exampleCode": "2eaa915d5cd93822",
+        "whenToUse": "7b2ffbe6e7a6276e",
+        "commonMistakes": "cbe6590fee7512e2",
+        "furtherReading": "3aec7d944179aa58"
+      },
+      "337_selling_without_a_reference.md": {
+        "title": "c4b2f8b1f0227555",
+        "whatItIs": "82cdabb0d1faabc0",
+        "keyConcepts": "8de239c78e0e30d7",
+        "exampleCode": "818c3fda88fc10ab",
+        "whenToUse": "07a9708f825b7c68",
+        "commonMistakes": "9f36db5a85ce7a22",
+        "furtherReading": "147525112bb42f75"
+      },
+      "338_growth_focus_and_bets.md": {
+        "title": "209451389c047910",
+        "whatItIs": "6794900c10e35b1c",
+        "keyConcepts": "82ef247a1a955815",
+        "exampleCode": "883c7ce89418e001",
+        "whenToUse": "552c3140317eb320",
+        "commonMistakes": "0ac80834044f3dea",
+        "furtherReading": "b60abcfb1f53f539"
+      },
+      "339_growth_risk_and_concentration.md": {
+        "title": "2faa1abd7ea5efee",
+        "whatItIs": "ee66198d2a9d39de",
+        "keyConcepts": "d86d473d619e3db1",
+        "exampleCode": "10580b35bf6ad869",
+        "whenToUse": "ddcc04bed4ee74c3",
+        "commonMistakes": "e605cd6f4044fdb6",
+        "furtherReading": "6ddc3f0ea673dd22"
+      },
+      "340_scaling_with_contractors.md": {
+        "title": "5048550146cd3865",
+        "whatItIs": "70bf6d82ea62ed95",
+        "keyConcepts": "09929d93161bf47e",
+        "exampleCode": "5db2e01a2c865460",
+        "whenToUse": "6cbb9b99ac75d3f8",
+        "commonMistakes": "06edb85b29f5652c",
+        "furtherReading": "4dccf80e3c5e81bb"
+      },
+      "341_strategic_repositioning.md": {
+        "title": "e12b2c12857307df",
+        "whatItIs": "14e360becc5a0feb",
+        "keyConcepts": "4a4ff30e1b7fb559",
+        "exampleCode": "7a7e2112fed4676f",
+        "whenToUse": "64cf83bdb63a2e36",
+        "commonMistakes": "6ac6aa0aa4f146e8",
+        "furtherReading": "61112ff3ddc1ae3c"
+      },
+      "342_account_health_management.md": {
+        "title": "a0b7f026044c8e88",
+        "whatItIs": "3c69d5295fab90c6",
+        "keyConcepts": "2f7bda321dc602b8",
+        "exampleCode": "1c6e41a416f4075d",
+        "whenToUse": "d59cab9f29ac02fc",
+        "commonMistakes": "bcf62e9b70a293bd",
+        "furtherReading": "302fc1839adccc98"
+      },
+      "343_expansion_signals_and_upsell.md": {
+        "title": "d09846003c758ecc",
+        "whatItIs": "d8a94a35ccefe3ce",
+        "keyConcepts": "d6dffee7dc86a530",
+        "exampleCode": "73c81fafb891da02",
+        "whenToUse": "9317ca88129394af",
+        "commonMistakes": "726563e4501be9e2",
+        "furtherReading": "ab50e96b19f8abdf"
+      },
+      "344_referral_and_partner_channels.md": {
+        "title": "548a4d370a9efed6",
+        "whatItIs": "acb1f31c483188c0",
+        "keyConcepts": "0a263439fb337d71",
+        "exampleCode": "ea7543338a38e377",
+        "whenToUse": "c9673f460d1b1b4a",
+        "commonMistakes": "a3a6c0e2211b228c",
+        "furtherReading": "afb237b434049032"
+      },
+      "345_pipeline_forecasting.md": {
+        "title": "2c574c64e9dd84ca",
+        "whatItIs": "37af453bacf9eb8a",
+        "keyConcepts": "fb6caf9401a388ae",
+        "exampleCode": "12ce8a50fc935d3b",
+        "whenToUse": "30a9ef469e671733",
+        "commonMistakes": "8e2f1663de299bb8",
+        "furtherReading": "ffc8e48a5965d577"
+      },
+      "346_case_study_and_proof_loop.md": {
+        "title": "87c6f863c08f0a98",
+        "whatItIs": "333a5ca5fdd4785d",
+        "keyConcepts": "60912b2292a30599",
+        "exampleCode": "41248ab2ddd1df92",
+        "whenToUse": "025360b2f41684f8",
+        "commonMistakes": "03f3c725b5b5483e",
+        "furtherReading": "ecfb49a1520274fa"
+      },
+      "347_growth_model_and_north_star.md": {
+        "title": "749639968c9975de",
+        "whatItIs": "386bd5291cdfea25",
+        "keyConcepts": "b365ecec58aa0970",
+        "exampleCode": "000fd42c6489a051",
+        "whenToUse": "02abeab53ed257fc",
+        "commonMistakes": "c94e8c5c978fb961",
+        "furtherReading": "85e2e6f8e505f491"
+      },
+      "348_acquisition_funnel_and_attribution.md": {
+        "title": "51266ed0454c5516",
+        "whatItIs": "d0ce34df3d3c3e2c",
+        "keyConcepts": "a999f71ecca08559",
+        "exampleCode": "d3a85b3bcfa35c7d",
+        "whenToUse": "e77e12778463e4cb",
+        "commonMistakes": "2e1ebc6e293308a3",
+        "furtherReading": "54ecfc22a0859e36"
+      },
+      "349_growth_experiment_design.md": {
+        "title": "32dd890ec2921c86",
+        "whatItIs": "51ea3f0110440483",
+        "keyConcepts": "3a732d658f84186d",
+        "exampleCode": "9553d0a1c429e9a3",
+        "whenToUse": "d58f077d802949e7",
+        "commonMistakes": "692f46e6603af0d4",
+        "furtherReading": "9d05344bc387287c"
+      },
+      "350_decision_rules_and_scaling.md": {
+        "title": "05383e4cb7b5ee02",
+        "whatItIs": "c031e6d118e231f5",
+        "keyConcepts": "3031c483498b8d77",
+        "exampleCode": "76aed7df54dabd2a",
+        "whenToUse": "efd1ec3c402467f7",
+        "commonMistakes": "8f25ef64f4dc83d0",
+        "furtherReading": "d3005bce41d37e53"
+      },
+      "351_weekly_monthly_business_review.md": {
+        "title": "9b927a732ad682fb",
+        "whatItIs": "67f94f3c136f5b12",
+        "keyConcepts": "3b8552def4d6bbee",
+        "exampleCode": "b1f600b4b1580ec2",
+        "whenToUse": "3e84b3a7df4077ea",
+        "commonMistakes": "86bc9beab021578c",
+        "furtherReading": "c59639965c4f619a"
+      },
+      "352_ethical_growth_guardrails.md": {
+        "title": "8671c2772803190f",
+        "whatItIs": "0a124d44c1fba823",
+        "keyConcepts": "291473d295231df1",
+        "exampleCode": "59030856472905a7",
+        "whenToUse": "a420232103cd7ee9",
+        "commonMistakes": "9d291448e99cf0e0",
+        "furtherReading": "6760c17558a4e08e"
+      },
+      "353_business_continuity_planning.md": {
+        "title": "157627873a100818",
+        "whatItIs": "e1f26b42b41f9dc1",
+        "keyConcepts": "6184861ac2747307",
+        "exampleCode": "f2eabc2f71d1554d",
+        "whenToUse": "15481516d0b33b4b",
+        "commonMistakes": "85433a1735082e85",
+        "furtherReading": "af662cb5b14abfad"
+      },
+      "354_non_negotiable_operating_rules.md": {
+        "title": "27b2224055b406f9",
+        "whatItIs": "5d806ae97eab873c",
+        "keyConcepts": "f175da17eab5653d",
+        "exampleCode": "68be0d552e4d478c",
+        "whenToUse": "541fb4d7aa5d0a9d",
+        "commonMistakes": "a9413bc3211bc43a",
+        "furtherReading": "ac469d2ebb590c9d"
+      },
+      "355_burnout_as_a_business_risk.md": {
+        "title": "84d07e5dde9510e2",
+        "whatItIs": "e91e4a43e5ee61b4",
+        "keyConcepts": "f0675604fddebdd6",
+        "exampleCode": "630837d4d6fa5d57",
+        "whenToUse": "bbf5b0fa34634b8d",
+        "commonMistakes": "6d904dadee481554",
+        "furtherReading": "606592c37ac5ee16"
+      }
+    },
+    "career-entrepreneurship": {
+      "114_niche_positioning.md": {
+        "title": "2b69d590c49966d3",
+        "whatItIs": "44464ee067af3ebc",
+        "keyConcepts": "2ec8111838a85328",
+        "exampleCode": "2c86a695f6da690b",
+        "whenToUse": "4dc8c33433b2c62b",
+        "commonMistakes": "c79c9449ef3c2321",
+        "furtherReading": "f8a4b45965df79a7"
+      },
+      "115_productizing_services.md": {
+        "title": "74e7d2c435bbccaf",
+        "whatItIs": "aff44adbc1c0d5e2",
+        "keyConcepts": "ba7f55e863c0b77d",
+        "exampleCode": "9707cd6da9075cea",
+        "whenToUse": "eb136e2f6467fd7e",
+        "commonMistakes": "3f26b5a895fb9d03",
+        "furtherReading": "140e5c4b228ed5c3"
+      },
+      "116_legal_literacy.md": {
+        "title": "8c163ab46bd8f705",
+        "whatItIs": "7eb492a7c4962fd6",
+        "keyConcepts": "4355bbdb9ca90ef7",
+        "exampleCode": "ba900e0bd1cd353b",
+        "whenToUse": "05f5d8573abed2e7",
+        "commonMistakes": "a6fe6eaeec110bf2",
+        "furtherReading": "c061006af95149f0"
+      },
+      "117_financial_literacy.md": {
+        "title": "457143d66e14d07e",
+        "whatItIs": "226536626e55dfc2",
+        "keyConcepts": "79429de5316caf28",
+        "exampleCode": "955e7064ecb4cfe8",
+        "whenToUse": "136c6bbb814ed6fd",
+        "commonMistakes": "98cab54090b8bc13",
+        "furtherReading": "98c81960c395a8c6"
+      },
+      "118_building_in_public.md": {
+        "title": "7ea8649c868b3e2b",
+        "whatItIs": "f5e59d9c71394fd4",
+        "keyConcepts": "cfb3417aa31efb56",
+        "exampleCode": "381b701dc4452eb6",
+        "whenToUse": "854be78da78a77db",
+        "commonMistakes": "d5812f17f4180c25",
+        "furtherReading": "eeb5c4f9a9803457"
+      }
+    },
+    "client-acquisition-sales": {
+      "176_brand_foundation_and_positioning_statement.md": {
+        "title": "3e75613fd344f5d5",
+        "whatItIs": "d54de5133a8945f9",
+        "keyConcepts": "d83285a581d0d351",
+        "exampleCode": "71c58ea6d314a1b6",
+        "whenToUse": "c8478265da120f7a",
+        "commonMistakes": "5c131a721bf6d6c5",
+        "furtherReading": "dcb68376b94c51c3"
+      },
+      "177_value_proposition_and_buyer_personas.md": {
+        "title": "015a3c30b3538778",
+        "whatItIs": "3f72b321bd9190f9",
+        "keyConcepts": "042bb369b74c5a97",
+        "exampleCode": "e823fcd52fbedf97",
+        "whenToUse": "181698a46853c165",
+        "commonMistakes": "21b6da943e89dcea",
+        "furtherReading": "7aa02818e22dc30f"
+      },
+      "178_differentiation_and_competitive_alternatives.md": {
+        "title": "f75de05429b4511d",
+        "whatItIs": "af7e322e58d49cce",
+        "keyConcepts": "56b581df1207a415",
+        "exampleCode": "b9c034eca4144948",
+        "whenToUse": "63186c860744b2fe",
+        "commonMistakes": "59cfcd2ce0608faf",
+        "furtherReading": "83402eeb5ec80a8a"
+      },
+      "179_message_pillars_and_brand_voice.md": {
+        "title": "92ff9f128e4abbd1",
+        "whatItIs": "70fe71eee5ec61f0",
+        "keyConcepts": "d0101447695158ba",
+        "exampleCode": "af25a4027ad1614d",
+        "whenToUse": "8ed51723cca14f7a",
+        "commonMistakes": "aa6a127ae4af81a9",
+        "furtherReading": "b6bf1237d3b9821e"
+      },
+      "180_proof_credibility_and_founder_narrative.md": {
+        "title": "7d68f389f6e1e033",
+        "whatItIs": "ad0a099973047f1e",
+        "keyConcepts": "c3000e76d2225086",
+        "exampleCode": "4e839c93579e5419",
+        "whenToUse": "603e180e2be74e08",
+        "commonMistakes": "b2427e26e7a8954f",
+        "furtherReading": "165c61c425844274"
+      },
+      "181_bio_headline_and_anti_positioning.md": {
+        "title": "b212b4c7f3e8e9e4",
+        "whatItIs": "9ba3ca6b86c2c8af",
+        "keyConcepts": "81bb05faaf7aa94a",
+        "exampleCode": "fce81d1a4bfd832a",
+        "whenToUse": "066ac93cf518d083",
+        "commonMistakes": "64b270783d3e6b89",
+        "furtherReading": "18940f00f175b114"
+      },
+      "182_client_acquisition_pipeline_and_icp.md": {
+        "title": "b355595fd9654a08",
+        "whatItIs": "57a99b3039b4ae66",
+        "keyConcepts": "276b53eb09271761",
+        "exampleCode": "b215d37fe0f422e4",
+        "whenToUse": "2a93a04e952863f3",
+        "commonMistakes": "5eecfebd5a9193a9",
+        "furtherReading": "385b5ffeee7d2a8d"
+      },
+      "183_offer_and_service_packaging.md": {
+        "title": "545e67d7eba33740",
+        "whatItIs": "940de3debe3fd332",
+        "keyConcepts": "ea098e8a00547c66",
+        "exampleCode": "5943fae1b5da3441",
+        "whenToUse": "4fd1d44b632134eb",
+        "commonMistakes": "4a1ee68a0b13a00d",
+        "furtherReading": "b4a06722bf50debf"
+      },
+      "184_lead_source_strategy_and_inbound_content.md": {
+        "title": "7bd0322f4365ed8d",
+        "whatItIs": "8b9e09ef6a2504eb",
+        "keyConcepts": "0638a6a60331bbff",
+        "exampleCode": "b833d5d959c2cc4c",
+        "whenToUse": "84af609d31564be0",
+        "commonMistakes": "810fdf96085f8f84",
+        "furtherReading": "3cd0ae2cdc99385c"
+      },
+      "185_cold_outreach_ethics_and_the_three_gates.md": {
+        "title": "b71fae730a3646eb",
+        "whatItIs": "ea15938eb56c60ab",
+        "keyConcepts": "0c03e336ca87b89e",
+        "exampleCode": "a7ca6d3f39959191",
+        "whenToUse": "5e5b12e8db4643d4",
+        "commonMistakes": "a831bd8f7d2c834c",
+        "furtherReading": "9a7882fe3c9aa127"
+      },
+      "186_target_lists_trigger_events_and_tiering.md": {
+        "title": "f11d84029a17a8ee",
+        "whatItIs": "47dab6c402f4b5d5",
+        "keyConcepts": "1cc01699a356f854",
+        "exampleCode": "5fa66512131d721c",
+        "whenToUse": "a80c695197507b2a",
+        "commonMistakes": "62a644f7945cac3c",
+        "furtherReading": "ff5475b07832bb52"
+      },
+      "187_cold_message_anatomy_and_the_substitution_test.md": {
+        "title": "3c723ea4e4ff3a2f",
+        "whatItIs": "d897e26a7dd3c60d",
+        "keyConcepts": "dd2a6b9273d6f09e",
+        "exampleCode": "3ba00ff34dbe5e08",
+        "whenToUse": "3e7efda929f797d4",
+        "commonMistakes": "2bb60e383243c745",
+        "furtherReading": "0099e0782d48237d"
+      },
+      "188_cold_outreach_channels_email_linkedin_and_phone.md": {
+        "title": "9a5716228121e3d3",
+        "whatItIs": "ccc96431e7d458b2",
+        "keyConcepts": "6177a0a2ea13450c",
+        "exampleCode": "f671506356084218",
+        "whenToUse": "3c49210aebf7b18f",
+        "commonMistakes": "1219e701e059728e",
+        "furtherReading": "e1875a139daccf1a"
+      },
+      "189_followup_cadence_reply_handling_and_campaign_discipline.md": {
+        "title": "7a3cbcac3d5f8eef",
+        "whatItIs": "16bf2e9b92ac6b9d",
+        "keyConcepts": "ad04f2825190c874",
+        "exampleCode": "4c9516a01f7aba75",
+        "whenToUse": "6935cb4310d83c95",
+        "commonMistakes": "ef026a11db0536b2",
+        "furtherReading": "432ea86aa9672d21"
+      },
+      "190_lead_intake_crm_hygiene_and_acquisition_metrics.md": {
+        "title": "9fa40afe05c06e41",
+        "whatItIs": "45565d981d33cc93",
+        "keyConcepts": "ee224a371daa1799",
+        "exampleCode": "f1117c1647a4e9a5",
+        "whenToUse": "31440dea84aa6bc8",
+        "commonMistakes": "0a9ac86f0db9e9b0",
+        "furtherReading": "8ca67b716d04fcb8"
+      },
+      "191_qualification_and_red_flag_screening_before_discovery.md": {
+        "title": "58b16c879ff55531",
+        "whatItIs": "842fcb86759052de",
+        "keyConcepts": "22b185d7fcea6d38",
+        "exampleCode": "50e4f72a4e424e60",
+        "whenToUse": "f0f2c5f25f7002b1",
+        "commonMistakes": "6726048dd5ea81f3",
+        "furtherReading": "61795605df135cb0"
+      },
+      "192_acquisition_trust_assets_landing_pages_portfolio_and_objection_prep.md": {
+        "title": "8692f23b9bdd24bb",
+        "whatItIs": "724563f5281e82d3",
+        "keyConcepts": "f2f62cf2e06bf9a7",
+        "exampleCode": "d1bbbdd3649fff75",
+        "whenToUse": "2491c5ffc1efb785",
+        "commonMistakes": "25e6b05f495c4632",
+        "furtherReading": "e36a37b5bf19d39f"
+      },
+      "193_referrals_and_partnership_channels.md": {
+        "title": "e0c6517084ec854d",
+        "whatItIs": "ea72c4fe939b07d0",
+        "keyConcepts": "a460a3bcf5395f9c",
+        "exampleCode": "e5c5a56e853e9a77",
+        "whenToUse": "1d8e4dd1518d7a7b",
+        "commonMistakes": "47d9b08666888838",
+        "furtherReading": "8d77cc2eed08b580"
+      },
+      "194_discovery_call_preparation_agenda_and_question_frameworks.md": {
+        "title": "51eef8fc74edfbdc",
+        "whatItIs": "667a57a489f38ae2",
+        "keyConcepts": "7053ef955b97cf5b",
+        "exampleCode": "43355a3f1aef077e",
+        "whenToUse": "a5432b10b361aa39",
+        "commonMistakes": "a6785e3b1c4066c8",
+        "furtherReading": "e733d183cc0219d4"
+      },
+      "195_business_problem_diagnosis_and_current_state_workflow_mapping.md": {
+        "title": "da856512b7e47388",
+        "whatItIs": "823082500f1704bc",
+        "keyConcepts": "2c75c8ff075e56fb",
+        "exampleCode": "77f81e83681fb5c3",
+        "whenToUse": "dc5b0f79c48f5f32",
+        "commonMistakes": "3eb9bdcd03970045",
+        "furtherReading": "03a38188df403366"
+      },
+      "196_stakeholder_mapping_decision_authority_and_budget_timeline_discovery.md": {
+        "title": "32954a94480cec0e",
+        "whatItIs": "e9c5ffea5a09452e",
+        "keyConcepts": "1604636b8b1ac227",
+        "exampleCode": "2097d954120df527",
+        "whenToUse": "001542e8ce49d630",
+        "commonMistakes": "12d89bda0a9c13dc",
+        "furtherReading": "11d36c9f8ca23e18"
+      },
+      "197_requirements_user_stories_and_mvp_scope_framing.md": {
+        "title": "ce7235c79a3c84d7",
+        "whatItIs": "f666c29826571fe4",
+        "keyConcepts": "f95bc08290931f62",
+        "exampleCode": "ad53aa973936b209",
+        "whenToUse": "4638c5139be64c14",
+        "commonMistakes": "eba403bdc627c4a0",
+        "furtherReading": "00432af230653585"
+      },
+      "198_technical_feasibility_paid_discovery_and_objection_handling.md": {
+        "title": "4eb8ade09b1ed871",
+        "whatItIs": "756c14fae8f7f976",
+        "keyConcepts": "39090b95b3b80053",
+        "exampleCode": "4f976440b83c9a28",
+        "whenToUse": "1ef4cd8bc58f27e6",
+        "commonMistakes": "da07a0e98b468807",
+        "furtherReading": "80df8df61fb1f427"
+      },
+      "199_risk_logs_meeting_recaps_and_the_discovery_to_proposal_handoff.md": {
+        "title": "d370ac6457f41ca2",
+        "whatItIs": "0b08e9b4b9ff78cb",
+        "keyConcepts": "12ea3748347e9b50",
+        "exampleCode": "6740b598b3d4981b",
+        "whenToUse": "5da7385e10a5b2a2",
+        "commonMistakes": "1d5dbc2cdb4d6fff",
+        "furtherReading": "6f1042533a3f571a"
+      }
+    },
+    "client-delivery-pm-handover": {
+      "236_project_kickoff_and_first_30_days.md": {
+        "title": "456c255bc13f4b83",
+        "whatItIs": "9ddbbbfd32345913",
+        "keyConcepts": "5768b78a4c3eea41",
+        "exampleCode": "766f21aeb782029d",
+        "whenToUse": "4d551ca2063f7418",
+        "commonMistakes": "64912ad80bbbcfe7",
+        "furtherReading": "edb8b1b5d78307b2"
+      },
+      "237_scope_to_work_breakdown.md": {
+        "title": "4128f4d63a2f6a12",
+        "whatItIs": "1e8e99d1c3a8409f",
+        "keyConcepts": "cf3c4b9eed2f5432",
+        "exampleCode": "df15fb24db54ff1b",
+        "whenToUse": "cb65f58844128bb9",
+        "commonMistakes": "9fc083c99e6987c2",
+        "furtherReading": "d696933fde175c27"
+      },
+      "238_milestone_planning_for_client_visibility.md": {
+        "title": "849900c17ffcc3c9",
+        "whatItIs": "affe9cc6040f5a1e",
+        "keyConcepts": "80ffe613defb52ad",
+        "exampleCode": "bba61d7c3cbef121",
+        "whenToUse": "0aa65027cfa568ba",
+        "commonMistakes": "998b89a29116e4ca",
+        "furtherReading": "9429f977d2799726"
+      },
+      "239_stakeholder_mapping_and_decision_makers.md": {
+        "title": "571ea19649bc5004",
+        "whatItIs": "c8055b862bfa10d5",
+        "keyConcepts": "94e4430087478c0e",
+        "exampleCode": "28a0bd4669640f62",
+        "whenToUse": "e354219b6b467631",
+        "commonMistakes": "69929f2c90adc4e7",
+        "furtherReading": "e087c8ae09eaaf34"
+      },
+      "240_client_communication_cadence_and_status_reporting.md": {
+        "title": "61c4a90762782d6c",
+        "whatItIs": "96a5c37b7d325875",
+        "keyConcepts": "6ecf44fcfeab89a8",
+        "exampleCode": "1bc78d387daeb327",
+        "whenToUse": "ee7a4fbe90c6a552",
+        "commonMistakes": "c3a5a0a182c491e2",
+        "furtherReading": "06adcba067866056"
+      },
+      "241_phase_status_and_session_closeout.md": {
+        "title": "2d63a6bed89f08e8",
+        "whatItIs": "e2b18a306a7b116a",
+        "keyConcepts": "ce95eecb59c87d5d",
+        "exampleCode": "8505d903d27001a8",
+        "whenToUse": "a39b7173b44865e2",
+        "commonMistakes": "9bdff9a9fa16e1a5",
+        "furtherReading": "11af62c327ca77b3"
+      },
+      "242_risk_issue_and_dependency_logs.md": {
+        "title": "68a9b0b5d41d28d1",
+        "whatItIs": "8b69af9e0fd2c590",
+        "keyConcepts": "eb409e02c6bf4d33",
+        "exampleCode": "28906684b1322800",
+        "whenToUse": "3303168e6afd5e8e",
+        "commonMistakes": "1782ef3889f56669",
+        "furtherReading": "9dd65b11d579129a"
+      },
+      "243_decisions_and_change_requests.md": {
+        "title": "19ca0571970c79d1",
+        "whatItIs": "754b8732efe1f361",
+        "keyConcepts": "7e0a819a21e26e7e",
+        "exampleCode": "8590abf6c38d1424",
+        "whenToUse": "fbf789de0416b285",
+        "commonMistakes": "cf23dc4a4ebf80a7",
+        "furtherReading": "dd8761a124d0d39a"
+      },
+      "244_feedback_triage_bug_vs_change_request.md": {
+        "title": "f37011b1c4db85c8",
+        "whatItIs": "d3a898296ed8a9be",
+        "keyConcepts": "80ba9c6111fe9f44",
+        "exampleCode": "d3809bb97d2931f0",
+        "whenToUse": "ca7e20eec9ad178f",
+        "commonMistakes": "49f9614a144a044f",
+        "furtherReading": "459ec44ee655a64c"
+      },
+      "245_quality_gates_demo_to_handover.md": {
+        "title": "7e9938604d410a53",
+        "whatItIs": "0e09290603b288ff",
+        "keyConcepts": "65a2d3ea6ad1fe39",
+        "exampleCode": "1a1b120f18eb91af",
+        "whenToUse": "16a0c028587f953d",
+        "commonMistakes": "47fa94904ba48fe0",
+        "furtherReading": "6a8d3b4121038387"
+      },
+      "246_communicating_timelines_and_delays.md": {
+        "title": "e60e828639341be6",
+        "whatItIs": "b76e319191b00475",
+        "keyConcepts": "efa15ad9cd5c787f",
+        "exampleCode": "fa8cd125a6d6a59d",
+        "whenToUse": "51956801a10b1671",
+        "commonMistakes": "3149cfa4bd710596",
+        "furtherReading": "4ec4f6732cc38aeb"
+      },
+      "247_phase_handoff_checklists.md": {
+        "title": "de957046e36fe4e4",
+        "whatItIs": "c5ef9f535837436a",
+        "keyConcepts": "ffd4f26c5a0ef9ea",
+        "exampleCode": "c4a0f234fe8c1d1a",
+        "whenToUse": "9d76a6224ed9aa42",
+        "commonMistakes": "0520e7b9e5c82a41",
+        "furtherReading": "fd7e7153c67ec7ac"
+      },
+      "248_project_closure_retrospective_and_satisfaction.md": {
+        "title": "f961917597107ccd",
+        "whatItIs": "f52d6b7616e4a175",
+        "keyConcepts": "394784b7ee4571ee",
+        "exampleCode": "774483f160c092b6",
+        "whenToUse": "d866dce6d6c5e078",
+        "commonMistakes": "2d2130508445aae7",
+        "furtherReading": "647e6aa6b33b112f"
+      },
+      "249_documentation_strategy_and_audience_mapping.md": {
+        "title": "66ffac91d4d0b075",
+        "whatItIs": "7214caccde3d6bc6",
+        "keyConcepts": "a72b55fea5a014f7",
+        "exampleCode": "af890b77b0117803",
+        "whenToUse": "3d223f92bf188047",
+        "commonMistakes": "3ec6f817d1077efb",
+        "furtherReading": "41f320915fb2d68e"
+      },
+      "250_handover_package_structure_and_meeting.md": {
+        "title": "b5c404ba80feb1e0",
+        "whatItIs": "5128265a93c9ea77",
+        "keyConcepts": "6bed28d695664fbc",
+        "exampleCode": "a515fa78f6590a3c",
+        "whenToUse": "dc01170a43462404",
+        "commonMistakes": "aa1a07b111ad690f",
+        "furtherReading": "f90c304a1273fae5"
+      },
+      "251_access_credentials_and_environment_handover.md": {
+        "title": "5d9fd9e2d51f45c0",
+        "whatItIs": "0a16789b456cb05e",
+        "keyConcepts": "e1e4ef22b259cd2f",
+        "exampleCode": "bdc6a0fcf5a3a43d",
+        "whenToUse": "61ae8dbede9ea1a7",
+        "commonMistakes": "8a45521e9ebfe5ae",
+        "furtherReading": "e32646f7a1420682"
+      },
+      "252_database_api_and_integration_handover_docs.md": {
+        "title": "b0126545d6f8fed8",
+        "whatItIs": "12cb4d268dae185e",
+        "keyConcepts": "7faf2e83bdedcc48",
+        "exampleCode": "9edb693ba712c039",
+        "whenToUse": "61c896af67387fc2",
+        "commonMistakes": "44a961c46636d428",
+        "furtherReading": "18509629f8e38bd9"
+      },
+      "253_deployment_runbook_and_emergency_handover.md": {
+        "title": "885922f4b0958d34",
+        "whatItIs": "5ff10d6bb2c260e0",
+        "keyConcepts": "a85c3df8ef370818",
+        "exampleCode": "49d231647aff7b7a",
+        "whenToUse": "4e9dc626100cd71d",
+        "commonMistakes": "a75d611ede782395",
+        "furtherReading": "705c37a84f7a764a"
+      },
+      "254_admin_and_user_guides.md": {
+        "title": "4887da49a4b5249a",
+        "whatItIs": "6d4042bf7dd0acdb",
+        "keyConcepts": "1b1490405e2baf45",
+        "exampleCode": "f4d60b3dd3844a45",
+        "whenToUse": "4c2a4f90392778b9",
+        "commonMistakes": "f2781337988acf60",
+        "furtherReading": "b4da271804024146"
+      },
+      "255_known_issues_and_troubleshooting_disclosure.md": {
+        "title": "c61250d75a7bb00c",
+        "whatItIs": "537f52b95c9f1402",
+        "keyConcepts": "3eac44d9b66c3f28",
+        "exampleCode": "6a6cdf5c93efc504",
+        "whenToUse": "f8a2213cc49bfbcd",
+        "commonMistakes": "3538be8d7e4f86cd",
+        "furtherReading": "18d2831d2d3c8e4b"
+      },
+      "256_ownership_ip_and_source_code_handover.md": {
+        "title": "8d166896e02cdba4",
+        "whatItIs": "d2686dc55d01f08f",
+        "keyConcepts": "67c1d4c5f122c55d",
+        "exampleCode": "d32845f755a87e24",
+        "whenToUse": "f74de03fb80c175f",
+        "commonMistakes": "cfeee09695973d43",
+        "furtherReading": "dede73498908113d"
+      },
+      "257_client_training_and_demo_sessions.md": {
+        "title": "1df6cbd90769e7c6",
+        "whatItIs": "9f2ff562e17c49b8",
+        "keyConcepts": "266a0daf7469ac73",
+        "exampleCode": "79e2e0f65b434c4c",
+        "whenToUse": "4df33869792bda2c",
+        "commonMistakes": "78f5edad7981bada",
+        "furtherReading": "56915097bcfc6534"
+      },
+      "258_warranty_maintenance_and_support_transition.md": {
+        "title": "b1da8d30bb23f57b",
+        "whatItIs": "a4f904362b04b966",
+        "keyConcepts": "19d7954ff52d89a1",
+        "exampleCode": "3422896a50036e0b",
+        "whenToUse": "c381a8fed93dcb7a",
+        "commonMistakes": "0a8f218be3902482",
+        "furtherReading": "801593c11287832b"
+      },
+      "259_post_launch_checkins_and_adoption_follow_up.md": {
+        "title": "62318e96ac6b74eb",
+        "whatItIs": "bb1d3369fe535a35",
+        "keyConcepts": "78818fa69285f2db",
+        "exampleCode": "9bfce39b4fd55685",
+        "whenToUse": "79393c2baca3a08a",
+        "commonMistakes": "3a7fa79832e2508c",
+        "furtherReading": "0e43474e790f8f22"
+      },
+      "260_production_incident_client_communication.md": {
+        "title": "46f40e6084b23146",
+        "whatItIs": "05964b8f5776fe7a",
+        "keyConcepts": "ee990175fd33895b",
+        "exampleCode": "1339d96a77fbcbb3",
+        "whenToUse": "6762429b2eac607b",
+        "commonMistakes": "1d57a32a82cf4cb1",
+        "furtherReading": "a37e5b36511821e8"
+      },
+      "261_client_facing_postmortem_reports.md": {
+        "title": "67f8ce85ec6cdbe8",
+        "whatItIs": "775f4c9541176eda",
+        "keyConcepts": "166d358ba74e6100",
+        "exampleCode": "a8b3864836401aa5",
+        "whenToUse": "a46f9aea100df305",
+        "commonMistakes": "2881710551b92ad1",
+        "furtherReading": "1151a5e819a80556"
+      },
+      "262_issue_triage_and_severity_classification.md": {
+        "title": "0d52f5ee51260c24",
+        "whatItIs": "07f85a3fad6cc924",
+        "keyConcepts": "bac4bf14d3e91edc",
+        "exampleCode": "034abb10c0731189",
+        "whenToUse": "a4c97def8f0c713c",
+        "commonMistakes": "6940d5c4e4b49530",
+        "furtherReading": "3ab0c550584be453"
+      },
+      "263_offboarding_and_vendor_transition.md": {
+        "title": "8021d8863a6beecb",
+        "whatItIs": "2242c5973c633eab",
+        "keyConcepts": "fa9b7c9f031d940a",
+        "exampleCode": "56dd8c65d945e1da",
+        "whenToUse": "6bab4dba2d862571",
+        "commonMistakes": "c425a5d9d5d3320a",
+        "furtherReading": "a3ab5c91ae91edbe"
+      },
+      "264_renewal_upsell_and_expansion.md": {
+        "title": "4764bcba735432e2",
+        "whatItIs": "3d4057388675e181",
+        "keyConcepts": "a9e380abe175d773",
+        "exampleCode": "cf2f4e05eeea36c6",
+        "whenToUse": "e0f3b632235c17c8",
+        "commonMistakes": "7fcfebcb8c09b273",
+        "furtherReading": "f7812226abd6d6de"
+      },
+      "265_support_operations_channels_slas_and_boundaries.md": {
+        "title": "8d01d902d386018f",
+        "whatItIs": "557bd1a58b6b195e",
+        "keyConcepts": "7873f740f96702a7",
+        "exampleCode": "3f7de5eb760bd446",
+        "whenToUse": "5a8f3437e2ff352c",
+        "commonMistakes": "0aa67478d7c94fb1",
+        "furtherReading": "5df67a1d0d0107c5"
+      },
+      "266_customer_success_metrics_and_health_reporting.md": {
+        "title": "0659568244338c1f",
+        "whatItIs": "8095e0ffe32e11ee",
+        "keyConcepts": "9ec6f28a39ee185b",
+        "exampleCode": "9571ce35fdbb1905",
+        "whenToUse": "4fd0405784057b7f",
+        "commonMistakes": "9661a1a6600ad4e4",
+        "furtherReading": "a4919dcda2883599"
+      },
+      "267_delivery_playbooks_codifying_project_types.md": {
+        "title": "5de4db3a2efaa9b0",
+        "whatItIs": "90021da2ffcedc90",
+        "keyConcepts": "2da61888523e961e",
+        "exampleCode": "84bf8150c1ef3f74",
+        "whenToUse": "827df465b2ec8feb",
+        "commonMistakes": "b7b925b1a061493a",
+        "furtherReading": "ec327bd70092d55e"
+      },
+      "268_discovery_calls_red_flags_and_disqualification.md": {
+        "title": "636b7cfa870ddbc2",
+        "whatItIs": "14525582f7773727",
+        "keyConcepts": "8c748134464b2671",
+        "exampleCode": "29f3829d5137c138",
+        "whenToUse": "af3f5188d3418fc2",
+        "commonMistakes": "c175b781fd83f9a6",
+        "furtherReading": "720737b44f095b26"
+      },
+      "269_scope_ladders_included_vs_priced_add_ons.md": {
+        "title": "d4f7745135db0d72",
+        "whatItIs": "28270cbd2031da08",
+        "keyConcepts": "14cb484ba1420723",
+        "exampleCode": "babe9535ebcba127",
+        "whenToUse": "9eeef7c21fb02a42",
+        "commonMistakes": "f1a458aba7ac03d3",
+        "furtherReading": "5b3ce0b84bacf55e"
+      }
+    },
+    "content-seo-personal-brand": {
+      "271_content_pillars_and_strategic_positioning.md": {
+        "title": "436db89ce423ef95",
+        "whatItIs": "73ef04042ca8bcb1",
+        "keyConcepts": "24a971fe38826c55",
+        "exampleCode": "f36fdfc7712b9d7f",
+        "whenToUse": "ec7b924b24616064",
+        "commonMistakes": "19a33542fc370d31",
+        "furtherReading": "f7b0d8d65cd7c41e"
+      },
+      "272_idea_capture_system.md": {
+        "title": "be249a0542050f81",
+        "whatItIs": "cc58d1c03792fb59",
+        "keyConcepts": "83aeebf10f9d240e",
+        "exampleCode": "7b816b87e91f2b06",
+        "whenToUse": "b0ee3672c0f32964",
+        "commonMistakes": "932fc29ea3e9b8d2",
+        "furtherReading": "8b54ce335927b61f"
+      },
+      "273_audience_and_intent_mapping.md": {
+        "title": "91a7908aa8bd22ff",
+        "whatItIs": "fd42433129338a72",
+        "keyConcepts": "a3abf42f1efc9862",
+        "exampleCode": "3115a7c11341cadc",
+        "whenToUse": "d54b652e1d9a80e7",
+        "commonMistakes": "b54b59361578dc62",
+        "furtherReading": "368475c600d66041"
+      },
+      "274_content_angles_and_storytelling_frameworks.md": {
+        "title": "de93f3428c33cfd4",
+        "whatItIs": "b97ecb4af4c25bdc",
+        "keyConcepts": "0dd6de2e8c767c46",
+        "exampleCode": "0b6ae3099f71c724",
+        "whenToUse": "6dda43da32790b60",
+        "commonMistakes": "45b30a78b9f5a9de",
+        "furtherReading": "4bad7599d623b458"
+      },
+      "275_technical_writing_style_for_business_readers.md": {
+        "title": "bb17442b6ae9a934",
+        "whatItIs": "4705f7d0edfa5632",
+        "keyConcepts": "089356160644cc23",
+        "exampleCode": "f9e18fa756790429",
+        "whenToUse": "f40a0fb5e81ee16e",
+        "commonMistakes": "3708068e830f7606",
+        "furtherReading": "d1e8082bc7e9d11a"
+      },
+      "276_content_repurposing_one_idea_many_assets.md": {
+        "title": "3d42370ce267e9be",
+        "whatItIs": "7d210b4bb7f9c0c2",
+        "keyConcepts": "8708b3743b6d238d",
+        "exampleCode": "2fbd6e8a4711d3dc",
+        "whenToUse": "34d6e6ab2f01926e",
+        "commonMistakes": "285234e7d5679e49",
+        "furtherReading": "84d786fa2e6ca8db"
+      },
+      "277_content_calendar_cadence_and_quality_gate.md": {
+        "title": "6f4c1cca2161de69",
+        "whatItIs": "d41c2476c36e5351",
+        "keyConcepts": "1ef34cc9000f9042",
+        "exampleCode": "bb11a2e13c9b678a",
+        "whenToUse": "ad10b0293f539c54",
+        "commonMistakes": "9c4d73d1f8bb168d",
+        "furtherReading": "6b443944f1a9710d"
+      },
+      "278_ai_assisted_content_without_losing_your_voice.md": {
+        "title": "624db113c3cd6f85",
+        "whatItIs": "1cc416d0df2b2029",
+        "keyConcepts": "3c72750327689ceb",
+        "exampleCode": "6b0b40f0e504f18a",
+        "whenToUse": "e7e09ff94b4d03d5",
+        "commonMistakes": "d5b29d596727a62d",
+        "furtherReading": "0f01657f1ebbc9d9"
+      },
+      "279_content_analytics_library_and_asset_management.md": {
+        "title": "466d92ff24ef66c2",
+        "whatItIs": "c1bb3fc6dbf2359b",
+        "keyConcepts": "b509c28f827b02f7",
+        "exampleCode": "c10123e0bf121d29",
+        "whenToUse": "8d134d6a1e88d99c",
+        "commonMistakes": "efa1129a430eadec",
+        "furtherReading": "e84ccbb56f4b95c4"
+      },
+      "280_seo_and_aeo_as_one_visibility_system.md": {
+        "title": "b9527e106612ece2",
+        "whatItIs": "250de29875b8c22c",
+        "keyConcepts": "1fc3c4eb4ac625ea",
+        "exampleCode": "4143f931f842c5d1",
+        "whenToUse": "c080860f682d55ba",
+        "commonMistakes": "dabc07e5ce7bb11e",
+        "furtherReading": "46ff71e9960c8275"
+      },
+      "281_search_intent_topic_clusters_and_keyword_query_mapping.md": {
+        "title": "af28a8d6a8f1efaf",
+        "whatItIs": "8f62d1ca983ee45f",
+        "keyConcepts": "28ff4e65207c61e5",
+        "exampleCode": "bd8a165b91378410",
+        "whenToUse": "ba17744896f5f32d",
+        "commonMistakes": "3d87c555ffe20d3c",
+        "furtherReading": "9efb662e6e196556"
+      },
+      "282_technical_seo_foundations_crawl_render_index.md": {
+        "title": "b424a1b0cdd0b015",
+        "whatItIs": "92af398f5b74ce1f",
+        "keyConcepts": "816defd451cb0fc8",
+        "exampleCode": "883352033224fbcd",
+        "whenToUse": "3f4258828ffe7a34",
+        "commonMistakes": "27bd0d8e81a066f3",
+        "furtherReading": "fcd2f9a0e456b13f"
+      },
+      "283_metadata_titles_descriptions_and_canonical_url_strategy.md": {
+        "title": "19a32a42abff167d",
+        "whatItIs": "12d0692782d66868",
+        "keyConcepts": "b7205f0387cd0e11",
+        "exampleCode": "43ab1a26326adc11",
+        "whenToUse": "52e09e00c62205ab",
+        "commonMistakes": "ab7e0427003fcfec",
+        "furtherReading": "145c0dbe7e363482"
+      },
+      "284_robots_snippet_controls_and_structured_data.md": {
+        "title": "f522fdfd6c04fbf4",
+        "whatItIs": "77130c9db1a5fca0",
+        "keyConcepts": "cb096f38cf85021b",
+        "exampleCode": "5641e5df1bdc6bf9",
+        "whenToUse": "5a1a20557304d0f7",
+        "commonMistakes": "ace8390f8dd1c854",
+        "furtherReading": "43f83c8c4d463b6d"
+      },
+      "285_ai_search_and_answer_engine_optimization.md": {
+        "title": "2ec0c992e28c955e",
+        "whatItIs": "2b246c0acffe9c6e",
+        "keyConcepts": "cf91e5ae25be92ba",
+        "exampleCode": "20dd393da5317568",
+        "whenToUse": "d7f084d8f28cac02",
+        "commonMistakes": "b0212a5e30bbbf91",
+        "furtherReading": "70474787fe768d21"
+      },
+      "286_entity_clarity_and_eeat_trust_signals.md": {
+        "title": "92bc246a58bc6b34",
+        "whatItIs": "c109c41ef5f3593a",
+        "keyConcepts": "e0bd196535c4be3e",
+        "exampleCode": "9b11305c57ea1a3c",
+        "whenToUse": "fcceeefc3238292b",
+        "commonMistakes": "7f05b3c4edacefcd",
+        "furtherReading": "f2a69a85ddfad5a4"
+      },
+      "287_content_briefs_page_templates_and_blog_seo.md": {
+        "title": "3b73a90bf15537ee",
+        "whatItIs": "8636223599906bda",
+        "keyConcepts": "95f473301d71da9a",
+        "exampleCode": "cceeaecd1a480663",
+        "whenToUse": "76f2405c0474b674",
+        "commonMistakes": "b3f4c135e4954a71",
+        "furtherReading": "9a729ae82e2eb7e1"
+      },
+      "288_landing_page_local_and_service_seo.md": {
+        "title": "e57a351eb3a17f08",
+        "whatItIs": "319ce27ba6e28c68",
+        "keyConcepts": "e2bd9a3f4d381ba7",
+        "exampleCode": "aa25f2adbb3d420a",
+        "whenToUse": "ec0e99f593e4dfcc",
+        "commonMistakes": "cb26486c35cb072a",
+        "furtherReading": "302e342c1623b147"
+      },
+      "289_internal_linking_information_architecture_and_rich_media_seo.md": {
+        "title": "037ee5047364c883",
+        "whatItIs": "d78b604e7b829b02",
+        "keyConcepts": "12c005deeb5372a5",
+        "exampleCode": "0990e66050a7ba26",
+        "whenToUse": "b70a3d70b2b438a1",
+        "commonMistakes": "f706f21a6e82e527",
+        "furtherReading": "60068d88040332d4"
+      },
+      "290_content_operations_at_scale_programmatic_seo_refresh_and_search_console_review.md": {
+        "title": "ce41d366dc3a4c6a",
+        "whatItIs": "e8f1214ef95176e5",
+        "keyConcepts": "e01cdc32b5a9ec6e",
+        "exampleCode": "0fbeaeacafa29f3f",
+        "whenToUse": "63668f56270f7303",
+        "commonMistakes": "262b13b8a4f29031",
+        "furtherReading": "74d19e8d8ff78113"
+      },
+      "291_seo_qa_and_launch_checklist.md": {
+        "title": "a12653caf4073661",
+        "whatItIs": "6b09fc996fed3174",
+        "keyConcepts": "6e3c912c05e11168",
+        "exampleCode": "dfd838c307f9ab91",
+        "whenToUse": "92794dbcbd6d770b",
+        "commonMistakes": "d1a28ce2b3bd4b87",
+        "furtherReading": "987830b1047eaa26"
+      },
+      "292_linkedin_authority_operating_system_pillars_and_weekly_cadence.md": {
+        "title": "de0d462fd7ea0dc9",
+        "whatItIs": "cdeb878e5684469c",
+        "keyConcepts": "664b4d8377271691",
+        "exampleCode": "ded2bcd2d97cc674",
+        "whenToUse": "bab7ba51c3ee429f",
+        "commonMistakes": "ad9e656141dc9943",
+        "furtherReading": "47002690e15d325f"
+      },
+      "293_linkedin_profile_positioning_headline_and_about_section.md": {
+        "title": "f1b1cc1fc5f3066a",
+        "whatItIs": "5edd0e44784a9dde",
+        "keyConcepts": "818a40630de165ba",
+        "exampleCode": "d3f61460b5f21f10",
+        "whenToUse": "dd3ee35ab8c18486",
+        "commonMistakes": "a9dfce3410944fe0",
+        "furtherReading": "380348761c4d2a63"
+      },
+      "294_featured_section_proof_assets_and_credibility_signals.md": {
+        "title": "2d9331898591d014",
+        "whatItIs": "bdb7dcd90c06df25",
+        "keyConcepts": "7aabc61d5c2e5dca",
+        "exampleCode": "a680bbed2b81aeaf",
+        "whenToUse": "b54500f136c50f39",
+        "commonMistakes": "c23bb2f9905e8790",
+        "furtherReading": "233696e49ded85a3"
+      },
+      "295_technical_post_frameworks_and_case_study_posts.md": {
+        "title": "b98cab9afcedc910",
+        "whatItIs": "1584f5747ce46fe3",
+        "keyConcepts": "34ff13a9c9dcc275",
+        "exampleCode": "486161500ab87e9e",
+        "whenToUse": "214439d60fb3740a",
+        "commonMistakes": "192ca3e6a1b754c9",
+        "furtherReading": "0c8fe8767f7e838a"
+      },
+      "296_problem_solution_founder_story_carousel_and_video_posts.md": {
+        "title": "afc7e265cf1fd648",
+        "whatItIs": "2459cbb936a3aa97",
+        "keyConcepts": "06efffa46d0d94ef",
+        "exampleCode": "857a2edc283c3d6a",
+        "whenToUse": "d4b9f07ad9237729",
+        "commonMistakes": "f9d2c91e83c2edb4",
+        "furtherReading": "2c4f0e1eacfc3411"
+      },
+      "297_comment_strategy_dms_and_networking.md": {
+        "title": "a4bfbc35ace59fb5",
+        "whatItIs": "b532035152f1eb41",
+        "keyConcepts": "a4148c9c3ddd70bc",
+        "exampleCode": "4511b06ba49716ab",
+        "whenToUse": "901cd4eb76bafbc5",
+        "commonMistakes": "b625385aa269f36c",
+        "furtherReading": "a6314a3d7bcc6d64"
+      },
+      "298_soft_pitching_repurposing_and_analytics_on_linkedin.md": {
+        "title": "92d26bad4f3cd118",
+        "whatItIs": "0edb66a59257b1e8",
+        "keyConcepts": "417508bcf7df7c4b",
+        "exampleCode": "f438b02f6b6b7367",
+        "whenToUse": "dc2b460220245358",
+        "commonMistakes": "81669df610d1cd31",
+        "furtherReading": "b124e54fdeee56b9"
+      },
+      "299_email_list_strategy_audience_consent_and_opt_in_design.md": {
+        "title": "88bd6fb31c9d8e8b",
+        "whatItIs": "8575afe05807febd",
+        "keyConcepts": "c6409139f6af0e25",
+        "exampleCode": "9d2a3cdd2a108ba1",
+        "whenToUse": "9b17adb5e1e68bac",
+        "commonMistakes": "fb46eb0a6a888694",
+        "furtherReading": "3c437da5e668209c"
+      },
+      "300_newsletter_system_architecture_and_editorial_strategy.md": {
+        "title": "bc46b5d8ee4032c6",
+        "whatItIs": "6de75c64364e9262",
+        "keyConcepts": "c26bb7c565f1799c",
+        "exampleCode": "95ab90b60867d2cc",
+        "whenToUse": "3a1a091df3ca9e88",
+        "commonMistakes": "7b4594fc9ff075d8",
+        "furtherReading": "7b68d8adbd1c9bc7"
+      },
+      "301_welcome_and_nurture_sequence_design.md": {
+        "title": "56c1c415b486bb55",
+        "whatItIs": "6eb02c8405231c08",
+        "keyConcepts": "3eded2f7b490c53f",
+        "exampleCode": "daad7b61b0210250",
+        "whenToUse": "eea9e6cda5a55eb3",
+        "commonMistakes": "db06a9d031e5c234",
+        "furtherReading": "ec267020e9d77f92"
+      },
+      "302_email_copywriting_voice_subject_lines_and_ctas.md": {
+        "title": "f39e6de9ec0cec21",
+        "whatItIs": "e2616f605bac9868",
+        "keyConcepts": "21b93578c3516ae2",
+        "exampleCode": "890802323e6a8da9",
+        "whenToUse": "df0db600f596dc60",
+        "commonMistakes": "e69200c87f8bdc9f",
+        "furtherReading": "0f75a669315f37c8"
+      },
+      "303_proof_emails_and_ready_to_use_templates.md": {
+        "title": "79e038a8e0fe7548",
+        "whatItIs": "ddf7f46bb464584b",
+        "keyConcepts": "f6df08189d817888",
+        "exampleCode": "36850980b091bf16",
+        "whenToUse": "b82ff54232c709e0",
+        "commonMistakes": "ced5d7bcb36b7091",
+        "furtherReading": "7997f60dffcef495"
+      },
+      "304_segmentation_crm_automation_and_sales_handoff.md": {
+        "title": "203c6e093e8335ec",
+        "whatItIs": "3a33bdfc83d85eba",
+        "keyConcepts": "f5007b99b3fbaba4",
+        "exampleCode": "59e00e0be27efc13",
+        "whenToUse": "bf6c1f971b3408a7",
+        "commonMistakes": "d9a0506bcb742682",
+        "furtherReading": "88f5d0e3e4fe746a"
+      },
+      "305_deliverability_list_hygiene_reengagement_and_metrics.md": {
+        "title": "4bb34a19542302ff",
+        "whatItIs": "2d50ad92d947d566",
+        "keyConcepts": "0039daab38e92794",
+        "exampleCode": "f8dce83f703bc4e6",
+        "whenToUse": "f3ea03e4e56e3769",
+        "commonMistakes": "5fc75327f179f684",
+        "furtherReading": "c65a996f3ca96a12"
+      },
+      "306_case_study_structure_narrative_arc_and_operating_system.md": {
+        "title": "27484b274f628cc7",
+        "whatItIs": "de7581fe1070ec4d",
+        "keyConcepts": "e46e4507b04aad2c",
+        "exampleCode": "6b9c2f020b52c826",
+        "whenToUse": "cfd1664a9a07126d",
+        "commonMistakes": "ddce254a350d1634",
+        "furtherReading": "0f8aa1923ccd5b53"
+      },
+      "307_confidentiality_anonymization_and_technical_depth_calibration.md": {
+        "title": "f3febe643634420c",
+        "whatItIs": "0006549ef05593c5",
+        "keyConcepts": "9c9b0f03a6e0c4d4",
+        "exampleCode": "238632402c04cfcd",
+        "whenToUse": "56b23ae1b0248cdd",
+        "commonMistakes": "34fcf7e6e96fafe0",
+        "furtherReading": "fc71fcd3f70d9545"
+      },
+      "308_case_study_metrics_outcomes_and_evidence_levels.md": {
+        "title": "6151fe1d8f6377f0",
+        "whatItIs": "58ca01f0f0fffc32",
+        "keyConcepts": "839ef6ba6b3d5e22",
+        "exampleCode": "59a6f74b85c7bf0c",
+        "whenToUse": "93b35773a60ba7cc",
+        "commonMistakes": "68e510c2c4ca089c",
+        "furtherReading": "4b7b313b85edb162"
+      },
+      "309_project_selection_and_portfolio_auditing.md": {
+        "title": "b2424ebc7bc1f011",
+        "whatItIs": "f77ed8a3d6d69be1",
+        "keyConcepts": "8419543b398fbc1c",
+        "exampleCode": "163ea2beda1b7ccc",
+        "whenToUse": "596788935638a513",
+        "commonMistakes": "a25c07e0751b8ac2",
+        "furtherReading": "e8d8ffa25ace8fd3"
+      },
+      "310_visual_proof_screenshots_and_demo_videos.md": {
+        "title": "061b6436eca94cb0",
+        "whatItIs": "9efbe4cb9372aa29",
+        "keyConcepts": "4ff7c72839e2733b",
+        "exampleCode": "007925ee3fe19642",
+        "whenToUse": "fbbf06c9d30b9346",
+        "commonMistakes": "0518b7f09005b543",
+        "furtherReading": "d31903fb9610036c"
+      },
+      "311_testimonials_and_github_as_proof.md": {
+        "title": "bf62c73994f1fb8d",
+        "whatItIs": "8761010adb88972c",
+        "keyConcepts": "e3808aa36081f2ad",
+        "exampleCode": "c80739ab202ec982",
+        "whenToUse": "d34f327adee660c4",
+        "commonMistakes": "a4070de475e95d4c",
+        "furtherReading": "1316d4947b351a8c"
+      },
+      "312_portfolio_page_structure_and_seo.md": {
+        "title": "3b18d1d749bc2b03",
+        "whatItIs": "614ca96e6e6ff4cd",
+        "keyConcepts": "f070447ab0f090fb",
+        "exampleCode": "7703c5d6b985b9bf",
+        "whenToUse": "243dd88354ca25ce",
+        "commonMistakes": "ff47d67c4142a65f",
+        "furtherReading": "2376c41c3252c5aa"
+      },
+      "313_proof_asset_repurposing_one_case_study_many_assets.md": {
+        "title": "fdffe184d7ac2f36",
+        "whatItIs": "3a96a0679eb76ca8",
+        "keyConcepts": "0018c7c070af537c",
+        "exampleCode": "bf2af80758b8c71d",
+        "whenToUse": "4a7be962d6e46e71",
+        "commonMistakes": "79efa92c9dbe3128",
+        "furtherReading": "ec3b21bdae8304c5"
+      }
+    },
+    "contracts-pricing-legal": {
+      "201_proposal_readiness.md": {
+        "title": "b21739cd932abc9d",
+        "whatItIs": "a4dd98c6fa996f14",
+        "keyConcepts": "4f16ab733b9e09b8",
+        "exampleCode": "f2c48ebb48c2dde9",
+        "whenToUse": "fa7e4df16178f2b3",
+        "commonMistakes": "0db768c55e41926e",
+        "furtherReading": "16bd3e966736bac9"
+      },
+      "202_pricing_models.md": {
+        "title": "7aa9f413dca9cfc9",
+        "whatItIs": "66015ff72fb5d82b",
+        "keyConcepts": "d7f7469b2144feb3",
+        "exampleCode": "171083aa43df7b59",
+        "whenToUse": "22415c5a31261357",
+        "commonMistakes": "67ac48c8c5180aa7",
+        "furtherReading": "4b960843add591d2"
+      },
+      "203_scope_to_price_mapping.md": {
+        "title": "fcbc503f9bacedd6",
+        "whatItIs": "703fa54bd89fc749",
+        "keyConcepts": "65846d98599a20bd",
+        "exampleCode": "078182d3f011dbb3",
+        "whenToUse": "7ac1975e32331487",
+        "commonMistakes": "a71b796f9c9d04c6",
+        "furtherReading": "a692f5a43ae4a895"
+      },
+      "204_fixed_price_projects.md": {
+        "title": "79c616a45794e215",
+        "whatItIs": "1df78029ac11f23b",
+        "keyConcepts": "25d62602ab613006",
+        "exampleCode": "97a37f9c92c4c0e1",
+        "whenToUse": "be2b771361e460bc",
+        "commonMistakes": "ae02bbb65205e4ca",
+        "furtherReading": "0dec3708d187a828"
+      },
+      "205_hourly_and_day_rate_engagements.md": {
+        "title": "c1fdf46e4118f7af",
+        "whatItIs": "4dc6f5dbae741540",
+        "keyConcepts": "deea3ca84577fda3",
+        "exampleCode": "4f83f812dd782e89",
+        "whenToUse": "8d11a373e87ecb72",
+        "commonMistakes": "9eb7cf7a85f244ef",
+        "furtherReading": "66d706b54258a219"
+      },
+      "206_pricing_positioning.md": {
+        "title": "cf951ecb86e0212f",
+        "whatItIs": "84583e9c53df67b5",
+        "keyConcepts": "d47294017ae0b161",
+        "exampleCode": "79c895300cab5f63",
+        "whenToUse": "e7b43adb4e1c81d4",
+        "commonMistakes": "6683d42af374036a",
+        "furtherReading": "759aa2fdaf0f3cfe"
+      },
+      "207_pricing_psychology.md": {
+        "title": "b1c9578609b87f07",
+        "whatItIs": "313964c2d665c28a",
+        "keyConcepts": "718640ef853d0b2f",
+        "exampleCode": "ee0d86e51c616a2e",
+        "whenToUse": "ce7bffbef8f20c10",
+        "commonMistakes": "02ff31e01866104f",
+        "furtherReading": "d89bfaf73433487b"
+      },
+      "208_negotiating_price_pressure.md": {
+        "title": "0756630e68e11f01",
+        "whatItIs": "a4119d2a4243b085",
+        "keyConcepts": "53ee118c16767f5a",
+        "exampleCode": "8988103b0dc211d0",
+        "whenToUse": "8b1f0163ed9d1377",
+        "commonMistakes": "44256d8597ddc235",
+        "furtherReading": "0c89e6f6210dac5e"
+      },
+      "209_proposal_structure_and_follow_up.md": {
+        "title": "8f764858d5df839a",
+        "whatItIs": "3243af1c8194a4b1",
+        "keyConcepts": "9a91a71303ea00b0",
+        "exampleCode": "53a0229579141368",
+        "whenToUse": "a9d416719bf26cbd",
+        "commonMistakes": "9abf5c552cb43381",
+        "furtherReading": "670682c754eaff2c"
+      },
+      "210_scope_definition_and_boundaries.md": {
+        "title": "734d5f3729751a55",
+        "whatItIs": "269f2d05bcea3614",
+        "keyConcepts": "74e09879a96db4ac",
+        "exampleCode": "d58468f3b5d7731d",
+        "whenToUse": "99fa6b89c3ad78c4",
+        "commonMistakes": "27d8a009a68829fd",
+        "furtherReading": "7d290815490648e5"
+      },
+      "211_statement_of_work_structure.md": {
+        "title": "6834a798761aa86c",
+        "whatItIs": "5ea722fc2a707488",
+        "keyConcepts": "bab8df8ea79a0489",
+        "exampleCode": "4d8991e86f107eec",
+        "whenToUse": "528b6dd1b0d79f02",
+        "commonMistakes": "7cf764f29dc8decb",
+        "furtherReading": "c2fc4abd98ef158a"
+      },
+      "212_assumptions_and_dependencies.md": {
+        "title": "7d3f090d23e86c70",
+        "whatItIs": "b7fd0b5a385d1e51",
+        "keyConcepts": "9a2b0414a653ffe5",
+        "exampleCode": "2134c081a059d8e0",
+        "whenToUse": "7797de38171a9bad",
+        "commonMistakes": "e7adf4e7a7056b4d",
+        "furtherReading": "634c2f134b767e23"
+      },
+      "213_deliverables_and_acceptance_criteria.md": {
+        "title": "1abb302aa0b9e140",
+        "whatItIs": "e63fa3f9eb5f7845",
+        "keyConcepts": "159094608c6eb2be",
+        "exampleCode": "38faadab849c4154",
+        "whenToUse": "7cd0cc95f5f0eef0",
+        "commonMistakes": "3e92c4ab39f4ec47",
+        "furtherReading": "d04810e0553d3ab1"
+      },
+      "214_change_request_control.md": {
+        "title": "3c4400bd3910ddd6",
+        "whatItIs": "f063cbf055e6497e",
+        "keyConcepts": "dca15af1e1dd6e16",
+        "exampleCode": "0ee2b6a21a04a335",
+        "whenToUse": "e0ca740cc4f2af3b",
+        "commonMistakes": "c5d9acb3af9e2723",
+        "furtherReading": "142e3c407379be58"
+      },
+      "215_revision_policy.md": {
+        "title": "15a078097cde4c71",
+        "whatItIs": "b1309a8b2958b307",
+        "keyConcepts": "679d7d4264c73e87",
+        "exampleCode": "5d94cb5f6b4dac9b",
+        "whenToUse": "7086e5871313bde9",
+        "commonMistakes": "cf42109e610d3680",
+        "furtherReading": "2554289dfcefeee4"
+      },
+      "216_payment_gates_and_milestone_enforcement.md": {
+        "title": "c078e1c418d36fd2",
+        "whatItIs": "8a70e7a0c231525c",
+        "keyConcepts": "52f0bf83995ab977",
+        "exampleCode": "e678d3a2c65d371d",
+        "whenToUse": "1495ab3b040758c9",
+        "commonMistakes": "44ea09da1222ec5c",
+        "furtherReading": "37038b616048181d"
+      },
+      "217_ip_assignment_and_source_code_ownership.md": {
+        "title": "a6833440b74ee439",
+        "whatItIs": "4f7b47b0b943ec4b",
+        "keyConcepts": "332c534e099170ac",
+        "exampleCode": "f83a3e00a3d25065",
+        "whenToUse": "a08ab493fae788fd",
+        "commonMistakes": "c7c50448d30b4820",
+        "furtherReading": "734b04e7447faf54"
+      },
+      "218_confidentiality_and_client_data_handling.md": {
+        "title": "06174f43161d5156",
+        "whatItIs": "cabd4cbc6cd5ac76",
+        "keyConcepts": "95c2ad3395fb26f8",
+        "exampleCode": "cef9b6dbcca0a583",
+        "whenToUse": "8fcd8fe829ff3ea5",
+        "commonMistakes": "94db0681cdbcbcda",
+        "furtherReading": "cf6d8da4236c08ae"
+      },
+      "219_ndas_when_and_how_to_use_them.md": {
+        "title": "426da688f247ca97",
+        "whatItIs": "6c095be1e0d82fef",
+        "keyConcepts": "e2b4ad3923bced42",
+        "exampleCode": "db367b8260be9791",
+        "whenToUse": "b7168e20699d1067",
+        "commonMistakes": "3760b700c9f59fc3",
+        "furtherReading": "7f47616b882979e2"
+      },
+      "220_third_party_services_and_license_risk.md": {
+        "title": "f5bdad3b1f027e3f",
+        "whatItIs": "18d2182c72dcbfd7",
+        "keyConcepts": "11f68be7ce4d3097",
+        "exampleCode": "77eabce4cedd432b",
+        "whenToUse": "a0099828d564cf81",
+        "commonMistakes": "1406e775076e96bb",
+        "furtherReading": "397feff2c95ab6e6"
+      },
+      "221_client_responsibilities_and_decision_maker_rule.md": {
+        "title": "2b2d7ee7ac5634ed",
+        "whatItIs": "c03a2efcd62d9668",
+        "keyConcepts": "2570e60d3b7090e0",
+        "exampleCode": "db537eba8f8491a3",
+        "whenToUse": "6310ffc3a7b8cff3",
+        "commonMistakes": "6e067ad1ff8a4725",
+        "furtherReading": "7bb48325371ca482"
+      },
+      "222_communication_and_approval_protocols.md": {
+        "title": "7634b21cc31d5c9a",
+        "whatItIs": "5d95fad872e825ed",
+        "keyConcepts": "3e9680f389d971c0",
+        "exampleCode": "d8bfa7315c79f0fc",
+        "whenToUse": "dd623ddb66a247e8",
+        "commonMistakes": "dad14cf308a69ad8",
+        "furtherReading": "ef3032fe7457bc78"
+      },
+      "223_timeline_commitments_and_delay_management.md": {
+        "title": "94db411a338fbe45",
+        "whatItIs": "2eafa5bbeb247c6d",
+        "keyConcepts": "a555f709ddbfe497",
+        "exampleCode": "ca000e17d060ae78",
+        "whenToUse": "c4c91754cd53f9df",
+        "commonMistakes": "803979c5621e0f72",
+        "furtherReading": "3357ee9c4d07fcc4"
+      },
+      "224_warranty_bugfix_and_support_boundaries.md": {
+        "title": "13a2d3580f72bc34",
+        "whatItIs": "86f5f6d697e914db",
+        "keyConcepts": "ee64dbae7f744c8b",
+        "exampleCode": "1511a4ef8f1de3a3",
+        "whenToUse": "1f1c2962f12e1a76",
+        "commonMistakes": "bbad9247118c2a7d",
+        "furtherReading": "3997ac0431a3dbeb"
+      },
+      "225_cancellation_and_termination_clauses.md": {
+        "title": "54ef77685e448d62",
+        "whatItIs": "520b678c061619d8",
+        "keyConcepts": "93c69faebf9dbc63",
+        "exampleCode": "429b972db01c4f69",
+        "whenToUse": "6a504175c69f2bf0",
+        "commonMistakes": "bec009ab4b88159b",
+        "furtherReading": "2df3c5ab6f5cad32"
+      },
+      "226_detecting_and_responding_to_scope_creep.md": {
+        "title": "329a200d699b0c8d",
+        "whatItIs": "8c21fbb01b43f805",
+        "keyConcepts": "8731274edefce4cf",
+        "exampleCode": "f0b3e6e26a97fa2b",
+        "whenToUse": "d6c592de78a1e616",
+        "commonMistakes": "76af6eec9172e7bb",
+        "furtherReading": "3a82220033b4e5f4"
+      },
+      "227_contract_risk_red_flags.md": {
+        "title": "2cea64ca2036b36f",
+        "whatItIs": "a8c00a430321821a",
+        "keyConcepts": "6b751e4b614a6be9",
+        "exampleCode": "669dfae5d8e97416",
+        "whenToUse": "b24ad2881b276780",
+        "commonMistakes": "bc22752082a2b570",
+        "furtherReading": "fc20d44dc57d5e78"
+      },
+      "228_handoff_from_scope_to_execution.md": {
+        "title": "dda3fe3de4d266bb",
+        "whatItIs": "6bd95dd0a9f6987a",
+        "keyConcepts": "cb582544f279fe97",
+        "exampleCode": "ad38665f336b5f38",
+        "whenToUse": "79aa7966230cec8f",
+        "commonMistakes": "132b7b6e698605bd",
+        "furtherReading": "8459fd52c0242799"
+      },
+      "229_contractor_agreements.md": {
+        "title": "8be472a815ce707c",
+        "whatItIs": "3472b52d1870dc45",
+        "keyConcepts": "0457150de2ea6d7b",
+        "exampleCode": "f3d099b7f6bf7741",
+        "whenToUse": "bf1b14f60bc0d048",
+        "commonMistakes": "1aac18958aca5672",
+        "furtherReading": "18d06c4ca32ebdc4"
+      },
+      "230_contractor_classification.md": {
+        "title": "cbd601764ade6ec4",
+        "whatItIs": "407a3a41f2274274",
+        "keyConcepts": "e43179160883dc29",
+        "exampleCode": "54970c92890004c6",
+        "whenToUse": "dc0e7ad0d3510d31",
+        "commonMistakes": "962db403334538ec",
+        "furtherReading": "1c6c2fa44a46e057"
+      },
+      "231_paying_contractors.md": {
+        "title": "f69e77bf026f080a",
+        "whatItIs": "38a6ea7b5f1d4839",
+        "keyConcepts": "7ee1a13e9f4c6de8",
+        "exampleCode": "141cad650f07d3cd",
+        "whenToUse": "24e01ad450c2a615",
+        "commonMistakes": "531c7381433bf02b",
+        "furtherReading": "7f15dd3554c08043"
+      },
+      "232_contractor_performance_and_offboarding.md": {
+        "title": "37a235f6cb5ae994",
+        "whatItIs": "f2a4f686098d42a2",
+        "keyConcepts": "59f22f4d66af1f75",
+        "exampleCode": "dcec893e3d298442",
+        "whenToUse": "0e8c5ccd271cc7c5",
+        "commonMistakes": "4453a2a68faa93fa",
+        "furtherReading": "bd5ad5aeffab9906"
+      },
+      "233_responding_to_client_disputes_and_legal_threats.md": {
+        "title": "9fe6bfb2362bebb6",
+        "whatItIs": "5a74be7e2b6a8d8c",
+        "keyConcepts": "e61f498ea30d991b",
+        "exampleCode": "822f52b33e2b5023",
+        "whenToUse": "fbcffd0f62be1a3e",
+        "commonMistakes": "49079132e622e436",
+        "furtherReading": "ed1b05207da28681"
+      }
+    },
+    "database-advanced": {
+      "41_postgresql_mvcc_vacuum_bloat_isolation.md": {
+        "title": "7d62acb374e200b7",
+        "whatItIs": "cddacd7f2e0b2c56",
+        "keyConcepts": "15097e6a0c41962c",
+        "exampleCode": "4c084ad5eac385ba",
+        "whenToUse": "736d2fc2e6f13222",
+        "commonMistakes": "579084f463a2cfb7",
+        "furtherReading": "56de0a24b75bc5f3"
+      },
+      "42_optimistic_vs_pessimistic_locking.md": {
+        "title": "98b922fc23771f39",
+        "whatItIs": "24e4b3e36c281a51",
+        "keyConcepts": "35a0f0729d77ed45",
+        "exampleCode": "863186a9d67fafc3",
+        "whenToUse": "2c3af954c75beaff",
+        "commonMistakes": "31a737963a8daea5",
+        "furtherReading": "3dca3a33df7ddc29"
+      },
+      "43_zero_downtime_database_migration.md": {
+        "title": "08f20a5d6bf010c9",
+        "whatItIs": "abf870d1217a1b84",
+        "keyConcepts": "239d768bb0216d57",
+        "exampleCode": "5697335b33a03145",
+        "whenToUse": "37a2193f4946abf9",
+        "commonMistakes": "e685e98dc69c77c4",
+        "furtherReading": "17a248c721f5385d"
+      },
+      "44_soft_delete_pattern_problems_alternatives.md": {
+        "title": "368eed3f6493dd39",
+        "whatItIs": "214a12d206f0ce87",
+        "keyConcepts": "2ed51199585270d5",
+        "exampleCode": "a5b4bddcf468a394",
+        "whenToUse": "fc5a63e79fcc3cde",
+        "commonMistakes": "270e8ff983671252",
+        "furtherReading": "5fed0c96a7d04eea"
+      },
+      "45_time_series_data_timescaledb_partitioning.md": {
+        "title": "f0a50b67c51883fc",
+        "whatItIs": "998859caa6c5bbe5",
+        "keyConcepts": "078802aa0fbaca72",
+        "exampleCode": "58873f600939b6ac",
+        "whenToUse": "21ebcf9760ba357c",
+        "commonMistakes": "ca723dc0a3193722",
+        "furtherReading": "d183e79c495507bd"
+      },
+      "46_full_text_search_postgres_tsvector_elasticsearch.md": {
+        "title": "012a518ae5669da5",
+        "whatItIs": "5834984935f81985",
+        "keyConcepts": "66277b32edf9db30",
+        "exampleCode": "7112c21e1839622e",
+        "whenToUse": "b73ec2588c7710bf",
+        "commonMistakes": "f20a26674209af0d",
+        "furtherReading": "ae007eaf2de65298"
+      },
+      "47_audit_log_design_application_level.md": {
+        "title": "d6e273048500c59a",
+        "whatItIs": "2ac218a2e416ebc0",
+        "keyConcepts": "4164e760bd6dc85b",
+        "exampleCode": "b3cb82553235eb1a",
+        "whenToUse": "83fc038733d63503",
+        "commonMistakes": "86f455749490976e",
+        "furtherReading": "3dafd1b5076de598"
+      },
+      "48_data_retention_gdpr_kvkk_deletion_flow.md": {
+        "title": "b9f3ab6cbffd5688",
+        "whatItIs": "c5604f300e86e9e6",
+        "keyConcepts": "c5b3ac9296168134",
+        "exampleCode": "154649a2cf3fac1c",
+        "whenToUse": "f34b57573d717f12",
+        "commonMistakes": "52272fe712f33801",
+        "furtherReading": "148e055fd3846a2c"
+      },
+      "49_backup_strategy_rto_rpo_restore_testing.md": {
+        "title": "a8f5deae2e31e0cd",
+        "whatItIs": "174608499e6c401e",
+        "keyConcepts": "5773658bcc5f1de0",
+        "exampleCode": "02402a9a7ca49cd5",
+        "whenToUse": "d49f831e8d8279ee",
+        "commonMistakes": "e7e58942239668f4",
+        "furtherReading": "7239d0de69ca6d37"
+      },
+      "50_multi_tenant_data_isolation_models.md": {
+        "title": "f58602b3dc6c14fb",
+        "whatItIs": "05dbbacfb28fbca7",
+        "keyConcepts": "c53d0987ea496804",
+        "exampleCode": "19d910c69cd8ecd2",
+        "whenToUse": "67519024dd2e1c3b",
+        "commonMistakes": "15b9bf7f25c1263e",
+        "furtherReading": "be91e3c42ecfb3b1"
+      },
+      "51_event_log_rehydration.md": {
+        "title": "f9c86a7668754888",
+        "whatItIs": "be60b3c43f48d3f4",
+        "keyConcepts": "e0b2179f6c6718e0",
+        "exampleCode": "a4b8504cd6d51041",
+        "whenToUse": "b948c38afd3aada4",
+        "commonMistakes": "ad88e473be19e562",
+        "furtherReading": "f4e26751da50ccf9"
+      },
+      "52_oltp_vs_olap.md": {
+        "title": "d880ed9fc5416e6a",
+        "whatItIs": "e28fc289cd833af3",
+        "keyConcepts": "fe178a07493b4595",
+        "exampleCode": "40d71412a38afec9",
+        "whenToUse": "3032ea5baa2b8523",
+        "commonMistakes": "f97b327286ab37c7",
+        "furtherReading": "f46733b45b2bc23c"
+      }
+    },
+    "database-caching-performance": {
+      "16_n_plus_1_query_problem.md": {
+        "title": "45d41106d839eb1e",
+        "whatItIs": "2796b805235bc4c1",
+        "keyConcepts": "d6495e81bffdd043",
+        "exampleCode": "8bec06bbc2ac6186",
+        "whenToUse": "82623b40ea9c72b3",
+        "commonMistakes": "ec523975f9f4e017",
+        "furtherReading": "e1ea244d358e91a9"
+      },
+      "17_database_index_strategy.md": {
+        "title": "a551e2011d930ae8",
+        "whatItIs": "3c62e92ad6bb18ea",
+        "keyConcepts": "c8c1f4bfa24aee0a",
+        "exampleCode": "7679ac50b9237c10",
+        "whenToUse": "c681da75fa0894ef",
+        "commonMistakes": "5e3691d2149ea4c6",
+        "furtherReading": "41e0d65f02cdc450"
+      },
+      "18_query_plan_analysis.md": {
+        "title": "4422a6d89ccfe51b",
+        "whatItIs": "a3890784365470d7",
+        "keyConcepts": "be6b96390888341a",
+        "exampleCode": "b1c7d8614d25cec0",
+        "whenToUse": "085f93aed425acb2",
+        "commonMistakes": "a7c179d851afcaf4",
+        "furtherReading": "e133561230acf114"
+      },
+      "19_connection_pool_tuning.md": {
+        "title": "1a63810dea4e7cd4",
+        "whatItIs": "08ed2010c5627a4c",
+        "keyConcepts": "5d9addfb406d57f0",
+        "exampleCode": "44b08b4b23bfea42",
+        "whenToUse": "ce7165ce4b83e08b",
+        "commonMistakes": "8b8b994ce7fcd211",
+        "furtherReading": "03cf5837bd674f42"
+      },
+      "20_redis_cache_strategies.md": {
+        "title": "4816350e2ec1814d",
+        "whatItIs": "ba2580f65571018f",
+        "keyConcepts": "51f3d0b88bd326ec",
+        "exampleCode": "2854bd95d437c562",
+        "whenToUse": "9275d4b49c7c0a4e",
+        "commonMistakes": "12a5cde600feeff8",
+        "furtherReading": "a8d3cabf22d6dca0"
+      },
+      "21_cdn_cache_strategy.md": {
+        "title": "00475f1f942fb875",
+        "whatItIs": "9100f6203aae37eb",
+        "keyConcepts": "ef6950e147d14b8d",
+        "exampleCode": "55605a137f3801e8",
+        "whenToUse": "8bbf13384b8edfdf",
+        "commonMistakes": "129a70e9e60bd366",
+        "furtherReading": "40f843629ffcd521"
+      }
+    },
+    "distributed-systems-api-design": {
+      "01_cap_theorem.md": {
+        "title": "6f027a5face35b5d",
+        "whatItIs": "ec9eb0c0631b308f",
+        "keyConcepts": "5e1ca6ba20a93a56",
+        "exampleCode": "be2eb051bac85a61",
+        "whenToUse": "5ecd0b4d4cabe0cb",
+        "commonMistakes": "9edb6a2eacf58358",
+        "furtherReading": "a14fb1a03d997ba9"
+      },
+      "02_event_sourcing_cqrs.md": {
+        "title": "4ac2da6e71710442",
+        "whatItIs": "e884847f2adcb95a",
+        "keyConcepts": "d1a97c7c476bb04d",
+        "exampleCode": "82a1a5d54e24139c",
+        "whenToUse": "b3c8c7a783916667",
+        "commonMistakes": "289fcf8e59e4c4db",
+        "furtherReading": "e1b3f2d38153e027"
+      },
+      "03_saga_pattern.md": {
+        "title": "f8ebbc04e935ea28",
+        "whatItIs": "40ffc27de6369ed5",
+        "keyConcepts": "b4178fb331c87536",
+        "exampleCode": "053fd295e99a422a",
+        "whenToUse": "8e1106509c97fabf",
+        "commonMistakes": "d00e96875972dcd0",
+        "furtherReading": "9521f2e9f8abc671"
+      },
+      "04_circuit_breaker_bulkhead_retry.md": {
+        "title": "a2f8585952eaff09",
+        "whatItIs": "d7e91285cd63ff84",
+        "keyConcepts": "b0ac17ec08399495",
+        "exampleCode": "7d28e6ffdea7f25e",
+        "whenToUse": "0a48110137c46a73",
+        "commonMistakes": "2d6236c24c4b768b",
+        "furtherReading": "c8edea3196d72f41"
+      },
+      "05_rate_limiting_strategies.md": {
+        "title": "5450888d7e309e02",
+        "whatItIs": "b4cb3bb3e9ac140c",
+        "keyConcepts": "59fef834748ea8f7",
+        "exampleCode": "455694f5f67df0a5",
+        "whenToUse": "66abbdf290a967c3",
+        "commonMistakes": "e1a42af03ec187d0",
+        "furtherReading": "24b43b8e6521c838"
+      },
+      "06_distributed_locking.md": {
+        "title": "030162e56f046621",
+        "whatItIs": "fa5ca38090aa5e02",
+        "keyConcepts": "d27eac5b5601d11f",
+        "exampleCode": "4b486e089e2b1fc7",
+        "whenToUse": "9200349a487eece9",
+        "commonMistakes": "ef691c8c739eaec7",
+        "furtherReading": "a3ced7ec006fbe05"
+      },
+      "07_idempotency_key_pattern.md": {
+        "title": "b46a8414d0dd0745",
+        "whatItIs": "bf161c95e33818e5",
+        "keyConcepts": "ea6205c2c04240c1",
+        "exampleCode": "9c2eedcd05abb6fb",
+        "whenToUse": "863b8fc5e3a2031c",
+        "commonMistakes": "f3d7d487d527b71e",
+        "furtherReading": "d47fc971f324afd2"
+      },
+      "08_webhook_security_retry.md": {
+        "title": "82af9bb32ada51f9",
+        "whatItIs": "4a1aea31db62ee33",
+        "keyConcepts": "44b75cc399c60576",
+        "exampleCode": "2d1148366cb13333",
+        "whenToUse": "e783a5f7637c4b08",
+        "commonMistakes": "86ff0b3c6c44833e",
+        "furtherReading": "01267a4e16c35232"
+      },
+      "09_api_versioning_strategies.md": {
+        "title": "0fbe604bfd4b9124",
+        "whatItIs": "02a707b98ce038f7",
+        "keyConcepts": "d7bee574ffa17ced",
+        "exampleCode": "df2d4e06238a3b4d",
+        "whenToUse": "84729fab83e063fc",
+        "commonMistakes": "888323068cf447d1",
+        "furtherReading": "185f3de67850103d"
+      },
+      "10_backward_forward_compatibility.md": {
+        "title": "4adaced350c3fb07",
+        "whatItIs": "a41b350582f39532",
+        "keyConcepts": "b06d47f694fc22a0",
+        "exampleCode": "144341d8733010f1",
+        "whenToUse": "1b78e54c049aa542",
+        "commonMistakes": "80c8bf884a69dcdf",
+        "furtherReading": "291f56dfeb6d0e9c"
+      },
+      "11_read_replica_routing.md": {
+        "title": "5909b748342da825",
+        "whatItIs": "f718a1502ac0921c",
+        "keyConcepts": "d837396e09efec8c",
+        "exampleCode": "292cefd8494bd8e0",
+        "whenToUse": "daee723de123353d",
+        "commonMistakes": "90373f57eb2b50de",
+        "furtherReading": "745c26f5874ec958"
+      },
+      "12_database_sharding_strategies.md": {
+        "title": "b5b990329163266c",
+        "whatItIs": "37db9180ef8bdeb7",
+        "keyConcepts": "78a208532dba5a96",
+        "exampleCode": "df8c339807afd9c5",
+        "whenToUse": "21129dc96348eabc",
+        "commonMistakes": "b259818281ec069d",
+        "furtherReading": "f1dfb3883caf3abd"
+      },
+      "13_cqrs_read_model_optimization.md": {
+        "title": "e9da185e2285ab23",
+        "whatItIs": "2e5c371110481873",
+        "keyConcepts": "77d6af8ac5b6010c",
+        "exampleCode": "4813eee6d5b31921",
+        "whenToUse": "85911af322b2bdea",
+        "commonMistakes": "e0b4015fd2f6755f",
+        "furtherReading": "614d0908fded128b"
+      },
+      "14_outbox_pattern.md": {
+        "title": "a05b66a947f0190c",
+        "whatItIs": "ab27327935d550b5",
+        "keyConcepts": "58f1fd30b0a5f2ae",
+        "exampleCode": "d243dd242820b8bb",
+        "whenToUse": "ece0ea4701305a88",
+        "commonMistakes": "2f00066805573106",
+        "furtherReading": "81a3fcf932af3ccf"
+      },
+      "15_two_phase_commit_eventual_consistency.md": {
+        "title": "5d9f9edaf4e453de",
+        "whatItIs": "559f5298d7f4dc97",
+        "keyConcepts": "5b99fbb4b26d6652",
+        "exampleCode": "ba011307a155b9ed",
+        "whenToUse": "26b3985faff0ed21",
+        "commonMistakes": "9a6abc05b1cc7208",
+        "furtherReading": "5595e64776a7946d"
+      },
+      "131_message_queues_101.md": {
+        "title": "df839942cb44ce58",
+        "whatItIs": "ef3ff22487d118db",
+        "keyConcepts": "09b72d426a3947a8",
+        "exampleCode": "5bb431a3f0d5e45e",
+        "whenToUse": "2980ca32207eb676",
+        "commonMistakes": "6a51aeb450697bcc",
+        "furtherReading": "ff74a006f8511c41"
+      },
+      "135_microservices_vs_monolith.md": {
+        "title": "117f95ec3d34ccfa",
+        "whatItIs": "f10b9bd948a8ce91",
+        "keyConcepts": "7ea878349ea2ca17",
+        "exampleCode": "1e8c712358fbc3f1",
+        "whenToUse": "5b18091bea5b501c",
+        "commonMistakes": "5099afae4158eeaa",
+        "furtherReading": "317aa4fe8cc354f3"
+      },
+      "136_api_gateway_bff.md": {
+        "title": "40fa83810443928e",
+        "whatItIs": "463bc34b7a59444f",
+        "keyConcepts": "602f9615e09ec2a7",
+        "exampleCode": "f680c9a9d70fefd6",
+        "whenToUse": "d13007293ee083f0",
+        "commonMistakes": "abf3048852812121",
+        "furtherReading": "212a083a553b2305"
+      }
+    },
+    "framework-deep-dives": {
+      "396_express_two_layer_architecture.md": {
+        "title": "1a88fa5ca9c616f1",
+        "whatItIs": "85f3163fae2bd4f2",
+        "keyConcepts": "bc17e77f2982e2ae",
+        "exampleCode": "5383471da21223b9",
+        "whenToUse": "1a16cfd67f3512bb",
+        "commonMistakes": "c395f733c402b730",
+        "furtherReading": "4820f3332c5fa313"
+      },
+      "397_express_middleware_pipeline_and_security.md": {
+        "title": "0c0961c0980d19be",
+        "whatItIs": "09e26e67e937b833",
+        "keyConcepts": "8f561119f7c8db3d",
+        "exampleCode": "9d4486a587563367",
+        "whenToUse": "4af5abb3e3695878",
+        "commonMistakes": "179ae38076fbf1b0",
+        "furtherReading": "efd07f7f7360fd95"
+      },
+      "398_express_curried_auth_middleware.md": {
+        "title": "ff4aed510e345352",
+        "whatItIs": "78f7042e345a5929",
+        "keyConcepts": "77b8305b6dbb9a6c",
+        "exampleCode": "b695ccdd14f59f55",
+        "whenToUse": "cb9b9033f68debbf",
+        "commonMistakes": "a16125ff8199f72e",
+        "furtherReading": "3eda22f60a97075e"
+      },
+      "399_express_centralized_error_handling.md": {
+        "title": "08f0d39b304ce291",
+        "whatItIs": "3a30a29299157ed8",
+        "keyConcepts": "c13d7c64f47c8567",
+        "exampleCode": "6d13a9aa68d318d8",
+        "whenToUse": "6bf0684f28bfe04f",
+        "commonMistakes": "af63283f6ea96d02",
+        "furtherReading": "c63dbc47d4cc7936"
+      },
+      "400_express_validation_and_response_conventions.md": {
+        "title": "b4661e24fb19d537",
+        "whatItIs": "3b8788ba2a599751",
+        "keyConcepts": "c5b4d5f0161722a1",
+        "exampleCode": "a0a99ea74b981755",
+        "whenToUse": "8be73535ad0d4550",
+        "commonMistakes": "ec05d8e184077964",
+        "furtherReading": "1bce3707b82cc125"
+      },
+      "401_express_realtime_sse_and_socketio.md": {
+        "title": "893863892be8dd96",
+        "whatItIs": "fab92e2100d0fa6c",
+        "keyConcepts": "794785ffad68c776",
+        "exampleCode": "8c40249d68778c21",
+        "whenToUse": "ae219617941e6568",
+        "commonMistakes": "fb0f4291ddcfe63a",
+        "furtherReading": "dcd3d1f38414f834"
+      },
+      "402_express_testing_with_jest_and_supertest.md": {
+        "title": "07a137cef2590867",
+        "whatItIs": "a961a3a54cc3709c",
+        "keyConcepts": "3014e35c21be6aad",
+        "exampleCode": "1cbdfdaf31ed7200",
+        "whenToUse": "ac77f29a55a23919",
+        "commonMistakes": "b13939d7894e3b93",
+        "furtherReading": "076efaa5e3ceebf9"
+      },
+      "403_springboot_three_layer_architecture.md": {
+        "title": "d985bc84095e78dc",
+        "whatItIs": "ab306c32ac1efaae",
+        "keyConcepts": "8db760c6942f65fb",
+        "exampleCode": "661ef4cf88a60823",
+        "whenToUse": "83e8b99cd63a55f0",
+        "commonMistakes": "b8c9b8add3fb5658",
+        "furtherReading": "c89c8a318224a1f1"
+      },
+      "404_springboot_response_entity_and_records.md": {
+        "title": "f83f4b9ee3cddd04",
+        "whatItIs": "68ab19932fc1ee8c",
+        "keyConcepts": "c1d6e7939fa0f663",
+        "exampleCode": "ac1fb782af5aefb5",
+        "whenToUse": "7328d2e0b9078a4e",
+        "commonMistakes": "8e4659c54b757a56",
+        "furtherReading": "994850384b72376e"
+      },
+      "405_springboot_bean_validation.md": {
+        "title": "ef05b0dfc14aa1e4",
+        "whatItIs": "b3361dee960a9c1e",
+        "keyConcepts": "d1c8ba10eb63ca0b",
+        "exampleCode": "2b7acb66d2b4f9fe",
+        "whenToUse": "2c1a889edcac75f5",
+        "commonMistakes": "532af8a61dc22968",
+        "furtherReading": "45445247b447da33"
+      },
+      "406_springboot_service_layer_transactional.md": {
+        "title": "35e0d1e16fbd6861",
+        "whatItIs": "47be3d8091609e83",
+        "keyConcepts": "997985735559bfe4",
+        "exampleCode": "d53671f8c9308788",
+        "whenToUse": "2235303153ff686b",
+        "commonMistakes": "1e02b08fea8d15c3",
+        "furtherReading": "dafed98cb555293e"
+      },
+      "407_springboot_security_filter_chain.md": {
+        "title": "14d6cee1282994f3",
+        "whatItIs": "38b1ab96842dfc22",
+        "keyConcepts": "960d2d689cd993d2",
+        "exampleCode": "c6a60b28deefa746",
+        "whenToUse": "9ea571ec9d1b6f98",
+        "commonMistakes": "b5ab768a952b1583",
+        "furtherReading": "55c1cd7a8eae8868"
+      },
+      "408_springboot_jwt_auth_integration.md": {
+        "title": "1b4ae7492e3db963",
+        "whatItIs": "9a17e49cf7ed75e5",
+        "keyConcepts": "778d9e600fc6835a",
+        "exampleCode": "f48ecbc8d6ccac3c",
+        "whenToUse": "f9c9ffc98259ddb7",
+        "commonMistakes": "072908ca5278c351",
+        "furtherReading": "6ef5a5c8311bf71f"
+      },
+      "409_springboot_controller_advice_error_handling.md": {
+        "title": "e9dcb566c0e0533d",
+        "whatItIs": "ebe76ccf8bda65b6",
+        "keyConcepts": "233e59a1d1de6d18",
+        "exampleCode": "1f03409b121ea22b",
+        "whenToUse": "21acb73cf83446e2",
+        "commonMistakes": "ceeb7a5e8d6ea730",
+        "furtherReading": "220fc612b1947b52"
+      },
+      "410_springboot_jpa_entities_and_n_plus_one.md": {
+        "title": "d299183d60c00d6b",
+        "whatItIs": "36bb3d0fcbb1f0eb",
+        "keyConcepts": "32a1e039909929d5",
+        "exampleCode": "2edf9d0abf36fc4f",
+        "whenToUse": "fa93c3c626590c1c",
+        "commonMistakes": "152531622efa49b2",
+        "furtherReading": "5ac4b32c65076cba"
+      },
+      "411_springboot_flyway_migrations.md": {
+        "title": "bb126b626cf2aa6a",
+        "whatItIs": "d63eed8ba76f5dfa",
+        "keyConcepts": "82a4a58a663a09d7",
+        "exampleCode": "0b811682aad90906",
+        "whenToUse": "64a8caa4850a29ce",
+        "commonMistakes": "8bda8e0b3f0430e1",
+        "furtherReading": "ec50b504968bf8f7"
+      },
+      "412_springboot_testing_mockmvc_testcontainers.md": {
+        "title": "b70ed547229c0f8e",
+        "whatItIs": "eed9b522e366b0f0",
+        "keyConcepts": "7359db0f74355536",
+        "exampleCode": "05c1003219638802",
+        "whenToUse": "e6c5a41c8620e629",
+        "commonMistakes": "3b95e0332314ca67",
+        "furtherReading": "10d6c1ee9d2babb0"
+      },
+      "413_reactnative_file_organization_and_banned_patterns.md": {
+        "title": "f2fb7b77f1084a80",
+        "whatItIs": "90a238b9217ee4f3",
+        "keyConcepts": "9a42e4603a9aca29",
+        "exampleCode": "ff53c9ff4b56a6dc",
+        "whenToUse": "f451f80ad971c268",
+        "commonMistakes": "a78467aa3ee5c1eb",
+        "furtherReading": "52ef1b0c9d0d6b13"
+      },
+      "414_reactnative_expo_router_navigation.md": {
+        "title": "fc9920127b2ddd8d",
+        "whatItIs": "ac7b9fdbb1fa103b",
+        "keyConcepts": "3ad0c0a9cdcb21ab",
+        "exampleCode": "4902e5e32ecb2cfa",
+        "whenToUse": "42abcd63fa97549a",
+        "commonMistakes": "331e4bb5afc366a7",
+        "furtherReading": "3d35a08140190597"
+      },
+      "415_reactnative_zustand_mmkv_state_management.md": {
+        "title": "2453c74fb799471f",
+        "whatItIs": "f1722b833c403181",
+        "keyConcepts": "4326f6bdacb8940b",
+        "exampleCode": "2a05c8dd1088167c",
+        "whenToUse": "5118734e6de1a90a",
+        "commonMistakes": "025a6345474001ab",
+        "furtherReading": "47a08a093e14809f"
+      },
+      "416_reactnative_data_fetching_and_offline.md": {
+        "title": "176e9f110965f3d2",
+        "whatItIs": "5dfa3b0745b1bed7",
+        "keyConcepts": "fec0350ed1db50d6",
+        "exampleCode": "02467d43c31db946",
+        "whenToUse": "a96dbab8076a98af",
+        "commonMistakes": "42c90e995bb04c49",
+        "furtherReading": "b33b832f0a0d1017"
+      },
+      "417_reactnative_expo_config_permissions_and_native_apis.md": {
+        "title": "a2c9ad113e5dbdc5",
+        "whatItIs": "221cf1f5444162a0",
+        "keyConcepts": "c5871e06c01f0897",
+        "exampleCode": "b0c54cd02c97e013",
+        "whenToUse": "31344c8de4742fa6",
+        "commonMistakes": "0fb661fe5cfce1e6",
+        "furtherReading": "ee53229cba21bcbd"
+      },
+      "418_reactnative_nativewind_styling_tokens_and_dark_mode.md": {
+        "title": "7473749c9033deaf",
+        "whatItIs": "b1d05268dfb5f05a",
+        "keyConcepts": "08689d1f5cae1cc5",
+        "exampleCode": "85c80adc0c74a28f",
+        "whenToUse": "a6c3cb15d6eda3cc",
+        "commonMistakes": "02298bc7c164adac",
+        "furtherReading": "36bf76ebcb3c0fde"
+      },
+      "419_reactnative_accessibility_and_feedback_patterns.md": {
+        "title": "a760348437b232e3",
+        "whatItIs": "8cc70c7a1c56a798",
+        "keyConcepts": "fef713d5956a8a1d",
+        "exampleCode": "6238e3c8376c2707",
+        "whenToUse": "023576eeef7a28f7",
+        "commonMistakes": "a747cf23783b2467",
+        "furtherReading": "672a40065b5b4c6c"
+      },
+      "420_reactnative_testing_jest_rntl_and_maestro.md": {
+        "title": "6461c7421ab4633e",
+        "whatItIs": "d268b5bf9aca657b",
+        "keyConcepts": "04ed7eb03f9f7a9a",
+        "exampleCode": "8800436ff962628e",
+        "whenToUse": "4e3ea50ce31ed6ab",
+        "commonMistakes": "94875ddfa5ca776f",
+        "furtherReading": "f1564c177e069dc6"
+      },
+      "421_electron_process_model_and_typed_ipc.md": {
+        "title": "b599a98707abf832",
+        "whatItIs": "2ca1c2d25312cb9d",
+        "keyConcepts": "e460be953ea03f93",
+        "exampleCode": "6e6809e06c1ea349",
+        "whenToUse": "4460af681a4ba2fa",
+        "commonMistakes": "995eb1dbee83b87f",
+        "furtherReading": "001207d13df9a583"
+      },
+      "422_electron_preload_and_context_isolation.md": {
+        "title": "9c9db065e3199ad3",
+        "whatItIs": "98ad9aec81cc4f57",
+        "keyConcepts": "bde7f232cbc2d3cd",
+        "exampleCode": "e2b85bc71d8fafaf",
+        "whenToUse": "7ed436d849ab1af3",
+        "commonMistakes": "56fb7e02e23b9139",
+        "furtherReading": "f466e0c3bc5f1015"
+      },
+      "423_electron_main_process_lifecycle_and_window_management.md": {
+        "title": "1bad777298cbe31b",
+        "whatItIs": "f0f00d61175ae2f7",
+        "keyConcepts": "21898bccd863ab14",
+        "exampleCode": "6df584fe5db1adb4",
+        "whenToUse": "85c2e36cee74f674",
+        "commonMistakes": "e4f4f2f357e4b0d9",
+        "furtherReading": "d3e782a2a2b3d8bf"
+      },
+      "424_electron_project_structure_and_vite_build_config.md": {
+        "title": "6ee39b11eabb17ef",
+        "whatItIs": "c975d227047c4367",
+        "keyConcepts": "c20b6746f19b9f60",
+        "exampleCode": "39ce039925cef0ca",
+        "whenToUse": "c433efd5af9f1cd9",
+        "commonMistakes": "ebe600102d913e5f",
+        "furtherReading": "db4a1380fbc96151"
+      },
+      "425_electron_renderer_react_and_kuireact_fork.md": {
+        "title": "01fe0a1499650a30",
+        "whatItIs": "2abb706f08a7b287",
+        "keyConcepts": "9e2ea173d1fcf6ad",
+        "exampleCode": "9886bde0a28ae579",
+        "whenToUse": "ec02f47e24269282",
+        "commonMistakes": "5e3844f2383cf308",
+        "furtherReading": "cbd145a81ee800de"
+      },
+      "426_electron_native_modules_and_os_integration.md": {
+        "title": "9481fa94ecae941e",
+        "whatItIs": "6b0f2b60cd33b261",
+        "keyConcepts": "ecdb544616156da9",
+        "exampleCode": "48b14c3571f06c91",
+        "whenToUse": "0270728a9e2887bf",
+        "commonMistakes": "1aeaf8778f0f8040",
+        "furtherReading": "6fd6bf15f2431e0c"
+      },
+      "427_electron_environment_secrets_and_auto_updates.md": {
+        "title": "912b8bf432ac8b8f",
+        "whatItIs": "5bd217b4f6405fcc",
+        "keyConcepts": "fee4cede70eddf96",
+        "exampleCode": "7f3193ee89ac38f4",
+        "whenToUse": "2deab26b1a6b89e8",
+        "commonMistakes": "5ccae69cda343846",
+        "furtherReading": "3c2d65a5a8efc868"
+      },
+      "428_electron_error_handling_crash_reporting_and_performance.md": {
+        "title": "2602bd18b83640a1",
+        "whatItIs": "7db4bbbd0a5fce33",
+        "keyConcepts": "78db7df83ef17d4e",
+        "exampleCode": "c8a8d7ca98c460c1",
+        "whenToUse": "511a19eca0820d53",
+        "commonMistakes": "0ca23e67e45c0057",
+        "furtherReading": "3af365d5354fda4c"
+      },
+      "429_electron_window_chrome_and_desktop_layout.md": {
+        "title": "cec2ef4bc19fd6fa",
+        "whatItIs": "32400ed9434ff6ce",
+        "keyConcepts": "9af1e3dfa847d434",
+        "exampleCode": "1d9bbb15f9c66fa6",
+        "whenToUse": "fbc5d50ed26099dd",
+        "commonMistakes": "86711af6e155a2db",
+        "furtherReading": "e7626f3bb4bd8f84"
+      },
+      "430_electron_menus_shortcuts_tray_and_dialogs.md": {
+        "title": "779b790098d93528",
+        "whatItIs": "968186092b3c7778",
+        "keyConcepts": "81c2d9cddbd2cb49",
+        "exampleCode": "c6b7d1e692f2f739",
+        "whenToUse": "3cdce68442fa8ab8",
+        "commonMistakes": "0e742f590f0e50c3",
+        "furtherReading": "23458bb356ed8f5a"
+      }
+    },
+    "frontend-performance-scaling": {
+      "22_http2_multiplexing.md": {
+        "title": "c9e1d2b4b29468ac",
+        "whatItIs": "c61a21bc10b7238e",
+        "keyConcepts": "2b2e8bfd3936496c",
+        "exampleCode": "bfd464218639d0e8",
+        "whenToUse": "7d127b5019294781",
+        "commonMistakes": "4a793064e408f0a2",
+        "furtherReading": "e2b0a0fc31a99941"
+      },
+      "23_react_server_components.md": {
+        "title": "5accfc574e9d8a9c",
+        "whatItIs": "24fdd4df18628c83",
+        "keyConcepts": "aa35eaf86a8b2734",
+        "exampleCode": "2fadebf669b7e832",
+        "whenToUse": "dcd352656c7a702b",
+        "commonMistakes": "7760a39ce887b3e1",
+        "furtherReading": "aa73ffa49231317c"
+      },
+      "24_bundle_size_optimization.md": {
+        "title": "61c08f113d4b3186",
+        "whatItIs": "75827f0710d0b51d",
+        "keyConcepts": "82c3904379a9862f",
+        "exampleCode": "7f620fa33aed255a",
+        "whenToUse": "3bfb89c57a8ae57e",
+        "commonMistakes": "fc8c2e04b86e5a94",
+        "furtherReading": "926a42ec9bfae2c8"
+      },
+      "25_web_vitals.md": {
+        "title": "db5e62c36fa0b886",
+        "whatItIs": "bcea5f263985fee1",
+        "keyConcepts": "785349f54245e29e",
+        "exampleCode": "69baed1d8408b541",
+        "whenToUse": "5e5e96fbddc0df4d",
+        "commonMistakes": "f516b57672a38568",
+        "furtherReading": "89560515cef2ea81"
+      },
+      "26_streaming_ssr_suspense.md": {
+        "title": "81ac8b819ffc6fa4",
+        "whatItIs": "0fed50aadb87b53b",
+        "keyConcepts": "e11477134bd1c4a4",
+        "exampleCode": "5414e7a40ad87570",
+        "whenToUse": "5479a1a2a7b11eed",
+        "commonMistakes": "1f7cad81c24ced65",
+        "furtherReading": "1fe22d45cb32bfa8"
+      },
+      "27_job_queue_bullmq.md": {
+        "title": "2c8a60feddabc80c",
+        "whatItIs": "00738e6b832a6e78",
+        "keyConcepts": "2272536cf148d74b",
+        "exampleCode": "a8958bdbb30f896d",
+        "whenToUse": "1854f3d45b7c27f5",
+        "commonMistakes": "66e30ad364d495db",
+        "furtherReading": "031b7ab611035405"
+      },
+      "28_horizontal_scaling_stateless_design.md": {
+        "title": "1eec62018cc775f2",
+        "whatItIs": "f99a4491297c0e8f",
+        "keyConcepts": "3b0763ade0a6c2ae",
+        "exampleCode": "904c0db4899e080d",
+        "whenToUse": "234dbed5f9da8c72",
+        "commonMistakes": "e2e4fb5545bc555c",
+        "furtherReading": "6086ab89820c4961"
+      },
+      "138_frontend_state_management.md": {
+        "title": "593b185c6132a274",
+        "whatItIs": "4a8cde7875ef0c9f",
+        "keyConcepts": "9791363bf4ad968b",
+        "exampleCode": "649439ed1a0db60f",
+        "whenToUse": "a4019a675a340b31",
+        "commonMistakes": "72394aa2fea1e695",
+        "furtherReading": "cf33432678b80224"
+      }
+    },
+    "fundamentals-tools": {
+      "119_http_fundamentals.md": {
+        "title": "e944ade09d45cb63",
+        "whatItIs": "f49ce81114915a8c",
+        "keyConcepts": "52816cc8b024d54d",
+        "exampleCode": "fd68a291533bc548",
+        "whenToUse": "9c488a6767fe9e52",
+        "commonMistakes": "6ca8415369269d9a",
+        "furtherReading": "ad4016c7336ffe41"
+      },
+      "120_git_fundamentals.md": {
+        "title": "e7526fc6fa697b18",
+        "whatItIs": "09aa8c40f5f0efa4",
+        "keyConcepts": "0d92ddb23404013a",
+        "exampleCode": "c62b0c66d590ea28",
+        "whenToUse": "c1d0b509709c27d4",
+        "commonMistakes": "4a9d1ff3f3338680",
+        "furtherReading": "7d0d34b69ca04833"
+      },
+      "121_sql_fundamentals.md": {
+        "title": "ac0ac1117407df97",
+        "whatItIs": "a775fa8fc6c11209",
+        "keyConcepts": "21200b80c9bcc75a",
+        "exampleCode": "23215ce431314b76",
+        "whenToUse": "e8f81ce6a867f29c",
+        "commonMistakes": "0bca42cc6d6d18b4",
+        "furtherReading": "cca29f6e81cd01f2"
+      },
+      "122_oop_data_structures_basics.md": {
+        "title": "864b58cdaeba6d06",
+        "whatItIs": "6bae842effcdb882",
+        "keyConcepts": "6c4c00ecf202a36f",
+        "exampleCode": "4f2e27ceec14e27c",
+        "whenToUse": "58f487e974b6a181",
+        "commonMistakes": "ee120924b7405038",
+        "furtherReading": "44c3328576a9d89d"
+      },
+      "123_debugging_fundamentals.md": {
+        "title": "b70711afcd2f5d89",
+        "whatItIs": "93c0ec4292c0c66b",
+        "keyConcepts": "c2835b524e5ac3d2",
+        "exampleCode": "cb5c82b9ed2961d9",
+        "whenToUse": "39c84e10bf5d8721",
+        "commonMistakes": "58d986783d70067a",
+        "furtherReading": "d3db5b9514ce980a"
+      },
+      "124_unit_testing_basics.md": {
+        "title": "9f6410c6e97fddd5",
+        "whatItIs": "2d90f851680ef414",
+        "keyConcepts": "0638dfe645a583ab",
+        "exampleCode": "08d06a646f3fdcaf",
+        "whenToUse": "a74b243e359e5a12",
+        "commonMistakes": "4833d92571642720",
+        "furtherReading": "bc33c4781f403530"
+      },
+      "125_rest_api_basics.md": {
+        "title": "fe7626e797a40f45",
+        "whatItIs": "799d18676b737d3d",
+        "keyConcepts": "dd9aa1f79b56ea5f",
+        "exampleCode": "cdaaa1a12679aa3b",
+        "whenToUse": "8202f8030e30a29f",
+        "commonMistakes": "8e5efce6d23f7cae",
+        "furtherReading": "d872117f751a9b0a"
+      },
+      "126_cli_dev_environment_basics.md": {
+        "title": "bbae16599eb4c9e9",
+        "whatItIs": "a2351ecdd9068d1d",
+        "keyConcepts": "d55da9fc651f74d8",
+        "exampleCode": "7aa84f0abd475c7d",
+        "whenToUse": "8bc3bcf63857afc4",
+        "commonMistakes": "1fb3de2e499e27b4",
+        "furtherReading": "a4e29d5d03b00200"
+      },
+      "127_auth_basics.md": {
+        "title": "0e5875da089e1579",
+        "whatItIs": "bb3b3a698a60e83f",
+        "keyConcepts": "64a29aed620706da",
+        "exampleCode": "8e6a13eb68c73a49",
+        "whenToUse": "a89681133a52a45b",
+        "commonMistakes": "793cf4f863eb042c",
+        "furtherReading": "8e11b72d51ecef0e"
+      },
+      "128_clean_code_basics.md": {
+        "title": "0e5ac38f5fee117f",
+        "whatItIs": "9f255fd696fda656",
+        "keyConcepts": "597e4f3fbe90bc6f",
+        "exampleCode": "bff50463fba1cae1",
+        "whenToUse": "00401e52ef8928f5",
+        "commonMistakes": "93fa70858287850a",
+        "furtherReading": "848f289024577945"
+      },
+      "133_networking_fundamentals.md": {
+        "title": "17b74b486a0fb6e0",
+        "whatItIs": "7a51d949522c24a1",
+        "keyConcepts": "67ec933af55467e8",
+        "exampleCode": "85b82c54b85c0528",
+        "whenToUse": "e9a77116c8bdac1e",
+        "commonMistakes": "1127fd7699d07aed",
+        "furtherReading": "db4dcd57b0f16893"
+      },
+      "139_git_internals_advanced_workflows.md": {
+        "title": "e22e0cc07a6442a7",
+        "whatItIs": "21c92aa3816768ee",
+        "keyConcepts": "56d7ea68808c5d96",
+        "exampleCode": "2bf17ef99100f027",
+        "whenToUse": "121ce0afd02d8168",
+        "commonMistakes": "7bf2f6929740b3b0",
+        "furtherReading": "b5bfbf7d7af2ee9f"
+      }
+    },
+    "observability-deployment": {
+      "53_opentelemetry.md": {
+        "title": "e24afca9172a878a",
+        "whatItIs": "202f10615e7885d6",
+        "keyConcepts": "f3e45d05a90459bc",
+        "exampleCode": "f560a0e7c67b9023",
+        "whenToUse": "116c00d81b153281",
+        "commonMistakes": "096584c96169d834",
+        "furtherReading": "9452c1976d398e0b"
+      },
+      "54_distributed_tracing.md": {
+        "title": "4a465f49d53a71d1",
+        "whatItIs": "a27cc4dfc7399ea1",
+        "keyConcepts": "508eb5a7df6ad73f",
+        "exampleCode": "7f2eb0cac25d09e4",
+        "whenToUse": "16dc0809dca2c5a6",
+        "commonMistakes": "395601794880b13b",
+        "furtherReading": "ace8aa6716b73ef1"
+      },
+      "55_slo_sli_sla.md": {
+        "title": "d14291cf93d71580",
+        "whatItIs": "4e7f41d0fd5040e0",
+        "keyConcepts": "c9cd7f80bf0ab98b",
+        "exampleCode": "a5f7195bfc6532a7",
+        "whenToUse": "eae86f42a14b00ba",
+        "commonMistakes": "b97dd2113be4476e",
+        "furtherReading": "9ce93766885cdf0f"
+      },
+      "56_canary_deployment_feature_flags.md": {
+        "title": "0a12cbc194279878",
+        "whatItIs": "ca6d50417a7c4b97",
+        "keyConcepts": "4304d5363c2c73fd",
+        "exampleCode": "6e86af95bdb2b3df",
+        "whenToUse": "f9c14e68a438b451",
+        "commonMistakes": "74083ef952ceedc3",
+        "furtherReading": "6f5559eed9dea131"
+      },
+      "57_blue_green_vs_rolling_deployment.md": {
+        "title": "27924432938e69ae",
+        "whatItIs": "45e60d010772952f",
+        "keyConcepts": "948ddc252fe32a8b",
+        "exampleCode": "a6f1bbc878ea8531",
+        "whenToUse": "65d7170ea1e825d0",
+        "commonMistakes": "0f4cbc5276e9e3a7",
+        "furtherReading": "7fe2894367af891f"
+      },
+      "58_dockerfile_best_practices.md": {
+        "title": "c28ee559d0c9cf61",
+        "whatItIs": "00062b44e9297aae",
+        "keyConcepts": "e09e2771d37395bf",
+        "exampleCode": "24a0c61b05bb6998",
+        "whenToUse": "0390487c20d73cac",
+        "commonMistakes": "b4ac77ba85865053",
+        "furtherReading": "4191013a4a269b7c"
+      },
+      "59_kubernetes_fundamentals.md": {
+        "title": "0d0e26cd9800673f",
+        "whatItIs": "28da2fd10b6dda89",
+        "keyConcepts": "a85ffa9308fd5aa0",
+        "exampleCode": "fb30506ab00b12e7",
+        "whenToUse": "c3b0be8834ac3f1b",
+        "commonMistakes": "961f22502edc9b7e",
+        "furtherReading": "2a14a35a603dd836"
+      },
+      "60_github_actions_ci_pipeline.md": {
+        "title": "58773d21d35d54ef",
+        "whatItIs": "b6d47d1721189040",
+        "keyConcepts": "224892a4c7d51f0c",
+        "exampleCode": "3c3d5adbec015cb0",
+        "whenToUse": "0e45a5c16b1b64b2",
+        "commonMistakes": "5c3923c4d488a48a",
+        "furtherReading": "c982fd2286b9e066"
+      },
+      "61_alerting_design.md": {
+        "title": "b10b18bc0699b390",
+        "whatItIs": "a8be9f3ace0b7e08",
+        "keyConcepts": "2a5ee2c37e8d0d78",
+        "exampleCode": "d1e215c42ca29ef0",
+        "whenToUse": "9c0ca084a1c8666d",
+        "commonMistakes": "ff4b2e7205985957",
+        "furtherReading": "1e71e9ea94a0332f"
+      },
+      "62_log_aggregation.md": {
+        "title": "69b7b5586526a1a4",
+        "whatItIs": "ef95b9c56f635759",
+        "keyConcepts": "dd7a93ec5e1c9aa8",
+        "exampleCode": "956ea7bb95290d46",
+        "whenToUse": "fff614c298d911a8",
+        "commonMistakes": "fc246e4bd274b9ec",
+        "furtherReading": "a30b7d0634e9acf4"
+      },
+      "63_chaos_engineering.md": {
+        "title": "8e21e8b2d9ea2c30",
+        "whatItIs": "4683b464a4a046fe",
+        "keyConcepts": "ea915cbd2f6d56f4",
+        "exampleCode": "17cd5da1def3481f",
+        "whenToUse": "c2ffd85f2d37cb49",
+        "commonMistakes": "6d48d8c8be314559",
+        "furtherReading": "c8a5386a5d1f18c3"
+      },
+      "137_infrastructure_as_code.md": {
+        "title": "c5d8a8de543c6a6f",
+        "whatItIs": "5ff8bc3ba1501810",
+        "keyConcepts": "79b7e4894fa7556f",
+        "exampleCode": "0c260f5bd35557fc",
+        "whenToUse": "59d9a2c1210a9314",
+        "commonMistakes": "d3ae0a9a2bbb30c3",
+        "furtherReading": "43a9e915a8526493"
+      },
+      "141_cloud_architecture_well_architected.md": {
+        "title": "110eea14bb34a34b",
+        "whatItIs": "651413cbe72135b9",
+        "keyConcepts": "fc74ddab0352bf1d",
+        "exampleCode": "c09dc1f1d74ce6d8",
+        "whenToUse": "fb27cab509a2f7cc",
+        "commonMistakes": "b509bdb3264f5105",
+        "furtherReading": "37cb9dbc5a05af97"
+      }
+    },
+    "open-source-community": {
+      "94_contributing_to_open_source.md": {
+        "title": "d2336e31fed7b4e6",
+        "whatItIs": "a5b797a70679dff6",
+        "keyConcepts": "05cb397e52ebc110",
+        "exampleCode": "9f60a1ad38eee803",
+        "whenToUse": "229f5462bac32df4",
+        "commonMistakes": "257d023cb2d2dfe3",
+        "furtherReading": "9eba9b4f8ce9f55e"
+      },
+      "95_publishing_maintaining_oss_tool.md": {
+        "title": "2f738f75cefc7fca",
+        "whatItIs": "1dae313b7c018c88",
+        "keyConcepts": "7b8620f556497431",
+        "exampleCode": "f74cca898d8afedb",
+        "whenToUse": "e52c8a53277951ac",
+        "commonMistakes": "8868f45ba74957e2",
+        "furtherReading": "3404466e934fd59f"
+      },
+      "96_semver_changelog_management.md": {
+        "title": "8e6ee48785811b98",
+        "whatItIs": "96733688e42ba23d",
+        "keyConcepts": "63f209e218776ebc",
+        "exampleCode": "17e4bbf788fab1ae",
+        "whenToUse": "7552f83b61cca7f9",
+        "commonMistakes": "95d5ecbda183cd2a",
+        "furtherReading": "b66468a90646c539"
+      },
+      "97_publishing_npm_github_packages.md": {
+        "title": "8de77cc381db0cb3",
+        "whatItIs": "f129bb459eddee1a",
+        "keyConcepts": "cb77e47bb4958fa2",
+        "exampleCode": "397af3473734fa4d",
+        "whenToUse": "57214b7e928da4ef",
+        "commonMistakes": "2b74f30d1aa44715",
+        "furtherReading": "62e0ff6f1d0f2ba5"
+      },
+      "98_writing_stack_overflow_answers.md": {
+        "title": "0fbfe02acb9b6ce7",
+        "whatItIs": "b820bfb6300e068d",
+        "keyConcepts": "f1d356b5070806aa",
+        "exampleCode": "614d6a4e5ef29136",
+        "whenToUse": "904300d11101a6be",
+        "commonMistakes": "c46381ddc17ffc19",
+        "furtherReading": "0125a6351271055a"
+      },
+      "99_conference_meetup_speaking.md": {
+        "title": "3c5e8962d8d65b56",
+        "whatItIs": "e23f36572049bbfe",
+        "keyConcepts": "f77cb77814bb06d2",
+        "exampleCode": "b52916061e5fe868",
+        "whenToUse": "af0b76658c811948",
+        "commonMistakes": "9c7a59219f6b98c1",
+        "furtherReading": "77a23baaa1271214"
+      },
+      "100_creating_reference_resource.md": {
+        "title": "a1d389e442b4ee1a",
+        "whatItIs": "0fe2dcb60e5248b1",
+        "keyConcepts": "28b930cb808a050e",
+        "exampleCode": "13d1082b0e516638",
+        "whenToUse": "ec7838506c378c6b",
+        "commonMistakes": "65225b5909cc40d7",
+        "furtherReading": "27593310974c2691"
+      }
+    },
+    "privacy-compliance-incident-response": {
+      "356_risk_based_security_scoping_threat_model_lite.md": {
+        "title": "233ed7277cd5fa3f",
+        "whatItIs": "0ea8baacd087c6a4",
+        "keyConcepts": "ac0b937282c6eab6",
+        "exampleCode": "45ed3ed06b11f6aa",
+        "whenToUse": "2267c805972ded9e",
+        "commonMistakes": "c762bdf3fa5df2e8",
+        "furtherReading": "a1224412fb73803a"
+      },
+      "357_government_regulated_sector_security_baselines.md": {
+        "title": "9a39ec7532ecfa4d",
+        "whatItIs": "7419d1bb5f6c8896",
+        "keyConcepts": "2088f96589910096",
+        "exampleCode": "0521ded470000fee",
+        "whenToUse": "f48d89815951469e",
+        "commonMistakes": "0942ea83764db071",
+        "furtherReading": "08b97ab9e139517f"
+      },
+      "358_data_classification_storage_residency_tiers.md": {
+        "title": "e5b8d246aa903400",
+        "whatItIs": "4164ebc0a0304971",
+        "keyConcepts": "700a386aceb11b6a",
+        "exampleCode": "d011403558f0bf53",
+        "whenToUse": "7284199c2bde9e49",
+        "commonMistakes": "ee8323b4101aa27a",
+        "furtherReading": "4e50f06dc9318e15"
+      },
+      "359_privacy_by_design_process_multi_jurisdiction_basis.md": {
+        "title": "3b6c8eeb3e9a8b91",
+        "whatItIs": "6d6a6a42cfaa575e",
+        "keyConcepts": "e5c3498958be475e",
+        "exampleCode": "3c3f3bd5acbc38e7",
+        "whenToUse": "b6c106a712f64524",
+        "commonMistakes": "236fcf978d72d296",
+        "furtherReading": "e6547ebaae9fa97b"
+      },
+      "360_cookie_consent_tracking_governance.md": {
+        "title": "dc11465057a67a1e",
+        "whatItIs": "97b1b818db8926a2",
+        "keyConcepts": "70cc67aae35cc810",
+        "exampleCode": "4ca42d3430543c1c",
+        "whenToUse": "bf94f081f1688f09",
+        "commonMistakes": "9ab427f4df042be9",
+        "furtherReading": "b283d8bf8ec14443"
+      },
+      "361_vulnerability_management_lifecycle_patch_slas.md": {
+        "title": "5eebe761dab33301",
+        "whatItIs": "e796e2e20b4b137b",
+        "keyConcepts": "23b8a7c12b1dd0c0",
+        "exampleCode": "95086687c4e3cebf",
+        "whenToUse": "5a97e3d3a7921a31",
+        "commonMistakes": "a20091fb6d696907",
+        "furtherReading": "ccc892d07f0c6304"
+      },
+      "362_incident_response_process_detection_to_postmortem.md": {
+        "title": "a6e8315ccc9c22ca",
+        "whatItIs": "dbceb6a5b5f38234",
+        "keyConcepts": "57a10a84a44c537d",
+        "exampleCode": "9a35f8270dd02586",
+        "whenToUse": "47321757b26226d8",
+        "commonMistakes": "db4b87127dbf7ac5",
+        "furtherReading": "30a8560cbdc5959e"
+      },
+      "363_breach_notification_requirements_across_jurisdictions.md": {
+        "title": "b67ef49e3ffc6271",
+        "whatItIs": "0dd140fe270a2e45",
+        "keyConcepts": "1d005b8b3ceb79f7",
+        "exampleCode": "c4ae82feda02d5e1",
+        "whenToUse": "ddc748c7d104b472",
+        "commonMistakes": "44b7002fcb3e20ec",
+        "furtherReading": "dbdfa7b4d6a0fe87"
+      },
+      "364_third_party_vendor_risk_data_processing_agreements.md": {
+        "title": "d2a320e4807bc9ca",
+        "whatItIs": "cf152ec342fe60a5",
+        "keyConcepts": "456267f9904e7ab5",
+        "exampleCode": "3661eb1dd5671c82",
+        "whenToUse": "719251ba9504d501",
+        "commonMistakes": "4ff3c875f0d904d3",
+        "furtherReading": "363c750483b6580e"
+      },
+      "365_childrens_data_compliance_age_verification_parental_consent.md": {
+        "title": "76efb372cfe877e3",
+        "whatItIs": "46e4be943d25538c",
+        "keyConcepts": "c7e8e4a9c4d433a1",
+        "exampleCode": "0d79dae3736ed31e",
+        "whenToUse": "2cfccdb28f8ca403",
+        "commonMistakes": "cac1aa48c29cd907",
+        "furtherReading": "efdd24c8182b4d0d"
+      },
+      "366_health_data_compliance_hipaa_nhs_kvkk_saglik.md": {
+        "title": "7c2c4720d530a15d",
+        "whatItIs": "b1cb78d4fd81c07c",
+        "keyConcepts": "478527fa0f2eb0a0",
+        "exampleCode": "d50e6a838bf3fc44",
+        "whenToUse": "6280cba1ca14fde9",
+        "commonMistakes": "ab41637d6ea068fd",
+        "furtherReading": "884013b1b7a5d8d1"
+      },
+      "367_security_handover_access_transition_checklist.md": {
+        "title": "7c392a1ef042f70a",
+        "whatItIs": "59fdbb2cbd550e53",
+        "keyConcepts": "4792c9ad4c84ec0e",
+        "exampleCode": "2feb9b0aeebd54a0",
+        "whenToUse": "2b5ef16187ae99c5",
+        "commonMistakes": "183e47e35a691dbc",
+        "furtherReading": "021a7e8139e2aede"
+      },
+      "368_client_facing_security_communication_risk_framing.md": {
+        "title": "ae605ab29e22e6f5",
+        "whatItIs": "7cd187100cadc3b9",
+        "keyConcepts": "24519f4c32a4e6e1",
+        "exampleCode": "79f1b25bfaa4f484",
+        "whenToUse": "718d7cf13f21a0a5",
+        "commonMistakes": "520db457a14affdd",
+        "furtherReading": "a250211fa80db778"
+      }
+    },
+    "process-soft-skills": {
+      "75_writing_adrs.md": {
+        "title": "61c5f69bb969c0a6",
+        "whatItIs": "576eaeb48e919908",
+        "keyConcepts": "4ebd76a7d080b82b",
+        "exampleCode": "12a0fcba19cb7bb7",
+        "whenToUse": "69836793ee934fe8",
+        "commonMistakes": "b9417a53080acd4a",
+        "furtherReading": "82d1e6d67b1d0446"
+      },
+      "76_rfc_process.md": {
+        "title": "8d5598f24169cd0f",
+        "whatItIs": "c5429651a5bfc99d",
+        "keyConcepts": "4b1abee8ef81683f",
+        "exampleCode": "68ef21aa0c1ad8cf",
+        "whenToUse": "195f4fe6b5b972d7",
+        "commonMistakes": "6e1ff840d2e834d5",
+        "furtherReading": "4cf1b1d2e95a704a"
+      },
+      "77_technical_debt_prioritization.md": {
+        "title": "507806597fd1b9df",
+        "whatItIs": "2856e684f6ebbed2",
+        "keyConcepts": "7b819db719f04654",
+        "exampleCode": "fe41fdaba4e673b4",
+        "whenToUse": "1798d5ab4edb0e44",
+        "commonMistakes": "4717a9f2c88d445d",
+        "furtherReading": "01e224247388c28d"
+      },
+      "78_code_review_culture.md": {
+        "title": "ba8b6c269aaf9f87",
+        "whatItIs": "a01fc1f39bdee89d",
+        "keyConcepts": "faa96c40901c480b",
+        "exampleCode": "c8526cecb0579e54",
+        "whenToUse": "9c90e6c2d2a3456f",
+        "commonMistakes": "662222269b890a15",
+        "furtherReading": "aee02a67babb5774"
+      },
+      "79_blameless_post_mortem.md": {
+        "title": "0a6d79c1fa05d303",
+        "whatItIs": "d4c4b53ccaca8377",
+        "keyConcepts": "893afb2b5dec0642",
+        "exampleCode": "ecb10d4285e6904f",
+        "whenToUse": "5a2c6740a886e91c",
+        "commonMistakes": "ff93c6abc322da12",
+        "furtherReading": "c3392b6f82c59687"
+      },
+      "80_mentorship.md": {
+        "title": "c7656b9c48db0b37",
+        "whatItIs": "b4b125f46f8e1b0c",
+        "keyConcepts": "ec9c12173d237ba8",
+        "exampleCode": "457b696b412eb212",
+        "whenToUse": "5788b0aaab6947eb",
+        "commonMistakes": "cfe1a0b323687c10",
+        "furtherReading": "6c6e5fef2dbeaa1b"
+      },
+      "81_explaining_technical_concepts.md": {
+        "title": "78ba5f3dbea12637",
+        "whatItIs": "b253664a4dc201e8",
+        "keyConcepts": "4b52929c21deafbd",
+        "exampleCode": "0c1ef9b687b432ae",
+        "whenToUse": "9d1a6b5446525110",
+        "commonMistakes": "2c1c9ca6e3d6ac0f",
+        "furtherReading": "a19234cfae586a73"
+      },
+      "82_estimation.md": {
+        "title": "58c995a42596f693",
+        "whatItIs": "8427577a90772002",
+        "keyConcepts": "a35d7dceb9c4014d",
+        "exampleCode": "3051c0ec986e764f",
+        "whenToUse": "15ebd6a1cc3dfacc",
+        "commonMistakes": "f5bc0dd344d8f172",
+        "furtherReading": "c429f4368601f87f"
+      },
+      "83_scope_creep_management.md": {
+        "title": "65f2d44b6f7e46ae",
+        "whatItIs": "06b8461cd88b1c02",
+        "keyConcepts": "84f77352beea2a50",
+        "exampleCode": "4f9bb912ca55729e",
+        "whenToUse": "da4bb9f5e32563f6",
+        "commonMistakes": "9f3045850f2e635a",
+        "furtherReading": "fa13e346cc400e4d"
+      },
+      "84_technical_interview_design.md": {
+        "title": "c0c9bc0c210b3a1a",
+        "whatItIs": "8e010b3ee91eb399",
+        "keyConcepts": "9877d2d74a0cb70f",
+        "exampleCode": "bc8069356c5d1420",
+        "whenToUse": "b30c3020c09fcba6",
+        "commonMistakes": "130ad98d6684435d",
+        "furtherReading": "b5585e964d13b748"
+      },
+      "85_technical_blog_conference_talk.md": {
+        "title": "9c5f6c09d12a438e",
+        "whatItIs": "66f0fb18bac4d4fd",
+        "keyConcepts": "ef3ae74bd68654cb",
+        "exampleCode": "4ea4e4a29c5ef9a2",
+        "whenToUse": "3a8802a654adc1a5",
+        "commonMistakes": "82b8557cc1185b31",
+        "furtherReading": "510d85ea0a2a7eac"
+      },
+      "144_engineering_leadership.md": {
+        "title": "cf7da80636aaedf4",
+        "whatItIs": "6062b4f0721eed79",
+        "keyConcepts": "101bac41aedfa317",
+        "exampleCode": "c2bd5569f41d860a",
+        "whenToUse": "f05268442b556826",
+        "commonMistakes": "84aeeab20cedcda4",
+        "furtherReading": "3054b264cc10417f"
+      },
+      "145_build_vs_buy_vendor_evaluation.md": {
+        "title": "84b8a3bc01071a96",
+        "whatItIs": "4704ad03f21865f1",
+        "keyConcepts": "6d229459ef9df7e7",
+        "exampleCode": "f85045372c772d04",
+        "whenToUse": "a4d9281d669989ac",
+        "commonMistakes": "339456f6edaf1e9d",
+        "furtherReading": "9b6032ad0c2b7ee8"
+      }
+    },
+    "product-technical-strategy": {
+      "371_product_strategy_operating_system.md": {
+        "title": "fac044b40a79fc74",
+        "whatItIs": "61e8a2212141d6cf",
+        "keyConcepts": "889a34c8d3e6979f",
+        "exampleCode": "414422067598e36f",
+        "whenToUse": "ae3ef9d57bce8c6b",
+        "commonMistakes": "5c0be9a7b5e1aca7",
+        "furtherReading": "11a34063c99d3140"
+      },
+      "372_problem_framing.md": {
+        "title": "7f2bd3f201c5cc4d",
+        "whatItIs": "8fc4dd5811c2a0de",
+        "keyConcepts": "f740e7913864da7f",
+        "exampleCode": "b47d1a4e747db02b",
+        "whenToUse": "80b6369c192e614d",
+        "commonMistakes": "c8005c9005b9ed50",
+        "furtherReading": "5686a2594b1f1ed9"
+      },
+      "373_personas_role_mapping.md": {
+        "title": "8b15942e1dc75cb4",
+        "whatItIs": "bc384f184f4be731",
+        "keyConcepts": "220739a7229992a1",
+        "exampleCode": "7653a4872dbaace7",
+        "whenToUse": "c8cfed5fd1151924",
+        "commonMistakes": "26e364d71c350b9e",
+        "furtherReading": "0e02c4bef6a095a4"
+      },
+      "374_jtbd_value_proposition.md": {
+        "title": "f26f8b7d79bcc6a1",
+        "whatItIs": "74939864ee705056",
+        "keyConcepts": "bfef17f6d65aad21",
+        "exampleCode": "0bdebe5f4c9cebf0",
+        "whenToUse": "e5781d437e6c3de9",
+        "commonMistakes": "459671c4fc478477",
+        "furtherReading": "641a66780b5eeca8"
+      },
+      "375_mvp_scoping.md": {
+        "title": "e44efe07f008de13",
+        "whatItIs": "783d7a1e2b8b2c8b",
+        "keyConcepts": "3be40340df6fad81",
+        "exampleCode": "325b4fc453fc8658",
+        "whenToUse": "ab2ef57a29369206",
+        "commonMistakes": "d6d7d32d97a256f2",
+        "furtherReading": "09da7ae6bcc80dcc"
+      },
+      "376_feature_prioritization.md": {
+        "title": "899f31dcc5222c79",
+        "whatItIs": "8cb10320f045c69a",
+        "keyConcepts": "26c5eb903f917269",
+        "exampleCode": "0a81fd0f53fbd4ae",
+        "whenToUse": "dd1654b6d706bb14",
+        "commonMistakes": "a0acc96a892593ea",
+        "furtherReading": "1667063f2b74e5e1"
+      },
+      "377_scope_boundaries.md": {
+        "title": "607dde42839e0ef7",
+        "whatItIs": "e7f6c0ff0199bc89",
+        "keyConcepts": "12d7b02de2135649",
+        "exampleCode": "5cee85da1eb9bb1a",
+        "whenToUse": "a0bc501dedbf3cf0",
+        "commonMistakes": "b0bc679e40f4ab1e",
+        "furtherReading": "ded20100025f50d6"
+      },
+      "378_product_requirements_document.md": {
+        "title": "7d958daa945bb58c",
+        "whatItIs": "d88bf6e53d39a773",
+        "keyConcepts": "e72739745fbb777d",
+        "exampleCode": "ce8a373ac97d8471",
+        "whenToUse": "213c0f1cf2f0d5b1",
+        "commonMistakes": "f03b4437df737119",
+        "furtherReading": "c49efb8a6d0a30b9"
+      },
+      "379_user_stories_acceptance_criteria.md": {
+        "title": "6d9257b6087b16aa",
+        "whatItIs": "2396f1160cd87705",
+        "keyConcepts": "9240e37b3afced00",
+        "exampleCode": "2d5855c7ef5b1919",
+        "whenToUse": "fafbfda1c5ea48f8",
+        "commonMistakes": "e8619d1fd6fd9eb4",
+        "furtherReading": "72c0f4219bb1b57c"
+      },
+      "380_user_journey_flow_mapping.md": {
+        "title": "8b73f59cb2fdc33c",
+        "whatItIs": "40189335b9445228",
+        "keyConcepts": "ecfee03350a4ab38",
+        "exampleCode": "7c2b8a297d600f3e",
+        "whenToUse": "dc506128fea71f38",
+        "commonMistakes": "8381de0eb0f1ed63",
+        "furtherReading": "067d897473bc92a3"
+      },
+      "381_success_metrics_criteria.md": {
+        "title": "664e05fae0108ce3",
+        "whatItIs": "5fd2754abc512b10",
+        "keyConcepts": "0ecf689c726e7c20",
+        "exampleCode": "43dbd45049ae4dc5",
+        "whenToUse": "063ca56e7c22e379",
+        "commonMistakes": "f8ea6ad4fc0d8242",
+        "furtherReading": "fde8f074c854336d"
+      },
+      "382_roadmap_planning.md": {
+        "title": "c4f955b4ba9280d5",
+        "whatItIs": "6eba77d3bb7d3cf8",
+        "keyConcepts": "513e13f9c430a6be",
+        "exampleCode": "d0682060fb5f6c6d",
+        "whenToUse": "2bab1f03e59b49cb",
+        "commonMistakes": "25957ad5b5d7de52",
+        "furtherReading": "d5a05fdb22534975"
+      },
+      "383_feedback_and_validation_loops.md": {
+        "title": "3f8311e31a2753d5",
+        "whatItIs": "8f1cd08d8771b848",
+        "keyConcepts": "ff1701d360819e59",
+        "exampleCode": "15693a43061334e3",
+        "whenToUse": "f45f376b372428eb",
+        "commonMistakes": "7de78036210dc4a6",
+        "furtherReading": "f346a1a4da6e5d5d"
+      },
+      "384_market_and_competitive_positioning.md": {
+        "title": "167b466fdb9be3fe",
+        "whatItIs": "3746efda93842f72",
+        "keyConcepts": "4f99f9e8a94365b2",
+        "exampleCode": "4e3f84bcd2baa47b",
+        "whenToUse": "4d9513a6cca456d9",
+        "commonMistakes": "c4e9e27e361529d2",
+        "furtherReading": "83ae763251189420"
+      },
+      "385_product_risk_and_assumption_log.md": {
+        "title": "6b15439b7713034b",
+        "whatItIs": "b21e3fd043a02968",
+        "keyConcepts": "624270cb173eb91e",
+        "exampleCode": "f4be2da30c851775",
+        "whenToUse": "401307252541ece6",
+        "commonMistakes": "92d43d0cc9c4c570",
+        "furtherReading": "492bcb74061b0612"
+      },
+      "386_release_strategy.md": {
+        "title": "949a706b650ff70b",
+        "whatItIs": "831ba7740ab96f45",
+        "keyConcepts": "da63551bfcce24ec",
+        "exampleCode": "f2ca9b2bd9e2f414",
+        "whenToUse": "c44573f7a0510230",
+        "commonMistakes": "932d28dc06aaa054",
+        "furtherReading": "4a020c02b9881ba6"
+      },
+      "387_technical_architecture_operating_system.md": {
+        "title": "51c1af06cf5b8cc8",
+        "whatItIs": "ad3bfc1ec967cdfe",
+        "keyConcepts": "4cc0471f0038ae24",
+        "exampleCode": "b4c52b7021ea3748",
+        "whenToUse": "de49bd73eb5f5cf5",
+        "commonMistakes": "4347f3a3de470424",
+        "furtherReading": "a87e1f778bfb7fc6"
+      },
+      "388_requirements_to_architecture_translation.md": {
+        "title": "22c3a7b41d6e07fc",
+        "whatItIs": "4aada200afb3019a",
+        "keyConcepts": "783ea44eb451d533",
+        "exampleCode": "557657f47d5ccd74",
+        "whenToUse": "5828de3a975d09c9",
+        "commonMistakes": "41bd836dbe226ad2",
+        "furtherReading": "9f522d604a596979"
+      },
+      "389_domain_modeling_module_boundaries_scaling_path.md": {
+        "title": "e7e9133b30670c8c",
+        "whatItIs": "cb4cd10d2cb96c0d",
+        "keyConcepts": "2e00019aee3696b4",
+        "exampleCode": "c95bb0558d82d100",
+        "whenToUse": "ec67f381a98c4d6b",
+        "commonMistakes": "0d7d3226c585cd16",
+        "furtherReading": "fb25001a69b0454e"
+      },
+      "390_technology_selection_governance.md": {
+        "title": "250878bf07963548",
+        "whatItIs": "284e4f9ef32da09c",
+        "keyConcepts": "81ab7c1246809bee",
+        "exampleCode": "6f1c56d4bfcb91a4",
+        "whenToUse": "32ee181b0fefc235",
+        "commonMistakes": "af7e24766908c444",
+        "furtherReading": "e6bda0722e3fd7b3"
+      },
+      "391_nfr_production_readiness_strategy.md": {
+        "title": "161dde7dc6751537",
+        "whatItIs": "c6b6cb1fd63f4ed9",
+        "keyConcepts": "5e5343e4fc9fc7f2",
+        "exampleCode": "d2e31ba41f6a225c",
+        "whenToUse": "b2797fa9b0e1b9a3",
+        "commonMistakes": "0cb651565b30f8aa",
+        "furtherReading": "47783dda02b2bb4a"
+      },
+      "392_data_architecture_ownership_lifecycle.md": {
+        "title": "2a7f1e876f9fec4c",
+        "whatItIs": "c283ea543ada34ac",
+        "keyConcepts": "3b0152ac9a2b2bee",
+        "exampleCode": "558b3668f475b601",
+        "whenToUse": "be955985723400ad",
+        "commonMistakes": "836a7121bdc062e6",
+        "furtherReading": "206c153e3277cdcb"
+      },
+      "393_api_integration_event_driven_decisions.md": {
+        "title": "60d14b6c0478873b",
+        "whatItIs": "c01dda99eee5a6bf",
+        "keyConcepts": "0d54d2fc0ae5d779",
+        "exampleCode": "55cd51ff2037381a",
+        "whenToUse": "dcd47b40c2136f61",
+        "commonMistakes": "6506f1cf5be51d15",
+        "furtherReading": "fda904f01f5dc775"
+      },
+      "394_auth_identity_multi_tenancy_decisions.md": {
+        "title": "3f8ab6037f66527e",
+        "whatItIs": "1a2251fbd45877b4",
+        "keyConcepts": "75883a0933629d0d",
+        "exampleCode": "79f54415fcbb367f",
+        "whenToUse": "e714eebfda36caeb",
+        "commonMistakes": "2235f2650ba3b3fd",
+        "furtherReading": "cc36f24ebbe57843"
+      },
+      "395_legacy_system_migration_strategy.md": {
+        "title": "23f11426cddd6940",
+        "whatItIs": "705b9887b10e0459",
+        "keyConcepts": "3e35dae9d97fde54",
+        "exampleCode": "b8bcb9cdf554b8f5",
+        "whenToUse": "8556cac012489571",
+        "commonMistakes": "630feb33f6061377",
+        "furtherReading": "0c5553ed3adf6393"
+      }
+    },
+    "saas-business-skills": {
+      "86_saas_metrics.md": {
+        "title": "8ff99fb7742f487e",
+        "whatItIs": "a61ad097fbef622c",
+        "keyConcepts": "078b8b74b6babb21",
+        "exampleCode": "b2167231c23bca9c",
+        "whenToUse": "a945f3b6c080b1ac",
+        "commonMistakes": "431ee8c8dffeedc1",
+        "furtherReading": "c5a574fef5487a0a"
+      },
+      "87_payment_integration_depth.md": {
+        "title": "30147502360c07f5",
+        "whatItIs": "f3ca51e8de6477ec",
+        "keyConcepts": "04f21513e09d74b2",
+        "exampleCode": "2714f571e0c8ee02",
+        "whenToUse": "c578c9d90c2ad682",
+        "commonMistakes": "94b15acd189fc0b4",
+        "furtherReading": "20f0455a50d4c0ac"
+      },
+      "88_email_deliverability.md": {
+        "title": "61f60e93e175e185",
+        "whatItIs": "86c3a7d31736f186",
+        "keyConcepts": "2fb260be068d1d26",
+        "exampleCode": "bd1b4e771c87a3b1",
+        "whenToUse": "87250a3b71b540d0",
+        "commonMistakes": "0dcc77b70ab2bc76",
+        "furtherReading": "7e8c8df9cb77afdc"
+      },
+      "89_internationalization.md": {
+        "title": "b7cbc9eaa2f2318d",
+        "whatItIs": "de3ab3c4ecd18b44",
+        "keyConcepts": "1414158e6e3ccdd1",
+        "exampleCode": "8e4235847b425af6",
+        "whenToUse": "649b774e63869e20",
+        "commonMistakes": "6e4d8b907cca4d89",
+        "furtherReading": "bb3f105ef9ff9218"
+      },
+      "90_accessibility.md": {
+        "title": "1cfddaafe8ea82cf",
+        "whatItIs": "1383dc0b035e705c",
+        "keyConcepts": "94a375f5fd7a0348",
+        "exampleCode": "295c760386969fce",
+        "whenToUse": "0cdc876f8532c278",
+        "commonMistakes": "aa69ef32f4211434",
+        "furtherReading": "9c5d1a11d94b4db7"
+      },
+      "91_mobile_first_api_design.md": {
+        "title": "fea79b7f6cea9936",
+        "whatItIs": "26453fc4422e17ce",
+        "keyConcepts": "b5afe3355acef78c",
+        "exampleCode": "591ecea8d38ab4b9",
+        "whenToUse": "b0cf8cd9f4f8a721",
+        "commonMistakes": "6338c5b0f33d44da",
+        "furtherReading": "91dd3a5d68937918"
+      },
+      "92_analytics_integration.md": {
+        "title": "0d6e9d144b491908",
+        "whatItIs": "bc6ca0e039151780",
+        "keyConcepts": "d06d9526ecf2c246",
+        "exampleCode": "1d4886f48c8f1b55",
+        "whenToUse": "edec68604ac61910",
+        "commonMistakes": "34fa7e9bfd7d5236",
+        "furtherReading": "7620208c58632e55"
+      },
+      "93_ab_test_infrastructure.md": {
+        "title": "8941a6d9009f7510",
+        "whatItIs": "7a929134c9ad0f54",
+        "keyConcepts": "708409df2311777e",
+        "exampleCode": "4a742c7a45a90440",
+        "whenToUse": "60c78a7795ed459a",
+        "commonMistakes": "86a5aeb91bbd553b",
+        "furtherReading": "10ab3644d5f5ad30"
+      }
+    },
+    "security": {
+      "29_owasp_top_10.md": {
+        "title": "1beaea5cec9c8087",
+        "whatItIs": "1dfeed389ba53932",
+        "keyConcepts": "f88c5975f54a4c42",
+        "exampleCode": "d426c4a6d724fbdc",
+        "whenToUse": "c2554dc9ff1e2f88",
+        "commonMistakes": "2fc6b837532069bf",
+        "furtherReading": "ee0d2f3a32574052"
+      },
+      "30_sql_injection_protection.md": {
+        "title": "fe02383fbe052da7",
+        "whatItIs": "32406b579ca87d10",
+        "keyConcepts": "ce1fbb25f86aac58",
+        "exampleCode": "039811835fb534b8",
+        "whenToUse": "91198fe2b9a85319",
+        "commonMistakes": "fe94414340f50865",
+        "furtherReading": "d46d3292ae98df3f"
+      },
+      "31_mass_assignment_protection_dto_whitelist.md": {
+        "title": "9bd3400692171ba5",
+        "whatItIs": "d6f87392846f65d5",
+        "keyConcepts": "b38225ac6d1761c3",
+        "exampleCode": "f9a8faa1151ec5ad",
+        "whenToUse": "62a92e17aabb509a",
+        "commonMistakes": "a511bcb63bcb7ad4",
+        "furtherReading": "ad7b687a1a0a0e7c"
+      },
+      "32_jwt_security_rs256_hs256_rotation.md": {
+        "title": "a8551dcb849ef620",
+        "whatItIs": "b925cd9fad4483c1",
+        "keyConcepts": "e8a316575c4b03ea",
+        "exampleCode": "5888395f6ff4c3aa",
+        "whenToUse": "ecdbc7b936fd1867",
+        "commonMistakes": "3ec707a94951aa9a",
+        "furtherReading": "1e1a788a9e005c27"
+      },
+      "33_ssrf_server_side_request_forgery.md": {
+        "title": "ef7360103b8ad57a",
+        "whatItIs": "26430e41ff82d344",
+        "keyConcepts": "3a16450742d7d186",
+        "exampleCode": "6c1b2c302b33fe8d",
+        "whenToUse": "aef97af5ca9d2305",
+        "commonMistakes": "9a907e74510991f2",
+        "furtherReading": "9796cef6e8a25162"
+      },
+      "34_timing_attack_constant_time_comparison.md": {
+        "title": "2daa25effd30d3b5",
+        "whatItIs": "1ca76d97bc0bfd62",
+        "keyConcepts": "4094a6ba2e1e9b5e",
+        "exampleCode": "e84655ae96482fb0",
+        "whenToUse": "b768a599d27b7401",
+        "commonMistakes": "290f0cae12599c95",
+        "furtherReading": "13037e3c90961647"
+      },
+      "35_content_security_policy_csp_headers.md": {
+        "title": "be6e04d95428fedb",
+        "whatItIs": "3892bbdc3e94473e",
+        "keyConcepts": "3a78561b9d5e69bd",
+        "exampleCode": "7ffc6b5079baf58e",
+        "whenToUse": "d843fb9ec60d4890",
+        "commonMistakes": "da621a319ff6c2a7",
+        "furtherReading": "81e5b1a4a9d79569"
+      },
+      "36_dependency_audit_automation.md": {
+        "title": "45c72369954eb1ad",
+        "whatItIs": "bb25a7cd2dd34880",
+        "keyConcepts": "104eab92fed1e31b",
+        "exampleCode": "864930886c2a8e6e",
+        "whenToUse": "5516ffb79e49f2c3",
+        "commonMistakes": "1b73f8b95858afda",
+        "furtherReading": "73f2a6cff976132f"
+      },
+      "37_secrets_management_vault_ssm_kms.md": {
+        "title": "d36a659c61fbc185",
+        "whatItIs": "864d4683dd343f41",
+        "keyConcepts": "df9294205212ac7d",
+        "exampleCode": "671c21f19ebd525e",
+        "whenToUse": "d66a763b1c57e3d8",
+        "commonMistakes": "8c525dac3fb927b4",
+        "furtherReading": "f2f687f2825bcf6b"
+      },
+      "38_penetration_testing_process.md": {
+        "title": "e5eb851997a7794e",
+        "whatItIs": "7f00ac6b1a49235d",
+        "keyConcepts": "aed83f65ba9711f6",
+        "exampleCode": "e39bd1511c1b3876",
+        "whenToUse": "f190a2ee22bb484f",
+        "commonMistakes": "f9b1091e56128588",
+        "furtherReading": "a677664d2c038a78"
+      },
+      "39_rbac_vs_abac.md": {
+        "title": "052d7f635db06677",
+        "whatItIs": "c6b07aec808d1db2",
+        "keyConcepts": "4fa41570d523fa34",
+        "exampleCode": "480f2c6e8e18901e",
+        "whenToUse": "5bf937a4ebd72f2d",
+        "commonMistakes": "19428cb4be4da920",
+        "furtherReading": "090d7bf61fe621aa"
+      },
+      "40_supply_chain_security_lockfile_integrity.md": {
+        "title": "454d484e1c2f7869",
+        "whatItIs": "c81f1a6b83ddfafa",
+        "keyConcepts": "6dbc2df69268fe19",
+        "exampleCode": "7b8789073544ac4f",
+        "whenToUse": "da11861e93162e49",
+        "commonMistakes": "3ae5243752d632b9",
+        "furtherReading": "eda4862d2af771b6"
+      },
+      "143_compliance_frameworks.md": {
+        "title": "f396739580678ce2",
+        "whatItIs": "773dbc864974cd2c",
+        "keyConcepts": "1b375e76932f9a43",
+        "exampleCode": "eacb1b81ccd366dd",
+        "whenToUse": "c60cee1318005bc4",
+        "commonMistakes": "3f2722eb28b68202",
+        "furtherReading": "ab1a2e8b745230c5"
+      }
+    }
+  }
+}

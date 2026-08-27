@@ -5,20 +5,33 @@ import type { CourseManifest } from './course_content.types';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'content', 'courses');
 
-const ManifestItemSchema = z.object({
-  id: z.number(),
-  file: z.string(),
-  title: z.string(),
-  bracket: z.enum(['0-1', '1-3', '3-7', '7-10']),
-  category: z.string(),
-});
+// `.strict()` on both schemas is deliberate. A plain z.object SILENTLY DROPS
+// unknown keys, so a manifest key added by hand (or a typo in an existing one)
+// disappears between the file and the app with no error anywhere — which made
+// every manifest-driven feature impossible to land safely. Anything new must be
+// declared here first; a key that is not declared is now a loud parse failure.
+const ManifestItemSchema = z
+  .object({
+    id: z.number(),
+    file: z.string(),
+    title: z.string(),
+    bracket: z.enum(['0-1', '1-3', '3-7', '7-10']),
+    category: z.string(),
+    /** Minutes to read. Optional until measured for every lesson. */
+    minutes: z.number().int().positive().optional(),
+    /** Lesson ids (globally unique across all courses) this lesson assumes. */
+    prereqs: z.array(z.number()).optional(),
+  })
+  .strict();
 
-const CourseManifestSchema = z.object({
-  slug: z.string(),
-  title: z.string(),
-  description: z.string(),
-  items: z.array(ManifestItemSchema),
-});
+const CourseManifestSchema = z
+  .object({
+    slug: z.string(),
+    title: z.string(),
+    description: z.string(),
+    items: z.array(ManifestItemSchema),
+  })
+  .strict();
 
 /** Every course slug currently present under content/courses/. */
 export function listCourseSlugs(): string[] {

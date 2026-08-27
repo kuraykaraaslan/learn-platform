@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "vitest run"
+    "test": "vitest run",
+    "content:lint": "tsx scripts/content-lint",
+    "content:verify-code": "tsx scripts/verify-code.ts",
+    "content:snapshot": "tsx scripts/parse-snapshot.ts",
+    "content:check": "npm run content:lint && npm run content:verify-code && npm run test"
   },
   "dependencies": {
     "next": "^15.0.0",
@@ -40,7 +44,8 @@
     "typescript": "^5.5.0",
     "vitest": "^2.0.0",
     "tailwindcss": "^4.0.0",
-    "@tailwindcss/postcss": "^4.0.0"
+    "@tailwindcss/postcss": "^4.0.0",
+    "tsx": "^4.19.0"
   },
   "engines": {
     "node": ">=18.17"

@@ -32,6 +32,10 @@ function matchHeading(heading: string): keyof LessonSections | null {
  * treated as ordinary content of whichever section is currently open, not a
  * new section. Fence state (```) is tracked so a `##`-looking line inside a
  * code block is never mistaken for a heading either.
+ *
+ * Everything before the first recognized heading is discarded — which is what
+ * makes YAML frontmatter safe to add, and why a section placed ABOVE
+ * `## What It Is` vanishes entirely instead of rendering in the wrong card.
  */
 export function parseLessonMarkdown(raw: string): { title: string; sections: LessonSections } {
   const lines = raw.split('\n');
@@ -52,7 +56,13 @@ export function parseLessonMarkdown(raw: string): { title: string; sections: Les
   }
 
   for (const line of lines) {
-    if (line.trimStart().startsWith('```')) {
+    // Fence state is only meaningful inside an open section. Guarding on
+    // currentField makes everything before the first recognized heading fully
+    // inert: without it, an ODD number of fence-opening lines up there (a
+    // frontmatter value holding a ``` block, a lesson that opens with one)
+    // leaves inFence stuck on, every later "## " is read as fenced content,
+    // and the lesson renders completely blank with no error.
+    if (currentField && line.trimStart().startsWith('```')) {
       inFence = !inFence;
       buffer.push(line);
       continue;
