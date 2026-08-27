@@ -2,15 +2,15 @@
   "generatedFrom": "scripts/content-lint",
   "lessons": 412,
   "totals": {
-    "findings": 652,
+    "findings": 630,
     "errors": 0,
-    "warnings": 652,
+    "warnings": 630,
     "waived": 0
   },
   "byRule": {
     "sources/no-url": 282,
     "sources/bare-domain": 166,
-    "links/non-canonical-ref": 69,
+    "links/unlinked-lesson-ref": 47,
     "code/private-alias": 45,
     "sources/disclaimer-as-source": 40,
     "code/unlabeled-fence": 35,
@@ -3596,487 +3596,333 @@
       "message": "all 13 lessons have exactly 3 Further Reading bullets (zero variance)"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "ai-llm-engineering/140_ai_llm_integration.md",
       "line": 6,
-      "message": "\"#29\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#29\" matches a lesson but has no cue, so it renders as plain text: **Tool/function calling** extends this from \"answer using retrieved text\" to \"ta"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "ai-llm-engineering/140_ai_llm_integration.md",
       "line": 16,
-      "message": "\"#29\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#29\" matches a lesson but has no cue, so it renders as plain text: - **Prompt injection**: untrusted retrieved or user-supplied content containing "
     },
     {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "ai-llm-engineering/140_ai_llm_integration.md",
-      "line": 64,
-      "message": "\"#29\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "ai-llm-engineering/146_when_to_add_ai.md",
       "line": 59,
-      "message": "\"#1\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#1\" matches a lesson but has no cue, so it renders as plain text: - Google's \"Rules of Machine Learning\" (Martin Zinkevich) — rule #1 is \"don't be"
     },
     {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "algorithms-concurrency/130_data_structures_algorithms_practice.md",
-      "line": 6,
-      "message": "\"#69\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
-      "line": 9,
-      "message": "\"#55\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "architecture-design-patterns-testing/134_domain_driven_design.md",
       "line": 14,
-      "message": "\"#131\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#14\" matches a lesson but has no cue, so it renders as plain text: - **Domain event**: something meaningful that happened in the domain (`OrderShip"
     },
     {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "architecture-design-patterns-testing/134_domain_driven_design.md",
-      "line": 14,
-      "message": "\"#14\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "architecture-design-patterns-testing/134_domain_driven_design.md",
       "line": 59,
-      "message": "\"#135\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#135\" matches a lesson but has no cue, so it renders as plain text: - Deciding service/module boundaries for #135 (Microservices vs Monolith) — boun"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "architecture-design-patterns-testing/142_capacity_planning_estimation.md",
       "line": 44,
-      "message": "\"#12\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#12\" matches a lesson but has no cue, so it renders as plain text: - Deciding whether a specific piece of complexity (sharding #12, a read replica "
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "architecture-design-patterns-testing/142_capacity_planning_estimation.md",
       "line": 44,
-      "message": "\"#11\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#11\" matches a lesson but has no cue, so it renders as plain text: - Deciding whether a specific piece of complexity (sharding #12, a read replica "
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "architecture-design-patterns-testing/142_capacity_planning_estimation.md",
       "line": 44,
-      "message": "\"#20\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#20\" matches a lesson but has no cue, so it renders as plain text: - Deciding whether a specific piece of complexity (sharding #12, a read replica "
     },
     {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/339_growth_risk_and_concentration.md",
-      "line": 62,
-      "message": "\"Lesson 327\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/341_strategic_repositioning.md",
-      "line": 76,
-      "message": "\"Lesson 337\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "client-delivery-pm-handover/265_support_operations_channels_slas_and_boundaries.md",
-      "line": 4,
-      "message": "\"Lesson 258\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "client-delivery-pm-handover/266_customer_success_metrics_and_health_reporting.md",
-      "line": 15,
-      "message": "\"Lesson 264\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "client-delivery-pm-handover/266_customer_success_metrics_and_health_reporting.md",
-      "line": 63,
-      "message": "\"Lesson 264\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "client-delivery-pm-handover/267_delivery_playbooks_codifying_project_types.md",
-      "line": 6,
-      "message": "\"Lesson 269\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "client-delivery-pm-handover/268_discovery_calls_red_flags_and_disqualification.md",
-      "line": 4,
-      "message": "\"Lesson 236\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "client-delivery-pm-handover/268_discovery_calls_red_flags_and_disqualification.md",
-      "line": 6,
-      "message": "\"Lesson 236\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "client-delivery-pm-handover/268_discovery_calls_red_flags_and_disqualification.md",
-      "line": 11,
-      "message": "\"Lesson 236\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "client-delivery-pm-handover/269_scope_ladders_included_vs_priced_add_ons.md",
-      "line": 4,
-      "message": "\"Lesson 267\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "client-delivery-pm-handover/269_scope_ladders_included_vs_priced_add_ons.md",
-      "line": 17,
-      "message": "\"Lesson 267\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "client-delivery-pm-handover/269_scope_ladders_included_vs_priced_add_ons.md",
-      "line": 55,
-      "message": "\"Lesson 267\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "distributed-systems-api-design/131_message_queues_101.md",
       "line": 6,
-      "message": "\"#7\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#7\" matches a lesson but has no cue, so it renders as plain text: Delivery guarantees are the part that bites people in production. Most brokers o"
     },
     {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
-      "line": 4,
-      "message": "\"#53\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
       "line": 6,
-      "message": "\"#134\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#134\" matches a lesson but has no cue, so it renders as plain text: The **modular monolith** is the underrated middle step: a single deployable, but"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
       "line": 14,
-      "message": "\"#3\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#1\" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
       "line": 14,
-      "message": "\"#14\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#3\" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
       "line": 14,
-      "message": "\"#15\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#14\" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
-      "target": "distributed-systems-api-design/136_api_gateway_bff.md",
-      "line": 4,
-      "message": "\"#135\" is not the canonical \"(#N)\" form, so it is never linked"
+      "target": "distributed-systems-api-design/135_microservices_vs_monolith.md",
+      "line": 14,
+      "message": "\"#15\" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "framework-deep-dives/400_express_validation_and_response_conventions.md",
       "line": 131,
-      "message": "\"#9\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#9\" matches a lesson but has no cue, so it renders as plain text: - REST API pagination patterns (Microsoft REST API guidelines): https://github.c"
     },
     {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "fundamentals-tools/121_sql_fundamentals.md",
-      "line": 48,
-      "message": "\"#18\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "fundamentals-tools/123_debugging_fundamentals.md",
-      "line": 52,
-      "message": "\"#111\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "fundamentals-tools/127_auth_basics.md",
-      "line": 4,
-      "message": "\"#32\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "fundamentals-tools/139_git_internals_advanced_workflows.md",
       "line": 16,
-      "message": "\"#120\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#120\" matches a lesson but has no cue, so it renders as plain text: - **Rebase vs merge in a monorepo**: rebasing across many unrelated package chan"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "observability-deployment/141_cloud_architecture_well_architected.md",
       "line": 4,
-      "message": "\"#49\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#49\" matches a lesson but has no cue, so it renders as plain text: Cloud architecture decisions live above any individual service, and the most con"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "observability-deployment/141_cloud_architecture_well_architected.md",
       "line": 4,
-      "message": "\"#1\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#1\" matches a lesson but has no cue, so it renders as plain text: Cloud architecture decisions live above any individual service, and the most con"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md",
       "line": 4,
-      "message": "\"#79\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#79\" matches a lesson but has no cue, so it renders as plain text: A security or privacy incident is a different animal from a normal production ou"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md",
       "line": 6,
-      "message": "\"#363\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#363\" matches a lesson but has no cue, so it renders as plain text: The response flow is a fixed sequence: detect, preserve evidence, contain, asses"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md",
       "line": 86,
-      "message": "\"#79\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#79\" matches a lesson but has no cue, so it renders as plain text: - Course #79 — *Blameless Post-Mortem — Writing and Running One* (the retrospect"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/363_breach_notification_requirements_across_jurisdictions.md",
       "line": 4,
-      "message": "\"#362\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#362\" matches a lesson but has no cue, so it renders as plain text: Once an incident response process (lesson #362) confirms personal data may have "
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md",
       "line": 4,
-      "message": "\"#359\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#359\" matches a lesson but has no cue, so it renders as plain text: Every third-party provider a system talks to — hosting, managed database, object"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md",
       "line": 52,
-      "message": "\"#359\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#359\" matches a lesson but has no cue, so it renders as plain text: - During a security questionnaire or enterprise procurement review — the vendor "
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md",
       "line": 64,
-      "message": "\"#359\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#359\" matches a lesson but has no cue, so it renders as plain text: - Course #359 — *Privacy by Design — Process, Artifacts & Multi-Jurisdiction Leg"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/365_childrens_data_compliance_age_verification_parental_consent.md",
       "line": 8,
-      "message": "\"#358\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#358\" matches a lesson but has no cue, so it renders as plain text: The practical shape of compliance is the same regardless of jurisdiction, even t"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
       "line": 4,
-      "message": "\"#358\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#358\" matches a lesson but has no cue, so it renders as plain text: Health data sits at the top of the classification hierarchy from lesson #358 — \""
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
       "line": 6,
-      "message": "\"#358\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#358\" matches a lesson but has no cue, so it renders as plain text: The specifics diverge sharply by jurisdiction, but three structural obligations "
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
       "line": 8,
-      "message": "\"#363\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#363\" matches a lesson but has no cue, so it renders as plain text: The audit-logging and dev-data rules are consistent across all three regimes eve"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
       "line": 17,
-      "message": "\"#358\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#358\" matches a lesson but has no cue, so it renders as plain text: - **Real health data never in dev/staging**: synthetic generators (NHS Synth, Fa"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
       "line": 18,
-      "message": "\"#363\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#363\" matches a lesson but has no cue, so it renders as plain text: - **Breach notification follows lesson #363's timelines**: 72 hours (KVKK/UK GDP"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
       "line": 69,
-      "message": "\"#358\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#358\" matches a lesson but has no cue, so it renders as plain text: - When a teammate or client sends a \"sample\" dataset containing real patient rec"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
       "line": 82,
-      "message": "\"#358\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#358\" matches a lesson but has no cue, so it renders as plain text: - Course #358 — *Data Classification & Storage Residency Tiers* (the sovereign-s"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md",
       "line": 83,
-      "message": "\"#363\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#363\" matches a lesson but has no cue, so it renders as plain text: - Course #363 — *Breach Notification Requirements Across Jurisdictions* (the not"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md",
       "line": 6,
-      "message": "\"#364\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#364\" matches a lesson but has no cue, so it renders as plain text: The handover package has a fixed shape: repository link, production and staging "
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md",
       "line": 6,
-      "message": "\"#361\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#361\" matches a lesson but has no cue, so it renders as plain text: The handover package has a fixed shape: repository link, production and staging "
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md",
       "line": 17,
-      "message": "\"#364\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#364\" matches a lesson but has no cue, so it renders as plain text: - **Account ownership transfer**: production accounts should end up owned by the"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md",
       "line": 79,
-      "message": "\"#364\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#364\" matches a lesson but has no cue, so it renders as plain text: - Course #364 — *Third-Party Vendor Risk & Data Processing Agreements* (the vend"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md",
       "line": 80,
-      "message": "\"#361\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#361\" matches a lesson but has no cue, so it renders as plain text: - Course #361 — *Vulnerability Management Lifecycle & Patch SLAs* (the maintenan"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
       "line": 8,
-      "message": "\"#362\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#362\" matches a lesson but has no cue, so it renders as plain text: Incident communication to a client or end user is a distinct moment with its own"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
       "line": 8,
-      "message": "\"#363\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#363\" matches a lesson but has no cue, so it renders as plain text: Incident communication to a client or end user is a distinct moment with its own"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
       "line": 16,
-      "message": "\"#362\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#362\" matches a lesson but has no cue, so it renders as plain text: - **Client-facing incident template**: what happened, what's known, what contain"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
       "line": 66,
-      "message": "\"#362\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#362\" matches a lesson but has no cue, so it renders as plain text: - The moment an incident is confirmed to potentially involve a client's data or "
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
       "line": 79,
-      "message": "\"#362\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#362\" matches a lesson but has no cue, so it renders as plain text: - Course #362 — *Incident Response Process — Detection Through Containment* (the"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
       "line": 80,
-      "message": "\"#363\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#363\" matches a lesson but has no cue, so it renders as plain text: - Course #363 — *Breach Notification Requirements Across Jurisdictions* (what th"
     },
     {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "process-soft-skills/144_engineering_leadership.md",
-      "line": 6,
-      "message": "\"#84\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
-      "severity": "warn",
-      "target": "product-technical-strategy/382_roadmap_planning.md",
-      "line": 4,
-      "message": "\"Lesson 371\" is not the canonical \"(#N)\" form, so it is never linked"
-    },
-    {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "security/143_compliance_frameworks.md",
       "line": 6,
-      "message": "\"#47\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#47\" matches a lesson but has no cue, so it renders as plain text: The practical trap is treating any of these as a security-team-only concern hand"
     },
     {
-      "rule": "links/non-canonical-ref",
+      "rule": "links/unlinked-lesson-ref",
       "severity": "warn",
       "target": "security/143_compliance_frameworks.md",
       "line": 6,
-      "message": "\"#36\" is not the canonical \"(#N)\" form, so it is never linked"
+      "message": "\"#36\" matches a lesson but has no cue, so it renders as plain text: The practical trap is treating any of these as a security-team-only concern hand"
     }
   ]
 }

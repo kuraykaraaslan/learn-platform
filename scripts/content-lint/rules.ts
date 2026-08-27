@@ -320,24 +320,34 @@ export const RULES: Rule[] = [
     },
   },
   {
-    id: 'links/non-canonical-ref',
+    id: 'links/unlinked-lesson-ref',
     severity: 'warn',
     description:
-      'Cross-references written as "see #41" or "Lesson 41" are never linked; only the canonical "(#41)" form is rewritten by the markdown pipeline.',
+      'A "#N" that matches a real lesson but carries no reference cue is left as plain text by the markdown pipeline, because "rule #1" and "Top 10 #29" also exist. Parenthesise it as "(#N)" or add a cue ("see #N").',
     lesson: (file) => {
+      const ids = new Set<number>();
+      for (const slug of listCourseSlugs())
+        for (const item of readCourseManifest(slug).items) ids.add(item.id);
+
+      // Mirrors remark-lesson-refs: these are the forms that DO become links.
+      const linked =
+        /\(#\d{1,3}\)|\b(?:see|See|ties to|also see|counterpart to|covered in|described in)\s+#\d{1,3}\b|\bLessons?\s+\d{1,3}\b/g;
+
       const out: Finding[] = [];
       for (const { line, index, inFence } of walkLines(file.lines)) {
         if (inFence) continue;
-        const pattern = /(?<!\()#(\d{1,3})\b|\bLesson\s+(\d{1,3})\b/g;
-        for (const match of line.matchAll(pattern)) {
-          const raw = match[0];
-          if (raw.startsWith('#') && line.slice(Math.max(0, match.index! - 1), match.index!) === '(') continue;
+        const masked = line.replace(linked, (m) => ' '.repeat(m.length));
+        for (const match of masked.matchAll(/#(\d{1,3})\b/g)) {
+          const id = Number(match[1]);
+          if (!ids.has(id)) continue;
+          const rest = masked.slice(match.index! + match[0].length);
+          if (/^\s*[–—-]\s*\d/.test(rest)) continue; // an id range is not one link
           out.push({
-            rule: 'links/non-canonical-ref',
+            rule: 'links/unlinked-lesson-ref',
             severity: 'warn',
             target: file.target,
             line: index + 1,
-            message: `"${raw}" is not the canonical "(#N)" form, so it is never linked`,
+            message: `"#${id}" matches a lesson but has no cue, so it renders as plain text: ${line.trim().slice(0, 80)}`,
           });
         }
       }

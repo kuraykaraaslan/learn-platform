@@ -33,3 +33,28 @@ describe('remarkLessonRefs', () => {
     }
   });
 });
+
+describe('remarkLessonRefs — non-canonical forms', () => {
+  it('links a bare id after a reference cue', () => {
+    expect(markdownToHtml('ties to #55 SLO/SLI/SLA')).toContain('/courses/observability-deployment/slo-sli-sla');
+  });
+
+  it('links the spelled-out "Lesson N" form and keeps it as the label', () => {
+    const html = markdownToHtml('See also Lesson 337 for the mechanics.');
+    expect(html).toContain('>Lesson 337<');
+    expect(html).toContain('href="/courses/business-finance-solo-ops/');
+  });
+
+  it('does NOT link a bare id with no cue — "rule #1" is not a lesson reference', () => {
+    expect(markdownToHtml('rule #1 is "do not be afraid to launch"')).not.toContain('<a ');
+  });
+
+  it('does NOT link an id range, which is one reference to many lessons', () => {
+    expect(markdownToHtml('its own observability stack (see #53–62), and calls')).not.toContain('<a ');
+  });
+
+  it('keeps a prose cue outside the link so the sentence still reads', () => {
+    const html = markdownToHtml('in place (see Lesson 258), someone must run support');
+    expect(html).toContain('(see <a ');
+  });
+});

@@ -128,7 +128,7 @@
         "exampleCode": "d589ba943a643aba",
         "whenToUse": "eb6e6ad43db6d8ec",
         "commonMistakes": "b5f658e061eefc83",
-        "furtherReading": "8893f643d6d4ae3b"
+        "furtherReading": "d555ac2c318b5281"
       },
       "146_when_to_add_ai.md": {
         "title": "7a159b833f13dda7",
@@ -323,7 +323,7 @@
       },
       "130_data_structures_algorithms_practice.md": {
         "title": "c5101c905fe8c9b7",
-        "whatItIs": "2d3cdffe81aa4da5",
+        "whatItIs": "d44902122feb255c",
         "keyConcepts": "e07d5b3b2fe0d23f",
         "exampleCode": "5f4f53413197c694",
         "whenToUse": "e4c5e47bbd7f2844",
@@ -434,7 +434,7 @@
       "132_load_stress_testing_basics.md": {
         "title": "5e22d1437c34a531",
         "whatItIs": "f7b44ec3609fe78e",
-        "keyConcepts": "a81a6098229addc0",
+        "keyConcepts": "1142d44f48ae319b",
         "exampleCode": "abe4c0f4f7174c9d",
         "whenToUse": "399a9dd770a13262",
         "commonMistakes": "f26357cbc77def07",
@@ -443,7 +443,7 @@
       "134_domain_driven_design.md": {
         "title": "7ffa4f6ca0e35470",
         "whatItIs": "a5f5b0bab39483b8",
-        "keyConcepts": "c8d52769bd69fda4",
+        "keyConcepts": "667f25f8d1358eea",
         "exampleCode": "d156e3b93674c6e4",
         "whenToUse": "e7197fc9747c6c31",
         "commonMistakes": "e778263b55c347a4",
@@ -674,7 +674,7 @@
         "exampleCode": "10580b35bf6ad869",
         "whenToUse": "ddcc04bed4ee74c3",
         "commonMistakes": "e605cd6f4044fdb6",
-        "furtherReading": "6ddc3f0ea673dd22"
+        "furtherReading": "38cb650302ebba43"
       },
       "340_scaling_with_contractors.md": {
         "title": "5048550146cd3865",
@@ -692,7 +692,7 @@
         "exampleCode": "7a7e2112fed4676f",
         "whenToUse": "64cf83bdb63a2e36",
         "commonMistakes": "6ac6aa0aa4f146e8",
-        "furtherReading": "61112ff3ddc1ae3c"
+        "furtherReading": "ffeef2a200af0423"
       },
       "342_account_health_management.md": {
         "title": "a0b7f026044c8e88",
@@ -1350,7 +1350,7 @@
       },
       "265_support_operations_channels_slas_and_boundaries.md": {
         "title": "8d01d902d386018f",
-        "whatItIs": "557bd1a58b6b195e",
+        "whatItIs": "745643a6c2cafe90",
         "keyConcepts": "7873f740f96702a7",
         "exampleCode": "3f7de5eb760bd446",
         "whenToUse": "5a8f3437e2ff352c",
@@ -1360,15 +1360,15 @@
       "266_customer_success_metrics_and_health_reporting.md": {
         "title": "0659568244338c1f",
         "whatItIs": "8095e0ffe32e11ee",
-        "keyConcepts": "9ec6f28a39ee185b",
+        "keyConcepts": "38d4b1f0120ee91d",
         "exampleCode": "9571ce35fdbb1905",
-        "whenToUse": "4fd0405784057b7f",
+        "whenToUse": "4485ae671b8c6c1d",
         "commonMistakes": "9661a1a6600ad4e4",
         "furtherReading": "a4919dcda2883599"
       },
       "267_delivery_playbooks_codifying_project_types.md": {
         "title": "5de4db3a2efaa9b0",
-        "whatItIs": "90021da2ffcedc90",
+        "whatItIs": "8f2fa1c3ea820868",
         "keyConcepts": "2da61888523e961e",
         "exampleCode": "84bf8150c1ef3f74",
         "whenToUse": "827df465b2ec8feb",
@@ -1377,8 +1377,8 @@
       },
       "268_discovery_calls_red_flags_and_disqualification.md": {
         "title": "636b7cfa870ddbc2",
-        "whatItIs": "14525582f7773727",
-        "keyConcepts": "8c748134464b2671",
+        "whatItIs": "29869dcbefbd08eb",
+        "keyConcepts": "0f8f3ae95c8ae4bf",
         "exampleCode": "29f3829d5137c138",
         "whenToUse": "af3f5188d3418fc2",
         "commonMistakes": "c175b781fd83f9a6",
@@ -1386,10 +1386,10 @@
       },
       "269_scope_ladders_included_vs_priced_add_ons.md": {
         "title": "d4f7745135db0d72",
-        "whatItIs": "28270cbd2031da08",
-        "keyConcepts": "14cb484ba1420723",
+        "whatItIs": "c9969e1ee820a15d",
+        "keyConcepts": "6f921e47f1f0d230",
         "exampleCode": "babe9535ebcba127",
-        "whenToUse": "9eeef7c21fb02a42",
+        "whenToUse": "8fab6ad69891bac1",
         "commonMistakes": "f1a458aba7ac03d3",
         "furtherReading": "5b3ce0b84bacf55e"
       }
@@ -2404,7 +2404,7 @@
       },
       "136_api_gateway_bff.md": {
         "title": "40fa83810443928e",
-        "whatItIs": "463bc34b7a59444f",
+        "whatItIs": "bdad77ac96b80640",
         "keyConcepts": "602f9615e09ec2a7",
         "exampleCode": "f680c9a9d70fefd6",
         "whenToUse": "d13007293ee083f0",
@@ -2828,7 +2828,7 @@
         "keyConcepts": "21200b80c9bcc75a",
         "exampleCode": "23215ce431314b76",
         "whenToUse": "e8f81ce6a867f29c",
-        "commonMistakes": "0bca42cc6d6d18b4",
+        "commonMistakes": "1d3146e521eb831c",
         "furtherReading": "cca29f6e81cd01f2"
       },
       "122_oop_data_structures_basics.md": {
@@ -2846,7 +2846,7 @@
         "keyConcepts": "c2835b524e5ac3d2",
         "exampleCode": "cb5c82b9ed2961d9",
         "whenToUse": "39c84e10bf5d8721",
-        "commonMistakes": "58d986783d70067a",
+        "commonMistakes": "109043bb0d37ba15",
         "furtherReading": "d3db5b9514ce980a"
       },
       "124_unit_testing_basics.md": {
@@ -2878,7 +2878,7 @@
       },
       "127_auth_basics.md": {
         "title": "0e5875da089e1579",
-        "whatItIs": "bb3b3a698a60e83f",
+        "whatItIs": "e4e8113200d9830d",
         "keyConcepts": "64a29aed620706da",
         "exampleCode": "8e6a13eb68c73a49",
         "whenToUse": "a89681133a52a45b",
@@ -3318,7 +3318,7 @@
       },
       "144_engineering_leadership.md": {
         "title": "cf7da80636aaedf4",
-        "whatItIs": "6062b4f0721eed79",
+        "whatItIs": "acffd310ec09eb4a",
         "keyConcepts": "101bac41aedfa317",
         "exampleCode": "c2bd5569f41d860a",
         "whenToUse": "f05268442b556826",
@@ -3437,7 +3437,7 @@
       },
       "382_roadmap_planning.md": {
         "title": "c4f955b4ba9280d5",
-        "whatItIs": "6eba77d3bb7d3cf8",
+        "whatItIs": "a4fcf2b88e2953f4",
         "keyConcepts": "513e13f9c430a6be",
         "exampleCode": "d0682060fb5f6c6d",
         "whenToUse": "2bab1f03e59b49cb",

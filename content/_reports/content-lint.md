@@ -2,13 +2,13 @@
 
 `npx tsx scripts/content-lint` — generated file, do not edit by hand.
 
-412 lessons · 652 findings · 0 waived
+412 lessons · 630 findings · 0 waived
 
 | Rule | Findings | Severity | What it means |
 |---|---:|---|---|
 | `sources/no-url` | 282 | warn | A Further Reading section with no followable link is a list of names, not sources. |
 | `sources/bare-domain` | 166 | warn | A bare domain in parentheses looks like a citation but renders as plain grey text — remark-gfm only autolinks bare URLs, not "(zod.dev)". |
-| `links/non-canonical-ref` | 69 | warn | Cross-references written as "see #41" or "Lesson 41" are never linked; only the canonical "(#41)" form is rewritten by the markdown pipeline. |
+| `links/unlinked-lesson-ref` | 47 | warn | A "#N" that matches a real lesson but carries no reference cue is left as plain text by the markdown pipeline, because "rule #1" and "Top 10 #29" also exist. Parenthesise it as "(#N)" or add a cue ("see #N"). |
 | `code/private-alias` | 45 | warn | Snippets importing @/libs, @/modules, @/stores or @/components reference the first owner's private boilerplate; no reader can resolve them. |
 | `sources/disclaimer-as-source` | 40 | warn | A legal/financial disclaimer occupying a Further Reading slot is not a reference. |
 | `code/unlabeled-fence` | 35 | warn | An unlabeled fence gets no syntax highlighting and cannot be verified by tooling. |
@@ -104,49 +104,49 @@
 - content-seo-personal-brand/283_metadata_titles_descriptions_and_canonical_url_strategy.md — bare domain renders as text, not a link: - The Open Graph protocol documentation (ogp.me) — the spec behind how social platforms re
 - …and 126 more (see content-lint.json)
 
-### `links/non-canonical-ref` — 69
+### `links/unlinked-lesson-ref` — 47
 
-- ai-llm-engineering/140_ai_llm_integration.md:6 — "#29" is not the canonical "(#N)" form, so it is never linked
-- ai-llm-engineering/140_ai_llm_integration.md:16 — "#29" is not the canonical "(#N)" form, so it is never linked
-- ai-llm-engineering/140_ai_llm_integration.md:64 — "#29" is not the canonical "(#N)" form, so it is never linked
-- ai-llm-engineering/146_when_to_add_ai.md:59 — "#1" is not the canonical "(#N)" form, so it is never linked
-- algorithms-concurrency/130_data_structures_algorithms_practice.md:6 — "#69" is not the canonical "(#N)" form, so it is never linked
-- architecture-design-patterns-testing/132_load_stress_testing_basics.md:9 — "#55" is not the canonical "(#N)" form, so it is never linked
-- architecture-design-patterns-testing/134_domain_driven_design.md:14 — "#131" is not the canonical "(#N)" form, so it is never linked
-- architecture-design-patterns-testing/134_domain_driven_design.md:14 — "#14" is not the canonical "(#N)" form, so it is never linked
-- architecture-design-patterns-testing/134_domain_driven_design.md:59 — "#135" is not the canonical "(#N)" form, so it is never linked
-- architecture-design-patterns-testing/142_capacity_planning_estimation.md:44 — "#12" is not the canonical "(#N)" form, so it is never linked
-- architecture-design-patterns-testing/142_capacity_planning_estimation.md:44 — "#11" is not the canonical "(#N)" form, so it is never linked
-- architecture-design-patterns-testing/142_capacity_planning_estimation.md:44 — "#20" is not the canonical "(#N)" form, so it is never linked
-- business-finance-solo-ops/339_growth_risk_and_concentration.md:62 — "Lesson 327" is not the canonical "(#N)" form, so it is never linked
-- business-finance-solo-ops/341_strategic_repositioning.md:76 — "Lesson 337" is not the canonical "(#N)" form, so it is never linked
-- client-delivery-pm-handover/265_support_operations_channels_slas_and_boundaries.md:4 — "Lesson 258" is not the canonical "(#N)" form, so it is never linked
-- client-delivery-pm-handover/266_customer_success_metrics_and_health_reporting.md:15 — "Lesson 264" is not the canonical "(#N)" form, so it is never linked
-- client-delivery-pm-handover/266_customer_success_metrics_and_health_reporting.md:63 — "Lesson 264" is not the canonical "(#N)" form, so it is never linked
-- client-delivery-pm-handover/267_delivery_playbooks_codifying_project_types.md:6 — "Lesson 269" is not the canonical "(#N)" form, so it is never linked
-- client-delivery-pm-handover/268_discovery_calls_red_flags_and_disqualification.md:4 — "Lesson 236" is not the canonical "(#N)" form, so it is never linked
-- client-delivery-pm-handover/268_discovery_calls_red_flags_and_disqualification.md:6 — "Lesson 236" is not the canonical "(#N)" form, so it is never linked
-- client-delivery-pm-handover/268_discovery_calls_red_flags_and_disqualification.md:11 — "Lesson 236" is not the canonical "(#N)" form, so it is never linked
-- client-delivery-pm-handover/269_scope_ladders_included_vs_priced_add_ons.md:4 — "Lesson 267" is not the canonical "(#N)" form, so it is never linked
-- client-delivery-pm-handover/269_scope_ladders_included_vs_priced_add_ons.md:17 — "Lesson 267" is not the canonical "(#N)" form, so it is never linked
-- client-delivery-pm-handover/269_scope_ladders_included_vs_priced_add_ons.md:55 — "Lesson 267" is not the canonical "(#N)" form, so it is never linked
-- distributed-systems-api-design/131_message_queues_101.md:6 — "#7" is not the canonical "(#N)" form, so it is never linked
-- distributed-systems-api-design/135_microservices_vs_monolith.md:4 — "#53" is not the canonical "(#N)" form, so it is never linked
-- distributed-systems-api-design/135_microservices_vs_monolith.md:6 — "#134" is not the canonical "(#N)" form, so it is never linked
-- distributed-systems-api-design/135_microservices_vs_monolith.md:14 — "#3" is not the canonical "(#N)" form, so it is never linked
-- distributed-systems-api-design/135_microservices_vs_monolith.md:14 — "#14" is not the canonical "(#N)" form, so it is never linked
-- distributed-systems-api-design/135_microservices_vs_monolith.md:14 — "#15" is not the canonical "(#N)" form, so it is never linked
-- distributed-systems-api-design/136_api_gateway_bff.md:4 — "#135" is not the canonical "(#N)" form, so it is never linked
-- framework-deep-dives/400_express_validation_and_response_conventions.md:131 — "#9" is not the canonical "(#N)" form, so it is never linked
-- fundamentals-tools/121_sql_fundamentals.md:48 — "#18" is not the canonical "(#N)" form, so it is never linked
-- fundamentals-tools/123_debugging_fundamentals.md:52 — "#111" is not the canonical "(#N)" form, so it is never linked
-- fundamentals-tools/127_auth_basics.md:4 — "#32" is not the canonical "(#N)" form, so it is never linked
-- fundamentals-tools/139_git_internals_advanced_workflows.md:16 — "#120" is not the canonical "(#N)" form, so it is never linked
-- observability-deployment/141_cloud_architecture_well_architected.md:4 — "#49" is not the canonical "(#N)" form, so it is never linked
-- observability-deployment/141_cloud_architecture_well_architected.md:4 — "#1" is not the canonical "(#N)" form, so it is never linked
-- privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md:4 — "#79" is not the canonical "(#N)" form, so it is never linked
-- privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md:6 — "#363" is not the canonical "(#N)" form, so it is never linked
-- …and 29 more (see content-lint.json)
+- ai-llm-engineering/140_ai_llm_integration.md:6 — "#29" matches a lesson but has no cue, so it renders as plain text: **Tool/function calling** extends this from "answer using retrieved text" to "ta
+- ai-llm-engineering/140_ai_llm_integration.md:16 — "#29" matches a lesson but has no cue, so it renders as plain text: - **Prompt injection**: untrusted retrieved or user-supplied content containing 
+- ai-llm-engineering/146_when_to_add_ai.md:59 — "#1" matches a lesson but has no cue, so it renders as plain text: - Google's "Rules of Machine Learning" (Martin Zinkevich) — rule #1 is "don't be
+- architecture-design-patterns-testing/134_domain_driven_design.md:14 — "#14" matches a lesson but has no cue, so it renders as plain text: - **Domain event**: something meaningful that happened in the domain (`OrderShip
+- architecture-design-patterns-testing/134_domain_driven_design.md:59 — "#135" matches a lesson but has no cue, so it renders as plain text: - Deciding service/module boundaries for #135 (Microservices vs Monolith) — boun
+- architecture-design-patterns-testing/142_capacity_planning_estimation.md:44 — "#12" matches a lesson but has no cue, so it renders as plain text: - Deciding whether a specific piece of complexity (sharding #12, a read replica 
+- architecture-design-patterns-testing/142_capacity_planning_estimation.md:44 — "#11" matches a lesson but has no cue, so it renders as plain text: - Deciding whether a specific piece of complexity (sharding #12, a read replica 
+- architecture-design-patterns-testing/142_capacity_planning_estimation.md:44 — "#20" matches a lesson but has no cue, so it renders as plain text: - Deciding whether a specific piece of complexity (sharding #12, a read replica 
+- distributed-systems-api-design/131_message_queues_101.md:6 — "#7" matches a lesson but has no cue, so it renders as plain text: Delivery guarantees are the part that bites people in production. Most brokers o
+- distributed-systems-api-design/135_microservices_vs_monolith.md:6 — "#134" matches a lesson but has no cue, so it renders as plain text: The **modular monolith** is the underrated middle step: a single deployable, but
+- distributed-systems-api-design/135_microservices_vs_monolith.md:14 — "#1" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode
+- distributed-systems-api-design/135_microservices_vs_monolith.md:14 — "#3" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode
+- distributed-systems-api-design/135_microservices_vs_monolith.md:14 — "#14" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode
+- distributed-systems-api-design/135_microservices_vs_monolith.md:14 — "#15" matches a lesson but has no cue, so it renders as plain text: - **What you pay**: network calls replace function calls (latency + failure mode
+- framework-deep-dives/400_express_validation_and_response_conventions.md:131 — "#9" matches a lesson but has no cue, so it renders as plain text: - REST API pagination patterns (Microsoft REST API guidelines): https://github.c
+- fundamentals-tools/139_git_internals_advanced_workflows.md:16 — "#120" matches a lesson but has no cue, so it renders as plain text: - **Rebase vs merge in a monorepo**: rebasing across many unrelated package chan
+- observability-deployment/141_cloud_architecture_well_architected.md:4 — "#49" matches a lesson but has no cue, so it renders as plain text: Cloud architecture decisions live above any individual service, and the most con
+- observability-deployment/141_cloud_architecture_well_architected.md:4 — "#1" matches a lesson but has no cue, so it renders as plain text: Cloud architecture decisions live above any individual service, and the most con
+- privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md:4 — "#79" matches a lesson but has no cue, so it renders as plain text: A security or privacy incident is a different animal from a normal production ou
+- privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md:6 — "#363" matches a lesson but has no cue, so it renders as plain text: The response flow is a fixed sequence: detect, preserve evidence, contain, asses
+- privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md:86 — "#79" matches a lesson but has no cue, so it renders as plain text: - Course #79 — *Blameless Post-Mortem — Writing and Running One* (the retrospect
+- privacy-compliance-incident-response/363_breach_notification_requirements_across_jurisdictions.md:4 — "#362" matches a lesson but has no cue, so it renders as plain text: Once an incident response process (lesson #362) confirms personal data may have 
+- privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md:4 — "#359" matches a lesson but has no cue, so it renders as plain text: Every third-party provider a system talks to — hosting, managed database, object
+- privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md:52 — "#359" matches a lesson but has no cue, so it renders as plain text: - During a security questionnaire or enterprise procurement review — the vendor 
+- privacy-compliance-incident-response/364_third_party_vendor_risk_data_processing_agreements.md:64 — "#359" matches a lesson but has no cue, so it renders as plain text: - Course #359 — *Privacy by Design — Process, Artifacts & Multi-Jurisdiction Leg
+- privacy-compliance-incident-response/365_childrens_data_compliance_age_verification_parental_consent.md:8 — "#358" matches a lesson but has no cue, so it renders as plain text: The practical shape of compliance is the same regardless of jurisdiction, even t
+- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:4 — "#358" matches a lesson but has no cue, so it renders as plain text: Health data sits at the top of the classification hierarchy from lesson #358 — "
+- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:6 — "#358" matches a lesson but has no cue, so it renders as plain text: The specifics diverge sharply by jurisdiction, but three structural obligations 
+- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:8 — "#363" matches a lesson but has no cue, so it renders as plain text: The audit-logging and dev-data rules are consistent across all three regimes eve
+- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:17 — "#358" matches a lesson but has no cue, so it renders as plain text: - **Real health data never in dev/staging**: synthetic generators (NHS Synth, Fa
+- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:18 — "#363" matches a lesson but has no cue, so it renders as plain text: - **Breach notification follows lesson #363's timelines**: 72 hours (KVKK/UK GDP
+- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:69 — "#358" matches a lesson but has no cue, so it renders as plain text: - When a teammate or client sends a "sample" dataset containing real patient rec
+- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:82 — "#358" matches a lesson but has no cue, so it renders as plain text: - Course #358 — *Data Classification & Storage Residency Tiers* (the sovereign-s
+- privacy-compliance-incident-response/366_health_data_compliance_hipaa_nhs_kvkk_saglik.md:83 — "#363" matches a lesson but has no cue, so it renders as plain text: - Course #363 — *Breach Notification Requirements Across Jurisdictions* (the not
+- privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md:6 — "#364" matches a lesson but has no cue, so it renders as plain text: The handover package has a fixed shape: repository link, production and staging 
+- privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md:6 — "#361" matches a lesson but has no cue, so it renders as plain text: The handover package has a fixed shape: repository link, production and staging 
+- privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md:17 — "#364" matches a lesson but has no cue, so it renders as plain text: - **Account ownership transfer**: production accounts should end up owned by the
+- privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md:79 — "#364" matches a lesson but has no cue, so it renders as plain text: - Course #364 — *Third-Party Vendor Risk & Data Processing Agreements* (the vend
+- privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md:80 — "#361" matches a lesson but has no cue, so it renders as plain text: - Course #361 — *Vulnerability Management Lifecycle & Patch SLAs* (the maintenan
+- privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md:8 — "#362" matches a lesson but has no cue, so it renders as plain text: Incident communication to a client or end user is a distinct moment with its own
+- …and 7 more (see content-lint.json)
 
 ### `code/private-alias` — 45
 
