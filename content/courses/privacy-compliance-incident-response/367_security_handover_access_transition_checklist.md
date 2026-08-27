@@ -1,8 +1,5 @@
 # 367. Security Handover & Access Transition Checklist
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
-
 ## What It Is
 A project is not securely delivered just because the code is secure — it also has to be securely *handed over*, and the handover moment is where a surprising amount of long-term risk gets created silently. The failure mode isn't usually dramatic: it's a repository the client can't access without pinging the original developer, a database credential that was rotated once at launch and never again, an admin account the freelancer still technically controls a year later, or a vendor bill the client didn't know they were paying because the account was never transferred. None of these show up in a code review. They show up eighteen months later when the original team is unreachable and something needs to change.
 

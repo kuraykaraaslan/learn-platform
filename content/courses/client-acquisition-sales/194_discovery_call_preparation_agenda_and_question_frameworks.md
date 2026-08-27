@@ -1,8 +1,5 @@
 # 194. Discovery Call Preparation, Agenda & Question Frameworks
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 A discovery call is the first stage that starts after acquisition and qualification are done — the prospect has already passed the filters in earlier lessons, and now the job shifts from "is this worth a conversation" to "what exactly is this project." That shift fails constantly for one reason: showing up with no structure and letting the client's energy define the call, which usually means racing straight into technology, features, and price before anyone understands the business problem. Preparation exists to prevent that. A one-page brief before the call — known problem, known signals, likely stakeholders, possible risks, and the questions still open — turns the call from an improvised conversation into the execution of a plan, and a pre-call hypothesis ("they likely need X because Y, the main risk may be Z, the decision likely depends on W") gives the call something concrete to confirm or correct rather than discover from zero.
 

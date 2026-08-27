@@ -1,8 +1,5 @@
 # 117. Financial Literacy for Freelancers
 
-## Coverage Level
-**Not Covered** — You have Finance_and_Operations_Rules in your ruleset system, but the actual financial mechanics of running a solo software company (tax, cash flow, pricing for profit) are likely gaps.
-
 ## What It Is
 Most developers think about revenue but not profit, and about profit but not cash flow. Revenue is what clients pay you. Profit is what's left after expenses. Cash flow is whether you have money in your account when you need it — and these three numbers can tell completely different stories in the same month.
 

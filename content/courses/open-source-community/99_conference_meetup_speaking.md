@@ -1,8 +1,5 @@
 # 99. Conference / Meetup Speaking
 
-## Coverage Level
-**Not Covered** — Speaking at conferences and meetups is the highest-leverage form of developer visibility. One 30-minute talk at a relevant conference reaches a targeted audience of potential clients and collaborators more effectively than months of LinkedIn content.
-
 ## What It Is
 Conference speaking is the practice of presenting a technical topic to an audience of developers at an organized event — a local meetup (10–100 people), a regional conference (100–500 people), or a major international conference (500–5,000+ people). The skill involves not just technical knowledge but the ability to structure that knowledge as a narrative, deliver it under time pressure to an unfamiliar audience, and handle questions in real time.
 

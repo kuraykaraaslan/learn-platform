@@ -1,8 +1,5 @@
 # 349. Designing Growth Experiments That Produce Real Signal
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 A growth experiment has to test a specific hypothesis, or it produces noise and false confidence dressed up as progress. Every real experiment defines eight things before it starts: the hypothesis, the single variable being changed, the target audience or channel, the success metric, the baseline it's being measured against, the expected improvement, the duration, and — critically — the decision rule that says in advance what result leads to continuing, stopping, iterating, or scaling. "If I turn technical project posts into before-after case study posts, qualified DMs will increase because buyers understand business value faster" is an experiment. "Post more" or "try ads" or "make the website better" are initiatives, not experiments — they have no falsifiable claim and no way to know afterward whether they worked.
 

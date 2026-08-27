@@ -1,8 +1,5 @@
 # 66. Dependency Injection Container — Build from Scratch
 
-## Coverage Level
-**Not Covered** — The project uses static class methods throughout and wires dependencies via direct imports. There is no DI framework or manual injection pattern in use.
-
 ## What It Is
 A Dependency Injection (DI) container is a registry that knows how to create objects and automatically provide their dependencies. Instead of writing `new AuthService(new UserRepository(db), new EmailService(smtp), ...)` everywhere, you register each class once with its dependencies and let the container build the full object graph on demand.
 

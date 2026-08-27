@@ -1,8 +1,5 @@
 # 267. Delivery Playbooks: Codifying Repeatable Project Types
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management/Documentation_and_Handover/Customer_Success_and_Support/Client_Delivery_Playbooks material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Every earlier lesson in this course — kickoff, scope breakdown, risk logs, handover — describes a single topic applied across every kind of project. A delivery playbook inverts that: it's every topic applied to a single, recurring kind of project. If you've now delivered three admin panels, or three e-commerce MVPs, the fourth one shouldn't require re-deriving the discovery questions, the default technical stack, the pricing tiers, and the risk register from scratch. A playbook is the written record of what you already learned from doing it before, organized so the next instance of the same project type can move faster and with fewer surprises.
 

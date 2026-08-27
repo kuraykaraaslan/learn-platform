@@ -1,8 +1,5 @@
 # 255. Known Issues and Troubleshooting Disclosure
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Documentation_and_Handover_Rules/known-issues-and-troubleshooting.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Every real system ships with some limitations, and the choice a developer actually has is not whether limitations exist but whether they're disclosed. Hiding a known limitation to avoid an uncomfortable conversation at handover doesn't make the limitation go away — it just guarantees the client discovers it themselves, at a less convenient moment, with less trust in the relationship than they had before. Known-issues documentation is the professional alternative: naming limitations, non-critical unresolved issues, and common errors plainly, alongside their severity, their workaround if one exists, and who owns eventually resolving them.
 

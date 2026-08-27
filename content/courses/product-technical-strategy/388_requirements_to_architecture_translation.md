@@ -1,8 +1,5 @@
 # 388. Requirements-to-Architecture Translation and System Context Mapping
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Technical_Architecture_Rules material (specifically `requirements-to-architecture.md` and `system-context-and-boundaries.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Architecture must be derived from requirements, not guessed from a stack preference — before a single table or route exists, business requirements have to pass through a translation step that turns "users can manage events" into something an architecture can actually be built against: "Admin users can create events, assign venues, configure sections, define ticket price tiers, publish events, and view ticket sales. Regular users can browse published events and purchase tickets." The requirement translation table is the mechanical version of this discipline: multiple user roles maps to an RBAC/permission model, an approval workflow maps to a state machine plus audit log plus notifications, payments map to provider integration with idempotency and webhook validation, reporting maps to a query model with indexing and exports, multi-company use maps to tenant isolation and explicit data ownership, and offline/field use maps to a sync model with conflict handling. Each row converts a business sentence into an architectural consequence.
 

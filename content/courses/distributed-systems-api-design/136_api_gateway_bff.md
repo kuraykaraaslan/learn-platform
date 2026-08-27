@@ -1,8 +1,5 @@
 # 136. API Gateway / Backend-for-Frontend (BFF) Pattern
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. API Versioning Strategies (#9) covers evolving a single API's contract; this is the missing pattern for the entry layer in front of *multiple* backend services.
-
 ## What It Is
 Once a system has more than one backend service (see #135), something has to sit at the edge and decide how clients reach them — that's the **API gateway**: a single entry point handling cross-cutting concerns (authentication, rate limiting, routing to the right service, sometimes response caching) so individual services don't each reimplement them. It's infrastructure, not business logic — the moment a gateway starts making domain decisions, it's become an undeclared, hard-to-test service of its own.
 

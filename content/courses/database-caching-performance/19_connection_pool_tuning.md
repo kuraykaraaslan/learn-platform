@@ -1,8 +1,5 @@
 # 19. Connection Pool Tuning (pgBouncer, HikariCP)
 
-## Coverage Level
-**Not Covered** — Your boilerplate connects to PostgreSQL via Prisma's built-in connection pool. There is no documented pool size configuration, no pgBouncer setup, and no consideration of how serverless/edge function concurrency models interact with connection pool limits.
-
 ## What It Is
 A database connection is an expensive resource — PostgreSQL allocates roughly 5–10 MB of memory per connection, and establishing a new connection involves a TCP handshake, authentication, and session setup taking ~10–50ms. Connection pooling maintains a set of pre-established connections that application instances share, amortizing connection overhead and capping the total connection count presented to PostgreSQL.
 

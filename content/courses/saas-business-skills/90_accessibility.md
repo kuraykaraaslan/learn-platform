@@ -1,8 +1,5 @@
 # 90. Accessibility (a11y) — WCAG 2.1 AA Compliance
 
-## Coverage Level
-**Not Covered** — Accessibility is increasingly a legal requirement (EU EAA 2025, US ADA case law) and a significant differentiator for enterprise SaaS clients who must themselves comply with accessibility standards.
-
 ## What It Is
 Web accessibility is the practice of building user interfaces that can be used by people with disabilities — visual, auditory, motor, cognitive. The Web Content Accessibility Guidelines (WCAG) are the international standard, published by the W3C. WCAG 2.1 Level AA is the compliance target for most legal requirements, including the European Accessibility Act (mandatory for digital products in the EU from 2025), UK Equality Act, and the standard used in US ADA litigation.
 

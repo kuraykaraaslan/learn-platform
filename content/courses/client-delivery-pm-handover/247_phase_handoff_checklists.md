@@ -1,8 +1,5 @@
 # 247. Phase Handoff Checklists
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management_Rules/phase-handoff.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 A project that moves through discovery, planning, development, QA, staging, production, and handover has six transition points, and each one is an opportunity for something to quietly fall through the crack between phases. A phase handoff checklist exists to make each transition an explicit, summarized moment instead of a blur — because "we're basically done with planning, let's just start building" skips the exact step where a forgotten open item, an unconfirmed risk, or a dependency nobody assigned gets carried invisibly into the next phase, where it's much more expensive to discover.
 

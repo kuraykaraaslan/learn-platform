@@ -1,8 +1,5 @@
 # 192. Acquisition Trust Assets: Landing Pages, Portfolio Proof & Objection Prep
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 A prospect's biggest fear is rarely price. It's project failure, hidden costs, unfinished delivery, fragile code, and being permanently dependent on one person — and three different assets carry the job of answering those fears before a call ever happens. The landing page is the first: it follows a fixed anatomy — hero, problem, offer, proof, process, FAQ, and a repeated CTA — and the hero section alone has to answer who it's for, what problem it solves, why now, and what to do next, using a formula like "I help \<target client\> achieve \<outcome\> by building \<solution category\> without \<common pain\>." The CTA rules matter as much as the copy: a CTA has to be specific, action-based, and low-friction ("Request a project review," "Book a 20-minute intro call"), never a vague catch-all like "Contact me" or "Learn more," and a page with multiple competing primary CTAs confuses a prospect who was ready to act.
 

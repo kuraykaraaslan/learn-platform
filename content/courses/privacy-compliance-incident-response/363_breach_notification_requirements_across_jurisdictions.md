@@ -1,8 +1,5 @@
 # 363. Breach Notification Requirements Across Jurisdictions
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
-
 ## What It Is
 Once an incident response process (lesson #362) confirms personal data may have been involved, a separate clock starts — and it's a legal clock with a specific deadline, a specific regulator, and specific content requirements, all of which vary by jurisdiction in ways that are easy to get wrong by assuming "GDPR's 72 hours" is universal. Under GDPR, a personal data breach must be reported to the competent national data protection authority within 72 hours of the organization becoming aware of it — not 72 hours from when the breach happened, from when it's *discovered*, which is why detection speed (covered in the incident response and audit-logging lessons) directly determines how much of that window is left to actually investigate and report. KVKK in Turkey mirrors this timeline almost exactly: notification to the KVKK Kurumu within 72 hours of discovery. UK GDPR keeps the same 72-hour window but routes the notification to a different regulator entirely — the ICO, not an EU national DPA and not the KVKK Kurumu — a distinction that matters because post-Brexit UK deadlines and EU deadlines run on separate legal tracks even when the number of hours happens to match.
 

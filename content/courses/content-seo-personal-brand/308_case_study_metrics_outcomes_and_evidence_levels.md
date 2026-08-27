@@ -1,8 +1,5 @@
 # 308. Case Study Metrics, Outcomes & Evidence Levels
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Case_Study_and_Portfolio_Rules material (metrics-and-outcomes.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 A case study becomes significantly stronger when it shows outcomes, but the discipline that makes this safe is refusing to invent or exaggerate a single number — the strongest *truthful* outcome available always beats an impressive but fabricated one, because an invented metric is a liability the moment anyone asks how it was measured. The outcome taxonomy gives four places to look for something real even when there's no single flashy number: business metrics (conversion rate, users served, manual hours reduced, orders processed), operational metrics (approval time reduced, self-service reporting, fewer status-check messages), technical metrics (page speed improvement, error rate reduction, deployment reliability), and delivery outcomes (launched MVP, completed handover, replaced a legacy workflow). Most projects have at least one category with something genuinely worth stating, even when the client never shared exact business numbers.
 

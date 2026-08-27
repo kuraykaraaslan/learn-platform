@@ -1,8 +1,5 @@
 # 398. Express: Curried Auth Middleware and Typed Request Augmentation
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Express material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Rather than writing one `authenticate` middleware and a separate `requireAdmin` middleware, this codebase uses a single curried factory: `authMiddleware(role)` returns a middleware function closed over the role it enforces. Calling `authMiddleware("GUEST")` produces a no-op pass-through, `authMiddleware("USER")` requires any valid session, and `authMiddleware("ADMIN")` additionally checks the user's role. This collapses what would otherwise be three near-duplicate middleware functions into one parameterized factory, and it makes every route's authorization requirement visible directly in the route definition — `router.get("/admin/users", apiLimiter, authMiddleware("ADMIN"), handler)` reads as a sentence.
 

@@ -1,8 +1,5 @@
 # 418. React Native: NativeWind Styling, Design Tokens, and Dark Mode
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_ReactNative material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 NativeWind v4 brings Tailwind's `className` syntax to React Native, and it is the default styling method for every static style in this stack — `<View className="flex-1 bg-white px-4 py-6">` instead of a `style={{ ... }}` object. `StyleSheet.create` is not banned, but it's reserved for three specific cases where `className` genuinely can't do the job: a style that depends on a runtime value (a computed width from `useWindowDimensions`), a platform-specific override (`Platform.select`), or a complex `Animated.View` style object. Mixing `className` and `style` on the same element is fine — NativeWind merges them — so the two systems aren't in tension, just scoped to what each does well.
 

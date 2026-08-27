@@ -1,8 +1,5 @@
 # 131. Message Queues 101 — Pub/Sub and Point-to-Point Basics
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Job Queue Design with BullMQ (#27) and Event Streaming Kafka vs BullMQ (#106) both assume this general model already — it was never covered on its own.
-
 ## What It Is
 A message queue decouples producers from consumers through a broker sitting in between: the producer doesn't need to know who (or how many) consumers exist, and the consumer doesn't need to know who produced the message or when. There are two shapes this takes. **Point-to-point (queue)** delivers each message to exactly one consumer among a pool — useful for distributing work items across workers. **Publish/subscribe (topic)** delivers each message to *every* subscriber independently — useful for fan-out, where multiple unrelated systems each need to react to the same event (an order-placed event triggering an email, an inventory update, and an analytics record, independently).
 

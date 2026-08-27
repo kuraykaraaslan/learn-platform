@@ -1,8 +1,5 @@
 # 109. Performance Profiling — Flame Graphs, Heap Snapshots, Memory Leak Detection
 
-## Coverage Level
-**Not Covered** — You have no profiling tooling in your stack. When a client says "it's slow," you currently have no systematic way to find where.
-
 ## What It Is
 Performance problems come in two categories: CPU (something is doing too much work) and memory (something is holding onto objects it should release). Both require different tools and mental models. Guessing is expensive — profiling is how you find the actual bottleneck, not the suspected one.
 

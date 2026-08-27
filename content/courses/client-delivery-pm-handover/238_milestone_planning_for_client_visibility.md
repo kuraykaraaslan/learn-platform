@@ -1,8 +1,5 @@
 # 238. Milestone Planning for Client Visibility
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management_Rules/milestone-planning.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 A milestone is not a sprint boundary or an internal checkpoint — it is a meaningful state of the project that a non-technical client can understand and react to. "Week 1 coding" tells a client nothing; "Admin workflow demo ready" tells them exactly what they're about to see and what they should be evaluating. The distinction matters because milestones are the primary mechanism by which a client experiences progress on a project they can't read the code of. A project that only ever reports "still working on it" between kickoff and delivery feels, from the client's side, indistinguishable from a project that has stalled — even if the engineering is going fine.
 

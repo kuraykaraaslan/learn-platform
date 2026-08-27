@@ -1,8 +1,5 @@
 # 400. Express: Zod Validation and Response Envelope Conventions
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Express material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Every piece of input that crosses an Express route boundary — body, query string, or route params — is validated with Zod before the service ever sees it. Services trust their arguments completely; they perform zero input validation themselves, because that job is fully discharged at the route layer. This single-validation-point rule matters because query params arrive as strings even when they represent numbers or booleans, so schemas for query input lean on `z.coerce.number()` and similar coercions, while body and param schemas can validate types directly since JSON already carries real types.
 

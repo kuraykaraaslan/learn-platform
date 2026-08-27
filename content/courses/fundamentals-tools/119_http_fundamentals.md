@@ -1,8 +1,5 @@
 # 119. HTTP Fundamentals — Methods, Status Codes, Statelessness
 
-## Coverage Level
-**Not assessed** — this concept was added during a gap review of the roadmap and has not been evaluated against your codebase. Use it as a self-check: can you explain why PUT must be idempotent but POST isn't, without looking it up?
-
 ## What It Is
 HTTP is the request/response protocol underneath every route handler, every `fetch()` call, and every webhook in this codebase. It looks simple on the surface — verb, URL, headers, body — but three ideas do most of the real work: methods carry semantic guarantees (not just "do a thing"), status codes are a shared vocabulary for outcomes, and statelessness means the server remembers nothing about you between requests unless you explicitly hand it something (a cookie, a token) to remember by.
 

@@ -1,8 +1,5 @@
 # 306. Case Study Structure, Narrative Arc & Operating System
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Case_Study_and_Portfolio_Rules material (case-study-and-portfolio-master.md, case-study-structure.md, before-after-storytelling.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 A portfolio is not a gallery — it's a trust system, and every case study inside it needs to answer seven specific questions: who had the problem, why did it matter, what was difficult, what was built, how were decisions made, what changed, and why should a future client trust the freelancer more after reading this. That last question is the one screenshots and technology logos can never answer on their own. Evidence beats claims as the operating principle throughout: "I build scalable and secure applications" proves nothing, while "I separated Redis slot management from Prisma appointment persistence, added overlap checks, and documented the handover flow to reduce double-booking risk" proves that a real decision was made under a real constraint. Business context has to come before technology in the reading order — problem, then workflow pain, then solution, then technical decisions, then result, then proof, then CTA — because a reader who doesn't yet understand why the project mattered has no reason to care how it was built.
 

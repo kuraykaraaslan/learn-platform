@@ -1,8 +1,5 @@
 # 240. Client Communication Cadence and Status Reporting
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management_Rules/communication-cadence.md and status-reporting.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Silence during a project reads as failure even when the work is on track. A client who hasn't heard anything in ten days has no way to distinguish "quietly making great progress" from "quietly stalled," and in the absence of information, people assume the worse story. Communication cadence is the fix: deciding, up front, which channel carries which kind of information, how often updates go out, and what the escalation path is when something urgent happens — so the client never has to wonder whether they should be worried.
 

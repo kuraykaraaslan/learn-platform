@@ -1,8 +1,5 @@
 # 84. Technical Interview Design — Asking and Evaluating
 
-## Coverage Level
-**Not Covered** — When you hire your first contractor or employee, the quality of your interview design determines the quality of who joins. Most developers design interviews that test trivia rather than the judgment you actually need from them.
-
 ## What It Is
 A technical interview is a structured evaluation process designed to predict how well a candidate will perform the specific work you need done. The key word is "predict" — a technical interview is not a hazing ritual, a quiz of obscure language features, or a test of whether someone can solve algorithmic puzzles under stress. It is a measurement instrument, and like all measurement instruments, it should be designed with a specific target in mind and validated against actual job performance.
 

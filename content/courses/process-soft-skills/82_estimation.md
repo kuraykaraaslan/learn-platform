@@ -1,8 +1,5 @@
 # 82. Estimation — Confidence Intervals Instead of Story Points
 
-## Coverage Level
-**Partial** — Your project management rules address estimation, but there is no formal model for communicating uncertainty ranges to clients or tracking estimation accuracy over time. You likely give single-point estimates, which sets you up for trust damage when the real number differs.
-
 ## What It Is
 Software estimation is the process of predicting how long a piece of work will take before you have done it. It is inherently uncertain, and the pretense that it is not — the single-number estimate, the commitment to a date without caveats — is the root cause of most developer-client trust problems. The client does not need a precise answer; they need a calibrated one. A calibrated estimate is one that accurately communicates both the expected value and the uncertainty range.
 

@@ -1,8 +1,5 @@
 # 123. Debugging Fundamentals
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. This is the prerequisite skill beneath Production Debugging Methodology (#111). Self-check: when a bug is intermittent, is your first move to add a `try/catch` or to reproduce it reliably?
-
 ## What It Is
 Debugging is a loop, not a skill you either have or don't: reproduce the failure reliably, isolate the smallest case that still fails, form a specific hypothesis about the cause, test that hypothesis (not "poke around"), and only then fix it. Skipping straight to "fix" without reproducing first is how bugs get patched at the symptom and come back a week later somewhere else.
 

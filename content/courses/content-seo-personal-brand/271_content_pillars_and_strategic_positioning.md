@@ -1,8 +1,5 @@
 # 271. Content Pillars & Strategic Positioning
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Content_Engine_Rules material (content-pillars.md, content-engine-master.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Content pillars are the small set of recurring themes — usually four to six — that a technical person publishing content should be known for, on purpose, instead of by accident. Without pillars, content becomes a diary of whatever crossed your mind that day: a hot take on a framework, a link to an article, a vague "excited to share" post. With pillars, every piece of content has to answer a question before it gets written: which of my four or five themes does this serve, and which audience does it move closer to hiring or referring me?
 

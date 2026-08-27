@@ -1,8 +1,5 @@
 # 190. Lead Intake, CRM Hygiene & Acquisition Metrics
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 The first reply to any inbound message is part of the sale, not a formality before it. The formula is fixed: acknowledge the message, state that you understand it at a high level, ask five to eight targeted questions (or send an intake form), and explain what happens after the answers come back. What that first reply must never do is quote a price, and it must never cross the free-consulting boundary — a safe answer describes categories of work in general terms ("this likely needs authentication, admin workflows, and deployment"), while an unsafe one hands over a full schema, stack decision, or step-by-step implementation plan before anyone has committed to anything. The exact wording flexes slightly by source — a LinkedIn inquiry, a referral, a vague "can you build this," and a message with an obvious low-budget signal each get a slightly different opening line — but the underlying structure never changes.
 

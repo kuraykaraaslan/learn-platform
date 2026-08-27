@@ -1,8 +1,5 @@
 # 50. Multi-Tenant Data Isolation Models
 
-## Coverage Level
-**Covered** — Your architecture implements the strongest isolation model: a separate physical database per tenant, dynamically provisioned via TypeORM DataSource. Your `libs/typeorm/` directory contains `system.ts` and `tenant.ts` DataSource configurations, and your session service resolves the correct tenant DataSource at request time. This is the architecture that enterprise customers demand and that makes tenant-level backup, deletion, and compliance straightforward. This section explains why this is the right choice, the trade-offs you accepted, and the advanced operational patterns that come next.
-
 ## What It Is
 Multi-tenancy is the property of a single deployment serving multiple independent customers (tenants) with data isolation between them. There are three common models, each with a different isolation boundary.
 

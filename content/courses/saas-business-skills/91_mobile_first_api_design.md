@@ -1,8 +1,5 @@
 # 91. Mobile-First API Design — Bandwidth, Offline-First Thinking
 
-## Coverage Level
-**Partial** — Your stateless JWT design and RESTful API structure are inherently mobile-compatible. What is missing is bandwidth-conscious response shaping, offline-first data synchronization patterns, and the specific API design decisions that differentiate good mobile API design from a web API that a mobile app happens to use.
-
 ## What It Is
 Mobile-first API design is the practice of designing server-side APIs with the constraints of mobile clients as a primary concern rather than an afterthought. Mobile clients differ from browser clients in three significant ways: bandwidth is limited and expensive, network connectivity is intermittent (users go through tunnels, elevators, and weak signal areas), and battery life means you cannot afford to keep a WebSocket open or poll every 30 seconds. APIs designed without these constraints in mind work fine in development but degrade significantly in real-world mobile conditions.
 

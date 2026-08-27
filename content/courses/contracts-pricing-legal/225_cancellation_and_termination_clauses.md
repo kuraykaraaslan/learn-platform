@@ -1,8 +1,5 @@
 # 225. Cancellation and Termination Clauses
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Not every project finishes the way it started, and the projects that end badly are exactly the ones where nobody wrote down what "ending badly" actually means in advance. Termination clauses aren't a pessimistic addition to a contract — they're the part of the document that protects both sides precisely when goodwill is running lowest and clear terms matter most. Without one, a canceled project turns into an argument about what's owed, whether a deposit is refundable, and whether source code gets released despite an unpaid invoice, decided in the moment, under stress, with neither side's interests well served.
 

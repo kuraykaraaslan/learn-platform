@@ -1,8 +1,5 @@
 # 332. The Paid Audit as a Sales and Risk-Reduction Tool
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 A paid audit is a small, bounded diagnostic engagement — a technical debt review, a performance and security check, an SEO review, a pre-launch readiness check — sold as a standalone product rather than folded into a larger proposal. It solves two problems at once: it gives a skeptical or budget-cautious prospect a low-commitment way to start working with you, and it gives you a real look inside a system before committing to a large fixed-price quote against unknowns.
 

@@ -1,8 +1,5 @@
 # 44. Soft Delete Pattern — Problems and Alternatives
 
-## Coverage Level
-**Partial** — Your codebase likely implements soft deletes (a `deletedAt` timestamp pattern) given your multi-tenant data model and audit requirements, though the exact implementation is not visible. The pattern is common and reasonable in SaaS contexts, but it introduces subtle problems that most implementations handle incompletely: unique constraint violations on re-registration, query performance degradation as the soft-deleted row count grows, and data retention obligations conflicting with "never really deleted" storage.
-
 ## What It Is
 Soft delete is the practice of marking records as deleted (via a `deletedAt` timestamp or `isDeleted` boolean) rather than issuing a `DELETE` statement. The row stays in the database, but queries filter it out. The appeal is obvious: you can undo deletions, audit history is preserved, and foreign key references remain valid. The tradeoff is that you are conflating two distinct states — "this record exists" and "this record has been logically removed" — in a single table.
 

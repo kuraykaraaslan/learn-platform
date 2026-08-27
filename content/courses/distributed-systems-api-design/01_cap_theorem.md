@@ -1,8 +1,5 @@
 # 1. CAP Theorem
 
-## Coverage Level
-**Partial** — You understand the theoretical tradeoffs from reading architectural rulesets, but there are no documented decision records showing how CAP influenced specific choices in your multi-tenant SaaS (e.g., why Redis sessions are AP, or why your PostgreSQL setup is CA).
-
 ## What It Is
 CAP Theorem states that a distributed data system can only guarantee two of three properties simultaneously: **Consistency** (every read receives the most recent write or an error), **Availability** (every request receives a non-error response, though it may not be the most recent write), and **Partition Tolerance** (the system continues operating despite arbitrary network partitions between nodes). Because network partitions are a physical reality in any distributed system, you effectively choose between CP and AP, not between all three.
 

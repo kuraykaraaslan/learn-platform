@@ -1,8 +1,5 @@
 # 269. Scope Ladders: Included-by-Default vs. Priced Add-Ons
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management/Documentation_and_Handover/Customer_Success_and_Support/Client_Delivery_Playbooks material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Lesson 267 introduced the delivery playbook as the internal record of how a recurring project type gets discovered, scoped, priced, and delivered. The scope ladder is the pricing-facing half of that playbook, and it deserves its own attention because it's the tool that turns "can we also get X" from an improvised negotiation into an instant, consistent answer. A scope ladder is a two-tier list built for a specific project type: everything included by default in the base price, and everything commonly requested but excluded, each pre-priced as an add-on. When a client asks for something on the excluded list, the answer isn't a fresh estimate built from scratch under time pressure — it's a number you already decided, calmly, before this particular client ever asked.
 

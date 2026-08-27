@@ -1,8 +1,5 @@
 # 316. Cash Flow and Runway: Why Profit Isn't Cash
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Finance_and_Operations_Rules material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Cash flow is the timing of money moving in and out of your business — not the total amount you've earned or spent, but when each amount actually clears your account. A project can be profitable on paper and still sink you, because a signed €15,000 contract with a "100% on delivery" payment term produces zero cash for the eight weeks you're building it, while your hosting bill, your accountant, and your own rent all come due on their own schedules regardless of when the client pays.
 

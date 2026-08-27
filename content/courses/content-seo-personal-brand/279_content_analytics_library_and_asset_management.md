@@ -1,8 +1,5 @@
 # 279. Content Analytics, Library & Asset Management
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Content_Engine_Rules material (content-analytics-and-review.md, content-library-and-asset-management.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Content analytics for a client-acquisition practice should measure business usefulness, not popularity. Likes are the weakest signal available — a post can rack up likes from an audience with zero buying power while a quieter post that generates one qualified DM does more for the business than either. The metrics worth tracking in order of importance are saves and bookmarks (a signal the content is genuinely useful), comments from the actual target audience (a signal the message resonates with buyers, not just peers), DMs (a signal of trust or curiosity strong enough to start a private conversation), profile and website visits, and ultimately leads and qualified sales conversations. A weekly light review and a monthly deeper review — scoring recent posts on audience fit, specificity, trust signal, engagement quality, and business value — turns this from vague intuition into an actual feedback loop: if engagement is low, the fix is usually a sharper hook, a more concrete example, or a tighter audience focus; if engagement is high but leads are poor, the fix is usually tighter positioning or more proof content, not more volume.
 

@@ -1,8 +1,5 @@
 # 362. Incident Response Process — Detection Through Containment
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
-
 ## What It Is
 A security or privacy incident is a different animal from a normal production outage, and it needs a different first response even though both eventually get written up afterward. Blameless Post-Mortem (course #79) covers the retrospective — timeline reconstruction, contributing factors, action items — for any significant failure, technical or otherwise. This lesson covers what happens *before* that retrospective is written: the specific, time-pressured flow for suspected unauthorized access, data exposure, account takeover, or any event where personal or sensitive data might be involved, where the first hour's actions determine whether evidence survives and whether the exposure gets worse. Incidents in this category include unauthorized admin access, account takeover, a data export or leak, a public storage bucket exposure, lost or deleted data, upload/malware abuse, payment or webhook manipulation, secrets committed or exposed in a repository, and third-party provider compromise — a broader list than "the site is down."
 

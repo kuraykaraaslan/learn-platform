@@ -1,8 +1,5 @@
 # 406. Spring Boot: Service Layer Beans and @Transactional Scoping
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_SpringBoot material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 A Spring Boot `@Service` is a container-managed bean, not a static class called directly — and that distinction is the whole reason `@Transactional` works. Spring implements `@Transactional` (and `@PreAuthorize`, and most other declarative behavior) using a runtime proxy that wraps the bean: when another bean calls a `@Transactional` method through the injected reference, the call actually goes through the proxy first, which opens a transaction, invokes the real method, and commits or rolls back afterward. A `static` method, or a call from *within the same class* to one of its own `@Transactional` methods, bypasses this proxy entirely — the annotation is present in the source but has no effect at runtime. This single mechanism explains three of the most common "why doesn't this work" moments for anyone arriving from Express, where services are plain static classes with no proxy in the picture at all.
 

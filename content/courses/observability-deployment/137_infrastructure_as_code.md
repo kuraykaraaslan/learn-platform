@@ -1,8 +1,5 @@
 # 137. Infrastructure as Code — Terraform / Pulumi
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Dockerfile Best Practices (#58) and Kubernetes Fundamentals (#59) cover what runs; this covers the layer that provisions where it runs — the VPC, the database, the load balancer — and was missing entirely.
-
 ## What It Is
 Infrastructure as Code means defining cloud resources (networks, databases, compute, DNS records) as versioned, reviewable code instead of manual console clicks that leave no history and no diff. The core workflow is **declarative**: you describe the desired end state ("an RDS Postgres instance, this size, in this subnet"), and the tool (Terraform, Pulumi, CloudFormation) computes the difference between that and reality, then applies only the changes needed — you don't script the individual steps to get there.
 

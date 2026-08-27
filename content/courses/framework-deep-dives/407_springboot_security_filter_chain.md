@@ -1,8 +1,5 @@
 # 407. Spring Boot: Security Filter Chain, CORS, and Rate Limiting
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_SpringBoot material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Where Express builds its middleware pipeline as an explicit, ordered list of `app.use(...)` calls, Spring Security assembles an equivalent pipeline declaratively through a `SecurityFilterChain` bean — but the underlying concern is identical: every request passes through an ordered sequence of filters before it reaches a controller, and getting that order wrong produces the same class of bug in both frameworks (a route that's supposed to be protected isn't, or rate limiting fires after the expensive work it was meant to prevent). In this stack the declared order is CSRF handling, CORS, stateless session policy, security headers (the Spring Security equivalent of Express's Helmet), route-level `authorizeHttpRequests` rules, and finally two custom filters — rate limiting and JWT authentication — both inserted with `addFilterBefore` ahead of Spring's own authentication processing.
 

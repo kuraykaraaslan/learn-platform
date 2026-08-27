@@ -1,8 +1,5 @@
 # 95. Publishing and Maintaining Your Own Open Source Tool
 
-## Coverage Level
-**Not Covered** — Your multi-tenant SaaS boilerplate is a prime candidate for open-sourcing selectively. Publishing even one module (e.g., a tenant isolation middleware or a provider-agnostic payment abstraction) would build visibility in your niche and attract the exact client profile you want.
-
 ## What It Is
 Publishing your own open source tool means taking something you built for your own use, extracting it into a reusable form, and releasing it publicly under an open source license. The "tool" does not have to be ambitious — a well-documented npm package that solves one specific problem well is more impactful than a poorly-documented framework that attempts to solve ten. The goal is not to build the next React; it is to be visible and credible in the specific technical niche you occupy.
 

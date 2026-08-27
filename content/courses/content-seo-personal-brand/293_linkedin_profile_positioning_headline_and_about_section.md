@@ -1,8 +1,5 @@
 # 293. LinkedIn Profile Positioning, Headline and About Section
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' LinkedIn_Authority_Rules material (profile-positioning.md, headline-and-about-section.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 A LinkedIn profile has one job in the first few seconds a visitor spends on it: making the visitor instantly understand who you help, what problem you solve, what you build, why you're credible, and what to do next. Most technical profiles fail this test by leading with a generic stack list ("Full-stack developer | React | Node.js | PostgreSQL") — technically accurate, and completely uninformative about who should care. The fix is a positioning formula: "I help \<target client\> achieve \<outcome\> by building \<solution category\> with \<method/proof\>," which forces the profile to name a buyer and an outcome before it ever gets to the stack. The message hierarchy that should follow from this is deliberate: business outcome first, types of systems built second, delivery credibility third, technical stack fourth, proof/portfolio fifth, call to action last — leading with the stack instead of the outcome is the single most common positioning mistake on technical LinkedIn profiles.
 

@@ -1,8 +1,5 @@
 # 246. Communicating Timelines and Delays to Clients
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management_Rules/timeline-and-estimation.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 A timeline is a planning tool built on assumptions, not a promise carved in stone — and the gap between those two framings is where most client trust gets damaged. A single hard date, delivered with false confidence and no stated assumptions, sets up a specific kind of failure: the moment reality diverges from the unstated assumption (the client was slow to provide content, a third-party integration turned out to be more complex than expected), the client experiences it as a broken promise rather than a normal risk that was simply never surfaced. Giving a range, with explicit assumptions and dependencies attached, changes what a delay later means — it becomes an anticipated risk materializing, not a surprise failure.
 

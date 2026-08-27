@@ -1,8 +1,5 @@
 # 217. IP Assignment and Source Code Ownership
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 In essentially every legal system, the person who writes code owns it by default the moment it's created — including you, when a client pays you to build their product. Payment alone does not transfer ownership anywhere. Only a written, signed clause does that. Without one, a client who has paid in full technically doesn't own the deliverable outright, and a contractor you've hired could, in theory, reuse the same code for a competitor or resist final delivery. This is the single highest-stakes clause in any software contract, and it's also one of the easiest to get right, because the fix is just explicit language, agreed in advance.
 

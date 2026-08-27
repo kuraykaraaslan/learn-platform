@@ -1,8 +1,5 @@
 # 251. Access, Credentials, and Environment Handover
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Documentation_and_Handover_Rules/access-and-credential-handover.md and environment-and-configuration-docs.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Access handover has one rule that overrides everything else: document ownership and location, never document the actual secret. A markdown file, a chat message, and a shared spreadsheet with open access are all unsafe places for a real password, API token, or private key — not because they're inconvenient, but because they create a durable, searchable, easily-leaked record of something that should be rotatable and revocable. The client needs to know what they own, what the developer can still access after handover, and which credentials should be rotated the moment ownership changes hands — and all three of those facts can be documented completely without ever writing down a real secret.
 

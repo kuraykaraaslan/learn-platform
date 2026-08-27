@@ -1,8 +1,5 @@
 # 421. Electron: Process Model and Typed IPC Channels
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Electron material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Electron ships three distinct processes, and the single most important architectural decision in a desktop app is treating the boundary between them as a real trust boundary rather than an implementation detail. The **main** process is Node — it owns the app lifecycle, windows, the filesystem, the network, the OS keychain — and it must never trust input from the renderer without validating it. The **renderer** is Chromium, sandboxed, and treated exactly like an untrusted web page: it never touches Node, `fs`, a database, or outbound HTTP to internal services directly. The **preload** script is the sole bridge between them, and its only job is to expose a small, explicit, typed API via `contextBridge` — never business logic, and never the raw `ipcRenderer` object itself. This is a fundamentally different mental model than a web app's client/server split: in Electron, the "client" (renderer) runs on the same machine as the "server" (main), which makes it *more* tempting to skip the validation a real network boundary would force — and exactly why skipping it is more dangerous, not less.
 

@@ -1,8 +1,5 @@
 # 106. Event Streaming — Kafka vs BullMQ: When to Choose
 
-## Coverage Level
-**Partial** — You have BullMQ wired up (`libs/redis/bullmq.ts`) and understand job queues. The paradigm difference between job queues and event logs — and when you've outgrown BullMQ — is the gap.
-
 ## What It Is
 BullMQ and Kafka solve different problems. BullMQ is a job queue: you push a task, a worker picks it up, processes it, and it's gone. Kafka is an event log: you publish an event, it's durably stored in an ordered log, and any number of consumers can read it — including consumers that didn't exist when the event was published, reading from any point in history.
 

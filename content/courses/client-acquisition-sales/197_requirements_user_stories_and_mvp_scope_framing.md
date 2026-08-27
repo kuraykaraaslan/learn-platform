@@ -1,8 +1,5 @@
 # 197. Requirements, User Stories & MVP Scope Framing
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Discovery notes are conversational and loose by nature; requirements have to be specific enough to estimate, prioritize, and eventually test, which means converting one into the other is its own discipline rather than a formatting exercise. The user-story shape — "as a \<role\>, I want to \<action\>, so that \<benefit\>" — forces every requirement to name who benefits and why, which immediately exposes vague requests: "modern dashboard," "secure login," and "good UI" can't actually be written as a real user story, because there's no role and no concrete action behind them, only an adjective. Acceptance criteria in "given/when/then" form does the same forcing function on testability: "given an admin is creating an event, when required fields are missing, then the system prevents publishing and shows field-level validation errors" is something that can be checked as true or false, where "the form should validate properly" can't be. Every serious requirement carries a role, an action, a business rule, acceptance criteria, a priority, and its own open questions — and a priority scheme with real teeth (P0 required for a usable first release, P1 important but not launch-blocking, P2 nice-to-have, P3 a future idea with no commitment) only works if P0 is actually rare. A requirement list where everything is P0 hasn't been prioritized at all; it's a wishlist wearing prioritization's clothes.
 

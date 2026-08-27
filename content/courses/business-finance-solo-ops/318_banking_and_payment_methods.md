@@ -1,8 +1,5 @@
 # 318. Banking, Payment Methods, and Currency Reconciliation
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Finance_and_Operations_Rules material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Every payment method you accept — bank transfer, Wise, Payoneer, Stripe, PayPal — has a different fee structure, settlement speed, currency behavior, and paper trail. A freelancer who accepts "whatever's convenient for the client" without standardizing on a small set of methods ends up reconciling five different systems, each with its own fee deduction and exchange-rate quirk, and eventually loses track of which invoice a given incoming transfer actually corresponds to.
 

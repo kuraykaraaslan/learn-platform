@@ -1,8 +1,5 @@
 # 227. Contract Risk Red Flags
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Some opportunities cost more than they pay, and the warning signs are usually visible before any work starts — the hard part is not the diagnosis, it's acting on it while a prospect is still enthusiastic and the freelancer is worried about losing the deal. A short, memorized list of critical red flags — no deposit, payment only after full launch, unlimited revisions, scope to be "defined during development," no written agreement, no single decision maker, source code released before final payment, a large unclear scope paired with an urgent deadline — turns a vague uneasy feeling into a concrete, nameable risk that can be addressed directly instead of rationalized away.
 

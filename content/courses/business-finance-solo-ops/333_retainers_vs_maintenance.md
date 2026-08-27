@@ -1,8 +1,5 @@
 # 333. Retainers vs. Maintenance: Designing Recurring Revenue Tiers
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 "Retainer" and "maintenance" get used interchangeably in casual conversation, but they should be structurally different products. Maintenance means keeping a delivered system stable and current — dependency updates, minor bug fixes, hosting checks, backup verification, a monthly health report — and explicitly excludes new modules, redesigns, or major integrations. A retainer, by contrast, is ongoing development, improvement, or advisory capacity — ​new features within a monthly hour budget, UX refinements, roadmap review — priced and scoped as continuing work, not just upkeep.
 

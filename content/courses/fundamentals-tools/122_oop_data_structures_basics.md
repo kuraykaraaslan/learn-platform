@@ -1,8 +1,5 @@
 # 122. OOP & Basic Data Structures
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Self-check: can you explain, with a concrete example, why "favor composition over inheritance" is the default advice — not why inheritance is banned?
-
 ## What It Is
 SOLID Principles (#64) assumes you already have this vocabulary: classes as a bundle of state + behavior, encapsulation as hiding internal state behind a controlled interface, and the inheritance-vs-composition choice as the first real design decision you make when two classes share behavior. Inheritance ("is-a") is tempting because it's built into the language, but it creates tight coupling — a change to the base class can silently break every subclass (the "fragile base class" problem). Composition ("has-a") — building a class out of smaller, injected collaborators — is more verbose up front but far more flexible, which is exactly the shape Dependency Injection (#66) formalizes.
 

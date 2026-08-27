@@ -1,8 +1,5 @@
 # 281. Search Intent, Topic Clusters and Keyword Query Mapping
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (search-intent-and-topic-clusters.md, keyword-research-and-query-mapping.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Search visibility should be organized around topics and buyer intent, not a scattered list of keywords. A topic cluster is a pillar page (usually a service page) surrounded by supporting pages, case studies, and FAQ/answer content, all internally linked and pointed at one conversion page. Instead of asking "what keyword should I target," the better question is "what problem do I want to be known for solving, and what does someone need to read, in what order, before they trust me enough to buy?" A cluster for "Custom SaaS MVP Development" might include supporting pages on scope checklists, authentication architecture, and payment-integration risk, plus a case study and one clear "request a scope review" conversion page — each piece earns its own search traffic while reinforcing the pillar.
 

@@ -1,8 +1,5 @@
 # 340. Scaling with Contractors Without Losing Quality
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Bringing in a contractor — a designer, a QA specialist, a second developer — can increase capacity, but it introduces quality, communication, margin, and reputation risk that a solo operator absorbs personally, because the freelancer remains accountable for final quality unless the client has directly and separately contracted that person. Delegation done carelessly doesn't multiply capacity; it multiplies risk under your own name.
 

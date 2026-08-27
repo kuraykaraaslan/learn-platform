@@ -1,8 +1,5 @@
 # 124. Writing Your First Unit Tests — Assertions & Mocking Basics
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. This is the atomic building block beneath the Test Pyramid (#71) and TDD (#74). Self-check: can you explain what makes a test brittle vs resilient, in your own words?
-
 ## What It Is
 A unit test verifies one small piece of behavior in isolation, structured as Arrange (set up inputs/state) → Act (call the thing) → Assert (check the outcome). The "in isolation" part is what makes it a *unit* test rather than an integration test: any collaborator that talks to the outside world (a database, an API, the filesystem) gets replaced with a test double so the test is fast, deterministic, and only fails when the unit itself is wrong.
 

@@ -1,8 +1,5 @@
 # 116. Legal Literacy for Software Contracts
 
-## Coverage Level
-**Not Covered** — You have Contract_and_Scope_Rules but the underlying legal clauses — what they mean and which ones protect you — haven't been formalized.
-
 ## What It Is
 Software developers sign contracts that transfer significant rights and create significant liabilities, often without understanding what they've agreed to. You don't need a law degree. You need to understand the 5–6 clauses that actually matter in a software development contract and know what position to negotiate from.
 

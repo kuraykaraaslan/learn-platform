@@ -1,8 +1,5 @@
 # 330. Pricing for Margin, Not Just Revenue
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Price protects the business, or it doesn't — and a project that looks profitable at the proposal stage frequently becomes unprofitable once revisions, meetings, deployment, support, and opportunity cost are counted honestly. The single biggest pricing mistake a solo operator makes is pricing only by estimated coding hours, which ignores everything else a project actually costs: analysis and planning, communication, QA and revision cycles, deployment and handover, a support buffer, technical and client risk, opportunity cost, the tax/reserve impact, tool costs, and the profit margin that's supposed to be the point of doing this at all.
 

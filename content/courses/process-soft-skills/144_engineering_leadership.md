@@ -1,8 +1,5 @@
 # 144. Engineering Leadership — Team Management, 1:1s, Performance Reviews
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Mentorship (#80) covers guiding one person's technical growth; this is the distinct, broader skill of actually managing a team — direct reports, feedback, hiring — for the IC-to-management transition.
-
 ## What It Is
 The core mistake engineers make transitioning into leadership is treating it as "mentorship, but for more people" — it isn't. Management adds responsibilities that have no individual-contributor equivalent: running **1:1s** that belong to the report, not the manager (a status update disguised as a 1:1 wastes the one regular time carved out for what the report actually needs to raise); giving **calibrated feedback** — specific, timely, aimed at a behavior rather than a personality trait, delivered close to the moment it's relevant instead of saved up for an annual review where it's too late to act on; and owning outcomes (a team's delivery, a person's growth) that can only be influenced indirectly, through other people's work, not controlled directly the way your own code always was.
 

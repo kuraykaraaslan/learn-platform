@@ -1,8 +1,5 @@
 # 156. Fallback and Graceful Degradation for AI Calls
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/fallback-and-error-handling.md material; no existing coverage data for your own practice.
-
 ## What It Is
 An AI API call has more failure modes than a typical internal service call, and each one calls for a different response — treating them all as "the AI call failed, show an error" throws away information that would let the system recover more gracefully. Transient errors (overloaded, 500s) should retry with backoff; rate limits (429) should retry after the specified delay; input validation failures (prompt too long) should fail immediately without retrying, since retrying an invalid request just wastes time; and content-filtered refusals should surface a specific message and never be retried, because retrying doesn't change whether the model considers the request policy-violating.
 

@@ -1,8 +1,5 @@
 # 214. Change Request Control
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Clients change their minds. That's not a red flag — it's what happens when real users, real data, and real business pressure start touching a project that used to be theoretical. The mistake isn't the change; it's treating every change as either a fight to refuse or a favor to grant for free. Change request control is the professional middle path: any request outside the approved SOW becomes one of four decisions — accept within existing scope, replace an existing scoped item, defer to a future phase, or price as a paid change request — and, occasionally, reject outright as unsuitable.
 

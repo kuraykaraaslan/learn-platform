@@ -1,8 +1,5 @@
 # 244. Feedback Triage: Bug vs Change Request
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Customer_Success_and_Support_Rules/bug-vs-change-request.md and Project_Management_Rules/client-feedback-management.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 When a client says "this is broken," they are describing a symptom, not a category. The developer's job is to classify what actually happened before responding — because the response, the cost, and who owns the fix are completely different depending on whether it's a bug, a change request, an enhancement, a configuration issue, a training issue, or a third-party problem. Accepting the client's own label at face value is the single most common way scope quietly erodes: everything gets called a "bug" because bugs are free, and the developer either absorbs unpaid new work or has an uncomfortable conversation later that would have been easy earlier.
 

@@ -1,8 +1,5 @@
 # 290. Content Operations at Scale: Programmatic SEO, Refresh and Search Console Review
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (programmatic-seo-and-scaled-pages.md, content-refresh-and-decay.md, search-console-and-bing-webmaster-review.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Publishing content isn't a one-time act — it's the start of an ongoing operations loop that includes creating pages at scale responsibly, maintaining pages that already exist, and reading the data that tells you which of those two things to prioritize this month. Programmatic SEO — generating many pages from a template, data model, or category structure — can create genuinely useful coverage (a technical glossary with expert definitions, a component/pattern library, API documentation, service-specific checklists), but it's also the fastest way to pollute a small site's index with thin, duplicate, or manipulative pages if every generated page doesn't clear a real quality gate first: unique intent, unique useful content, a clean URL, a deliberate indexability decision, internal links in and out, real metadata, and schema where relevant. Pages that fail the gate should be noindexed, merged, improved, or simply never published — the test is always "does only the keyword change between this page and its siblings," and if the answer is yes, the page shouldn't exist.
 

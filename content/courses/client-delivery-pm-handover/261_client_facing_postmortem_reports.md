@@ -1,8 +1,5 @@
 # 261. Client-Facing Postmortem Reports
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Customer_Success_and_Support_Rules/postmortem-client-communication.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 By the time an incident is resolved, the technical fire is out but a different question is now open in the client's mind: can I still trust this person to run my system? The postmortem is the document that answers that question, and it is not a punishment, not a full technical root-cause analysis with stack traces, not a defensive attempt to minimize what happened, and not an excessive apology letter. It's a professional summary written for a business audience, and a well-written one after a genuinely bad incident can strengthen a relationship — while a missing or vague one after the same incident can end it.
 

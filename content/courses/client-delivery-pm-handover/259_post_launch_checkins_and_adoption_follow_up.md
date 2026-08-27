@@ -1,8 +1,5 @@
 # 259. Post-Launch Check-Ins and Adoption Follow-Up
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Customer_Success_and_Support_Rules/adoption-and-usage-follow-up.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 A project can be technically complete, pass every quality gate, and still fail — not because anything is broken, but because the people it was built for never actually adopted it. Deployment is not the same claim as adoption, and measuring success only by "is it live" misses the entire category of failure where a system works perfectly and sits mostly unused while staff quietly keep updating the old spreadsheet on the side. Adoption follow-up exists to check the thing quality gates can't check: is this actually producing value for real users doing real work.
 

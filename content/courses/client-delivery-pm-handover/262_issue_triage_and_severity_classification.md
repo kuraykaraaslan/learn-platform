@@ -1,8 +1,5 @@
 # 262. Issue Triage and Severity Classification
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Customer_Success_and_Support_Rules/issue-triage-and-severity.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Not every reported problem deserves the same response speed, and triage exists to make that judgment explicitly instead of reacting to whichever message arrived most recently or sounded most urgent in tone. A minor cosmetic issue reported in a panicked message and a genuine production outage reported calmly both need to go through the same classification step before anyone starts fixing anything — because starting to code before triage, unless the system is obviously down, risks solving the wrong problem first while something more severe waits unaddressed.
 

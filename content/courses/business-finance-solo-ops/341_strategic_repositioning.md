@@ -1,8 +1,5 @@
 # 341. Repositioning Your Business for Higher-Value Work
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Strategic repositioning is the deliberate act of changing what the market believes you are best at, so that you can charge more and attract better-fit clients. It is not a rebrand or a new logo — it is a shift in the sentence a prospect would use to describe you, from something generic ("I build websites and apps") to something specific and valuable ("I help a specific buyer solve a specific high-value problem with a repeatable process"). Four common moves cover most solo software businesses: generic developer to product partner, website builder to business platform builder, one-off freelancer to technical partner, and solo freelancer to solo-led studio. Each requires a different kind of proof to be credible.
 

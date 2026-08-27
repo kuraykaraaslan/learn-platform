@@ -1,8 +1,5 @@
 # 146. When to Add an AI Feature
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/ai-integration-master.md material; no existing coverage data for your own practice.
-
 ## What It Is
 The most expensive mistake in applied AI engineering happens before a single API call is written: deciding to use a language model for a problem that a regex, a lookup table, or a plain `if` statement would solve more cheaply, more reliably, and with zero hallucination risk. LLMs are probabilistic text generators — even a well-prompted, well-evaluated model will occasionally produce a wrong or malformed answer. Deterministic code doesn't have that failure mode. The engineering discipline here is treating "should this be AI at all" as a real design decision with a rejection criterion, not a default reach because the API is easy to call.
 

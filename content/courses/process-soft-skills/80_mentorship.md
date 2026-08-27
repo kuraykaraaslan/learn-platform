@@ -1,8 +1,5 @@
 # 80. Mentorship — Pair Programming Structure, Junior Guidance
 
-## Coverage Level
-**Not Covered** — As you scale from solo to leading contractors or a small team, your ability to multiply your technical judgment through others is the skill that determines whether you can grow without becoming the bottleneck.
-
 ## What It Is
 Mentorship in a software context is the practice of deliberately accelerating another developer's growth through structured interaction — pair programming, code review feedback, guided problem-solving, and career conversation. It is distinct from management (which focuses on outcomes and accountability) and from teaching (which is one-directional). Mentorship is interactive and iterative: you help someone develop their own judgment, not just their ability to follow your instructions.
 

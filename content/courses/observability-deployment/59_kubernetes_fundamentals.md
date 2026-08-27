@@ -1,8 +1,5 @@
 # 59. Kubernetes Fundamentals — Pod, Service, Ingress, HPA
 
-## Coverage Level
-**Not Covered** — The project has no Kubernetes manifests. This is the operational layer that makes containerized apps production-grade.
-
 ## What It Is
 Kubernetes (K8s) is a container orchestration platform: it runs your Docker containers across a cluster of machines, restarts them when they crash, scales them when traffic increases, and routes traffic to healthy instances. It is the dominant production runtime for containerized applications.
 

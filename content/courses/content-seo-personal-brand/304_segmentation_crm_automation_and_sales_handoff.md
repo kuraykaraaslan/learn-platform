@@ -1,8 +1,5 @@
 # 304. Segmentation, CRM Automation & Sales Handoff
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Newsletter_and_Email_Nurture_Rules material (segmentation-and-tags.md, automation-and-crm-workflows.md, sales-readiness-and-handoff.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 A solo freelancer doesn't need enterprise marketing automation, but still needs to know who's receiving what and why — which is what a small, disciplined tagging system provides. Every contact should carry at least four tag categories: a source tag (website, LinkedIn, lead magnet, referral, past client), a relationship tag (subscriber, lead, warm lead, client, partner, referrer), an interest tag (SaaS MVP, admin panel, workflow automation, technical audit), and a stage tag (new subscriber, nurture, discovery-ready, proposal, client, do-not-email). Broad newsletters go to general subscribers; targeted sequences go only where interest is actually known — a maintenance offer goes to `rel:past-client`, not to everyone. The moment a person replies or shows serious intent, the manual override rule kicks in: stop treating them as an anonymous segment and move them into CRM lead handling immediately, because segmentation is a tool for managing people at scale, not a reason to keep treating an individual conversation like a mass broadcast.
 

@@ -1,8 +1,5 @@
 # 102. Edge Computing — Vercel Edge Functions, Cloudflare Workers
 
-## Coverage Level
-**Not Covered** — You deploy on Vercel and use Next.js middleware, but only for basic path-based routing; you haven't considered what belongs at edge vs. the Node.js runtime, and you haven't used Cloudflare Workers at all.
-
 ## What It Is
 Edge computing executes code at CDN PoPs (Points of Presence) geographically close to the user — typically 50–100 ms RTT from anywhere on Earth, vs. 200–400 ms to a single-region server. The trade-off is a severely restricted runtime: no Node.js built-ins, no native modules, no filesystem, no long-lived TCP connections, and typically no Prisma (which requires a TCP socket to PostgreSQL). Vercel Edge Functions and Cloudflare Workers both run the V8 isolate model — a lightweight sandboxed JS context that cold-starts in <5 ms vs. a Node.js Lambda that may take 200–800 ms.
 

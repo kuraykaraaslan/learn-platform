@@ -1,8 +1,5 @@
 # 103. Browser Internals — Rendering Pipeline, V8, Event Loop, Memory
 
-## Coverage Level
-**Not Covered** — You build React UIs and use Next.js streaming, but you don't profile browser behavior, reason about rendering bottlenecks, or understand why certain patterns cause jank or memory growth.
-
 ## What It Is
 The browser is a deterministic machine with a well-documented execution model. When you don't understand it, you write code that works fine at small scale and degrades unpredictably under real usage — layout thrashing, 300 ms frame drops on scroll, hidden memory leaks that crash long-lived tabs. Understanding the rendering pipeline, event loop, and V8 optimization model turns "it feels slow" into a specific, fixable diagnosis.
 

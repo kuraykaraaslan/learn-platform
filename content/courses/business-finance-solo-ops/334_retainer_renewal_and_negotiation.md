@@ -1,8 +1,5 @@
 # 334. Retainer Renewal, Renegotiation, and Graceful Cancellation
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 A retainer that's allowed to just quietly continue or quietly lapse is a retainer being managed by default rather than by design. Renewal needs to be initiated proactively — 30 days before the end date for retainers under six months, 60 days before for longer ones — because waiting for the client to raise it first signals disorganization exactly when you'd want to project the opposite.
 

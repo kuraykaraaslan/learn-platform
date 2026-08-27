@@ -1,8 +1,5 @@
 # 3. Saga Pattern (Orchestration vs Choreography)
 
-## Coverage Level
-**Not Covered** — Your boilerplate handles multi-step operations (e.g., user registration + tenant creation + email send) as sequential awaits in a single service method, with no compensation logic if a later step fails.
-
 ## What It Is
 A Saga is a pattern for managing distributed transactions — sequences of local transactions where each step produces a side effect and, if a later step fails, previously completed steps are undone using compensating transactions. The classic example: a user upgrades their subscription, which triggers a charge, which triggers a seat allocation, which triggers a welcome email. If the seat allocation fails after the charge succeeds, you need to issue a refund. A Saga makes that compensation explicit and reliable.
 

@@ -1,8 +1,5 @@
 # 26. Streaming SSR and Suspense Boundaries
 
-## Coverage Level
-**Not Covered** — You use the Next.js App Router but render pages as static or fully-blocking async components with no streaming or Suspense boundaries.
-
 ## What It Is
 Streaming SSR is the ability to send HTML to the browser in chunks rather than waiting for the entire page to be ready. Instead of your server building a complete HTML document and flushing it all at once, it opens a persistent HTTP connection and pushes chunks down as they become ready. React 18 introduced first-class support for this through `Suspense` boundaries: any component tree wrapped in `<Suspense>` can be "deferred" — the rest of the page streams immediately, and the deferred chunk streams in when its data resolves.
 

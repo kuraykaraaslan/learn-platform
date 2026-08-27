@@ -1,8 +1,5 @@
 # 232. Contractor Performance Issues and Offboarding
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Performance problems with a subcontractor rarely start as crises — they start as one missed check-in or one deliverable that's a bit below the agreed quality bar. How that first signal gets handled determines whether it stays small or becomes a legal and financial mess. The right first move is a direct, specific, written message about the actual issue and a request for a timeline update — not an immediate escalation, and not a phone call or voice message that leaves no record. One missed check-in is information, not a crisis; treating it as a crisis burns trust that might be needed for the rest of the relationship.
 

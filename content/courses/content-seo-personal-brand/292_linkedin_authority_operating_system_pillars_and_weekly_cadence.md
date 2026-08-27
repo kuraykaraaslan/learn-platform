@@ -1,8 +1,5 @@
 # 292. LinkedIn Authority Operating System: Pillars and Weekly Cadence
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' LinkedIn_Authority_Rules material (linkedin-authority-master.md, content-pillars.md, weekly-posting-cadence.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 LinkedIn authority for a solo technical business runs through seven stages — positioning, profile trust, content pillars, consistent publishing, conversation, soft conversion, and measurement — and every action taken on the platform should serve one of six outcomes: being remembered, trusted, referred, contacted, shortlisted, or invited. That framing matters because it rules out a lot of what LinkedIn "growth" advice actually recommends: maximizing likes, chasing virality, or posting generic motivational content are not on that list, and a post with twelve relevant comments from founders, agency owners, and CTOs is worth more than a viral post that reaches the wrong audience entirely. Authority beats virality specifically because the goal is being trusted by the right dozen people, not liked by the wrong ten thousand.
 

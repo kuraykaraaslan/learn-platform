@@ -1,8 +1,5 @@
 # 353. Business Continuity Planning for a Solo Operator
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 A solo operator with client SLA obligations has to accept a specific structural fact: every system, credential, and process has exactly one owner. This is called a bus factor of one, and the honest goal is mitigation, not elimination — you cannot make yourself redundant, but you can make sure no single point of failure exists without a documented fallback, that every critical path has a "degraded mode" buying 48-72 hours, and that clients are told proactively before a commitment breaks, never after. Business continuity planning is the work of naming the realistic threats in advance — illness lasting one to three days, illness beyond three days, a stolen or failed laptop, an internet outage, a power outage, a mental health day, or an extreme weather event — and having a rehearsed response ready for each one rather than improvising during the actual disruption.
 

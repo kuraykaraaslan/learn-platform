@@ -1,8 +1,5 @@
 # 115. Productizing Services — From Hourly to Packaged Offerings
 
-## Coverage Level
-**Not Covered** — You freelance with strong technical assets (the boilerplate). Selling time is the default; productizing is the upgrade.
-
 ## What It Is
 A productized service is a service with a fixed scope, fixed price, and repeatable delivery process. The opposite is custom work: every engagement is scoped from scratch, priced by time, and delivered differently. Custom work scales with hours worked. A productized service scales with the process you've built.
 

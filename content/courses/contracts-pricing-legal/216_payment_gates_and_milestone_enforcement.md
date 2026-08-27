@@ -1,8 +1,5 @@
 # 216. Payment Gates and Milestone Enforcement
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Choosing a pricing model tells the client what they'll pay; payment gates tell both sides when money actually moves and what happens if it doesn't. This is the enforcement layer underneath any pricing model: deposit before work starts, milestone payment before or upon each milestone's acceptance, final payment before production release or full source transfer, and any additional work funneled through an approved change request rather than absorbed for free. Skipping this layer is how a technically well-priced project still turns into unpaid work, because the freelancer ends up financing the client's entire build out of pocket until the very end.
 

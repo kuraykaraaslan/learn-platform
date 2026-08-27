@@ -1,8 +1,5 @@
 # 43. Zero-Downtime Database Migration
 
-## Coverage Level
-**Not Covered** — You use `prisma migrate dev` for schema changes, which works correctly in development but blocks production deployments on any migration that requires a table lock (adding a NOT NULL column, renaming a column, changing a column type). Your multi-tenant architecture compounds this: each tenant has a separate database, so a schema migration must propagate to every tenant database, which takes time and can fail partway through.
-
 ## What It Is
 A zero-downtime database migration is a schema change applied to a live database without dropping queries, locking tables for user-visible durations, or requiring coordinated application downtime. The naive approach — stop the app, run `prisma migrate deploy`, start the app — works for small databases and solo projects but becomes operationally unacceptable as your user base grows and your database size increases. A migration that locks a table with 10 million rows can hold that lock for minutes, dropping every write to that table during that window.
 

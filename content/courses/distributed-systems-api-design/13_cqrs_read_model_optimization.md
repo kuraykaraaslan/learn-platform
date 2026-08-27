@@ -1,8 +1,5 @@
 # 13. CQRS Read Model Optimization (Materialized Views)
 
-## Coverage Level
-**Not Covered** — Your application queries the same normalized tables for both writes and reads. Dashboard and listing queries likely involve multiple JOINs on every request, with no denormalized read models or materialized views to serve expensive queries cheaply.
-
 ## What It Is
 The read model optimization side of CQRS — without the full event sourcing overhead — is about accepting that your normalized write schema is often a poor fit for read queries. A normalized schema minimizes redundancy; a read model maximizes query performance by denormalizing, pre-aggregating, and pre-joining data for specific query patterns. These are different goals, and trying to serve both from the same table often means you serve neither well.
 

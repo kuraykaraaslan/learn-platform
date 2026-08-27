@@ -1,8 +1,5 @@
 # 288. Landing Page, Local and Service SEO
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (landing-page-seo.md, local-and-service-seo.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 A landing or service page carries commercial intent, so it has a harder job than a blog post: it needs to rank *and* convert a qualified visitor, and ranking without converting wastes the traffic entirely. Every service page needs to answer, in order: who is this for, what problem does it solve, what outcome does it create, what's included, what's excluded (boundaries matter as much as inclusions — vague scope creates buyer hesitation and later disputes), what proof exists, what's the process, and what should the visitor do next. The recommended structure — hero with service/audience/outcome, problem section, outcome/value section, inclusions, exclusions, process, proof/case studies, FAQ, CTA — exists specifically to front-load conversion signals instead of burying the CTA under generic "modern, scalable" copy that could describe any developer's page. A common failure is stuffing every service the business offers onto one generic "Services" page; separate, specific service pages ("Custom SaaS MVP Development," "Custom Admin Panel Development") each rank for their own commercial queries in a way one catch-all page never can.
 

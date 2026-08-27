@@ -1,8 +1,5 @@
 # 277. Content Calendar, Cadence & the Pre-Publish Quality Gate
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Content_Engine_Rules material (content-calendar.md, publishing-cadence.md, content-quality-checklist.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 A content calendar's job is to create consistency without turning into a second job — which means the biggest design mistake is planning more than a solo operator can realistically sustain alongside actual client work. The right cadence is the one that survives a busy delivery week, not the one that looks most impressive on paper. A workable default for a solo technical business is two LinkedIn posts a week, one short technical or proof post, one weekly idea-capture/review session, and one repurposing action — with a blog every two to four weeks, a monthly newsletter, and a portfolio or case-study update once a month or per completed project layered on only once that base cadence feels sustainable.
 

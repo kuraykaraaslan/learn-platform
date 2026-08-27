@@ -1,8 +1,5 @@
 # 55. SLO/SLI/SLA — Error Budget Calculation
 
-## Coverage Level
-**Not Covered** — Your boilerplate has no defined reliability targets, no SLI measurement points, and no error budget tracking.
-
 ## What It Is
 SLI, SLO, and SLA form a hierarchy for making reliability commitments precise and actionable. Without them, "the system should be reliable" is a wish. With them, it is a number you can measure, alert on, and budget engineering time against.
 

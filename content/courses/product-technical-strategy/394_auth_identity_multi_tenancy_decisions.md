@@ -1,8 +1,5 @@
 # 394. Auth, Identity, and Multi-Tenancy Architecture Decisions
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Technical_Architecture_Rules material (specifically `auth-identity-and-access-architecture.md` and `multi-tenancy-architecture.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 This lesson sits upstream of RBAC/ABAC implementation and session-token mechanics, which are covered elsewhere in this curriculum's security material. Here, the decisions are: who owns identity, which authentication model actually fits the project, and whether the system needs tenant isolation at all — before any of that gets implemented. The identity questions come first: can users self-register or is invitation required, is social login or SSO actually required by the client's environment or just aesthetically appealing, who owns the identity data, and what happens operationally when a user leaves the organization. For most SME and internal systems, email/password or invitation-based login is genuinely enough — SSO and social login are additions justified by a specific, stated requirement, not defaults reached for because they seem more professional.
 

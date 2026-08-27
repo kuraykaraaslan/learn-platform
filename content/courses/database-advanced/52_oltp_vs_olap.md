@@ -1,8 +1,5 @@
 # 52. OLTP vs OLAP — Analytical vs Transactional Workload Separation
 
-## Coverage Level
-**Not Covered** — Your PostgreSQL databases handle all reads and writes without any separation between transactional and analytical workloads.
-
 ## What It Is
 OLTP (Online Transaction Processing) and OLAP (Online Analytical Processing) describe two fundamentally different ways databases are used, and mixing them on the same instance will eventually hurt both.
 

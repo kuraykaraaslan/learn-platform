@@ -1,8 +1,5 @@
 # 219. NDAs — When and How to Use Them
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 A Non-Disclosure Agreement is a narrower, more specific tool than people often assume. It doesn't govern the whole relationship — payment, deliverables, and IP live in the SOW and the main contract — it exists purely to protect information exchanged before, during, or after that relationship. Two situations call for a standalone NDA rather than folding confidentiality into the main agreement: early-stage conversations where no work agreement exists yet, and cases where a prospect or contractor will be exposed to genuinely sensitive material — a business plan, unreleased product details — before a scope is even finalized. A standalone NDA gets signed before that information is shared, not after.
 

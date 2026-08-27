@@ -1,8 +1,5 @@
 # 428. Electron: Error Handling, Crash Reporting, Performance, and Testing
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Electron material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Electron has three genuinely distinct failure channels, and conflating them produces the wrong response to each: an expected, handled error (a validation failure inside an IPC handler) is not a crash and shouldn't be logged or reported like one; an unhandled JS exception (`uncaughtException` in main, `window.onerror` in the renderer) means a bug slipped past normal error handling and needs investigation; and a native or V8 crash (the process actually died) is a `crashReporter` minidump, a different category entirely from either JS-level failure. The handled-error path reuses the `AppError` concept from the TypeScript house style, but crossing the IPC boundary strips a thrown error of its shape entirely — so a handler never lets a domain error propagate as a throw, catching it and returning a discriminated `Result<T>` envelope instead, with the renderer branching on `res.ok` and reading a `userMessage` field that's deliberately never a raw stack trace or internal file path.
 

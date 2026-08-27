@@ -1,8 +1,5 @@
 # 358. Data Classification & Storage Residency Tiers
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
-
 ## What It Is
 A system cannot protect data it hasn't identified. Before a single database field, log statement, or export endpoint is designed, the data that will flow through it needs a classification — Public, Internal, Personal, Sensitive Personal, Financial/Payment, Credentials/Secrets, Uploaded Files, or Logs/Telemetry — because each class carries a different minimum bar for storage, access, and logging. This is a distinct discipline from a deletion or retention pipeline (which handles what happens to data a user already gave you): classification happens earlier, at design time, and its output is a decision about *whether to collect the field at all*, not just how to eventually delete it. The best protection for a sensitive field is not collecting it in the first place — if a city is enough for the feature, don't collect a full address; if age verification is the goal, don't store a birthdate.
 

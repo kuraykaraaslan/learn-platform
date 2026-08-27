@@ -22,8 +22,8 @@ patterns** — see `docs/adr/0001-no-backend-markdown-content.md`.
 - `AppShell` / `AppSidebar` / `AppTopBar` copied from kui-react (`@kui/*` alias)
 - next-themes (dark mode), FontAwesome 7 (icons)
 - Zod (manifest validation), unified/remark/rehype + rehype-highlight
-  (markdown → syntax-highlighted HTML, section-split into Coverage Level /
-  What It Is / Key Concepts / Example Code / When to Use / Common Mistakes /
+  (markdown → syntax-highlighted HTML, section-split into What It Is /
+  Key Concepts / Example Code / When to Use / Common Mistakes /
   Further Reading)
 
 **Standard pieces deliberately removed:** TypeORM, Postgres, auth, `axios`,

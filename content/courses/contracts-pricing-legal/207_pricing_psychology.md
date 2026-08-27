@@ -1,8 +1,5 @@
 # 207. Pricing Psychology — Anchoring, Framing, and Option Design
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing Rules (pricing-psychology.md) material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 The same accurate price, presented in a different order and structure, produces different reactions from the same client — not because the client is irrational, but because a bare number has no reference point until you give it one. Pricing psychology is the set of techniques for presenting a genuinely fair price so that its value is legible before its cost registers, rather than tricking a client into paying more than something is worth.
 

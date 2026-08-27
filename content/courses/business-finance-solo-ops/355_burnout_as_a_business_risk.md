@@ -1,8 +1,5 @@
 # 355. Recognizing and Responding to Burnout as a Business Risk
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 In a solo business, burnout isn't just a personal wellbeing issue — it's a business continuity risk with the same structural shape as a stolen laptop or a long illness, because the business has a bus factor of exactly one. If the one person operating it stops functioning, every client SLA, every active project, and every piece of pipeline is simultaneously at risk, which is why burnout deserves the same proactive detection and response discipline as any other single-point-of-failure scenario. The first defense is recognizing which work is energy-positive and which is energy-negative before accepting it: technically interesting projects with clear scope, reliable payment, and direct access to a decision-maker tend to sustain output over time, while undefined or constantly shifting scope, indecisive clients, and irregular payment behavior drain capacity faster than the invoice value can justify. Weighing energy impact alongside financial return when evaluating new work is not a luxury — a project that pays well but drains energy costs more than the invoice shows, in the form of degraded quality on every other commitment running alongside it.
 

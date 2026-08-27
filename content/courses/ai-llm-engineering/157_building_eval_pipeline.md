@@ -1,8 +1,5 @@
 # 157. Building an Eval Pipeline
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/eval-and-testing.md material, going deeper than the introductory eval coverage in item 140; no existing coverage data for your own practice.
-
 ## What It Is
 Unit tests verify that your code behaves correctly. They cannot verify that a prompt produces good output, because a passing test suite with a mocked model response tells you nothing about whether the actual prompt-model combination is any good — that requires calling the real model and judging the real output, which is what an eval is. The mental model that keeps this straight is three distinct levels of testing, each catching a different class of regression: unit tests (mock the client, test your parsing/error-handling code), evals (call the real model against a fixed golden dataset and score the output), and human review (spot-check a sample of real production outputs on a rubric, on a cadence, because no automated score fully captures quality).
 

@@ -1,8 +1,5 @@
 # 54. Distributed Tracing — Following a Request Across Services
 
-## Coverage Level
-**Not Covered** — Your application has no trace context propagation; there is no way to follow a single request through your API, database, Redis, BullMQ workers, and any external webhook calls.
-
 ## What It Is
 Distributed tracing is the practice of attaching a unique `traceId` to every incoming request and propagating that ID through every system the request touches — your database, Redis, an outbound HTTP call to Stripe, a BullMQ job — so you can reconstruct the complete causal chain of events later.
 

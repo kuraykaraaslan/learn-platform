@@ -1,8 +1,5 @@
 # 125. REST API Basics — Resource & CRUD Design
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. This is the prerequisite beneath API Design Philosophy (#107) and API Versioning Strategies (#9). Self-check: could you design the URL/method pairs for a new resource without reaching for an example to copy?
-
 ## What It Is
 REST's core idea is modeling your domain as **resources** (nouns — `projects`, `invoices`, `users`) reachable by URL, and using HTTP methods to express the *action* on that resource instead of encoding the verb into the URL. A collection endpoint (`/projects`) represents the set; an item endpoint (`/projects/{id}`) represents one member. CRUD maps onto this almost mechanically: create is POST to the collection, read is GET on either, update is PUT/PATCH on the item, delete is DELETE on the item.
 

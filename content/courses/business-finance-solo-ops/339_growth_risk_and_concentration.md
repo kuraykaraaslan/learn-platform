@@ -1,8 +1,5 @@
 # 339. Growth Risk Management: Client Concentration and Capacity
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Growth can damage a solo business faster than it can build it, if complexity grows faster than the systems that manage it. Every growth decision — a new client, a bigger project, a contractor, a partnership, more public visibility — should be checked against the same set of risk categories: delivery, cash flow, scope, reputation, legal/security, capacity, and client concentration. Growth that increases revenue while quietly increasing any of these risks past a manageable point isn't really growth; it's borrowing against future stability.
 

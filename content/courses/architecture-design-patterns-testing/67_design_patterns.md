@@ -1,8 +1,5 @@
 # 67. Design Patterns — Knowing When NOT to Use Them
 
-## Coverage Level
-**Partial** — You already use the Strategy pattern in your payment providers (`BasePaymentProvider` + concrete providers) and a Registry/Map pattern for provider selection. This file acknowledges those, covers patterns you are likely missing, and — more importantly — builds the intuition for when a pattern actually helps versus when it just adds complexity.
-
 ## What It Is
 Design patterns are named, reusable solutions to recurring structural problems in code. The GoF (Gang of Four) book catalogued 23 of them in 1994. The problem with learning patterns is that many developers learn them and then look for excuses to use them. A service class wrapped in a Facade wrapped in a Proxy wrapped in a Decorator for a simple CRUD operation is not "applying design patterns" — it is over-engineering.
 

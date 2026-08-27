@@ -1,8 +1,5 @@
 # 25. Web Vitals (LCP, CLS, INP) — Real User Data Improvement
 
-## Coverage Level
-**Not Covered** — Your boilerplate has no Web Vitals instrumentation, no real user monitoring (RUM), and no process for tracking performance over time. You're deploying changes without knowing their impact on actual user experience metrics.
-
 ## What It Is
 Core Web Vitals are Google's standardized metrics for measuring real-user experience quality. They're measured in the field (on actual user devices, over real network conditions) not in lab simulations. There are three: **Largest Contentful Paint (LCP)** measures how long it takes for the largest visible element (usually a hero image or heading) to render — this is the main "page loaded" perception metric. **Cumulative Layout Shift (CLS)** measures visual stability — how much elements jump around as the page loads (images without dimensions, late-loading fonts, injected banners). **Interaction to Next Paint (INP)** measures responsiveness — the worst-case delay between any user interaction (click, keypress, tap) and the browser's next paint in response. INP replaced FID (First Input Delay) in 2024.
 

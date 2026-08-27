@@ -1,8 +1,5 @@
 # 303. Proof Emails & Ready-to-Use Templates
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Newsletter_and_Email_Nurture_Rules material (case-study-and-proof-emails.md, email-templates.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Proof emails exist to help a prospect trust the freelancer before a sales call ever happens, and the thing that makes one work is showing the thinking behind the work rather than just announcing that a project got completed. The six-part structure — context, problem, constraint, approach, result or learning, and a soft CTA — turns "I built a booking system" into something a reader can actually learn from: a common pattern in SMEs where the real business process lives in spreadsheets and WhatsApp messages, the decision to separate version one from the roadmap, and the lesson that screens are easy to imagine but approvals, exceptions, roles, and data rules define the real scope. That gap between weak and strong proof is almost entirely about specificity. "I built a modern app using React and Node.js" says nothing a reader can use. "The project replaced a manual request-tracking workflow with role-based submission, approval, status tracking, and exportable reports; the technical challenge was keeping the first version small while leaving room for future automation" says exactly what problem was solved and what judgment was required to solve it.
 

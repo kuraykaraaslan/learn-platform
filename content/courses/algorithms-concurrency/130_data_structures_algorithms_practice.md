@@ -1,8 +1,5 @@
 # 130. Data Structures & Algorithms in Practice — Trees, Graphs, Sorting, Recursion
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Big O Analysis (#68) covers *measuring* complexity; this is the layer of actual structures/algorithms it's measuring. Self-check: could you traverse a nested comment thread without looking up "tree traversal" first?
-
 ## What It Is
 Most application-level "algorithms" work reduces to recognizing which of a handful of standard shapes a problem fits, then applying the structure that matches. A comment thread with replies-to-replies is a **tree** — traverse it depth-first if you want a single flattened conversation order, breadth-first if you want it level by level (e.g. "show 2 levels of replies"). A permission system where roles inherit from other roles is a **graph** — walking inherited permissions is graph traversal with cycle-detection as a real concern. Category hierarchies, org charts, and file systems are all trees wearing different names.
 

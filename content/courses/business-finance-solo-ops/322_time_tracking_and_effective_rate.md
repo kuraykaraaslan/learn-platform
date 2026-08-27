@@ -1,8 +1,5 @@
 # 322. Time Tracking and Your Real Effective Hourly Rate
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Time is the actual capacity constraint of a solo operator — not money, not tools, not even client demand. If time isn't tracked with any rigor, every pricing decision and every "can I take this on" decision becomes a guess dressed up as intuition. Time tracking here is not about surveillance or maximizing every billable minute; it's about knowing, with real numbers, where the week actually goes.
 

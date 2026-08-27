@@ -1,8 +1,5 @@
 # 258. Warranty, Maintenance Packages, and Support Transition
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Documentation_and_Handover_Rules/maintenance-and-support-transition.md and Customer_Success_and_Support_Rules/maintenance-and-retainer.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 The moment a project moves from "being built" to "being live," the nature of the relationship has to change, and the biggest risk at that transition is leaving the new shape of the relationship unstated. Without explicit terms, support drifts toward one of two bad defaults: unbounded free labor that the freelancer eventually resents and can't sustain, or an abrupt silence that leaves the client feeling abandoned right after paying a large invoice. Warranty, maintenance, and support transition are the three tools that replace that drift with a deliberate, written structure — each covering a genuinely different kind of work.
 

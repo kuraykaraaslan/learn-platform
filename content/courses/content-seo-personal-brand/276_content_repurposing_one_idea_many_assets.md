@@ -1,8 +1,5 @@
 # 276. Content Repurposing — One Idea Into Many Assets
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Content_Engine_Rules material (content-repurposing.md, blog-to-social-workflow.md, social-to-blog-workflow.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Repurposing is the practice of treating a single strong idea as raw material for multiple formats instead of a one-time post. For a solo operator with no content team, this is the difference between a sustainable content practice and burnout — the constraint isn't ideas, it's the time to produce fresh material for every channel from scratch. One well-developed insight should reasonably become three or more distinct assets: a short post, a longer blog or article, a carousel, a video script, a newsletter section, an FAQ entry, and a sales-conversation talking point, each shaped for how that format is actually consumed.
 

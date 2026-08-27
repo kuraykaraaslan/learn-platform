@@ -1,8 +1,5 @@
 # 226. Detecting and Responding to Scope Creep
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Scope creep almost never announces itself as a demand. It arrives dressed as friendliness: "can we also add," "just one small thing," "while you're in there," "it should be simple," "we forgot to mention." None of these phrases are dishonest — most clients genuinely believe the request is minor — but the freelancer's job is to notice that friendly framing and unscoped work are two completely different questions, and to answer the second one deliberately instead of being talked past it by the first.
 

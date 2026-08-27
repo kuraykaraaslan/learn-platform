@@ -1,8 +1,5 @@
 # 10. Backward/Forward Compatibility — Schema Evolution
 
-## Coverage Level
-**Not Covered** — Your Prisma schema and API response shapes evolve with each migration without a documented compatibility strategy. There are no consumer-driven contract tests, no field deprecation annotations, and no process for distinguishing breaking from non-breaking schema changes.
-
 ## What It Is
 Schema evolution is the discipline of changing your data structures — database schemas, API response shapes, message formats — without breaking existing consumers. Backward compatibility means old consumers can read data written by a newer system. Forward compatibility means new consumers can read data written by an older system. In practice, you need both: your database migration runs first on the new schema, but old application instances may still be running during a rolling deploy, reading and writing data.
 

@@ -1,8 +1,5 @@
 # 32. JWT Security: RS256 vs HS256, Token Rotation, Refresh Token Rotation
 
-## Coverage Level
-**Covered** — Your token implementation is solid: you use HS256 with separate secrets for access and refresh tokens, refresh tokens are hashed with SHA-256 before storage (raw token never persists), rotation is implemented (a new refresh token is issued on each use), and device fingerprints are embedded in the JWT payload and verified on access. This section acknowledges that HS256 is a reasonable choice for your architecture and explains the trade-off clearly, then covers the advanced patterns around token theft detection and clock skew handling.
-
 ## What It Is
 JWTs (JSON Web Tokens) are base64url-encoded JSON structures with a cryptographic signature. The signature lets any party with the correct key verify that the token was issued by you and hasn't been tampered with. The algorithm choice determines what kind of key is used to produce and verify that signature.
 

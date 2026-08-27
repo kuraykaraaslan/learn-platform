@@ -1,8 +1,5 @@
 # 121. SQL Fundamentals — Joins, Normalization, Core CRUD
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Self-check: can you write a query with two joins and a GROUP BY without an ORM autocomplete helping you?
-
 ## What It Is
 Everything from N+1 Query Problem (#16) to PostgreSQL MVCC (#41) assumes fluency with plain SQL — the ORM is a convenience layer on top, not a replacement for understanding what query it generates. The relational model itself is simple: data lives in tables (rows × columns), rows are related to other rows via foreign keys, and joins are how you recombine related data at query time instead of duplicating it at write time.
 

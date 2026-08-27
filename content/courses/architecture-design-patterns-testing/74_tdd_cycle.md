@@ -1,8 +1,5 @@
 # 74. TDD Cycle — Red/Green/Refactor in Practice
 
-## Coverage Level
-**Not Covered** — With zero test files in the project, TDD has not been practiced. This file treats TDD as a development workflow, not just a testing philosophy, and shows what it actually looks like when applied to your existing codebase.
-
 ## What It Is
 Test-Driven Development is a programming technique — not a testing technique — where you write a failing test before you write any production code. The cycle has three phases:
 

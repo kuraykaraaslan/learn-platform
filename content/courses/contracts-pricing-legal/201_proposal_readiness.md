@@ -1,8 +1,5 @@
 # 201. Proposal Readiness — Knowing When You're Ready to Quote
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing Rules (proposal-readiness.md) material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 The single most common cause of underpriced, over-scoped, resentment-generating projects is writing a proposal before you actually understand what you're proposing. A prospect says "I need an app like Uber but for dog walking" and a nervous freelancer, afraid of losing the lead, sends back a number within a day. That number is fiction — not because the freelancer is bad at estimating, but because there is nothing yet to estimate. Proposal readiness is the discipline of refusing to write a binding commercial document until a specific, minimum set of facts is known.
 

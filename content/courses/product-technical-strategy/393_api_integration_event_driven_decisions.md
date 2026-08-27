@@ -1,8 +1,5 @@
 # 393. API, Integration, and Event-Driven Architecture Decisions
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Technical_Architecture_Rules material (specifically `api-and-integration-architecture.md` and `event-driven-and-async-architecture.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Every integration and every async workflow is a decision, not a default, and the decision that matters most upfront is picking the right type for the job: a REST call for something that needs an immediate answer, a webhook for something a provider needs to tell you about, a queue or background job for slow or retryable work, a scheduled sync for periodic reconciliation, or a file import/export for exchange with legacy tools. Getting the type wrong is usually what turns an integration into a production incident — a payment confirmation that should have arrived asynchronously via webhook, but instead gets polled synchronously inside the checkout request, times out the user's browser instead of failing safely in the background.
 

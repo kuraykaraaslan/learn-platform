@@ -1,8 +1,5 @@
 # 133. Networking Fundamentals for Backend Engineers — DNS, TCP/IP, Load Balancers
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. CDN Cache Strategy (#21) and HTTP/2 Multiplexing (#22) both assume this layer already exists underneath them; it was never covered directly.
-
 ## What It Is
 Before a request ever reaches a Next.js route handler, it travels through a chain most backend engineers can name but not actually reason about when something breaks. **DNS resolution** turns a hostname into an IP address through a chain of resolvers (browser cache → OS cache → recursive resolver → root/TLD/authoritative servers), and the **TTL** on each DNS record determines how long that answer is cached — which is exactly why a DNS-based failover doesn't take effect instantly, and why lowering TTL *before* a planned migration is a real, common technique.
 

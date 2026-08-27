@@ -1,8 +1,5 @@
 # 409. Spring Boot: Centralized Error Handling with @ControllerAdvice
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_SpringBoot material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Spring Boot's centralized error handling plays the exact same architectural role as the Express error-handling middleware covered earlier in this course: one place catches every exception thrown anywhere in the request-handling pipeline and converts it into a consistent JSON shape, so individual controllers never write inline `try/catch` blocks that craft their own error responses. The mechanism is `@RestControllerAdvice` — a single class annotated once, containing an `@ExceptionHandler` method per exception type it needs to translate. Spring intercepts any matching exception thrown from a controller, a `@Valid` validation failure, or (via propagation) a service method, and routes it to the matching handler automatically.
 

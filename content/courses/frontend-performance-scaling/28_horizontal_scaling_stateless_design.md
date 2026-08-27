@@ -1,8 +1,5 @@
 # 28. Horizontal Scaling — Stateless Service Design
 
-## Coverage Level
-**Covered** — Your architecture is genuinely stateless: JWT access tokens carry all session claims, refresh tokens are hashed and stored in the database (not in process memory), and Redis is used for the session cache. You could run 10 instances of your API today and any instance could serve any request. What this section covers is the reasoning behind that design and the patterns that become relevant when you actually start running multiple instances.
-
 ## What It Is
 A stateless service is one where no instance holds exclusive knowledge required to serve a request. If you can kill instance A, route the same request to instance B, and get the same result, your service is stateless. This is the foundational requirement for horizontal scaling — adding more instances behind a load balancer to handle more traffic.
 

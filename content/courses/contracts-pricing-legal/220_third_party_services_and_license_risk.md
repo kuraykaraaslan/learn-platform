@@ -1,8 +1,5 @@
 # 220. Third-Party Services, Licenses, and Dependency Risk
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Almost no modern software project is built from scratch — it's assembled from hosting providers, payment processors, email services, open-source packages, and paid plugins, each with its own costs, limits, approval delays, and legal terms. Two separate risk categories hide inside "we'll just use a few third-party services": commercial risk (who pays, who owns the account, what happens when a provider changes pricing or has an outage) and license risk (whether the freelancer is legally allowed to ship a given open-source package inside a client's proprietary product at all).
 

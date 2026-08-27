@@ -1,8 +1,5 @@
 # 145. Build vs Buy / Vendor Evaluation Decisions
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Writing ADRs (#75) and the RFC Process (#76) cover *how* to document and socialize a decision; this covers a specific, recurring decision those processes are often used for — and it was never framed as its own topic.
-
 ## What It Is
 "Should we build this ourselves or pay for it" is a recurring decision that deserves a repeatable framework instead of being re-litigated from scratch (or decided by whoever's most excited to build something) every time it comes up. The first, most useful filter is **core vs. context**: is this capability part of what actually differentiates your product to customers (core — usually worth building and owning), or is it necessary but generic infrastructure every company like yours also needs (context — usually worth buying, because a vendor specializing in exactly that problem will out-invest what you could justify building)? Payment processing, email deliverability (#88), and authentication are classic context — critical, but not what customers are paying you for.
 

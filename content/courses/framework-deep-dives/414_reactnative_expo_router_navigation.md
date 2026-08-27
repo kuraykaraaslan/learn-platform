@@ -1,8 +1,5 @@
 # 414. React Native: Expo Router Navigation and Protected Routes
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_ReactNative material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Expo Router v4 maps the filesystem directly to routes, the same mental model as Next.js's App Router but built for `Stack`/`Tabs`/`Drawer` navigators instead of HTML pages. `app/index.tsx` is `/`, `app/user/[id].tsx` is `/user/:id`, and a `(group)` folder like `(tabs)/` groups screens under a shared layout without adding a URL segment — so `app/(tabs)/index.tsx` is still just `/`. There is no manually configured `NavigationContainer` anywhere in the app; the root `_layout.tsx` renders a single `<Slot />` and nothing else, letting the matched child route (and its own `_layout.tsx`, if any) take over from there.
 

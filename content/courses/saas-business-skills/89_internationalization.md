@@ -1,8 +1,5 @@
 # 89. Internationalization (i18n) — Timezone, Currency, RTL Support
 
-## Coverage Level
-**Partial** — You have some locale handling in the stack, but a full i18n pipeline covering timezone-aware date storage, locale-specific currency formatting, and RTL (right-to-left) layout support is not visible. For a multi-tenant SaaS, i18n at the tenant level is a significant enterprise feature.
-
 ## What It Is
 Internationalization (i18n) is the process of designing and building software so that it can be adapted to different languages, regions, and cultures without engineering changes. Localization (l10n) is the actual adaptation to a specific locale. Most developers treat i18n as "translate the text strings" — but full i18n covers six distinct concerns: text translation, date and time formatting, number and currency formatting, RTL (right-to-left) text layout for Arabic/Hebrew/Persian, locale-specific sort orders, and timezone handling.
 

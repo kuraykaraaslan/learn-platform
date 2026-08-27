@@ -1,8 +1,5 @@
 # 105. Cryptography Fundamentals — Beyond bcrypt
 
-## Coverage Level
-**Partial** — You use bcrypt, JWT (HS256), WebAuthn, and `crypto.createHash`. You apply the tools correctly but the underlying primitives are a blind spot — which matters when you need to design something new or audit what you've built.
-
 ## What It Is
 Most application developers use cryptography through libraries: bcrypt for passwords, JWT for tokens, TLS for transport. This works until you need to make a decision the library doesn't make for you: Should I use HS256 or RS256? Should I sign or encrypt this value? Why is my token vulnerable to length extension? Why does the IV matter?
 

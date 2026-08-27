@@ -1,8 +1,5 @@
 # 401. Express: Real-Time Updates with SSE and Socket.io
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Express material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Server-to-client push comes in exactly two flavors in this stack, and picking the wrong one is an architecture-level mistake that's expensive to undo later: Server-Sent Events (SSE) for one-directional server-to-client streams, and Socket.io for genuinely bidirectional real-time communication. The decision isn't stylistic — SSE rides on plain HTTP, reconnects automatically in the browser, and passes through proxies and load balancers without special configuration, while Socket.io upgrades to a WebSocket connection, requires the client to handle reconnection logic itself, and needs sticky sessions configured at the load balancer when running more than one server instance.
 

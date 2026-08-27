@@ -1,8 +1,5 @@
 # 183. Offer & Service Packaging
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition_Rules/Brand_Positioning_Rules material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Clients don't buy "React, Node.js, PostgreSQL." They buy a business outcome with reduced uncertainty, and the way you communicate that is through packaging — turning a broad capability ("I can build custom software") into a small number of concrete, named offers a stranger can understand and choose between in under a minute. An unpackaged capability forces the client to do the translation work themselves — to imagine what "custom software development" would mean for their specific situation — and most of them won't bother; they'll ask a vaguely worded question instead ("can you build me an app?") that starts the relationship in the worst possible place: no shared understanding of scope.
 

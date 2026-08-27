@@ -1,8 +1,5 @@
 # 16. N+1 Query Problem
 
-## Coverage Level
-**Not Covered** — There is no query logging, no query count instrumentation, and no mention of eager loading strategies in your codebase. In a multi-tenant app where listing endpoints return collections of related objects, N+1 queries are almost certainly present and silently degrading performance.
-
 ## What It Is
 The N+1 query problem occurs when code fetches a list of N items (1 query), then for each item individually fetches related data (N additional queries) — producing N+1 total database round trips. The result is functionally correct but catastrophically inefficient: fetching 50 tenants with their owners fires 51 queries instead of 1. At small scale, this is invisible. At moderate scale (a page that returns 100 records), it adds hundreds of milliseconds of unnecessary DB round trips.
 

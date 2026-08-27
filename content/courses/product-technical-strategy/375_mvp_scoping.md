@@ -1,8 +1,5 @@
 # 375. MVP Scoping — Valuable, Usable, Testable, Deliverable
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `mvp-definition.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 "MVP" has drifted so far from its original meaning that it's worth re-anchoring: an MVP is the smallest version of a product that is simultaneously valuable, usable, testable, and deliverable. Drop any one of the four and you get something else instead. Drop valuable and you have a demo — something to look at, not something that solves anyone's problem. Drop usable and you have a prototype — proof that something is technically possible, not proof that a real person can operate it unaided. Drop testable and you have an unclear bet — you shipped something, but nobody defined what "worked" would look like. Drop deliverable and you have an over-scoped plan that will blow through the timeline before anyone learns anything.
 

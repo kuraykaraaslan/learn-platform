@@ -1,8 +1,5 @@
 # 382. Roadmap Planning — Sequencing MVP Through Scale
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `roadmap-planning.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Lesson 371 introduced the roadmap as the step that "protects relationships" by giving excluded features a future home instead of a flat rejection. This lesson is about actually building that roadmap well, because a bad roadmap does the opposite of protecting anything — it's a list of promises with no sequencing logic, and it collapses the first time someone asks "why is this feature in V2 and not V1." The standard phase buckets are MVP/Pilot, V1 Launch, V2 Growth, V3 Scale, and Backlog/Ideas, and each phase needs a stated goal, not just a list of features assigned to it. "V2: advanced analytics, loyalty program, AI recommendations" is not a roadmap phase, it's an unsorted pile with a label.
 

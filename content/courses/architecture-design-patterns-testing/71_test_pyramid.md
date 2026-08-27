@@ -1,8 +1,5 @@
 # 71. Test Pyramid — Unit, Integration, E2E Ratio and Trade-offs
 
-## Coverage Level
-**Not Covered** — Zero test files exist in this project. This is the single biggest gap in the entire codebase, and it is worth being direct about: a production SaaS with multi-tenant data isolation, payment processing, and authentication logic, and zero tests is a significant operational risk. This file gives you a concrete path to fix it.
-
 ## What It Is
 The test pyramid describes the ideal ratio of three test types, stacked by cost and confidence:
 

@@ -1,8 +1,5 @@
 # 222. Communication and Approval Protocols
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Uncontrolled communication is a quieter risk than a missing contract clause, but it produces the same disputes: decisions scattered across WhatsApp, email, a call, and a voice note, with no single record of what was actually agreed. A workable communication protocol names, before the project starts, a primary written channel for official decisions, an optional secondary channel for discussion, a meeting cadence, and — critically — a definition of what actually counts as approval.
 

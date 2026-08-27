@@ -1,8 +1,5 @@
 # 296. Problem-Solution Posts, Founder Stories, Carousels and Short Video
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' LinkedIn_Authority_Rules material (problem-solution-posts.md, founder-story-posts.md, carousel-post-structure.md, short-video-posts.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Beyond the core technical and case-study formats, four other post types round out a sustainable LinkedIn content mix, each solving a different trust or reach problem. **Problem-solution posts** exist specifically to make non-technical buyers feel understood without requiring them to know any technical vocabulary: name a real symptom, explain the root cause underneath it, show what most teams try (and why it's a partial fix), then suggest the better approach and connect it to business impact ("If your team asks 'who has the latest spreadsheet?' every week, the problem is probably not the spreadsheet. The real problem is that your workflow has no single source of truth."). These posts work because they use buyer language — visibility, delays, tracking, reporting — rather than technical terms, and they should never claim custom software is always the answer; ignoring simpler or no-code alternatives when they're genuinely appropriate undermines the credibility the post is trying to build.
 

@@ -1,8 +1,5 @@
 # 78. Code Review Culture — Critique Code, Not People
 
-## Coverage Level
-**Not Covered** — You are a solo freelancer today, but when you bring on contractors, review client teams' code, or grow into a small team, the quality of your code review culture will directly determine the quality of code you receive.
-
 ## What It Is
 Code review is the process of a developer other than the author reading, understanding, and commenting on a proposed code change before it is merged. The mechanics are simple — open a pull request, leave comments, approve or request changes. The culture around it is not. Code review culture is the set of unwritten (and written) norms that determine whether reviews are genuinely useful, whether they feel safe to participate in, and whether they improve the codebase over time.
 

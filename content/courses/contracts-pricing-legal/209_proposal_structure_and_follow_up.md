@@ -1,8 +1,5 @@
 # 209. Proposal Structure and Follow-Up
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing Rules (proposal-structure.md, proposal-follow-up.md) material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 A proposal's job is to make the buying decision easy, not to impress with polish or bury the client in options. That means a fixed, predictable order: context and business problem, project goals, recommended solution, scope and deliverables, exclusions, process and milestones, timeline, investment and payment schedule, assumptions and client responsibilities, change-request rules, support and handover terms, a validity period, and a clear next step. Skipping exclusions, the payment schedule, or the validity date isn't a minor omission — each of those gaps is exactly where a later dispute or an indefinitely-open deal comes from.
 

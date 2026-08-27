@@ -1,8 +1,5 @@
 # 425. Electron: Renderer Architecture — React, Client Routing, and the KUIreact Fork
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Electron material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 The Electron renderer is a plain Vite + client React single-page app — explicitly *not* Next.js. None of the App Router, RSC, `next/image`, `next/link`, `next/navigation`, `next/font`, or server actions apply here, and `Code_Structure_Rules_Next` simply does not govern this process; `Common` + the TypeScript house style do. This distinction matters practically, not just semantically: a packaged Electron app is loaded over `file://` (or a custom `app://` scheme), where history-based routing breaks entirely, because there's no server to serve arbitrary deep paths on a reload. The fix is routing with **hash** or **memory** history — `createHashRouter` from `react-router-dom`, or TanStack Router configured the same way — never `createBrowserRouter`, which 404s the instant a user reloads on any route other than the root.
 

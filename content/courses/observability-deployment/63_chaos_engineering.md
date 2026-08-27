@@ -1,8 +1,5 @@
 # 63. Chaos Engineering Fundamentals — Failure Injection
 
-## Coverage Level
-**Not Covered** — There is no failure injection or resilience testing in the project. Your system's actual failure behavior is unknown until a real outage reveals it.
-
 ## What It Is
 Chaos engineering is the practice of intentionally injecting failures into your system in a controlled way to discover how it behaves under adverse conditions before those conditions appear in production unexpectedly. Netflix famously invented this discipline with their "Chaos Monkey" tool that randomly terminated production EC2 instances. The insight behind it is blunt: if your system cannot survive a random instance termination on a Tuesday afternoon, it definitely cannot survive one at 3 AM when you are asleep.
 

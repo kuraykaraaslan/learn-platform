@@ -1,8 +1,5 @@
 # 58. Dockerfile Best Practices — Multi-Stage Build, Minimal Image
 
-## Coverage Level
-**Not Covered** — No Dockerfile exists in the project. Containerizing this Next.js boilerplate is the next natural step toward reproducible deploys.
-
 ## What It Is
 A Dockerfile is a recipe for turning your application code into a portable, reproducible image that runs identically on your laptop, a CI runner, and a production server. Knowing how to write a good Dockerfile — not just any Dockerfile — is what separates a 2 GB image that takes 10 minutes to build from a 150 MB image that builds in 90 seconds.
 

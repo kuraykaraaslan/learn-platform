@@ -1,8 +1,5 @@
 # 202. Pricing Models — Matching Commercial Structure to Risk
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing Rules (pricing-models.md) material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 New freelancers tend to have exactly one pricing model — usually an hourly rate, sometimes a fixed price guessed from gut feeling — and apply it to every engagement regardless of how much risk and uncertainty the project actually carries. Professional pricing works the other way around: you look at how clear the scope is, how much of the risk sits with you versus the client, and how the client prefers to buy, and only then pick a model. The model is a tool selected for the job, not a personality trait of your business.
 

@@ -1,8 +1,5 @@
 # 203. Scope-to-Price Mapping — Turning Requirements into a Priced Breakdown
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing Rules (scope-to-price-mapping.md) material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 A price that isn't traceable back to specific scope is just a number the client has to take on faith — and numbers taken on faith get argued about the moment reality diverges from expectation. Scope-to-price mapping is the practice of breaking a project into discrete modules (discovery, UI, frontend, backend, database, auth, admin, integrations, notifications, reporting, testing, deployment, documentation, training) and explicitly marking each one as included, excluded, optional, future-phase, or a client responsibility before a single total is presented.
 

@@ -1,8 +1,5 @@
 # 49. Backup Strategy — RTO, RPO, Real Restore Testing
 
-## Coverage Level
-**Not Covered** — There is no visible backup configuration, backup schedule, restore procedure, or restore test record in your codebase or repository. This is common for solo developers in early stages, but a backup strategy that has never been tested is not a backup strategy — it is a hope.
-
 ## What It Is
 A backup strategy is the combination of: what you back up, how often, where you store it, how long you keep it, and how you restore it. The two governing metrics are RPO and RTO. RPO (Recovery Point Objective) is the maximum amount of data loss you can tolerate: if your RPO is 1 hour, you need backups at least every hour. RTO (Recovery Time Objective) is the maximum time your service can be down before recovery: if your RTO is 2 hours, your restore process must complete in under 2 hours.
 

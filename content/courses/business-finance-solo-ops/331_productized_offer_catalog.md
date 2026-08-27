@@ -1,8 +1,5 @@
 # 331. Building a Productized Offer Catalog with Real Price Bands
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 A productized service turns repeated freelance work into something easier to buy, sell, and deliver — without becoming fully custom again. It doesn't eliminate customization; it bounds it. A landing page package that flexes on colors and copy but always delivers six fixed sections, a contact form, and analytics setup is productized. A landing page package that might become a five-page site, might include a CMS, and might need a client portal depending on the conversation is not — it's a custom project wearing a productized label.
 

@@ -1,8 +1,5 @@
 # 404. Spring Boot: ResponseEntity and Standard Response Records
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_SpringBoot material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Every Spring Boot controller method in this stack returns `ResponseEntity<T>` with an explicit HTTP status — never a bare object relying on Spring's implicit 200, and never a raw `Map<String, Object>` standing in for a typed shape. This is the direct parallel to Express's `res.status(...).json(...)` and Next.js's `NextResponse.json(..., { status })`: all three conventions exist for the same reason, to make the status code a visible, reviewable part of the code rather than something Spring, Express, or Next.js infers on your behalf.
 

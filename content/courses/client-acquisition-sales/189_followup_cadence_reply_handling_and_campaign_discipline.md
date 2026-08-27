@@ -1,8 +1,5 @@
 # 189. Follow-Up Cadence, Reply Handling & Campaign Discipline
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Once a first touch goes out, everything that follows runs on one canonical shape: Day 0, Day 3-5, Day 10-14, then stop. Touch two has to carry something touch one didn't — a follow-up that just repeats the ask is a reminder that you want something, and a reminder is pressure. Touch three explicitly says it's the last message, and then it actually is. After three silent touches, the rule is a 90-day cooling-off period on every channel, and re-contact after that is only permitted with a genuinely new, fresh trigger — not a rerun of the old one dressed up differently. Two full silent sequences means the prospect is done permanently and goes on the suppression list. None of this is negotiable under pipeline pressure: a stop condition — any opt-out signal, a hostile reply, a hard bounce, or "not now" without a specific date — ends the sequence immediately, mid-cadence, no exceptions.
 

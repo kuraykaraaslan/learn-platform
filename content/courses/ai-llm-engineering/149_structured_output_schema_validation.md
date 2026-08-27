@@ -1,8 +1,5 @@
 # 149. Structured Output and Schema Validation
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/prompt-engineering.md and fallback-and-error-handling.md material; no existing coverage data for your own practice.
-
 ## What It Is
 A large fraction of production AI features don't need free-form prose back — they need a JSON object with specific fields your code can parse and act on: a classification label and confidence score, extracted structured fields from a document, a decision plus reasoning. Getting reliable structured output from a model that is fundamentally generating text token by token requires two disciplines working together: instructing precisely (tell the model the exact schema, in the system prompt, and explicitly forbid markdown fences or explanatory preamble around the JSON), and validating defensively (never trust that the model followed the instruction — parse the output and run it through a schema validator before your code touches it).
 

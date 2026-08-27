@@ -1,8 +1,5 @@
 # 208. Negotiating Price Pressure — Levers and Live Scripts
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing Rules (discount-and-negotiation.md, negotiation-live-scripts.md) material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Negotiation pressure almost always arrives live — on a call, in a meeting, or in a fast back-and-forth message thread — at exactly the moment you have the least time to think. Without a prepared response, the default human reaction is to fill the uncomfortable silence by conceding: lowering the price, adding scope, or promising a faster timeline, none of which were actually asked for in those terms. The single governing rule is simple to state and hard to hold under pressure: never reduce price without changing scope, timeline, payment terms, risk, or commitment in exchange.
 

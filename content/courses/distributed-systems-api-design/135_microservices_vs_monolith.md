@@ -1,8 +1,5 @@
 # 135. Microservices vs Monolith — Service Boundary Design
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. This is the decision that has to come *before* Saga Pattern (#3), Outbox Pattern (#14), or CAP Theorem (#1) trade-offs are even relevant — none of those matter until something is actually split into separate services.
-
 ## What It Is
 The monolith-vs-microservices question is really a question about where you want to pay a cost: a monolith concentrates coupling risk (a bug or a slow deploy in one module can affect everything) but keeps operational overhead low (one deployment, one set of logs, transactions that are just database transactions). Microservices push coupling risk down (a failure or slow deploy in one service is contained) but multiply operational overhead by the number of services — each one now needs its own deployment pipeline, its own observability stack (see #53–62), and cross-service calls replace what used to be free in-process function calls with network calls that can fail, time out, or arrive out of order.
 

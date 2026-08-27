@@ -1,8 +1,5 @@
 # 346. Turning Delivered Work into Proof: The Case Study Loop
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Completed work should compound. Every successful project can create proof that improves future acquisition, pricing power, and trust — but only if that proof is deliberately captured, because it does not appear on its own. The proof loop runs: deliver value → collect feedback → request a testimonial → document the business problem → create a case study → extract content from it → update the portfolio → use it in outreach and proposals. Skipping the loop is the default; a freelancer who finishes ten strong projects with no captured proof has ten times fewer sales assets than one who ran the loop each time, even though the underlying work was identical.
 

@@ -1,8 +1,5 @@
 # 51. Event Log Rehydration (Rebuilding State from Event Log)
 
-## Coverage Level
-**Not Covered** — Your audit log captures events, but there is no mechanism to reconstruct entity state by replaying those events.
-
 ## What It Is
 Event log rehydration is the technique of rebuilding the current state of an entity by replaying a sequential log of all events that have ever happened to it, rather than reading a "current state" snapshot from a table. If you store every mutation as an immutable event — `UserCreated`, `EmailChanged`, `PasswordReset` — you can always reconstruct what a user looked like at any point in time by folding those events in order.
 

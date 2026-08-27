@@ -1,8 +1,5 @@
 # 187. Cold Message Anatomy, Personalization & the Substitution Test
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Every cold message, on every channel, follows the same four-part skeleton in the same fixed order: a specific researched fact, the consequence framed as a pattern rather than an accusation, one sentence of relevant capability tied to that consequence, and exactly one soft, low-cost question. The first message starts a conversation — it does not close a sale, book a meeting, or explain the whole service. When a draft runs over its length budget, the fix is almost always to cut part three, where "what I do" quietly turns into a service catalogue. The one-ask rule is absolute: one question, answerable with a yes or no, costing the recipient nothing to answer. A calendar link, a price, an attachment, or a second question in the first touch are all treated the same way — as asking a stranger for a favor before they've shown any interest.
 

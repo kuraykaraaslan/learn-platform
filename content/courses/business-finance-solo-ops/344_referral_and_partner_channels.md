@@ -1,8 +1,5 @@
 # 344. Building a Referral and Partner Channel
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Referrals should not be left to luck. A deliberate referral engine makes it easy for satisfied clients, past colleagues, and adjacent service providers to introduce the right kind of prospect, at the right time, with almost no effort on their part. A good referral ask is specific about the ideal client (not "anyone who needs a developer"), easy to forward as-is, timed after value has clearly been delivered, and respectful of the relationship — never pressuring, never vague. The best moments to ask are when a client confirms satisfaction, a system successfully launches, a support interaction goes well, or a testimonial has just been given; asking during an unresolved issue undermines both the ask and the relationship.
 

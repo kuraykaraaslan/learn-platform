@@ -1,8 +1,5 @@
 # 77. Technical Debt Prioritization — Risk × Cost Matrix
 
-## Coverage Level
-**Partial** — Your rulesets acknowledge technical debt as a category, but there is no formal scoring system that lets you compare two pieces of debt against each other and make a defensible, non-gut-feel decision about which to pay down first.
-
 ## What It Is
 Technical debt is the accumulated cost of shortcuts, outdated dependencies, deferred refactors, and architectural compromises that slow down future work. Every non-trivial codebase has it. The question is never "do we have debt?" but "which debt is costing us the most and should be addressed before the others?"
 

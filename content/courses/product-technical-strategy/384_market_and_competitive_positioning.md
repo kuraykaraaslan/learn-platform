@@ -1,8 +1,5 @@
 # 384. Market and Competitive Positioning — Build, Buy, or Differentiate
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `market-and-competitive-positioning.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Not every software idea deserves a custom build, and market and competitive positioning is the gate that decides whether to build, buy, integrate, or reframe before a single requirement gets written. It sits ahead of problem framing (lesson 372) in practice, even though it's easy to skip: a client who says "I want something like Ticketmaster" or "build me a Shopify for my industry" hasn't given you a problem statement, they've given you a competitor name, and jumping straight into architecture on that basis produces a project shaped like a shallow clone of someone else's platform instead of a solution to the client's actual gap.
 

@@ -1,8 +1,5 @@
 # 403. Spring Boot: Three-Layer Architecture — Controller, Service, and Repository
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_SpringBoot material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Spring Boot projects in this shop use a strict three-layer model: `@RestController` → `@Service` → `@Repository`/`JpaRepository`. This is one layer more than the Express two-layer convention (route + static service) covered earlier in this course, and the extra layer is not accidental — it reflects a real difference between the two ecosystems. In TypeORM, a repository is a thin wrapper you call inline from a service; wrapping it in a fourth abstraction buys nothing. In Spring Data JPA, `JpaRepository<Entity, ID>` is a proxy Spring generates from an interface, and it is a meaningful, independently mockable unit — mocking it in a `@WebMvcTest` slice test, injecting a different implementation, or adding a custom `@Query` are all first-class operations that the interface boundary makes clean.
 

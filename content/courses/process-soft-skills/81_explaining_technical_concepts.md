@@ -1,8 +1,5 @@
 # 81. Explaining Technical Concepts to Non-Technical Stakeholders
 
-## Coverage Level
-**Covered** — Your Client Communication rulesets cover the fundamentals. This entry goes beyond the basics to show advanced techniques: structured narrative frameworks, calibrated vocabulary, visual aids without design skill, and how to handle pushback from stakeholders who think they understand more than they do.
-
 ## What It Is
 Explaining technical concepts to non-technical stakeholders is a distinct skill from being technically competent. The gap between knowing something deeply and being able to transfer that knowledge accurately to someone without the background is where most developer-client relationships either succeed or fail. The client who understands why the migration will take three weeks is a client who approves the timeline; the client who does not understand is the client who asks "can't you just copy-paste the data?"
 

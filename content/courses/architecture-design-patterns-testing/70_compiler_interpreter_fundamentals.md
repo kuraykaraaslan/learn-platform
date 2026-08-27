@@ -1,8 +1,5 @@
 # 70. Compiler/Interpreter Fundamentals — AST, Lexer, Parser
 
-## Coverage Level
-**Not Covered** — These concepts are not applied in the codebase, but understanding them explains how TypeScript, Zod, and the tools you use daily actually work — which in turn makes you a significantly better user of them.
-
 ## What It Is
 Every piece of code you write is processed by a compiler or interpreter that transforms text into something executable. Understanding the pipeline — lexing, parsing, AST transformation, code generation — has practical benefits even if you never build a compiler yourself.
 

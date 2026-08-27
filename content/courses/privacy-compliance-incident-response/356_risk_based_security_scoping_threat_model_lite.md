@@ -1,8 +1,5 @@
 # 356. Risk-Based Security Scoping & Threat Model Lite
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
-
 ## What It Is
 Not every system deserves the same security budget, and treating a public marketing page and a multi-tenant billing dashboard as equally risky wastes effort in one direction and under-invests in the other. Risk-based scoping means classifying a project or feature into a tier — typically Low, Medium, High, or Critical — based on what data it touches and what happens if that data or access is compromised, and then letting that tier determine which controls are mandatory versus optional. A static content site with no login needs HTTPS and spam protection; a marketplace handling payments and multi-tenant customer records needs a threat model, tenant isolation tests, MFA readiness for admins, and an incident response plan before it ships. The tier is decided once, explicitly, at design time — not inferred implicitly by whoever happens to be writing the code that week.
 

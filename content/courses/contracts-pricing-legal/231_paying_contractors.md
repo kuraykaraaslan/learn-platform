@@ -1,8 +1,5 @@
 # 231. Paying Contractors — Structure, Documentation, and Leverage
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Paying a subcontractor well is not just about fairness — it's about sequencing and documentation, and getting the sequence wrong creates real exposure for the hiring party specifically. The order that protects both sides is fixed: the contractor delivers, the hiring party formally accepts in writing, the contractor issues the tax/invoicing document their jurisdiction requires, and only then does payment go out. Paying before receiving that document trades a small amount of friction now for a real, hard-to-fix problem later — in most tax systems, an expense paid without proper documentation isn't deductible and can draw scrutiny in an audit, entirely separate from whether the underlying work was legitimate.
 

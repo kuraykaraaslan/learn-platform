@@ -1,8 +1,5 @@
 # 7. Idempotency Key Pattern
 
-## Coverage Level
-**Partial** — Idempotency keys exist in your payment module (likely passed to Stripe), but they are not a systematic cross-cutting concern. Other mutating operations (tenant provisioning, email sends, job dispatches) have no idempotency mechanism, meaning retries and duplicate requests can cause double execution.
-
 ## What It Is
 An idempotency key is a client-supplied unique identifier attached to a mutating request. If the same key is presented again, the server returns the cached result of the original request without re-executing the operation. This means the operation is idempotent: calling it once and calling it ten times with the same key produce the same state. The pattern exists because retries are unavoidable in distributed systems — network timeouts, client reconnects, BullMQ job retries, and webhook redeliveries all mean that your server may receive the same logical request more than once.
 

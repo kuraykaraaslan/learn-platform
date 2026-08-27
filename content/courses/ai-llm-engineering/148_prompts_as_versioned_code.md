@@ -1,8 +1,5 @@
 # 148. Prompts as Versioned Code
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/prompt-engineering.md material; no existing coverage data for your own practice.
-
 ## What It Is
 A system prompt is not a string literal you type into a function call — it's a piece of the application's behavior, and it should be versioned, reviewed, and tested with the same seriousness as any other code. The practical rule is simple: if a prompt is longer than a couple of lines, it does not belong inline in a service or route file. It goes into a dedicated `.prompt.ts` file, exported as a named constant, colocated with the model configuration (model ID, `max_tokens`, `temperature`) it's meant to be used with. This turns a prompt change into a diff a reviewer can actually read, instead of a buried string mutation in the middle of business logic.
 

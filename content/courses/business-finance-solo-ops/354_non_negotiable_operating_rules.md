@@ -1,8 +1,5 @@
 # 354. The Solo Operator's Non-Negotiable Rules: Capacity, Payment, Decisions
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 A solo operator has no team to absorb a bad decision, so a small set of rules need to be treated as genuinely non-negotiable rather than defaults that bend under enough pressure. Three domains carry this weight: capacity, payment, and decision-making. Capacity has a hard ceiling — no more than three active client responsibilities at once, commonly configured as two main projects plus one maintenance client, or two retainers plus one project. Exceeding this ceiling doesn't produce proportionally more revenue; it degrades delivery quality across every commitment at once, because attention, not time alone, is the actual constrained resource. A minimum engagement value threshold works alongside the ceiling: below a defined floor, a project consumes disproportionate admin overhead relative to what it pays, and exceptions should be rare, deliberate, and still carry a full written scope and payment terms.
 

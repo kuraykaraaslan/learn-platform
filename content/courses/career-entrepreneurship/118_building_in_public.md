@@ -1,8 +1,5 @@
 # 118. Building in Public — Social Proof Without a Portfolio
 
-## Coverage Level
-**Not Covered** — You have LinkedIn_Authority_Rules but "building in public" as a compounding growth mechanism is a different discipline than LinkedIn content strategy.
-
 ## What It Is
 Building in public means sharing your work process — decisions, tradeoffs, mistakes, and learnings — as you build, not after you've succeeded. It's the opposite of the polished case study: instead of "here's what I built and how great it is," it's "here's what I'm building, here's the hard decision I'm facing today, and here's what I got wrong last week."
 

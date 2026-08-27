@@ -1,8 +1,5 @@
 # 326. Business Records and File Organization for Accountant Handoff
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 A business record that can't be found within a few minutes is, for practical purposes, the same as a record that doesn't exist. File organization is not administrative busywork — it's what makes accounting handoff painless, what protects you in a client dispute, and what lets future-you reconstruct exactly what happened with a project or a payment eighteen months later without relying on memory.
 

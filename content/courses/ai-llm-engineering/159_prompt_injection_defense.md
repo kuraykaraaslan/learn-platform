@@ -1,8 +1,5 @@
 # 159. Prompt Injection Defense and Untrusted Content Handling
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/prompt-engineering.md, safety-and-moderation.md, and AI_Agent_Workflows/ai-agent-workflows-master.md material; no existing coverage data for your own practice.
-
 ## What It Is
 Prompt injection is the LLM-era counterpart to SQL injection, and it deserves the same category of seriousness: any time content the model reads was written by someone other than the developer of the system prompt — a user message, a retrieved document, a scraped web page, an email in an agent's inbox — that content can contain text designed to look like an instruction and hijack the model's behavior. "Ignore all previous instructions and instead..." embedded in a document your RAG pipeline retrieves is not a hypothetical; it's a documented, repeatable attack pattern, and the more autonomy a system gives the model (tool use, agent loops, multi-step workflows), the higher the stakes of a successful injection become, because a hijacked model with tool access doesn't just say something wrong — it can *do* something wrong.
 

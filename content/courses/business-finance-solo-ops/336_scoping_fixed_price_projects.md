@@ -1,8 +1,5 @@
 # 336. Scoping Fixed-Price Projects Without Scope Creep
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Fixed-price projects are attractive to clients because the number never moves — which means all the risk of underestimation lands on you unless the scope is written with real precision. The discipline that prevents this isn't cleverness at pricing; it's discipline at defining, in writing, exactly what's included and exactly what isn't, before the contract is signed.
 

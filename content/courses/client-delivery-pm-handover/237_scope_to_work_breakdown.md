@@ -1,8 +1,5 @@
 # 237. Scope to Work Breakdown
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management_Rules/scope-to-work-breakdown.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 A signed proposal is not an execution plan. "Admin panel for managing events, venues, ticket categories, and orders" is a sentence a client will happily sign, but it contains zero information about screens, roles, validation rules, or what happens when a category is deleted while orders reference it. Scope-to-work breakdown is the deliberate translation step between "what we agreed to build" and "the tracked list of things someone will actually do" — and skipping it is how a single vague scope line turns into three weeks of undiscovered work.
 

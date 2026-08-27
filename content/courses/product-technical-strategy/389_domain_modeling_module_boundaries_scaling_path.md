@@ -1,8 +1,5 @@
 # 389. Domain Modeling, Module Boundaries, and the Staged Scaling Path
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Technical_Architecture_Rules material (specifically `domain-modeling-and-bounded-contexts.md`, `module-and-service-boundaries.md`, and `scalability-and-performance-architecture.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Before schema and API routes exist, a system needs a shared vocabulary — not the code-level DDD implementation exercise (aggregates, repositories, and tactical patterns are covered elsewhere in this curriculum's architecture-and-patterns material), but a strategic discipline: naming the business's real concepts so "ticket," "pass," "booking," and "reservation" don't quietly become four different words for the same thing across four modules. For each project, define a domain glossary specific to the business, the bounded contexts that partition it (business areas with their own language and rules — Identity, Catalog, Ordering, Fulfillment, Notifications, Reporting, Admin Operations), and, for any workflow with a lifecycle, an explicit state machine naming who can trigger each transition, what side effects follow, and what must be audited.
 

@@ -1,8 +1,5 @@
 # 129. Concurrency & Async Fundamentals — Event Loop, Promises, Race Conditions
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Node's event loop is referenced inside Browser Internals (#103) but never covered as its own topic. Self-check: can you explain why two `await`ed database operations from two concurrent requests can still race, even though JavaScript is single-threaded?
-
 ## What It Is
 JavaScript runs on a single thread, but achieves concurrency through the **event loop**: synchronous code runs to completion, then queued callbacks (I/O completions, timers) run one at a time, with microtasks (resolved promises) draining before the next macrotask. `async`/`await` is syntax sugar over promises — it doesn't create threads, it just makes the pause-and-resume points around `await` look like ordinary sequential code.
 

@@ -1,8 +1,5 @@
 # 323. Classifying and Balancing Your Revenue Streams
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Revenue is not one generic pile of money — different ways of earning it carry very different risk, effort, margin, and predictability, even when the monthly total looks identical. A solo software business typically earns through some mix of fixed-fee projects, time-and-materials work, paid discovery/audits, maintenance retainers, hosting/ops fees, advisory sessions, white-label delivery for agencies, productized services, and occasionally digital products or owned tools. Treating "any paid project is good" as the operating philosophy is how a business ends up busy, cash-positive on paper, and still fragile.
 

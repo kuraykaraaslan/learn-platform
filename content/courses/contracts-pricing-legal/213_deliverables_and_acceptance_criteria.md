@@ -1,8 +1,5 @@
 # 213. Deliverables and Acceptance Criteria
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 "The admin panel works well" is not a deliverable — it's an opinion waiting to happen. A deliverable is a concrete output with a name, a format, a purpose, and criteria specific enough that both sides can independently check whether it's done: a staging link, a repository, a document, a demo recording. Acceptance criteria are what turn "done" from a feeling into a fact. Without them, "done" is decided by whoever is more persistent in the disagreement, and that is rarely a position a freelancer wants to be in.
 

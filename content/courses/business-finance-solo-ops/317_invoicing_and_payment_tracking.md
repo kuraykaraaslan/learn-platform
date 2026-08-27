@@ -1,8 +1,5 @@
 # 317. Invoicing and Payment Tracking Systems
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Finance_and_Operations_Rules material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 An invoice is not a formality you send after the fact — it's a delivery control mechanism. When invoicing is treated as an administrative afterthought, freelancers lose money in entirely predictable ways: milestones get delivered without a corresponding invoice going out, invoices get sent but never followed up when they go unpaid, and "the client said they'd pay soon" quietly becomes a permanent unresolved balance because nobody wrote down when "soon" was supposed to be.
 

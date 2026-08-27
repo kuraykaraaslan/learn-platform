@@ -1,8 +1,5 @@
 # 132. Load & Stress Testing Basics — k6, Artillery
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Test Pyramid (#71) covers correctness testing; this is the missing performance-testing counterpart, and a direct prerequisite to Capacity Planning (#142).
-
 ## What It Is
 Load testing answers different questions depending on which variant you run, and conflating them gives misleading answers. A **load test** simulates expected traffic to confirm the system meets its latency/error targets under normal conditions. A **stress test** pushes past expected traffic to find the actual breaking point and *how* it fails (graceful degradation vs. total collapse). A **soak test** runs a moderate load for an extended duration to catch problems that only show up over time — memory leaks, connection pool exhaustion, log disk filling up. A **spike test** checks recovery behavior from a sudden, short burst.
 

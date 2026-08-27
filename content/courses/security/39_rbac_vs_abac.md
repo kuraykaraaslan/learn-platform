@@ -1,8 +1,5 @@
 # 39. RBAC vs ABAC
 
-## Coverage Level
-**Covered** — You have a clean RBAC implementation: `TenantMemberRole` (OWNER / ADMIN / USER) controls access within a tenant, and a separate system-level `userRole` (USER / ADMIN) handles platform-level separation. System admins bypass tenant membership checks. Role-based guards wrap your service methods and API routes. This is RBAC done correctly for your current scale. What follows explains why RBAC is the right choice now, what ABAC is, and the specific patterns that indicate when your authorization model will need to grow.
-
 ## What It Is
 RBAC (Role-Based Access Control) assigns permissions to roles, and users are assigned roles. A user with the ADMIN role inherits all permissions that the ADMIN role grants. The model is simple, easy to audit ("what can an ADMIN do?"), and covers the vast majority of authorization requirements for SaaS applications. The limitation of RBAC is that roles are global to a context: an ADMIN can either do X or cannot do X; you cannot express "ADMIN can do X but only on resources they created" or "USER can do X but only during business hours" without adding special-case logic that pollutes the role model.
 

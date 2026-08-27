@@ -1,8 +1,5 @@
 # 376. Feature Prioritization — Scoring Beyond Stakeholder Excitement
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `feature-prioritization.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Once an MVP boundary exists (lesson 375), there is usually still a long list of features competing for the space inside and just outside it, and "whoever asked most recently" or "whoever is most senior" are the default prioritization mechanisms in the absence of a real one. Feature prioritization replaces that with a repeatable scoring pass across seven dimensions: user value, business value, risk reduction, learning value, effort, dependency, and urgency. None of these alone is sufficient — a feature can have high user value and still lose to something with lower value but much lower effort and a hard dependency that everything else needs first.
 

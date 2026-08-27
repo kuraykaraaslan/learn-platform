@@ -1,8 +1,5 @@
 # 416. React Native: Data Fetching, Loading States, and Offline Detection
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_ReactNative material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 This stack deliberately does not use React Query or SWR. Every screen's data comes from a custom hook that owns `data`/`loading`/`error` state directly and calls `axiosInstance` inside a `useCallback`, wired to a `useEffect` for the initial load. This is a simpler baseline than a caching data-fetching library, and the tradeoff is explicit: no automatic background refetching, no built-in cache invalidation — but also no library-specific mental model to learn, and a shape simple enough that every hook in the codebase looks the same. The pipeline is always Screen → Hook → `axiosInstance` → REST API; screens own no async logic at all, they call a hook and render what it returns.
 

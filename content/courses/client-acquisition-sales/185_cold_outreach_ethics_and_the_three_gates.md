@@ -1,8 +1,5 @@
 # 185. Cold Outreach Ethics & the Three Gates
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Cold outreach is the highest-risk acquisition channel because it interrupts someone who never asked to hear from you, on a channel they did not opt into. The discipline that makes it permissible rather than spam is a sequence of three gates, and all three have to pass **before a single word of the message is drafted** — not before sending. A draft that already exists is a draft that eventually gets sent; the gate has to sit upstream of the writing, not downstream of it.
 

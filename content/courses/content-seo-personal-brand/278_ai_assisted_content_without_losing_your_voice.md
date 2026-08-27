@@ -1,8 +1,5 @@
 # 278. AI-Assisted Content Without Losing Your Voice
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Content_Engine_Rules material (ai-assisted-content-rules.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 AI can genuinely accelerate content production — brainstorming twenty angles on a topic, turning rough notes into an outline, rewriting a paragraph for clarity, adapting a blog into a carousel structure — but it consistently fails at the one thing that makes content valuable in the first place: sounding like a specific person with real, situated experience. Left unedited, AI-generated content converges on the same generic phrasing regardless of who prompted it — "in today's fast-paced digital world," "unlock the power of," "seamless and robust" — because it's trained to produce the statistically average version of confident-sounding business writing, which is exactly the opposite of what makes a specific voice memorable.
 

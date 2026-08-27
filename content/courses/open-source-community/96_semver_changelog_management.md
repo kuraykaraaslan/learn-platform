@@ -1,8 +1,5 @@
 # 96. Semver and Changelog Management
 
-## Coverage Level
-**Not Covered** — Version numbering without a system produces chaos for any consumer of your code — whether that is a client integrating with your API, a contractor updating your boilerplate, or the community using an npm package you publish.
-
 ## What It Is
 Semantic Versioning (semver) is a three-number versioning scheme (`MAJOR.MINOR.PATCH`) with a specific meaning for each number: the MAJOR version increments when you make breaking changes (existing integrations will break when they upgrade); the MINOR version increments when you add new functionality in a backwards-compatible way; and the PATCH version increments when you fix bugs in a backwards-compatible way. The scheme solves a coordination problem: it tells every downstream consumer, before they upgrade, whether upgrading is safe or requires migration work.
 

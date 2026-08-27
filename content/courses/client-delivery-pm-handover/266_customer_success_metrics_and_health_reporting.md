@@ -1,8 +1,5 @@
 # 266. Customer Success Metrics and Health Reporting
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management/Documentation_and_Handover/Customer_Success_and_Support/Client_Delivery_Playbooks material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Once a system is live and support is running, the question shifts from "did we deliver correctly" to "is the client actually succeeding with what we delivered" — and that question needs evidence, not a general sense that things seem fine. Customer success metrics are the lightweight instrumentation that answers it: a handful of numbers and observations across adoption, support load, system health, satisfaction, and commercial opportunity, tracked consistently enough to notice a trend before it becomes a crisis. The operative word is lightweight — a solo delivery operation that builds a metrics dashboard heavier than the client's actual system has inverted the priorities of the engagement.
 

@@ -1,8 +1,5 @@
 # 310. Visual Proof, Screenshots & Demo Videos
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Case_Study_and_Portfolio_Rules material (visual-proof-and-screenshots.md, project-demo-rules.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Visual proof makes work real, but a visual only earns its place if it proves something specific — workflow existence, UI quality, before-after improvement, complexity handled, admin control, or responsiveness. A screenshot dropped in just to fill space proves nothing and actually weakens a case study by making the reader wonder why it's there. Every screenshot needs a caption, context, sanitized data, a consistent resolution, and a clean crop — "Admin request table with status filtering, role-based actions, and export-ready operational data" tells the reader exactly what they're looking at and why it matters, while an unexplained screenshot forces them to guess. Different visual types serve different jobs: a hero screenshot shows final product quality, a workflow sequence shows how users move through the system, a before-after image shows transformation directly, an architecture diagram shows technical thinking — and a diagram with no accompanying explanation is decoration, not proof, exactly the same failure mode as an unexplained screenshot. The recommended visual ordering inside a case study follows the same logic as the written narrative: hero result screenshot, then before/problem visual, then core workflow screenshots, then technical diagram, then result/proof visual, then CTA — visuals should reinforce the story arc, not scatter randomly through the page.
 

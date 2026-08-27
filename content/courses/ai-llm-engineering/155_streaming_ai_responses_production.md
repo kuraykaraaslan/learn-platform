@@ -1,8 +1,5 @@
 # 155. Streaming AI Responses in Production
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/streaming-responses.md material; no existing coverage data for your own practice.
-
 ## What It Is
 Streaming exists to solve one specific user experience problem: an LLM generating 500+ tokens of prose can take several seconds, and showing nothing until the full response is ready feels broken even when the system is working correctly. Streaming the response token-by-token as it's generated gets the first visible content on screen in a fraction of a second, which is the metric that actually matters for perceived responsiveness — time to first token, not total generation time. The decision of whether to stream at all is a UX judgment, not a default: short classification or extraction outputs don't benefit from streaming and shouldn't pay its complexity cost, and anything that must be validated before being shown (structured output feeding a downstream system) can't be safely streamed at all, because you can't validate a response that isn't complete yet.
 

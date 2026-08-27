@@ -1,8 +1,5 @@
 # 87. Payment Integration Depth — Webhook Idempotency, Dispute Handling
 
-## Coverage Level
-**Covered** — You have Stripe, PayPal, and Iyzico integration with provider abstraction, refund flows, and transaction records. This entry goes beyond your existing implementation: production-grade webhook signature verification, idempotency key design, dispute handling state machines, and the operational runbook for payment incidents.
-
 ## What It Is
 Payment integrations have two layers: the happy path (customer pays, you record it, you unlock access) and the adversarial path (webhook retries, duplicate events, chargebacks, fraud, network timeouts, provider outages). Most developers implement the happy path competently and leave the adversarial path to chance. The adversarial path is where real money is lost.
 

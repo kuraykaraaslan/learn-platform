@@ -1,8 +1,5 @@
 # 241. Phase Status and Session Close-Out Discipline
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management_Rules/phase-status-report.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 This is a different discipline from the client-facing weekly status report — it's an internal, per-session ritual for any project tracked as numbered phases, and it exists to answer two questions that a phase-tracked project has a specific tendency to lose track of: what actually closed, and how much is genuinely left. The failure mode isn't laziness; it's that "started" is trivially easy to count (every phase looks like it has some work landed) while "finished" requires actually checking a definition-of-done and recording the result somewhere durable — and the easy number quietly wins by default until nobody can say with confidence how much of the program is actually done.
 

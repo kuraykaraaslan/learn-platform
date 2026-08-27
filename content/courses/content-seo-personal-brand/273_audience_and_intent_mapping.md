@@ -1,8 +1,5 @@
 # 273. Audience & Intent Mapping Before You Write
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Content_Engine_Rules material (audience-and-intent-mapping.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 The same underlying idea needs to be written completely differently depending on who's reading it, and skipping this step is the single fastest way to produce generic content. "Role-based access matters" means something different to an SME owner (fewer mistakes, clearer accountability) than to a CTO (API guards, database relations, auditability, test coverage). Audience mapping is the discipline of deciding, before a single sentence gets drafted, exactly who this piece is for, what they already believe, and what you want them to believe after reading it.
 

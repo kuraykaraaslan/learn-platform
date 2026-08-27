@@ -1,8 +1,5 @@
 # 408. Spring Boot: JWT Authentication with OncePerRequestFilter and @PreAuthorize
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_SpringBoot material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 This lesson is the Spring Boot counterpart to the curried `authMiddleware("ROLE")` pattern covered earlier in the Express material — same job, different mechanism. A custom filter extending `OncePerRequestFilter` runs on every request (guaranteed exactly once, even across internal forwards), extracts the access token from an httpOnly cookie, verifies it, and — on success — populates Spring Security's `SecurityContextHolder` with a `CurrentUserDetails` object wrapped in a `UsernamePasswordAuthenticationToken`. If the token is missing or invalid, the filter simply does not set an authentication and lets the request continue; Spring Security's own `authorizeHttpRequests` rule (`.anyRequest().authenticated()`) is what actually produces the 401 for a protected route with no valid session.
 

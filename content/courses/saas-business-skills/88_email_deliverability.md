@@ -1,8 +1,5 @@
 # 88. Email Deliverability — SPF, DKIM, DMARC, Bounce Management
 
-## Coverage Level
-**Partial** — You have a `notification_mail` service that sends transactional email. What is missing is the DNS authentication layer (SPF, DKIM, DMARC), bounce and complaint handling infrastructure, and the feedback loop processing that keeps your sending reputation clean.
-
 ## What It Is
 Email deliverability is the probability that an email you send will arrive in the recipient's inbox rather than their spam folder or nowhere at all. It is a separate concern from email sending: you can have a working mail service that sends emails successfully, and still have a deliverability problem that causes 30–40% of your emails to hit spam. Most developers discover this when a client complains that they never received a password reset email — and by then, your sending domain's reputation may already be damaged.
 

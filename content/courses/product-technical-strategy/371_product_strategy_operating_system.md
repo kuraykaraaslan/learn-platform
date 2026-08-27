@@ -1,8 +1,5 @@
 # 371. Product Strategy Operating System — From Problem to Roadmap
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `product-strategy-master.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Most software projects fail before a single line of code is written, because the sequence of decisions gets scrambled: someone hears "we need a booking system" and jumps straight to screens, a database schema, and a price quote. The Product Strategy Operating System is the fixed order of thinking that prevents that jump: Problem → User → Value Proposition → MVP → Scope Boundaries → Requirements → User Flows → Metrics → Roadmap → Risk Log → Handoff. Each step produces an artifact that the next step depends on. You cannot write a credible MVP definition without first knowing who the user is and what value proposition you are testing, and you cannot prioritize features without an MVP boundary to prioritize against.
 

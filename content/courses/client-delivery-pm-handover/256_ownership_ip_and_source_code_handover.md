@@ -1,8 +1,5 @@
 # 256. Ownership, IP, and Source Code Handover
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Documentation_and_Handover_Rules/ownership-ip-and-source-code.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Ownership ambiguity is one of the quietest sources of conflict in freelance delivery, precisely because it rarely surfaces during the project — it surfaces months later, when the client wants to hire a new developer and discovers the repository is still in the original freelancer's personal account, or when the freelancer reuses a utility function from one client's project in another client's work and gets an uncomfortable question about it. Documenting ownership clearly at handover isn't legal paperwork for its own sake; it's the record that prevents both of those situations from becoming disputes. This documentation is operational guidance, not a substitute for an actual contract reviewed by a qualified professional — but it's what makes the contract's terms visible and checkable in practice.
 

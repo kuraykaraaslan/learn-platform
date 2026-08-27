@@ -25,7 +25,6 @@ export function LessonPage({ lesson, courseTitle }: { lesson: Lesson; courseTitl
       </div>
 
       <div className="space-y-4">
-        <LessonSectionCard title="Coverage Level" html={lesson.sections.coverageLevel} />
         <LessonSectionCard title="What It Is" html={lesson.sections.whatItIs} />
         <LessonSectionCard title="Key Concepts" html={lesson.sections.keyConcepts} />
         <LessonSectionCard title="Example Code" html={lesson.sections.exampleCode} />

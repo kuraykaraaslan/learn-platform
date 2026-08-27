@@ -1,8 +1,5 @@
 # 248. Project Closure, Retrospective, and Client Satisfaction
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management_Rules/project-closure-and-retrospective.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 A project that just quietly stops — the last invoice gets paid, the developer moves to the next client, nobody explicitly says "this is done" — leaves both sides carrying different assumptions about what happens next. Does support continue indefinitely? Is the client free to request new features under the old scope? Is the freelancer still on the hook if something breaks in six months? Deliberate closure answers all of this in writing, in one pass, instead of leaving it to be renegotiated awkwardly the first time something goes wrong post-launch.
 

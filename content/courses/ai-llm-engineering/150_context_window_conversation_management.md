@@ -1,8 +1,5 @@
 # 150. Context Window and Conversation Management
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/context-and-conversation.md material; no existing coverage data for your own practice.
-
 ## What It Is
 The Anthropic API is stateless: every call is a complete, independent request, and the model has no memory of anything outside the exact `system` string and `messages` array you send it. For a chat-style feature, that means the calling application — not the API — owns the entire responsibility of assembling conversation history and passing it in full on every single request. This is a different mental model from a database connection or a WebSocket session, and it surprises engineers new to LLM APIs: there is no server-side session to attach to, only the payload you construct each time.
 

@@ -1,8 +1,5 @@
 # 275. Technical Writing Style for Business Readers
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Content_Engine_Rules material (technical-writing-style.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Technical writing style, in the content-marketing sense, is not about dumbing anything down — it's about translating technical depth into something a non-technical buyer can follow without losing the substance that makes a technical reader trust you. The failure mode on one side is writing that removes all technical detail and becomes indistinguishable from generic marketing copy ("we build secure, scalable solutions"); the failure mode on the other side is writing that dumps unexplained implementation detail on a reader who has no way to evaluate whether it matters ("we use Redis for availability with TTL-backed keys"). Good technical style for a mixed audience does neither — it keeps the mechanism but explains why it matters in terms the reader's role actually cares about.
 

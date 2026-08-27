@@ -1,8 +1,5 @@
 # 42. Optimistic vs Pessimistic Locking in Prisma/TypeORM
 
-## Coverage Level
-**Not Covered** — Your services perform read-then-write patterns (check seat count, then add member; check subscription, then activate feature) without explicit locking. In single-instance development this is unnoticeable, but concurrent requests in production can create race conditions that violate business invariants like seat limits, coupon usage caps, and unique resource constraints.
-
 ## What It Is
 A race condition in database operations occurs when two concurrent transactions both read the same state, both decide it is safe to proceed, and both write — resulting in a state that neither transaction would have allowed individually. The classic example is a seat limit check: transaction A reads "4 of 5 seats used", transaction B reads "4 of 5 seats used", both see room for one more, and both add a member. You now have 6 members against a limit of 5.
 

@@ -1,8 +1,5 @@
 # 215. Revision Policy — Bounding Feedback Without Killing Goodwill
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Revisions and change requests are often confused, but they answer different questions. A change request asks "should this new thing be added?" A revision asks "does this already-scoped thing match what we agreed?" A revision is a correction or adjustment to a deliverable that already exists in scope — a copy fix, a spacing tweak, a validation message clarification, a bug fix against the acceptance criteria. It is not a new page, a new module, a new integration, a changed business rule, or a major redesign after a direction was already approved. Confusing the two is how "unlimited revisions until you're happy" quietly becomes unlimited unpaid feature work.
 

@@ -1,8 +1,5 @@
 # 112. Technical Writing — Runbooks, API Docs, Decision Docs
 
-## Coverage Level
-**Not Covered** — You have ADR knowledge (item 75) and client communication rules, but practical technical writing for operators and developers hasn't been formalized.
-
 ## What It Is
 Technical writing for software has three distinct audiences and purposes: runbooks tell an operator what to do when something breaks, API documentation tells a developer how to use your system, and decision documents tell future-you (or a new team member) why something was built the way it was.
 

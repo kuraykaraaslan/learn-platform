@@ -1,8 +1,5 @@
 # 142. Capacity Planning & Back-of-Envelope Estimation
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. This is the estimation skill that Database Sharding Strategies (#12) and Cloud Architecture (#141) both assume you can already do — deciding *when* a system actually needs that complexity, based on numbers instead of intuition.
-
 ## What It Is
 Back-of-envelope estimation is quick, explicit arithmetic from a small number of stated assumptions to a rough but directionally correct answer — "roughly how many requests per second," "roughly how much storage will this grow by in a year" — done *before* writing code or provisioning infrastructure, not as a substitute for measuring the real thing once it exists. The value isn't precision; it's catching an order-of-magnitude mistake (assuming 10K users when the actual number is 10M) while it's still a five-minute conversation instead of a production incident.
 

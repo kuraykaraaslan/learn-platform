@@ -1,8 +1,5 @@
 # 120. Git Fundamentals — Branching, Merge vs Rebase, Resolving Conflicts
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Self-check: can you explain what a merge commit has that a rebase result doesn't, and why that matters for `git bisect`?
-
 ## What It Is
 Git tracks snapshots, not diffs — every commit is a full snapshot of the tree, and Git is efficient about storing that because unchanged files are just pointers to the same blob. Once that clicks, branches stop being mysterious: a branch is just a movable pointer to a commit, and "checking out" a branch moves `HEAD` to point at it.
 

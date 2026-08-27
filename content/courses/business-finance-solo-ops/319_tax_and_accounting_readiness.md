@@ -1,8 +1,5 @@
 # 319. Tax and Accounting Readiness for International Freelancers
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Finance_and_Operations_Rules material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Tax readiness isn't about knowing tax law — it's about never being the reason your accountant can't do their job. Most freelancers experience taxes as a once-a-quarter emergency because records were never organized as the year went along: receipts live in email, invoices live in chat exports, and foreign-currency payments have no note about which exchange rate applied. None of that is a tax problem; it's a filing-system problem that becomes a tax problem the week before a deadline.
 

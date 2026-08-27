@@ -1,8 +1,5 @@
 # 180. Proof, Credibility & Founder Narrative
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Brand_Positioning_Rules material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Every claim you make in your positioning — "production-ready," "secure," "business-oriented" — is worthless until it's attached to evidence a skeptical stranger can check. Proof and credibility work as a matrix, not a pile: for each claim, there's a specific artifact type that backs it up, and a specific place it belongs. "Production-ready" is backed by deployment notes, a security/testing checklist, and handover documentation — not by the word "production-ready" appearing more emphatically. "Business-oriented" is backed by a workflow diagnosis or an MVP-scoping story, not by saying "I think about business impact." The discipline is to write the claim, then immediately ask what artifact would make a stranger believe it, and if no answer exists, either build the artifact or stop making the claim.
 

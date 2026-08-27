@@ -1,8 +1,5 @@
 # 380. User Journey and Flow Mapping
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `user-journey-and-flows.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 A page list is not a user flow. "Home, login, dashboard, settings" tells you nothing about what actually happens between those screens — where a decision gets made, where data gets entered, where something can fail. A user flow forces the sequence into the open: entry point → action → decision → data entry → confirmation → result → follow-up state. Walking through that sequence for even a simple feature routinely surfaces a screen, a permission check, or an error state that nobody had thought to mention, because it only becomes visible once you trace someone actually trying to accomplish something, not once you list the pages a designer might draw.
 

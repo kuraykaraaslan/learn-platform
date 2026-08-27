@@ -1,8 +1,5 @@
 # 24. Bundle Size Optimization — Code Splitting, Tree Shaking
 
-## Coverage Level
-**Not Covered** — Your Next.js app has no documented bundle analysis process, no explicit code splitting strategy beyond Next.js defaults, and no tracking of bundle size over time. Library additions that add significant client-side weight go undetected until they affect Web Vitals.
-
 ## What It Is
 The JavaScript bundle delivered to the user is one of the most direct levers on perceived performance. Every kilobyte of JS must be downloaded, parsed, compiled, and executed before the page becomes interactive. Unlike images (which download in the background and don't block interactivity), render-blocking and interaction-blocking JS directly degrades LCP, TTI (Time to Interactive), and INP. For a SaaS, the dashboard and core app pages are the highest-traffic pages — bundle bloat there affects every user, every session.
 

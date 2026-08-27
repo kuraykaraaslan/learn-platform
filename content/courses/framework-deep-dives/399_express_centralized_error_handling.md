@@ -1,8 +1,5 @@
 # 399. Express: Centralized Error Handling with AppError
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Express material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Every route handler in this stack follows the same shape: try the work, and on failure call `next(error)` — never construct an error response inline. A single global `errorHandler` middleware, registered last in the stack, is the only place that decides what status code and body an error produces. This centralization means the error-response shape is guaranteed consistent across every one of hundreds of endpoints, and changing that shape (say, adding a `requestId` field) is a one-line change instead of a search-and-replace across the codebase.
 

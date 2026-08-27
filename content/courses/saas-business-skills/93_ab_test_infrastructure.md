@@ -1,8 +1,5 @@
 # 93. A/B Test Infrastructure — Statistical Significance
 
-## Coverage Level
-**Not Covered** — Without A/B test infrastructure, product decisions are made on opinion. For a SaaS with trial conversions and upgrade flows, even simple A/B tests on your pricing page or activation sequence can produce large, compounding improvements in MRR.
-
 ## What It Is
 A/B testing (also called split testing or controlled experimentation) is the practice of showing different versions of a feature or UI to randomly assigned groups of users and measuring which version performs better on a defined metric. It is the mechanism by which product decisions move from "I think this is better" to "this is measurably better with 95% confidence." The alternative — launching changes without A/B tests and observing overall metrics — conflates your change with every other change happening simultaneously and cannot attribute causality.
 

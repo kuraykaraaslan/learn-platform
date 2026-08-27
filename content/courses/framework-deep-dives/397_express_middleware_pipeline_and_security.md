@@ -1,8 +1,5 @@
 # 397. Express: Middleware Pipeline, CORS, and Rate Limiting
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Express material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Express middleware runs in registration order, and that order is not cosmetic — it determines whether cookies exist when auth checks them, whether preflight requests get answered before security headers reject them, and whether the error handler ever sees an error at all. The mandatory order in this house style is: cookie parser, body parser, CORS, Helmet, health check, routers (with rate limiting applied per-route or per-router), and the error handler last. Each position exists for a reason — cookie parsing must precede anything reading `req.cookies` (i.e., auth), body parsing must precede anything reading `req.body`, and the error handler's 4-argument signature only works if Express registers it after every other middleware.
 

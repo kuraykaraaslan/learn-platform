@@ -1,8 +1,5 @@
 # 307. Confidentiality, Anonymization & Technical Depth Calibration
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Case_Study_and_Portfolio_Rules material (anonymized-case-studies.md, technical-depth-balance.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Two different calibration problems both come down to the same question — how much do you reveal, and to whom — but they protect against opposite failures. Confidentiality decides what can be shown *at all*, protecting client trust and legal safety; technical depth decides how much detail to show *once something is safe to show*, matching the reader's actual sophistication. Getting confidentiality wrong exposes a real client to real risk. Getting technical depth wrong either bores a technical reviewer with business fluff or loses a business buyer under implementation trivia they never asked for.
 

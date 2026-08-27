@@ -1,8 +1,5 @@
 # 230. Contractor Classification — Independent Contractor vs Employee Risk
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Labor law in most countries defines an employment relationship by substance, not by the label on a contract. Calling someone a "contractor" in a signed agreement doesn't settle the question if, in actual practice, the relationship looks like employment — a tax authority, a labor court, or a social insurance body can reclassify it regardless of what the paperwork says, and the consequences land on the hiring party: back social insurance contributions, back tax withholding, potential severance or notice obligations, and administrative penalties. This risk runs in both directions of every relationship in this course — as a freelancer hired by a client, and as a hiring party bringing on a subcontractor.
 

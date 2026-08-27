@@ -1,8 +1,5 @@
 # 402. Express: Integration Testing with Jest and Supertest
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Express material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Express tests in this stack are integration tests by default, not unit tests with a mocked ORM. Supertest drives real HTTP requests against the exported `app` instance, and those requests hit a real `AppDataSource` connected to a dedicated test database — never a mocked TypeORM repository. The reasoning is direct: a mocked repository proves your mock behaves the way you told it to, not that your query actually returns the right rows against a real schema, real constraints, and real cascades. Route-level integration tests exercise the whole pipeline — middleware, validation, service, database — in one assertion, which is a closer proxy for "does this endpoint actually work" than a unit test that stubs everything below the route.
 

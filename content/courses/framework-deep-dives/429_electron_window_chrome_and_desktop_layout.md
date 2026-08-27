@@ -1,8 +1,5 @@
 # 429. Electron: Window Chrome, Multi-Window UX, and Desktop Layout
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' UI_Interface_Rules_Electron material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 A desktop app's window frame is the first thing that signals whether it feels native or foreign, and the default choice is the OS's own native frame (`frame: true`) — a custom, frameless title bar is a deliberate opt-in for when the app genuinely needs a branded toolbar or tab strip in that space, not a cosmetic default. Going frameless means taking on three specific responsibilities per OS: a draggable region (`-webkit-app-region: drag` on the bar itself, with every interactive child explicitly marked `no-drag`, since a fully-draggable bar makes its own buttons unclickable), a reserved inset for macOS's native traffic-light controls (`titleBarStyle: "hiddenInset"` keeps them while hiding the rest of the bar), and correct control placement — macOS traffic lights stay left and native, Windows/Linux controls are drawn on the right when frameless. Getting any one of these wrong reads as broken specifically on the platform that got it wrong, which is what makes cross-platform QA on real macOS, Windows, and Linux machines non-negotiable for a frameless design.
 

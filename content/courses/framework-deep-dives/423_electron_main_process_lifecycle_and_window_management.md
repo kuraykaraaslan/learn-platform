@@ -1,8 +1,5 @@
 # 423. Electron: Main Process Lifecycle and Window Management
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Electron material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 The main process entry point wires app lifecycle events in a fixed, deliberate order, and getting that order wrong produces bugs that only show up in specific, hard-to-reproduce scenarios: `app.requestSingleInstanceLock()` runs before anything else, because a second launch of the app should focus the existing window, not spawn a duplicate process fighting over the same user-data directory. `app.whenReady()` gates IPC registration and window creation. `activate` recreates a window on macOS when the dock icon is clicked with no windows open — a behavior unique to macOS's app-stays-alive-without-windows model. `window-all-closed` quits the app everywhere except macOS, where an app conventionally keeps running (in the dock, potentially in a tray) even with zero open windows. Getting this backwards — quitting on `window-all-closed` unconditionally — makes a macOS app behave like it crashed every time the user closes its last window.
 

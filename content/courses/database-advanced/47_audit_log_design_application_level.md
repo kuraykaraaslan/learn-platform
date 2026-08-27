@@ -1,8 +1,5 @@
 # 47. Audit Log Design — Application-Level
 
-## Coverage Level
-**Covered** — Your audit log implementation is solid and reflects genuine thought about the problem. You have separate `AuditLog` (system-level) and `TenantAuditLog` (per-tenant) entities, both with `actorId`, `actorType`, `action`, `resourceType`, `resourceId`, `metadata` (JSONB), `ipAddress`, `userAgent`, and indexed fields. You store audit logs in the same database tier as the data they describe (system DB for system events, tenant DB for tenant events). This section acknowledges what you have built, identifies the advanced patterns around immutability, querying, and compliance, and shows where to go next.
-
 ## What It Is
 An audit log is an append-only record of who did what to which resource and when. At its core it answers four questions: who (actor), what (action), which (resource), when (timestamp). Your implementation answers all four with additional context (IP address, user agent, impersonation metadata). This is the right foundation.
 

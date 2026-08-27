@@ -1,8 +1,5 @@
 # 347. Choosing a Growth Model and North Star Metric
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Before selecting metrics, building a dashboard, or planning content, a solo software business needs to define what "growth" actually means for it — and growth is not audience size. For a one-person operation, growth means a repeatable path from visibility to qualified revenue, and that path deserves a single North Star metric that everything else supports. The recommended North Star for a solo software business is qualified project opportunities per month, where "qualified" has a specific, non-negotiable definition: a lead with a clear business problem, a relevant service fit, a budget signal, a timeline signal, and access to or influence over the decision-maker. A metric that doesn't meet all five criteria isn't a qualified opportunity yet, no matter how promising the conversation felt.
 

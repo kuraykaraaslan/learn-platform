@@ -1,8 +1,5 @@
 # 65. Hexagonal Architecture (Ports & Adapters)
 
-## Coverage Level
-**Partial** — Your payment module already implements the core of this pattern: `BasePaymentProvider` is a Port, and `StripeProvider`, `PaypalProvider`, and `IyzicoProvider` are Adapters. The pattern is working, but it is only applied in one place. This file teaches the full hexagonal model so you can extend it to the rest of your domain.
-
 ## What It Is
 Hexagonal Architecture, coined by Alistair Cockburn, organizes an application so that its core domain logic is completely isolated from infrastructure — databases, HTTP frameworks, payment providers, email services. The core (the "hexagon") knows nothing about Stripe, PostgreSQL, Redis, or Next.js. It only knows about Ports: abstract interfaces that define what it needs and what it produces. Adapters are implementations of those Ports, living outside the hexagon: one adapter talks to PostgreSQL, another to an in-memory mock, a third to a test fixture.
 

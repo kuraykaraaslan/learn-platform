@@ -1,8 +1,5 @@
 # 114. Niche Positioning — From "Full-Stack Dev" to Known Expert
 
-## Coverage Level
-**Not Covered** — You run a solo software company with strong technical breadth. "Full-stack developer" is a commodity label that competes on price. Your actual positioning is much more specific and valuable than you're probably communicating.
-
 ## What It Is
 Positioning is the answer to "what do you do?" that makes a specific type of client immediately think "that's exactly what I need." The mistake most developers make is trying to appeal to everyone — which means you're competing with every other developer on Upwork by price.
 

@@ -1,8 +1,5 @@
 # 76. RFC (Request for Comments) Process Management
 
-## Coverage Level
-**Not Covered** — You operate solo today, but as you hire contractors, onboard clients into technical decisions, or open-source your boilerplate, having a lightweight RFC process prevents expensive reversals and builds trust.
-
 ## What It Is
 An RFC (Request for Comments) is a structured written proposal for a significant technical or process change. It is not a ticket, not a Slack message, and not a PR description. It is a self-contained document that explains the problem, the proposed solution, the alternatives considered, and the open questions — written before a single line of code is committed to a significant design choice.
 

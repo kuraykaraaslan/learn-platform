@@ -1,8 +1,5 @@
 # 212. Assumptions and Dependencies in Contracts and Estimates
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Every estimate is a bet on conditions the freelancer doesn't fully control: that the client will provide content on time, that a third-party API behaves as documented, that an existing codebase isn't a mess underneath the surface. Assumptions and dependencies are the mechanism for making that bet explicit instead of silent. An unstated assumption doesn't protect anyone — when it turns out to be wrong, the client experiences it as the freelancer's failure to estimate correctly, even though the real cause was a condition nobody wrote down.
 

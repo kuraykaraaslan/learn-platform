@@ -1,8 +1,5 @@
 # 249. Documentation Strategy and Audience Mapping
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Documentation_and_Handover_Rules/documentation-strategy.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Documentation fails most often not because too little was written, but because it was written for the wrong reader, or for no reader in particular. A single sprawling document that mixes admin passwords, business context, API internals, and end-user instructions serves nobody well: the business owner has to wade through database schema notes to find the support boundary, and the developer inheriting the project has to hunt through screenshots meant for end users to find the environment variable list. Documentation strategy is the decision, made deliberately and early, about who needs what, in what form, and how sensitive each piece is — before any of it gets written.
 

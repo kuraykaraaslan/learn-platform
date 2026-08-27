@@ -1,8 +1,5 @@
 # 20. Redis Cache Strategies (Write-Through, Write-Behind, Cache-Aside)
 
-## Coverage Level
-**Partial** — You use cache-aside in your session cache (check Redis, miss → fetch from DB, populate cache). Write-through and write-behind are not implemented. For data beyond sessions, there's no systematic cache invalidation strategy.
-
 ## What It Is
 Caching strategies differ in when and how the cache is populated and kept in sync with the source of truth. The choice affects your consistency guarantees, write performance, and failure behavior. Understanding the full taxonomy lets you pick the right strategy per use case rather than defaulting to cache-aside everywhere.
 

@@ -1,8 +1,5 @@
 # 348. Diagnosing Your Acquisition Funnel
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 An acquisition funnel is a simple way to see where attention becomes revenue, and where the process is actually breaking. The standard stages run: reach → visit/profile view → lead → qualified lead → discovery call → proposal → closed deal, and each stage should have a conversion rate to the next one wherever data exists. The minimum metrics worth tracking are new leads, qualified leads, discovery calls booked, proposals sent, deals won, proposal value, and revenue won; everything else — impressions, website sessions, form completion rate — is optional detail that only matters once the core numbers raise a question. The funnel's real value isn't the dashboard, it's the diagnosis: a funnel review is only complete once you can name the single biggest bottleneck and one concrete action to fix it.
 

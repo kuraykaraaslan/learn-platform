@@ -1,8 +1,5 @@
 # 101. Real-Time Systems — WebSocket, SSE, Long Polling
 
-## Coverage Level
-**Not Covered** — You use Next.js streaming for UI hydration but have no bi-directional or push-based real-time layer in any module, including `notification_inapp`.
-
 ## What It Is
 Real-time systems push data from server to client (or both directions) without the client repeatedly asking for it. There are three mainstream transport mechanisms: Long Polling, Server-Sent Events (SSE), and WebSockets. Each sits at a different point on the complexity/capability spectrum, and picking the wrong one adds either unnecessary overhead or missing features.
 

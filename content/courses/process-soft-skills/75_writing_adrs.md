@@ -1,8 +1,5 @@
 # 75. Writing ADRs (Architecture Decision Records)
 
-## Coverage Level
-**Covered** — You have `architecture-decision-records.md` in your Technical_Architecture_Rules ruleset with a solid template and quality criteria. You actively use the ADR concept. This file goes deeper: it shows what separates a good ADR from a great one, walks through a real example from your codebase (the HS256 vs RS256 JWT signing decision), and covers the lifecycle of an ADR as your system evolves.
-
 ## What It Is
 An Architecture Decision Record is a short, persistent document that captures why a significant technical decision was made — not just what was decided, but the context, constraints, alternatives considered, trade-offs, and known consequences. The "why" is the part that evaporates from memory within three months and from your codebase forever.
 

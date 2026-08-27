@@ -1,8 +1,5 @@
 # 264. Renewal, Upsell, and Expansion
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management/Documentation_and_Handover/Customer_Success_and_Support/Client_Delivery_Playbooks material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 An existing client who already trusts you and already has a working system in production is the least risky, least expensive revenue a delivery business has — cheaper to reach than a new lead, and pre-qualified by the fact that they've already paid once and stayed. Renewal and expansion are the two ways that relationship keeps producing value: renewal continues something that already exists (a maintenance plan, a support agreement), while upsell and expansion sell something new on top of the delivered system (a module, an integration, a reporting layer). Treating both as a single "keep the client happy and hope they buy more" instinct is how they get done badly — either not at all, or as a pushy pitch that damages the trust the relationship was built on.
 

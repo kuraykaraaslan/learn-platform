@@ -1,8 +1,5 @@
 # 350. Deciding When to Scale, Pause, or Kill a Growth Tactic
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Scaling a growth tactic should happen only when there is real evidence it creates qualified business outcomes — not because it feels like it's working, not because it's the newest idea, and not because stopping feels like giving up. Every active tactic should be classified into exactly one of six states: start, continue, iterate, scale, pause, or stop, each with clear trigger conditions. Continue applies when there's a positive but not-yet-sufficient signal, or when the tactic supports strategic positioning or builds trust even without immediate leads. Iterate applies when there's attention but low conversion, leads but low qualification, or confusion showing up in replies and calls — the tactic isn't wrong, the execution needs adjustment. Scale applies only when a tactic reliably creates qualified leads and sales conversations, can be repeated without damaging quality, and fits current delivery capacity. Pause applies when a tactic consumes time without useful signal or distracts from stronger channels. Stop applies when a tactic damages positioning, attracts bad-fit clients, creates ethical concerns, or has produced repeated poor results even after a genuine iteration attempt.
 

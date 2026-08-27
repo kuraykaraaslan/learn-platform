@@ -1,8 +1,5 @@
 # 94. Contributing to Popular Open Source Projects
 
-## Coverage Level
-**Not Covered** — There is no evidence of OSS contributions in your history. Contributing to well-known projects builds credibility, deepens expertise in the exact tools you use daily, and opens doors to opportunities that no LinkedIn post can replicate.
-
 ## What It Is
 Contributing to open source means improving software whose source code is publicly available and governed by a community. A contribution is not only a code change — it includes bug reports, documentation improvements, test additions, reproducible examples, and triage work on the issue tracker. For a developer who uses Next.js, TypeScript, PostgreSQL, and Stripe in production, meaningful contribution opportunities exist at every level of skill and time investment.
 

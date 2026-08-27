@@ -1,8 +1,5 @@
 # 6. Distributed Locking (Redis Redlock, DB-based)
 
-## Coverage Level
-**Not Covered** — Your boilerplate has no distributed locking mechanism. In a multi-tenant SaaS with a shared Redis instance and the possibility of multiple Node.js processes (or future horizontal scaling), concurrent operations on the same resource have no mutual exclusion guarantee.
-
 ## What It Is
 A distributed lock allows multiple processes across different machines to agree that only one of them holds the lock on a given resource at a given time. This is necessary when you have multiple Node.js processes (Next.js API routes, BullMQ workers, background tasks) that may concurrently try to mutate the same shared state — provisioning a tenant, deducting credits, processing a webhook event.
 

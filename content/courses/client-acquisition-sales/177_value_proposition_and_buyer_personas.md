@@ -1,8 +1,5 @@
 # 177. Value Proposition & Ideal Buyer Personas
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Brand_Positioning_Rules material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 A positioning statement says who you serve; a value proposition says why they should care. It's the layer that connects a feature to a business consequence: not "I build admin panels" but "I replace the manual reporting that costs your ops team six hours a week." A complete value proposition has four layers stacked on top of each other — functional (what you literally build), business (the operational or financial outcome it produces), emotional (the confidence the client feels that the project is under control), and risk-reduction (what goes wrong less often because you're the one doing it). Most developers only ever articulate the functional layer, which is exactly the layer a buyer can get from anyone.
 

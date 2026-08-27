@@ -1,8 +1,5 @@
 # 211. Statement of Work (SOW) Structure and Drafting
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 A proposal sells the engagement; the Statement of Work governs it. Once a prospect says yes, the SOW becomes the operational truth of the project — the document a client, a future collaborator, or a court would read to determine what was actually promised. It is not a marketing artifact and should not read like one. Where a proposal can use persuasive language and lead with outcomes, a SOW uses decisive, unambiguous language and leads with control: what's included, what's excluded, who owns which decision, and what happens when something goes wrong.
 

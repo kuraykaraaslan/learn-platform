@@ -1,8 +1,5 @@
 # 297. Comment Strategy, DMs and Networking
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' LinkedIn_Authority_Rules material (comment-strategy.md, dm-and-networking-rules.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Comments and DMs are not filler activity around posting — for a solo technical business, they often generate more business than the posts themselves, because LinkedIn functions as a relationship channel, not a billboard. A comment worth posting adds one of: specific insight, a practical example, a useful question, respectful disagreement, or relevant experience — "Great post!" and "Thanks for sharing!" add nothing and are indistinguishable from spam regardless of intent. Four reusable frameworks cover most good comments: adding a practical layer ("This is especially true when \<scenario\>. I have seen that the hard part is usually not \<obvious thing\>, but \<hidden complexity\>"), asking a smart question, respectfully extending the original point, or offering a mini case example from real experience. Where the time goes matters as much as what gets written: prioritize commenting on founders, agency owners, CTOs, product managers, and SME operators over broad viral posts with no relevant audience, aiming for a roughly 40% target-buyer / 30% peer-technical / 20% partner-agency / 10% high-authority-account split across a minimum of five, ideally ten, meaningful comments per weekday.
 

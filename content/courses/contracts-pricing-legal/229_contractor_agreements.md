@@ -1,8 +1,5 @@
 # 229. Contractor Agreements — Protecting Yourself When You Hire Help
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Every clause this course has covered so far protects a freelancer as the party being hired. The moment a solo practice grows enough to bring in a subcontractor — a designer, a second developer, an overseas specialist — the freelancer becomes the hiring party, and needs the mirror image of the same protections, this time pointed the other direction. A contractor agreement is not a formality for that first small engagement; it's the document that determines whether the freelancer actually owns what the subcontractor produces, and whether they have any real recourse if something goes wrong.
 

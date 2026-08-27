@@ -1,8 +1,5 @@
 # 111. Production Debugging Methodology
 
-## Coverage Level
-**Not Covered** — You have Winston logging in place but no documented systematic approach to diagnosing production incidents.
-
 ## What It Is
 Production debugging is different from local debugging. You can't attach a debugger, you can't reproduce the exact state, and the pressure to fix it fast is real. Developers who debug by intuition ("I think it might be the cache...") thrash for hours. Developers with a method eliminate the problem space systematically and find the root cause in minutes.
 

@@ -1,8 +1,5 @@
 # 153. Model Selection Strategy
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/model-selection.md material; no existing coverage data for your own practice.
-
 ## What It Is
 Model selection is a cost/latency/quality tradeoff, and treating it as a one-time choice made at the start of a project (rather than a per-feature decision, revisited as usage data comes in) is one of the more expensive mistakes in production AI systems. Anthropic's Claude lineup in 2026 spans three tiers with genuinely different economics: Haiku is cheap and fast, built for high-volume, short, structured tasks; Sonnet is the default — the right choice whenever you're uncertain — balancing capability against cost for feature-grade reasoning, code, and medium-length generation; Opus is the expensive, high-latency tier reserved for genuinely hard multi-step reasoning where a missed edge case has real cost, like architecture review or long-document analysis.
 

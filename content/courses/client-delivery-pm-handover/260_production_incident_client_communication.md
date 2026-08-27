@@ -1,8 +1,5 @@
 # 260. Production Incident Client Communication
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Customer_Success_and_Support_Rules/production-incident-client-communication.md and incident-and-escalation.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 The core fact that shapes every incident message is this: the client doesn't need a technical explanation in the first message, they need to know that you know, you're on it, and you'll update them. Panic-driven over-explanation — trying to describe root cause before it's even confirmed — is the most common communication mistake during an incident, and it's driven by the developer's own anxiety more than the client's actual need. The right posture is the opposite: say less, act faster, update predictably. A short, calm first message sent within minutes does more for confidence than a longer, more technical one sent later.
 

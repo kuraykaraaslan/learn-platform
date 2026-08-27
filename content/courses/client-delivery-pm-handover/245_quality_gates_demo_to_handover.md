@@ -1,8 +1,5 @@
 # 245. Quality Gates: From Demo-Ready to Handover-Ready
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management_Rules/quality-gates.md and acceptance-criteria-and-signoff.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 "Ready" means something different at every stage of a project, and treating it as one undifferentiated state is how unfinished work reaches a client, or client-facing work reaches production, without anyone deciding that it should. A quality gate is a named checkpoint — pre-demo, pre-staging, pre-production, pre-handover — with its own specific checklist, that work must pass before moving to the next stage. The gates exist because "looks finished" is not the same claim as "meets the bar for this specific audience," and the bar rises sharply between showing a client a working core flow and putting real customer payment data through a production deploy.
 

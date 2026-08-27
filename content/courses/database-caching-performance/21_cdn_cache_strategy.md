@@ -1,8 +1,5 @@
 # 21. CDN Cache Strategy — Cache-Control, stale-while-revalidate
 
-## Coverage Level
-**Not Covered** — Your Next.js API routes and pages do not set explicit `Cache-Control` headers. The default behavior — which varies by deployment platform — likely caches nothing or caches incorrectly. For a multi-tenant SaaS with different data per tenant, incorrect caching could serve one tenant's data to another.
-
 ## What It Is
 HTTP caching is a first-principles performance and cost optimization. When a browser, CDN edge node, or reverse proxy caches a response, subsequent identical requests are served without hitting your origin server. For static assets, this is obvious. For API responses and HTML pages in a SaaS, the rules are more nuanced and the stakes are higher: a misconfigured `Cache-Control` header can either over-cache (serving stale or cross-tenant data) or under-cache (making every request hit your origin unnecessarily).
 

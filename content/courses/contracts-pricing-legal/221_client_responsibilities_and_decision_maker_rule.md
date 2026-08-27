@@ -1,8 +1,5 @@
 # 221. Client Responsibilities and the Decision-Maker Rule
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 A software project is delivered by two parties, not one, and most SOWs only document what one of them owes. Content, brand assets, timely access to accounts, consolidated feedback, written approvals, and on-time payment are the client's half of the delivery equation — and when they're missing, the timeline and the outcome are affected exactly as much as if the freelancer had missed a deadline. Naming these responsibilities explicitly, with an owner and a deadline for each, is what prevents "the client was slow" from becoming an unwinnable argument about whose fault a delay was.
 

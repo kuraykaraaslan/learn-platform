@@ -1,8 +1,5 @@
 # 368. Client-Facing Security Communication — Risk Framing & Scope Boundaries
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
-
 ## What It Is
 Every other lesson in this course covers what to *do* about security and privacy risk; this one covers how to *say it out loud* to a client without either scaring them into a bad decision or quietly letting them believe something false. Both failure modes are common and both are worse than plain language: security jargon used to pressure a sale creates distrust the moment the client learns enough to see through it, and a vague reassurance ("don't worry, it's secure") that omits a real limitation creates a false sense of coverage that surfaces at the worst possible time — usually during an incident or an audit, when it's too late to have said it earlier. The discipline is narrow and learnable: be specific about the actual risk, state it plainly, separate what engineering controls from what only a legal or privacy advisor can determine, avoid exaggerated guarantees, explain the trade-off being made, name whose responsibility a given risk is, and end with an actual recommendation rather than just a warning.
 

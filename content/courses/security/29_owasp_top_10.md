@@ -1,8 +1,5 @@
 # 29. OWASP Top 10 — Practical Application
 
-## Coverage Level
-**Partial** — You have Zod validation on inputs (A03: Injection), bcrypt for passwords (A07: Identification Failures), Prisma/TypeORM parameterized queries (A03: SQL Injection), CSRF token handling in your Axios client, and impersonation audit trails. The gaps are structural: there is no systematic checklist applied across the codebase, and several categories (A08: Software and Data Integrity, A09: Logging/Monitoring Failures, A05: Security Misconfiguration) have no specific mitigations visible.
-
 ## What It Is
 The OWASP Top 10 is a consensus document published by the Open Web Application Security Project that lists the ten most critical web application security risk categories. It is not a law or certification requirement, but it has become the de facto baseline checklist that security auditors, enterprise clients, and bug bounty programs use when evaluating a web application. As a SaaS selling to businesses, you will eventually encounter a customer security review questionnaire that maps directly to these categories.
 

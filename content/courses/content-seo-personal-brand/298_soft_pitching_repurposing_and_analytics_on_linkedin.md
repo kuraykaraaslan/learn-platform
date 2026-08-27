@@ -1,8 +1,5 @@
 # 298. Soft Pitching, Repurposing and Analytics on LinkedIn
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' LinkedIn_Authority_Rules material (offer-soft-pitching.md, content-repurposing-for-linkedin.md, analytics-and-iteration.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Making services visible without turning every post into a sales pitch is a real tension, and the resolution is a strict ratio and a specific formula rather than instinct: roughly 80% of content should be pure value, proof, or conversation, 15% soft offer, and 5% direct availability posts — pitching in every post is one of the fastest ways to undo the trust the other 95% built. A soft pitch formula that stays contextual and low-pressure looks like "If you are dealing with \<problem\>, the first step is \<recommended action\>. I help \<target client\> with \<service/outcome\>. You can \<CTA\>" — it names the problem before the offer, which is what keeps it from reading as a cold pitch dropped into an unrelated feed. An occasional direct offer post (best fit / not a fit / next step) is fine at low frequency, but "DM me" under every post, discount-driven CTAs, and publicly pressuring people are all forbidden because they read as desperation, which is the opposite of the authority the whole system is trying to build.
 

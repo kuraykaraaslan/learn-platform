@@ -1,8 +1,5 @@
 # 162. MCP Server Architecture and Tool Design
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' MCP_Server_Design_Rules/mcp-server-master.md and tool-naming-conventions.md material; no existing coverage data for your own practice.
-
 ## What It Is
 The Model Context Protocol standardizes how an AI client discovers and calls capabilities you expose, and it gives you exactly three primitives to model those capabilities with: a **Tool** for anything the AI needs to take an action on or fetch data with parameters, a **Resource** for a document, file, or structured record the AI reads by URI, and a **Prompt** for a static, pre-built instruction template the host injects. The overwhelming majority of real integrations are Tools — default to Tool for any new capability, and reach for Resource or Prompt only when the use case is a clearly better fit (Resources for read-only content by identifier, Prompts for genuinely static templates, never for data that changes per call). Getting this primitive choice wrong early is expensive later, because clients build expectations around each primitive's semantics — a Resource is assumed to be side-effect-free, for instance, so putting an action behind one violates the contract the protocol was designed around.
 

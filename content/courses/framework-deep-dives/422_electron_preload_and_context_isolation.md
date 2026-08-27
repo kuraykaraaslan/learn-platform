@@ -1,8 +1,5 @@
 # 422. Electron: Preload Scripts and Context Isolation
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Electron material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Three `webPreferences` flags form the non-negotiable baseline for every `BrowserWindow` in this stack, and they work as independent walls rather than one combined setting: `contextIsolation: true` keeps the page's JavaScript and the preload script in separate global contexts, so a compromised page can't monkey-patch the bridge or reach into Electron's internals; `sandbox: true` runs the renderer inside an OS-level sandbox, so a Chromium remote-code-execution bug doesn't hand the attacker direct OS access; `nodeIntegration: false` keeps `require`, `process`, and `Buffer` out of the page entirely, closing the most direct escalation path. Any one of these being off is treated as a hard security failure, not a style preference — a renderer showing hostile or compromised web content with `nodeIntegration: true` is a straight line to remote code execution on the user's machine.
 

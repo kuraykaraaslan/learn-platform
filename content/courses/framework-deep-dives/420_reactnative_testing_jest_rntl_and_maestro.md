@@ -1,8 +1,5 @@
 # 420. React Native: Testing with Jest, React Native Testing Library, and Maestro
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_ReactNative material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Testing an Expo app starts with the `jest-expo` preset, which auto-mocks the native modules that would otherwise crash a plain Jest run — there's no real camera, no real `SecureStore`, no real filesystem in the test environment, so `jest-expo` swaps them for safe stand-ins automatically. Where the default mock isn't enough (a test needs to assert *what* was stored, not just that nothing crashed), an explicit mock file under `__mocks__/` at the project root overrides it; Jest resolves anything in that folder automatically, no per-test wiring required. `expo-router`'s navigation primitives (`router.push`, `Redirect`, `Slot`) get the same treatment — a screen test doesn't need a real navigator, just a mock that records calls.
 

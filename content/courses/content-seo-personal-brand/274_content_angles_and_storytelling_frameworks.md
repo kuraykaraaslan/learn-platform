@@ -1,8 +1,5 @@
 # 274. Content Angles & Storytelling Frameworks
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Content_Engine_Rules material (content-angle-selection.md, storytelling-frameworks.md, post-templates.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 An idea is a subject; an angle is an argument. "MVP scoping" is a topic anyone could write about forever without saying anything memorable. "Most founders think MVP scope is a feature list, but the real issue is choosing the first workflow that proves value" is an angle — it takes a position, and a reader either agrees, disagrees, or feels caught. Angle selection is the step between "I have something to say about X" and actually writing, where you pick which shape the argument takes: a mistake being corrected, a myth being debunked, a checklist being handed over, a before/after transformation, a trade-off being weighed, or an opinion being defended.
 

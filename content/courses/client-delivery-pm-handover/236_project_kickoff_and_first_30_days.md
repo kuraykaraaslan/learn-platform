@@ -1,8 +1,5 @@
 # 236. Project Kickoff and the First 30 Days
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management_Rules/project-kickoff.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Kickoff is the moment a sold project becomes an executable one. Before kickoff, everything about the engagement lives in a proposal, a contract, and a handful of sales conversations — all of which are optimized for winning the deal, not for building the thing. Kickoff is where you deliberately convert "we agreed to work together" into a shared, written understanding of the goal, the scope boundaries, who can approve what, and what happens the moment something is unclear. Skipping it — starting to code the day the contract is signed because momentum feels valuable — is one of the most common causes of mid-project conflict, because it lets both sides carry different mental models of the same project for weeks before anyone notices.
 

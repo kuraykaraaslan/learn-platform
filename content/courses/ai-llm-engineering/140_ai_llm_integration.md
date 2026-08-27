@@ -1,8 +1,5 @@
 # 140. AI/LLM Integration & Prompt Engineering — RAG, Vector DBs, Agents, Evals
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review as the single largest gap in the original 118-topic list: none of them mention LLM integration despite it now being a routine part of senior engineering work in 2026.
-
 ## What It Is
 Integrating an LLM into a product is mostly an exercise in **context engineering**, not prompting cleverness — the model only knows what's in its context window (the system prompt, the conversation, and anything you retrieve and inject), so the real design work is deciding what belongs there and in what order. **Retrieval-Augmented Generation (RAG)** is the standard pattern for grounding answers in your own data: embed your documents into vectors ahead of time, store them in a vector database (pgvector alongside your existing Postgres, or a dedicated store like Pinecone), and at query time embed the user's question, retrieve the most similar chunks, and inject them into the prompt so the model answers from *your* data instead of only its training knowledge.
 

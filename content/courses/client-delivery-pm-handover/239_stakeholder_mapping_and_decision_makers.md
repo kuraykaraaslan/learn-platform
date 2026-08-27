@@ -1,8 +1,5 @@
 # 239. Stakeholder Mapping and the Decision-Maker Problem
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management_Rules/stakeholder-management.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Many client projects don't fail on technical grounds — they fail because the person giving feedback throughout the project was never the person who could actually approve it. A friendly, responsive daily contact feels like progress; a milestone that gets rebuilt after "internal review" three weeks later is the real cost of never having identified who held approval power in the first place. Stakeholder mapping is the deliberate exercise of naming, before real work starts, who is the primary contact, who is the final decision maker, who controls the budget, who reviews technical detail, and who the actual end users are — because these are frequently five different people, and treating them as one creates hidden risk that surfaces at the worst possible moment.
 

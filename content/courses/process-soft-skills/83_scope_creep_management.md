@@ -1,8 +1,5 @@
 # 83. Scope Creep Management — Saying No with Alternatives
 
-## Coverage Level
-**Covered** — Your Contract and Scope Rules include a formal change request process. This entry goes deeper: a production-ready change request template, the exact language for handling verbal scope additions, and a framework for deciding when to absorb versus bill a change request.
-
 ## What It Is
 Scope creep is the gradual expansion of a project's requirements beyond what was contracted, without corresponding adjustments to timeline or budget. It is the single most common cause of unprofitable fixed-price projects. It almost always starts politely: "could you also just add a small thing while you're in there?" — and it ends with a developer who has worked 40% more hours than budgeted, on a project that is now late, with a client who thinks the delay is the developer's fault because they never said "this changes the timeline."
 

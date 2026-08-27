@@ -1,8 +1,5 @@
 # 411. Spring Boot: Flyway Migrations and Zero-Downtime Schema Changes
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Java material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Schema evolution in this Spring Boot stack is owned entirely by Flyway, never by Hibernate's `ddl-auto`. This is a deliberate architectural choice: Hibernate can infer a schema from your entity annotations and apply it automatically, but that inference is invisible, unreviewable, and impossible to roll back in a controlled way — exactly the properties you don't want for something as consequential as a production schema change. Flyway inverts the relationship: you write the SQL by hand, commit it as a versioned file, and Flyway applies pending migrations in order on application startup, tracking exactly which ones have run in a metadata table. `spring.jpa.hibernate.ddl-auto` is set to `validate` — Hibernate checks that the entities match the schema Flyway produced, and fails fast at startup if they've drifted apart, but it never writes DDL itself.
 

@@ -1,8 +1,5 @@
 # 391. Non-Functional Requirements and Production Readiness Strategy
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Technical_Architecture_Rules material (specifically `non-functional-requirements.md`, `reliability-and-resilience.md`, `observability-and-operability.md`, and `deployment-topology-and-environments.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Non-functional requirements decide how well a system must behave, and a project without them stated explicitly isn't ready for serious estimation no matter how clear the feature list is. The required categories are performance, availability, scalability, security, privacy/compliance, reliability, maintainability, observability, backup/recovery, accessibility, data retention, and support expectations. The whole discipline is turning "fast," "secure," and "scalable" into numbers and named threats: "dashboard loads in under 2 seconds for up to 10,000 records" is architecture-ready, while "fast" is a placeholder that will be reinterpreted by whoever is unhappy with the delivered system.
 

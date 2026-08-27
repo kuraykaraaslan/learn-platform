@@ -1,8 +1,5 @@
 # 188. Cold Outreach Channels: Email, LinkedIn & Phone
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Which channel opens a cold conversation depends on the prospect's tier and what contact routes actually exist for them — and once chosen, every touch across every channel draws from a single shared budget of three, total, combined. Switching channels does not reset the counter: three emails and then a call is four touches, and the call does not happen. The default sequence is email→email→email; phone can enter as touch two for an A-tier prospect in a jurisdiction where a published business line exists, and LinkedIn can open the sequence when the only real contact route is a profile. What is never allowed is opening on the phone, contacting the same person on two channels the same day, or hopping to a new channel specifically to buy extra touches beyond three. A contact route that is only a personal address or a personal mobile means the row is dropped entirely, on every channel — no route in, ever.
 

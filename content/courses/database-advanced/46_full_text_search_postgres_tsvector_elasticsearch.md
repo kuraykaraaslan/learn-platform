@@ -1,8 +1,5 @@
 # 46. Full-Text Search — PostgreSQL tsvector vs Elasticsearch
 
-## Coverage Level
-**Not Covered** — Your codebase uses `ILike` pattern matching (TypeORM's `ILike`) for search queries, which translates to `LIKE '%term%'` with `ILIKE` case-insensitivity. This is functional for small datasets but does not scale, cannot rank by relevance, cannot handle multi-word queries intelligently, and does not support stemming, stop words, or phrase matching.
-
 ## What It Is
 Full-text search is the capability to search document content rather than exact field values. It supports stemming (searching "running" also matches "run", "runs"), stop words (ignoring "the", "and", "is"), relevance ranking (results ordered by how well they match), phrase queries ("exact phrase in quotes"), and Boolean operators (AND, OR, NOT). This is qualitatively different from `LIKE '%search%'`, which just checks if the string appears anywhere in the field.
 

@@ -1,8 +1,5 @@
 # 139. Git Internals & Advanced Workflows — Bisect, Rebase Strategies, Monorepo Git
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. This is the tool used every single day yet absent from the original 118-topic list entirely — the natural advanced pairing to both Git Fundamentals (#120) and Monorepo Tooling (#108).
-
 ## What It Is
 Underneath every Git command is a small, genuinely simple object model: a **blob** stores file contents, a **tree** stores a directory listing (names pointing at blobs or other trees), a **commit** points at one tree plus its parent commit(s), and a **ref** (a branch or tag) is just a named pointer to a commit. Once this clicks, commands that seemed like magic become mechanical: `git reset --hard` just moves a ref (and the working directory) to point at a different commit; `git rebase` builds new commits with the same content but different parents and reassigns the branch ref to the last new one — the "original" commits still exist as unreferenced objects for a while, which is exactly what the **reflog** exploits to recover from almost any mistake.
 

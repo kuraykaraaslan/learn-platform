@@ -1,8 +1,5 @@
 # 41. PostgreSQL MVCC — Vacuum, Bloat, Transaction Isolation
 
-## Coverage Level
-**Not Covered** — Your application writes to PostgreSQL heavily (audit logs, sessions, tenant operations) but has no configuration or operational practices around autovacuum tuning, bloat monitoring, or transaction isolation levels. These are not first-day concerns, but they cause confusing production bugs and performance degradation that is hard to diagnose without knowing the underlying mechanism.
-
 ## What It Is
 MVCC (Multi-Version Concurrency Control) is PostgreSQL's strategy for allowing concurrent reads and writes without locking each other out. When you update a row, PostgreSQL does not modify it in place. Instead, it writes a new version of the row and marks the old version as expired (dead). Reads that started before the update still see the old version; reads that start after see the new version. This is what makes `SELECT` never block `UPDATE` in PostgreSQL.
 

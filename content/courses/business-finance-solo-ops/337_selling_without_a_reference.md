@@ -1,8 +1,5 @@
 # 337. Selling Into a New Vertical Without a Case Study
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Every strategic move into higher-value work or a new market segment starts with the same uncomfortable gap: the positioning you want doesn't yet have the proof to back it up. You want to say "I build production-ready platforms for logistics companies," but your actual portfolio is three unrelated SaaS MVPs and an admin panel for a bakery chain. Selling into that gap honestly — without fabricating experience — is a specific, learnable skill, not a matter of waiting until the case study magically appears.
 

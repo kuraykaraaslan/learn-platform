@@ -1,8 +1,5 @@
 # 199. Risk Logs, Meeting Recaps & the Discovery-to-Proposal Handoff
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 A discovery call generates more understanding than any one person's memory should be trusted to carry forward, and three artifacts exist specifically to move that understanding out of memory and into something both sides can check: the risk and assumption log, the written recap, and the handoff brief. The log separates two things that get blurred constantly — an assumption is a fact being taken as given for planning purposes ("version one includes only an admin and a customer role"), while a risk is something that could change the outcome ("third-party API documentation isn't available yet") — and each gets its own record with an owner and, for risks, a mitigation and a probability. The habit this protects against is specific and common: a critical risk that never got written down doesn't disappear, it just resurfaces later as a dispute about whether it was ever discussed at all, at which point there's no record to settle it either way.
 

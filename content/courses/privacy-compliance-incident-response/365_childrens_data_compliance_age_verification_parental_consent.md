@@ -1,8 +1,5 @@
 # 365. Children's Data Compliance — Age Verification & Parental Consent
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
-
 ## What It Is
 Children's data compliance is triggered by a single scoping question that most projects never explicitly ask: will users under 18 be able to access this service, and if so, what personal data does it collect from them? Getting this wrong is not a hypothetical risk — the UK's ICO fined TikTok £12.7M and the FTC fined YouTube $170M specifically over children's-data violations, and in both cases the platforms were not "for children" in the marketing sense, they were simply *accessible* to children without meaningfully different handling. That distinction — "likely to be accessed by children" versus "marketed at children" — is what the UK's Age Appropriate Design Code (Children's Code) actually tests, and it means a general-audience app with no age gate has to assume children can reach it rather than assuming they can't.
 

@@ -1,8 +1,5 @@
 # 61. Alerting Design — Avoiding Alert Fatigue
 
-## Coverage Level
-**Not Covered** — The project has no alerting configuration. Without deliberate alerting design, either nothing pages you when it matters, or everything does and you start ignoring it.
-
 ## What It Is
 Alerting design is the discipline of deciding what should wake someone up at 2 AM versus what should appear on a dashboard to be reviewed in the morning. Getting this wrong in either direction is expensive: too few alerts means outages go unnoticed; too many means every alert gets ignored, including the critical ones.
 

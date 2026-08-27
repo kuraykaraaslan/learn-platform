@@ -1,8 +1,5 @@
 # 186. Target Lists, Trigger Events & Tiering
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 A cold outreach list is not "a list of emails" — it is one segment plus one trigger plus one offer, and changing any of the three makes it a different campaign with its own list. The build order matters and runs in exactly one direction: fix the segment first, fix the trigger type second, find organizations that match both, find the specific role that owns the problem at each one, and only then record the contact detail with its provenance. Starting from "I found a list of emails" and working backward inverts this order and produces exactly what it sounds like: generic messages to people who happen to be on a spreadsheet.
 

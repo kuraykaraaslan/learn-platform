@@ -1,8 +1,5 @@
 # 320. Expense and Subscription Cost Control
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Finance_and_Operations_Rules material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Expenses aren't the enemy — unreviewed expenses are. A $20/month tool doesn't feel like a decision worth scrutinizing, which is exactly why solo businesses accumulate a dozen of them: a design tool trialed once and never cancelled, a project-management app duplicating what Notion already does, an AI tool subscribed to "just in case." None of these individually breaks the business, but their sum quietly erodes margin every single month, invisibly, because no single charge is large enough to trigger a reaction.
 

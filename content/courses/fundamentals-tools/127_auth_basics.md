@@ -1,8 +1,5 @@
 # 127. Authentication Basics — Sessions vs Tokens, Password Hashing
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. This is the prerequisite beneath JWT Security (#32). Self-check: can you explain why passwords are hashed rather than encrypted, in a way that also explains why hashing can't be "undone" even by you?
-
 ## What It Is
 Authentication answers "who is this?" — and almost every implementation reduces to two families. **Session-based auth** keeps state on the server (a session record, often in Redis) and hands the client an opaque cookie ID pointing at it; the server can revoke a session instantly by deleting the record. **Token-based auth** (typically JWT) puts the claims *in* the token itself, cryptographically signed — the server verifies the signature and trusts the contents without a database lookup, which is faster but makes instant revocation hard (see #32 for the mitigations).
 

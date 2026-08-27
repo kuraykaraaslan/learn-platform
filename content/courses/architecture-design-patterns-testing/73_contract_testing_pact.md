@@ -1,8 +1,5 @@
 # 73. Contract Testing with Pact
 
-## Coverage Level
-**Not Covered** — The project integrates with multiple external services (Stripe, PayPal, Iyzico, S3, external auth providers) and has no contract tests to verify these integrations remain compatible as APIs evolve.
-
 ## What It Is
 Contract testing is about verifying that two systems that communicate with each other agree on the shape of that communication: the request format, the response schema, and the error conditions. It sits between unit tests (too narrow, no real communication) and E2E tests (too slow and brittle, requires all services to be running).
 

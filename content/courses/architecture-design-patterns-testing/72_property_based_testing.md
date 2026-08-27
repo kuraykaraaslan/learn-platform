@@ -1,8 +1,5 @@
 # 72. Property-Based Testing (fast-check, Hypothesis)
 
-## Coverage Level
-**Not Covered** — The project has zero test files. Property-based testing is an advanced testing technique, but it is especially powerful for validating Zod schemas, data transformation functions, and invariants that hold across all inputs — exactly the kind of logic your boilerplate has.
-
 ## What It Is
 Traditional (example-based) testing is: you think of specific inputs, compute the expected output, write the assertion. The weakness is that you only test the cases you think of. If you did not think of an empty string, `null`, a very large number, or a string with Unicode surrogate pairs, you did not test those cases.
 

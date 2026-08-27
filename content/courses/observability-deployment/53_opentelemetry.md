@@ -1,8 +1,5 @@
 # 53. OpenTelemetry — Traces, Metrics, Logs Triad
 
-## Coverage Level
-**Not Covered** — You have structured Winston logging, but no distributed tracing, no metrics instrumentation, and no OpenTelemetry SDK wired in.
-
 ## What It Is
 OpenTelemetry (OTel) is the CNCF standard for instrumenting applications to produce three kinds of observability signals: **traces**, **metrics**, and **logs**. The goal is not to replace your logging library but to connect all three signals under a unified model so that when an alert fires on a metric spike, you can jump directly to the traces that caused it, and then drill into the correlated log lines.
 

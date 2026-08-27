@@ -1,8 +1,5 @@
 # 396. Express: Two-Layer Architecture — Routes and Static Services
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Express material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Express projects in this shop use exactly two layers: a route handler and a static service class. There is no Controller layer separate from the route, and no Repository abstraction separate from the service — the route validates input and shapes the HTTP response, and the service does everything else, including talking to TypeORM directly. This is a deliberate simplification compared to Spring Boot's three-layer model: TypeORM repositories are lightweight enough that wrapping them in a fourth abstraction buys nothing in a TypeScript codebase, whereas Java's ecosystem treats `JpaRepository` as a first-class, independently testable unit.
 

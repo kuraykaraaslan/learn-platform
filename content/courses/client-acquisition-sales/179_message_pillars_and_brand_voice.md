@@ -1,8 +1,5 @@
 # 179. Message Pillars & Brand Voice
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Brand_Positioning_Rules material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Once you know who you serve and why you're different, you still face a blank page every time you write a LinkedIn post, a proposal intro, or a website section. Message pillars solve that by pre-deciding the handful of ideas you want to be known for, so that "what should I post about" stops being a daily improvisation and becomes a lookup. Four to six pillars is the right range — fewer and you run out of material fast, more and you stop being recognizable for any of them. Each pillar is a belief, not a category: "Product clarity before code" is a pillar because it's a stance someone can agree or disagree with; "React" is not a pillar, it's a tag.
 

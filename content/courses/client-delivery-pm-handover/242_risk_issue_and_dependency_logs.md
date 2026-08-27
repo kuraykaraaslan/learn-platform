@@ -1,8 +1,5 @@
 # 242. Risk, Issue, and Dependency Logs
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management_Rules/risk-and-issue-management.md and dependency-management.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 A risk is a possible future problem. An issue is a problem that is already happening. A dependency is something the project needs from outside the developer's own control — a client asset, an approval, a third-party account — before work can proceed. All three share the same failure mode when left untracked: they live in someone's memory or in a scattered chat thread, and by the time they actually bite, nobody can reconstruct when they were first noticed or whose job it was to act on them. A log converts each of these from a vague feeling of unease into a dated, owned, trackable line item.
 

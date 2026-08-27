@@ -1,8 +1,5 @@
 # 294. Featured Section, Proof Assets and Credibility Signals
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' LinkedIn_Authority_Rules material (featured-section-and-proof.md, credibility-signals.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 The Featured section exists to reduce trust friction: a serious prospect should be able to understand the freelancer's capability in under two minutes without leaving LinkedIn, which means it needs three to five *strong* proof assets — not whatever happened to get the most likes. A well-ordered Featured section leads with a main portfolio or service page, then the best case study, then a demo video or technical walkthrough, then a lead-capture or consultation page, then a strong authority post or testimonial. Each item needs a clear, specific title rather than a vague one — "Case Study: Custom Admin Panel for Workflow Automation" does real work that "My project" does not — and each proof item should be able to answer what the problem was, what was built, what was technically difficult, what outcome it created, what the freelancer's actual responsibility was, and whether there's visible evidence, not just a claim.
 

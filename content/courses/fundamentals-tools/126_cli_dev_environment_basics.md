@@ -1,8 +1,5 @@
 # 126. Command Line & Development Environment Basics
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Self-check: do you know why a script that "works on my machine" fails in CI, in terms of PATH and environment variables — not just as a vague guess?
-
 ## What It Is
 The command line, environment variables, and package managers are the load-bearing, rarely-discussed layer underneath every `npm run dev`. `PATH` is just a list of directories the shell searches, in order, when you type a bare command name — "command not found" almost always means "not in any directory listed in PATH," and "wrong version ran" almost always means an earlier PATH entry shadowed the one you wanted.
 

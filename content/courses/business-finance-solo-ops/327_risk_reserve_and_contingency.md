@@ -1,8 +1,5 @@
 # 327. Building Financial Reserves and a Contingency Plan
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Freelance income is structurally uneven — a great quarter can be followed by a quiet one, a reliable client can suddenly go dark, and a laptop can fail at the worst possible moment. A professional solo business prepares for disruption before it happens, rather than treating every disruption as a surprise emergency. That preparation takes the concrete form of financial reserves, each with a distinct purpose, plus written contingency plans for the risks that are foreseeable even if their timing isn't.
 

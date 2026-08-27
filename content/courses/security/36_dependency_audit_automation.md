@@ -1,8 +1,5 @@
 # 36. Dependency Audit Automation (npm audit, Snyk, Dependabot)
 
-## Coverage Level
-**Not Covered** — Your `package.json` has no `audit` script, no automated dependency update tooling configured, and no CI check that fails on high-severity CVEs. Given that your project uses 50+ npm packages including security-critical ones (jsonwebtoken, bcrypt, express-rate-limit, stripe), unpatched vulnerabilities in these dependencies are a meaningful risk.
-
 ## What It Is
 Your application's security posture is not just about the code you write — it is also about the code you import. npm packages have CVEs (Common Vulnerabilities and Exposures) published against them just like operating systems and databases do. A vulnerability in `jsonwebtoken` (CVE-2022-23529, authentication bypass in certain configurations) or in a transitive dependency can be just as exploitable as a bug you wrote yourself. The difference is that dependency vulnerabilities are fixed by the upstream maintainer, and your job is to stay current.
 

@@ -1,8 +1,5 @@
 # 184. Lead Source Strategy & Inbound Content
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition_Rules material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 A solo freelancer who depends on a single lead source is one algorithm change or one dried-up referral chain away from having no pipeline. The fix isn't to do everything at once — that's the fastest route to burning all your time on marketing and none on delivery — it's to run a small number of acquisition lanes deliberately, each with a defined weekly action, a required asset, a CTA, and a way to track it. The five recognized lanes are inbound content, outbound prospecting, referrals, partnerships, and reactivation of dormant leads. Each has a different time horizon: content and partnerships compound slowly and pay off months later; outbound and reactivation can produce a conversation this week. A healthy plan usually picks at most two primary channels at a time and gives each a realistic weekly action count — research 20 prospects and message 10 of them, or publish one piece of content and improve one portfolio page — rather than an aspirational list that assumes full-time marketing capacity you don't have.
 

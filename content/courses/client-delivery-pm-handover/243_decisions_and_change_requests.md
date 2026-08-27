@@ -1,8 +1,5 @@
 # 243. Decisions and Change Requests: Keeping a Written Record
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management_Rules/decision-log.md and change-request-control.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Every project accumulates two kinds of moments that people misremember with total confidence: decisions and change requests. A decision is something that was settled — which payment provider, which authentication method, whether cancelled orders can be reopened — and if it only ever existed in a call, it will be relitigated the moment someone's memory of that call diverges from someone else's. A change request is a client ask that falls outside the agreed scope, and if it's handled by just saying yes because it "sounds small," it quietly becomes the mechanism by which scope creep destroys a fixed-price project one reasonable-sounding request at a time.
 

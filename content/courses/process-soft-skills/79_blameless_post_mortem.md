@@ -1,8 +1,5 @@
 # 79. Blameless Post-Mortem — Writing and Running One
 
-## Coverage Level
-**Not Covered** — When something breaks in production — and it will — having a blameless post-mortem process transforms a bad day into institutional knowledge that prevents the next one.
-
 ## What It Is
 A post-mortem (also called an incident review or retrospective) is a structured written analysis of a production incident or significant failure. It answers four questions: what happened, why it happened, what was the impact, and what will prevent it from happening again. The word "blameless" is not about excusing poor work — it is about recognizing that systemic failures are almost never caused by a single person's mistake. They are caused by systems, processes, tools, and incentives that made the mistake easy to make and hard to catch.
 

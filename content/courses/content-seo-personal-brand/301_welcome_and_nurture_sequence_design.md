@@ -1,8 +1,5 @@
 # 301. Welcome & Nurture Sequence Design
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Newsletter_and_Email_Nurture_Rules material (welcome-sequence.md, nurture-sequence-design.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 The welcome sequence is the first automated relationship a subscriber has with the business, and its job is narrow: deliver on the promise, set expectations, and create one low-pressure opening for conversation — not sell. A minimum 3-email version delivers the lead magnet and explains what's coming next in email one, names the mistake or problem the audience commonly faces in email two, and shows proof of how the freelancer actually approaches projects while inviting a qualified reply in email three. A fuller 5-email version stretches this across roughly ten days: welcome and delivery on day 0, why software projects fail before code on day 2, MVP versus roadmap on day 4, case study or technical proof on day 7, and a soft CTA to reply, book, or request a review on day 10. Selling aggressively in email one is explicitly forbidden — the entire sequence exists to earn the right to ask for anything, and skipping straight to the ask undoes that in the first message.
 

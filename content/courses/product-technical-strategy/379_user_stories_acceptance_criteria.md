@@ -1,8 +1,5 @@
 # 379. User Stories and Acceptance Criteria
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `user-stories-and-acceptance.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 A PRD's functional requirements (lesson 378) describe what the system must do at the feature level. User stories and acceptance criteria break that down one more level, into units small enough to plan, build, and test independently. The story format — "As a `<user role>`, I want to `<action/capability>`, so that `<benefit/outcome>`" — exists to keep every piece of work anchored to a user and a reason, instead of drifting into a developer's internal task list. "Refactor the ticket service" is a task. "As an event organizer, I want to define ticket types with price and capacity, so that I can sell different categories of tickets for the same event" is a story, because it names who benefits and why, and it can be demoed to a real person.
 

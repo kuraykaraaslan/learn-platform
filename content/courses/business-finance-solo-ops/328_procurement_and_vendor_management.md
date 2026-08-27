@@ -1,8 +1,5 @@
 # 328. Vendor and Procurement Decisions for a Solo Shop
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Even a one-person software business depends on a web of vendors — hosting providers, domain registrars, payment processors, design and AI tools, analytics platforms, backup services, an accountant, a lawyer, occasionally a subcontractor. A bad vendor choice doesn't just cost money; it creates delivery risk, hidden cost, security exposure, and client dissatisfaction that's disproportionate to the size of the original decision.
 

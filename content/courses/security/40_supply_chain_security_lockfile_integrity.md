@@ -1,8 +1,5 @@
 # 40. Supply Chain Security — Lockfile, Package Integrity
 
-## Coverage Level
-**Not Covered** — You have a `package-lock.json` (good — lockfiles are essential), but there is no CI enforcement of lockfile integrity (`npm ci` vs `npm install`), no subresource integrity (SRI) for CDN scripts, no package provenance verification, and no policy around adding new dependencies.
-
 ## What It Is
 Supply chain attacks target the software you import rather than your own code. The attack surface is vast: every npm package you install, every transitive dependency of that package, the npm registry itself, the CI/CD tooling that builds your deployment, and the CDN serving your frontend scripts. Several high-profile attacks have used this vector: the `event-stream` package was hijacked to steal Bitcoin wallets, `ua-parser-js` was compromised to mine cryptocurrency, and the `xz-utils` backdoor nearly made it into major Linux distributions.
 

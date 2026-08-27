@@ -1,8 +1,5 @@
 # 351. Running a Weekly and Monthly Business Review
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 A weekly review and a monthly review answer different questions, and conflating them is why many solo operators either review too often to see real patterns or too rarely to catch problems while they're small. The weekly review is lightweight and tactical: what happened, what created signal, what needs follow-up, and what should change next week. It tracks new leads, qualified leads, discovery calls booked, proposals sent, deals won or lost, follow-ups sent and overdue, content published, and experiment status — and it deliberately limits next-week actions to three to five items, because a solo operator genuinely cannot execute twenty growth actions while also delivering client work.
 

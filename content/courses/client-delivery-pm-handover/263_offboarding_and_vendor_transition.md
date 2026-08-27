@@ -1,8 +1,5 @@
 # 263. Offboarding and Vendor Transition
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Customer_Success_and_Support_Rules/offboarding-and-transition.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Every support or maintenance relationship eventually ends — the client hires an internal developer, moves to another vendor, or simply no longer needs the service — and how that ending is handled matters almost as much for reputation as how the original delivery went. A client left with ambiguous access, undocumented systems, and an unclear sense of what obligations actually ended is a client who will describe the experience unfavorably regardless of how good the actual work was. Good offboarding is the deliberate alternative: a clear statement of what's being transferred, what access is revoked, what documentation is provided, what obligations end, what future support would cost, and what risks remain.
 

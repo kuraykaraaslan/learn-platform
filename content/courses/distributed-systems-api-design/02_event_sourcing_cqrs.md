@@ -1,8 +1,5 @@
 # 2. Event Sourcing + CQRS
 
-## Coverage Level
-**Not Covered** — Your boilerplate uses a conventional CRUD model against PostgreSQL with no event log or separate read/write models; BullMQ is present for job queuing but is not used as an event store.
-
 ## What It Is
 Event Sourcing is a persistence pattern where, instead of storing the current state of an entity, you store the sequence of events that led to that state. The current state is derived by replaying those events. A `UserAccount` isn't a row you UPDATE — it's the projection of events like `UserRegistered`, `EmailChanged`, `PasswordReset`, and `AccountSuspended`. The event log becomes the single source of truth, and the current-state table is a derived, disposable read model.
 

@@ -1,8 +1,5 @@
 # 128. Clean Code Basics — Naming, Function Size, Readability
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. This is the prerequisite vocabulary beneath SOLID (#64) and Design Patterns (#67) — those are decisions about *structure*; this is about whether any single line is understandable on its own. Self-check: could a teammate understand your last function without asking you a clarifying question?
-
 ## What It Is
 Clean code isn't a style preference — it's an investment in the next person reading the code, who is usually you in six months with no memory of the context. The core practices are unglamorous but compound: names that reveal intent (`activeSubscriptions`, not `data` or `temp`), functions that do one thing at one level of abstraction, and control flow that reads top-to-bottom instead of nesting five levels deep.
 

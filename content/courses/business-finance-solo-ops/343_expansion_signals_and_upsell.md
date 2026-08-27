@@ -1,8 +1,5 @@
 # 343. Reading Expansion Signals: When to Upsell
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 An expansion signal is observable evidence that a client's situation has changed in a way that creates real demand for your next offer. Timing matters as much as the offer itself — a well-timed ask on a genuine signal outperforms even the best-crafted pitch delivered at the wrong moment. Calendar-based check-ins at 30, 60, and 90 days create the opportunity to listen, but they should not be the trigger for pitching; the signal is the trigger. Signals fall into five categories: delivery completion (the client asks "what's next?"), usage and adoption ("we're doing this manually still"), business growth (the client is hiring, launching, or entering a new market), relationship health (fast responses, proactive contact, on-time payment), and risk — the negative category that means slow down rather than pitch, such as slow responses, budget contraction language, or a leadership change.
 

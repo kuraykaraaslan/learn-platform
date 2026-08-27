@@ -1,8 +1,5 @@
 # 193. Referrals & Partnership Channels
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 For a solo operator, referrals and partnerships routinely produce warmer, higher-trust leads than any cold channel — but only when the ask is specific enough that the other person can act on it in ten seconds. "Do you know anyone who needs software?" produces nothing, because it asks the listener to do the targeting work themselves. A working referral ask names who you help, the specific problem you solve, what a good fit actually looks like, and hands over a ready-to-forward paragraph the referrer can send with zero editing — something like "\<Name\> helps companies build production-ready web platforms, admin panels, and SaaS MVPs. If you're looking for a technical partner to scope and build something properly, it may be worth speaking with them." Removing the writing burden from the referrer is most of what makes a referral ask actually convert into an introduction.
 

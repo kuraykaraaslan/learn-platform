@@ -1,8 +1,5 @@
 # 265. Support Operations: Channels, SLAs, and Scope Boundaries
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management/Documentation_and_Handover/Customer_Success_and_Support/Client_Delivery_Playbooks material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Once a project is live and a warranty or maintenance arrangement is in place (see Lesson 258), someone still has to run support day to day — and without a deliberate operating structure, that day-to-day quietly turns chaotic. Requests arrive as WhatsApp messages, phone calls, half-finished screenshots, and comments buried in an old email thread, none of them tracked anywhere, none of them triaged consistently. Support operations is the fix: a defined channel hierarchy, a structured intake format, and an honest set of response expectations that the client knows about before they ever need to use them.
 

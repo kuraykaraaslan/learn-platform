@@ -1,8 +1,5 @@
 # 321. Project-Level Accounting: Is This Client Actually Profitable?
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Project-level accounting is the discipline of closing every project financially, not just technically. A project can be "done" the moment code is deployed, but it is not financially closed until every invoice is issued, every payment is reconciled, every direct cost is recorded, and actual hours are compared against the estimate. Most freelancers skip this step — they ship, get paid eventually, and move on without ever learning whether the project actually made money.
 

@@ -1,8 +1,5 @@
 # 345. Pipeline Forecasting for Solo Operators
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Pipeline forecasting is how a solo operator avoids discovering, too late, that next month has no confirmed revenue. It works by assigning every open opportunity a stage and a realistic probability, rather than treating every lead in the pipeline as equally likely to close. A typical weighted ladder runs from a new lead at 10% probability, through qualified (25%), discovery completed (40%), proposal sent (60%), verbal yes (80%), up to contract and deposit received at 100% — and revenue should never be counted as real, for planning purposes, until it hits that 100% stage. Multiplying each opportunity's value by its stage probability produces a weighted forecast that is far more honest than simply summing every quoted number in the pipeline.
 

@@ -1,8 +1,5 @@
 # 45. Time-Series Data — TimescaleDB or Partition by Range
 
-## Coverage Level
-**Not Covered** — Your audit log tables accumulate time-ordered append-only data indefinitely with no partitioning or time-series optimization. As your tenant count and audit log volume grow, query performance for time-range queries and data retention management will degrade unless you address the storage model.
-
 ## What It Is
 Time-series data is any data where the primary access pattern is by time range: "give me all audit log entries for tenant X in the last 30 days", "show me login activity for the last 7 days", "aggregate API call counts by hour over the past month". Standard table scans become progressively slower as the table grows because PostgreSQL must scan more and more rows to find the relevant time window.
 

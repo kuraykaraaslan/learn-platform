@@ -1,8 +1,5 @@
 # 405. Spring Boot: Bean Validation with @Valid, @Validated, and Custom Constraints
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_SpringBoot and Code_Structure_Rules_Java material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Spring Boot's answer to Zod's `safeParse` is Jakarta Bean Validation (JSR-380): request DTOs are Java records annotated field-by-field with constraint annotations (`@NotBlank`, `@Email`, `@Size`, `@Positive`, and friends), and `@Valid` on the controller's `@RequestBody` parameter tells Spring to run the validation engine before the method body executes. There is no manual `if (x == null)` boundary checking anywhere in this stack — every constraint the client's input must satisfy is declared as an annotation, and a failure throws `MethodArgumentNotValidException` automatically, which flows to the `@ControllerAdvice` for a uniform 400 response. This is functionally identical in spirit to `Schema.safeParse(req.body)` in Express, just declarative instead of imperative.
 

@@ -1,8 +1,5 @@
 # 387. Technical Architecture Operating System, Principles, and Decision Gates
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Technical_Architecture_Rules material (specifically `technical-architecture-master.md`, `architecture-principles.md`, `architecture-review-checklist.md`, and `architecture-decision-records.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Just as product strategy runs on a fixed sequence — problem, user, value proposition, MVP, scope, requirements, flows, metrics, roadmap, risk log, handoff (lesson 371) — technical architecture has its own operating system, and skipping it produces the same failure mode on the technical side: overbuilt systems, vague estimates, and architecture chosen from a stack preference instead of a business constraint. The sequence is business goal → users and actors → critical workflows → system boundary → domain model → data ownership → integration map → non-functional requirements → security and access model → deployment and operations model → risks and trade-offs → architecture decision record → implementation handoff. This course covers most of those stages as their own lessons (388 through 395); this lesson is the map showing how they connect, plus the gate that decides whether a project is even ready to enter the sequence.
 

@@ -1,8 +1,5 @@
 # 33. SSRF (Server-Side Request Forgery)
 
-## Coverage Level
-**Not Covered** — Your `libs/axios/index.ts` configures an Axios instance that handles CSRF tokens and refresh token rotation for client-side use. You likely also make server-side HTTP requests (webhook delivery, OAuth callbacks, payment provider API calls, tenant domain verification). None of these have SSRF mitigations: there is no URL allowlist, no block on private IP ranges, and no DNS rebinding protection.
-
 ## What It Is
 SSRF is the vulnerability class where an attacker tricks your server into making an HTTP request to a URL of the attacker's choosing. The attack is possible whenever your server accepts a URL from user input and fetches it, such as: "verify this webhook URL", "fetch a preview of this link", "import data from this endpoint", "connect to this OAuth provider URL". The danger is that your server sits inside your network, and that network likely has resources not accessible from the public internet: your database management UI (port 5432, 6379, 8080), internal metadata APIs (AWS EC2 `169.254.169.254`, GCP `metadata.google.internal`), and other services in your VPC.
 

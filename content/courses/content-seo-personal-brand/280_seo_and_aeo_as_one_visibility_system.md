@@ -1,8 +1,5 @@
 # 280. SEO and AEO as One Visibility System
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (seo-and-aeo-master.md, reference-principles.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 SEO (Search Engine Optimization) and AEO (Answer Engine Optimization) are usually taught as separate disciplines, but for a solo technical business they are one visibility system with two audiences: traditional search engines that rank pages, and AI-assisted answer experiences (Google AI features, Bing/Copilot, Perplexity-style tools, ChatGPT browsing) that summarize, cite, or quote pages instead of just linking to them. AEO is not a shortcut around SEO or a separate hack — it depends on the same fundamentals (crawlability, indexability, clear structure, genuine expertise) plus an additional layer of clarity: can a system that reads your page in a few seconds extract a correct, concise, citable answer from it?
 

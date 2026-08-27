@@ -1,8 +1,5 @@
 # 22. HTTP/2 Multiplexing and Effect on Next.js
 
-## Coverage Level
-**Not Covered** — Your Next.js app likely runs on HTTP/2 on Vercel or your hosting provider, but there are no documented optimizations that take advantage of it, and some HTTP/1.1-era practices (domain sharding, request bundling heuristics) may be actively counterproductive.
-
 ## What It Is
 HTTP/2 is a major revision of the HTTP protocol that fundamentally changes how browsers and servers communicate. The headline feature is **multiplexing**: multiple requests and responses can be in-flight simultaneously over a single TCP connection. In HTTP/1.1, the browser could make 6–8 connections per domain (depending on the browser) and each connection could carry one request at a time. This led to optimization techniques like bundling all JavaScript into a single file (to reduce requests), domain sharding (spreading assets across multiple domains to get more connections), and sprite sheets (combining many images to reduce requests). With HTTP/2, these techniques become counterproductive.
 

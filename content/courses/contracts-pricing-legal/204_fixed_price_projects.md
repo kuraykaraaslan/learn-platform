@@ -1,8 +1,5 @@
 # 204. Fixed-Price Projects — Eligibility and Guardrails
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing Rules (fixed-price-projects.md) material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Fixed price is the pricing model clients like best, because it converts an uncertain purchase into a single predictable number. It is also the model that punishes the freelancer hardest when scope isn't actually fixed, because every hour of underestimated work comes directly out of your margin instead of being billed. Fixed price is only a safe model when a specific set of conditions is true — not a default you reach for because it feels more professional than hourly.
 

@@ -1,8 +1,5 @@
 # 100. Creating a Reference Resource — Course, Guide, or Tool in Your Domain
 
-## Coverage Level
-**Not Covered** — Item 100 is the synthesis of everything before it. You have formalized 74K lines of operational knowledge. That is a book, a course, and a set of tools waiting to be extracted. The question is how to package it for an audience, and which format maximizes both impact and leverage for your specific goals.
-
 ## What It Is
 A reference resource is a comprehensive, structured piece of content or tooling that becomes the go-to resource for a specific audience solving a specific class of problem. Examples: a course that teaches full-stack SaaS architecture; a guide that is the definitive reference for multi-tenant Next.js; a CLI tool that scaffolds new projects following a specific pattern; an open-source boilerplate with documentation comprehensive enough to teach while enabling. What distinguishes a reference resource from a blog post or a talk is that it is designed to be returned to repeatedly, not consumed once.
 

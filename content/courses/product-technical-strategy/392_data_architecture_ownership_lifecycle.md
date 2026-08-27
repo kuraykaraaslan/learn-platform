@@ -1,8 +1,5 @@
 # 392. Data Architecture — Ownership, Source of Truth, and Lifecycle Strategy
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Technical_Architecture_Rules material (specifically `data-architecture.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Data architecture at the strategy level isn't schema design — that's an implementation skill covered elsewhere. It's answering, for every important data object, who owns it, where its source of truth lives, and what its lifecycle looks like, before a single table gets drawn. The source-of-truth rule requires naming which system is authoritative for each entity: a customer profile is typically owned locally, a payment status is owned by the payment provider and only mirrored locally, an invoice number is owned by the accounting system. Duplicating ownership without an explicit sync strategy is how two systems quietly disagree about the same fact, and nobody notices until a customer complains.
 

@@ -1,8 +1,5 @@
 # 5. Rate Limiting Strategies (Token Bucket, Leaky Bucket, Sliding Window)
 
-## Coverage Level
-**Covered** — You have a Redis-based fixed-window counter limiter in `libs/limiter/`. This works for basic abuse prevention but has the fixed-window boundary problem (burst at window edges), and you're missing token bucket (for burst allowance) and sliding window (for smooth enforcement).
-
 ## What It Is
 Rate limiting controls how many requests a client can make in a given period. The algorithm you choose determines the user experience at limit boundaries, the fairness of enforcement, and the complexity of your Redis operations. Fixed-window is the simplest, but it has a well-known vulnerability: a client can fire 2x the allowed rate by clustering requests at the end of one window and the start of the next.
 

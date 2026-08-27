@@ -1,8 +1,5 @@
 # 313. Proof Asset Repurposing — One Case Study, Many Assets
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Case_Study_and_Portfolio_Rules material (proof-asset-repurposing.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 A single strong project should never live only as one portfolio page — the discipline is treating every full case study as raw material for at least five distinct trust assets: the portfolio page itself, a LinkedIn post, a technical blog or note, a short demo video, and a proposal proof snippet, with a carousel, newsletter mention, GitHub README, architecture diagram, or sales-email proof block available as optional extensions. This isn't about stretching one idea thin — it's about recognizing that a well-built case study already contains enough distinct material (a problem, a before/after, a technical decision, a constraint, a lesson) that each piece can stand on its own in a different format for a different reader who will never encounter the others.
 

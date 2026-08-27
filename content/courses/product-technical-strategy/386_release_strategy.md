@@ -1,8 +1,5 @@
 # 386. Release Strategy — Alpha, Beta, Pilot, and Rollout
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `release-strategy.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 A release is a product decision, not a deployment event — it decides who gets access, under what conditions, and how much risk is acceptable at each stage, and it deserves the same explicitness as MVP scoping (lesson 375) or scope boundaries (lesson 377). The stage ladder runs from internal demo (verifying direction with the client, not user-ready) through stakeholder review, alpha (internal team or trusted testers, bugs expected), private beta (selected real users under close monitoring), pilot (a real business context with deliberately controlled scope), production launch (actual target users with support and rollback awareness), phased rollout, and finally public launch. Skipping stages under schedule pressure is how "let's just show it to a few real customers" quietly becomes an unmonitored production launch with no rollback plan.
 

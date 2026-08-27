@@ -1,8 +1,5 @@
 # 165. Human-in-the-Loop Review Gates and Structured Verdicts
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Agent_Workflows material (code-review-agent.md, contract-risk-review-agent.md, and delivery-auditor-agent.md patterns generalized); no existing coverage data for your own practice.
-
 ## What It Is
 When an AI system's output feeds into a consequential decision — merging code, signing a contract, sending a final invoice, publishing generated content — a paragraph of freeform commentary is the wrong output shape, no matter how well-written it is, because a human reading prose has to reconstruct the actual verdict and can miss what the model actually flagged. The fix is to make the model produce a structured, closed-vocabulary verdict instead: a fixed set of categories, each rated independently against named criteria (PASS/WARN/FAIL, HIGH/MEDIUM/LOW, GO/NO-GO), rolled up into one overall verdict that follows deterministically from the category results. This is what turns "an AI reviewed this" into something a human can actually audit in ten seconds by scanning a table, rather than something they have to trust on faith because untangling free text back into a decision is more work than doing the review themselves.
 

@@ -1,8 +1,5 @@
 # 268. Discovery Calls, Red Flags, and Disqualification
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Project_Management/Documentation_and_Handover/Customer_Success_and_Support/Client_Delivery_Playbooks material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 This course otherwise starts at kickoff — the moment a signed deal becomes an active project (Lesson 236). This lesson looks one step earlier, at the discovery call that produced that deal, because the quality of discovery determines the quality of everything a PM inherits at kickoff. A discovery call that skipped budget, skipped the decision maker, or waved away a serious risk doesn't just create a sales problem — it hands the delivery side a project built on gaps that surface as scope disputes, missed dependencies, or a client who turns out not to be the person who can actually approve anything. The person who runs delivery has a direct stake in whether discovery was done well, even when they weren't the one on the call.
 

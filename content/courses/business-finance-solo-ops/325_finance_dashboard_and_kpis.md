@@ -1,8 +1,5 @@
 # 325. Building a Finance Dashboard: Core KPIs for Solo Businesses
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 A solo business doesn't need enterprise-grade finance analytics — it needs a small, reliable set of numbers that can be checked in under five minutes and trusted completely. A dashboard with forty metrics that nobody updates is worse than no dashboard at all; the goal here is the smallest set of numbers that would actually change a decision.
 

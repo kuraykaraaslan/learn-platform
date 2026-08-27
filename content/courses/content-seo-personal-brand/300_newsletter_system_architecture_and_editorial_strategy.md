@@ -1,8 +1,5 @@
 # 300. Newsletter System Architecture & Editorial Strategy
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Newsletter_and_Email_Nurture_Rules material (newsletter-and-email-nurture-master.md, newsletter-editorial-strategy.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Email nurture is the system that keeps trust alive between first interest and buying readiness, and it only works as a system if every layer has a defined job. The full chain runs: audience → opt-in reason → lead magnet or subscription promise → welcome sequence → educational nurture → proof and case studies → soft CTA → sales readiness signal → discovery handoff. A newsletter that isn't mapped to this chain becomes what most newsletters actually are — a loose stream of announcements sent because "it's newsletter day," not because a specific email is meant to educate, build trust, show proof, create recall, invite a conversation, or move a subscriber one stage closer to a qualified next step. Every single email should be traceable to one of those six jobs; if it isn't, it doesn't belong in the sequence.
 

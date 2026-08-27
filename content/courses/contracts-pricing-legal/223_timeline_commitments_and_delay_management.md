@@ -1,8 +1,5 @@
 # 223. Timeline Commitments and Delay Management
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 A timeline written as an unconditional promise is a timeline that will eventually be broken by something outside the freelancer's control — a client feedback delay, a payment processor's approval process, a slow response on brand assets — and then blamed on the freelancer anyway, because the document never said otherwise. A realistic timeline is conditional by construction: it names a start condition, states what it depends on, and says plainly what happens to the schedule when a dependency slips.
 

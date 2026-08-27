@@ -1,8 +1,5 @@
 # 254. Admin and User Guides
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Documentation_and_Handover_Rules/admin-and-user-guide.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 "It's self-explanatory" and "the client can figure it out" are the two phrases that most reliably generate a flood of avoidable support questions after launch. A client's team depending on delivered software should not need to message the developer to learn how to perform a task that was already built and demonstrated. Admin and user guides exist to close that gap — written in plain, role-based, workflow-based language, aimed at the person who will actually use the system day to day, not at a developer reading the code.
 

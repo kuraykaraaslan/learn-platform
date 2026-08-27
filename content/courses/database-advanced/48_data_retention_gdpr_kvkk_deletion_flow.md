@@ -1,8 +1,5 @@
 # 48. Data Retention and GDPR/KVKK Deletion Flow
 
-## Coverage Level
-**Partial** — You have a `Security_and_Compliance_Rules` file indicating awareness of the regulatory landscape, and your architecture (per-tenant databases, actor tracking in audit logs) creates a structure that could support deletion flows. However, there is no visible implementation of a user deletion pipeline, data retention schedules, erasure request handling, or KVKK-specific compliance artifacts. The regulatory awareness needs to become operational code.
-
 ## What It Is
 GDPR (General Data Protection Regulation, EU) and KVKK (Kişisel Verileri Koruma Kanunu, Turkey) are data protection regulations that grant users rights over their personal data: the right to access what you hold, the right to correct it, and the right to erasure ("right to be forgotten"). As a SaaS serving users from these jurisdictions, these rights are obligations, not suggestions. A user can formally request deletion of their data, and you must respond within a defined timeframe (GDPR: 30 days, KVKK: 30 days with possible extensions) with either confirmation of deletion or a legal basis for retention.
 

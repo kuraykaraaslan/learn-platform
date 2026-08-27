@@ -1,8 +1,5 @@
 # 152. Advanced RAG: Chunking, Reranking, and Grounding Verification
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/rag-and-retrieval.md material, building on the introductory RAG coverage in item 140; no existing coverage data for your own practice.
-
 ## What It Is
 The basic RAG loop — embed a query, fetch nearest chunks, stuff them into the prompt — is the easy 20% of building a retrieval system. The other 80% is retrieval quality engineering, and it's where most RAG features actually live or die, because a language model given the wrong context will confidently generate a wrong answer from it. The first quality lever is chunking strategy: how you split source documents before embedding directly determines what can ever be retrieved. Fixed-size chunking with overlap (e.g., 500 tokens per chunk, 50 tokens of overlap) is the simple baseline, but naive splitting can cut a sentence or a table row in half; the better version splits at semantic boundaries — section headers, paragraph breaks — so no chunk starts or ends mid-thought.
 

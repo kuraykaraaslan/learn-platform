@@ -1,8 +1,5 @@
 # 291. SEO QA and Launch Checklist
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (seo-qa-and-launch-checklist.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Most SEO damage doesn't come from bad strategy — it comes from basic, avoidable mistakes made at launch: an accidental site-wide noindex, a staging robots.txt shipped to production, broken redirects after a URL change, missing metadata on key pages, a duplicate canonical, or private data left exposed. SEO QA exists specifically to catch these before they cost weeks of visibility, and it applies to every kind of launch — a brand-new site, a redesign, a domain migration, or even a single new landing page or blog post.
 

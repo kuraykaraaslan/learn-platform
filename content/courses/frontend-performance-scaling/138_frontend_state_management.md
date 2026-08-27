@@ -1,8 +1,5 @@
 # 138. Frontend State Management Architecture — Client vs Server State
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. React Server Components (#23) and Streaming SSR (#26) cover where rendering happens; this covers the state architecture layer that sits on top once the page is interactive — never addressed directly.
-
 ## What It Is
 The single most common frontend architecture mistake is treating all state the same way. **Server state** — data that actually lives in a database and is merely cached on the client (a list of projects, a user profile) — has a fundamentally different lifecycle than **client UI state** — state that only exists in the browser and has no server counterpart (a modal being open, a form draft, a selected tab). Server state needs caching, revalidation, background refetching, and de-duplication of concurrent requests for the same data; a library like React Query or SWR exists specifically to solve that problem, and reimplementing it with `useState` + `useEffect` recreates its hardest bugs (race conditions between stale and fresh responses, no cache, no retry) from scratch.
 

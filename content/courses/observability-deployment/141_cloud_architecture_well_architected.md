@@ -1,8 +1,5 @@
 # 141. Cloud Architecture & Well-Architected Patterns — Multi-Region, FinOps
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Kubernetes Fundamentals (#59) and Dockerfile Best Practices (#58) cover a single deployment; this covers the architectural decisions above that layer — topology, cost — which were never addressed directly.
-
 ## What It Is
 Cloud architecture decisions live above any individual service, and the most consequential one is deployment topology: **single-region** (simple, but the whole region going down means you're down), **active-passive** (a warm or cold standby region that takes over on failover, trading cost for recovery time — directly parameterized by the RTO/RPO targets from #49), or **active-active** (multiple regions serving live traffic simultaneously, which buys the best availability but forces genuinely hard data-consistency questions, right back to #1 CAP Theorem, now across regions instead of across nodes). None of these is unconditionally "better" — the right one is whichever matches what an actual outage would cost the business against what the topology costs to run and operate correctly.
 

@@ -1,8 +1,5 @@
 # 312. Portfolio Page Structure & SEO
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Case_Study_and_Portfolio_Rules material (portfolio-page-structure.md, portfolio-seo-and-metadata.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 A portfolio page should behave like a guided path to proof, not an unstructured gallery, and the required elements reflect that: a positioning headline, a short proof statement, featured case studies shown first, category filters, consistent project cards, a trust strip, and a CTA. The featured-first rule matters more than it sounds — the two or three strongest case studies belong above everything else, because a visitor who never scrolls past the first section should still walk away understanding the strongest available proof. Filters should mirror how a buyer would describe their own need rather than internal project names — "SaaS MVP," "Admin Panel," "Dashboard," "Automation," "Ticketing/Booking" — so a visitor can self-select into the category most relevant to them instead of scanning everything. Every project card follows the same discipline the case studies themselves follow: lead with a one-line outcome, then the project type, then stack tags, then a proof badge and link — never a card that lists only technologies with no stated outcome, which is exactly the "modern, scalable app" failure mode showing up at the card level instead of the case-study level.
 

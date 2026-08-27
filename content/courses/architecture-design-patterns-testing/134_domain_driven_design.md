@@ -1,8 +1,5 @@
 # 134. Domain-Driven Design — Bounded Contexts, Aggregates, Ubiquitous Language
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Hexagonal Architecture (#65) is the structural pattern DDD is usually paired with; DDD's own strategic and tactical patterns were never covered directly.
-
 ## What It Is
 DDD is really two separate toolkits aimed at one problem: complex business domains where the same word means different things to different stakeholders. **Strategic DDD** addresses that directly with the **bounded context** — an explicit boundary within which a term has exactly one meaning and one model. "Customer" in the billing context (has a payment method, a balance) is a different model from "customer" in the support context (has a ticket history, a satisfaction score), even though they're the same human — trying to force one unified `Customer` model across both is where a lot of accidental complexity comes from. **Ubiquitous language** is the discipline of using the domain experts' actual vocabulary in the code itself, so a conversation with a product stakeholder and a conversation about the code use the same words.
 

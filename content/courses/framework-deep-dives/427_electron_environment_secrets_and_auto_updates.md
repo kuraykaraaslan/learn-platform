@@ -1,8 +1,5 @@
 # 427. Electron: Environment, Secrets, Auto-Updates, and Packaging
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Electron material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 A shipped Electron binary is not a private server — the asar archive and the renderer bundle are trivially extracted with `npx asar extract`, so anything placed inside them has to be treated as public the instant it ships, with no way to "unship" it after release. This reframes the entire secrets question: there is no client-side hiding place for a long-lived secret, so the architecture has to route around the problem rather than obscure it. The desktop app authenticates a user and receives a short-lived token from a backend rather than embedding a service credential directly, and whatever it does need to persist — that short-lived session token — goes through `safeStorage`, which encrypts with an OS-provided key (Keychain on macOS, DPAPI on Windows, libsecret on Linux) rather than sitting in a plaintext JSON file on disk. Per-process env access follows the same asymmetry covered in the build-config lesson: main reads real `process.env` values through a single Zod-validated `env.ts`, the renderer only ever sees `VITE_`-prefixed public config, and the preload avoids reading env directly, requesting values from main instead when it needs one.
 

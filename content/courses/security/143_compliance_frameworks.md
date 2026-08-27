@@ -1,8 +1,5 @@
 # 143. Compliance Frameworks — SOC 2, ISO 27001, HIPAA
 
-## Coverage Level
-**Not assessed** — added during the roadmap gap review. Data Retention and GDPR/KVKK Deletion Flow (#48) covers privacy-specific regulation; this covers the separate, broader category of security/operational compliance certifications that enterprise and healthcare customers require.
-
 ## What It Is
 Compliance frameworks formalize "prove your security practices are actually what you claim" into a set of controls an independent auditor checks — and engineering usually owns most of the evidence, even when a compliance or legal team owns the process. **SOC 2** is the most common one for B2B SaaS: **Type I** attests that controls are designed correctly *as of a point in time*; **Type II** — the one enterprise customers actually ask for — attests that those controls operated effectively *over a period* (typically 3-12 months), which means it requires continuous evidence, not a one-time snapshot. **ISO 27001** is broader and more process-oriented — it certifies an entire **Information Security Management System (ISMS)**: documented policies, a risk register, and a continuous risk-assessment cycle, not just a checklist of technical controls. **HIPAA** (US healthcare) splits its requirements into administrative, physical, and technical safeguards, and applies not just to the primary company but to any vendor that touches protected health information (a "business associate").
 

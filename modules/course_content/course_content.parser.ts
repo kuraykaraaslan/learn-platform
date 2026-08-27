@@ -7,7 +7,6 @@ import type { LessonSections } from './course_content.types';
 // appears as "When to Use", "When to Use / Apply", or "When NOT to Use". This
 // matches on a prefix so every variant lands in the right field.
 const HEADING_RULES: Array<{ prefix: string; field: keyof LessonSections }> = [
-  { prefix: 'Coverage Level', field: 'coverageLevel' },
   { prefix: 'What It Is', field: 'whatItIs' },
   { prefix: 'Key Concepts', field: 'keyConcepts' },
   { prefix: 'Example Code', field: 'exampleCode' },
@@ -26,7 +25,7 @@ function matchHeading(heading: string): keyof LessonSections | null {
 }
 
 /**
- * Every lesson .md follows a fixed shape: `# N. Title` then seven `##`
+ * Every lesson .md follows a fixed shape: `# N. Title` then six `##`
  * sections in a known order. This splits on `## Heading` lines, mapping only
  * *recognized* headings (see HEADING_RULES) to a field boundary — an
  * unrecognized `##` line (e.g. a sub-heading inside a worked example) is
@@ -80,7 +79,6 @@ export function parseLessonMarkdown(raw: string): { title: string; sections: Les
   return {
     title,
     sections: {
-      coverageLevel: sections.coverageLevel ?? '',
       whatItIs: sections.whatItIs ?? '',
       keyConcepts: sections.keyConcepts ?? '',
       exampleCode: sections.exampleCode ?? '',

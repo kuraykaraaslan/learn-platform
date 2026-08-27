@@ -1,8 +1,5 @@
 # 113. Systems Thinking — Second and Third Order Consequences
 
-## Coverage Level
-**Not Covered** — This is the meta-skill that most separates 3-year from 15-year developers. It's not a tool or a pattern — it's a discipline of asking "and then what?" before shipping.
-
 ## What It Is
 Systems thinking is the practice of understanding how parts of a system interact over time, including feedback loops, delays, and unintended consequences. Most technical decisions look correct at the first-order level (it solves the immediate problem) but create second and third-order problems that only become visible weeks or months later.
 

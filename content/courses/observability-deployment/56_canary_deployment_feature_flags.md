@@ -1,8 +1,5 @@
 # 56. Canary Deployment and Feature Flag Integration
 
-## Coverage Level
-**Not Covered** — Your project has no feature flag system and no canary deployment configuration; all deploys go to 100% of traffic simultaneously.
-
 ## What It Is
 A canary deployment routes a small percentage of production traffic to a new version of your application before rolling it out fully. The name comes from the coal-mining practice of sending a canary into a mine first — if it survives, the miners follow. In software, the canary is a small slice of real users who experience the new code; if error rates, latency, and business metrics stay healthy for that slice, you proceed with the full rollout. If not, you route them back and investigate without having impacted everyone.
 

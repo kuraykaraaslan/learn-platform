@@ -1,8 +1,5 @@
 # 282. Technical SEO Foundations: Crawl, Render, Index
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (technical-seo-foundations.md, crawl-index-rendering.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Every page has to pass three gates in sequence before it can rank or get cited at all: it has to be **crawled** (a search engine's bot can discover and fetch the URL), **rendered** (the page's actual content is extractable, not hidden behind client-only JavaScript that never runs for the crawler), and **indexed** (the search engine decided the rendered content is worth storing and serving). Skipping ahead to content quality or metadata work before confirming these three gates pass is a common and completely avoidable way to waste effort — no amount of good writing rescues a page the crawler never rendered correctly.
 

@@ -1,8 +1,5 @@
 # 8. Webhook Security & Retry Mechanism
 
-## Coverage Level
-**Partial** — Your payment module has webhook handler endpoints for payment providers, but there is no visible signature verification, no replay attack prevention (timestamp window check), and no structured retry/acknowledgement mechanism for outgoing webhooks if you emit them to your tenants.
-
 ## What It Is
 Webhooks are HTTP callbacks — a service calls your endpoint when an event occurs. The security problem is that any actor on the internet can POST to your webhook URL with a fabricated payload. Without signature verification, your system will process forged events: fake payment confirmations, fabricated subscription upgrades, or manufactured account events. Signature verification is non-negotiable for any production webhook endpoint.
 

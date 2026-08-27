@@ -1,8 +1,5 @@
 # 64. SOLID Principles — Practical Application
 
-## Coverage Level
-**Partial** — Your rulesets reference SOLID, and the code partially follows them: single-purpose service classes exist, and the payment module demonstrates Open/Closed well via provider abstraction. However, Dependency Injection is absent (all services use static methods and `import` statements for wiring), and some classes have mixed responsibilities — `AuthService` handles password hashing, token generation, email verification, and login logic all in one place.
-
 ## What It Is
 SOLID is an acronym for five object-oriented design principles that, when applied together, make code easier to change without breaking unrelated things. They are not rules to follow dogmatically — they are heuristics that, when violated, reliably produce code that is hard to test, extend, and maintain.
 

@@ -1,8 +1,5 @@
 # 17. Database Index Strategy (Composite, Covering, Partial Index)
 
-## Coverage Level
-**Partial** — Your Prisma schema includes foreign key indexes (Prisma adds `@index` for FK columns automatically in some cases), but there is no documented index strategy, no covering indexes on high-traffic query patterns, and no partial indexes for filtered queries.
-
 ## What It Is
 An index is a separate data structure (typically a B-tree) that PostgreSQL maintains alongside your table, allowing it to find rows matching a condition without scanning every row. Indexes trade write overhead (every INSERT/UPDATE/DELETE must update all relevant indexes) and storage for faster reads. Choosing which indexes to create — and which not to — is one of the highest-leverage performance decisions in a database-backed application.
 

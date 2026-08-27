@@ -1,8 +1,5 @@
 # 31. Mass Assignment Protection — DTO Whitelist
 
-## Coverage Level
-**Covered** — Every service method in your codebase takes a Zod-parsed DTO as its input, and the Zod schema acts as an explicit whitelist: only fields declared in the schema can exist on the parsed output. A user cannot inject `userRole: 'ADMIN'` or `emailVerifiedAt: new Date()` into a registration payload because those fields are not in the `RegisterDto` schema. The concept is worth understanding deeply because it explains why your current design is safe and where the failure mode would be if you ever bypassed it.
-
 ## What It Is
 Mass assignment is the vulnerability where a server takes a user-supplied object and directly assigns it to a database model without filtering which fields are allowed. If your registration endpoint does `await userRepo.save(req.body)` and your user model has a `userRole` field, an attacker who POSTs `{"email":"x@x.com","password":"pw","userRole":"ADMIN"}` has just made themselves an admin. This is not a theoretical attack — it has been exploited against GitHub (2012), GitLab, and dozens of SaaS products.
 

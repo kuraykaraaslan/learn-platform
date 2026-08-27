@@ -1,8 +1,5 @@
 # 176. Brand Foundation & the Positioning Statement
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Brand_Positioning_Rules/Client_Acquisition_Rules material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Before you write a single outreach message, LinkedIn headline, or proposal, you need an answer to a boring but load-bearing question: what do you actually say when someone asks "what do you do?" Most engineers answer with a job title and a tech stack — "full-stack developer, React and Node" — which is true and useless. It gives the listener nothing to remember you by and nothing to refer you for. A brand foundation is the set of decisions that make that answer specific: who you serve, what problem you solve for them, what category you compete in, and what you refuse to be known for.
 

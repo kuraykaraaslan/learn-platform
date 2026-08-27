@@ -1,8 +1,5 @@
 # 381. Success Metrics and Criteria
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `metrics-and-success-criteria.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 MVP scoping (lesson 375) asks for a single success metric because an MVP needs one clear thing to prove. Once you're past MVP — evaluating a feature, a pilot, or a full release — one metric usually isn't enough, and "success" needs to be defined before delivery or it gets decided afterward by whoever is most invested in a particular answer. That's the core failure mode this lesson exists to prevent: a project is not successful because it was delivered, because the client liked the demo, or because "everything works." Those are not measurements, they're impressions, and impressions can be argued with equal confidence in either direction.
 

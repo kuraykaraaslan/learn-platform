@@ -1,8 +1,5 @@
 # 107. API Design Philosophy — REST vs GraphQL vs tRPC vs gRPC
 
-## Coverage Level
-**Not Covered** — You build REST APIs throughout your boilerplate but the trade-off rationale for choosing one paradigm over another hasn't been formalized.
-
 ## What It Is
 API design is not just about endpoints and status codes. It's about choosing a communication contract that fits the relationship between producer and consumer, the team structure, and the evolution trajectory of the system.
 

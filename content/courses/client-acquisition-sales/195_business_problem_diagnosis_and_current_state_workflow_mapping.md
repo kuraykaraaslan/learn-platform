@@ -1,8 +1,5 @@
 # 195. Business Problem Diagnosis & Current-State Workflow Mapping
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Clients describe what they want in the language of features — an admin dashboard, an app, a booking system — because that's the vocabulary they have, not because the feature is actually what matters. Diagnosis is the discipline of translating every requested feature back through a fixed chain: feature request → workflow problem → business cost → desired outcome. "Admin dashboard" becomes "managers can't track orders without asking staff," which becomes "delays, manual reporting, poor visibility," which becomes "real-time operational status and faster decisions." Skipping this chain and jumping straight to building the requested feature routinely produces a technically correct deliverable that doesn't fix anything, because the feature was never the actual point. A small set of categories — revenue, operational, visibility, customer experience, compliance/risk, cost, strategic — gives the diagnosis a place to land, and asking for rough value even when exact numbers aren't available ("how many hours a week," "how many requests are affected") keeps the diagnosis grounded in something measurable rather than a vague sense that the project "would help."
 

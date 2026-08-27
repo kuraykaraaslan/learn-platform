@@ -1,8 +1,5 @@
 # 285. AI Search and Answer Engine Optimization (AEO)
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (ai-search-and-answer-engine-optimization.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 AEO is the discipline of making content clear, useful, trustworthy, and structurally easy for answer engines — Google's AI features, Bing/Copilot, Perplexity-style tools, ChatGPT's browsing mode, and anything else that reads, summarizes, and cites web content — to understand and quote. It applies whenever the goal is being selected as a supporting source for an AI-generated answer rather than (or in addition to) appearing as a blue link. The standard for an AEO-ready page is that it's simultaneously crawlable, indexable, snippet-eligible, entity-clear, answer-first, well-structured, evidence-backed, internally linked, and fresh enough for its topic — dropping any one of these still caps how well the page can perform.
 

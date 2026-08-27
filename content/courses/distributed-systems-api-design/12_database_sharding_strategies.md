@@ -1,8 +1,5 @@
 # 12. Database Sharding Strategies
 
-## Coverage Level
-**Not Covered** — Your boilerplate separates tenant databases (a form of vertical partitioning by tenant), which is an excellent foundation. But there is no horizontal sharding within a tenant's dataset, and the system database has no sharding strategy for high-cardinality tables like events, sessions, or audit logs.
-
 ## What It Is
 Sharding is the practice of horizontally partitioning data across multiple independent database instances (shards), where each shard holds a subset of the total dataset. Unlike replication (where every node has all the data), sharding means each node has only a portion. This allows you to scale write throughput and storage beyond what a single server can handle.
 

@@ -1,8 +1,5 @@
 # 395. Legacy System Assessment and Migration Strategy
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Technical_Architecture_Rules material (specifically `legacy-and-migration-strategy.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 A large share of client projects aren't greenfield — they replace a spreadsheet, an aging admin panel, a WordPress site standing in for a real product, or a previous vendor's failed attempt — and in that kind of project the risk almost never lives in the new system's code. It lives in the migration. Before proposing a replacement, the strategist has to assess the current system honestly: what exists today, what data actually has to move, who owns that data, how clean it really is (not how clean the client believes it is), which fields are mandatory, which historical records genuinely matter versus can be archived instead of migrated, what downtime is acceptable, and who is responsible for validating that the migrated data is correct.
 

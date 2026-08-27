@@ -1,8 +1,5 @@
 # 364. Third-Party Vendor Risk & Data Processing Agreements
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
-
 ## What It Is
 Every third-party provider a system talks to — hosting, managed database, object storage, email, SMS, payment, analytics, error monitoring, an AI API, a CRM or helpdesk, CDN/DNS — extends the system's own security and privacy boundary, whether or not anyone wrote that down. Privacy by design (lesson #359) treats "a Data Processing Agreement is mandatory with every processor sub-contractor" as one line item in a larger checklist; this lesson is the dedicated process for getting there: building and maintaining the vendor inventory, asking the right questions before a vendor is added, and handling the specific failure modes — AI providers, payment providers, and account-ownership drift — that show up often enough to need their own rules.
 

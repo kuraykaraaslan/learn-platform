@@ -1,8 +1,5 @@
 # 224. Warranty, Bug-Fix, and Support Boundaries
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Delivery isn't the end of the relationship, but it also isn't the start of unlimited lifetime obligation, and the line between the two needs to be drawn in writing before delivery, not negotiated after a client's first post-launch email. A bug is behavior that fails against the scope and acceptance criteria that were actually agreed — a scoped form that doesn't submit, an approved login flow that fails. A request for a new workflow, a changed business rule, support for a browser that was never in scope, or a fix needed because the client's own infrastructure changed underneath the delivered system, is not a bug, however urgently it's phrased.
 

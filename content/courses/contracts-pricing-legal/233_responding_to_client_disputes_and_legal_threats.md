@@ -1,8 +1,5 @@
 # 233. Responding to Client Disputes and Legal Threats
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Legal_and_Contractor_Rules (client-dispute-and-legal-challenge.md) material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Every other lesson in this course is about preventing disputes — clear scope, written acceptance, bounded revisions, a change-request process. This one is about what happens when prevention didn't fully work and a client sends a message that changes register: a refund demand, "I'll take this to my lawyer," a threat to post publicly, or a flat claim that the software doesn't work. The instinct in that moment is almost always wrong — reply immediately, over-explain, apologize broadly to de-escalate, or offer money back to make the discomfort stop. Each of those moves trades a short-term feeling of resolution for a materially weaker position if the dispute continues.
 

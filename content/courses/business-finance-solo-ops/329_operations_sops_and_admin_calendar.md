@@ -1,8 +1,5 @@
 # 329. Turning Recurring Admin Work into SOPs
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 A solo operator has no colleague to catch a forgotten renewal or a missed follow-up — memory is the only backstop, and memory is unreliable under delivery pressure. The fix is to convert recurring admin work into standard operating procedures (SOPs) tied to a fixed calendar, so obligations don't depend on remembering to remember them.
 

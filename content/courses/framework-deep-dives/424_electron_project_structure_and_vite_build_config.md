@@ -1,8 +1,5 @@
 # 424. Electron: Project Structure and electron-vite Build Configuration
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Electron material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 An electron-vite project has three source roots that map directly onto the three processes — `src/main/`, `src/preload/`, `src/renderer/` — plus a fourth folder, `src/shared/`, that sits outside the process split entirely. `shared/` is described as "sacred" in this ruleset because it's the *only* code imported by more than one process, and that privilege comes with a strict constraint: types and Zod schemas only, zero runtime side effects, zero Node imports, zero React. The moment a `shared/` file imports `fs` or `electron`, it can no longer safely land in the renderer bundle, which defeats the entire reason the folder exists — a shared IPC contract that both the type-checker and the runtime can trust identically in all three processes.
 

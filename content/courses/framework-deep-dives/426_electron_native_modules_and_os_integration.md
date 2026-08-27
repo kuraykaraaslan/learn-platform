@@ -1,8 +1,5 @@
 # 426. Electron: Native Modules and OS API Integration
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Electron material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 The default answer to "do we need a native module" is no. Most needs that seem to demand native code — SQLite, crypto, JSON parsing — have a pure-JS or WASM equivalent that skips the entire native-build problem: no ABI rebuilds, no per-platform CI matrix, cross-platform by construction. A native addon is justified only for OS APIs Electron doesn't expose, genuinely performance-critical native libraries, or direct hardware access — and when one is justified, it lives exclusively in main (or a spawned `utilityProcess`), never the sandboxed renderer, which can't load native modules regardless of intent since `sandbox: true` blocks arbitrary `require` calls at the process level.
 

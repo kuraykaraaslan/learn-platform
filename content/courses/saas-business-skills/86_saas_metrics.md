@@ -1,8 +1,5 @@
 # 86. SaaS Metrics — MRR, Churn, LTV, CAC
 
-## Coverage Level
-**Partial** — You have subscription plans with monthly/yearly pricing and trial days modeled in your schema. What you are missing is the instrumentation layer: the SQL queries that compute MRR, churn, and LTV from your existing data, and the tracking of CAC from your acquisition channels.
-
 ## What It Is
 SaaS metrics are the set of financial and behavioral indicators that describe how healthy a subscription business is. Unlike one-time sales businesses, a SaaS company's financial health cannot be read from revenue alone — a business with high gross revenue but high churn is worth less than one with lower revenue and low churn, because the first business is constantly replacing customers it loses. Understanding which metrics to track and how to calculate them from your own data transforms you from a developer who builds subscription features into an operator who understands the financial machine they are running.
 

@@ -1,8 +1,5 @@
 # 30. SQL Injection Protection
 
-## Coverage Level
-**Covered** — You use Prisma ORM for the system database and TypeORM for tenant databases throughout the codebase. Both ORMs use parameterized queries exclusively for standard operations, which means the most common SQL injection attack surface does not exist in your service layer. The nuance worth understanding is where parameterized queries still leave gaps: raw query escapes, dynamic column/table names, and `LIKE` pattern injection.
-
 ## What It Is
 SQL injection is the vulnerability class where user-controlled input is concatenated into a SQL string and interpreted by the database engine as SQL syntax rather than data. The canonical example is `email = '' OR 1=1 --` turning a login query into one that always returns true. It has been on the OWASP Top 10 for over 20 years because it is easy to introduce and catastrophic when exploited: a successful injection gives an attacker read access to all tables, often write access, and sometimes operating system access via `xp_cmdshell` or `COPY TO/FROM`.
 

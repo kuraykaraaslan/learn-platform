@@ -1,8 +1,5 @@
 # 324. The Monthly Financial Close
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 The monthly close is the process that turns a month of scattered invoices, payments, receipts, and half-remembered decisions into actual business intelligence. Without it, "how was this month?" gets answered with a feeling instead of a number, and problems that were visible in the data — an overdue invoice, a subscription nobody uses, a project quietly losing money — stay invisible until they become a crisis.
 

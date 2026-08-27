@@ -1,8 +1,5 @@
 # 283. Metadata, Titles, Descriptions and Canonical URL Strategy
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (metadata-title-description.md, canonical-urls-and-duplicates.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Metadata is the layer search engines and social platforms read before (or instead of) rendering the full page, so it has to carry the page's intent accurately in a very small space. Every indexable page needs a unique title, a useful meta description, a canonical URL, and — for anything meant to be shared — Open Graph tags. The title should match search intent, name the topic naturally, communicate value, stay unique across the site, and avoid keyword stuffing; a useful template is `<Service> for <Audience> | <Brand>` or `<Case Study: Outcome> | <Brand>`. The meta description should summarize the page accurately, name the audience or problem, and avoid clickbait, since its real job is improving click quality, not click quantity. A frequently missed detail: the H1 has to actually confirm the promise made by the title — a title reading "Custom SaaS MVP Development for SMEs" paired with an H1 reading "Welcome to My Website" breaks the reader's trust in the first two seconds and confuses ranking systems about what the page is actually about.
 

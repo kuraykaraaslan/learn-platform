@@ -1,8 +1,5 @@
 # 289. Internal Linking, Information Architecture and Rich Media SEO
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (internal-linking-and-information-architecture.md, image-video-and-rich-media-seo.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Internal linking is how both users and search systems understand the relationships between pages, and it's also how authority flows from strong pages toward the pages that need to convert. The working model is hub-and-spoke: a pillar or service page is the hub, blog posts and guides are educational spokes, case studies are proof spokes, FAQ/checklist pages are answer spokes, and a CTA page is the conversion endpoint everything eventually points toward. Anchor text carries real weight in this system — descriptive anchors ("SaaS MVP development service," "admin panel case study") tell both readers and crawlers what the destination is about, while generic anchors ("click here," "read more") waste the opportunity entirely. The single most damaging and most avoidable internal-linking failure is the orphan page: a page that exists in the sitemap but that no other page actually links to, reachable only through an external or social link, disconnected from any cluster. No important page — least of all a portfolio or case study, which exists specifically to convert — should ever be orphaned; the fix is always the same, link to it from the relevant hub, a related blog post, or the main navigation.
 

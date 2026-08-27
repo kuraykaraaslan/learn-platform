@@ -1,8 +1,5 @@
 # 34. Timing Attack — Constant-Time String Comparison
 
-## Coverage Level
-**Partial** — Your password comparisons use `bcrypt.compare()`, which is inherently resistant to timing attacks because bcrypt's computation time is dominated by the work factor, not string length. However, your token comparisons use `===` (JavaScript's equality operator) for comparing hashed tokens retrieved from the database, which leaks timing information. The gap is specifically in places where raw tokens or hashed tokens are compared directly with string equality.
-
 ## What It Is
 A timing attack is a side-channel attack that extracts secret information by measuring how long a computation takes. For string comparison, the attack works because most equality implementations short-circuit: they compare character by character and return `false` as soon as a mismatch is found. This means comparing `"aaaa"` against `"bbbb"` is faster than comparing `"aaab"` against `"aaaa"`, because the first mismatch happens at position 0 vs position 3. By sending thousands of candidate strings and measuring response times, an attacker can statistically determine the correct string one character at a time.
 

@@ -1,8 +1,5 @@
 # 366. Health Data Compliance — HIPAA, NHS & KVKK Sağlık Verileri
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
-
 ## What It Is
 Health data sits at the top of the classification hierarchy from lesson #358 — "sensitive personal data" or "special category" data under every major privacy law — and the trigger for this entire lesson is one scoping question: does the system store or process any information a doctor, nurse, or patient has about a person's physical or mental health condition, diagnosis, treatment, prescription, or test result? If yes, the compliance cost has to be in the budget from day one, because a client who says "it's just a patient portal, don't overthink it" is still building a system HIPAA (or its non-US equivalents) fully applies to — the *use case* triggers the obligation, not the client's framing of the project.
 

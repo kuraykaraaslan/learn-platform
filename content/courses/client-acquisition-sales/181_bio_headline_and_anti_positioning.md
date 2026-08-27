@@ -1,8 +1,5 @@
 # 181. Bio, Headline, Anti-Positioning & Review Cadence
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Brand_Positioning_Rules material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Your bio, headline, and profile are where positioning meets the ten-second attention span of someone scrolling LinkedIn or landing on your site. A profile has to do six jobs almost simultaneously: state your market role, name your target client, name the outcome, list service categories, signal proof or process, and give a next step. Most developer profiles do zero of these — they read like a CV summary ("Full-stack developer with 5 years of experience in React, Node.js...") which answers a question nobody asked ("what have you done") instead of the question a buyer actually has ("can you solve my specific problem, and what do I do next"). A working LinkedIn headline formula looks like `<market role> for <audience> | <core service categories> | <proof or process signal>` — for example, "Solo Technical Partner for SaaS MVPs & Admin Panels | React, Next.js, Node.js, PostgreSQL | From Scope to Deployment." Visual identity (consistent fonts, screenshot framing, a repeatable post template) supports this but is secondary — it makes existing proof look organized, it doesn't create proof on its own.
 

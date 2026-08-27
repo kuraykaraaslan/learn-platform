@@ -1,8 +1,5 @@
 # 147. The Anthropic API Client Architecture
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/api-client-patterns.md material; no existing coverage data for your own practice.
-
 ## What It Is
 Every LLM-backed feature starts with the same unglamorous plumbing decision: where does the API client live, and who is allowed to construct it? The pattern that holds up in production is a single, module-level singleton client, instantiated once at import time, imported everywhere it's needed. Constructing a new `Anthropic()` instance inside a route handler or service method on every request is wasteful (it re-reads config and re-establishes client-level state per call) and makes it impossible to enforce consistent behavior — timeout, retry count, and API key resolution should be defined in exactly one place, not duplicated across every call site.
 

@@ -1,8 +1,5 @@
 # 104. Database Internals — B-tree, WAL, MVCC Deep Dive, Vacuum
 
-## Coverage Level
-**Not Covered** — You use Prisma and TypeORM effectively but the physical storage layer beneath them is a blind spot.
-
 ## What It Is
 Most developers treat PostgreSQL as a black box: send SQL, get rows. But when your queries slow down, your disk fills up, or your replica lags, the black box needs to be opened. Understanding how PostgreSQL physically stores and retrieves data lets you make decisions that can't be made from ORM documentation alone.
 

@@ -1,8 +1,5 @@
 # 15. Two-Phase Commit vs Eventual Consistency
 
-## Coverage Level
-**Not Covered** — Your current architecture uses single-database transactions (ACID) for most operations. As your multi-tenant setup potentially involves separate tenant databases, the practical tradeoffs between 2PC and eventual consistency haven't been addressed in any documented architectural decision.
-
 ## What It Is
 When a transaction must span multiple independent databases or services, you lose the single-database ACID guarantee. Two-Phase Commit (2PC) is the protocol for achieving atomicity across multiple participants: in the **prepare** phase, a coordinator asks every participant "can you commit?" and waits for all to say yes; in the **commit** phase, the coordinator tells all participants to commit (or abort if any said no). If all participants prepared successfully, the commit is guaranteed to happen on all of them.
 

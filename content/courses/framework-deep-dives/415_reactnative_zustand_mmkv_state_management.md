@@ -1,8 +1,5 @@
 # 415. React Native: Zustand + MMKV State Management
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_ReactNative material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Global state in this Expo stack has exactly one home — a Zustand store — and exactly one persistence engine behind it — MMKV, a fast synchronous key-value store backed by a native module. Redux is banned outright as unnecessary overhead Zustand already covers, and React Context is banned specifically for global state (it remains acceptable for narrow dependency-injection cases, like swapping an `axiosInstance` in tests) because Context re-renders every consumer on any change, where Zustand's selector pattern lets a component subscribe to exactly the slice it needs. The decision of *where* a given piece of state lives is made once per state type, not once per feature: server data (users, posts) stays as local `useState` inside a data-fetching hook; auth session and app preferences go in persisted Zustand stores; form state and UI-only flags (a modal's open/closed state) stay as plain `useState` in the component that owns them.
 

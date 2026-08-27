@@ -24,7 +24,6 @@ export type CourseSummary = {
 };
 
 export type LessonSections = {
-  coverageLevel: string;
   whatItIs: string;
   keyConcepts: string;
   exampleCode: string;

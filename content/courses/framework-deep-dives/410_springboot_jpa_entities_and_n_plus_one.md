@@ -1,8 +1,5 @@
 # 410. Spring Boot: JPA Entities, Repositories, and N+1 Prevention
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_Java material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Spring Data JPA is the Java equivalent of TypeORM, but with meaningfully different defaults and failure modes that matter once an application has real relationships and real traffic. Entities are plain classes annotated `@Entity`, built with Lombok (`@Getter`, `@Setter`, `@Builder`, `@NoArgsConstructor`, `@AllArgsConstructor`) to avoid hand-written boilerplate, and suffixed `Entity` specifically to keep them visually distinct from the response DTOs they get mapped to. Repositories are interfaces extending `JpaRepository<Entity, ID>` — Spring generates the implementation at startup from method name conventions (`findByEmailAndUserStatus`), from `@Query` JPQL for anything a derived name can't express, or from projection interfaces for read-only field subsets. Raw `EntityManager` access is reserved for genuinely complex dynamic queries inside a custom repository implementation, not a default tool.
 

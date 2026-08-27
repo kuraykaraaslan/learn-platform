@@ -1,8 +1,5 @@
 # 182. The Client Acquisition Pipeline & Ideal Client Profile
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition_Rules material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Client acquisition feels chaotic for most engineers because they're missing a mental model for it — it looks like a pile of unrelated tasks (post on LinkedIn, reply to a DM, hop on a call) rather than a single pipeline with stages. The pipeline has seven: positioning, proof, lead source, lead capture, first response, qualification, and discovery handoff. The rule that makes this useful is a hard one: never skip straight from "a person asked about software" to "prepare a price." Every lead has to pass through capture and qualification before it earns a serious discovery call, because discovery calls are expensive and most inbound messages are not yet real opportunities — they're a sentence with a question mark, not a scoped problem.
 

@@ -1,8 +1,5 @@
 # 35. Content Security Policy (CSP) Headers
 
-## Coverage Level
-**Not Covered** — Your Next.js application sends no `Content-Security-Policy` header. Your Axios client has CSRF protection, which handles one class of cross-site attacks, but CSP is a separate, complementary defense that controls what resources the browser is permitted to load and execute. Without CSP, a stored XSS vulnerability in any tenant-generated content could execute arbitrary JavaScript in your users' browsers with full access to their session.
-
 ## What It Is
 Content Security Policy is an HTTP response header that tells the browser which content sources are allowed for the current page. It is delivered as a header (`Content-Security-Policy: ...`) and the browser enforces it: scripts from unlisted domains are blocked, inline `<script>` tags are blocked unless explicitly allowed, and any violation can be reported to a URL you control. CSP is the browser-side complement to server-side input sanitization: even if an attacker injects a `<script>` tag into your database, CSP prevents the browser from executing it.
 

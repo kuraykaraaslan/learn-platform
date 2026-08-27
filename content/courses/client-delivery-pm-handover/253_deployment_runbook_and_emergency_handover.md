@@ -1,8 +1,5 @@
 # 253. Deployment Runbook and Emergency Handover
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Documentation_and_Handover_Rules/deployment-and-runbook.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 Deployment knowledge that lives only in the original developer's memory is a single point of failure disguised as convenience. "Deployment is automatic" tells a future maintainer nothing about what actually triggers it, where to watch it happen, or what to do when it fails — and the moment that developer is unreachable during an actual production emergency, that missing detail becomes the client's problem at the worst possible time. A deployment runbook exists to make release and recovery knowledge portable: written down completely enough that someone who wasn't there for the original build could still safely ship a fix or roll back a bad one.
 

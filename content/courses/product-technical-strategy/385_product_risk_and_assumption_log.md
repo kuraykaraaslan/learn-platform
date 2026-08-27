@@ -1,8 +1,5 @@
 # 385. Product Risk and Assumption Log
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `product-risk-and-assumption-log.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Feedback and validation loops (lesson 383) are how you test an individual assumption; the product risk and assumption log is where every assumption and risk across the whole project lives, visible and owned, so nothing stays a private worry in one person's head until it explodes mid-delivery. Every product plan has assumptions — that the payment provider will approve the account in time, that the client's data export is actually clean, that a workflow admins insist is simple really is simple. Left unwritten, each one becomes hidden project risk that surfaces as a scope fight, a blown timeline, or a feature nobody realizes was never actually validated.
 

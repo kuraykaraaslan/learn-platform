@@ -1,8 +1,5 @@
 # 357. Government & Regulated-Sector Security Baselines
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
-
 ## What It Is
 SOC 2 and ISO 27001 are the frameworks most B2B SaaS companies encounter, but they are not the frameworks that apply when the customer is a government body, a public-sector agency, or a company operating under a national-security-adjacent contract. Government and regulated-sector procurement runs on a different, often mandatory, set of certifications, and discovering one of these requirements after a contract is signed instead of during discovery turns into an expensive scramble — some of them (a certification body's assessment, a security clearance, a domestic-hosting requirement) cannot be fast-tracked no matter how much budget is thrown at them.
 

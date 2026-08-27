@@ -1,8 +1,5 @@
 # 412. Spring Boot: Testing with MockMvc, @WebMvcTest, and TestContainers
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_SpringBoot material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Spring Boot's test stack splits into two deliberately different layers, and picking the right one for a given test is the first decision to make. `@SpringBootTest` combined with `@AutoConfigureMockMvc` and a real TestContainers Postgres instance boots the *entire* application context — Security filter chain, controller, service, repository, real database — and drives it through MockMvc exactly the way the Express/Supertest lessons drive a route through a real HTTP request: no mocked repository, because a mocked repository only proves the mock behaves as told, not that the query works against real constraints and cascades. `@WebMvcTest`, by contrast, loads only the web layer for a single controller, mocks the service with `@MockitoBean`, and skips Security and the database entirely — it's fast, narrow, and exists specifically to test controller-level concerns (request mapping, validation wiring, response shape) in isolation from everything below it.
 

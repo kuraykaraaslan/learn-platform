@@ -1,8 +1,5 @@
 # 309. Project Selection & Portfolio Auditing
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Case_Study_and_Portfolio_Rules material (project-selection.md, portfolio-audit-checklist.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 A portfolio shouldn't contain everything — it should contain the projects that support the freelancer's positioning and help the right client trust them faster, which means selection has to be strategic rather than chronological. A project earns a spot only if it proves at least one commercially useful capability: business workflow understanding, product scoping, technical architecture, UI/UX execution, backend or API design, integration work, security awareness, deployment ownership, or client communication. A visually nice project that proves none of these doesn't belong, no matter how much effort went into it. The selection score makes this concrete: each candidate gets rated 0–25 across five categories — buyer relevance, problem clarity, proof quality, technical depth, and differentiation — and the total maps directly to a format decision: 20–25 becomes a full case study, 15–19 a shorter portfolio item, 10–14 gets used only as a social post or technical note, and 0–9 doesn't get included unless there's a specific strategic reason to make an exception.
 

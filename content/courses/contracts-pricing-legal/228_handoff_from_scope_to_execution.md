@@ -1,8 +1,5 @@
 # 228. From Signed Scope to Project Execution — the Handoff
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 A signed SOW is not yet a project plan, and the gap between the two is where a surprising number of well-negotiated contracts quietly lose their protections. The scope boundaries, exclusions, assumptions, and change-control rules that took real effort to negotiate need to survive the transition into day-to-day execution — backlog items, sprint plans, and task lists — or they become invisible the first time a task list disagrees with what was actually signed.
 

@@ -1,8 +1,5 @@
 # 374. Jobs to Be Done & Value Proposition — From User Motivation to Product Promise
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `jobs-to-be-done.md` and `value-proposition.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Jobs to Be Done (JTBD) reframes a feature request as a moment of progress a person is trying to make, rather than a checkbox on a spec. The format is deliberately situational: *When \<situation\>, I want to \<motivation\>, so I can \<progress\>.* The situation matters because needs are contextual — "when hundreds of attendees arrive at once" is a different problem than "when a single VIP arrives late," even though both involve "checking someone in." JTBD also separates three layers of the same job: the functional job (the practical task), the emotional job (the anxiety or confidence at stake), and the social job (how the person wants to be seen doing it). A features list built from "the competitor has it" ignores all three layers; a features list built from JTBD statements can be traced back to a specific moment of friction, which is what makes it defensible when someone asks "why are we building this instead of that."
 

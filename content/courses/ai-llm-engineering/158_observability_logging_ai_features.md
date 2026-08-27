@@ -1,8 +1,5 @@
 # 158. Observability and Logging for AI Features
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/observability-and-logging.md material; no existing coverage data for your own practice.
-
 ## What It Is
 AI-backed features need observability discipline that is stricter, not looser, than typical services, for a reason that trips up teams new to LLM integration: the payload itself — user input and model output — is exactly the thing you must not put in a log line, because it routinely contains PII, and because full conversation content in a log aggregator is both a privacy liability and a volume problem. The resolution is to log metadata religiously and content never: model ID, input/output token counts, latency, feature name, stop reason, and error type and code are all safe and all genuinely useful; full user input, full AI output, system prompt content, and anything resembling PII are never logged, in any environment, including staging.
 

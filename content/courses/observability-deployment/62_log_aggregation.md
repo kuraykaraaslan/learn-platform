@@ -1,8 +1,5 @@
 # 62. Log Aggregation — Structured Logging + ELK or Loki
 
-## Coverage Level
-**Covered** — You have Winston configured with JSON format and file/console transports. That is the right foundation. This file teaches you how to ship those logs to a centralized aggregation backend so you can actually query them at scale.
-
 ## What It Is
 You already have structured logging. The next problem is: where do those log files go in production, and how do you search them when something breaks at 2 AM? Writing to `logs/2026-05-04.log` on a container that gets replaced on every deploy means you lose your logs. Worse, if you scale to multiple instances, your logs are spread across multiple ephemeral machines with no way to query them together.
 

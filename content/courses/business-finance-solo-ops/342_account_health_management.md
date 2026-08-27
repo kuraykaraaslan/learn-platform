@@ -1,8 +1,5 @@
 # 342. Managing Account Health: Green, Yellow, Red
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Account health is a simple three-state classification — green, yellow, red — that tells you whether an existing client relationship is safe to grow, needs attention, or needs recovery before anything else happens. Green means the client is responsive, payments are current, there are no unresolved issues, and sentiment is positive or neutral. Yellow means something has slipped: slow responses over 72 hours, a mild complaint, an unresolved scope question, a slightly late payment, or reduced engagement. Red means the relationship is in active trouble: no response in over a week, a formal complaint, an overdue payment, negative sentiment, or an outright dispute. The value of naming these states explicitly is that it removes guesswork about what you're allowed to do next with the account.
 

@@ -1,8 +1,5 @@
 # 360. Cookie Consent & Tracking Governance
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
-
 ## What It Is
 Tracking technology creates compliance risk even on the simplest marketing site, and the risk isn't really about cookies as a technology — it's about what a script does once it loads: what data it collects, whether it identifies a person, and whether that person had a genuine choice before it ran. The first discipline is separating tracking into categories with different defaults: strictly necessary (session cookies, CSRF tokens — allowed without consent because the app cannot function without them), functional (UI preferences — generally fine to document rather than gate), analytics (page views, heatmaps — usually requires a consent decision depending on jurisdiction), marketing (ad pixels, retargeting — requires explicit opt-in almost everywhere), and third-party embeds (maps, video, chat widgets — each one needs its own data-sharing assessment since embedding someone else's script means their tracking rides along with it).
 

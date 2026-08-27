@@ -1,8 +1,5 @@
 # 37. Secrets Management — Vault / SSM / KMS Instead of Env Files
 
-## Coverage Level
-**Not Covered** — Your secrets are managed via `.env` files validated through `libs/env.ts` with Zod. The Zod validation is excellent (it catches missing secrets at startup rather than at runtime), but the underlying storage mechanism is `.env` files, which have significant operational security problems at scale. You have no external secrets store, no rotation automation, and no audit trail for secret access.
-
 ## What It Is
 An `.env` file is a perfectly reasonable place to start, and your `libs/env.ts` Zod validation layer is genuinely better than most teams' setups. The problem is operational: `.env` files sit on disk, get copied to servers during deploys, end up in CI/CD environment variable stores with no expiry, and occasionally get committed to version control. When a developer leaves, rotating secrets requires finding every `.env` file on every server and in every pipeline. When your database password leaks, you have no audit trail showing who accessed which secret and when.
 

@@ -1,8 +1,5 @@
 # 338. Choosing One Growth Focus Instead of Five
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Growth fails for most solo operators not from lack of effort but from scattering effort across cold outreach, LinkedIn content, YouTube, SEO, agency partnerships, a side SaaS idea, a newsletter, and marketplaces all at once. None of these get done well enough to produce a real signal, and every channel gets abandoned right around the point where it might have started working. A solo business has no team to run five bets in parallel — it needs focus.
 

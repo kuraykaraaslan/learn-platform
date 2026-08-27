@@ -1,8 +1,5 @@
 # 14. Outbox Pattern
 
-## Coverage Level
-**Not Covered** — Your boilerplate has BullMQ for background jobs, but event publishing to the queue happens in application code after the database write. If the process crashes between the DB commit and the BullMQ enqueue, the event is silently lost — the DB is updated but no downstream processing happens.
-
 ## What It Is
 The Outbox Pattern solves the dual-write problem: when you need to both commit a database transaction AND publish a message to an event bus or job queue, there is no atomic operation that guarantees both succeed or both fail. The naive `await db.save(); await queue.add(event)` sequence has a silent failure window — the DB write succeeds, the queue enqueue fails (network hiccup, Redis restart, process crash), and you've just created a ghost: a state change that no downstream system knows about.
 

@@ -1,8 +1,5 @@
 # 372. Problem Framing — Converting Vague Requests into Problem Statements
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `problem-framing.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Problem framing is the discipline of rewriting a request as a problem before anyone is allowed to propose a solution. Most requests arrive already dressed as solutions — "we need a dashboard," "we need an app," "we need AI" — and every one of those sentences skips the part that actually justifies building anything: who is hurting, what specifically hurts, how often, and what it costs them today. If you start designing screens from a solution-shaped sentence, you inherit whatever assumptions were baked into it, usually without realizing you've inherited them.
 

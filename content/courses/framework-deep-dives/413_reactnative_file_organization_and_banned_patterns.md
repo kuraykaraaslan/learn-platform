@@ -1,8 +1,5 @@
 # 413. React Native: File Organization and Banned Patterns for Expo Apps
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_ReactNative material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 An Expo Router app organizes files around two axes that don't exist together in an Express or Spring Boot backend: a routing tree (`app/`) that the filesystem itself defines, and a set of concern-based top-level folders (`components/`, `hooks/`, `stores/`, `libs/`, `types/`) that hold everything the routes call into. The `app/` directory is Expo Router v4's file-based routing — every file is a screen, `(group)` folders create route groups that share a layout without adding a URL segment, `[param].tsx` is a dynamic segment, and `_layout.tsx` wraps its directory with navigation chrome. Screens are default exports; everything in `components/` is a named export. Hooks never live inside `components/` — even a hook used by exactly one component still belongs in `hooks/`, because the moment a second screen needs the same data-fetching logic, it's already in the right place.
 

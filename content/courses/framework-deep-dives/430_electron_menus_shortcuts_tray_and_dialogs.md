@@ -1,8 +1,5 @@
 # 430. Electron: Menus, Shortcuts, Tray, Dialogs, and File/Offline UX
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' UI_Interface_Rules_Electron material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Desktop apps expose two visually and functionally different kinds of menu, and confusing them produces a UI that feels subtly wrong even when nothing is technically broken. The **application menu** is the OS-level menu bar — a global bar at the top of the screen on macOS, an in-window bar on Windows/Linux — built from native `Menu` in main and structured around OS-standard top-level items (macOS needs its own app menu with About/Settings/Quit; every platform needs a proper Edit menu with Undo/Redo/Cut/Copy/Paste using OS modifiers). The **context menu** is whatever appears on right-click, and it can be either a native `Menu.popup` or an in-window KUIreact `DropdownMenu` positioned at the cursor — the native app menu should never be replaced by an in-window substitute, since macOS users specifically expect the real global menu bar to exist. Every menu item that has a keyboard shortcut displays it, using the platform's own notation, and a trailing ellipsis (`"Export…"`) is reserved specifically for items that open a dialog or need more input before completing — a small convention that, applied consistently, lets users predict an item's behavior before clicking it.
 

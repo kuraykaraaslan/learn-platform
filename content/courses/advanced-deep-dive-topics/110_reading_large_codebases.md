@@ -1,8 +1,5 @@
 # 110. Reading Large Codebases Fast
 
-## Coverage Level
-**Not Covered** — You build greenfield projects but have no documented methodology for entering and navigating unfamiliar large repos.
-
 ## What It Is
 Reading a large codebase fast is a learnable skill, not a talent. Most developers waste their first hours in an unfamiliar repo by starting at the README, then wandering through folders aimlessly. Professionals start from behavior — find where the HTTP request lands and trace execution forward. The README explains intent; running code explains reality.
 

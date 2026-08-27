@@ -1,8 +1,5 @@
 # 9. API Versioning Strategies (URL vs Header vs Content Negotiation)
 
-## Coverage Level
-**Not Covered** — Your API routes have no versioning strategy; all endpoints are implicitly "v1" by their URL structure. As your SaaS grows and tenants build integrations against your API, any breaking change will be a silent regression for those integrations.
-
 ## What It Is
 API versioning is the contract you make with API consumers: "as long as you call v1, it will behave the same way." Without explicit versioning, every breaking change — renaming a field, changing a response shape, removing a parameter — silently breaks all clients that depend on the current behavior. For a multi-tenant SaaS where tenants use your API for integrations, this matters the day you have your first external integration.
 

@@ -1,8 +1,5 @@
 # 373. Personas & Role Mapping — Buyer, User, Admin, and Operator
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `target-user-and-persona.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Most B2B and internal software has more than one human touching it, and the roles do not share a goal. The person who signs the check is frequently not the person who opens the app every day; the person configuring permissions is not the person filing a support ticket about a permission they don't have. Role mapping is the step of separating these people explicitly — buyer, decision maker, primary user, secondary user, admin/operator, support user, external customer, technical maintainer — before a single feature is designed, because a feature that satisfies one role can actively work against another.
 

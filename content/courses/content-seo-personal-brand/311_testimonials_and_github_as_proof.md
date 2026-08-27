@@ -1,8 +1,5 @@
 # 311. Testimonials & GitHub as Proof
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Case_Study_and_Portfolio_Rules material (testimonial-integration.md, github-readme-as-proof.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Testimonials and GitHub repositories are two different third-party-credibility channels, and both fail for the same underlying reason when handled lazily: a testimonial with no specifics reads as filler, and a repository with no context reads as an unexplained code dump. A strong testimonial mentions at least two of problem, process, communication, technical competence, reliability, result, business impact, or handover/support — generic praise like "great to work with!" transfers almost no trust because it could describe literally anyone. Getting a specific testimonial usually requires guided questions rather than an open-ended ask: what problem were you trying to solve before the project, why did you choose to work with me, what part of the process was most useful, what changed after delivery, would you recommend working with me to similar companies. A request template that offers to draft a short version for the client's approval — based on the actual project — often produces a better, more specific testimonial than asking someone to write one from scratch, since most clients are busy and will otherwise send back one generic sentence.
 

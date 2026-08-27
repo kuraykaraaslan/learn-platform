@@ -1,8 +1,5 @@
 # 252. Database, API, and Integration Handover Documentation
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Documentation_and_Handover_Rules/database-and-migration-docs.md and api-and-integration-documentation.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 The database is usually the single most valuable asset in a delivered system, and it's also the part most commonly handed over as an undocumented black box. A future developer or the client's own technical hire needs to understand not just that a `User` table and an `Order` table exist, but what they mean in business terms, how they relate, how migrations are actually run, and — critically — whether backups genuinely exist and have ever been tested. A schema dump with no explanation is nearly useless; "`User` stores authenticated accounts, `Order` stores checkout records and belongs to a user, `Payment` stores provider transaction references and must be kept consistent with webhook status updates" is what someone can actually work from.
 

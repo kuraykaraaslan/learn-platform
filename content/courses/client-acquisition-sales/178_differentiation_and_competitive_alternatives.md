@@ -1,8 +1,5 @@
 # 178. Differentiation & Competitive Alternatives
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Brand_Positioning_Rules material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Differentiation answers a question your positioning statement raises but doesn't settle: given that you've named who you help and what outcome you create, why should the client pick you over the specific alternative they're actually weighing? That alternative is rarely "a different developer with the same positioning." It's usually one of five things: a cheaper freelancer, an agency, an internal hire, a no-code/SaaS tool, or doing nothing. Each of these wins on a real axis — cost, perceived capacity, long-term control, speed, or avoided spend — and pretending they have no advantages makes your differentiation sound insecure rather than honest.
 

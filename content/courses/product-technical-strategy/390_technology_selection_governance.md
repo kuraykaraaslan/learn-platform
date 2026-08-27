@@ -1,8 +1,5 @@
 # 390. Technology Selection and New-Technology Governance
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Technical_Architecture_Rules material (specifically `technology-selection.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Technology selection at the architecture level is a different decision from vendor evaluation — evaluating a specific external vendor on price, contract terms, and support SLAs is a commercial skill covered elsewhere in this curriculum's process material. This lesson is about the stack-level decision: which framework, database, hosting model, and supporting tools a project is built on, which is the choice the team building *and maintaining* the system for years actually has to live with. Every technology choice must be justified against project requirements, team capability, ecosystem maturity, deployment model, security needs, maintenance cost, client ownership, and migration path — never against personal preference, trend, or what's interesting to learn on someone else's budget.
 

@@ -1,8 +1,5 @@
 # 38. Penetration Testing Process
 
-## Coverage Level
-**Not Covered** — You have no penetration testing process documented or practiced. This is expected at your stage; professional pentests are expensive and timing-sensitive. This section explains what the process looks like, what you can do yourself, and when to bring in external testers.
-
 ## What It Is
 Penetration testing (pentest) is the practice of attacking your own application with the explicit goal of finding security vulnerabilities before real attackers do. It differs from a security audit (reviewing code and architecture) in that it involves actually attempting to exploit vulnerabilities, not just identifying them theoretically. A pentest tells you not just what could go wrong, but what an attacker can actually achieve against your current deployment.
 

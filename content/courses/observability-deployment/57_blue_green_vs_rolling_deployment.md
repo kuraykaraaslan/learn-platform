@@ -1,8 +1,5 @@
 # 57. Blue-Green vs Rolling Deployment
 
-## Coverage Level
-**Not Covered** — Your project has no deployment configuration; understanding these strategies is essential before you move beyond manual `git push` deploys.
-
 ## What It Is
 The moment your SaaS has paying customers, every deployment is a risk event. Blue-green and rolling deployments are the two dominant strategies for reducing that risk by controlling how traffic shifts from old code to new code.
 

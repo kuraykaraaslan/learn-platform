@@ -1,8 +1,5 @@
 # 97. Publishing npm / GitHub Packages
 
-## Coverage Level
-**Not Covered** — Publishing a package is a mechanical skill that unlocks everything from sharing internal tooling across client projects to making your OSS contributions installable. The mechanics are approachable; the gotchas are specific and worth knowing in advance.
-
 ## What It Is
 Publishing to npm (Node Package Manager) means making a JavaScript or TypeScript package available to anyone in the world via `npm install`. The npm registry is the world's largest software registry, hosting over two million packages. Publishing a package does not require any approval process or review — you create an account, authenticate your CLI, and run `npm publish`. The barrier is technical, not administrative.
 

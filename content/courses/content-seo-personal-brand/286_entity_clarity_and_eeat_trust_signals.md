@@ -1,8 +1,5 @@
 # 286. Entity Clarity and E-E-A-T Trust Signals
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (entity-and-e-e-a-t-signals.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 E-E-A-T stands for Experience, Expertise, Authoritativeness, and Trustworthiness, and it describes what search and AI systems need to be able to establish before they'll confidently rank or cite a page: who is speaking, why they're qualified, and whether the content can be trusted. For a solo technical business, this isn't an abstract search-quality framework — it's the same thing a human buyer is silently evaluating on every page they read, which is why building real E-E-A-T signals and building buyer trust are the same project done once.
 

@@ -1,8 +1,5 @@
 # 377. Scope Boundaries — In Scope, Out of Scope, and Change Triggers
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `scope-boundaries.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 MVP scoping (lesson 375) and feature prioritization (lesson 376) decide what goes into a release. Scope boundaries write that decision down in a form nobody can quietly renegotiate later. The difference matters more than it sounds: a must-have feature list lives in your head or a planning doc, but a scope boundary document is the thing you can point to three weeks into a project when someone says "can you also just add refund automation, that was obviously part of this." If it isn't in the out-of-scope list, "obviously part of this" wins the argument by default, because silence reads as inclusion.
 

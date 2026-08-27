@@ -1,8 +1,5 @@
 # 378. Product Requirements Document (PRD)
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `product-requirements-prd.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Everything the Product Strategy Operating System (lesson 371) produces — problem statement, personas, value proposition, MVP definition, scope boundaries, prioritized features — lives in separate documents written at separate times, often by whoever was in the room that week. A PRD is where all of it gets compiled into one build-ready artifact that client, design, engineering, and QA can all point to as the single source of truth. Its real job isn't describing the product; it's preventing context loss between the sales conversation where the product was imagined and the implementation where it actually gets built. Without it, "we already discussed this" becomes the most common — and least verifiable — sentence in the project.
 

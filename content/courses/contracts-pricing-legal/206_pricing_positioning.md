@@ -1,8 +1,5 @@
 # 206. Pricing Positioning — Selling Value, Not Hours
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing Rules (pricing-positioning.md) material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 The way you talk about your price shapes how it's received almost as much as the number itself. A freelancer who frames their fee as "10 days times my rate" invites the client to mentally negotiate against cheaper labor doing the same arithmetic. A freelancer who frames the same fee as covering requirement clarification, architecture decisions, testing, deployment, documentation, and risk ownership invites the client to evaluate it against the cost of the outcome instead. Pricing positioning is the discipline of consistently choosing the second frame.
 

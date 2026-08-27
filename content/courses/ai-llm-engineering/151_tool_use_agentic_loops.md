@@ -1,8 +1,5 @@
 # 151. Tool Use and Agentic Loops
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/tool-use-and-function-calling.md material; no existing coverage data for your own practice.
-
 ## What It Is
 Tool use (also called function calling) is the mechanism that turns an LLM from a text generator into something that can take real actions: look something up in a database, call an internal API, run a calculation, or decide the next step in a multi-step task. You give the model a schema describing available functions — name, description, and a JSON schema for the input — and the model decides, based on the conversation, whether and which function to call. Crucially, the model doesn't execute anything itself; it emits a structured request, your code executes it, and you feed the result back for the model to continue reasoning with.
 

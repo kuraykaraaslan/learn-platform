@@ -1,8 +1,5 @@
 # 210. Scope Definition and Boundaries
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Almost every freelance project dispute traces back to the same root cause: the client and the developer used the same words to imagine two different products. "Admin panel," "full integration," and "modern design" all sound like agreements in a sales conversation, but none of them describe anything a court, a client, or a future you could actually verify. Scope definition is the discipline of converting those phrases into a list of modules, workflows, screens, and exclusions specific enough that anyone reading it would build the same thing.
 

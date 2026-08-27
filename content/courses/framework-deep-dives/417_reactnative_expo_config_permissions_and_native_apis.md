@@ -1,8 +1,5 @@
 # 417. React Native: Expo Config, Permissions, and Native Device APIs
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_ReactNative material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 Every Expo app needs a config file that describes its identity to both app stores and to Expo's own tooling — app name, bundle identifiers, icons, splash screen, permission strings, and the list of config plugins that patch native project files during prebuild. This stack mandates `app.config.ts` over `app.json` for one reason: `app.json` is static JSON, while `app.config.ts` is a TypeScript function that receives the existing config and returns a typed `ExpoConfig`, which means values can be computed (reading `process.env.EAS_PROJECT_ID` into `extra.eas.projectId`, for instance) and a typo in a key name is caught at build time instead of silently producing an app with no icon.
 

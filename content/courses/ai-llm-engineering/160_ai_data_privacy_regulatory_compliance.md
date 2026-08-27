@@ -1,8 +1,5 @@
 # 160. AI Data Privacy and Regulatory Compliance
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/data-privacy-and-compliance.md and eu-ai-act-compliance.md material; no existing coverage data for your own practice.
-
 ## What It Is
 Every call to a third-party model API is a data-sharing event with a named legal category: you are transmitting content to a sub-processor, and if that content includes personal data, KVKK, GDPR, CCPA, and a growing list of other regimes all have something specific to say about it before you're allowed to ship. This is easy to miss because the mechanics feel identical to calling any other internal API — same fetch, same JSON — but the party on the other end is now a separate legal entity processing your users' data under its own terms, and "we didn't think about it" is not a defense that survives a regulator's questions. The baseline obligations are concrete and checkable: your privacy policy must disclose AI processing, you need a signed Data Processing Agreement with the model provider, and you must apply data minimization — sending only the fields a feature actually needs, never a whole user record because it was convenient to serialize.
 

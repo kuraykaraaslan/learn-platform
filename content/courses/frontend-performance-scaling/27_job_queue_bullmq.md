@@ -1,8 +1,5 @@
 # 27. Job Queue Design with BullMQ (Priority, Concurrency, Backpressure)
 
-## Coverage Level
-**Covered (foundation)** — You have `libs/redis/bullmq.ts` exporting `getBullMQConnection()` with the correct `maxRetriesPerRequest: null` setting that BullMQ requires, and BullMQ is in your dependencies. The connection layer is solid. What's missing are the worker definitions, queue topology decisions, backpressure handling, and the operational patterns that separate a queue that works in development from one that holds up in production.
-
 ## What It Is
 A job queue decouples the HTTP request-response cycle from work that is slow, failure-prone, or that should not run synchronously. Sending email, provisioning a tenant database, processing a Stripe webhook, generating a PDF invoice — none of these belong in an API route handler where a timeout or downstream failure would surface directly to the user. You enqueue the job, return 202 Accepted, and a worker picks it up.
 

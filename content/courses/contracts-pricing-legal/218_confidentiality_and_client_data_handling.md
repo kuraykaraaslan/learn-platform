@@ -1,8 +1,5 @@
 # 218. Confidentiality and Client Data Handling
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing/Contract_and_Scope/Legal_and_Contractor material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 A client hands a freelancer things they'd never hand a stranger: production credentials, customer lists, pricing strategy, sometimes real user data. Confidentiality and data handling is the set of professional habits that keep that trust intact even when the client never explicitly asks for them — because by the time a client feels the need to ask, something has usually already gone wrong. This isn't only about a signed confidentiality clause (though that matters); it's about the operational defaults a freelancer follows automatically: how credentials move, whether production data ever touches a laptop, and what happens to access when the project ends.
 

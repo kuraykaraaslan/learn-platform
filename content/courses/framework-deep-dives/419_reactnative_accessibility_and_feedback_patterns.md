@@ -1,8 +1,5 @@
 # 419. React Native: Accessibility and Feedback Patterns
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Code_Structure_Rules_ReactNative material to build out the Framework Deep Dives course; no existing coverage data for your own practice.
-
 ## What It Is
 React Native has no DOM, so every ARIA-equivalent is a props-based API instead of an HTML attribute: `accessibilityRole` replaces `role`, `accessibilityLabel` replaces an sr-only span, `accessibilityState` replaces `aria-*` state attributes, and `AccessibilityInfo.announceForAccessibility()` replaces `aria-live`. The mapping is not perfectly 1:1 — `accessibilityRole` has no direct equivalent for `role="dialog"`, for instance, because React Native's `Modal` component already handles focus trapping natively on both VoiceOver and TalkBack. The rule when a mapping doesn't exist cleanly: omit the prop rather than force an approximate one, since an incorrect role is worse than no role. Every custom `View` or `Image` standing in for a button needs `accessible={true}` to become a single focusable unit for screen readers, and every icon-only interactive element needs an explicit `accessibilityLabel` — without it, VoiceOver reads nothing meaningful and the control is effectively invisible to a screen-reader user.
 

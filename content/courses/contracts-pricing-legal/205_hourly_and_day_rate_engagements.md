@@ -1,8 +1,5 @@
 # 205. Hourly and Day-Rate Engagements
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Proposal_and_Pricing Rules (hourly-and-day-rate.md) material to build out the Proposals, Contracts & Pricing course; no existing coverage data for your own practice.
-
 ## What It Is
 Hourly and day-rate billing get a bad reputation in pricing-strategy circles, but they are the correct tool for a specific, common category of work: debugging an unfamiliar codebase, providing ongoing technical advisory, rescuing a stalled project, or covering agency overflow where the exact task list can't be known in advance. The mistake isn't using time-based billing — it's using it without any of the structure that keeps it from becoming an unbounded, low-trust arrangement for both sides.
 

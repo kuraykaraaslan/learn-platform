@@ -1,8 +1,5 @@
 # 154. Token Budget and Cost Engineering
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Integration_Rules/token-budget-and-cost.md material; no existing coverage data for your own practice.
-
 ## What It Is
 AI API cost scales linearly with token volume, which makes it one of the few parts of a modern application where a single unreviewed design decision — an oversized system prompt, an uncapped `max_tokens`, sending a full document instead of a retrieved excerpt — turns directly into a recurring line item on the company's bill. The engineering discipline is treating token budget as a real constraint to design against, the same way you'd design against a database query budget or a bandwidth cap, rather than discovering the cost after the fact from a billing alert.
 

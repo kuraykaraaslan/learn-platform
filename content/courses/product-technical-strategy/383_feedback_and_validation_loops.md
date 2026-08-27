@@ -1,8 +1,5 @@
 # 383. Feedback and Validation Loops — Testing Assumptions Before and After Launch
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Product_Strategy_Rules material (specifically `feedback-and-validation.md`) to build out the Product & Technical Strategy course; no existing coverage data for your own practice.
-
 ## What It Is
 Every product plan carries assumptions, and feedback and validation loops are the discipline of testing them on purpose instead of discovering they were wrong after the money and the timeline are already spent. Validation is not a single "user testing" phase that happens once before launch — it runs continuously, from a stakeholder interview before a line of code exists, through a clickable-mockup test or a manual concierge test during MVP scoping, to a pilot rollout, and on into analytics review and support-ticket analysis months after the thing is live. Each method answers a different question at a different cost, and picking the cheapest method that can actually kill a bad assumption is the point — you don't need a pilot to learn that nobody understands your onboarding copy.
 

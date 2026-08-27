@@ -1,8 +1,5 @@
 # 4. Circuit Breaker, Bulkhead, Retry
 
-## Coverage Level
-**Not Covered** — External service calls (payment providers, email, OAuth) are made with direct `await fetch` or SDK calls; there is no fault tolerance layer, no retry with backoff, and no circuit breaking if a provider goes down.
-
 ## What It Is
 These three patterns form the core of resilience engineering for services that call external dependencies. Without them, a slow or failing external API can take down your entire application through timeout pile-up and resource exhaustion.
 

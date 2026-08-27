@@ -1,8 +1,5 @@
 # 69. Tail Call Optimization, Memoization, Lazy Evaluation
 
-## Coverage Level
-**Not Covered** — These are foundational functional programming performance techniques. None appear in the codebase, and the recursive patterns that would benefit from them are currently absent.
-
 ## What It Is
 These three techniques address three different performance and correctness problems that arise as your code grows in sophistication.
 

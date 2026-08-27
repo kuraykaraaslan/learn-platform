@@ -1,8 +1,5 @@
 # 352. Ethical Growth: What Not to Do
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Business_Growth/Sales_Growth/Finance_and_Operations/Analytics_and_Growth_Experiments/Business_Continuity/Offer_Library material to build out the Business Growth & Finance course; no existing coverage data for your own practice.
-
 ## What It Is
 Growth tactics for a freelance or solo software business should increase trust, not manipulate people — and this isn't just a values statement, it's a practical constraint, because a reputation-dependent business that gets caught using deceptive growth tactics loses far more than any single tactic could have gained. The standard every growth tactic must meet is: truthful, permission-aware, privacy-conscious, non-deceptive, respectful of boundaries, and aligned with real capabilities. Clear positioning, useful technical content, honest case studies, permission-based testimonials, respectful outbound, transparent calls-to-action, reasonable follow-up, and privacy-conscious analytics are all allowed and encouraged — none of them require manipulation to work.
 

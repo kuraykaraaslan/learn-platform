@@ -1,8 +1,5 @@
 # 198. Technical Feasibility, Paid Discovery & Objection Handling
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Every technical unknown left unresolved at proposal time becomes someone's problem during delivery, and it's never the client's. A feasibility check exists to sort each unknown honestly into one of six buckets — known and simple, known but complex, unknown but researchable, unknown requiring paid discovery, external dependency, or not recommended — across ten recurring risk areas: the existing system, data migration, integrations, auth, payments, hosting, performance, security, compliance, and ongoing maintenance. The single rule that prevents the most damage is refusing to treat a claimed integration as easy just because the client says "they have an API" — an API existing says nothing about its documentation quality, its authentication method, its rate limits, whether a sandbox exists, or whether the provider even responds to support requests, and any of those being unverified means the integration goes into the proposal as an assumption, not a commitment. The same discipline applies harder to an existing codebase: a client asking for changes to something already built can't be scoped from a description alone, because "existing-system work often depends more on code quality than feature size" — the repository, the deployment setup, the schema, and the open issue list all have to actually be reviewed before timeline or scope gets committed to.
 

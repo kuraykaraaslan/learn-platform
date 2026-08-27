@@ -1,8 +1,5 @@
 # 287. Content Briefs, Page Templates and Blog SEO
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (content-briefs-and-page-templates.md, blog-seo-checklist.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 A content brief is the document written before drafting starts, and its entire purpose is preventing unfocused writing — the single most common way SEO content fails is a writer sitting down without a clear page goal, audience, intent, or outline and producing something generic that happens to be about the right topic. A complete brief specifies the business goal, target audience, primary intent, primary query/topic, secondary questions, page type, unique angle, outline, proof/examples available, internal links in and out, schema recommendation, CTA, and success metric — enough that a writer (or an AI assistant) can produce a focused, on-strategy page without guessing any of those decisions mid-draft.
 

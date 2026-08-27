@@ -1,8 +1,5 @@
 # 18. Query Plan Analysis — EXPLAIN ANALYZE
 
-## Coverage Level
-**Not Covered** — There is no query performance analysis tooling, no slow query logging configuration, and no documented process for investigating slow endpoints. When a query is slow, the current debugging approach is likely guesswork.
-
 ## What It Is
 `EXPLAIN ANALYZE` is PostgreSQL's execution plan tool. It shows you exactly how PostgreSQL intends to execute a query (the plan) and, after running it, what actually happened (actual timing, row counts, loops). It's the primary tool for understanding why a query is slow and what to do about it. Every backend developer who uses PostgreSQL should be comfortable reading a basic query plan.
 

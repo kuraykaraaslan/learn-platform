@@ -1,8 +1,5 @@
 # 163. MCP Server Auth, Errors, and Idempotency
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' MCP_Server_Design_Rules/auth-and-token-patterns.md and error-envelope-and-idempotency.md material; no existing coverage data for your own practice.
-
 ## What It Is
 An MCP server sits between an AI client and real systems of record, which means every design shortcut that would be merely sloppy in an internal service becomes a direct security or reliability exposure here — the client calling your tools is a model, and a model cannot exercise judgment about a token it was never supposed to see. Auth validation belongs entirely in middleware, checked once per request, never re-implemented inside individual tool handlers; scattering `if (!isValidToken(...))` checks across handlers is both repetitive and the kind of thing that gets missed on the one handler added under deadline pressure. Tokens travel exclusively as a Bearer value in the `Authorization` header — never as a query parameter (which lands in server logs and browser history), never as a request body field (which conflates auth with business payload), and never returned in a tool's response, because tools return data, not credentials. Storage follows the same discipline as any other secret: environment variables or a secrets manager, never a plaintext database column, never client-side code, and never a log line, under any circumstances, including a debug build.
 

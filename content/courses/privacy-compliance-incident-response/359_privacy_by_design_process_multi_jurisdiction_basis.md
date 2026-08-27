@@ -1,8 +1,5 @@
 # 359. Privacy by Design — Process, Artifacts & Multi-Jurisdiction Legal Basis
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Security_and_Compliance_Rules material to build out the Privacy, Compliance & Incident Response course; no existing coverage data for your own practice.
-
 ## What It Is
 Privacy by design is the practice of building purpose limitation, data minimization, safe defaults, and user-rights support into scope, data model, UX, and logging from the start — not bolting a privacy policy page onto the end of a project and calling it compliant. It rests on five concrete engineering habits: collect data only for a defined purpose (don't add a "company size" field because it might be useful someday); use the least sensitive data that solves the problem (a city instead of a full address, an age-confirmation checkbox instead of a birthdate); make the safest setting the default (marketing opt-in should never be silently pre-enabled); design so the system's own data flows can be explained on request (what is collected, why, where it's stored, who can access it, which vendors receive it, how long it's retained); and support user rights — access, deletion, correction, consent withdrawal — as first-class operations, not manual database surgery performed by an engineer when a support ticket arrives. This is a different, earlier-stage concern than an erasure pipeline: privacy by design shapes what gets built, an erasure pipeline handles what happens to data that already exists.
 

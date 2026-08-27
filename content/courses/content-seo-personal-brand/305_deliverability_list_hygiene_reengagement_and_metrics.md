@@ -1,8 +1,5 @@
 # 305. Deliverability, List Hygiene, Re-engagement & Metrics
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Newsletter_and_Email_Nurture_Rules material (deliverability-and-list-hygiene.md, reengagement-and-winback.md, metrics-and-optimization.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Even a well-written email fails if it never reaches the inbox, which is why domain reputation has to be treated as a protected business asset rather than a one-time setup checkbox. The technical baseline — SPF, DKIM, DMARC, a custom sending domain, a consistent sender identity, and a visible unsubscribe link — needs to be configured and verified before scaling send volume, not discovered as the explanation after deliverability quietly degrades. List hygiene runs on two clocks: monthly (remove hard bounces, suppress unsubscribes, review inactive subscribers, merge duplicates, check source quality) and quarterly (run a re-engagement campaign, suppress long-term inactive contacts, review the opt-in forms themselves, check for deliverability warnings). Sending cadence discipline matters just as much as the technical setup — disappearing for six months and then sending an aggressive campaign reads as spam to both recipients and inbox providers, while a predictable monthly-minimum cadence protects the sender's reputation over time.
 

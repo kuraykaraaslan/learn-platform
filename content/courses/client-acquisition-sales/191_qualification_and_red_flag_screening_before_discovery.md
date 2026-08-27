@@ -1,8 +1,5 @@
 # 191. Qualification & Red-Flag Screening Before Discovery
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Client_Acquisition/Cold_Search/Sales_and_Discovery/Brand_Positioning material to build out the Client Acquisition & Sales course; no existing coverage data for your own practice.
-
 ## What It Is
 Discovery calls are expensive, and the decision to book one deserves a real filter rather than a vibe check. The qualification model runs across six dimensions — need, authority, budget, timeline, fit, and risk — each rated strong, medium, weak, or unknown, and mapped to a concrete decision: book discovery, ask more first, offer a paid audit, nurture, or disqualify. The operational rule underneath it is specific and easy to apply consistently: a discovery call gets booked only when at least three of seven fields are already known — business problem, project type, must-have outcome, timeline, budget signal, decision maker, and current system. Fewer than three known means the next message is an intake request, not a calendar link, no matter how enthusiastic the prospect sounds.
 

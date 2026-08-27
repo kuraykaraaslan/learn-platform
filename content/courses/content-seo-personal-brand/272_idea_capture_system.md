@@ -1,8 +1,5 @@
 # 272. Idea Capture — Turning Daily Work Into a Content Backlog
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Content_Engine_Rules material (idea-capture-system.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 The single biggest reason technical people stop publishing isn't lack of skill — it's staring at a blank page waiting for "an idea" to arrive. Idea capture solves this by treating idea generation as a separate, lightweight, ongoing habit that happens *during* work rather than a dedicated brainstorming session that happens *before* writing. The insight is that a working developer's day already contains a dozen pieces of raw content: a client question that revealed a misconception, a bug that took two hours to track down, an architecture trade-off you talked yourself into or out of, a code review comment you had to explain twice.
 

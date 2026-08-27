@@ -1,8 +1,5 @@
 # 257. Client Training and Demo Sessions
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Documentation_and_Handover_Rules/training-and-demo-session.md material to build out the Client Delivery, PM & Handover course; no existing coverage data for your own practice.
-
 ## What It Is
 A demo or training session run without structure tends to drift into whatever the developer finds most interesting to show — usually the technically impressive parts — rather than what the client's team actually needs to walk away knowing. A structured session, by contrast, has a fixed agenda that moves from delivery summary through production access, roles, core workflows, admin responsibilities, known limitations, and finally support process and next steps, ending in acceptance. The session is where a delivery starts to feel complete to the client, and it's also the single highest-leverage hour for reducing every support ticket that follows, because a well-run training session answers the questions that would otherwise arrive one at a time over the following month.
 

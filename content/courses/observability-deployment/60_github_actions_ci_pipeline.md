@@ -1,8 +1,5 @@
 # 60. GitHub Actions CI Pipeline — Lint, Test, Build, Deploy Automation
 
-## Coverage Level
-**Not Covered** — No `.github/` directory exists in the project. Every deploy is currently manual, and there is no automated quality gate before merges.
-
 ## What It Is
 A CI (Continuous Integration) pipeline is an automated workflow that runs every time you push code: it lints for style issues, runs your test suite, builds the application, and optionally deploys it — all before anything reaches production. The value is not just automation; it is the forcing function that catches regressions immediately, when the fix is a one-line change, not three days later when you have no idea what introduced the bug.
 

@@ -51,4 +51,3 @@ manifest) that already exist, hand/AI-written, at `/home/kuray/internal-universi
   deviates from
 - `internal-ai-rules/UI_Interface_Rules_Next/appshell-compliance.md` —
   TopBar exceptions (LangSwitcher, UserMenu)
-- Plan: `~/.claude-avantleap/plans/bir-web-sitesinde-t-m-elegant-locket.md`

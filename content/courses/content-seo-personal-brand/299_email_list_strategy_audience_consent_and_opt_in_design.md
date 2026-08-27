@@ -1,8 +1,5 @@
 # 299. Email List Strategy — Audience, Consent & Opt-in Design
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' Newsletter_and_Email_Nurture_Rules material (audience-and-list-strategy.md, consent-and-compliance.md, opt-in-and-lead-magnet.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 An email list is only valuable if the people on it can become clients, refer clients, influence clients, or strengthen market authority — which means the first decision in building one has nothing to do with tools or forms. It's a positioning decision: who is this for, why would they subscribe, and what business relationship is it supposed to create? A list built for "everyone interested in tech" produces exactly the engagement its vagueness deserves. A list built with a specific promise — "notes on building production-ready web platforms, SaaS MVPs, admin panels, and maintainable full-stack systems" — filters itself toward people who can actually buy, refer, or collaborate. The categories worth targeting for a freelance software business are predictable: SME owners who can buy workflow and platform work, startup founders who can buy MVP work, agencies who can become delivery partners, product managers who can influence projects internally, technical peers who can refer, past clients who can buy again, and warm leads who may buy later. Everyone else on the list is dead weight that dilutes engagement metrics and makes segmentation harder.
 

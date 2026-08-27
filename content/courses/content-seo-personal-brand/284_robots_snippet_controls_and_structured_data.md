@@ -1,8 +1,5 @@
 # 284. Robots, Snippet Controls and Structured Data
 
-## Coverage Level
-**Not assessed** — this concept was added from internal-ai-rules' SEO_and_AEO_Rules material (robots-snippet-controls.md, schema-and-structured-data.md) to build out the Content, SEO & Personal Brand course; no existing coverage data for your own practice.
-
 ## What It Is
 Robots and snippet controls and structured data are both "instruction layers" that sit on top of a page's content and tell search and AI systems how to treat it — one restricts or permits access and presentation, the other adds machine-readable meaning. They're easy to confuse but serve opposite functions: robots controls narrow what's shown or crawled, while structured data clarifies and enriches what's already visible.
 

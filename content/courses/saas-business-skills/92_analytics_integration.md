@@ -1,8 +1,5 @@
 # 92. Analytics Integration — Event Design, Funnel Analysis
 
-## Coverage Level
-**Not Covered** — You have no analytics instrumentation visible in the codebase. Without it, you are flying blind: you do not know which features users actually use, where they drop off, which acquisition source converts best, or what behavior precedes churn.
-
 ## What It Is
 Product analytics is the practice of tracking user behavior in your application — what actions they take, in what sequence, with what frequency — so you can make decisions about what to build, what to fix, and what to remove. It is distinct from infrastructure monitoring (which tracks error rates and latency) and business metrics (which track revenue). Analytics answers the question "what are users actually doing?" which often differs significantly from what you and your clients assume they are doing.
 

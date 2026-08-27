@@ -1,8 +1,5 @@
 # 164. Multi-Agent Orchestration and Workflow Chaining
 
-## Coverage Level
-**Not assessed** — this concept was added to expand the AI & LLM Engineering course from internal-ai-rules' AI_Agent_Workflows/ai-agent-workflows-master.md material; no existing coverage data for your own practice.
-
 ## What It Is
 A single agentic loop — one model, one system prompt, looping over tool calls until it produces a final answer — is a fundamentally different shape from multi-agent orchestration, where several distinct agents, each with its own narrow scope, its own system prompt, and often its own model tier, are chained together to complete a larger process. The distinction matters because the failure modes are different: a single agent's loop can get stuck or misuse a tool, but a chain of agents can additionally suffer from a bad handoff, where one agent's output doesn't actually give the next agent what it needs, or two agents disagree about what state the artifact is in. Treat the boundary between agents as an explicit contract — the complete, validated output of stage N is the entire input to stage N+1 — rather than a shared mutable context both stages read and write, which is exactly the kind of implicit coupling that makes a chain unpredictable as it grows.
 

@@ -1,8 +1,5 @@
 # 23. React Server Components — When Client vs Server
 
-## Coverage Level
-**Covered** — You actively use Next.js App Router with RSC. This entry goes beyond the basics: when to choose client vs server at the component level, streaming patterns for progressive loading, and the performance and bundle-size implications of client component placement.
-
 ## What It Is
 React Server Components (RSC) represent a fundamental change in where React renders. Server Components run exclusively on the server — they can access databases, read environment variables, and import heavy server-only libraries — but they produce no client-side JavaScript bundle. They can't use `useState`, `useEffect`, browser APIs, or event handlers. Client Components run on the server (for the initial render, like classic SSR) and then hydrate and run on the client — they have access to browser APIs and React hooks but add to the client bundle.
 

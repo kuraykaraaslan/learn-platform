@@ -1,8 +1,5 @@
 # 11. Read Replica Routing in Prisma/TypeORM
 
-## Coverage Level
-**Not Covered** — Your boilerplate has a system database and tenant databases (a solid architectural split), but no read replica configuration. All reads and writes go to the same primary instance. Under load, analytical queries and reporting reads will compete with write throughput on the primary.
-
 ## What It Is
 A read replica is a continuously synchronized copy of your database that accepts only `SELECT` queries. Writes go to the primary; the primary streams its write-ahead log (WAL) to replicas, which apply the changes asynchronously. The lag between a write on the primary and its visibility on the replica is called replication lag — typically milliseconds on the same cloud region, but potentially seconds under write-heavy load or cross-region replication.
 
