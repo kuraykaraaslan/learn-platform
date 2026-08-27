@@ -33,7 +33,7 @@ P12 arama + return queue  ← P1'in drill sonuçlarına dayanır
 | P3 | [03-concept-glossary.md](03-concept-glossary.md) | ~2 gün | tamamlandı — 125 terim |
 | P4 | [04-template-widgets.md](04-template-widgets.md) | ~3 gün | tamamlandı |
 | P5 | [05-ci-and-proof.md](05-ci-and-proof.md) | ~4 gün | tamamlandı, daraltılmış — 3 pilot ders, CI yeşil |
-| P6 | [06-quiz-tradeoff-diff.md](06-quiz-tradeoff-diff.md) | ~4 gün | bekliyor |
+| P6 | [06-quiz-tradeoff-diff.md](06-quiz-tradeoff-diff.md) | ~4 gün | tamamlandı, daraltılmış — 1 ders/mekanizma |
 | P7 | [07-mermaid.md](07-mermaid.md) | ~1 gün | tamamlandı — 7 diyagram |
 | P8 | [08-live-js-runner.md](08-live-js-runner.md) | ~4-5 gün | tamamlandı — 5 `run` fence |
 | P9 | [09-webcontainer.md](09-webcontainer.md) | ~5-6 gün | uygulandı, gerçek tarayıcıda doğrulanmadı (OAuth akışı) |
