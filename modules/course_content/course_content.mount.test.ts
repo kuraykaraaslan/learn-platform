@@ -1,5 +1,11 @@
 import { describe, expect, it } from 'vitest';
-import { extractMountFiles, buildFileSystemTree, buildPackageJson, buildProjectMount } from './course_content.mount';
+import {
+  extractMountFiles,
+  buildFileSystemTree,
+  buildPackageJson,
+  buildProjectMount,
+  defaultRunCommand,
+} from './course_content.mount';
 
 describe('extractMountFiles', () => {
   it('reads a single-file fence with no marker using the entry meta', () => {
@@ -81,6 +87,14 @@ describe('buildPackageJson', () => {
     expect(pkg.private).toBe(true);
   });
 
+  it('adds tsx as a devDependency for a .ts/.tsx entry, not for .js', () => {
+    const tsPkg = JSON.parse(buildPackageJson([{ path: 'server.ts', contents: '' }], 'server.ts'));
+    expect(tsPkg.devDependencies).toEqual({ tsx: 'latest' });
+
+    const jsPkg = JSON.parse(buildPackageJson([{ path: 'server.js', contents: '' }], 'server.js'));
+    expect(jsPkg.devDependencies).toBeUndefined();
+  });
+
   it('collapses a scoped package import to its two-segment name', () => {
     const pkg = JSON.parse(buildPackageJson([{ path: 'a.ts', contents: `import x from "@scope/pkg/sub";` }], 'a.ts'));
     expect(pkg.dependencies).toEqual({ '@scope/pkg': 'latest' });
@@ -107,5 +121,16 @@ describe('buildProjectMount', () => {
     const code = '// server.ts\nconst a = 1;';
     const { entry } = buildProjectMount(code, undefined);
     expect(entry).toBe('index.ts');
+  });
+});
+
+describe('defaultRunCommand', () => {
+  it('runs a .ts/.tsx entry through the tsx loader — node cannot parse TS syntax on its own', () => {
+    expect(defaultRunCommand('server.ts')).toBe('npx tsx server.ts');
+    expect(defaultRunCommand('app.tsx')).toBe('npx tsx app.tsx');
+  });
+
+  it('runs a plain .js entry directly with node', () => {
+    expect(defaultRunCommand('server.js')).toBe('node server.js');
   });
 });

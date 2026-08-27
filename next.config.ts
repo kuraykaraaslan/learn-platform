@@ -13,15 +13,11 @@ const nextConfig: NextConfig = {
   // unaffected regardless of what a full site-wide check would have found.
   // Revisit once someone has actually done that walk.
   async headers() {
-    return [
-      {
-        source: '/courses/:courseSlug/:lessonSlug',
-        headers: [
-          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
-          { key: 'Cross-Origin-Embedder-Policy', value: 'require-corp' },
-        ],
-      },
+    const coopCoep = [
+      { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
+      { key: 'Cross-Origin-Embedder-Policy', value: 'require-corp' },
     ];
+    return [{ source: '/courses/:courseSlug/:lessonSlug', headers: coopCoep }];
   },
 };
 

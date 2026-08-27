@@ -75,14 +75,33 @@ function importedPackageNames(files: MountFile[]): string[] {
   return [...names].sort();
 }
 
+function isTypeScriptEntry(entry: string): boolean {
+  return entry.endsWith('.ts') || entry.endsWith('.tsx');
+}
+
+/**
+ * Node cannot parse TypeScript syntax on its own — `node server.ts` fails on
+ * the first type annotation. Since this corpus's own style leans on real TS
+ * (interfaces, annotations — verified across every fence read while building
+ * this), a `.ts`/`.tsx` entry runs through `tsx` (the npm package: a thin,
+ * fast TS-aware Node loader, not to be confused with the .tsx file
+ * extension) instead of bare `node`. A `.js` entry runs directly.
+ */
+export function defaultRunCommand(entry: string): string {
+  return isTypeScriptEntry(entry) ? `npx tsx ${entry}` : `node ${entry}`;
+}
+
 /**
  * A package.json with every imported package as a dependency, version
  * "latest" — this is the one place this file has to guess: the fence shows
  * what a snippet imports, never which version. WebContainer's own
  * `npm install` resolves whatever "latest" turns out to mean at run time.
+ * `tsx` itself is added as a devDependency for a TypeScript entry, so the
+ * default run command above actually has something to invoke.
  */
 export function buildPackageJson(files: MountFile[], entry: string): string {
   const dependencies = Object.fromEntries(importedPackageNames(files).map((name) => [name, 'latest']));
+  const devDependencies = isTypeScriptEntry(entry) ? { tsx: 'latest' } : undefined;
   return JSON.stringify(
     {
       name: 'lesson-project',
@@ -91,6 +110,7 @@ export function buildPackageJson(files: MountFile[], entry: string): string {
       type: 'module',
       main: entry,
       dependencies,
+      ...(devDependencies ? { devDependencies } : {}),
     },
     null,
     2
