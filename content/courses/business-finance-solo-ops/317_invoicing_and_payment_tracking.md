@@ -57,5 +57,5 @@ If it reaches day +14 with no resolution, the pre-agreed consequence fires autom
 - Bundling several unrelated milestones or projects into one invoice, which makes partial payments and disputes impossible to track cleanly.
 
 ## Further Reading
-- Stripe's guide to invoicing and payment terms for freelancers and small businesses (stripe.com/resources) — practical, vendor-neutral coverage of milestone billing and payment terms.
+- [Stripe Invoicing documentation](https://docs.stripe.com/invoicing) — payment terms, reminders and reconciliation as an actual product implements them
 - *Company of One* — Paul Jarvis: makes the case for tight, boring, repeatable financial administration as a competitive advantage for solo businesses, not a chore to minimize.

@@ -357,7 +357,15 @@ export const RULES: Rule[] = [
       const out: Finding[] = [];
       for (const { line, index, inFence } of walkLines(file.lines)) {
         if (inFence) continue;
-        const masked = line.replace(linked, (m) => ' '.repeat(m.length));
+        // Mask both what the pipeline links AND the counter-noun forms it
+        // deliberately does not: "rule #1" is correctly plain text, so
+        // reporting it as an unlinked reference is the rule's own bug.
+        const masked = line
+          .replace(linked, (m) => ' '.repeat(m.length))
+          .replace(
+            /\b(?:rule|issue|step|item|no|num|number|pr|ticket|bug|chapter|figure|part|point|phase|option|version|week|day)\.?\s+#\d{1,3}\b/gi,
+            (m) => ' '.repeat(m.length)
+          );
         for (const match of masked.matchAll(/#(\d{1,3})\b/g)) {
           const id = Number(match[1]);
           if (!ids.has(id)) continue;

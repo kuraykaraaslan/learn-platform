@@ -2,53 +2,15 @@
   "generatedFrom": "scripts/content-lint",
   "lessons": 412,
   "totals": {
-    "findings": 21,
+    "findings": 14,
     "errors": 0,
-    "warnings": 21,
-    "waived": 4
+    "warnings": 14,
+    "waived": 5
   },
   "byRule": {
-    "sources/quota-signature": 14,
-    "sources/bare-domain": 6,
-    "links/unlinked-lesson-ref": 1
+    "sources/quota-signature": 14
   },
   "findings": [
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "business-finance-solo-ops/317_invoicing_and_payment_tracking.md",
-      "message": "bare domain renders as text, not a link: - Stripe's guide to invoicing and payment terms for freelancers and small businesses (stri"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "database-caching-performance/21_cdn_cache_strategy.md",
-      "message": "bare domain renders as text, not a link: - **\"A Comprehensive Guide to HTTP Caching\" by Jake Archibald (web.dev/http-cache)** — Cle"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "frontend-performance-scaling/22_http2_multiplexing.md",
-      "message": "bare domain renders as text, not a link: - **\"HTTP/3 explained\" (http3-explained.haxx.se)** — Free online book by Daniel Stenberg ("
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "frontend-performance-scaling/138_frontend_state_management.md",
-      "message": "bare domain renders as text, not a link: - TkDodo (React Query maintainer) — \"Practical React Query\" blog series (tkdodo.eu/blog)"
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "process-soft-skills/85_technical_blog_conference_talk.md",
-      "message": "bare domain renders as text, not a link: - **\"Technical Writing for Developers\" — Josh Comeau (joshwcomeau.com/blog/how-i-write)** "
-    },
-    {
-      "rule": "sources/bare-domain",
-      "severity": "warn",
-      "target": "saas-business-skills/86_saas_metrics.md",
-      "message": "bare domain renders as text, not a link: - **\"The SaaS CFO\" — Ben Murray (thesaascfo.com)** — Practical financial modeling for SaaS"
-    },
     {
       "rule": "sources/quota-signature",
       "severity": "warn",
@@ -132,13 +94,6 @@
       "severity": "warn",
       "target": "security",
       "message": "all 13 lessons have exactly 3 Further Reading bullets (zero variance)"
-    },
-    {
-      "rule": "links/unlinked-lesson-ref",
-      "severity": "warn",
-      "target": "ai-llm-engineering/146_when_to_add_ai.md",
-      "line": 59,
-      "message": "\"#1\" matches a lesson but has no cue, so it renders as plain text: - Google's \"Rules of Machine Learning\" (Martin Zinkevich) — rule #1 is \"don't be"
     }
   ]
 }

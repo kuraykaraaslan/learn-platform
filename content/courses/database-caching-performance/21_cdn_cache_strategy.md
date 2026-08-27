@@ -121,5 +121,5 @@ function addTenantCacheHeaders(response: NextResponse, tenantId: string): NextRe
 
 ## Further Reading
 - **MDN Web Docs — "HTTP Caching"** — The definitive reference for `Cache-Control` directives; covers `stale-while-revalidate`, `stale-if-error`, and `Vary` with clear examples
-- **"A Comprehensive Guide to HTTP Caching" by Jake Archibald (web.dev/http-cache)** — Clear, visual, and correct; explains the difference between `no-cache` and `no-store`, and when to use each directive
+- [Caching best practices — Jake Archibald](https://jakearchibald.com/2016/caching-best-practices/) — the clearest treatment of immutable vs. revalidated assets and why the pattern matters
 - **Next.js documentation — "Caching"** — Covers the four caching layers in Next.js 14+ (Request Memoization, Data Cache, Full Route Cache, Router Cache); essential reading for RSC-based apps

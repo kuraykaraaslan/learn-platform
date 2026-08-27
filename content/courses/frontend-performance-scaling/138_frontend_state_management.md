@@ -51,6 +51,6 @@ function useStatusFilter() {
 - Putting filter/pagination state in component state instead of the URL, so a refresh or shared link loses it
 
 ## Further Reading
-- TkDodo (React Query maintainer) — "Practical React Query" blog series (tkdodo.eu/blog)
+- [Practical React Query — TkDodo](https://tkdodo.eu/blog/practical-react-query) — from a React Query maintainer; the series on defaults and query keys is the useful part
 - Kent C. Dodds — "State Colocation will make your React app faster"
 - [TanStack Query](https://tanstack.com/query/latest) and [Zustand](https://zustand.docs.pmnd.rs/) — server state and client state, kept deliberately separate

@@ -118,6 +118,6 @@ Questions to find publishable insights in work you have already done:
 - **No call to action**: A post that ends without telling the reader what to do next is a dead end; even "let me know if this helped" or "here's the GitHub repo" creates engagement
 
 ## Further Reading
-- **"Technical Writing for Developers" — Josh Comeau (joshwcomeau.com/blog/how-i-write)** — Specific to developer content; covers how to structure explanations for technical readers who skim
+- [Josh Comeau](https://www.joshwcomeau.com/) — his posts on writing and on interactive explanation are the model worth studying, more than any guide about writing
 - **"The Presentation Secrets of Steve Jobs" — Carmine Gallo** — Despite the title, applicable to any technical talk; covers narrative structure, the opening hook, and how to make technical content memorable
 - **"Show Your Work!" — Austin Kleon** — Short, motivating book about the value of publishing work-in-progress; directly addresses the "I'm not expert enough to publish" mental block
