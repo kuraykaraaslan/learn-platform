@@ -31,8 +31,3 @@ jobs:
       # slipped past content:lint's offline self-consistency check, and a
       # behavior change (a tool's real output changed) that needs a re-stamp.
       - run: npx tsx scripts/stamp-verify.ts --check
-      - name: DEBUG dump fresh 123 output
-        if: always()
-        run: |
-          git --version
-          bash content/_verify/fundamentals-tools/123/run.sh

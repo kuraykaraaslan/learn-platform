@@ -40,10 +40,20 @@ echo "// clarify intent, updated
 module.exports = function add(a, b) { return a + b + 1; };" > add.js
 git add -A && commit 5 "docs: update comments"
 
-git bisect start
-git bisect bad HEAD
-git bisect good v1.4.0
-git bisect run node check.js
-git bisect reset
+# Piped through sed to strip a git-version-dependent quoting difference:
+# git added single quotes around "good"/"bad" in bisect's own status/report
+# lines at some point between 2.51 and 2.55 ("waiting for good and bad
+# commits" vs "waiting for 'good' and 'bad' commits") — confirmed by
+# diffing output from both versions directly, not guessed. Normalizing here
+# means this proof block stays byte-stable across whatever git version
+# ubuntu-latest ships next, instead of breaking again on the next runner
+# image bump.
+{
+  git bisect start
+  git bisect bad HEAD
+  git bisect good v1.4.0
+  git bisect run node check.js
+  git bisect reset
+} 2>&1 | sed -E "s/'(good|bad)'/\1/g"
 
 rm -rf "$WORK"
