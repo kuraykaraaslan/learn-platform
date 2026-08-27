@@ -17,7 +17,7 @@ The retrospective is the internal half of closure, and it's the part that turns 
 - **Never leave support unbounded at closure**: a project that closes without a stated warranty period or support boundary quietly becomes free indefinite support by default
 
 ## Example Code
-```md
+```template
 ## Project Closure Checklist — Order Management Admin Panel
 
 ### Delivery

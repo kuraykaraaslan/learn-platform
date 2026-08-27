@@ -18,7 +18,7 @@ The through-line across every angle and framework is specificity. A generic angl
 - **Story detail without exposure**: use specific but safe scenario details ("a project with three user roles," "a legacy spreadsheet process") rather than confidential client specifics — specificity doesn't require identifiability.
 
 ## Example Code
-```md
+```template
 ## Angle + Framework Brief
 
 **Raw idea:** Clients keep asking for a price before the workflow is defined.

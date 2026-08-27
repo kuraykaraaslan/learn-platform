@@ -21,7 +21,7 @@ When a page mysteriously isn't showing up in search, the debugging path is alway
 - **Migration discipline**: before any URL change, prepare an old-URL export, an old-to-new mapping, tested 301 redirects, updated internal links, an updated sitemap, and post-launch Search Console monitoring.
 
 ## Example Code
-```md
+```template
 ## Technical SEO Pre-Launch Checklist
 
 **URL structure examples**

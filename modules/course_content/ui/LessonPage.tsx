@@ -27,12 +27,12 @@ export function LessonPage({ lesson, courseTitle }: { lesson: Lesson; courseTitl
       </div>
 
       <ConceptTooltipProvider concepts={lesson.concepts} className="space-y-4">
-        <LessonSectionCard title="What It Is" blocks={lesson.blocks.whatItIs} />
-        <LessonSectionCard title="Key Concepts" blocks={lesson.blocks.keyConcepts} />
-        <LessonSectionCard title="Example Code" blocks={lesson.blocks.exampleCode} />
-        <LessonSectionCard title="When to Use" blocks={lesson.blocks.whenToUse} />
+        <LessonSectionCard title="What It Is" blocks={lesson.blocks.whatItIs} courseSlug={lesson.courseSlug} lessonFile={lesson.file} />
+        <LessonSectionCard title="Key Concepts" blocks={lesson.blocks.keyConcepts} courseSlug={lesson.courseSlug} lessonFile={lesson.file} />
+        <LessonSectionCard title="Example Code" blocks={lesson.blocks.exampleCode} courseSlug={lesson.courseSlug} lessonFile={lesson.file} />
+        <LessonSectionCard title="When to Use" blocks={lesson.blocks.whenToUse} courseSlug={lesson.courseSlug} lessonFile={lesson.file} />
         <FailureDrillCard lesson={lesson} blocks={lesson.blocks.commonMistakes} />
-        <LessonSectionCard title="Further Reading" blocks={lesson.blocks.furtherReading} />
+        <LessonSectionCard title="Further Reading" blocks={lesson.blocks.furtherReading} courseSlug={lesson.courseSlug} lessonFile={lesson.file} />
       </ConceptTooltipProvider>
     </div>
   );

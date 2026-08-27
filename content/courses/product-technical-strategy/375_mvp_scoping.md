@@ -17,7 +17,7 @@ A frequently missed piece is the quality floor: an MVP is smaller, not careless.
 - **Excitement is not a scoping criterion**: the mechanism for inclusion is "does the core job break without this," not "is this exciting to build or to demo"
 
 ## Example Code
-```markdown
+```template
 ## MVP Definition — Crew Scheduler
 
 **MVP goal:** Prove that a single shared schedule view eliminates double-booking incidents,

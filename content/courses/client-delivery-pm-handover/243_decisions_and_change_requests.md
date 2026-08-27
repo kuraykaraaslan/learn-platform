@@ -17,7 +17,7 @@ The two also interact: approving a change request is itself a decision, and it s
 - **Decisions that must always be logged**: MVP scope cuts, feature deferrals, architecture and integration choices, role/permission models, and production launch approval — these are the ones that cause real damage if forgotten
 
 ## Example Code
-```md
+```template
 # Decision DEC-004: Cancelled Orders Cannot Be Reopened
 
 **Date:** 2026-08-29
@@ -48,7 +48,7 @@ edge case to build and test).
 - Update transition UI spec to remove Cancelled → Active path
 ```
 
-```md
+```template
 # Change Request: Add Accounting-Format CSV Export
 
 **Requested by:** Elena Vance

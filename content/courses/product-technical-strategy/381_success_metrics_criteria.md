@@ -17,7 +17,7 @@ The three-part success criteria rule turns a metric into a real decision tool: m
 - **Metrics connect back to the problem statement** (lesson 372): a metric that doesn't map to the original pain being solved is measuring the wrong thing
 
 ## Example Code
-```markdown
+```template
 ## Success Metrics — Crew Scheduler Pilot
 
 **Primary product metric:** Double-booking incidents per week

@@ -21,7 +21,7 @@ The mental shift is from "I sell my time" to "I sell an outcome." The boilerplat
 
 **Productized Service: SaaS MVP in 8 Weeks**
 
-```markdown
+```template
 ## SaaS MVP — 8-Week Delivery
 
 **What you get:**

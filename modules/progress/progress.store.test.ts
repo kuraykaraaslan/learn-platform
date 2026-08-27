@@ -1,10 +1,15 @@
 import { describe, expect, it } from 'vitest';
-import { useProgressStore, partializeProgress, mistakeKey, lessonKey } from './progress.store';
+import { useProgressStore, partializeProgress, mistakeKey, lessonKey, widgetFieldKey } from './progress.store';
 
 describe('useProgressStore', () => {
-  it('persists exactly {mistake, expandAll} — adding a third field (e.g. "completed") must fail this test', () => {
+  it('persists exactly {mistake, expandAll, templateValues, checklistChecked} — adding a field like "completed" must fail this test', () => {
     const persisted = partializeProgress(useProgressStore.getState());
-    expect(Object.keys(persisted).sort()).toEqual(['expandAll', 'mistake']);
+    expect(Object.keys(persisted).sort()).toEqual([
+      'checklistChecked',
+      'expandAll',
+      'mistake',
+      'templateValues',
+    ]);
   });
 
   it('is named "learn:v1", version 1', () => {
@@ -44,5 +49,22 @@ describe('useProgressStore', () => {
     const key = lessonKey('security', '34_timing_attack.md');
     useProgressStore.getState().setExpandAll(key, true);
     expect(useProgressStore.getState().expandAll[key]).toBe(true);
+  });
+
+  it('widgetFieldKey composes courseSlug/lessonFile#blockId:fieldId', () => {
+    expect(widgetFieldKey('contracts-pricing-legal', '205_hourly.md', 'exampleCode-1', 'f0')).toBe(
+      'contracts-pricing-legal/205_hourly.md#exampleCode-1:f0'
+    );
+  });
+
+  it('setTemplateValue and setChecklistChecked write independent maps', () => {
+    const key = widgetFieldKey('contracts-pricing-legal', '205_hourly.md', 'exampleCode-1', 'f0');
+    useProgressStore.getState().setTemplateValue(key, '150');
+    expect(useProgressStore.getState().templateValues[key]).toBe('150');
+
+    useProgressStore.getState().setChecklistChecked(key, true);
+    expect(useProgressStore.getState().checklistChecked[key]).toBe(true);
+    // Setting one never touches the other.
+    expect(useProgressStore.getState().templateValues[key]).toBe('150');
   });
 });

@@ -17,7 +17,7 @@ Once building is justified, differentiation has to be structural, not cosmetic �
 - **Sequencing**: this gate runs before MVP scoping (lesson 375) — an MVP scoped against an unexamined "clone X" request inherits that request's shape by default
 
 ## Example Code
-```markdown
+```template
 ## Competitive Context — Crew Scheduler
 
 **Current alternatives:** ServiceTitan, Jobber, and a shared Google Sheet

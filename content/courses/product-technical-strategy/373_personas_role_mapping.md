@@ -17,7 +17,7 @@ Personas here are deliberately not the marketing kind. A persona in this framewo
 - **Risk if ignored**: naming what breaks if this role's needs are skipped turns an abstract "we should think about admins too" into a concrete, prioritizable risk
 
 ## Example Code
-```markdown
+```template
 ## User Role Map — Crew Scheduler
 
 | Role | Goal | Pain | Main actions | Success | Priority |

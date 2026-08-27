@@ -19,7 +19,7 @@ For a SaaS developer, semver and changelogs apply at multiple levels: your inter
 
 ## Example Code or Template
 
-```markdown
+```template
 # CHANGELOG.md — Keep a Changelog Format
 
 All notable changes to this project are documented in this file.

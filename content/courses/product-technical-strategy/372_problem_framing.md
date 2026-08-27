@@ -17,7 +17,7 @@ A problem statement is testable in a way a solution pitch never is. "We need a m
 - **Frequency vs severity**: a problem that happens rarely but is catastrophic (a compliance failure) needs different scoping than one that happens constantly but is mildly annoying (a slow click path)
 
 ## Example Code
-```markdown
+```template
 ## Problem Statement — Intake
 
 **Original request:** "We want a modern client portal, like the big agencies have."

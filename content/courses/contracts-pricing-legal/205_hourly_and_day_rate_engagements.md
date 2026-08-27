@@ -17,7 +17,7 @@ Hourly is a poor fit when the client wants a guaranteed outcome without a define
 - **Time tracking as non-optional**: hourly work without time tracking is unenforceable and indefensible if either side later disputes the invoice.
 
 ## Example Code
-```markdown
+```template
 ## Hourly / Day-Rate Agreement Summary
 
 **Rate:** $[X]/hour or $[Y]/day

@@ -19,7 +19,7 @@ Observability means deciding, at architecture time, how the system will be under
 - **Explicit boundary**: SLO/SLI target-setting, distributed tracing implementation, and CI/CD deployment mechanics are deeper technical skills covered elsewhere; this lesson is the upfront requirements-and-decision layer that determines what those systems need to satisfy
 
 ## Example Code
-```markdown
+```template
 ## Production Readiness Plan — Crew Scheduler
 
 ### NFR Table

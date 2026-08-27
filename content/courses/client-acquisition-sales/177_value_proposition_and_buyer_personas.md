@@ -22,7 +22,7 @@ A value proposition is only as strong as the proof attached to it. Every claim n
 
 **Buyer persona worksheet** (fill one per audience segment you target):
 
-```markdown
+```template
 ## Buyer Persona: <Name / role>
 
 **Situation:** What's true about their business right now?

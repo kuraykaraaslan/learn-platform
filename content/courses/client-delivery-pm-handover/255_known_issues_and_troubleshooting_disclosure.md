@@ -17,7 +17,7 @@ Troubleshooting documentation extends this same instinct forward to the client's
 - **Critical issues always need an owner and a plan, never just a label**: a severe unresolved issue documented as "known issue" with no owner or next step is a disclosure failure, not a disclosure success
 
 ## Example Code
-```md
+```template
 ## Issue: Large CSV Export Is Slow
 
 **Area:** Order export

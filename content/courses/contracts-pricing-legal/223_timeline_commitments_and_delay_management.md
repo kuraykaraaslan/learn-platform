@@ -15,7 +15,7 @@ Rush requests deserve their own explicit rule rather than a default of quietly w
 - **Rush work trade-offs**: acceleration requires scope reduction, fewer review cycles, separate rush pricing, or deferred features — not unpaid compression of the freelancer's own time.
 
 ## Example Code
-```markdown
+```template
 ## Timeline
 
 The project timeline begins after deposit payment, written SOW approval,

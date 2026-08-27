@@ -18,7 +18,7 @@ A useful default is a 6-email arc: the cost of unclear scope, how to map the fir
 - **One question per email**: every nurture email should answer "what does the reader need to understand before the next step feels natural?" — not try to close the deal on its own.
 
 ## Example Code
-```md
+```template
 ## Welcome Sequence (5-email version)
 
 Day 0:  Welcome + asset delivery. CTA: reply with the project type you're considering.

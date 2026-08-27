@@ -17,7 +17,7 @@ Sizing is the discipline that keeps stories usable for planning. "As an admin, I
 - **Out-of-scope belongs on the story too**: a story can name what it explicitly does not cover, preventing scope from silently expanding during implementation
 
 ## Example Code
-```markdown
+```template
 ## User Story: Create Ticket Type
 
 **Role:** Event organizer (admin)

@@ -44,7 +44,7 @@ multi-currency, multi-language, KVKK-compliant from day one."
 ```
 
 **ICP definition worksheet:**
-```markdown
+```template
 ## Ideal Client Profile
 
 **Industry:** [e.g., B2B SaaS, fintech, e-commerce]

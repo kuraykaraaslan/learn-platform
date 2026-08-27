@@ -19,7 +19,7 @@ This is general business education, not legal advice; nothing here should be rea
 - **Selection matrix logic**: match the model to the situation (vague idea → discovery; changing-scope SaaS MVP → phased fixed; emergency fix → hourly with a minimum), rather than to habit.
 
 ## Example Code
-```markdown
+```template
 ## Recommended Pricing Model — [Project Name]
 
 **Situation:** [one-line description of scope clarity and risk]

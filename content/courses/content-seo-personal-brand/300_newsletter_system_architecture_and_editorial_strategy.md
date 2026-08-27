@@ -20,7 +20,7 @@ Cadence discipline closes the loop between architecture and editorial calendar: 
 - **Newsletter is not a substitute for an offer**: a well-run newsletter builds recall and trust, but it cannot replace having a clear, sellable service someone can actually say yes to.
 
 ## Example Code
-```md
+```template
 ## Email System Map (Minimum Viable Version)
 
 1. Landing page opt-in section  → promises MVP Scope Checklist

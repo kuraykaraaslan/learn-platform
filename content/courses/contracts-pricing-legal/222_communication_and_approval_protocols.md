@@ -15,7 +15,7 @@ The silence rule is the most consequential piece of this protocol and the one mo
 - **Silence rule**: no feedback within the agreed review window may be treated as acceptance for scheduling and payment purposes — stated and agreed before the project starts, never introduced retroactively.
 
 ## Example Code
-```markdown
+```template
 ## Communication Protocol
 
 **Primary channel:** [Email thread / project tool] for all official

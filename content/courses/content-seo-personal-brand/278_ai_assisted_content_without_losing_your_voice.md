@@ -18,7 +18,7 @@ There's a firm line between acceptable and risky AI use here. Brainstorming angl
 - **Never publish raw output**: every AI-generated draft requires a human review pass for specificity, voice, accuracy, and honesty before it goes anywhere public — no exceptions for time pressure.
 
 ## Example Code
-```md
+```template
 ## AI Content Brief (fill in before prompting)
 
 **Audience:** SME owners considering internal software

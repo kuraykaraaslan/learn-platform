@@ -20,7 +20,7 @@ Put together, audience definition, consent, and opt-in design are really one sys
 - **The subscription-promise test**: a qualified reader should be able to say, unprompted, "this is directly related to a problem I have."
 
 ## Example Code
-```md
+```template
 ## List Definition
 
 **Target audience:** SME owners and startup founders planning custom software

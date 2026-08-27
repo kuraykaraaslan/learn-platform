@@ -18,7 +18,7 @@ Reusable snippets deserve special attention inside the library — short, pre-wr
 - **Monthly content-refresh pass**: identify posts worth reposting with a new angle, blog posts that need updating, and proof assets that should be linked into service pages — turning the archive into a living asset instead of a dead file.
 
 ## Example Code
-```md
+```template
 ## Monthly Content Review
 
 **Top post:** "Why admin panels fail when treated as CRUD only" — 4 DMs,

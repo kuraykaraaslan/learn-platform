@@ -17,7 +17,7 @@ The second half of this discipline is making the invisible parts of scope visibl
 - **Breakdown timing**: happens after scope is approved and before sprint/task execution — it is the bridge, not a formality tacked onto either end
 
 ## Example Code
-```md
+```template
 ## Work Breakdown
 
 ### Phase: Admin Core

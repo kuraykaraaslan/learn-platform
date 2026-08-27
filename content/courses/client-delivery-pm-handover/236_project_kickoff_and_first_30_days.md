@@ -17,7 +17,7 @@ The output of kickoff is a short written artifact — kickoff notes — that bot
 - **The kickoff note as the reference document**: a single artifact that both sides can point to later instead of relying on memory of a call
 
 ## Example Code
-```md
+```template
 # Project Kickoff Notes
 
 ## Project

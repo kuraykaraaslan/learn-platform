@@ -17,7 +17,7 @@ Feedback discipline is the other half, and it matters just as much once somethin
 - **Decision impact field**: an assumption record is incomplete without stating what changes if the validation fails — otherwise validation becomes a formality nobody acts on
 
 ## Example Code
-```markdown
+```template
 ## Validation Plan — Crew Scheduler
 
 **Assumption:** Dispatch coordinators will trust the automated conflict-detection

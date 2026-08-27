@@ -15,7 +15,7 @@ A handful of specific danger signs in a subcontractor's own proposed agreement a
 - **Red flags in a subcontractor's own agreement**: missing IP assignment, "license" instead of "assignment," invoice-only payment with no milestones, no acceptance process, and any claim to use the freelancer's client's name or brand.
 
 ## Example Code
-```markdown
+```template
 ## Contractor Agreement — Mandatory Clauses (illustrative)
 
 **Parties & Scope:** [Full legal names]. Subject: delivery of [specific

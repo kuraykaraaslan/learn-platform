@@ -17,7 +17,7 @@ Timing matters as much as evidence. The right moments are after a successful lau
 - **Support debt comes before new scope**: proposing an upsell while known bugs or unresolved support issues sit open undermines the pitch and the relationship
 
 ## Example Code
-```md
+```template
 # Next Phase Recommendations — Order Management Admin Panel
 **Prepared for:** Meridian Retail Group
 **Date:** 2026-11-14

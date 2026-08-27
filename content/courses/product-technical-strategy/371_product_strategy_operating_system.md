@@ -20,7 +20,7 @@ Three roles collapse into one person on a small team, but the roles themselves d
 - **Readiness gating**: if the upstream artifacts (problem, user, value proposition) don't exist yet, the correct action is to produce them, not to start estimating or building
 
 ## Example Code
-```markdown
+```template
 ## Product Strategy Handoff — Field Ops Scheduling Tool
 
 **Product name:** Crew Scheduler

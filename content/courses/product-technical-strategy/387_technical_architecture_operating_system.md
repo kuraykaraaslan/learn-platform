@@ -17,7 +17,7 @@ Readiness levels turn "is this ready to build" into a defensible answer instead 
 - **Decision rule**: when two options are both technically valid, prefer whichever is more understandable, testable, deployable, observable, and maintainable by the expected owner
 
 ## Example Code
-```markdown
+```template
 ## Architecture Review Result — Crew Scheduler MVP
 
 **Decision:** READY WITH ASSUMPTIONS

@@ -19,7 +19,7 @@ The formal change request process exists to prevent this without damaging the cl
 
 ## Example Code or Template
 
-```markdown
+```template
 # Change Request Form — CR-[NUMBER]
 
 **Project**: [Project Name]

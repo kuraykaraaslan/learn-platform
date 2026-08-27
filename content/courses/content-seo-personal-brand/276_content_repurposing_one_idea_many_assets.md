@@ -18,7 +18,7 @@ The rule that keeps repurposed content from feeling recycled is that each format
 - **Quality over completeness**: not every idea needs every format; forcing a thin idea through the full ladder produces weak, repetitive content rather than saving time.
 
 ## Example Code
-```md
+```template
 ## Repurposing Plan
 
 **Source:** Blog post — "How to Scope a SaaS MVP Before Development"

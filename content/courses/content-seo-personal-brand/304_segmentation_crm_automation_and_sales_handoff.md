@@ -18,7 +18,7 @@ Sales readiness is the signal that tells the system when someone needs to leave 
 - **Automation pause rule**: pause generic marketing sends the moment a contact enters active sales/discovery, unless the content specifically supports that process.
 
 ## Example Code
-```md
+```template
 ## Tag Taxonomy
 
 source:website | source:linkedin | source:lead-magnet | source:referral

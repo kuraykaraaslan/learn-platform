@@ -31,7 +31,7 @@ This skill can't be taught directly — it's built by deliberately tracing conse
 
 **The discipline: before shipping, fill this table:**
 
-```markdown
+```template
 ## Consequence Mapping — [Decision]
 
 **Decision:** [what we're doing]

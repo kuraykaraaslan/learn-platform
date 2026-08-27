@@ -18,7 +18,7 @@ The inverted pyramid structure applies to all three: most important information 
 
 ## Example / Template
 
-````markdown
+````template
 # Runbook: Auth Service — High Error Rate
 
 **Severity:** P2  

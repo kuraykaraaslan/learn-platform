@@ -48,7 +48,7 @@ describe('splitBlocks', () => {
     }
   });
 
-  it("gives every 'code' block a source equal to the fence listFences() extracted for that lesson", () => {
+  it("gives every 'code'/'widget' block a source equal to the fence listFences() extracted for that lesson", () => {
     const fencesByLesson = new Map<string, string[]>();
     for (const fence of listFences()) {
       const key = `${fence.courseSlug}/${fence.file}`;
@@ -62,8 +62,8 @@ describe('splitBlocks', () => {
       const expectedSources = fencesByLesson.get(key) ?? [];
       const { blocks } = parseLessonBlocks(raw);
       const actualSources = SECTION_KEYS.flatMap((k) => blocks[k])
-        .filter(isCodeBlock)
-        .map((b) => b.source);
+        .map((b) => (b.kind === 'code' ? b.source : b.kind === 'widget' ? b.widget.raw : null))
+        .filter((s): s is string => s !== null);
       expect({ [key]: actualSources }).toEqual({ [key]: expectedSources });
     }
   });
@@ -123,7 +123,12 @@ describe('margin regression guard (P0)', () => {
 
     const { blocks } = parseLessonBlocks(pilot.raw);
     const html = renderToStaticMarkup(
-      React.createElement(LessonSectionCard, { title: 'Example Code', blocks: blocks.exampleCode })
+      React.createElement(LessonSectionCard, {
+        title: 'Example Code',
+        blocks: blocks.exampleCode,
+        courseSlug: pilot.courseSlug,
+        lessonFile: pilot.file,
+      })
     );
 
     expect(html).toContain('aria-label="Copy code"');

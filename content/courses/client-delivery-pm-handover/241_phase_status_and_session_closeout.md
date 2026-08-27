@@ -17,7 +17,7 @@ The discipline also insists that a session which closed nothing say so plainly �
 - **Portable enforcement**: this rule belongs in the project's own checked-in agent instructions (e.g., CLAUDE.md), not only in per-machine agent memory, which silently resets across checkouts and machines
 
 ## Example Code
-```md
+```template
 ## Phase status — Order Management Admin Panel · 2026-08-26
 
 **Counter:** 4 done · 1 verification-owed · 2 in progress · 5 not started  (total 12)

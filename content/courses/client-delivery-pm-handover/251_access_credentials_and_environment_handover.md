@@ -35,7 +35,7 @@ Environment and configuration documentation is the technical half of this same p
 - [ ] 2FA enabled on client's GitHub org admin account (client action)
 ```
 
-```md
+```template
 ## Environment Variables — Order Management Admin Panel
 
 | Variable | Required | Environment | Description | Example |

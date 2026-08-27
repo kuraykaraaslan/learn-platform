@@ -16,7 +16,7 @@ The other half of this discipline is recognizing complexity signals that should 
 - **Unknowns as a category**: modules marked "unknown" are flagged for discovery or paid investigation, not silently priced as if fully understood.
 
 ## Example Code
-```markdown
+```template
 ## Scope-to-Price Map — [Project Name]
 
 | Module | Included? | Notes | Complexity signal |

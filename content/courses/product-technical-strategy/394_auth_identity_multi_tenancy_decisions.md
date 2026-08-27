@@ -18,7 +18,7 @@ Cross-jurisdiction tenancy raises the isolation bar independent of technical pre
 - **Explicit boundary**: RBAC/ABAC implementation details and JWT/session mechanics are covered in this curriculum's security material; this lesson is the upstream "do we need this, and at what isolation level" decision
 
 ## Example Code
-```markdown
+```template
 ## Identity & Tenancy Decision — Crew Scheduler
 
 ### Identity Model (Pilot)

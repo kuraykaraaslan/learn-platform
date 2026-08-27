@@ -17,7 +17,7 @@ Feedback also arrives scattered — a chat message here, a call there, a screens
 - **Feedback rounds are bounded**: define up front how many structured review rounds a milestone includes, so "just one more thing" has a visible edge
 
 ## Example Code
-```md
+```template
 ## Feedback Triage — Milestone 2 Review
 
 | Item | Category | Action | Owner | Status | Notes |

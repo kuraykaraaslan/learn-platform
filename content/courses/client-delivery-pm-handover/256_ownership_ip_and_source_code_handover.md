@@ -17,7 +17,7 @@ The repository ownership question and the final-payment linkage deserve explicit
 - **Never leave ownership vague or silently retain sole control**: a freelancer remaining the sole owner of a production repository with no agreement to that effect is a liability for both sides, not a convenience
 
 ## Example Code
-```md
+```template
 ## Source Code — Order Management Admin Panel
 
 **Repository URL:** github.com/meridianretail/order-admin

@@ -17,7 +17,7 @@ When a delay does happen — and on any project of real size, some delay eventua
 - **Client delays are not freelancer delays**: when the client is the source of a schedule slip, the timeline communication should say so factually, without blame, and without absorbing responsibility that isn't the developer's
 
 ## Example Code
-```md
+```template
 ## Timeline Estimate — Order Management Admin Panel, Milestone 2
 
 **Estimated range:** 2026-09-08 to 2026-09-12

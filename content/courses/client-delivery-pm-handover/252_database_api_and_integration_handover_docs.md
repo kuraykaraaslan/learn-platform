@@ -54,7 +54,7 @@ addresses. No payment card data is stored — payment status is a webhook
 reference only.
 ````
 
-```md
+```template
 ## Integration: Resend (Transactional Email)
 
 **Purpose:** Order confirmation and status-change notifications

@@ -15,7 +15,7 @@ Every deliverable also needs a feedback window — a stated number of business d
 - **Final acceptance bundle**: all scoped deliverables submitted, blocking bugs fixed, handover material received, and final invoice paid or scheduled, together, not any one of these alone.
 
 ## Example Code
-```markdown
+```template
 ### Deliverable: Admin Product Management
 
 **Purpose:** Let staff manage the product catalog without engineering support.

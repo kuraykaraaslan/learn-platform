@@ -18,7 +18,7 @@ For a multilingual site, canonical URLs should point to the same-language versio
 - **Multilingual canonical rule**: canonical should point to the same-language version, with hreflang connecting language variants — never default to a single "master" language.
 
 ## Example Code
-```md
+```template
 ## Metadata Plan
 
 **URL:** /services/saas-mvp-development

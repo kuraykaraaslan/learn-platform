@@ -18,7 +18,7 @@ None of this prioritization is possible without actually reading the data. Searc
 - **Data-driven decision rules**: high impressions/low CTR → fix title/meta; ranks-but-doesn't-convert → fix CTA/proof; not indexed → run the crawl/index debug sequence, not a content rewrite.
 
 ## Example Code
-```md
+```template
 ## Programmatic SEO Quality Gate
 
 Before indexing a generated page, confirm:

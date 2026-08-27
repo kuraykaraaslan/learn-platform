@@ -15,7 +15,7 @@ A severity framework helps prioritize which flags are non-negotiable and which a
 - **Decline-as-a-valid-outcome principle**: some opportunities should be turned down rather than accepted with unresolved critical risk, and recognizing that early costs far less than discovering it mid-project.
 
 ## Example Code
-```markdown
+```template
 ## Red Flag Response Scripts
 
 **No deposit:**

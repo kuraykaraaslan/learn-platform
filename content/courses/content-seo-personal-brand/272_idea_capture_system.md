@@ -20,7 +20,7 @@ Idea capture only works if it's genuinely lightweight. A complex tagging taxonom
 - **Don't filter at capture time**: capture everything that surfaces, even ideas that feel too small; filtering and prioritization happen later, during angle selection, not during capture.
 
 ## Example Code
-```md
+```template
 ## Content Idea
 
 **Raw idea:** Client asked why I couldn't quote a price from a two-sentence

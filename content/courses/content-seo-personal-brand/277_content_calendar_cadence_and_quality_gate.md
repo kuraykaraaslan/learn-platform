@@ -18,7 +18,7 @@ Before anything gets published, it should pass a five-gate quality check: strate
 - **Calendar fields that matter**: date, platform, pillar, audience, format, hook/title, status, CTA, repurposing source, and success signal — enough structure to review what's working without becoming an editorial bureaucracy.
 
 ## Example Code
-```md
+```template
 ## Weekly Content Calendar
 
 **Business goal:** Generate qualified inbound project inquiries

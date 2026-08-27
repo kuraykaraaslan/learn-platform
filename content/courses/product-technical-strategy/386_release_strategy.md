@@ -17,7 +17,7 @@ Rollout strategy is the mechanical choice that connects the release stage to rea
 - **Post-release review date**: a release strategy is incomplete without a scheduled date to review what actually happened against go-live criteria
 
 ## Example Code
-```markdown
+```template
 ## Release Strategy — Crew Scheduler Pilot
 
 **Release type:** Pilot

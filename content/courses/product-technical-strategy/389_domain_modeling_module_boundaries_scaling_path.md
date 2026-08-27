@@ -19,7 +19,7 @@ The staged scaling path turns this into a sequence instead of a one-time guess, 
 - **Explicit boundary**: this lesson covers the organizational/ownership decision of where boundaries live and when to split; the code-level implementation of DDD tactical patterns and the mechanics of extracting a running service are separate technical skills
 
 ## Example Code
-```markdown
+```template
 ## Domain & Module Plan — Crew Scheduler
 
 ### Domain Glossary

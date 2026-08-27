@@ -17,7 +17,7 @@ The single most-skipped section is Open Questions, and it's the one that separat
 - **A PRD is not a feature list**: it must include users, goals, non-goals, flows, edge cases, and metrics, or it isn't finished
 
 ## Example Code
-```markdown
+```template
 # Product Requirements Document: Crew Scheduler
 
 ## 1. Overview

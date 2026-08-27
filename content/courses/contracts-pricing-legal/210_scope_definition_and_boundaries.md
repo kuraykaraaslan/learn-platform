@@ -17,7 +17,7 @@ This lesson produces the raw material other contract documents depend on: the St
 - **Undefinable-scope rule**: anything too vague to estimate becomes an assumption, a paid discovery item, or a future phase — never silently absorbed into fixed scope.
 
 ## Example Code
-```markdown
+```template
 ## Included Scope
 
 ### Module: Order Management

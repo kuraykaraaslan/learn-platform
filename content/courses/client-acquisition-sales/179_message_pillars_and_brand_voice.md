@@ -22,7 +22,7 @@ Together, pillars and voice do the job that a content calendar app can't: they m
 
 **Message pillar worksheet:**
 
-```markdown
+```template
 ## Pillar: <Name — a belief, not a topic>
 
 **Core belief:**

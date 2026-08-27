@@ -17,7 +17,7 @@ Reproducibility deserves its own discipline because fixing what you can't actual
 - **Emergency stabilization has a fixed sequence**: acknowledge, stop risky deployments, check recent changes, check hosting/third-party status, roll back or mitigate if safer, communicate the next update, then fix root cause — in that order
 
 ## Example Code
-```md
+```template
 ## Issue Triage
 
 **Summary:** Multiple staff report order status changes silently failing

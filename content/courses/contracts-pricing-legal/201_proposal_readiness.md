@@ -19,7 +19,7 @@ This lesson is a discipline lesson, not a legal one — but the habits here dire
 - **Estimation boundary language**: having a prepared, calm way to say "not yet" without sounding evasive or unhelpful.
 
 ## Example Code
-```markdown
+```template
 ## Proposal Readiness Check — [Prospect Name]
 
 **Business problem:** known / unknown

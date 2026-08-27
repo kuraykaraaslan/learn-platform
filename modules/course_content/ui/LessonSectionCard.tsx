@@ -9,6 +9,15 @@
 import { cn } from '@/libs/utils/cn';
 import type { LessonBlock } from '../course_content.blocks';
 import { CodeBlock } from './CodeBlock';
+import { TemplateFormCard } from './widgets/TemplateFormCard';
+import { ChecklistCard } from './widgets/ChecklistCard';
+
+// Tried next/dynamic() here to keep this JS out of the ~324 lesson pages
+// with no widget block — measured worse (8.59 kB vs 7.22 kB gz) and, per
+// .next/static/chunks, produced no separate chunk at all: every one of the
+// 412 [courseSlug]/[lessonSlug] pages is statically generated from the same
+// route template, so the bundler had nothing per-param to split against. A
+// plain import is both simpler and smaller here.
 
 // Exported for course_content.blocks.test.ts's margin-regression guard.
 export const PROSE_CLASSES = cn(
@@ -44,7 +53,15 @@ export const PROSE_CLASSES = cn(
   'hover:[&_button.concept-term]:text-primary'
 );
 
-function BlockView({ block }: { block: LessonBlock }) {
+function BlockView({
+  block,
+  courseSlug,
+  lessonFile,
+}: {
+  block: LessonBlock;
+  courseSlug: string;
+  lessonFile: string;
+}) {
   switch (block.kind) {
     case 'html':
       // eslint-disable-next-line react/no-danger -- block.html is our own build-time markdown pipeline output, not user input
@@ -52,18 +69,30 @@ function BlockView({ block }: { block: LessonBlock }) {
     case 'code':
       return <CodeBlock block={block} />;
     case 'widget':
-      // No fence maps to 'widget' until P4 retags template fences.
-      return null;
+      switch (block.widget.type) {
+        case 'template':
+          return (
+            <TemplateFormCard widget={block.widget} blockId={block.id} courseSlug={courseSlug} lessonFile={lessonFile} />
+          );
+        case 'checklist':
+          return (
+            <ChecklistCard widget={block.widget} blockId={block.id} courseSlug={courseSlug} lessonFile={lessonFile} />
+          );
+      }
   }
 }
 
 export function LessonSectionCard({
   title,
   blocks,
+  courseSlug,
+  lessonFile,
   className,
 }: {
   title: string;
   blocks: LessonBlock[];
+  courseSlug: string;
+  lessonFile: string;
   className?: string;
 }) {
   if (blocks.length === 0) return null;
@@ -75,7 +104,7 @@ export function LessonSectionCard({
       </h2>
       <div className={PROSE_CLASSES}>
         {blocks.map((block) => (
-          <BlockView key={block.id} block={block} />
+          <BlockView key={block.id} block={block} courseSlug={courseSlug} lessonFile={lessonFile} />
         ))}
       </div>
     </section>

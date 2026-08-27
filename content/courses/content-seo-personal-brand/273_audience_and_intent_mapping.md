@@ -20,7 +20,7 @@ The forcing function that makes this concrete is writing a single sentence befor
 - **Peer content isn't wasted, but it isn't the goal**: developer-peer content builds reputation and referrals, but shouldn't dominate a calendar whose real objective is client acquisition.
 
 ## Example Code
-```md
+```template
 ## Audience Map
 
 **Idea:** Why role-based access is more than a UI dropdown

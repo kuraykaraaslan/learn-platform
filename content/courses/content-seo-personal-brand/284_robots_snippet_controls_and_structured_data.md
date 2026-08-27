@@ -18,7 +18,7 @@ Structured data (JSON-LD is the preferred format) adds explicit, machine-readabl
 - **No guaranteed schema-to-ranking or schema-to-citation link**: structured data improves understanding and rich-result eligibility, but never guarantees either rankings or AI citations.
 
 ## Example Code
-```md
+```template
 ## Robots Directive Decision Table
 
 | Page type              | robots.txt      | meta robots           |

@@ -250,6 +250,29 @@ export const RULES: Rule[] = [
         })),
   },
   {
+    id: 'code/prose-fence-should-be-template',
+    // Born `error`, not the usual `warn`: docs/phases/04-template-widgets.md
+    // measured 91 such fences and scripts/retag-template-fences.ts fixed all
+    // of them in the same change that introduced this rule, so there is no
+    // backlog to phase in against — the corpus is already clean of it.
+    severity: 'error',
+    description:
+      'A `md`/`markdown` fence with >=3 "**Label:**" lines is a fillable document template, not real markdown — rehype-highlight\'s markdown grammar turns the bold labels (and any table in the same fence) into unreadable monospace noise. Retag it `template` (see scripts/retag-template-fences.ts) so course_content.blocks.ts renders it as a TemplateFormCard widget instead.',
+    lesson: (file) => {
+      const LABEL = /^\s*\*\*([^*]{2,60}):?\*\*/;
+      return file.fences
+        .filter((f) => f.lang === 'md' || f.lang === 'markdown')
+        .filter((f) => f.code.split('\n').filter((l) => LABEL.test(l)).length >= 3)
+        .map((f) => ({
+          rule: 'code/prose-fence-should-be-template',
+          severity: 'error' as const,
+          target: file.target,
+          line: f.line,
+          message: `fence looks like a fillable template (>=3 bold-label lines) but is still tagged \`${f.lang}\``,
+        }));
+    },
+  },
+  {
     id: 'sources/unlinked-web-source',
     severity: 'warn',
     description:

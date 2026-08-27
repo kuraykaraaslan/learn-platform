@@ -19,7 +19,7 @@ Layered on top of the SOPs is a fixed admin calendar: weekly (receivables review
 ## Example Code
 A single SOP written in the standard format, ready to hand to future-you or a backup contact:
 
-```md
+```template
 ## SOP: Monthly Close
 
 **Purpose:** Turn the month's scattered invoices, payments, and expenses

@@ -95,7 +95,7 @@ Recommended starting point for your situation:
 
 ---
 
-```markdown
+```template
 # Extraction Worksheet — Worked Example
 
 Filled in for a developer whose assets are a production multi-tenant

@@ -17,7 +17,7 @@ Sensitivity classification runs orthogonal to audience and is just as important:
 - **A documentation plan is itself a deliverable**: deciding audiences, sensitivity handling, and update ownership up front is planning work that prevents last-minute scrambling
 
 ## Example Code
-```md
+```template
 ## Documentation Plan — Order Management Admin Panel
 
 **Project type:** Admin panel (business digitizing operations)

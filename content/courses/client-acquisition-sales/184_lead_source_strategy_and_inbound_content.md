@@ -21,7 +21,7 @@ One habit multiplies the return on all of this: repurposing. A single strong pro
 
 **Weekly acquisition plan template:**
 
-```markdown
+```template
 ## Acquisition Plan — Week of <date>
 
 **Primary channel:**        (e.g., Outbound prospecting)
@@ -34,7 +34,7 @@ One habit multiplies the return on all of this: repurposing. A single strong pro
 
 **Content piece planning card** (fill before writing, not after):
 
-```markdown
+```template
 ## Content Piece
 
 **ICP it's written for:**

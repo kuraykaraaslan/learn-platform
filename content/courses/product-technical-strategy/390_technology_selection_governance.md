@@ -17,7 +17,7 @@ The new-technology governance gate is what keeps novelty from creeping into paid
 - **Learning cost is not free**: adopting a new tool the team hasn't used before is a cost the project bears, not a benefit the client is assumed to want
 
 ## Example Code
-```markdown
+```template
 ## Technology Decision — Crew Scheduler
 
 **Requirements first:**

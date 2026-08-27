@@ -17,7 +17,7 @@ The other half of discovery that matters downstream is disqualification — reco
 - **A PM's pre-kickoff quality gate**: before accepting a signed deal into active delivery, verify the handoff brief exists, red flags were considered, the next-step decision was sound, and every major risk has an owner and a trackable status
 
 ## Example Code
-```md
+```template
 # Discovery Quality Gate — Pre-Kickoff Check
 **Project:** [Name]
 **Discovery run by:** [Name]

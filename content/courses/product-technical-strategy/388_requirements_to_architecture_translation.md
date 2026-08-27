@@ -18,7 +18,7 @@ Trust boundaries are where this translation earns its keep operationally, not ju
 - **Missing-requirement handling**: assumption / risk / question format, the technical-side mirror of problem framing's handling of vague requests (lesson 372)
 
 ## Example Code
-```markdown
+```template
 # Architecture Inputs — Crew Scheduler
 
 ## Business Goal

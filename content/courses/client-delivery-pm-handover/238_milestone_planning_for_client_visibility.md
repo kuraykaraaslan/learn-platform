@@ -17,7 +17,7 @@ Sizing matters too. A small project needs 2–4 milestones; a large one, 7–12.
 - **Client dependencies live inside the milestone**: a milestone that depends on client-provided content or approval names that dependency explicitly rather than assuming it will simply appear
 
 ## Example Code
-```md
+```template
 ## Milestone: Admin Workflow Demo Ready
 
 **Goal:** Staff can process an order from received to shipped using only the admin panel

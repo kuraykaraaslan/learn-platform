@@ -15,7 +15,7 @@ The response itself doesn't need to be adversarial to be firm. "This is a reason
 - **Never-silent rule**: no request beyond genuine in-scope clarification gets a reflexive "sure, no problem" — it gets classified out loud first, every time, regardless of how small it sounds.
 
 ## Example Code
-```markdown
+```template
 ## Scope-Creep Response Templates
 
 **In-scope:**

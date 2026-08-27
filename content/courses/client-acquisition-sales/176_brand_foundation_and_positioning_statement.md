@@ -23,7 +23,7 @@ None of this is permanent. A brand foundation is a working hypothesis you commit
 
 **Brand foundation worksheet** (fill this once, reuse everywhere):
 
-```markdown
+```template
 ## Brand Foundation
 
 **Market role:** (e.g., Solo technical partner for SaaS MVPs and admin systems)

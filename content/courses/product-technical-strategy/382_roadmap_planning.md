@@ -17,7 +17,7 @@ The most common roadmap failure is the fake three-phase structure: "Phase 1: eve
 - **A roadmap is a sequencing tool, not a wishlist ranking**: the order should reflect dependencies and business priority, not just enthusiasm
 
 ## Example Code
-```markdown
+```template
 ## Product Roadmap — Crew Scheduler
 
 ### MVP / Pilot

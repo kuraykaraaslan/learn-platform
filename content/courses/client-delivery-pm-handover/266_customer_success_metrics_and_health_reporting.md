@@ -17,7 +17,7 @@ A simple red/yellow/green health score turns those metrics into something a non-
 - **Metrics inform expansion but don't replace it**: a strong adoption or commercial signal is evidence to bring into a renewal or upsell conversation, not a substitute for having one
 
 ## Example Code
-```md
+```template
 # Monthly Support / Success Report — Order Management Admin Panel
 **Client:** Meridian Retail Group
 **Period:** October 2026

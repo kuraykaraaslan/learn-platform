@@ -17,7 +17,7 @@ The status report itself follows a fixed shape for a reason: overall status (usi
 - **Blockers stated explicitly**: "waiting on X from client, needed by Y" is a status line; "still working on it" is not
 
 ## Example Code
-```md
+```template
 ## Weekly Project Update
 
 **Project:** Order Management Admin Panel

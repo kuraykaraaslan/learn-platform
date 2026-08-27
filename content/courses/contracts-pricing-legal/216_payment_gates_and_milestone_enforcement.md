@@ -15,7 +15,7 @@ Two categories of cost deserve explicit ownership before they become a fight: th
 - **Retainer variant**: monthly prepaid, defined scope or hours, an explicit unused-hours policy, and emergency work priced separately unless specifically included.
 
 ## Example Code
-```markdown
+```template
 ## Payment Terms
 
 **Total project fee:** [amount]

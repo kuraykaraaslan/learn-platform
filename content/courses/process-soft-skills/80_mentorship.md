@@ -19,7 +19,7 @@ For a solo developer hiring their first contractor or junior developer, the tran
 
 ## Example Code or Template
 
-```markdown
+```template
 # Pairing Session Plan
 
 ## Session Info

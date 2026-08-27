@@ -19,7 +19,7 @@ For a solo developer running a SaaS product, a blameless post-mortem is just a d
 
 ## Example Code or Template
 
-```markdown
+```template
 # Post-Mortem: [Short Title] — [YYYY-MM-DD]
 
 **Severity**: P0 (complete outage) | P1 (major degradation) | P2 (minor degradation)

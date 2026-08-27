@@ -18,7 +18,7 @@ Internal linking closes the loop between the case study and the commercial page 
 - **Descriptive alt text as default**: alt text should describe what's actually shown and why it matters, never a generic placeholder.
 
 ## Example Code
-```md
+```template
 ## Portfolio Page Skeleton
 
 Hero: Selected software projects, MVPs, dashboards, and technical systems

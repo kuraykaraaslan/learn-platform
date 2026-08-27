@@ -17,7 +17,7 @@ Safe-usage warnings deserve their own explicit attention, separate from the happ
 - **Kept separate from technical secrets**: a user guide never contains credentials, API keys, or deployment detail — that content belongs in developer-facing documentation instead
 
 ## Example Code
-```md
+```template
 # Admin/User Guide — Order Management Admin Panel
 
 ## Access

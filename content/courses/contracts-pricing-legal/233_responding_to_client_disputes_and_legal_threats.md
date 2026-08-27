@@ -16,7 +16,7 @@ What actually wins a dispute is decided months earlier, not during the dispute i
 - **Escalation ladder**: direct negotiation first, then a neutral third-party mediation step, then formal arbitration or court only as a last resort — with a lawyer engaged before any step that involves a formal legal letter, a high-value claim, or a threat that goes beyond a civil disagreement.
 
 ## Example Code
-```markdown
+```template
 ## Dispute Response Log (illustrative)
 
 **Date opened:** [date]

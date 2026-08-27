@@ -22,7 +22,7 @@ The trap to watch for is differentiating on things that attract exactly the clie
 
 **Alternative comparison worksheet** (fill one row per real alternative your prospects consider):
 
-```markdown
+```template
 ## Alternative: <Cheap freelancer / Agency / Internal hire / No-code tool / Doing nothing>
 
 **Why clients choose it:**

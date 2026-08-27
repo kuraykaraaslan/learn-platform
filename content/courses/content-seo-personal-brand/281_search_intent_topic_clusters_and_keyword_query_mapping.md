@@ -20,7 +20,7 @@ For AEO, this same cluster thinking extends into natural-question form: each clu
 - **Business-value gate**: never target high-traffic topics that are unrelated to the services actually offered — traffic that cannot become trust, leads, or clients is a distraction, not a win.
 
 ## Example Code
-```md
+```template
 ## Topic Cluster Definition
 
 **Cluster name:** Custom SaaS MVP Development

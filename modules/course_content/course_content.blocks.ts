@@ -1,15 +1,13 @@
 import { toHtml } from 'hast-util-to-html';
 import type { Root as HastRoot, RootContent, Element } from 'hast';
 import type { LessonSections } from './course_content.types';
+import { parseTemplate, parseChecklist, looksLikeChecklist, type LessonWidget } from './course_content.templates';
+
+export type { LessonWidget } from './course_content.templates';
 
 /** P0 always produces { run: false, opts: {} }. P8 extends this shape
  *  (entry?, seed?) without touching LessonBlock's discriminant fields. */
 export type FenceMeta = { run: boolean; opts: Record<string, unknown> };
-
-/** Placeholder — no block of kind 'widget' is ever produced in P0. P4 defines
- *  the concrete shape (TemplateFormCard / ChecklistCard data) here without
- *  changing LessonBlock's { kind, id, widget, html } signature. */
-export type LessonWidget = unknown;
 
 export type LessonBlock =
   | { kind: 'html'; id: string; html: string }
@@ -60,14 +58,26 @@ export function splitBlocks(root: HastRoot, sectionKey: keyof LessonSections): L
       continue;
     }
     flushHtml();
-    blocks.push({
-      kind: 'code',
-      id: `${sectionKey}-${ordinal++}`,
-      lang: extractLang(node),
-      meta: { run: false, opts: {} },
-      source: findCode(node)?.data?.source ?? '',
-      html: toHtml(node),
-    });
+
+    const lang = extractLang(node);
+    const source = findCode(node)?.data?.source ?? '';
+    const html = toHtml(node);
+    const id = `${sectionKey}-${ordinal++}`;
+
+    // `template` is a mechanical retag (scripts/retag-template-fences.ts) of
+    // every fence measured to be form-shaped — always a widget. A fence
+    // still tagged `md`/`markdown` was NOT form-shaped (that retag is
+    // exhaustive over the corpus), so if it also has checkbox items it's the
+    // corpus's other widget shape: a plain checklist, never both.
+    let widget: LessonWidget | null = null;
+    if (lang === 'template') widget = parseTemplate(source);
+    else if ((lang === 'md' || lang === 'markdown') && looksLikeChecklist(source)) widget = parseChecklist(source);
+
+    blocks.push(
+      widget
+        ? { kind: 'widget', id, widget, html }
+        : { kind: 'code', id, lang, meta: { run: false, opts: {} }, source, html }
+    );
   }
   flushHtml();
 

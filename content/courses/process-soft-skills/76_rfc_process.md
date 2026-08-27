@@ -19,7 +19,7 @@ For a solo developer running a SaaS product, an RFC is most useful in three situ
 
 ## Example Code or Template
 
-```markdown
+```template
 # RFC-[NUMBER]: [Short Title]
 
 **Status**: Draft | Comment Period | Accepted | Rejected | Superseded by RFC-XXX

@@ -20,7 +20,7 @@ The payoff of pillars compounds slowly: after a few months of consistent pillar-
 - **The off-strategy test**: If an idea is interesting to you but doesn't map to a pillar, it's either a sign the pillar system needs revision, or it belongs on a personal channel rather than the business one.
 
 ## Example Code
-```md
+```template
 ## Content Pillar Map
 
 **Pillar name:** Business Automation

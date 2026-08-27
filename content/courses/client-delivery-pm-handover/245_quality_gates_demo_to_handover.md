@@ -17,7 +17,7 @@ A gate can produce a conditional pass — proceeding with a known, non-critical 
 - **Never demo, stage, or deploy broken flows without warning**: a known issue disclosed before the client hits it is professionalism; a known issue discovered by the client mid-demo is a trust cost
 
 ## Example Code
-```md
+```template
 # Quality Gate: Pre-Staging
 
 **Project:** Order Management Admin Panel
@@ -45,7 +45,7 @@ Proceed with notes. Client informed of the mobile-width issue before staging
 link is shared. Fix owner: Developer, due before next gate.
 ```
 
-```md
+```template
 ## Acceptance Checklist: Order Status Transition Workflow
 
 | Criteria | Status | Notes |

@@ -18,7 +18,7 @@ There are two dimensions where developers with ADR practices still write weak re
 - **ADR numbering** — sequential integers in filename (`ADR-0001-jwt-signing-algorithm.md`); never reuse or delete numbers
 
 ## Example Code
-```markdown
+```template
 # ADR-0001: JWT Signing Algorithm — HS256 over RS256
 
 ## Status

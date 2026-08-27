@@ -17,7 +17,7 @@ The two frameworks are sequential, not competing: JTBD tells you what progress t
 - **Current alternative as the real competitor**: for most B2B and internal tools, the alternative is not another product — it's a spreadsheet, a shared inbox, or a person's memory, and the value proposition should be written against that, not against an imagined rival
 
 ## Example Code
-```markdown
+```template
 ## Jobs Map — Crew Scheduler
 
 | Situation | User motivation | Desired outcome | Candidate feature | Priority |

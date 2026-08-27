@@ -104,7 +104,10 @@ export function FailureDrillCard({ lesson, blocks }: { lesson: Lesson; blocks: L
   const singles = lesson.mistakes.filter((m) => m.form === 'single');
   const eligible = lesson.interactive !== 'off' && lesson.verified === true && drillable.length >= 2;
 
-  if (!eligible) return <LessonSectionCard title="Common Mistakes" blocks={blocks} />;
+  if (!eligible)
+    return (
+      <LessonSectionCard title="Common Mistakes" blocks={blocks} courseSlug={lesson.courseSlug} lessonFile={lesson.file} />
+    );
 
   return (
     <section className="rounded-lg border border-border bg-surface-raised p-5">

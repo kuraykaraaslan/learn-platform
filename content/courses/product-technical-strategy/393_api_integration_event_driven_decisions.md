@@ -17,7 +17,7 @@ Because integrations are a common failure point almost by definition — they de
 - **Explicit boundary**: idempotency-key implementation, webhook signature-verification code, and queue-library mechanics (retry/backoff configuration, dead-letter handling) are separate technical skills covered elsewhere; this lesson is the upstream pattern-selection and risk-registration decision
 
 ## Example Code
-```markdown
+```template
 ## Integration Risk Register — Crew Scheduler
 
 ### SMS Provider

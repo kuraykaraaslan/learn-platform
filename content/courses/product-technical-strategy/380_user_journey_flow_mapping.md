@@ -17,7 +17,7 @@ Flows aren't complete until they're accountable for screen state, not just scree
 - **Flows precede design and API work**: routing, component planning, and backend endpoint design should follow from a traced flow, not precede it
 
 ## Example Code
-```markdown
+```template
 ## User Flow: Ticket Purchase
 
 **User role:** Customer (unauthenticated at entry)
