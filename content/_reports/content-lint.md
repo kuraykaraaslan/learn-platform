@@ -2,7 +2,7 @@
 
 `npx tsx scripts/content-lint` — generated file, do not edit by hand.
 
-412 lessons · 670 findings · 0 waived
+412 lessons · 652 findings · 0 waived
 
 | Rule | Findings | Severity | What it means |
 |---|---:|---|---|
@@ -10,10 +10,9 @@
 | `sources/bare-domain` | 166 | warn | A bare domain in parentheses looks like a citation but renders as plain grey text — remark-gfm only autolinks bare URLs, not "(zod.dev)". |
 | `links/non-canonical-ref` | 69 | warn | Cross-references written as "see #41" or "Lesson 41" are never linked; only the canonical "(#41)" form is rewritten by the markdown pipeline. |
 | `code/private-alias` | 45 | warn | Snippets importing @/libs, @/modules, @/stores or @/components reference the first owner's private boilerplate; no reader can resolve them. |
-| `code/unlabeled-fence` | 43 | warn | An unlabeled fence gets no syntax highlighting and cannot be verified by tooling. |
 | `sources/disclaimer-as-source` | 40 | warn | A legal/financial disclaimer occupying a Further Reading slot is not a reference. |
+| `code/unlabeled-fence` | 35 | warn | An unlabeled fence gets no syntax highlighting and cannot be verified by tooling. |
 | `sources/quota-signature` | 15 | warn | Every lesson in a course carrying the same number of Further Reading bullets is a generation artifact, not a research result. |
-| `shape/unrecognized-heading` | 10 | warn | A "## " heading the parser does not recognize is silently folded into the previous card instead of becoming its own section. |
 
 ## Findings by rule
 
@@ -193,50 +192,6 @@
 - saas-business-skills/88_email_deliverability.md:23 — imports a private alias: @/libs/db
 - …and 5 more (see content-lint.json)
 
-### `code/unlabeled-fence` — 43
-
-- advanced-deep-dive-topics/108_monorepo_tooling.md:21 — fence has no language tag
-- advanced-deep-dive-topics/110_reading_large_codebases.md:24 — fence has no language tag
-- advanced-deep-dive-topics/111_production_debugging.md:24 — fence has no language tag
-- advanced-deep-dive-topics/112_technical_writing.md:74 — fence has no language tag
-- advanced-deep-dive-topics/113_systems_thinking.md:61 — fence has no language tag
-- business-finance-solo-ops/316_cash_flow_and_runway.md:23 — fence has no language tag
-- business-finance-solo-ops/317_invoicing_and_payment_tracking.md:22 — fence has no language tag
-- business-finance-solo-ops/317_invoicing_and_payment_tracking.md:33 — fence has no language tag
-- business-finance-solo-ops/318_banking_and_payment_methods.md:22 — fence has no language tag
-- business-finance-solo-ops/318_banking_and_payment_methods.md:41 — fence has no language tag
-- business-finance-solo-ops/319_tax_and_accounting_readiness.md:22 — fence has no language tag
-- business-finance-solo-ops/319_tax_and_accounting_readiness.md:43 — fence has no language tag
-- business-finance-solo-ops/320_expense_and_subscription_control.md:22 — fence has no language tag
-- business-finance-solo-ops/320_expense_and_subscription_control.md:36 — fence has no language tag
-- business-finance-solo-ops/321_project_accounting_and_costing.md:22 — fence has no language tag
-- business-finance-solo-ops/322_time_tracking_and_effective_rate.md:21 — fence has no language tag
-- business-finance-solo-ops/323_revenue_stream_design.md:21 — fence has no language tag
-- business-finance-solo-ops/324_monthly_financial_close.md:20 — fence has no language tag
-- business-finance-solo-ops/325_finance_dashboard_and_kpis.md:22 — fence has no language tag
-- business-finance-solo-ops/326_business_records_and_file_system.md:21 — fence has no language tag
-- business-finance-solo-ops/327_risk_reserve_and_contingency.md:21 — fence has no language tag
-- business-finance-solo-ops/328_procurement_and_vendor_management.md:21 — fence has no language tag
-- business-finance-solo-ops/330_pricing_for_margin.md:21 — fence has no language tag
-- business-finance-solo-ops/334_retainer_renewal_and_negotiation.md:22 — fence has no language tag
-- business-finance-solo-ops/345_pipeline_forecasting.md:21 — fence has no language tag
-- business-finance-solo-ops/348_acquisition_funnel_and_attribution.md:21 — fence has no language tag
-- career-entrepreneurship/114_niche_positioning.md:23 — fence has no language tag
-- career-entrepreneurship/114_niche_positioning.md:30 — fence has no language tag
-- career-entrepreneurship/117_financial_literacy.md:63 — fence has no language tag
-- career-entrepreneurship/118_building_in_public.md:62 — fence has no language tag
-- client-delivery-pm-handover/252_database_api_and_integration_handover_docs.md:55 — fence has no language tag
-- client-delivery-pm-handover/253_deployment_runbook_and_emergency_handover.md:70 — fence has no language tag
-- framework-deep-dives/413_reactnative_file_organization_and_banned_patterns.md:21 — fence has no language tag
-- framework-deep-dives/424_electron_project_structure_and_vite_build_config.md:21 — fence has no language tag
-- fundamentals-tools/119_http_fundamentals.md:20 — fence has no language tag
-- fundamentals-tools/133_networking_fundamentals.md:17 — fence has no language tag
-- observability-deployment/58_dockerfile_best_practices.md:72 — fence has no language tag
-- open-source-community/94_contributing_to_open_source.md:52 — fence has no language tag
-- open-source-community/94_contributing_to_open_source.md:56 — fence has no language tag
-- open-source-community/94_contributing_to_open_source.md:111 — fence has no language tag
-- …and 3 more (see content-lint.json)
-
 ### `sources/disclaimer-as-source` — 40
 
 - business-finance-solo-ops/316_cash_flow_and_runway.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Reserve percent
@@ -280,6 +235,44 @@
 - business-finance-solo-ops/354_non_negotiable_operating_rules.md — disclaimer in Further Reading: - This lesson is general education, not financial or tax advice. Specific capaci
 - business-finance-solo-ops/355_burnout_as_a_business_risk.md — disclaimer in Further Reading: - This lesson is general education, not financial, tax, or medical advice. Persi
 
+### `code/unlabeled-fence` — 35
+
+- advanced-deep-dive-topics/108_monorepo_tooling.md:21 — fence has no language tag
+- advanced-deep-dive-topics/110_reading_large_codebases.md:24 — fence has no language tag
+- advanced-deep-dive-topics/111_production_debugging.md:24 — fence has no language tag
+- advanced-deep-dive-topics/113_systems_thinking.md:61 — fence has no language tag
+- business-finance-solo-ops/316_cash_flow_and_runway.md:23 — fence has no language tag
+- business-finance-solo-ops/317_invoicing_and_payment_tracking.md:22 — fence has no language tag
+- business-finance-solo-ops/317_invoicing_and_payment_tracking.md:33 — fence has no language tag
+- business-finance-solo-ops/318_banking_and_payment_methods.md:22 — fence has no language tag
+- business-finance-solo-ops/318_banking_and_payment_methods.md:41 — fence has no language tag
+- business-finance-solo-ops/319_tax_and_accounting_readiness.md:22 — fence has no language tag
+- business-finance-solo-ops/319_tax_and_accounting_readiness.md:43 — fence has no language tag
+- business-finance-solo-ops/320_expense_and_subscription_control.md:22 — fence has no language tag
+- business-finance-solo-ops/320_expense_and_subscription_control.md:36 — fence has no language tag
+- business-finance-solo-ops/321_project_accounting_and_costing.md:22 — fence has no language tag
+- business-finance-solo-ops/322_time_tracking_and_effective_rate.md:21 — fence has no language tag
+- business-finance-solo-ops/323_revenue_stream_design.md:21 — fence has no language tag
+- business-finance-solo-ops/324_monthly_financial_close.md:20 — fence has no language tag
+- business-finance-solo-ops/325_finance_dashboard_and_kpis.md:22 — fence has no language tag
+- business-finance-solo-ops/326_business_records_and_file_system.md:21 — fence has no language tag
+- business-finance-solo-ops/327_risk_reserve_and_contingency.md:21 — fence has no language tag
+- business-finance-solo-ops/328_procurement_and_vendor_management.md:21 — fence has no language tag
+- business-finance-solo-ops/330_pricing_for_margin.md:21 — fence has no language tag
+- business-finance-solo-ops/334_retainer_renewal_and_negotiation.md:22 — fence has no language tag
+- business-finance-solo-ops/345_pipeline_forecasting.md:21 — fence has no language tag
+- business-finance-solo-ops/348_acquisition_funnel_and_attribution.md:21 — fence has no language tag
+- career-entrepreneurship/114_niche_positioning.md:23 — fence has no language tag
+- career-entrepreneurship/114_niche_positioning.md:30 — fence has no language tag
+- career-entrepreneurship/117_financial_literacy.md:63 — fence has no language tag
+- career-entrepreneurship/118_building_in_public.md:62 — fence has no language tag
+- framework-deep-dives/413_reactnative_file_organization_and_banned_patterns.md:21 — fence has no language tag
+- framework-deep-dives/424_electron_project_structure_and_vite_build_config.md:21 — fence has no language tag
+- fundamentals-tools/119_http_fundamentals.md:20 — fence has no language tag
+- fundamentals-tools/133_networking_fundamentals.md:17 — fence has no language tag
+- observability-deployment/58_dockerfile_best_practices.md:72 — fence has no language tag
+- saas-business-skills/88_email_deliverability.md:143 — fence has no language tag
+
 ### `sources/quota-signature` — 15
 
 - advanced-deep-dive-topics — all 13 lessons have exactly 3 Further Reading bullets (zero variance)
@@ -297,16 +290,3 @@
 - product-technical-strategy — all 25 lessons have exactly 3 Further Reading bullets (zero variance)
 - saas-business-skills — all 8 lessons have exactly 3 Further Reading bullets (zero variance)
 - security — all 13 lessons have exactly 3 Further Reading bullets (zero variance)
-
-### `shape/unrecognized-heading` — 10
-
-- open-source-community/94_contributing_to_open_source.md:75 — "## Problem" is not a recognized section; it renders inside the previous card.
-- open-source-community/94_contributing_to_open_source.md:78 — "## Solution" is not a recognized section; it renders inside the previous card.
-- open-source-community/94_contributing_to_open_source.md:81 — "## Testing" is not a recognized section; it renders inside the previous card.
-- open-source-community/94_contributing_to_open_source.md:84 — "## Before / After (if applicable)" is not a recognized section; it renders inside the previous card.
-- open-source-community/95_publishing_maintaining_oss_tool.md:96 — "## Install" is not a recognized section; it renders inside the previous card.
-- open-source-community/95_publishing_maintaining_oss_tool.md:102 — "## Quick Start" is not a recognized section; it renders inside the previous card.
-- open-source-community/95_publishing_maintaining_oss_tool.md:107 — "## API Reference" is not a recognized section; it renders inside the previous card.
-- open-source-community/95_publishing_maintaining_oss_tool.md:111 — "## Why This Exists" is not a recognized section; it renders inside the previous card.
-- open-source-community/95_publishing_maintaining_oss_tool.md:116 — "## Contributing" is not a recognized section; it renders inside the previous card.
-- open-source-community/95_publishing_maintaining_oss_tool.md:120 — "## License" is not a recognized section; it renders inside the previous card.

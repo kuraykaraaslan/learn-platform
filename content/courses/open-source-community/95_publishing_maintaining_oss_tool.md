@@ -19,7 +19,7 @@ The strategic value for a solo developer running a software company is significa
 
 ## Example Code or Template
 
-```markdown
+````markdown
 # Publishing Checklist — npm Package Release
 
 ## Before Writing the First Line of Code
@@ -158,7 +158,7 @@ git push origin v0.1.0
 | Minor/patch releases              | As needed  |
 | Major version with migration guide| Quarterly  |
 | Archive notice if unmaintained    | When needed (don't ghost) |
-```
+````
 
 ## When to Use
 - When you find yourself copy-pasting the same module across multiple client projects — the extraction point is when you paste it the second time, not the fifth

@@ -18,7 +18,7 @@ The inverted pyramid structure applies to all three: most important information 
 
 ## Example / Template
 
-```markdown
+````markdown
 # Runbook: Auth Service — High Error Rate
 
 **Severity:** P2  
@@ -71,7 +71,7 @@ The inverted pyramid structure applies to all three: most important information 
 
 ## Escalation
 If unresolved after 15 minutes: page senior on-call via PagerDuty.
-```
+````
 
 ```yaml
 # OpenAPI snippet for your auth endpoints

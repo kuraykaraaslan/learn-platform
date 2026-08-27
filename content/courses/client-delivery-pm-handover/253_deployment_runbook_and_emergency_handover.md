@@ -17,7 +17,7 @@ The emergency checklist is what turns a stressful, ambiguous moment into a mecha
 - **Backup state must be stated honestly**: "what is backed up and how often" needs a real, verified answer in the runbook, not an assumed one
 
 ## Example Code
-```md
+````md
 # Deployment Runbook — Order Management Admin Panel
 
 ## Production URLs
@@ -67,7 +67,7 @@ rollback alone is safe — check `06-database-and-backup.md`.
 - [ ] Order list loads with data
 - [ ] Create order → status transition → export CSV all succeed
 - [ ] No critical errors in logs
-```
+````
 
 ## When to Use
 - Before final handover, as one of the non-negotiable documents for any project with a real production deployment

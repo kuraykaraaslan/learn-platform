@@ -37,6 +37,36 @@ export type Rule = {
   course?: (slug: string, files: LessonFile[]) => Finding[];
 };
 
+/**
+ * Walks a lesson's lines, reporting for each whether it sits inside a fenced
+ * block, using CommonMark's rule: a fence is closed only by a run of at least
+ * as many backticks as opened it. A naive toggle on every "```" line goes out
+ * of phase the moment a four-backtick block wraps three-backtick ones — which
+ * is exactly how a lesson can look fine and render as one monospace blob.
+ */
+export function walkLines(lines: string[]): { line: string; index: number; inFence: boolean }[] {
+  const out: { line: string; index: number; inFence: boolean }[] = [];
+  let openTicks = 0;
+  lines.forEach((line, index) => {
+    const fence = /^\s*(`{3,})/.exec(line);
+    if (fence) {
+      const ticks = fence[1].length;
+      if (openTicks === 0) {
+        openTicks = ticks;
+        out.push({ line, index, inFence: true });
+        return;
+      }
+      if (ticks >= openTicks && /^\s*`+\s*$/.test(line)) {
+        out.push({ line, index, inFence: true });
+        openTicks = 0;
+        return;
+      }
+    }
+    out.push({ line, index, inFence: openTicks > 0 });
+  });
+  return out;
+}
+
 const RECOGNIZED = [
   'What It Is',
   'Key Concepts',
@@ -66,15 +96,11 @@ export function loadCorpus(): LessonFile[] {
 
       // Section split that mirrors the renderer: fenced lines never start a section.
       const sections: LessonFile['sections'] = [];
-      let inFence = false;
-      lines.forEach((line, index) => {
-        if (line.trimStart().startsWith('```')) inFence = !inFence;
-        else if (!inFence) {
-          const heading = /^##\s+(.+?)\s*$/.exec(line);
-          if (heading) sections.push({ heading: heading[1], start: index + 1, lines: [] });
-          else if (sections.length) sections[sections.length - 1].lines.push(line);
-        } else if (sections.length) sections[sections.length - 1].lines.push(line);
-      });
+      for (const { line, index, inFence } of walkLines(lines)) {
+        const heading = inFence ? null : /^##\s+(.+?)\s*$/.exec(line);
+        if (heading) sections.push({ heading: heading[1], start: index + 1, lines: [] });
+        else if (sections.length) sections[sections.length - 1].lines.push(line);
+      }
 
       out.push({
         courseSlug,
@@ -100,7 +126,7 @@ const bullets = (file: LessonFile, heading: string) =>
 export const RULES: Rule[] = [
   {
     id: 'shape/unrecognized-heading',
-    severity: 'warn',
+    severity: 'error',
     description:
       'A "## " heading the parser does not recognize is silently folded into the previous card instead of becoming its own section.',
     lesson: (file) =>
@@ -108,7 +134,7 @@ export const RULES: Rule[] = [
         .filter((s) => !isRecognized(s.heading))
         .map((s) => ({
           rule: 'shape/unrecognized-heading',
-          severity: 'warn' as const,
+          severity: 'error' as const,
           target: file.target,
           line: s.start,
           message: `"## ${s.heading}" is not a recognized section; it renders inside the previous card.`,
@@ -116,7 +142,7 @@ export const RULES: Rule[] = [
   },
   {
     id: 'shape/missing-section',
-    severity: 'warn',
+    severity: 'error',
     description: 'Every lesson should carry the six-section shape.',
     lesson: (file) => {
       const present = new Set(
@@ -130,7 +156,7 @@ export const RULES: Rule[] = [
         .filter((r) => !present.has(r))
         .map((r) => ({
           rule: 'shape/missing-section',
-          severity: 'warn' as const,
+          severity: 'error' as const,
           target: file.target,
           message: `missing "## ${r}"`,
         }));
@@ -300,10 +326,8 @@ export const RULES: Rule[] = [
       'Cross-references written as "see #41" or "Lesson 41" are never linked; only the canonical "(#41)" form is rewritten by the markdown pipeline.',
     lesson: (file) => {
       const out: Finding[] = [];
-      let inFence = false;
-      file.lines.forEach((line, index) => {
-        if (line.trimStart().startsWith('```')) { inFence = !inFence; return; }
-        if (inFence) return;
+      for (const { line, index, inFence } of walkLines(file.lines)) {
+        if (inFence) continue;
         const pattern = /(?<!\()#(\d{1,3})\b|\bLesson\s+(\d{1,3})\b/g;
         for (const match of line.matchAll(pattern)) {
           const raw = match[0];
@@ -316,7 +340,7 @@ export const RULES: Rule[] = [
             message: `"${raw}" is not the canonical "(#N)" form, so it is never linked`,
           });
         }
-      });
+      }
       return out;
     },
   },
@@ -329,10 +353,8 @@ export const RULES: Rule[] = [
       for (const slug of listCourseSlugs())
         for (const item of readCourseManifest(slug).items) ids.add(item.id);
       const out: Finding[] = [];
-      let inFence = false;
-      file.lines.forEach((line, index) => {
-        if (line.trimStart().startsWith('```')) { inFence = !inFence; return; }
-        if (inFence) return;
+      for (const { line, index, inFence } of walkLines(file.lines)) {
+        if (inFence) continue;
         for (const match of line.matchAll(/\(#(\d{1,3})\)/g)) {
           const id = Number(match[1]);
           if (!ids.has(id))
@@ -344,7 +366,7 @@ export const RULES: Rule[] = [
               message: `"(#${id})" refers to a lesson id that does not exist`,
             });
         }
-      });
+      }
       return out;
     },
   },

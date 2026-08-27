@@ -19,15 +19,17 @@ The path from "I'd like to contribute" to "I have merged PRs" is more accessible
 
 ## Example Code or Template
 
-```markdown
+````markdown
 # OSS Contribution Checklist
 
 ## Finding the Right Project and Issue
 
-- [ ] Choose a project you use in production (better: one where you have encountered a real bug)
-  Candidates from your stack:
-  - `vercel/next.js` — Next.js App Router
-  - `typeorm/typeorm` — your ORM
+- [ ] Choose a project you use in production (better: one where you have hit a real bug)
+  Pick from your own dependency list — the ones you already debug are the ones
+  where you can write a credible patch. For a typical Node/TypeScript web stack
+  that means projects like:
+  - `vercel/next.js` — the framework
+  - `typeorm/typeorm` or `prisma/prisma` — the ORM
   - `panva/jose` — JWT handling
   - `resend/resend-node` — email SDK
   - `stripe/stripe-node` — payment SDK
@@ -108,7 +110,7 @@ Keep a running list:
 |------------|---------------------|-----------------------|---------|------------------------------|
 | 2025-06-01 | typeorm/typeorm     | PR #1234: fix null... | Merged  | First merged PR — celebrated |
 | 2025-06-15 | vercel/next.js      | Issue #5678: repro    | Closed  | Bug confirmed, fix by team   |
-```
+````
 
 ## When to Use
 - When you hit a bug in a library you use and diagnose the root cause — you are already 60% of the way to a contribution; the remaining 40% is writing the test and PR

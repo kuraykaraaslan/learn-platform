@@ -2,9 +2,9 @@
   "generatedFrom": "scripts/content-lint",
   "lessons": 412,
   "totals": {
-    "findings": 670,
+    "findings": 652,
     "errors": 0,
-    "warnings": 670,
+    "warnings": 652,
     "waived": 0
   },
   "byRule": {
@@ -12,82 +12,11 @@
     "sources/bare-domain": 166,
     "links/non-canonical-ref": 69,
     "code/private-alias": 45,
-    "code/unlabeled-fence": 43,
     "sources/disclaimer-as-source": 40,
-    "sources/quota-signature": 15,
-    "shape/unrecognized-heading": 10
+    "code/unlabeled-fence": 35,
+    "sources/quota-signature": 15
   },
   "findings": [
-    {
-      "rule": "shape/unrecognized-heading",
-      "severity": "warn",
-      "target": "open-source-community/94_contributing_to_open_source.md",
-      "line": 75,
-      "message": "\"## Problem\" is not a recognized section; it renders inside the previous card."
-    },
-    {
-      "rule": "shape/unrecognized-heading",
-      "severity": "warn",
-      "target": "open-source-community/94_contributing_to_open_source.md",
-      "line": 78,
-      "message": "\"## Solution\" is not a recognized section; it renders inside the previous card."
-    },
-    {
-      "rule": "shape/unrecognized-heading",
-      "severity": "warn",
-      "target": "open-source-community/94_contributing_to_open_source.md",
-      "line": 81,
-      "message": "\"## Testing\" is not a recognized section; it renders inside the previous card."
-    },
-    {
-      "rule": "shape/unrecognized-heading",
-      "severity": "warn",
-      "target": "open-source-community/94_contributing_to_open_source.md",
-      "line": 84,
-      "message": "\"## Before / After (if applicable)\" is not a recognized section; it renders inside the previous card."
-    },
-    {
-      "rule": "shape/unrecognized-heading",
-      "severity": "warn",
-      "target": "open-source-community/95_publishing_maintaining_oss_tool.md",
-      "line": 96,
-      "message": "\"## Install\" is not a recognized section; it renders inside the previous card."
-    },
-    {
-      "rule": "shape/unrecognized-heading",
-      "severity": "warn",
-      "target": "open-source-community/95_publishing_maintaining_oss_tool.md",
-      "line": 102,
-      "message": "\"## Quick Start\" is not a recognized section; it renders inside the previous card."
-    },
-    {
-      "rule": "shape/unrecognized-heading",
-      "severity": "warn",
-      "target": "open-source-community/95_publishing_maintaining_oss_tool.md",
-      "line": 107,
-      "message": "\"## API Reference\" is not a recognized section; it renders inside the previous card."
-    },
-    {
-      "rule": "shape/unrecognized-heading",
-      "severity": "warn",
-      "target": "open-source-community/95_publishing_maintaining_oss_tool.md",
-      "line": 111,
-      "message": "\"## Why This Exists\" is not a recognized section; it renders inside the previous card."
-    },
-    {
-      "rule": "shape/unrecognized-heading",
-      "severity": "warn",
-      "target": "open-source-community/95_publishing_maintaining_oss_tool.md",
-      "line": 116,
-      "message": "\"## Contributing\" is not a recognized section; it renders inside the previous card."
-    },
-    {
-      "rule": "shape/unrecognized-heading",
-      "severity": "warn",
-      "target": "open-source-community/95_publishing_maintaining_oss_tool.md",
-      "line": 120,
-      "message": "\"## License\" is not a recognized section; it renders inside the previous card."
-    },
     {
       "rule": "code/private-alias",
       "severity": "warn",
@@ -427,13 +356,6 @@
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
-      "target": "advanced-deep-dive-topics/112_technical_writing.md",
-      "line": 74,
-      "message": "fence has no language tag"
-    },
-    {
-      "rule": "code/unlabeled-fence",
-      "severity": "warn",
       "target": "advanced-deep-dive-topics/113_systems_thinking.md",
       "line": 61,
       "message": "fence has no language tag"
@@ -616,20 +538,6 @@
     {
       "rule": "code/unlabeled-fence",
       "severity": "warn",
-      "target": "client-delivery-pm-handover/252_database_api_and_integration_handover_docs.md",
-      "line": 55,
-      "message": "fence has no language tag"
-    },
-    {
-      "rule": "code/unlabeled-fence",
-      "severity": "warn",
-      "target": "client-delivery-pm-handover/253_deployment_runbook_and_emergency_handover.md",
-      "line": 70,
-      "message": "fence has no language tag"
-    },
-    {
-      "rule": "code/unlabeled-fence",
-      "severity": "warn",
       "target": "framework-deep-dives/413_reactnative_file_organization_and_banned_patterns.md",
       "line": 21,
       "message": "fence has no language tag"
@@ -660,41 +568,6 @@
       "severity": "warn",
       "target": "observability-deployment/58_dockerfile_best_practices.md",
       "line": 72,
-      "message": "fence has no language tag"
-    },
-    {
-      "rule": "code/unlabeled-fence",
-      "severity": "warn",
-      "target": "open-source-community/94_contributing_to_open_source.md",
-      "line": 52,
-      "message": "fence has no language tag"
-    },
-    {
-      "rule": "code/unlabeled-fence",
-      "severity": "warn",
-      "target": "open-source-community/94_contributing_to_open_source.md",
-      "line": 56,
-      "message": "fence has no language tag"
-    },
-    {
-      "rule": "code/unlabeled-fence",
-      "severity": "warn",
-      "target": "open-source-community/94_contributing_to_open_source.md",
-      "line": 111,
-      "message": "fence has no language tag"
-    },
-    {
-      "rule": "code/unlabeled-fence",
-      "severity": "warn",
-      "target": "open-source-community/95_publishing_maintaining_oss_tool.md",
-      "line": 54,
-      "message": "fence has no language tag"
-    },
-    {
-      "rule": "code/unlabeled-fence",
-      "severity": "warn",
-      "target": "open-source-community/95_publishing_maintaining_oss_tool.md",
-      "line": 161,
       "message": "fence has no language tag"
     },
     {

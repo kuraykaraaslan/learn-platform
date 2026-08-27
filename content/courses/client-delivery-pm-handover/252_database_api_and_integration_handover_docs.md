@@ -17,7 +17,7 @@ APIs and integrations carry a parallel version of the same problem. "Stripe is i
 - **Provider ownership must be explicit for every integration**: which account owns the Stripe/iyzico/SMTP relationship, whether it's sandbox or production, and where its credentials are stored
 
 ## Example Code
-```md
+````md
 # Database Documentation — Order Management Admin Panel
 
 ## Provider
@@ -52,7 +52,7 @@ counts matched). Manual backup: `pg_dump` via Railway CLI, documented in
 `Order` contains customer names and addresses. `User` contains staff email
 addresses. No payment card data is stored — payment status is a webhook
 reference only.
-```
+````
 
 ```md
 ## Integration: Resend (Transactional Email)
