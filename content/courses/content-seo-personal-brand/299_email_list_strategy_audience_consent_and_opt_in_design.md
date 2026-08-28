@@ -64,11 +64,11 @@ CTA: Get the checklist
 - When list growth is happening but engagement quality isn't, as a signal to revisit audience fit rather than just running more traffic to the form
 
 ## Common Mistakes
-- Defining the list as "for everyone interested in technology" instead of a specific buyer relationship
-- Buying or scraping a list to shortcut the slow work of earning real opt-ins
-- Silently moving cold-outreach contacts into an ongoing newsletter without explicit consent
-- Publishing a vague "free guide" lead magnet that isn't tied to any specific business problem
-- Collecting fields like company size or role "just in case" with no plan to ever use them in segmentation
+- **The list's audience is defined as "everyone interested in technology"** — Defining the list as "for everyone interested in technology" instead of a specific buyer relationship
+- **A list gets a fast head start by buying or scraping contacts** — Buying or scraping a list to shortcut the slow work of earning real opt-ins
+- **Contacts from a cold-outreach campaign get quietly added to the ongoing newsletter** — Silently moving cold-outreach contacts into an ongoing newsletter without explicit consent
+- **A lead magnet is titled "Free Guide" with no specific problem named** — Publishing a vague "free guide" lead magnet that isn't tied to any specific business problem
+- **The signup form collects company size and role "just in case"** — Collecting fields like company size or role "just in case" with no plan to ever use them in segmentation
 
 ## Further Reading
 - *Permission Marketing* — Seth Godin: the foundational argument for why an opted-in, specific-promise list outperforms a broad, unpermissioned one, written before "email marketing" was even a category

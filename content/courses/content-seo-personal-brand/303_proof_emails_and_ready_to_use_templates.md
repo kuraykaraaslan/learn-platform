@@ -57,11 +57,11 @@ workflow and I can tell you what I would clarify first.
 - Right before sending any templated email, as a final customization gate
 
 ## Common Mistakes
-- Naming a client or exposing private data in a proof email without explicit permission
-- Using generic language ("modern, scalable app") instead of the concrete workflow and constraint that was actually solved
-- Sending a template unmodified, so the recipient can tell it was assembled rather than written for them
-- Treating a completed project as good for only one proof email instead of extracting the sharpest lesson from it
-- Skipping the confidentiality check because the deadline is close and the email "just needs to go out"
+- **A proof email names the actual client with no permission asked** — Naming a client or exposing private data in a proof email without explicit permission
+- **A proof email describes the work as a "modern, scalable app"** — Using generic language ("modern, scalable app") instead of the concrete workflow and constraint that was actually solved
+- **A template email goes out with the placeholder brackets barely filled in** — Sending a template unmodified, so the recipient can tell it was assembled rather than written for them
+- **A finished project becomes exactly one proof email and nothing more** — Treating a completed project as good for only one proof email instead of extracting the sharpest lesson from it
+- **A send deadline is close, so the confidentiality check gets skipped** — Skipping the confidentiality check because the deadline is close and the email "just needs to go out"
 
 ## Further Reading
 - *Influence* — Robert Cialdini: the underlying psychology of why specific, evidence-backed proof persuades where vague claims don't

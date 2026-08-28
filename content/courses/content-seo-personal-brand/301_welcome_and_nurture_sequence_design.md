@@ -56,11 +56,11 @@ Email 6: Soft invitation to a project review
 - When a lead magnet download or paused conversation needs a defined re-entry path rather than silence
 
 ## Common Mistakes
-- Sending the same generic sequence to every subscriber regardless of buying-stage mindset
-- Opening the welcome sequence with a hard sales pitch instead of delivery and expectation-setting
-- Leaving a sequence with no exit condition, so contacts keep receiving irrelevant emails after they've already converted or gone cold
-- Over-automating a conversation that a genuine reply deserves to receive personally
-- Promising a cadence (e.g., daily emails) the sequence design can't actually sustain
+- **Every new subscriber gets the same welcome sequence regardless of why they signed up** — Sending the same generic sequence to every subscriber regardless of buying-stage mindset
+- **Email one of the welcome sequence opens with a sales pitch** — Opening the welcome sequence with a hard sales pitch instead of delivery and expectation-setting
+- **A subscriber already became a client, but keeps getting nurture emails meant for new leads** — Leaving a sequence with no exit condition, so contacts keep receiving irrelevant emails after they've already converted or gone cold
+- **A subscriber sends a genuine, specific reply to an automated sequence email** — Over-automating a conversation that a genuine reply deserves to receive personally
+- **A sequence promises daily emails that the content plan can't actually sustain** — Promising a cadence (e.g., daily emails) the sequence design can't actually sustain
 
 ## Further Reading
 - [HubSpot's guide to lead nurturing campaigns](https://blog.hubspot.com) — a practical, tool-agnostic reference for stage-matched nurture design

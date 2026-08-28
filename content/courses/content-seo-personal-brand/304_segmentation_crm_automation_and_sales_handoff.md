@@ -55,11 +55,11 @@ stage:new-subscriber | stage:nurture | stage:discovery-ready | stage:client
 - Auditing existing tags for ones nobody maintains or uses in any actual segmentation
 
 ## Common Mistakes
-- Creating dozens of tags that nobody maintains or ever segments by
-- Building an elaborate automation map before there's enough list quality to justify the complexity
-- Trusting an open-rate-based lead score over an actual reply with project context
-- Leaving a high-intent contact in the generic newsletter instead of moving them to CRM lead handling
-- Continuing to send generic marketing content to someone actively negotiating a project
+- **The CRM has forty tags, and nobody remembers what half of them mean** — Creating dozens of tags that nobody maintains or ever segments by
+- **An elaborate automation map gets built for a list that's still small and low-engagement** — Building an elaborate automation map before there's enough list quality to justify the complexity
+- **A lead score based on open rate ranks above a contact who actually replied with real project details** — Trusting an open-rate-based lead score over an actual reply with project context
+- **A contact asks a high-intent question, and stays in the generic newsletter segment anyway** — Leaving a high-intent contact in the generic newsletter instead of moving them to CRM lead handling
+- **A contact is mid-negotiation on a project, and still gets the weekly generic newsletter blast** — Continuing to send generic marketing content to someone actively negotiating a project
 
 ## Further Reading
 - [HubSpot's documentation on lead scoring models](https://hubspot.com) — first-party detail on balancing engagement signals against explicit intent signals

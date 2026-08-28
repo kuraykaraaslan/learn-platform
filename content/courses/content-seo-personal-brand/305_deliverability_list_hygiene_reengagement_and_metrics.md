@@ -72,11 +72,11 @@ Slow list growth           → fix opt-in placement, sharpen the lead magnet
 - When list growth looks strong but qualified conversations aren't increasing to match it
 
 ## Common Mistakes
-- Optimizing only for open rate while replies, calls, and referrals quietly stagnate
-- Scaling send volume before SPF/DKIM/DMARC are actually verified
-- Repeatedly chasing a silent contact with guilt or manufactured urgency instead of one check-in and a close-the-loop
-- Blasting an old, unmaintained list without a hygiene pass first, damaging deliverability for the whole domain
-- Treating rising subscriber count as success while reply quality and business outcomes decline
+- **Open rate keeps climbing, so the newsletter is called a success** — Optimizing only for open rate while replies, calls, and referrals quietly stagnate
+- **Send volume gets scaled up before SPF/DKIM/DMARC have actually been verified** — Scaling send volume before SPF/DKIM/DMARC are actually verified
+- **A contact went quiet, so a follow-up goes out implying they're missing something urgent** — Repeatedly chasing a silent contact with guilt or manufactured urgency instead of one check-in and a close-the-loop
+- **An old, unmaintained list gets a full send with no hygiene pass first** — Blasting an old, unmaintained list without a hygiene pass first, damaging deliverability for the whole domain
+- **Subscriber count is rising month over month, so the newsletter is called a success** — Treating rising subscriber count as success while reply quality and business outcomes decline
 
 ## Further Reading
 - [Google's sender guidelines for bulk email](https://support.google.com/mail) — first-party detail on the authentication and reputation thresholds that affect inbox placement

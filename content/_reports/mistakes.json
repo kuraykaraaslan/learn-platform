@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 923,
-    "lessonsWithZeroDrillable": 171,
+    "single": 888,
+    "lessonsWithZeroDrillable": 164,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 188
+    "lessonsWithTwoPlusDrillable": 195
   },
   "lessons": [
     {
@@ -2728,14 +2728,14 @@
       "file": "299_email_list_strategy_audience_consent_and_opt_in_design.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2743,14 +2743,14 @@
       "file": "300_newsletter_system_architecture_and_editorial_strategy.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2758,14 +2758,14 @@
       "file": "301_welcome_and_nurture_sequence_design.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2773,14 +2773,14 @@
       "file": "302_email_copywriting_voice_subject_lines_and_ctas.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2788,14 +2788,14 @@
       "file": "303_proof_emails_and_ready_to_use_templates.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2803,14 +2803,14 @@
       "file": "304_segmentation_crm_automation_and_sales_handoff.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2818,14 +2818,14 @@
       "file": "305_deliverability_list_hygiene_reengagement_and_metrics.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {

@@ -58,11 +58,11 @@ Strong: "Many software projects become expensive because the first version
 - Immediately after receiving a high-intent reply, to decide the response deserves a personal answer rather than an automated one
 
 ## Common Mistakes
-- Opening with a personal update or biography instead of the reader's problem
-- Writing a subject line that oversells what the email actually delivers
-- Stacking multiple CTAs into one email so the reader isn't sure which action matters
-- Defaulting to "book a call" as the CTA for subscribers who haven't built enough context to want that yet
-- Letting a generic automated response go out in reply to a meaningful, high-intent message
+- **An email opens with a personal update before ever mentioning the reader's problem** — Opening with a personal update or biography instead of the reader's problem
+- **A subject line promises more than the email actually delivers** — Writing a subject line that oversells what the email actually delivers
+- **An email has three different calls to action** — Stacking multiple CTAs into one email so the reader isn't sure which action matters
+- **A brand-new subscriber's first email already asks them to book a call** — Defaulting to "book a call" as the CTA for subscribers who haven't built enough context to want that yet
+- **A subscriber sends a thoughtful, high-intent reply and gets a generic auto-response back** — Letting a generic automated response go out in reply to a meaningful, high-intent message
 
 ## Further Reading
 - *Everybody Writes* — Ann Handley: a practical, non-hype guide to writing marketing content that still sounds like a real person

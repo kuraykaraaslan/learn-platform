@@ -58,11 +58,11 @@ Cadence discipline closes the loop between architecture and editorial calendar: 
 - When deciding whether to increase sending frequency, to confirm the current cadence is sustainable first
 
 ## Common Mistakes
-- Building an elaborate automation map before there's a list large or engaged enough to justify it
-- Sending an issue because "it's newsletter day" rather than because it serves one of the six legitimate reasons to send
-- Letting five different purposes compete inside one issue instead of picking one
-- Promising a cadence (weekly, daily) that isn't sustainable and then quietly abandoning it
-- Treating the newsletter itself as the offer, instead of as the trust-building bridge to a real, sellable service
+- **An elaborate automation map gets built for a list of 40 people** — Building an elaborate automation map before there's a list large or engaged enough to justify it
+- **An issue goes out because it's the scheduled day, not because there's a real reason to send** — Sending an issue because "it's newsletter day" rather than because it serves one of the six legitimate reasons to send
+- **One issue tries to cover five different purposes at once** — Letting five different purposes compete inside one issue instead of picking one
+- **A weekly cadence is promised, then quietly stops after a few issues** — Promising a cadence (weekly, daily) that isn't sustainable and then quietly abandoning it
+- **The newsletter itself is positioned as the thing being sold** — Treating the newsletter itself as the offer, instead of as the trust-building bridge to a real, sellable service
 
 ## Further Reading
 - *Superfans* — Pat Flynn: a practical framework for the tiered relationship-building a newsletter is meant to support, from casual reader to buyer
