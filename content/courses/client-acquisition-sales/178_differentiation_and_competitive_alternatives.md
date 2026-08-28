@@ -53,10 +53,10 @@ as scope drift on agency projects."
 - Once per quarter, to check whether your stated differentiators still match what actually wins or loses deals.
 
 ## Common Mistakes
-- Differentiating by insulting the alternative ("agencies are bad," "no-code is useless") instead of naming where it genuinely fits.
-- Leading with unverifiable quality claims ("I care more," "I'm more experienced") instead of falsifiable process differences.
-- Competing on price, availability, or unlimited scope as if these were differentiators rather than concessions that attract risky clients.
-- Never actually doing the alternative-by-alternative analysis, so every objection gets the same generic "I'm different because I'm good" response.
+- **"Agencies are slow and pass you off to junior developers" is the entire pitch against the agency alternative** — Differentiating by insulting the alternative ("agencies are bad," "no-code is useless") instead of naming where it genuinely fits.
+- **"I care more about quality than other developers" is the entire differentiation claim, with nothing checkable behind it** — Leading with unverifiable quality claims ("I care more," "I'm more experienced") instead of falsifiable process differences.
+- **"Unlimited revisions and 24/7 availability" goes on the positioning page as if it were a selling point rather than a concession** — Competing on price, availability, or unlimited scope as if these were differentiators rather than concessions that attract risky clients.
+- **Every objection on a call gets the same "I'm just different because I'm good" answer, because the alternative-by-alternative comparison was never actually written** — Never actually doing the alternative-by-alternative analysis, so every objection gets the same generic "I'm different because I'm good" response.
 
 ## Further Reading
 - *Obviously Awesome* — April Dunford: includes a structured method for competitive alternative mapping, not just feature comparison.

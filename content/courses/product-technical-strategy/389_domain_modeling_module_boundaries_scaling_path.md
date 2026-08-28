@@ -64,10 +64,10 @@ extraction (Stage 4) — none of the triggers for these stages are present yet.
 - When naming a new module — test the name against the "business capability, not technical category" rule before it becomes a dumping ground
 
 ## Common Mistakes
-- Starting database and API design before the domain glossary exists, which lets the same concept acquire multiple inconsistent names across modules
-- Recommending microservices because they sound more sophisticated for a project whose actual risk is proving anyone wants the product at all
-- Splitting modules by database table instead of by business capability, producing technically-named modules ("Data," "Managers") that hide business logic instead of exposing it
-- Jumping to Stage 3 or Stage 4 scaling infrastructure without confirming Stage 1 fixes (indexes, pagination, query shape) have actually been exhausted first
+- **The API schema is already being built, and nobody's agreed yet on whether it's called a "ticket," a "pass," or a "booking"** — Starting database and API design before the domain glossary exists, which lets the same concept acquire multiple inconsistent names across modules
+- **Microservices get recommended for a product that hasn't proven anyone wants it yet, because the architecture sounds more impressive** — Recommending microservices because they sound more sophisticated for a project whose actual risk is proving anyone wants the product at all
+- **The modules are named "Data," "Managers," and "Helpers," organized around database tables instead of business capabilities** — Splitting modules by database table instead of by business capability, producing technically-named modules ("Data," "Managers") that hide business logic instead of exposing it
+- **Read replicas and dedicated queue workers get added before anyone's confirmed the basic indexes and pagination fixes have actually been tried** — Jumping to Stage 3 or Stage 4 scaling infrastructure without confirming Stage 1 fixes (indexes, pagination, query shape) have actually been exhausted first
 - Treating a service split as reversible and low-cost when it is neither — extracting a service is a one-way door that should require a documented ADR (lesson 387)
 
 ## Further Reading

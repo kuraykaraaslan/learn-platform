@@ -54,10 +54,10 @@ Readiness levels turn "is this ready to build" into a defensible answer instead 
 - When deciding whether a choice is significant enough to warrant a recorded ADR versus being a routine implementation detail
 
 ## Common Mistakes
-- Jumping straight to schema or stack selection before establishing which readiness level the project is at, which is the technical-side equivalent of skipping straight to screens from a one-sentence pitch
-- Treating "it's just an MVP" as license to skip the sequence entirely rather than moving through it at appropriately reduced depth (the same mistake called out in MVP scoping, lesson 375)
-- Applying the architecture principles as a checklist to be satisfied rather than a decision heuristic for resolving genuine trade-offs
-- Producing a review verdict of "looks fine" instead of one of the three defined outcomes, which leaves the next phase without a clear go/no-go signal
+- **The database schema is already being designed before anyone's established whether this project is even past readiness level 0** — Jumping straight to schema or stack selection before establishing which readiness level the project is at, which is the technical-side equivalent of skipping straight to screens from a one-sentence pitch
+- **"It's just an MVP" is the reason the whole architecture sequence gets skipped instead of run at a lighter depth** — Treating "it's just an MVP" as license to skip the sequence entirely rather than moving through it at appropriately reduced depth (the same mistake called out in MVP scoping, lesson 375)
+- **The ten architecture principles get checked off one by one, with nobody actually using them to resolve a real trade-off** — Applying the architecture principles as a checklist to be satisfied rather than a decision heuristic for resolving genuine trade-offs
+- **The architecture review ends with "looks fine, let's build," instead of a stated READY / READY WITH ASSUMPTIONS / NOT READY verdict** — Producing a review verdict of "looks fine" instead of one of the three defined outcomes, which leaves the next phase without a clear go/no-go signal
 - Writing an ADR for a trivial implementation detail while skipping one for a decision — like the monolith-vs-service-split call — that actually locks in future migration cost
 
 ## Further Reading

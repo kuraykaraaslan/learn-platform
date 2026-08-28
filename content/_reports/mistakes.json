@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 269,
-    "lessonsWithZeroDrillable": 29,
+    "single": 240,
+    "lessonsWithZeroDrillable": 28,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 347
+    "lessonsWithTwoPlusDrillable": 355
   },
   "lessons": [
     {
@@ -1453,14 +1453,14 @@
       "file": "177_value_proposition_and_buyer_personas.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {
@@ -1468,14 +1468,14 @@
       "file": "178_differentiation_and_competitive_alternatives.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -1483,14 +1483,14 @@
       "file": "179_message_pillars_and_brand_voice.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {
@@ -1498,14 +1498,14 @@
       "file": "180_proof_credibility_and_founder_narrative.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {
@@ -5743,14 +5743,14 @@
       "file": "387_technical_architecture_operating_system.md",
       "verified": true,
       "total": 5,
-      "single": 4,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5773,14 +5773,14 @@
       "file": "389_domain_modeling_module_boundaries_scaling_path.md",
       "verified": true,
       "total": 5,
-      "single": 4,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5788,14 +5788,14 @@
       "file": "390_technology_selection_governance.md",
       "verified": true,
       "total": 5,
-      "single": 4,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5833,14 +5833,14 @@
       "file": "393_api_integration_event_driven_decisions.md",
       "verified": true,
       "total": 5,
-      "single": 4,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 4
+        "single": 0
       }
     },
     {

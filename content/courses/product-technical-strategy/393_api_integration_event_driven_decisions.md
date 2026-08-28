@@ -62,10 +62,10 @@ function; switching providers means changing one module, not every call site
 - When naming a new event or job — check it against the business-fact naming discipline before it enters the codebase as a vague technical command
 
 ## Common Mistakes
-- Calling a slow or unreliable third-party API synchronously inside a critical user flow like checkout, turning a provider hiccup into a user-facing failure
-- Showing "success" in the UI for a workflow that is actually still processing asynchronously, then leaving the user to discover the gap through a support ticket
-- Naming events and jobs after technical actions (ProcessData, RunTask) instead of business facts, making the event log unreadable to anyone but the original author
-- Treating every third-party dependency as always available and skipping the fallback/failure-impact fields in the risk register
+- **The payment provider gets called synchronously inside the checkout request, and a provider hiccup times out the user's browser** — Calling a slow or unreliable third-party API synchronously inside a critical user flow like checkout, turning a provider hiccup into a user-facing failure
+- **The UI shows "ticket issued" the moment the request is queued, and the user has no idea it's actually still processing** — Showing "success" in the UI for a workflow that is actually still processing asynchronously, then leaving the user to discover the gap through a support ticket
+- **The event log is full of entries named `ProcessData` and `RunTask`, unreadable to anyone who wasn't there when they were written** — Naming events and jobs after technical actions (ProcessData, RunTask) instead of business facts, making the event log unreadable to anyone but the original author
+- **The integration risk register has no fallback or failure-impact field, on the assumption the third-party API will just always be up** — Treating every third-party dependency as always available and skipping the fallback/failure-impact fields in the risk register
 - Skipping the exit strategy field because switching providers feels hypothetical — until pricing changes or the provider shuts down and there's no abstraction in place
 
 ## Further Reading

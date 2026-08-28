@@ -52,9 +52,9 @@ Who I help:    ...for <specific audience>.
 
 ## Common Mistakes
 - Making a claim ("secure," "production-ready," "business-oriented") with no specific artifact behind it — this is the single most common credibility failure.
-- Writing a founder story that's really a resume in paragraph form, listing skills and jobs without ever stating the realization that explains your point of view.
-- Oversharing unrelated personal history in a founder narrative instead of keeping it tied to professional judgment and relevance.
-- Waiting until every project is "impressive enough" to publish as proof, instead of starting with three honest, well-written case studies now.
+- **The founder story lists schools, jobs, and skills in order, with no realization anywhere that explains why the work is done this way** — Writing a founder story that's really a resume in paragraph form, listing skills and jobs without ever stating the realization that explains your point of view.
+- **The About page spends three paragraphs on a childhood hobby that has nothing to do with how client work actually gets done** — Oversharing unrelated personal history in a founder narrative instead of keeping it tied to professional judgment and relevance.
+- **Three solid case studies sit unpublished because none of them feel "impressive enough" yet** — Waiting until every project is "impressive enough" to publish as proof, instead of starting with three honest, well-written case studies now.
 
 ## Further Reading
 - *Influence: The Psychology of Persuasion* — Robert Cialdini: the mechanics of why social proof and authority proof change buyer behavior.

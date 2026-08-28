@@ -61,10 +61,10 @@ component is a mature, boring-good default matched to stated requirements.
 - When selecting a third-party provider (payment, SMS, storage) — apply the provider selection criteria as the narrower version of the same discipline
 
 ## Common Mistakes
-- Choosing a technology because it's currently popular or personally interesting rather than because it fits the stated requirements
-- Adding Redis, a message queue, or a new database "because it might be needed later" without a current requirement driving it — this is exactly the overbuilding the architecture principles (lesson 387) warn against
-- Recommending a stack without stating requirements first, so the recommendation can't actually be evaluated against anything
-- Introducing an unfamiliar technology into paid client work without disclosing the associated learning cost and risk
+- **The new framework everyone's excited about gets picked for the project, with no requirement actually driving that choice** — Choosing a technology because it's currently popular or personally interesting rather than because it fits the stated requirements
+- **Redis gets added to the stack "because it might be needed later," with no current requirement behind it** — Adding Redis, a message queue, or a new database "because it might be needed later" without a current requirement driving it — this is exactly the overbuilding the architecture principles (lesson 387) warn against
+- **The stack recommendation goes out before anyone's written down what the project actually requires** — Recommending a stack without stating requirements first, so the recommendation can't actually be evaluated against anything
+- **An unfamiliar framework gets adopted on paid client work, with nobody telling the client about the learning curve involved** — Introducing an unfamiliar technology into paid client work without disclosing the associated learning cost and risk
 - Treating technology selection and vendor evaluation as the same decision — a stack choice and a specific vendor's contract terms are different questions with different owners
 
 ## Further Reading

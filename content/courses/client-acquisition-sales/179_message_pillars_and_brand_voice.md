@@ -57,9 +57,9 @@ is a worse failure than one that's slightly slower."
 
 ## Common Mistakes
 - Naming technologies or service categories ("React," "backend," "design") as pillars instead of beliefs — these don't generate opinionated content.
-- Trying to maintain more than six pillars, which dilutes recognition and makes content planning harder, not easier.
-- Writing in an inflated, buzzword-heavy voice ("enterprise-grade," "revolutionary") that requires no proof and is indistinguishable from every other freelancer's copy.
-- Changing voice per platform so drastically that a reader following you on LinkedIn and then reading a proposal wouldn't recognize it's the same person.
+- **The pillar list has grown to nine, and content planning has gotten harder instead of easier since adding the last few** — Trying to maintain more than six pillars, which dilutes recognition and makes content planning harder, not easier.
+- **The About page reads "enterprise-grade, revolutionary solutions," indistinguishable from every other freelancer's copy** — Writing in an inflated, buzzword-heavy voice ("enterprise-grade," "revolutionary") that requires no proof and is indistinguishable from every other freelancer's copy.
+- **The LinkedIn voice is casual and playful, and the proposal voice is stiff and formal, to the point a reader wouldn't guess they're the same person** — Changing voice per platform so drastically that a reader following you on LinkedIn and then reading a proposal wouldn't recognize it's the same person.
 
 ## Further Reading
 - *Everybody Writes* — Ann Handley: a practical guide to developing a clear, consistent professional writing voice.

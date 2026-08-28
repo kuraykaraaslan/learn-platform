@@ -884,7 +884,7 @@
         "keyConcepts": "042bb369b74c5a97",
         "exampleCode": "297eb45cb84a8346",
         "whenToUse": "181698a46853c165",
-        "commonMistakes": "21b6da943e89dcea",
+        "commonMistakes": "35e60bd97d59d64b",
         "furtherReading": "7aa02818e22dc30f"
       },
       "178_differentiation_and_competitive_alternatives.md": {
@@ -893,7 +893,7 @@
         "keyConcepts": "56b581df1207a415",
         "exampleCode": "569c120e0590f250",
         "whenToUse": "63186c860744b2fe",
-        "commonMistakes": "59cfcd2ce0608faf",
+        "commonMistakes": "7366c4c71a91dd21",
         "furtherReading": "83402eeb5ec80a8a"
       },
       "179_message_pillars_and_brand_voice.md": {
@@ -902,7 +902,7 @@
         "keyConcepts": "d0101447695158ba",
         "exampleCode": "00dc3b997b206b34",
         "whenToUse": "8ed51723cca14f7a",
-        "commonMistakes": "aa6a127ae4af81a9",
+        "commonMistakes": "ab010f3ea12285dc",
         "furtherReading": "b6bf1237d3b9821e"
       },
       "180_proof_credibility_and_founder_narrative.md": {
@@ -911,7 +911,7 @@
         "keyConcepts": "c3000e76d2225086",
         "exampleCode": "4e839c93579e5419",
         "whenToUse": "603e180e2be74e08",
-        "commonMistakes": "b2427e26e7a8954f",
+        "commonMistakes": "bd1b60306232a9a3",
         "furtherReading": "165c61c425844274"
       },
       "181_bio_headline_and_anti_positioning.md": {
@@ -3486,7 +3486,7 @@
         "keyConcepts": "093cf379761b997d",
         "exampleCode": "32d74f9fc78dbc3f",
         "whenToUse": "de49bd73eb5f5cf5",
-        "commonMistakes": "4347f3a3de470424",
+        "commonMistakes": "1c144aa4f5690085",
         "furtherReading": "a87e1f778bfb7fc6"
       },
       "388_requirements_to_architecture_translation.md": {
@@ -3504,7 +3504,7 @@
         "keyConcepts": "b5f97956ac556b3c",
         "exampleCode": "e1da5f2c9e8a80f2",
         "whenToUse": "ec67f381a98c4d6b",
-        "commonMistakes": "0d7d3226c585cd16",
+        "commonMistakes": "c6bfd3bda9baff2a",
         "furtherReading": "fb25001a69b0454e"
       },
       "390_technology_selection_governance.md": {
@@ -3513,7 +3513,7 @@
         "keyConcepts": "44b090ec8f492fcb",
         "exampleCode": "4df85015df46a879",
         "whenToUse": "32ee181b0fefc235",
-        "commonMistakes": "af7e24766908c444",
+        "commonMistakes": "e31d0fcd530175f6",
         "furtherReading": "e6bda0722e3fd7b3"
       },
       "391_nfr_production_readiness_strategy.md": {
@@ -3540,7 +3540,7 @@
         "keyConcepts": "0a121117a693b880",
         "exampleCode": "1ec8e76f38b9a0f7",
         "whenToUse": "dcd47b40c2136f61",
-        "commonMistakes": "6506f1cf5be51d15",
+        "commonMistakes": "5df5f8874d12e5e7",
         "furtherReading": "fda904f01f5dc775"
       },
       "394_auth_identity_multi_tenancy_decisions.md": {

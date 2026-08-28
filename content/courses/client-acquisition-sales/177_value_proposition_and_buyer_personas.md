@@ -56,10 +56,10 @@ functional layer is filled in and the other three are empty.
 - When qualifying a lead — knowing their persona tells you which fear to address first on the call.
 
 ## Common Mistakes
-- Writing a value proposition that only states the functional layer ("I build dashboards") and stops there.
-- Building one persona document and using it to write to every audience the same way, instead of picking the primary audience per asset.
+- **The value proposition says "I build dashboards" and stops there, with no business, emotional, or risk layer behind it** — Writing a value proposition that only states the functional layer ("I build dashboards") and stops there.
+- **The same persona document gets used to write to the SME owner, the startup founder, and the technical PM, all in identical language** — Building one persona document and using it to write to every audience the same way, instead of picking the primary audience per asset.
 - Claiming "production-ready" or "secure" with no attached proof artifact — this reads as marketing filler to a skeptical buyer.
-- Using technical vocabulary with a non-technical buyer persona because it's the language you're most comfortable in, not the language they think in.
+- **"Architecture," "schema," and "API design" show up in copy written for a non-technical SME owner, because that's the vocabulary that's comfortable to write in** — Using technical vocabulary with a non-technical buyer persona because it's the language you're most comfortable in, not the language they think in.
 
 ## Further Reading
 - *Value Proposition Design* — Alexander Osterwalder et al.: the standard framework for mapping customer jobs, pains, and gains to a value proposition.
