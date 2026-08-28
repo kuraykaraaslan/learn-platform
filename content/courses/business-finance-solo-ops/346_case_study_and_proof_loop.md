@@ -78,10 +78,10 @@ struggled with <problem>. He helped us <result>. The process was
 - When a project cannot be made public, as the trigger to build a sanitized version instead of skipping proof capture entirely.
 
 ## Common Mistakes
-- Finishing a successful project and moving straight to the next one without capturing a single proof asset from it.
-- Waiting months to ask for a testimonial, by which point the client's specific, vivid memory of the value has faded into a generic compliment.
-- Publishing case study details, screenshots, or metrics without explicit client permission, risking the relationship for a marketing asset.
-- Treating a case study as a one-time portfolio entry instead of extracting it into multiple reusable pieces (LinkedIn post, proposal block, FAQ answer).
+- **A strong project just wrapped up, and attention has already moved entirely to the next client** — Finishing a successful project and moving straight to the next one without capturing a single proof asset from it.
+- **The testimonial request finally goes out four months after the project delivered** — Waiting months to ask for a testimonial, by which point the client's specific, vivid memory of the value has faded into a generic compliment.
+- **The new case study includes real screenshots and the client's name, and nobody asked first** — Publishing case study details, screenshots, or metrics without explicit client permission, risking the relationship for a marketing asset.
+- **The case study lives on the portfolio page, and that's the only place it's ever been used** — Treating a case study as a one-time portfolio entry instead of extracting it into multiple reusable pieces (LinkedIn post, proposal block, FAQ answer).
 
 ## Further Reading
 - *Building a StoryBrand* — Donald Miller: a framework for turning a client's problem-to-result journey into a clear, persuasive narrative.

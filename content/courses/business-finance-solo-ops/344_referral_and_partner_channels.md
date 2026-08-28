@@ -70,10 +70,10 @@ The partnership email was only sent after Marcus had already produced one real, 
 - When designing outreach materials — to make sure a forwardable one-paragraph description and ideal-client profile exist before asking anyone to refer you.
 
 ## Common Mistakes
-- Asking for referrals vaguely ("let me know if you hear of anyone") instead of naming the specific ideal client, which produces no forwardable action.
-- Formalizing a partner agreement with someone who has never actually sent a real referral, based only on a promising conversation.
-- Promising a referral fee verbally and never confirming the percentage, cap, and trigger in writing before the first payment is owed.
-- Letting an active partner go quiet for 90+ days and then being surprised when their referral volume drops to zero.
+- **The referral ask at the end of the call is "let me know if you hear of anyone who needs a developer"** — Asking for referrals vaguely ("let me know if you hear of anyone") instead of naming the specific ideal client, which produces no forwardable action.
+- **A great conversation with a designer leads straight to a formal partner agreement, before they've ever actually sent a referral** — Formalizing a partner agreement with someone who has never actually sent a real referral, based only on a promising conversation.
+- **A referral fee was mentioned on a call months ago, and the first payment is now due with nothing in writing about the percentage or cap** — Promising a referral fee verbally and never confirming the percentage, cap, and trigger in writing before the first payment is owed.
+- **A partner who used to send solid referrals hasn't been in touch in four months, and that's only now being noticed** — Letting an active partner go quiet for 90+ days and then being surprised when their referral volume drops to zero.
 
 ## Further Reading
 - *The Referral Engine* — John Jantsch: a full framework for building word-of-mouth systems deliberately rather than hoping they happen.

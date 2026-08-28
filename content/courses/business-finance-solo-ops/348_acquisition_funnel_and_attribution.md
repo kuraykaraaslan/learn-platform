@@ -62,10 +62,10 @@ The funnel numbers pointed to a specific, actionable bottleneck — more top-of-
 - When comparing two channels for future investment, to compare them on qualified leads and closed revenue rather than on lead count.
 
 ## Common Mistakes
-- Evaluating a channel purely by traffic or impressions, missing that it produces zero qualified leads.
-- Reacting to a weak top-of-funnel number by producing more content, when the actual bottleneck is further down the funnel (e.g., proposal-to-close).
-- Leaving attribution source blank or defaulting everything to "website" when the real source was a LinkedIn post or a referral.
-- Comparing channels on lead count alone without adjusting for the very different lead quality each channel tends to produce.
+- **The LinkedIn channel drives the most traffic of anything, and it's never actually produced a qualified lead** — Evaluating a channel purely by traffic or impressions, missing that it produces zero qualified leads.
+- **Close rate has been the real problem for two months, and the response is another round of content** — Reacting to a weak top-of-funnel number by producing more content, when the actual bottleneck is further down the funnel (e.g., proposal-to-close).
+- **Every new lead in the tracker gets logged with the source field set to "website" by default** — Leaving attribution source blank or defaulting everything to "website" when the real source was a LinkedIn post or a referral.
+- **Channel A brought in twice as many leads as Channel B this month, so it gets called the better channel** — Comparing channels on lead count alone without adjusting for the very different lead quality each channel tends to produce.
 
 ## Further Reading
 - *Hacking Growth* — Sean Ellis and Morgan Brown: a systematic approach to funnel diagnosis and growth experimentation used widely in early-stage teams, scalable down to a solo operation.

@@ -59,9 +59,9 @@ No expansion conversation happened until every recovery signal was independently
 
 ## Common Mistakes
 - Treating a quiet, unresponsive client as green by default — silence is not satisfaction and should trigger a status check, not an assumption.
-- Pitching an upsell or retainer to a yellow account because the relationship "seems fine otherwise," which reads as tone-deaf and can push yellow to red.
-- Moving status back to green immediately after a single positive reply, before all five recovery signals are actually present.
-- Defending the quality of the work before listening fully to what the client experienced, which shuts down the information needed to actually resolve the issue.
+- **The account has been yellow for two weeks, and a retainer proposal goes out anyway because "things seem fine otherwise"** — Pitching an upsell or retainer to a yellow account because the relationship "seems fine otherwise," which reads as tone-deaf and can push yellow to red.
+- **One friendly reply comes in after a rocky patch, and the account gets marked green the same day** — Moving status back to green immediately after a single positive reply, before all five recovery signals are actually present.
+- **A client raises a complaint, and the first thing said back is a full explanation of why the work was actually done correctly** — Defending the quality of the work before listening fully to what the client experienced, which shuts down the information needed to actually resolve the issue.
 
 ## Further Reading
 - *The Trusted Advisor* — David Maister, Charles Green, and Robert Galford: on building the kind of credibility and trust that keeps accounts in green territory in the first place.

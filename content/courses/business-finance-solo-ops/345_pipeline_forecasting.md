@@ -63,10 +63,10 @@ The forecast didn't just total the numbers — it caught a capacity conflict and
 - Whenever one client's weighted value starts to dominate the pipeline, as an early trigger to diversify acquisition effort.
 
 ## Common Mistakes
-- Counting a verbal "yes" or strong interest as guaranteed revenue instead of applying its actual stage probability.
-- Forecasting revenue without checking it against delivery capacity, leading to overcommitment the moment more than one deal closes at once.
-- Sending a proposal and letting it sit for over a week with no scheduled follow-up, then being surprised when it goes cold.
-- Relying on one large potential deal to make the monthly forecast look healthy, rather than diversifying across several smaller ones.
+- **A client said "yes, let's do this" on a call, and that revenue is already counted as confirmed for next month** — Counting a verbal "yes" or strong interest as guaranteed revenue instead of applying its actual stage probability.
+- **Next month's forecast looks strong, and nobody's checked whether there's enough delivery capacity to actually do all of it** — Forecasting revenue without checking it against delivery capacity, leading to overcommitment the moment more than one deal closes at once.
+- **A proposal went out ten days ago, and there's been no follow-up scheduled or sent since** — Sending a proposal and letting it sit for over a week with no scheduled follow-up, then being surprised when it goes cold.
+- **The monthly forecast looks healthy because of one large deal that hasn't actually closed yet** — Relying on one large potential deal to make the monthly forecast look healthy, rather than diversifying across several smaller ones.
 
 ## Further Reading
 - *Predictable Revenue* — Aaron Ross and Marylou Tyler: on building a disciplined, stage-based approach to pipeline instead of relying on sporadic effort.

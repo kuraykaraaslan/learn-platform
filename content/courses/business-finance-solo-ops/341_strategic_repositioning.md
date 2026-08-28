@@ -67,10 +67,10 @@ Nothing here is fabricated — the interim pitch states only what is already tru
 - During a quarterly business review, to check whether the last quarter's client mix moved toward or away from the desired position.
 
 ## Common Mistakes
-- Announcing a new niche publicly before any proof exists, then losing credibility the first time a prospect asks a specific question.
-- Changing positioning every few months instead of committing long enough to accumulate real proof.
-- Cutting off reliable legacy clients immediately after deciding on a new direction, before the new pipeline has produced a single deal.
-- Choosing a niche because it sounds prestigious rather than because it is a commercially valuable, reachable problem you can actually solve.
+- **The LinkedIn headline now reads "the go-to fintech technical partner," and there isn't a single fintech project in the portfolio** — Announcing a new niche publicly before any proof exists, then losing credibility the first time a prospect asks a specific question.
+- **The service page has described a different specialty every couple of months this year** — Changing positioning every few months instead of committing long enough to accumulate real proof.
+- **The decision to specialize in healthcare software was made this week, and the retail clients are already being told goodbye** — Cutting off reliable legacy clients immediately after deciding on a new direction, before the new pipeline has produced a single deal.
+- **"AI infrastructure consulting" sounds like it would command a premium, so that's the new positioning** — Choosing a niche because it sounds prestigious rather than because it is a commercially valuable, reachable problem you can actually solve.
 
 ## Further Reading
 - *Obviously Awesome* — April Dunford: a practical framework for positioning products and services around the value a specific buyer already cares about.

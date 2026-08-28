@@ -55,10 +55,10 @@ Every dashboard, weekly review, and experiment built afterward is checked agains
 - When a new channel or tactic is proposed, to immediately classify whether it targets reach, trust, lead capture, qualification, or a later stage in the model.
 
 ## Common Mistakes
-- Choosing followers, impressions, or website traffic as the primary growth metric because they're easy to track and always trending upward.
-- Counting an unqualified lead (no budget signal, no timeline, no decision-maker access) as equivalent to a qualified one in the monthly count.
-- Confusing activity metrics (posts published, messages sent) with actual outcomes during a review, and declaring a channel successful based on activity alone.
-- Setting rigid, enterprise-style OKR targets that don't account for a solo operator's actual weekly capacity, leading to burnout chasing an arbitrary number.
+- **The dashboard's headline number is follower count, and it's been climbing steadily all quarter** — Choosing followers, impressions, or website traffic as the primary growth metric because they're easy to track and always trending upward.
+- **A lead with no stated budget and no clear timeline gets logged in this month's qualified count anyway** — Counting an unqualified lead (no budget signal, no timeline, no decision-maker access) as equivalent to a qualified one in the monthly count.
+- **Twelve posts went out this month, and that's the evidence being used to call the content channel a success** — Confusing activity metrics (posts published, messages sent) with actual outcomes during a review, and declaring a channel successful based on activity alone.
+- **This quarter's target is 20 qualified opportunities a month, copied from an OKR template with no relation to actual solo capacity** — Setting rigid, enterprise-style OKR targets that don't account for a solo operator's actual weekly capacity, leading to burnout chasing an arbitrary number.
 
 ## Further Reading
 - *Lean Analytics* — Alistair Croll and Benjamin Yoskovitz: the original case for choosing One Metric That Matters and building a growth model around it.

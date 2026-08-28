@@ -60,10 +60,10 @@ The score justified opening the conversation, but the actual ask still waited fo
 - Immediately after noticing any Category 5 risk signal — to redirect from expansion planning to relationship recovery instead.
 
 ## Common Mistakes
-- Pitching an upsell based on the calendar (it's been 60 days) rather than on an actual observed signal.
-- Treating a single positive comment as automatic permission to pitch, without asking the clarifying question that would confirm the signal is real and material.
+- **The 60-day check-in is scheduled, and an upsell pitch is already drafted to go with it regardless of how the call goes** — Pitching an upsell based on the calendar (it's been 60 days) rather than on an actual observed signal.
+- **A client mentions liking the dashboard, and that one comment turns straight into an upsell pitch** — Treating a single positive comment as automatic permission to pitch, without asking the clarifying question that would confirm the signal is real and material.
 - Recommending an expansion that doesn't map to a genuine business value category — offering a feature because it's interesting to build rather than because it solves an observed problem.
-- Ignoring a Category 5 risk signal (slow responses, tightened budget language) and pitching anyway, which reads as tone-deaf and accelerates the relationship's decline.
+- **Responses have slowed and budget language has gotten cautious, and the expansion pitch goes out on schedule anyway** — Ignoring a Category 5 risk signal (slow responses, tightened budget language) and pitching anyway, which reads as tone-deaf and accelerates the relationship's decline.
 
 ## Further Reading
 - *The Challenger Customer* — Brent Adamson, Matthew Dixon, Pat Spenner, and Nick Toman: on recognizing genuine buying signals inside an account rather than guessing at readiness.
