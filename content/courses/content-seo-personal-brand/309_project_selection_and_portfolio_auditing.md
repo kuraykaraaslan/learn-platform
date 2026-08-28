@@ -57,11 +57,11 @@ Total: __ / 35
 - When a specific buyer type (e.g., agency partners) has no representative project proving relevant capability
 
 ## Common Mistakes
-- Including a project because it's recent or uses trendy technology rather than because it proves a buyer-relevant capability
-- Keeping every project "just in case" instead of applying the exclusion criteria honestly
-- Letting the strongest case study sit below weaker items instead of featuring it prominently
-- Never re-auditing the portfolio after the initial launch, so it drifts out of sync with current positioning
-- Presenting an outdated, lower-quality project as current best work instead of reframing it as a lesson
+- **A project makes the portfolio because it's recent and uses a trendy framework** — Including a project because it's recent or uses trendy technology rather than because it proves a buyer-relevant capability
+- **Every project you've ever shipped stays in the portfolio, "just in case"** — Keeping every project "just in case" instead of applying the exclusion criteria honestly
+- **The strongest case study sits third, below two weaker ones** — Letting the strongest case study sit below weaker items instead of featuring it prominently
+- **The portfolio hasn't been touched since it first launched** — Never re-auditing the portfolio after the initial launch, so it drifts out of sync with current positioning
+- **An old project no longer reflects your current skill level, and it's still presented as best work** — Presenting an outdated, lower-quality project as current best work instead of reframing it as a lesson
 
 ## Further Reading
 - *The Personal MBA* — Josh Kaufman: relevant chapters on positioning and signal-versus-noise apply directly to portfolio curation discipline

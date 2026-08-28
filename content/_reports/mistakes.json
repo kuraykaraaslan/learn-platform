@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 888,
-    "lessonsWithZeroDrillable": 164,
+    "single": 858,
+    "lessonsWithZeroDrillable": 158,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 195
+    "lessonsWithTwoPlusDrillable": 201
   },
   "lessons": [
     {
@@ -2833,14 +2833,14 @@
       "file": "306_case_study_structure_narrative_arc_and_operating_system.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2848,14 +2848,14 @@
       "file": "307_confidentiality_anonymization_and_technical_depth_calibration.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2863,14 +2863,14 @@
       "file": "308_case_study_metrics_outcomes_and_evidence_levels.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2878,14 +2878,14 @@
       "file": "309_project_selection_and_portfolio_auditing.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2893,14 +2893,14 @@
       "file": "310_visual_proof_screenshots_and_demo_videos.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2908,14 +2908,14 @@
       "file": "311_testimonials_and_github_as_proof.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {

@@ -62,11 +62,11 @@ Weak:  "screenshot1" / "image" / "project photo"
 - When an architecture diagram exists but has no explanatory text around it
 
 ## Common Mistakes
-- Dropping in screenshots with no caption, context, or explanation of what they prove
-- Demoing every feature equally instead of the one workflow that actually proves the point
-- Recording a walkthrough against a real environment without disabling destructive actions first
-- Making a portfolio demo as long as a technical walkthrough, losing a business-buyer audience before the point lands
-- Including an architecture diagram with no accompanying text, leaving it as pure decoration
+- **A screenshot is dropped into a case study with no caption explaining what it proves** — Dropping in screenshots with no caption, context, or explanation of what they prove
+- **A demo video walks through every feature at equal length** — Demoing every feature equally instead of the one workflow that actually proves the point
+- **A screen recording runs against a real environment with live delete buttons still active** — Recording a walkthrough against a real environment without disabling destructive actions first
+- **A portfolio demo for a business buyer runs as long as an internal technical walkthrough** — Making a portfolio demo as long as a technical walkthrough, losing a business-buyer audience before the point lands
+- **An architecture diagram sits in a case study with no surrounding text** — Including an architecture diagram with no accompanying text, leaving it as pure decoration
 
 ## Further Reading
 - *Show Your Work* — Austin Kleon: a useful mindset shift for treating process visibility itself as proof worth sharing, relevant to both screenshots and demos

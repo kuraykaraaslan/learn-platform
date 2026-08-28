@@ -57,11 +57,11 @@ Result: The architecture separates fast operational availability from
 - When a technical decision is worth including but needs framing that works for a non-technical reader too
 
 ## Common Mistakes
-- Assuming silence or a past casual conversation counts as permission to use a client's name or screenshots
-- Publishing admin screens with real records instead of recreating the flow with demo data
-- Opening a case study with a package or technology list instead of the business benefit it enabled
-- Exposing security-sensitive architecture details that could be misused by exposing them publicly
-- Treating "more developer-level detail everywhere" as automatically more credible, regardless of who's actually reading
+- **A client mentioned your work favorably once, in passing, months ago** — Assuming silence or a past casual conversation counts as permission to use a client's name or screenshots
+- **A published screenshot shows an admin panel with real customer records visible** — Publishing admin screens with real records instead of recreating the flow with demo data
+- **A case study opens with the tech stack and package list** — Opening a case study with a package or technology list instead of the business benefit it enabled
+- **A case study describes the exact auth flow and infrastructure layout in public detail** — Exposing security-sensitive architecture details that could be misused by exposing them publicly
+- **A case study goes to full developer-level depth regardless of who's actually going to read it** — Treating "more developer-level detail everywhere" as automatically more credible, regardless of who's actually reading
 
 ## Further Reading
 - [OWASP's guidance on information disclosure risks](https://owasp.org) — a useful technical grounding for what's genuinely risky to publish about a system's architecture

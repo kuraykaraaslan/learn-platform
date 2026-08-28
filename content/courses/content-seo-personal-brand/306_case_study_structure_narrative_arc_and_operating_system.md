@@ -74,11 +74,11 @@ Format length should match placement rather than being fixed everywhere: a 150�
 - Reviewing an existing case study that opens with the tech stack instead of the business problem
 
 ## Common Mistakes
-- Opening with technology names instead of the business problem the project actually solved
-- Making claims ("scalable and secure") with no specific decision or trade-off backing them up
-- Skipping the before-state entirely, leaving the after-state with nothing to contrast against
-- Inventing a precise metric ("reduced work by 80%") when the real number was never measured
-- Using the same case study length and depth regardless of where it will actually be placed
+- **A case study opens with "Built with React, Node.js, and PostgreSQL"** — Opening with technology names instead of the business problem the project actually solved
+- **A case study claims the result was "scalable and secure" with no specific decision behind it** — Making claims ("scalable and secure") with no specific decision or trade-off backing them up
+- **A case study jumps straight to the after-state with no before-state described** — Skipping the before-state entirely, leaving the after-state with nothing to contrast against
+- **A case study needs a number, and "reduced work by 80%" sounds about right** — Inventing a precise metric ("reduced work by 80%") when the real number was never measured
+- **The same case study, same length, gets placed on the homepage and in a detailed proposal appendix** — Using the same case study length and depth regardless of where it will actually be placed
 
 ## Further Reading
 - *Made to Stick* — Chip Heath & Dan Heath: the underlying research on why concrete, story-shaped explanations outperform abstract claims

@@ -67,11 +67,11 @@ What is intentionally not included.
 - Deciding where a testimonial should live — which case study, service page, or proposal it belongs near
 
 ## Common Mistakes
-- Asking for "a testimonial" with no guiding questions and receiving one generic, unusable line back
-- Inventing or heavily rewriting a testimonial's substance instead of getting explicit client approval for edits
-- Publishing a GitHub repository with no README context beyond a raw file listing
-- Listing a tech stack with no explanation of why each piece was actually chosen for the project
-- Accidentally publishing client-owned code, credentials, or business logic under a personal portfolio repository
+- **A client is asked for "a testimonial," nothing more specific, and sends back one generic line** — Asking for "a testimonial" with no guiding questions and receiving one generic, unusable line back
+- **A testimonial gets polished and reworded before it's published** — Inventing or heavily rewriting a testimonial's substance instead of getting explicit client approval for edits
+- **A public GitHub repo has a file listing and no README explaining what it is** — Publishing a GitHub repository with no README context beyond a raw file listing
+- **A README lists the tech stack with no explanation of why any of it was chosen** — Listing a tech stack with no explanation of why each piece was actually chosen for the project
+- **A portfolio repo still has a client's proprietary code or credentials sitting in its history** — Accidentally publishing client-owned code, credentials, or business logic under a personal portfolio repository
 
 ## Further Reading
 - *Influence* — Robert Cialdini: the social-proof mechanics that explain precisely why a specific testimonial transfers trust and a generic one doesn't

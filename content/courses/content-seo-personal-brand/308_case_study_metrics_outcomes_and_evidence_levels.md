@@ -56,11 +56,11 @@ reduced risk of overlapping bookings."
 - Preparing to ask a client for a testimonial, so the right outcome questions get asked at the same time
 
 ## Common Mistakes
-- Inventing a specific percentage because the case study "needs a number" to feel complete
-- Writing Level 4 (intended) results in Level 1 (measured) language, implying more certainty than exists
-- Only ever looking for business metrics and missing legitimate operational or technical wins that are just as credible
-- Asking for a testimonial without asking the specific outcome questions that would make it concrete
-- Using superlative language ("massively improved," "10x better") with no evidence behind the specific claim
+- **A case study feels incomplete without a specific percentage, so one gets written in** — Inventing a specific percentage because the case study "needs a number" to feel complete
+- **An intended-but-unmeasured result is written in the same confident language as a number you actually measured** — Writing Level 4 (intended) results in Level 1 (measured) language, implying more certainty than exists
+- **A project had no clean business metric, so the case study skips a results section entirely** — Only ever looking for business metrics and missing legitimate operational or technical wins that are just as credible
+- **A client is asked for "a testimonial," open-ended, nothing more specific** — Asking for a testimonial without asking the specific outcome questions that would make it concrete
+- **A case study claims the result was "massively improved" or "10x better"** — Using superlative language ("massively improved," "10x better") with no evidence behind the specific claim
 
 ## Further Reading
 - *How to Measure Anything* — Douglas Hubbard: a rigorous, practical approach to quantifying outcomes honestly even under real uncertainty
