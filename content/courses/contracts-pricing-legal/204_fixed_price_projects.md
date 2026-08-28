@@ -59,10 +59,10 @@ This proposal is valid for 14 calendar days from the date above.
 - When you can price in a specific risk buffer for the known unknowns rather than guessing them away.
 
 ## Common Mistakes
-- Agreeing to fixed price on a description that's still a vision, not a spec, to avoid losing the lead.
-- Allowing "unlimited revisions until you're happy" into the proposal because it sounds generous.
-- Structuring payment as a single invoice due after full completion, financing the entire build yourself.
-- Skipping the risk buffer on integrations or legacy systems you haven't actually inspected.
+- **The scope is still a vision statement, and a fixed price goes out anyway rather than risk losing the lead** — Agreeing to fixed price on a description that's still a vision, not a spec, to avoid losing the lead.
+- **"Unlimited revisions until you're happy" makes it into the proposal because it sounds like great service** — Allowing "unlimited revisions until you're happy" into the proposal because it sounds generous.
+- **The whole project is priced as one invoice, due after the final handover** — Structuring payment as a single invoice due after full completion, financing the entire build yourself.
+- **The quote goes out against a legacy codebase nobody's actually opened, with no risk buffer built in** — Skipping the risk buffer on integrations or legacy systems you haven't actually inspected.
 
 ## Further Reading
 - Mike Monteiro, *You're My Favorite Client* — practical, opinionated guidance on scoping and pricing fixed-fee client work.

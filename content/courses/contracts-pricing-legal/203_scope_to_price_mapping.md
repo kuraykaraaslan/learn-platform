@@ -42,9 +42,9 @@ The other half of this discipline is recognizing complexity signals that should 
 - When deciding what to cut to fit a smaller budget, rather than discounting the same scope.
 
 ## Common Mistakes
-- Pricing by page count or screen count while ignoring backend, database, and deployment effort entirely.
-- Leaving integrations as a vague inclusion ("third-party integrations included") instead of naming which ones and what happens if more appear.
-- Letting "small extra features" slip in without being logged as their own module and change request.
+- **The quote is built entirely from counting how many screens the app needs** — Pricing by page count or screen count while ignoring backend, database, and deployment effort entirely.
+- **The proposal says "third-party integrations included," with no list of which ones or what happens if a fourth one shows up** — Leaving integrations as a vague inclusion ("third-party integrations included") instead of naming which ones and what happens if more appear.
+- **A handful of "small extra features" get added along the way, none of them logged as their own line item** — Letting "small extra features" slip in without being logged as their own module and change request.
 - Building three pricing tiers that differ only by price, not by which modules are actually included — clients see through this immediately.
 
 ## Further Reading

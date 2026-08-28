@@ -58,10 +58,10 @@ The ladder also does quiet risk management that a plain feature list can't. Some
 - When a request appears that matches a reprice trigger, as the prompt to pause and rescope the engagement rather than absorb it as a minor add-on
 
 ## Common Mistakes
-- Re-negotiating the price of the same common add-on from scratch on every project instead of maintaining one consistent, defensible number
-- Making the included-by-default baseline so generous that margin disappears on a typical project of that type
-- Showing the raw internal scope ladder to a client instead of translating chosen add-ons into clean, specific proposal language
-- Treating a scope-scale request (a reprice trigger) as if it were just a bigger add-on, absorbing three times the intended scope into the original price
+- **The sixth data entity gets priced from scratch again, the same way it was priced from scratch on the last three projects** — Re-negotiating the price of the same common add-on from scratch on every project instead of maintaining one consistent, defensible number
+- **The base admin-panel price now includes eight roles and unlimited entities, because that felt generous to offer** — Making the included-by-default baseline so generous that margin disappears on a typical project of that type
+- **The internal pricing spreadsheet, add-on markups included, gets attached directly to the client email** — Showing the raw internal scope ladder to a client instead of translating chosen add-ons into clean, specific proposal language
+- **The client mentions fifteen distinct entity types, and that gets quoted as a $2,000 add-on instead of a full rescope** — Treating a scope-scale request (a reprice trigger) as if it were just a bigger add-on, absorbing three times the intended scope into the original price
 
 ## Further Reading
 - Ronald J. Baker, *Implementing Value Pricing* — on structuring productized, pre-priced service offerings instead of custom-quoting every request from scratch

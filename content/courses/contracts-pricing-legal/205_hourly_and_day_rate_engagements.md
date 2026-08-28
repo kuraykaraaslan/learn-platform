@@ -38,10 +38,10 @@ Hourly is a poor fit when the client wants a guaranteed outcome without a define
 - Short, sprint-based implementation blocks better suited to a day rate than an hourly trickle.
 
 ## Common Mistakes
-- Billing hourly with no time-tracking discipline, leaving no defensible record if hours are questioned.
-- Letting "quick calls" and informal Slack questions go unbilled indefinitely until they're a significant chunk of unpaid time.
+- **The hourly invoice goes out at month's end with no time log behind the number** — Billing hourly with no time-tracking discipline, leaving no defensible record if hours are questioned.
+- **A five-minute Slack question here and there never quite makes it onto the invoice, month after month** — Letting "quick calls" and informal Slack questions go unbilled indefinitely until they're a significant chunk of unpaid time.
 - Accepting an hourly engagement from a client who wants a guaranteed fixed outcome — the mismatch in expectations, not the rate, causes the eventual conflict.
-- Leaving the weekly cap undefined, so a slow-communicating client discovers a much larger invoice than they expected at month's end.
+- **There's no stated weekly cap, and the client is surprised by how large this month's invoice turned out to be** — Leaving the weekly cap undefined, so a slow-communicating client discovers a much larger invoice than they expected at month's end.
 
 ## Further Reading
 - Jonathan Stark, *Hourly Billing Is Nuts* — a direct critique of open-ended time billing and when it's still appropriate.

@@ -46,10 +46,10 @@ This is general business education, not legal advice; nothing here should be rea
 - When a project's scope is stable on paper but depends on legacy code, third-party APIs, or a codebase you haven't seen.
 
 ## Common Mistakes
-- Quoting fixed price on a project description that's really a vision statement, not a scope document.
-- Using hourly billing to paper over a poor estimate rather than because the work is genuinely open-ended.
-- Offering a retainer with no stated exclusions, so "included maintenance" quietly expands to cover new feature requests.
-- Treating "payment after launch" as a pricing model rather than recognizing it as the absence of one.
+- **The scope is still a one-paragraph vision, and a fixed-price number goes out against it anyway** — Quoting fixed price on a project description that's really a vision statement, not a scope document.
+- **The estimate was rough and probably wrong, so the whole thing gets billed hourly to be safe** — Using hourly billing to paper over a poor estimate rather than because the work is genuinely open-ended.
+- **The retainer says "includes maintenance," with nothing written about what maintenance doesn't cover** — Offering a retainer with no stated exclusions, so "included maintenance" quietly expands to cover new feature requests.
+- **"We'll figure out payment once it's live" gets treated as an actual commercial term** — Treating "payment after launch" as a pricing model rather than recognizing it as the absence of one.
 
 ## Further Reading
 - Jonathan Stark, *Hourly Billing Is Nuts* — a practical case for outcome- and scope-based pricing over time-based billing.

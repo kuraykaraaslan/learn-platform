@@ -60,10 +60,10 @@ The other half of discovery that matters downstream is disqualification — reco
 - When a project shows warning signs that match known red flags, as the prompt to escalate the risk to whoever owns the client relationship rather than absorbing it silently
 
 ## Common Mistakes
-- Accepting a project into kickoff with no written handoff brief, assuming discovery covered everything because a deal was signed
-- Treating red flags that surface in week one of delivery as a surprise, when the same behavior was visible and unaddressed during discovery
-- Letting a prospect who showed clear disqualifying behavior get sold anyway without flagging the risk to whoever will actually run the delivery
-- Leaving a discovery-stage risk as an informal note instead of converting it into a tracked assumption, dependency, or exclusion before work begins
+- **The deal is signed, so kickoff starts on the assumption that discovery covered everything it needed to** — Accepting a project into kickoff with no written handoff brief, assuming discovery covered everything because a deal was signed
+- **The client pushes back on the written scope in week one, the exact same way they resisted it during the discovery call** — Treating red flags that surface in week one of delivery as a surprise, when the same behavior was visible and unaddressed during discovery
+- **The prospect balked at a deposit and demanded free architecture work during discovery, and the deal got sold anyway with no flag raised to delivery** — Letting a prospect who showed clear disqualifying behavior get sold anyway without flagging the risk to whoever will actually run the delivery
+- **A risk flagged during discovery lives in a salesperson's private notes, not anywhere the delivery team will ever see it** — Leaving a discovery-stage risk as an informal note instead of converting it into a tracked assumption, dependency, or exclusion before work begins
 
 ## Further Reading
 - Rob Fitzpatrick, *The Mom Test* — on running discovery conversations that surface real signal instead of comfortable, misleading answers

@@ -51,10 +51,10 @@ This lesson is a discipline lesson, not a legal one — but the habits here dire
 - Before agreeing to "just send a rough number so we know if we're in the right ballpark" — a rough number still anchors expectations.
 
 ## Common Mistakes
-- Treating a vivid description ("like Airbnb but for boats") as if it were a scope document.
-- Sending a number to avoid an awkward silence, then trying to walk it back later once real scope emerges.
-- Skipping the decision-maker question because it feels impolite to ask "who actually approves this?"
-- Letting urgency from the prospect ("we need this fast") compress the readiness check instead of triggering a paid discovery phase.
+- **"It's like Airbnb but for boats" is the entire scope description, and a number goes out based on that** — Treating a vivid description ("like Airbnb but for boats") as if it were a scope document.
+- **The call goes quiet after "how much would this cost," and a number gets said just to fill the silence** — Sending a number to avoid an awkward silence, then trying to walk it back later once real scope emerges.
+- **Asking "who actually approves this?" feels awkward, so the proposal goes to whoever's been friendliest on email** — Skipping the decision-maker question because it feels impolite to ask "who actually approves this?"
+- **"We need this fast" is enough to skip straight past the readiness checklist and into a quote** — Letting urgency from the prospect ("we need this fast") compress the readiness check instead of triggering a paid discovery phase.
 
 ## Further Reading
 - Alan Weiss, *Value-Based Fees* — on qualifying a client's real decision authority and budget before proposing.

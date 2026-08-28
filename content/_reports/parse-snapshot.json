@@ -1381,7 +1381,7 @@
         "keyConcepts": "0f8f3ae95c8ae4bf",
         "exampleCode": "c1af34804abe0a14",
         "whenToUse": "af3f5188d3418fc2",
-        "commonMistakes": "c175b781fd83f9a6",
+        "commonMistakes": "71d2d669edc58374",
         "furtherReading": "720737b44f095b26"
       },
       "269_scope_ladders_included_vs_priced_add_ons.md": {
@@ -1390,7 +1390,7 @@
         "keyConcepts": "01fcb675f7d0749d",
         "exampleCode": "babe9535ebcba127",
         "whenToUse": "8fab6ad69891bac1",
-        "commonMistakes": "f1a458aba7ac03d3",
+        "commonMistakes": "b5aecc7835e7bc84",
         "furtherReading": "5b3ce0b84bacf55e"
       }
     },
@@ -1790,7 +1790,7 @@
         "keyConcepts": "4f16ab733b9e09b8",
         "exampleCode": "b42d8f1aa3b40cac",
         "whenToUse": "fa7e4df16178f2b3",
-        "commonMistakes": "0db768c55e41926e",
+        "commonMistakes": "464a66af54a63468",
         "furtherReading": "a600b8cbb6636209"
       },
       "202_pricing_models.md": {
@@ -1799,7 +1799,7 @@
         "keyConcepts": "47c5ad91f78a93c2",
         "exampleCode": "8b187546400701db",
         "whenToUse": "22415c5a31261357",
-        "commonMistakes": "67ac48c8c5180aa7",
+        "commonMistakes": "84126956b7656677",
         "furtherReading": "7949275f27ecbc8c"
       },
       "203_scope_to_price_mapping.md": {
@@ -1808,7 +1808,7 @@
         "keyConcepts": "65846d98599a20bd",
         "exampleCode": "5e46234612d29ad3",
         "whenToUse": "7ac1975e32331487",
-        "commonMistakes": "a71b796f9c9d04c6",
+        "commonMistakes": "a6bfb3ec305a665e",
         "furtherReading": "a692f5a43ae4a895"
       },
       "204_fixed_price_projects.md": {
@@ -1817,7 +1817,7 @@
         "keyConcepts": "25d62602ab613006",
         "exampleCode": "97a37f9c92c4c0e1",
         "whenToUse": "be2b771361e460bc",
-        "commonMistakes": "ae02bbb65205e4ca",
+        "commonMistakes": "5f0b3cc0db9ee540",
         "furtherReading": "0dec3708d187a828"
       },
       "205_hourly_and_day_rate_engagements.md": {
@@ -1826,7 +1826,7 @@
         "keyConcepts": "deea3ca84577fda3",
         "exampleCode": "4024176649bdd05f",
         "whenToUse": "8d11a373e87ecb72",
-        "commonMistakes": "9eb7cf7a85f244ef",
+        "commonMistakes": "c7748664bb8e61df",
         "furtherReading": "66d706b54258a219"
       },
       "206_pricing_positioning.md": {
@@ -1835,7 +1835,7 @@
         "keyConcepts": "d47294017ae0b161",
         "exampleCode": "79c895300cab5f63",
         "whenToUse": "e7b43adb4e1c81d4",
-        "commonMistakes": "6683d42af374036a",
+        "commonMistakes": "be37ec1bfd970d9b",
         "furtherReading": "759aa2fdaf0f3cfe"
       },
       "207_pricing_psychology.md": {

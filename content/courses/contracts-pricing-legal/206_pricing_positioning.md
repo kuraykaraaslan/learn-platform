@@ -42,10 +42,10 @@ Before sending, verify:
 - When comparing your price to a cheaper competitor's quote in conversation with the client.
 
 ## Common Mistakes
-- Presenting price as hourly-rate-times-estimated-hours, which invites the client to shop your efficiency against someone cheaper.
-- Apologizing for the price before the client has even reacted to it.
-- Describing the price only in terms of screens or pages delivered, ignoring backend, deployment, and risk ownership.
-- Offering to "do it cheaper" unprompted, which signals the original number wasn't really the number.
+- **The price is presented as "$150/hour times 80 hours," inviting a direct comparison against a cheaper rate** — Presenting price as hourly-rate-times-estimated-hours, which invites the client to shop your efficiency against someone cheaper.
+- **"Sorry, I know this is a lot" gets said before the client has reacted to the number at all** — Apologizing for the price before the client has even reacted to it.
+- **The price is explained purely in terms of "10 screens," with nothing said about backend, deployment, or risk** — Describing the price only in terms of screens or pages delivered, ignoring backend, deployment, and risk ownership.
+- **"I could probably do it cheaper if that helps" gets offered before anyone asked for a discount** — Offering to "do it cheaper" unprompted, which signals the original number wasn't really the number.
 
 ## Further Reading
 - Alan Weiss, *Value-Based Fees: How to Charge — and Get — What You're Worth*.
