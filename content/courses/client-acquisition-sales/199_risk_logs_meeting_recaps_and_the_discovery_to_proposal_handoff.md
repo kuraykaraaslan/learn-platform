@@ -77,11 +77,11 @@ No authority on the call                                        -> Request decis
 - Assembling a handoff brief before proposal or pricing work starts, so nothing has to be reconstructed from memory later.
 
 ## Common Mistakes
-- Relying on memory instead of sending a same-day written recap, especially for anything that felt "obviously understood."
-- Using committing language ("I promise," "this will definitely include") in a recap that hasn't been confirmed yet.
-- Letting a casually-mentioned feature go unmentioned in the recap, where silence quietly turns it into assumed scope.
-- Defaulting to "prepare a proposal" without running the readiness checklist or the next-step decision matrix.
-- Writing a proposal from memory days after the call instead of from the risk log, recap, and handoff brief.
+- **A call ends, and no written recap goes out because everything felt obviously understood** — Relying on memory instead of sending a same-day written recap, especially for anything that felt "obviously understood."
+- **A recap says "this will definitely include X" before scope is actually confirmed** — Using committing language ("I promise," "this will definitely include") in a recap that hasn't been confirmed yet.
+- **A prospect casually mentions a feature mid-call, and the recap doesn't mention it either way** — Letting a casually-mentioned feature go unmentioned in the recap, where silence quietly turns it into assumed scope.
+- **A call ends, and a proposal starts getting drafted without running the readiness checklist first** — Defaulting to "prepare a proposal" without running the readiness checklist or the next-step decision matrix.
+- **A proposal gets written from memory, days after the actual call** — Writing a proposal from memory days after the call instead of from the risk log, recap, and handoff brief.
 
 ## Further Reading
 - *The Pyramid Principle* — Barbara Minto: leading with the conclusion and the next step before the supporting detail, exactly what a recap and handoff brief need to do.

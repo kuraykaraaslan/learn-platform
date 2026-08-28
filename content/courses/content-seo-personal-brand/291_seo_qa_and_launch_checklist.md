@@ -62,11 +62,11 @@ Migrations and redesigns need their own dedicated pass, because URL changes are 
 - Periodically on an already-live site, as a health check independent of any specific launch event
 
 ## Common Mistakes
-- Launching a redesign without exporting and redirecting the old URL structure
-- Discovering a site-wide noindex only after traffic has already collapsed
-- Shipping a staging robots.txt (which typically blocks everything) to the production environment
-- Treating QA as a content-only review and skipping the technical and AEO layers
-- Not monitoring Search Console closely in the days immediately following a launch, missing an early warning sign
+- **A redesign ships with no export or redirect plan for the old URLs** — Launching a redesign without exporting and redirecting the old URL structure
+- **Traffic has already collapsed by the time anyone notices the site is still noindexed** — Discovering a site-wide noindex only after traffic has already collapsed
+- **The staging robots.txt (which blocks everything) makes it to production unchanged** — Shipping a staging robots.txt (which typically blocks everything) to the production environment
+- **A pre-launch QA pass checks content and calls it done** — Treating QA as a content-only review and skipping the technical and AEO layers
+- **Search Console goes unchecked for the first week after a launch** — Not monitoring Search Console closely in the days immediately following a launch, missing an early warning sign
 
 ## Further Reading
 - Google Search Central's "Launch Checklist" and "Site Moves" documentation — the primary, current source on migration-specific risk

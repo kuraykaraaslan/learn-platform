@@ -57,11 +57,11 @@ Next step:         Here's what happens once <the missing piece> is in place.
 - Deciding whether to keep negotiating with a difficult prospect or treat their behavior as a disqualifying signal.
 
 ## Common Mistakes
-- Treating "they have an API" as proof an integration will be simple to build.
-- Committing to timeline or scope for existing-system work without ever reviewing the actual repository.
-- Discounting or rushing an estimate just to make an uncomfortable price objection go away.
-- Preparing detailed free architecture or a full implementation plan to "prove value" before any commitment exists.
-- Continuing to negotiate with a prospect who has already rejected written scope, a deposit, or reasonable boundaries.
+- **A prospect says "they have an API," and that's taken as proof the integration will be simple** — Treating "they have an API" as proof an integration will be simple to build.
+- **A timeline gets committed for existing-system work before anyone has looked at the actual repository** — Committing to timeline or scope for existing-system work without ever reviewing the actual repository.
+- **A prospect objects to the price, and the estimate gets discounted on the spot to move past it** — Discounting or rushing an estimate just to make an uncomfortable price objection go away.
+- **A prospect hasn't committed to anything, and you're already drafting a full architecture for free to "prove value"** — Preparing detailed free architecture or a full implementation plan to "prove value" before any commitment exists.
+- **A prospect already rejected written scope and a deposit, and the negotiation keeps going** — Continuing to negotiate with a prospect who has already rejected written scope, a deposit, or reasonable boundaries.
 
 ## Further Reading
 - *Million Dollar Consulting* — Alan Weiss: positioning paid discovery and audit work as a real, valuable deliverable rather than free pre-sales effort.

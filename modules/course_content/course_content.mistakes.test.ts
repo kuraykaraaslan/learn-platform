@@ -93,7 +93,14 @@ describe('parseMistakes across the corpus', () => {
     }
 
     expect(parsedItems).toBe(rawBulletLines);
+    // Floor only, no ceiling: docs/phases/02-bold-lead-pass.md's entire job
+    // is raising this ratio, batch by batch, from an original ~0.41 toward
+    // its target (single count corpus-wide down to <=250, i.e. a drillable
+    // ratio around 0.86) — an upper bound here would need editing every
+    // time that deliberate, ongoing content work landed a batch, the same
+    // problem P1/P3 already hit with hardcoded exact counts instead of
+    // bounds. The floor still catches a real regression: parseMistakes
+    // suddenly classifying almost nothing as drillable.
     expect(drillable / parsedItems).toBeGreaterThan(0.35);
-    expect(drillable / parsedItems).toBeLessThan(0.55);
   });
 });

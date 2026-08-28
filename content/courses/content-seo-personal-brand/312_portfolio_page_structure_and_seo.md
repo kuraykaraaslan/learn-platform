@@ -63,11 +63,11 @@ H2: Summary / Context / Problem / Solution / Technical Approach / Result /
 - Reviewing project cards that read as a technology list with no stated outcome
 
 ## Common Mistakes
-- Putting every small project on the main portfolio page instead of featuring the strongest 2–3
-- Writing project cards that list only technologies with no outcome statement
-- Giving a case study a generic page title indistinguishable from a blog post
-- Publishing a case study with no link to the service page it's supposed to support, leaving it commercially orphaned
-- Using placeholder alt text ("image," "screenshot1") on proof screenshots that actually need to describe real content
+- **The main portfolio page lists a dozen small projects instead of the strongest 2-3** — Putting every small project on the main portfolio page instead of featuring the strongest 2–3
+- **A project card lists "React, Node.js, PostgreSQL" and nothing about the outcome** — Writing project cards that list only technologies with no outcome statement
+- **A case study's page title reads like any other blog post** — Giving a case study a generic page title indistinguishable from a blog post
+- **A case study exists with no link to the service page it's meant to support** — Publishing a case study with no link to the service page it's supposed to support, leaving it commercially orphaned
+- **A proof screenshot's alt text just says "image" or "screenshot1"** — Using placeholder alt text ("image," "screenshot1") on proof screenshots that actually need to describe real content
 
 ## Further Reading
 - [Baymard Institute's research on portfolio and work-page UX patterns](https://baymard.com) — evidence-based guidance on how visitors actually scan project listings

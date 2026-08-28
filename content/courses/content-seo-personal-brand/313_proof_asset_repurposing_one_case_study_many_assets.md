@@ -61,11 +61,11 @@ Later:  reuse in proposals and discovery follow-ups
 - Reviewing whether a finished case study is being left to sit as a single, underused asset
 
 ## Common Mistakes
-- Publishing the case study once and never revisiting it for any other format
-- Copy-pasting the same paragraph into LinkedIn, the newsletter, and a proposal with no adaptation
-- Leaking a confidential detail in a "quick" repurposed post that would never have survived review in the original case study
-- Reusing the same screenshot across multiple assets with no fresh context or caption
-- Dumping the entire repurposing plan into a single week instead of pacing it across a month
+- **A case study gets published once and never turned into anything else** — Publishing the case study once and never revisiting it for any other format
+- **The exact same paragraph gets pasted into LinkedIn, the newsletter, and a proposal** — Copy-pasting the same paragraph into LinkedIn, the newsletter, and a proposal with no adaptation
+- **A quick repurposed post mentions a detail the original case study's review would have caught** — Leaking a confidential detail in a "quick" repurposed post that would never have survived review in the original case study
+- **The same screenshot shows up in three different repurposed assets, same caption each time** — Reusing the same screenshot across multiple assets with no fresh context or caption
+- **A full month's worth of repurposed content gets published in a single week** — Dumping the entire repurposing plan into a single week instead of pacing it across a month
 
 ## Further Reading
 - *Jab, Jab, Jab, Right Hook* — Gary Vaynerchuk: the underlying logic of giving value repeatedly across formats before ever asking for something, directly applicable to a repurposing cadence

@@ -53,11 +53,11 @@ CTA (post-video): If your team handles approvals manually, start by
 - When creating an architecture diagram, to confirm it has an accompanying explanation rather than standing alone
 
 ## Common Mistakes
-- Linking randomly from every page to every other page instead of following a deliberate hub-and-spoke structure
-- Leaving new case studies or portfolio pages unlinked from any hub or navigation, making them effectively invisible
-- Using generic anchor text ("click here," "read more") on links that matter for both users and crawlers
-- Publishing screenshots with real client data, credentials, or internal URLs visible
-- Embedding video or diagrams with no surrounding text explanation, leaving both crawlers and skimming readers without context
+- **Every page links to every other page with no real structure behind it** — Linking randomly from every page to every other page instead of following a deliberate hub-and-spoke structure
+- **A new case study goes live with no link to it from any hub or nav menu** — Leaving new case studies or portfolio pages unlinked from any hub or navigation, making them effectively invisible
+- **A link's anchor text just says "click here"** — Using generic anchor text ("click here," "read more") on links that matter for both users and crawlers
+- **A published screenshot has real client data or credentials visible in the background** — Publishing screenshots with real client data, credentials, or internal URLs visible
+- **A video or diagram is embedded with no surrounding text explaining what it shows** — Embedding video or diagrams with no surrounding text explanation, leaving both crawlers and skimming readers without context
 
 ## Further Reading
 - [Google Search Central's "Site Structure" and "Internal Linking" guidance](https://developers.google.com/search) — the primary source on how crawlers use internal links

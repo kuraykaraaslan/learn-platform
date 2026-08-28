@@ -68,11 +68,11 @@ Credential transfer has its own narrow set of rules: raw passwords never go into
 - When a client asks "what happens if you disappear tomorrow" — the handover package is the direct answer, and building it as you go is easier than reconstructing it at the end
 
 ## Common Mistakes
-- Leaving production hosting, domain, or vendor accounts under a freelancer's personal login after the engagement ends, with no transfer plan
-- Sending credentials in a plain document or chat message instead of a secure transfer channel or the client's password manager
-- Omitting a known limitation (no pentest, no restore test) from the handover to make the delivery look more complete than it is
-- Leaving a contractor's or former team member's access active because no one performed the access review at the point they left
-- Implying ongoing security support ("I'll keep an eye on it") without a contracted maintenance agreement backing that statement — an informal promise nobody is actually resourced to keep
+- **The engagement ends, and production hosting is still under your personal login** — Leaving production hosting, domain, or vendor accounts under a freelancer's personal login after the engagement ends, with no transfer plan
+- **Credentials get sent over in a plain chat message** — Sending credentials in a plain document or chat message instead of a secure transfer channel or the client's password manager
+- **The handover doc doesn't mention that no pentest or restore test was ever run** — Omitting a known limitation (no pentest, no restore test) from the handover to make the delivery look more complete than it is
+- **A former team member's access is still active weeks after they left the project** — Leaving a contractor's or former team member's access active because no one performed the access review at the point they left
+- **A handover conversation ends with "I'll keep an eye on it," no maintenance contract behind that** — Implying ongoing security support ("I'll keep an eye on it") without a contracted maintenance agreement backing that statement — an informal promise nobody is actually resourced to keep
 
 ## Further Reading
 - [OWASP — Secure Software Deployment Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Deployment_Cheat_Sheet.html) — deployment and handover hygiene from a technical-controls angle

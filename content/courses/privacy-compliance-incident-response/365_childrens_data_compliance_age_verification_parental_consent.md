@@ -66,11 +66,11 @@ minimum age, and does the service collect any personal data from them?"
 - Before a UK launch specifically — the Children's Code's DPIA-before-launch requirement means this has to be resolved pre-launch, not patched in afterward
 
 ## Common Mistakes
-- Assuming "we don't market to children" satisfies the UK Children's Code, which tests accessibility, not marketing intent
-- Using a friendly, game-like age-verification screen for a COPPA-scoped service, when a neutral screen is specifically required
-- Treating an under-13 (or under-16, depending on jurisdiction) user as simply blocked, instead of routed to a real, working parental-consent mechanism
-- Collecting a full ID scan or exact birthdate to verify age when a simple, proportionate self-declared age check would have sufficed — over-collecting to solve a minimization problem
-- Applying a single global age threshold (e.g., always 13) across all users instead of routing by the visitor's jurisdiction, which produces under-compliance in the EU/UK and over-collection in the US
+- **"We don't market to children" is the whole compliance argument for the UK Children's Code** — Assuming "we don't market to children" satisfies the UK Children's Code, which tests accessibility, not marketing intent
+- **A COPPA-scoped service uses a friendly, game-like age-verification screen** — Using a friendly, game-like age-verification screen for a COPPA-scoped service, when a neutral screen is specifically required
+- **An under-13 user hits the age gate and is simply blocked, no path forward** — Treating an under-13 (or under-16, depending on jurisdiction) user as simply blocked, instead of routed to a real, working parental-consent mechanism
+- **Age verification asks for a full ID scan or exact birthdate** — Collecting a full ID scan or exact birthdate to verify age when a simple, proportionate self-declared age check would have sufficed — over-collecting to solve a minimization problem
+- **The same age threshold (always 13) applies to every visitor regardless of where they're located** — Applying a single global age threshold (e.g., always 13) across all users instead of routing by the visitor's jurisdiction, which produces under-compliance in the EU/UK and over-collection in the US
 
 ## Further Reading
 - [ICO — Age Appropriate Design Code (Children's Code)](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/) — the full 15-standard framework and applicability test
