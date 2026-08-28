@@ -49,10 +49,10 @@ Neither of these risks required an emergency to identify — both were visible i
 - After any near-miss (a late payment, a scare with hardware) — capture the lesson while it's fresh.
 
 ## Common Mistakes
-- Treating the tax/obligation reserve as available spendable cash during a slow month.
-- Letting one client's revenue share climb past 60% without any deliberate acquisition response.
-- Having no documented equipment-failure or backup-access plan until the failure actually happens.
-- Assuming every month's revenue will look like the current one, and building no reserve at all during good months.
+- **Revenue is down this month, and the tax reserve is the pool of cash that's sitting right there** — Treating the tax/obligation reserve as available spendable cash during a slow month.
+- **One client now accounts for 65% of trailing revenue, and nothing about the pipeline has changed in response** — Letting one client's revenue share climb past 60% without any deliberate acquisition response.
+- **The laptop that runs every client project has no backup device and no documented fallback plan** — Having no documented equipment-failure or backup-access plan until the failure actually happens.
+- **Revenue has been strong for months, and none of it has gone toward a reserve** — Assuming every month's revenue will look like the current one, and building no reserve at all during good months.
 
 ## Further Reading
 - *Profit First* — Mike Michalowicz: a concrete percentage-based system for building multiple reserves automatically rather than relying on discipline alone.

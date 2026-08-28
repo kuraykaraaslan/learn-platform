@@ -67,10 +67,10 @@ The price band and exclusions are visible before a single call happens — a pro
 - When reviewing an existing offer that keeps scope-creeping — check whether its exclusions are actually written down anywhere.
 
 ## Common Mistakes
-- Building an elaborate multi-package catalog before a single package has been sold and refined against real client feedback.
-- Leaving exclusions unwritten, so "not included" becomes a negotiation instead of a stated boundary.
-- Promising a fixed outcome (e.g., "SEO ranking improvement") without fixed inputs the client must provide.
-- Launching a productized offer with no upgrade path, leaving satisfied clients with nowhere obvious to go next.
+- **Five packages are live on the pricing page, and not one of them has been sold yet** — Building an elaborate multi-package catalog before a single package has been sold and refined against real client feedback.
+- **The service page doesn't say what's excluded, so that gets settled client by client, mid-project** — Leaving exclusions unwritten, so "not included" becomes a negotiation instead of a stated boundary.
+- **The package promises an SEO ranking improvement, with no requirement on what the client needs to provide for that to be possible** — Promising a fixed outcome (e.g., "SEO ranking improvement") without fixed inputs the client must provide.
+- **A client just finished the productized package, happy with the result, and there's nothing obvious being offered next** — Launching a productized offer with no upgrade path, leaving satisfied clients with nowhere obvious to go next.
 
 ## Further Reading
 - *Built to Sell* — John Warrillow: the case for productizing expertise into something that can be sold and delivered repeatably.

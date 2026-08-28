@@ -44,10 +44,10 @@ The €10/month price difference between the two providers was almost irrelevant
 - Before delegating any part of client work to a subcontractor for the first time.
 
 ## Common Mistakes
-- Selecting a vendor purely by lowest headline price without checking lock-in, support quality, or data export options.
-- Running a client-critical system on an unstable tool with no documented backup or migration plan.
-- Letting a client project depend on a personal, undocumented account instead of a properly tracked vendor relationship.
-- Handing work to a subcontractor without a written scope, confidentiality terms, or a review step before it reaches the client.
+- **The cheapest hosting option won out, and nobody checked how hard it would be to leave** — Selecting a vendor purely by lowest headline price without checking lock-in, support quality, or data export options.
+- **A client-critical service is running on a tool with no backup plan and a spotty uptime history** — Running a client-critical system on an unstable tool with no documented backup or migration plan.
+- **The client's production deployment goes through a personal account nobody else has ever seen** — Letting a client project depend on a personal, undocumented account instead of a properly tracked vendor relationship.
+- **A subcontractor picked up part of the project on a verbal understanding of what was needed** — Handing work to a subcontractor without a written scope, confidentiality terms, or a review step before it reaches the client.
 
 ## Further Reading
 - *The Checklist Manifesto* — Atul Gawande: the underlying argument for why a short, repeatable evaluation checklist beats ad hoc judgment for recurring decisions like this.

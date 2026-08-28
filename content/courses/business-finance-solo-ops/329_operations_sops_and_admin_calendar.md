@@ -52,10 +52,10 @@ This single document is what turns "did I do the close this month?" from a memor
 - During the yearly review, to check whether existing SOPs still match how the business actually operates.
 
 ## Common Mistakes
-- Keeping recurring financial and admin obligations only in memory instead of on a written, triggered calendar.
-- Building SOPs so detailed and rigid they become too much friction to actually follow week after week.
-- Skipping the monthly close on the reasoning that the business is "too small" to need this kind of discipline yet.
-- Leaving payment follow-up as an ad hoc, unscheduled activity instead of a weekly calendar item.
+- **The subscription renewal date, the quarterly filing deadline, and the client follow-up all live in the same place: memory** — Keeping recurring financial and admin obligations only in memory instead of on a written, triggered calendar.
+- **The onboarding SOP now runs eleven steps deep, and it's been skipped the last two times a client signed up** — Building SOPs so detailed and rigid they become too much friction to actually follow week after week.
+- **The business is still small, so this month's close gets pushed to "whenever there's time"** — Skipping the monthly close on the reasoning that the business is "too small" to need this kind of discipline yet.
+- **An overdue invoice gets chased whenever it happens to come to mind** — Leaving payment follow-up as an ad hoc, unscheduled activity instead of a weekly calendar item.
 
 ## Further Reading
 - *The E-Myth Revisited* — Michael E. Gerber: the foundational argument for why even a one-person business benefits from documented, repeatable systems.

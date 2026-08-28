@@ -55,10 +55,10 @@ The report structure alone does most of the selling — a client who has just re
 - Before quoting any legacy modernization or large remediation project — the audit de-risks the estimate for both sides.
 
 ## Common Mistakes
-- Treating the audit as free discovery instead of a properly priced, standalone product.
-- Leaving the report unprioritized, so the client can't tell which findings actually require action.
-- Skipping the findings call, which is where most of the conversion to a larger project actually happens.
-- Failing to state exclusions up front, leading the client to expect fixes as part of a diagnostic-only engagement.
+- **A prospective client wants a look at their codebase before committing, and that look is being offered for free** — Treating the audit as free discovery instead of a properly priced, standalone product.
+- **The audit report lists eighteen findings in the order they were noticed** — Leaving the report unprioritized, so the client can't tell which findings actually require action.
+- **The written report goes out by email, and that's where the audit engagement ends** — Skipping the findings call, which is where most of the conversion to a larger project actually happens.
+- **The audit wraps up, and the client is surprised the critical issues it found aren't already being fixed** — Failing to state exclusions up front, leading the client to expect fixes as part of a diagnostic-only engagement.
 
 ## Further Reading
 - *The Trusted Advisor* — David H. Maister, Charles H. Green, Robert M. Galford: on why a diagnostic-first engagement builds the trust that larger project sales depend on.

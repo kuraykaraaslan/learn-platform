@@ -48,10 +48,10 @@ The client's counteroffer was answered with a scope trade, not a margin cut — 
 - When deciding whether to accept a high-risk or high-uncertainty project at all.
 
 ## Common Mistakes
-- Pricing purely by estimated coding hours while leaving out communication, QA, deployment, and support time entirely.
-- Quoting a fixed price against an undefined scope, which removes any protection when the client's requests expand.
-- Granting a discount with nothing given up in return, which sets the expectation for every future negotiation with that client.
-- Reflexively lowering a price under pipeline pressure instead of first checking whether the project should be turned down entirely.
+- **The quote covers exactly the hours the feature is estimated to take to code** — Pricing purely by estimated coding hours while leaving out communication, QA, deployment, and support time entirely.
+- **The fixed price is locked in, and "scope" is still whatever the client says it is that week** — Quoting a fixed price against an undefined scope, which removes any protection when the client's requests expand.
+- **The client pushed back on price, and the number came down with nothing else changing** — Granting a discount with nothing given up in return, which sets the expectation for every future negotiation with that client.
+- **The pipeline is thin this month, so the quote for this project comes in lower than usual** — Reflexively lowering a price under pipeline pressure instead of first checking whether the project should be turned down entirely.
 
 ## Further Reading
 - *Value-Based Fees* — Alan Weiss: a thorough case for pricing on client value and outcomes rather than time or scope alone.

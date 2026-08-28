@@ -49,10 +49,10 @@ Every other number is green — the dashboard's entire value this month is the o
 - When explaining business health quickly to an accountant, partner, or your own future self three months from now.
 
 ## Common Mistakes
-- Building a dashboard with too many metrics to realistically maintain, so it gets abandoned within a couple of months.
-- Relying on vanity metrics (total revenue for the year) instead of the numbers that actually predict trouble.
-- Mixing "expected" revenue with "collected" cash on the same line, which quietly overstates financial health.
-- Hiding or omitting overdue invoices and missing data instead of flagging them clearly.
+- **The dashboard has grown to forty tracked metrics, and most haven't been touched since month two** — Building a dashboard with too many metrics to realistically maintain, so it gets abandoned within a couple of months.
+- **The year's total revenue number looks strong, and that's the one figure getting reported as "how the business is doing"** — Relying on vanity metrics (total revenue for the year) instead of the numbers that actually predict trouble.
+- **This month's revenue line combines what's been invoiced with what's actually landed in the bank** — Mixing "expected" revenue with "collected" cash on the same line, which quietly overstates financial health.
+- **The overdue invoice and a couple of record-keeping gaps just don't show up on this month's dashboard** — Hiding or omitting overdue invoices and missing data instead of flagging them clearly.
 
 ## Further Reading
 - *Financial Intelligence* — Karen Berman and Joe Knight: useful grounding in what each of these numbers actually means and where they can mislead.

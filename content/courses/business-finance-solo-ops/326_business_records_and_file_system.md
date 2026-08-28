@@ -48,10 +48,10 @@ Anyone — including a future accountant or a version of you eighteen months fro
 - Whenever a client dispute or payment question arises and you need to reconstruct exactly what was agreed and paid.
 
 ## Common Mistakes
-- Storing invoices and contracts only in email, where they're hard to search, easy to lose, and disconnected from other project records.
-- Using vague or incremental filenames like "final_v2_actually_final.pdf" instead of the structured date-client-type convention.
-- Mixing several clients' documents into one folder, making later retrieval and accountant handoff far slower than necessary.
-- Treating a chat screenshot as sufficient proof of a scope or payment approval instead of saving a durable, dated record.
+- **Every contract and invoice for the last two years is sitting wherever email happened to file it** — Storing invoices and contracts only in email, where they're hard to search, easy to lose, and disconnected from other project records.
+- **The file on disk is named "final_v2_actually_final.pdf"** — Using vague or incremental filenames like "final_v2_actually_final.pdf" instead of the structured date-client-type convention.
+- **Three different clients' contracts, invoices, and notes all live in the same "Clients" folder** — Mixing several clients' documents into one folder, making later retrieval and accountant handoff far slower than necessary.
+- **The scope change was agreed in a chat thread, and a screenshot of it is what's kept on file** — Treating a chat screenshot as sufficient proof of a scope or payment approval instead of saving a durable, dated record.
 
 ## Further Reading
 - *Getting Things Done* — David Allen: the broader organizational discipline (capture everything, file predictably) applies directly to financial record-keeping.
