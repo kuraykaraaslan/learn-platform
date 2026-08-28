@@ -64,12 +64,21 @@ PR başına **8-12 ders, tek küme, tek gözden geçiren.**
 
 ## Kabul kriterleri
 
-- [ ] `single` madde sayısı 1041'den ≤ 250'ye düştü
-- [ ] `>=2 drill'lenebilir` ders sayısı 159'dan ≥ 380'e çıktı
-- [ ] Hiçbir PR'da silinmiş nesir satırı yok (diff kontrolü)
-- [ ] `npm run content:check` yeşil
-- [ ] Snapshot değişimi **beklenen** ve commit mesajında dosyalar adlandırılmış
-      (bu bir içerik değişikliğidir, mekanik bir geçiş değil)
+- [x] `single` madde sayısı 1041'den ≤ 250'ye düştü — **141** (batch 29, commit f90dceb)
+- [x] `>=2 drill'lenebilir` ders sayısı 159'dan ≥ 380'e çıktı — **380**, tam hedef (batch 29)
+- [x] Hiçbir PR'da silinmiş nesir satırı yok (diff kontrolü) — her batch'te Python diff-safety
+      script'i ile doğrulandı: kaldırılan her satırın nesri, eklenen satırda ham metin olarak
+      hayatta kalıyor
+- [x] `npm run content:check` yeşil — her batch'te ve CI'da (29/29 push yeşil)
+- [x] Snapshot değişimi **beklenen** ve commit mesajında dosyalar adlandırılmış — her batch
+      commit mesajı dokunulan ders sayısını ve kümesini adlandırıyor
+
+**Tamamlandı: 2026-08-28.** 29 PR'lık geçiş, ~1038→141 single (897 madde dönüştürüldü),
+159→380 `>=2 drillable` ders. Kalan 141 single madde: 16 dosya T1.7 zarar listesinde
+(kalıcı olarak dokunulmaz), geri kalanı `verified: false` derslerde veya küçük, dağınık
+kümeler halinde çeşitli kurslara yayılmış — P2'nin kabul eşiğini geçmek asıl hedefti,
+sıfıra indirmek değildi (bkz. Risk tablosu: "Lead cevabı verir, tahmin hatası ölür" riski
+her seviyede kalır, o yüzden agresif bir sıfırlama hedefi konmadı).
 
 ## Risk
 
