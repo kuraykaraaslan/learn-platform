@@ -39,7 +39,7 @@ P12 arama + return queue  ← P1'in drill sonuçlarına dayanır
 | P9 | [09-webcontainer.md](09-webcontainer.md) | ~5-6 gün | uygulandı, gerçek tarayıcıda doğrulanmadı (OAuth akışı) |
 | P10 | [10-pglite-sql.md](10-pglite-sql.md) | ~3-4 gün | tamamlandı — 3 pilot ders yeniden yazıldı |
 | P11 | [11-recall-and-calc.md](11-recall-and-calc.md) | ~3 gün | RecallCard tamamlandı; CalcCard kasıtlı ertelendi (spec'in kendi sırası) |
-| P12 | [12-search-and-review-queue.md](12-search-and-review-queue.md) | ~4 gün | bekliyor |
+| P12 | [12-search-and-review-queue.md](12-search-and-review-queue.md) | ~4 gün | tamamlandı — ⌘K, next/prev, Return Queue, export/import |
 
 ## Ölçülen zemin
 
