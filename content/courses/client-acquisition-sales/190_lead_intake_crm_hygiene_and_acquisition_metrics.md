@@ -58,11 +58,11 @@ One change for next week:
 - When a specific pipeline stage (leads, calls, proposals) has stalled and the cause is unclear.
 
 ## Common Mistakes
-- Quoting a price or handing over a full architecture plan in the first reply to look competent or responsive.
-- Leaving a lead in "contacted" status with no follow-up date, so it's either forgotten or messaged twice.
-- Treating likes, profile visits, or impressions as evidence a channel is working.
-- Rebuilding the entire acquisition strategy after one bad week instead of running the diagnostic table.
-- Loosening the ICP filter to fix low lead quality instead of tightening it further.
+- **A new lead's first reply asks a technical question, so you quote a price or sketch out the architecture right there** — Quoting a price or handing over a full architecture plan in the first reply to look competent or responsive.
+- **A lead sits in "contacted" status with no date attached for the next follow-up** — Leaving a lead in "contacted" status with no follow-up date, so it's either forgotten or messaged twice.
+- **A post is getting likes and profile visits, so you count the channel as working** — Treating likes, profile visits, or impressions as evidence a channel is working.
+- **This week's numbers were bad, so you scrap the whole acquisition strategy and start over** — Rebuilding the entire acquisition strategy after one bad week instead of running the diagnostic table.
+- **Lead quality is low, so you widen the ICP filter to bring in more volume** — Loosening the ICP filter to fix low lead quality instead of tightening it further.
 
 ## Further Reading
 - *The E-Myth Revisited* — Michael Gerber: building systems into a one-person business so intake and follow-up survive busy weeks.

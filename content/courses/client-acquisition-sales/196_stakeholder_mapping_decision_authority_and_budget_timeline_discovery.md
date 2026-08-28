@@ -47,11 +47,11 @@ Fixed scope + fixed deadline + low budget -> High risk; decline or redefine
 - When multiple people at the client's company have visibly different priorities that a single feature-focused proposal would miss.
 
 ## Common Mistakes
-- Preparing a serious proposal for a contact who has no real influence over the decision.
-- Treating "we'll decide later" as acceptable without ever clarifying who "we" actually is.
-- Apologizing for asking about budget instead of explaining why the question changes the recommendation.
-- Accepting "ASAP" as a real timeline without asking what's actually driving the date.
-- Agreeing to fixed scope, a fixed near-term deadline, and a low budget simultaneously instead of naming the conflict out loud.
+- **You've built a full proposal, and it turns out your contact can't actually approve it** — Preparing a serious proposal for a contact who has no real influence over the decision.
+- **A prospect says "we'll decide later" and you move on without asking who "we" is** — Treating "we'll decide later" as acceptable without ever clarifying who "we" actually is.
+- **You need to ask about budget, and you preface it with an apology** — Apologizing for asking about budget instead of explaining why the question changes the recommendation.
+- **A prospect says the timeline is "ASAP"** — Accepting "ASAP" as a real timeline without asking what's actually driving the date.
+- **A prospect wants fixed scope, a near-term deadline, and a low budget, all three at once** — Agreeing to fixed scope, a fixed near-term deadline, and a low budget simultaneously instead of naming the conflict out loud.
 
 ## Further Reading
 - *Flawless Consulting* — Peter Block: contracting clearly with the real decision-makers before any diagnostic work begins.

@@ -44,11 +44,11 @@ Any tier + only a personal address/mobile      -> Do not contact. Drop the row.
 - Reviewing whether a sender's public identity (site, profile, domain) would survive a prospect checking it.
 
 ## Common Mistakes
-- Opening a cold sequence on the phone instead of a written first touch.
-- Emailing and sending a LinkedIn request to the same person on the same day.
-- Treating LinkedIn automation tools or browser extensions as a shortcut instead of a terms-of-service and account risk.
-- Leaving a phone number in an email footer that nobody actually answers.
-- Leaving a second voicemail for the same prospect, or calling twice in one day.
+- **Your first-ever touch to a new prospect is a phone call** — Opening a cold sequence on the phone instead of a written first touch.
+- **You email a prospect and send them a LinkedIn connection request the same day** — Emailing and sending a LinkedIn request to the same person on the same day.
+- **A LinkedIn automation tool or browser extension is queuing your connection requests** — Treating LinkedIn automation tools or browser extensions as a shortcut instead of a terms-of-service and account risk.
+- **Your email signature lists a phone number** — Leaving a phone number in an email footer that nobody actually answers.
+- **A prospect didn't pick up, so you call back the same day** — Leaving a second voicemail for the same prospect, or calling twice in one day.
 
 ## Further Reading
 - *Smart Calling* — Art Sobczak: opener discipline and permission-based framing for the phone channel specifically.

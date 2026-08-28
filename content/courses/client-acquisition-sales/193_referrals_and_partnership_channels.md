@@ -57,11 +57,11 @@ Contact / CTA:
 - Immediately after receiving a referral, to protect the relationship regardless of the outcome.
 
 ## Common Mistakes
-- Asking "do you know anyone who needs a developer" instead of a specific, forwardable ask.
-- Treating a partner introduction as license to go around them directly to the client afterward.
-- Promising referral commissions verbally without ever writing the terms down.
-- Going quiet on a referrer after the introduction instead of closing the loop, win or lose.
-- Making a partner feel their own client relationship is threatened rather than complemented.
+- **You ask a contact "do you know anyone who needs a developer?"** — Asking "do you know anyone who needs a developer" instead of a specific, forwardable ask.
+- **A partner introduces you to their client, and afterward you deal with the client directly, partner no longer in the loop** — Treating a partner introduction as license to go around them directly to the client afterward.
+- **You tell a partner they'll get a referral commission, but never put it in writing** — Promising referral commissions verbally without ever writing the terms down.
+- **A partner made an introduction, and you never tell them how it turned out** — Going quiet on a referrer after the introduction instead of closing the loop, win or lose.
+- **You start working directly with a partner's own client on unrelated work** — Making a partner feel their own client relationship is threatened rather than complemented.
 
 ## Further Reading
 - *The Referral Engine* — John Jantsch: building referral generation as a deliberate system rather than hoping it happens organically.

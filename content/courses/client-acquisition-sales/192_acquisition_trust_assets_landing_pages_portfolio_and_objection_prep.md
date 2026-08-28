@@ -53,11 +53,11 @@ The third asset is prepared language for the handful of objections that come up 
 - When a prospect voices a common fear and prepared language beats an improvised answer.
 
 ## Common Mistakes
-- A landing page with multiple competing CTAs, or with no clear target client named in the hero.
-- A portfolio item that lists only the tech stack ("Built with React, Node, MongoDB") with no business context.
-- Sending five proof assets at once instead of the one most relevant to that prospect's situation.
-- Building trust by asserting experience ("I've done this for years") instead of showing the actual process.
-- Waiting for a "perfect" project before publishing any case study at all.
+- **A landing page's hero has three different buttons, and never names who it's for** — A landing page with multiple competing CTAs, or with no clear target client named in the hero.
+- **A portfolio entry reads "Built with React, Node, MongoDB" and stops there** — A portfolio item that lists only the tech stack ("Built with React, Node, MongoDB") with no business context.
+- **A prospect shows interest, so you send every proof asset you have** — Sending five proof assets at once instead of the one most relevant to that prospect's situation.
+- **A prospect questions your experience, so you tell them "I've done this for years"** — Building trust by asserting experience ("I've done this for years") instead of showing the actual process.
+- **You haven't published a case study because none of your projects feels impressive enough yet** — Waiting for a "perfect" project before publishing any case study at all.
 
 ## Further Reading
 - *Building a StoryBrand* — Donald Miller: the hero-formula thinking behind clear, prospect-centered landing page copy.

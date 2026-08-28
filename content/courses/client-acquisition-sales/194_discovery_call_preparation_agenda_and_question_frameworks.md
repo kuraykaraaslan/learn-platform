@@ -59,11 +59,11 @@ Call goals (3-5):
 - Drafting or auditing an intake form or question set to make sure it produces decisions, not just data.
 
 ## Common Mistakes
-- Walking into a call with no brief and no hypothesis, letting the client's framing define the entire conversation.
-- Opening with a long personal introduction or capability pitch instead of stating the process up front.
-- Answering every feature tangent as it comes up instead of redirecting back to workflow and scope.
-- Sending a long, generic intake form before any trust has been established.
-- Ending a call without a stated next step, leaving both sides to guess what happens next.
+- **You join a discovery call with no brief and no working hypothesis about the client's problem** — Walking into a call with no brief and no hypothesis, letting the client's framing define the entire conversation.
+- **A discovery call opens with your background and capabilities before anything else** — Opening with a long personal introduction or capability pitch instead of stating the process up front.
+- **A client goes off on a specific feature idea mid-call, and you follow it** — Answering every feature tangent as it comes up instead of redirecting back to workflow and scope.
+- **A brand-new prospect gets a long, generic intake form before you've spoken** — Sending a long, generic intake form before any trust has been established.
+- **A discovery call ends and neither side said what happens next** — Ending a call without a stated next step, leaving both sides to guess what happens next.
 
 ## Further Reading
 - *Rainmaking Conversations* — Mike Schultz & John E. Doerr: structuring a consultative sales conversation around a repeatable question flow instead of an improvised pitch.

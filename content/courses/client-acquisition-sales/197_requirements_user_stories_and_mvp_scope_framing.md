@@ -59,11 +59,11 @@ Anything outside that list is a future phase or change request."
 - Sorting every feature mentioned in a call into Version 1 / Phase 2 / Roadmap before the call ends, so nothing is left as an unstated assumption.
 
 ## Common Mistakes
-- Writing requirements as feature names or adjectives instead of a role, an action, and a testable outcome.
-- Letting every requirement end up marked P0, which means nothing was actually prioritized.
-- Scoping a client's "like Airbnb" reference as a literal clone instead of extracting the specific workflows actually needed.
-- Letting casually-mentioned extra features accumulate as implied scope instead of sorting each one into a bucket on the spot.
-- Treating MVP as an excuse to skip real security, deployment, or data-model quality rather than as a scope boundary.
+- **A requirements doc lists feature names and adjectives like "fast search" and "modern UI"** — Writing requirements as feature names or adjectives instead of a role, an action, and a testable outcome.
+- **Every requirement in the doc ends up marked P0** — Letting every requirement end up marked P0, which means nothing was actually prioritized.
+- **A client says they want something "like Airbnb"** — Scoping a client's "like Airbnb" reference as a literal clone instead of extracting the specific workflows actually needed.
+- **A client casually mentions three extra features during a call, none of them written down as scope decisions** — Letting casually-mentioned extra features accumulate as implied scope instead of sorting each one into a bucket on the spot.
+- **The project is scoped as an MVP** — Treating MVP as an excuse to skip real security, deployment, or data-model quality rather than as a scope boundary.
 
 ## Further Reading
 - *User Story Mapping* — Jeff Patton: organizing requirements around real user workflows instead of a flat, unordered feature backlog.

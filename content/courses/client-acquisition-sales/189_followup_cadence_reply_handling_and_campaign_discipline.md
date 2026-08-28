@@ -53,11 +53,11 @@ Ethics re-check passed:  Y/N
 - When a campaign is performing well and there's a temptation to push volume higher.
 
 ## Common Mistakes
-- Sending a fourth touch on any channel, or resetting the touch counter by switching channels.
-- Replying to a hostile or negative message before suppression has actually been applied.
-- Treating a polite "maybe later" with no date as a warm lead instead of a no.
-- Pitch-dumping a full rate card and calendar link the moment a prospect replies with mild interest.
-- Scaling a working campaign by raising one mailbox's daily send limit instead of adding another mailbox.
+- **A prospect hasn't replied after three touches on email, so you try them on LinkedIn** — Sending a fourth touch on any channel, or resetting the touch counter by switching channels.
+- **A reply comes in hostile, and you want to respond and de-escalate right away** — Replying to a hostile or negative message before suppression has actually been applied.
+- **A prospect replies "maybe later," no date attached** — Treating a polite "maybe later" with no date as a warm lead instead of a no.
+- **A prospect replies showing mild interest, so you send your full rate card and a calendar link** — Pitch-dumping a full rate card and calendar link the moment a prospect replies with mild interest.
+- **A campaign is working, so you raise that mailbox's daily send limit to scale it faster** — Scaling a working campaign by raising one mailbox's daily send limit instead of adding another mailbox.
 
 ## Further Reading
 - *Cracking the Sales Management Code* — Jason Jordan & Michelle Vazzana: distinguishing metrics that actually predict outcomes from ones that just feel busy.
