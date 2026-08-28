@@ -44,8 +44,8 @@ function getClientIp(req: Request, trustedProxyIps: Set<string>): string {
 
 ## Common Mistakes
 - Trusting `X-Forwarded-For` from any request without verifying it came through a known proxy — trivially spoofable otherwise
-- Leaving DNS TTL high going into a planned migration, then being surprised failover takes hours to fully propagate
-- Conflating a load balancer's shallow health check (TCP port open) with real application readiness (DB connection pool warm, dependencies reachable)
+- **The DNS TTL is still set to 24 hours the week before a planned migration, and failover takes most of a day to actually propagate** — Leaving DNS TTL high going into a planned migration, then being surprised failover takes hours to fully propagate
+- **The load balancer's health check confirms the TCP port is open, and traffic keeps routing to an instance whose database connection pool is actually exhausted** — Conflating a load balancer's shallow health check (TCP port open) with real application readiness (DB connection pool warm, dependencies reachable)
 - Assuming L4 load balancing can do path-based routing — that requires L7
 
 ## Further Reading

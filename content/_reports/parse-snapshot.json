@@ -2882,7 +2882,7 @@
         "keyConcepts": "64a29aed620706da",
         "exampleCode": "8e6a13eb68c73a49",
         "whenToUse": "a89681133a52a45b",
-        "commonMistakes": "793cf4f863eb042c",
+        "commonMistakes": "953c30d0f0ef8fbd",
         "furtherReading": "279ece987b74e36f"
       },
       "128_clean_code_basics.md": {
@@ -2891,7 +2891,7 @@
         "keyConcepts": "597e4f3fbe90bc6f",
         "exampleCode": "1b331790e30847b3",
         "whenToUse": "00401e52ef8928f5",
-        "commonMistakes": "93fa70858287850a",
+        "commonMistakes": "9d62da1972367e3e",
         "furtherReading": "848f289024577945"
       },
       "133_networking_fundamentals.md": {
@@ -2900,7 +2900,7 @@
         "keyConcepts": "67ec933af55467e8",
         "exampleCode": "85b82c54b85c0528",
         "whenToUse": "63bccfde15ee4d44",
-        "commonMistakes": "dae3f91f996f133c",
+        "commonMistakes": "19b22633032ce396",
         "furtherReading": "db4dcd57b0f16893"
       },
       "139_git_internals_advanced_workflows.md": {
@@ -2909,7 +2909,7 @@
         "keyConcepts": "d6f0b4684ae16897",
         "exampleCode": "82abce5cb0b00bb6",
         "whenToUse": "121ce0afd02d8168",
-        "commonMistakes": "7bf2f6929740b3b0",
+        "commonMistakes": "78e2a19b0a1663d9",
         "furtherReading": "25bc8a99e84e68fc"
       }
     },

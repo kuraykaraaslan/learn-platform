@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 153,
-    "lessonsWithZeroDrillable": 11,
+    "single": 141,
+    "lessonsWithZeroDrillable": 10,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 377
+    "lessonsWithTwoPlusDrillable": 380
   },
   "lessons": [
     {
@@ -4753,14 +4753,14 @@
       "file": "127_auth_basics.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -4768,14 +4768,14 @@
       "file": "128_clean_code_basics.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {
@@ -4783,14 +4783,14 @@
       "file": "133_networking_fundamentals.md",
       "verified": true,
       "total": 4,
-      "single": 2,
-      "drillable": 2,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 2,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 2,
-        "single": 2
+        "single": 0
       }
     },
     {
@@ -4798,14 +4798,14 @@
       "file": "139_git_internals_advanced_workflows.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {

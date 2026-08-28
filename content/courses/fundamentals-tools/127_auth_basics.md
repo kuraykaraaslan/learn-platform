@@ -44,10 +44,10 @@ async function loginSession(email: string, password: string) {
 - Setting cookies for auth — always set `HttpOnly` and `Secure`, and pick `SameSite` deliberately
 
 ## Common Mistakes
-- Storing plaintext passwords, or "encrypted" (reversible) passwords instead of hashed ones
-- Using a fast hash (MD5, SHA-256 alone) for passwords instead of a purpose-built slow hash
-- Storing JWTs in `localStorage`, which is readable by any script on the page (XSS-exposed) instead of an `HttpOnly` cookie
-- Rolling a custom crypto/auth scheme instead of using well-reviewed libraries (bcrypt/argon2, established JWT libraries)
+- **Passwords are stored "encrypted" in the database, reversible by design, instead of hashed** — Storing plaintext passwords, or "encrypted" (reversible) passwords instead of hashed ones
+- **Passwords get hashed with plain SHA-256, chosen because it's fast** — Using a fast hash (MD5, SHA-256 alone) for passwords instead of a purpose-built slow hash
+- **The JWT gets stored in `localStorage`, readable by any script that ever runs on the page** — Storing JWTs in `localStorage`, which is readable by any script on the page (XSS-exposed) instead of an `HttpOnly` cookie
+- **A homegrown token-signing scheme gets built from scratch instead of reaching for a well-reviewed auth library** — Rolling a custom crypto/auth scheme instead of using well-reviewed libraries (bcrypt/argon2, established JWT libraries)
 
 ## Further Reading
 - [OWASP Authentication Cheat Sheet](https://cheatsheetseries.owasp.org)

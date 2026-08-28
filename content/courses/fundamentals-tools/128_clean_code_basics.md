@@ -60,9 +60,9 @@ function calculateMonthlyInterest(user: User | null): number {
 
 ## Common Mistakes
 - Premature abstraction — extracting a "reusable" helper for logic used exactly once, adding indirection with no payoff
-- Clever one-liners that save two lines but cost thirty seconds of re-reading every time someone touches the file
-- Inconsistent naming conventions within the same file (`userId` here, `user_id` there, `uid` somewhere else)
-- Comments that restate the code (`// increment i` above `i++`) instead of explaining a non-obvious constraint
+- **A clever chained one-liner replaces three readable lines, and every future reader has to stop and decode it** — Clever one-liners that save two lines but cost thirty seconds of re-reading every time someone touches the file
+- **The same file uses `userId`, `user_id`, and `uid` for the same concept in three different functions** — Inconsistent naming conventions within the same file (`userId` here, `user_id` there, `uid` somewhere else)
+- **`// increment i` sits directly above `i++`, saying nothing the code doesn't already say** — Comments that restate the code (`// increment i` above `i++`) instead of explaining a non-obvious constraint
 
 ## Further Reading
 - "Clean Code" by Robert C. Martin — read the naming/functions chapters critically; some later advice (e.g. on comments, classes) is debated

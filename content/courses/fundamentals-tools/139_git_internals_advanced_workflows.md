@@ -75,9 +75,9 @@ three
 
 ## Common Mistakes
 - Rewriting (rebasing/force-pushing) history that other people have already pulled, without coordinating — their local history and the remote diverge permanently
-- Panicking and re-doing work after a bad `reset`/`rebase` instead of checking `git reflog` first
-- Using `git bisect` with a "good"/"bad" check that isn't actually deterministic (a flaky test), producing a wrong bisection result
-- In a monorepo, running full-history commands as the default instead of path-scoping them, making simple lookups slow enough that people stop using Git history as a debugging tool at all
+- **A bad `reset` wipes out an afternoon's commits, and the response is redoing the work from scratch instead of checking `git reflog` first** — Panicking and re-doing work after a bad `reset`/`rebase` instead of checking `git reflog` first
+- **`git bisect` runs against a flaky test, and it confidently reports the wrong commit as the culprit** — Using `git bisect` with a "good"/"bad" check that isn't actually deterministic (a flaky test), producing a wrong bisection result
+- **A simple `git log` on one package takes ten seconds in the monorepo, because it's scanning the full history of every package by default** — In a monorepo, running full-history commands as the default instead of path-scoping them, making simple lookups slow enough that people stop using Git history as a debugging tool at all
 
 ## Further Reading
 - "Pro Git" by Scott Chacon & Ben Straub — chapter 10 (Git Internals) is the object-model deep dive
