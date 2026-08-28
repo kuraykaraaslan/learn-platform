@@ -29,7 +29,7 @@ P12 arama + return queue  ← P1'in drill sonuçlarına dayanır
 |---|---|---|---|
 | P0 | [00-blocks-and-copy.md](00-blocks-and-copy.md) | ~1 gün | tamamlandı |
 | P1 | [01-callouts-and-drill.md](01-callouts-and-drill.md) | ~3 gün | tamamlandı — `verified` 396/412 derste damgalı |
-| P2 | [02-bold-lead-pass.md](02-bold-lead-pass.md) | ~1-2 hafta (içerik) | bekliyor |
+| P2 | [02-bold-lead-pass.md](02-bold-lead-pass.md) | ~1-2 hafta (içerik) | sürüyor — batch 1/~20, single 1038→998, `content/_reports/mistakes.json` |
 | P3 | [03-concept-glossary.md](03-concept-glossary.md) | ~2 gün | tamamlandı — 125 terim |
 | P4 | [04-template-widgets.md](04-template-widgets.md) | ~3 gün | tamamlandı |
 | P5 | [05-ci-and-proof.md](05-ci-and-proof.md) | ~4 gün | tamamlandı, daraltılmış — 3 pilot ders, CI yeşil |
