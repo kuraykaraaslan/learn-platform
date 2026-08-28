@@ -63,10 +63,10 @@ before quoting, to catch malformed-data risk earlier.
 - At the end of every project, as a fixed internal habit, so lessons about estimation and risk actually make it into the next proposal instead of being relearned
 
 ## Common Mistakes
-- Letting a project fade out without an explicit final acceptance message, leaving support boundaries and future-request handling ambiguous
-- Providing unlimited free support after closure because no warranty period was ever stated in writing
-- Skipping the retrospective because the project is "already done," losing the exact lessons that would improve the next estimate
-- Missing the testimonial or referral window by waiting weeks after closure, when client enthusiasm and specific memory have already faded
+- **The last invoice gets paid, and the engagement just quietly trails off with no closing message** — Letting a project fade out without an explicit final acceptance message, leaving support boundaries and future-request handling ambiguous
+- **A bug report comes in four months after launch, and it gets fixed for free because nobody ever stated a support window** — Providing unlimited free support after closure because no warranty period was ever stated in writing
+- **The project's done, so the retrospective gets skipped to move on to the next client** — Skipping the retrospective because the project is "already done," losing the exact lessons that would improve the next estimate
+- **The testimonial ask finally goes out six weeks after the project closed** — Missing the testimonial or referral window by waiting weeks after closure, when client enthusiasm and specific memory have already faded
 
 ## Further Reading
 - David Maister, Charles H. Green, Robert M. Galford, *The Trusted Advisor* — on ending an engagement in a way that preserves and strengthens the relationship

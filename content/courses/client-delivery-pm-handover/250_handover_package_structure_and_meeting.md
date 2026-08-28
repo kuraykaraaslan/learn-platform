@@ -69,10 +69,10 @@ Best,
 - When a project is inherited mid-stream from another developer, as the missing artifact to reconstruct or request from the outgoing team
 
 ## Common Mistakes
-- Handing over only a repository link with no accompanying summary, guide, or access documentation
-- Splitting a serious project's handover into a single sprawling document instead of a navigable folder structure
-- Sending the package by email with no live walkthrough, producing a document that gets skimmed once and then forgotten
-- Leaving the "what happens to new requests after signoff" question unstated, so post-handover expectations stay ambiguous
+- **The final message to the client is "here's the GitHub link, call me if anything breaks"** — Handing over only a repository link with no accompanying summary, guide, or access documentation
+- **A serious project's entire handover lives in one long document with no folder structure to navigate it by** — Splitting a serious project's handover into a single sprawling document instead of a navigable folder structure
+- **The handover package goes out by email, with no call scheduled to walk through it** — Sending the package by email with no live walkthrough, producing a document that gets skimmed once and then forgotten
+- **The handover email never says what happens if the client wants something new after signing off** — Leaving the "what happens to new requests after signoff" question unstated, so post-handover expectations stay ambiguous
 
 ## Further Reading
 - Divio, "The documentation system" — informs how to split a handover package by document purpose rather than one undifferentiated file: https://docs.divio.com/documentation-system/

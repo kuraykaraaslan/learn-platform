@@ -59,10 +59,10 @@ The rule that gives this teeth is refusing to advance a phase with unresolved cr
 - When handing a phase-tracked project to a different developer or agent mid-stream, so the incoming owner inherits an accurate picture rather than an optimistic one
 
 ## Common Mistakes
-- Moving to the next phase without the required written approval, when the plan called for approval to gate that move
-- Forgetting an open issue from the previous phase because it wasn't explicitly carried forward into the new phase's dependency list
-- Treating a positive-sounding staging review as equivalent to final production handoff approval
-- Deploying to production without walking through the full pre-production handoff checklist, because the staging deploy "already worked fine"
+- **Development starts on the next phase before the written planning sign-off has actually come back** — Moving to the next phase without the required written approval, when the plan called for approval to gate that move
+- **An open item from QA never made it onto the staging phase's dependency list, and nobody's tracking it anymore** — Forgetting an open issue from the previous phase because it wasn't explicitly carried forward into the new phase's dependency list
+- **The client said "looks good" on the staging call, and that gets treated as the production go-ahead** — Treating a positive-sounding staging review as equivalent to final production handoff approval
+- **Staging worked fine, so production goes out without running the pre-production checklist** — Deploying to production without walking through the full pre-production handoff checklist, because the staging deploy "already worked fine"
 
 ## Further Reading
 - Robert G. Cooper, *Winning at New Products* — the stage-gate model that phase handoffs operationalize at project-management scale

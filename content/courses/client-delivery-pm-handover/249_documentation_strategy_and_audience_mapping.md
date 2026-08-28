@@ -54,10 +54,10 @@ separate PDF requested by client
 - At each major project stage (architecture, pre-delivery, final delivery) as scheduled checkpoints for updating documentation rather than leaving it all for the final week
 
 ## Common Mistakes
-- Writing one large document that mixes passwords, business scope, API details, and user instructions, making it unsafe to share and hard to navigate for any single audience
-- Writing documentation only from the developer's own point of view, leaving the client-facing audiences (business owner, admin, end user) without anything usable
-- Leaving all documentation until the last day of the project, guaranteeing it's rushed exactly when it needs to be most reliable
-- Relying on screenshots with no accompanying text explanation, which breaks the moment the UI changes even slightly
+- **One README covers the database password, the business scope, and the button-by-button user instructions, all in one file** — Writing one large document that mixes passwords, business scope, API details, and user instructions, making it unsafe to share and hard to navigate for any single audience
+- **The handover docs are architecture notes and API references, and there's nothing written for the business owner or the end user** — Writing documentation only from the developer's own point of view, leaving the client-facing audiences (business owner, admin, end user) without anything usable
+- **Documentation gets left for the final day before handover, written in a rush alongside everything else** — Leaving all documentation until the last day of the project, guaranteeing it's rushed exactly when it needs to be most reliable
+- **The admin guide is a folder of screenshots with no captions explaining what's happening in each one** — Relying on screenshots with no accompanying text explanation, which breaks the moment the UI changes even slightly
 
 ## Further Reading
 - Write the Docs community guide, "Documentation architecture" — practical patterns for structuring docs by audience: https://www.writethedocs.org/guide/

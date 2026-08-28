@@ -67,10 +67,10 @@ link is shared. Fix owner: Developer, due before next gate.
 - Whenever the team is tempted to skip a gate because of time pressure — that pressure is precisely the condition the gate exists to resist
 
 ## Common Mistakes
-- Demoing a flow with a known broken path without warning the client in advance, turning a manageable known issue into a surprise mid-call
-- Sending a staging link with no review instructions, leaving the client unsure what they're even supposed to be testing
-- Deploying to production without explicit client approval, even when the deploy itself is technically ready
-- Labeling a conditional pass as a clean pass to avoid an uncomfortable status conversation, hiding exactly the information a gate exists to surface
+- **A known broken path in the checkout flow gets left in for the demo, with no heads-up before the call** — Demoing a flow with a known broken path without warning the client in advance, turning a manageable known issue into a surprise mid-call
+- **The staging link goes out in a one-line message with no notes on what to actually check** — Sending a staging link with no review instructions, leaving the client unsure what they're even supposed to be testing
+- **The build is technically ready, so it goes to production without waiting for the client's sign-off** — Deploying to production without explicit client approval, even when the deploy itself is technically ready
+- **The pre-staging report says "clean pass" even though the mobile layout issue is still open** — Labeling a conditional pass as a clean pass to avoid an uncomfortable status conversation, hiding exactly the information a gate exists to surface
 
 ## Further Reading
 - Robert G. Cooper, *Winning at New Products* — the stage-gate model this checkpoint structure is adapted from

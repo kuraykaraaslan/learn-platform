@@ -66,10 +66,10 @@ provider dashboard, update the hosting environment variable, and redeploy.
 - Whenever a project is inherited, transferred to another vendor, or a support relationship ends, as the checklist for what access must be revoked or rotated
 
 ## Common Mistakes
-- Sending real production credentials over plain email or chat instead of a password manager or provider invite
-- Leaving freelancer access active indefinitely after handover with no stated reason or agreement
-- Committing a real `.env` file or pasting real secret values into a markdown handover document
-- Treating "the client seemed to understand the access list" as equivalent to having actually verified every rotation and revocation happened
+- **The database password gets sent over in a chat message so the client can log in right away** — Sending real production credentials over plain email or chat instead of a password manager or provider invite
+- **The project handed over months ago, and the developer's account still has full production access** — Leaving freelancer access active indefinitely after handover with no stated reason or agreement
+- **The handover markdown file includes the real API key, pasted straight from the `.env`** — Committing a real `.env` file or pasting real secret values into a markdown handover document
+- **The client nodded along during the access review, so the rotation checklist gets marked complete without actually checking each item** — Treating "the client seemed to understand the access list" as equivalent to having actually verified every rotation and revocation happened
 
 ## Further Reading
 - OWASP, "Secrets Management Cheat Sheet" — foundational guidance on how credentials should be stored, rotated, and never embedded in documentation or code: https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html

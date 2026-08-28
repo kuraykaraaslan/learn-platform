@@ -45,10 +45,10 @@ Feedback also arrives scattered — a chat message here, a call there, a screens
 - Any time a "small" request risks becoming a repeated pattern, so it gets logged explicitly as a one-time exception rather than a new baseline
 
 ## Common Mistakes
-- Calling every reported issue a bug to avoid an uncomfortable scope conversation, which trains the client to expect unlimited free changes
-- Calling every reported issue a change request to dodge responsibility, even when it's a genuine defect in delivered scope
-- Implementing a new feature during "bug support" without separate approval, blurring the boundary the whole system exists to protect
-- Accepting scattered feedback from multiple channels instead of asking for one consolidated list, making triage slower and consistency harder
+- **Every report that comes in gets logged as a bug, whether or not it's actually a defect in agreed scope** — Calling every reported issue a bug to avoid an uncomfortable scope conversation, which trains the client to expect unlimited free changes
+- **A genuine defect in delivered scope gets filed as a change request instead** — Calling every reported issue a change request to dodge responsibility, even when it's a genuine defect in delivered scope
+- **A new field gets added to the export "while fixing the bug support ticket," with no separate approval** — Implementing a new feature during "bug support" without separate approval, blurring the boundary the whole system exists to protect
+- **Feedback shows up as a chat message, a call, and a screenshot in an email, and each gets triaged as it lands** — Accepting scattered feedback from multiple channels instead of asking for one consolidated list, making triage slower and consistency harder
 
 ## Further Reading
 - Joel Spolsky, "The Joel Test" and associated writing on bug tracking discipline — on why every reported issue needs a written, classified record before action

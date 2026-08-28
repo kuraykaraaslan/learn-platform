@@ -59,10 +59,10 @@ I recommend we update the milestone plan and I'll send a revised date.
 - Whenever a single task looks "extra-large" during planning, as the signal to split it into smaller estimable pieces rather than guessing at a big number
 
 ## Common Mistakes
-- Saying "this is simple" before any real analysis has happened, then having to walk the estimate back once the actual scope becomes clear
-- Providing a single hard date with no stated assumptions, which turns any deviation into an apparent broken promise instead of a visible, anticipated risk
-- Compressing testing, review, and deployment time to zero in the estimate, so the plan only works if literally everything goes right
-- Waiting until a milestone date has already passed to tell the client it's going to slip, instead of flagging the risk while there's still time to act on it
+- **"That should be simple, maybe a day" gets said on the call before anyone's actually looked at the integration** — Saying "this is simple" before any real analysis has happened, then having to walk the estimate back once the actual scope becomes clear
+- **"Six weeks" goes out as the answer, with no assumptions or dependencies attached to it** — Providing a single hard date with no stated assumptions, which turns any deviation into an apparent broken promise instead of a visible, anticipated risk
+- **The estimate covers coding time only, with testing and review folded in as "should be quick"** — Compressing testing, review, and deployment time to zero in the estimate, so the plan only works if literally everything goes right
+- **The demo date has already come and gone, and that's when the client first hears it's going to slip** — Waiting until a milestone date has already passed to tell the client it's going to slip, instead of flagging the risk while there's still time to act on it
 
 ## Further Reading
 - Steve McConnell, *Software Estimation: Demystifying the Black Art* — the standard reference on estimation uncertainty and cone-of-uncertainty thinking

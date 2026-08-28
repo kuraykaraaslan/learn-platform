@@ -1165,7 +1165,7 @@
         "keyConcepts": "80ba9c6111fe9f44",
         "exampleCode": "0cdce2c05c5260e3",
         "whenToUse": "ca7e20eec9ad178f",
-        "commonMistakes": "49f9614a144a044f",
+        "commonMistakes": "37cdc4a0a528e3a9",
         "furtherReading": "459ec44ee655a64c"
       },
       "245_quality_gates_demo_to_handover.md": {
@@ -1174,7 +1174,7 @@
         "keyConcepts": "65a2d3ea6ad1fe39",
         "exampleCode": "8603d6a2f750fefc",
         "whenToUse": "16a0c028587f953d",
-        "commonMistakes": "47fa94904ba48fe0",
+        "commonMistakes": "78ee128cb0577a50",
         "furtherReading": "6a8d3b4121038387"
       },
       "246_communicating_timelines_and_delays.md": {
@@ -1183,7 +1183,7 @@
         "keyConcepts": "efa15ad9cd5c787f",
         "exampleCode": "788b757deb7b31f0",
         "whenToUse": "51956801a10b1671",
-        "commonMistakes": "3149cfa4bd710596",
+        "commonMistakes": "df408cece879129c",
         "furtherReading": "4ec4f6732cc38aeb"
       },
       "247_phase_handoff_checklists.md": {
@@ -1192,7 +1192,7 @@
         "keyConcepts": "ffd4f26c5a0ef9ea",
         "exampleCode": "c4a0f234fe8c1d1a",
         "whenToUse": "9d76a6224ed9aa42",
-        "commonMistakes": "0520e7b9e5c82a41",
+        "commonMistakes": "0a449e82e31f4d1e",
         "furtherReading": "fd7e7153c67ec7ac"
       },
       "248_project_closure_retrospective_and_satisfaction.md": {
@@ -1201,7 +1201,7 @@
         "keyConcepts": "394784b7ee4571ee",
         "exampleCode": "410ac63dd1c92fe2",
         "whenToUse": "d866dce6d6c5e078",
-        "commonMistakes": "2d2130508445aae7",
+        "commonMistakes": "b204b5bb955847d6",
         "furtherReading": "647e6aa6b33b112f"
       },
       "249_documentation_strategy_and_audience_mapping.md": {
@@ -1210,7 +1210,7 @@
         "keyConcepts": "a72b55fea5a014f7",
         "exampleCode": "b07f287a68061168",
         "whenToUse": "3d223f92bf188047",
-        "commonMistakes": "3ec6f817d1077efb",
+        "commonMistakes": "aaa8f2837bcff846",
         "furtherReading": "41f320915fb2d68e"
       },
       "250_handover_package_structure_and_meeting.md": {
@@ -1219,7 +1219,7 @@
         "keyConcepts": "6bed28d695664fbc",
         "exampleCode": "a515fa78f6590a3c",
         "whenToUse": "dc01170a43462404",
-        "commonMistakes": "aa1a07b111ad690f",
+        "commonMistakes": "17f55ea5f907beb3",
         "furtherReading": "27ddaf3662f4c358"
       },
       "251_access_credentials_and_environment_handover.md": {
@@ -1228,7 +1228,7 @@
         "keyConcepts": "e1e4ef22b259cd2f",
         "exampleCode": "d43e4c6757e8b2c2",
         "whenToUse": "61ae8dbede9ea1a7",
-        "commonMistakes": "8a45521e9ebfe5ae",
+        "commonMistakes": "3e61a79fe372780a",
         "furtherReading": "5c1e5f0ad8ca04ad"
       },
       "252_database_api_and_integration_handover_docs.md": {
