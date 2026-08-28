@@ -56,10 +56,10 @@ Language matters as much as preparation. "This hits the API, creates a row in Po
 - Immediately after the session, to send the follow-up package while the conversation and its open items are still fresh for both sides
 
 ## Common Mistakes
-- Discovering a basic production failure during the live session because the pre-demo checklist wasn't run that same day
-- Explaining features in implementation-level technical language that leaves a business stakeholder unable to connect it to their actual workflow
-- Letting a mid-demo feature request turn into an improvised scoping discussion that blurs into the final delivery acceptance
-- Ending the session without sending a follow-up package, leaving the guide, open items, and signoff reminder to be reconstructed later from memory
+- **Login fails live in front of the client, because production wasn't checked that morning before the call** — Discovering a basic production failure during the live session because the pre-demo checklist wasn't run that same day
+- **The training session explains that clicking Save "hits the API and writes a row to Postgres"** — Explaining features in implementation-level technical language that leaves a business stakeholder unable to connect it to their actual workflow
+- **A client mentions a new idea mid-demo, and the next ten minutes turn into live scoping for it** — Letting a mid-demo feature request turn into an improvised scoping discussion that blurs into the final delivery acceptance
+- **The training call ends, and no recap, guide, or signoff reminder ever gets sent afterward** — Ending the session without sending a follow-up package, leaving the guide, open items, and signoff reminder to be reconstructed later from memory
 
 ## Further Reading
 - Nancy Duarte, *Resonate* — on structuring a presentation around what the audience needs to walk away understanding, directly applicable to demo agenda design

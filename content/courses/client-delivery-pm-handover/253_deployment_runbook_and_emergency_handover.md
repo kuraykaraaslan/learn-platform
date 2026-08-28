@@ -76,10 +76,10 @@ rollback alone is safe — check `06-database-and-backup.md`.
 - When transferring support responsibility to another developer or the client's internal team, as the primary artifact that makes the transfer safe
 
 ## Common Mistakes
-- Writing "deployment is automatic" with no explanation of the trigger or where to verify it succeeded
-- Omitting the database migration compatibility warning from the rollback section, risking a rollback that makes an incident worse instead of better
-- Leaving backup status vague or implied rather than stated as a verified fact
-- Treating client communication as something to figure out after the technical incident is resolved, instead of as a scheduled step in the same checklist
+- **The runbook's entire deployment section reads "deployment is automatic"** — Writing "deployment is automatic" with no explanation of the trigger or where to verify it succeeded
+- **A production incident calls for a rollback, and nobody checked whether a migration already ran forward with the bad deploy** — Omitting the database migration compatibility warning from the rollback section, risking a rollback that makes an incident worse instead of better
+- **The runbook says backups happen "regularly," with no provider, frequency, or verified restore date attached** — Leaving backup status vague or implied rather than stated as a verified fact
+- **The incident gets fixed first, and telling the client is whatever happens after that** — Treating client communication as something to figure out after the technical incident is resolved, instead of as a scheduled step in the same checklist
 
 ## Further Reading
 - Google SRE Book, "Managing Incidents" — the canonical reference for structured incident response and the value of a fixed checklist under pressure: https://sre.google/sre-book/managing-incidents/

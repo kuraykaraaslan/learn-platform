@@ -76,10 +76,10 @@ Email support@meridianretail-dev.example for anything not covered here.
 - Any time a support request repeats a question that a guide could answer — that's the signal to add or clarify a workflow entry, not just answer the ticket
 
 ## Common Mistakes
-- Writing "it's self-explanatory" instead of documenting the actual steps, on the assumption the interface speaks for itself
-- Writing the guide in developer language, describing implementation details instead of the task from the user's point of view
-- Omitting safe-usage warnings for genuinely dangerous actions, so a well-meaning staff member causes damage without knowing the risk
-- Letting the guide fall out of sync after a UI or workflow change, so it actively misleads instead of helping
+- **The admin guide's entire entry for the export feature says "self-explanatory, just click Export"** — Writing "it's self-explanatory" instead of documenting the actual steps, on the assumption the interface speaks for itself
+- **The user guide describes what API call fires when a staff member clicks Save** — Writing the guide in developer language, describing implementation details instead of the task from the user's point of view
+- **The guide never mentions that changing a user's role to admin grants full system access** — Omitting safe-usage warnings for genuinely dangerous actions, so a well-meaning staff member causes damage without knowing the risk
+- **The workflow changed after last month's update, and the guide still shows the old steps** — Letting the guide fall out of sync after a UI or workflow change, so it actively misleads instead of helping
 
 ## Further Reading
 - Nielsen Norman Group, "How to write a user manual" — foundational usability guidance on task-based technical writing: https://www.nngroup.com/articles/user-manual/

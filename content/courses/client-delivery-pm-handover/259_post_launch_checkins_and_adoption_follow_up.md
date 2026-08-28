@@ -59,10 +59,10 @@ support-reduction value). Schedule a 3-month business-value review for
 - When a client seems quiet after launch, since silence can mean smooth sailing or quiet non-adoption, and only a direct check-in tells you which
 
 ## Common Mistakes
-- Assuming the project succeeded because it deployed successfully, without ever checking whether real users adopted the core workflows
-- Treating user confusion as user error rather than investigating whether training, UI clarity, or documentation was the actual cause
-- Letting the same support question repeat multiple times without recognizing it as an adoption signal worth acting on
-- Proposing new paid features or an upsell before confirming the delivered system is actually being used and valued
+- **The system's been live for a month with no incidents, and that gets called a successful project** — Assuming the project succeeded because it deployed successfully, without ever checking whether real users adopted the core workflows
+- **Staff keep making the same mistake with the status dropdown, and that gets chalked up to user error** — Treating user confusion as user error rather than investigating whether training, UI clarity, or documentation was the actual cause
+- **The same support question about cancelled orders has come in three times now, each answered individually** — Letting the same support question repeat multiple times without recognizing it as an adoption signal worth acting on
+- **An upsell pitch goes out two weeks after launch, before anyone's confirmed the team is actually using the system** — Proposing new paid features or an upsell before confirming the delivered system is actually being used and valued
 
 ## Further Reading
 - Lincoln Murphy, "Customer Success" writing on defining and measuring 'appropriate experience' as the real measure of product success, not deployment status

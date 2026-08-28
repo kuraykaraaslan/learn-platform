@@ -58,10 +58,10 @@ the signed contract dated 2026-08-26.
 - When a contract ties source code transfer to final payment, as the trigger to document that condition explicitly rather than leaving the timing implicit
 
 ## Common Mistakes
-- Leaving source code ownership vague, so a later disagreement has no written reference to resolve it against
-- Transferring a repository without recording the final commit or tag, making it unclear exactly what version was actually delivered
-- Claiming ownership of general-purpose freelancer components as though they were assigned to the client when the contract never said so
-- Remaining the sole owner of a production repository indefinitely with no agreement or stated reason, creating an unplanned dependency on one person
+- **Nobody ever wrote down who owns the repository, and six months later the client wants to hire a new developer** — Leaving source code ownership vague, so a later disagreement has no written reference to resolve it against
+- **The repo gets transferred to the client's org with no record of which commit was the actual delivered version** — Transferring a repository without recording the final commit or tag, making it unclear exactly what version was actually delivered
+- **A reusable utility library built for internal use gets listed as belonging exclusively to this one client** — Claiming ownership of general-purpose freelancer components as though they were assigned to the client when the contract never said so
+- **The project delivered a year ago, and the production repository is still sitting in the freelancer's personal account** — Remaining the sole owner of a production repository indefinitely with no agreement or stated reason, creating an unplanned dependency on one person
 
 ## Further Reading
 - Creative Commons and SPDX license identifiers — a starting reference for understanding common open-source license obligations before documenting third-party dependencies: https://spdx.org/licenses/

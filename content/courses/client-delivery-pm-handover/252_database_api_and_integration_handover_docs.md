@@ -78,10 +78,10 @@ custom retry logic on our side
 - When a future developer or the client's internal hire is being onboarded to maintain the system, as the primary reference for how data and integrations actually work
 
 ## Common Mistakes
-- Delivering a database-backed system with no migration instructions, leaving a future developer to reverse-engineer the schema change process
-- Claiming "backups exist" without ever having verified a restore, which is discovered to be false at the worst possible moment
-- Describing an integration only as "Stripe is integrated" or "webhook works," leaving no operationally useful detail for debugging a future failure
-- Omitting the manual recovery or replay procedure for a webhook, so a silent failure has no documented path back to a correct state
+- **The schema has changed six times since launch, and there's no record of how to run a migration on production** — Delivering a database-backed system with no migration instructions, leaving a future developer to reverse-engineer the schema change process
+- **The handover doc says "backups exist," and nobody's ever actually tried restoring one** — Claiming "backups exist" without ever having verified a restore, which is discovered to be false at the worst possible moment
+- **The integration doc for the payment provider says "Stripe is integrated" and stops there** — Describing an integration only as "Stripe is integrated" or "webhook works," leaving no operationally useful detail for debugging a future failure
+- **A payment webhook silently stops arriving, and there's no documented way to manually replay it** — Omitting the manual recovery or replay procedure for a webhook, so a silent failure has no documented path back to a correct state
 
 ## Further Reading
 - Martin Kleppmann, *Designing Data-Intensive Applications* — foundational context on backup, replication, and why "backup exists" claims must be continuously verified

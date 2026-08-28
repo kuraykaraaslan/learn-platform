@@ -1237,7 +1237,7 @@
         "keyConcepts": "c972b296517b9be5",
         "exampleCode": "e14ba96909e578c2",
         "whenToUse": "61c896af67387fc2",
-        "commonMistakes": "44a961c46636d428",
+        "commonMistakes": "5bd2348d574a5e28",
         "furtherReading": "42a64c19d2e64c66"
       },
       "253_deployment_runbook_and_emergency_handover.md": {
@@ -1246,7 +1246,7 @@
         "keyConcepts": "a85c3df8ef370818",
         "exampleCode": "7bac50d8ece13ee0",
         "whenToUse": "4e9dc626100cd71d",
-        "commonMistakes": "a75d611ede782395",
+        "commonMistakes": "40c0f67384644586",
         "furtherReading": "705c37a84f7a764a"
       },
       "254_admin_and_user_guides.md": {
@@ -1255,7 +1255,7 @@
         "keyConcepts": "1b1490405e2baf45",
         "exampleCode": "defbb97e587fab53",
         "whenToUse": "4c2a4f90392778b9",
-        "commonMistakes": "f2781337988acf60",
+        "commonMistakes": "9d11f0d9bfc660ba",
         "furtherReading": "b4da271804024146"
       },
       "255_known_issues_and_troubleshooting_disclosure.md": {
@@ -1264,7 +1264,7 @@
         "keyConcepts": "3eac44d9b66c3f28",
         "exampleCode": "a6bfb3ea53116d14",
         "whenToUse": "d921ab8c82ef49cf",
-        "commonMistakes": "3538be8d7e4f86cd",
+        "commonMistakes": "24046b1f8149eb30",
         "furtherReading": "18d2831d2d3c8e4b"
       },
       "256_ownership_ip_and_source_code_handover.md": {
@@ -1273,7 +1273,7 @@
         "keyConcepts": "67c1d4c5f122c55d",
         "exampleCode": "47a221bea91c238d",
         "whenToUse": "f74de03fb80c175f",
-        "commonMistakes": "cfeee09695973d43",
+        "commonMistakes": "dde6502691b17b16",
         "furtherReading": "dede73498908113d"
       },
       "257_client_training_and_demo_sessions.md": {
@@ -1282,7 +1282,7 @@
         "keyConcepts": "266a0daf7469ac73",
         "exampleCode": "79e2e0f65b434c4c",
         "whenToUse": "4df33869792bda2c",
-        "commonMistakes": "78f5edad7981bada",
+        "commonMistakes": "b35fdcfbffe8dd4b",
         "furtherReading": "56915097bcfc6534"
       },
       "258_warranty_maintenance_and_support_transition.md": {
@@ -1291,7 +1291,7 @@
         "keyConcepts": "19d7954ff52d89a1",
         "exampleCode": "3422896a50036e0b",
         "whenToUse": "c381a8fed93dcb7a",
-        "commonMistakes": "0a8f218be3902482",
+        "commonMistakes": "46c376a37fd21cd5",
         "furtherReading": "801593c11287832b"
       },
       "259_post_launch_checkins_and_adoption_follow_up.md": {
@@ -1300,7 +1300,7 @@
         "keyConcepts": "78818fa69285f2db",
         "exampleCode": "9bfce39b4fd55685",
         "whenToUse": "79393c2baca3a08a",
-        "commonMistakes": "3a7fa79832e2508c",
+        "commonMistakes": "8c4a4090d164a167",
         "furtherReading": "0e43474e790f8f22"
       },
       "260_production_incident_client_communication.md": {

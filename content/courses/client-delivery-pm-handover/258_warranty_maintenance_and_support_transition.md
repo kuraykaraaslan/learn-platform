@@ -56,10 +56,10 @@ hours, Monday–Friday.
 - When a client asks for emergency or after-hours coverage, as the prompt to price it explicitly rather than agreeing informally in the moment
 
 ## Common Mistakes
-- Providing unlimited free support indefinitely because no warranty period was ever put in writing
-- Selling a maintenance package as vague "ongoing support" with no stated monthly capacity or exclusions
-- Leaving the unused-hours policy unstated, creating a dispute later about hours the client assumed were banked
-- Promising emergency or 24/7 response casually, without pricing it or confirming it's operationally realistic to deliver
+- **Support requests are still coming in for free, eight months after launch, because no warranty end date was ever written down** — Providing unlimited free support indefinitely because no warranty period was ever put in writing
+- **The maintenance package is sold as "ongoing support," with no number of hours or exclusions attached** — Selling a maintenance package as vague "ongoing support" with no stated monthly capacity or exclusions
+- **The client assumes this month's unused hours carry over, and that was never actually agreed anywhere** — Leaving the unused-hours policy unstated, creating a dispute later about hours the client assumed were banked
+- **"Sure, I'm reachable anytime" gets said on a call, with no rate or capacity behind it** — Promising emergency or 24/7 response casually, without pricing it or confirming it's operationally realistic to deliver
 
 ## Further Reading
 - ITIL Foundation guidance on service level and warranty definitions — a formalized reference point for distinguishing defect remediation from ongoing service: https://www.axelos.com/certifications/itil-service-management

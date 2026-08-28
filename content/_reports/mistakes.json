@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 515,
-    "lessonsWithZeroDrillable": 80,
+    "single": 483,
+    "lessonsWithZeroDrillable": 72,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 283
+    "lessonsWithTwoPlusDrillable": 291
   },
   "lessons": [
     {
@@ -2038,14 +2038,14 @@
       "file": "252_database_api_and_integration_handover_docs.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2053,14 +2053,14 @@
       "file": "253_deployment_runbook_and_emergency_handover.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2068,14 +2068,14 @@
       "file": "254_admin_and_user_guides.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2083,14 +2083,14 @@
       "file": "255_known_issues_and_troubleshooting_disclosure.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2098,14 +2098,14 @@
       "file": "256_ownership_ip_and_source_code_handover.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2113,14 +2113,14 @@
       "file": "257_client_training_and_demo_sessions.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2128,14 +2128,14 @@
       "file": "258_warranty_maintenance_and_support_transition.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2143,14 +2143,14 @@
       "file": "259_post_launch_checkins_and_adoption_follow_up.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {

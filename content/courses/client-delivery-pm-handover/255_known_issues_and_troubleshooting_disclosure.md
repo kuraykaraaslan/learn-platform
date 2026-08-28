@@ -61,10 +61,10 @@ export — scheduled for the Growth Care retainer's first sprint.
 - Whenever a serious production issue is resolved but a residual risk remains, so "known issue" always comes with an owner and a plan rather than becoming an indefinite label
 
 ## Common Mistakes
-- Hiding a known limitation at handover to avoid an uncomfortable conversation, guaranteeing the client discovers it independently later
-- Listing an issue without a stated severity, leaving the reader unable to judge how urgently to react
-- Classifying a genuinely new feature request as a "known issue" to avoid framing it as a change request
-- Leaving a critical, unresolved production issue documented only as a passive "known issue" with no owner or resolution plan
+- **The slow export issue never made it into the handover doc — easier not to bring it up** — Hiding a known limitation at handover to avoid an uncomfortable conversation, guaranteeing the client discovers it independently later
+- **The known-issues list has a description of the export bug and no severity attached to it** — Listing an issue without a stated severity, leaving the reader unable to judge how urgently to react
+- **A feature the client always wanted but was never scoped gets filed as a "known issue" instead of a change request** — Classifying a genuinely new feature request as a "known issue" to avoid framing it as a change request
+- **A serious unresolved bug sits in the known-issues doc with no owner and no plan attached** — Leaving a critical, unresolved production issue documented only as a passive "known issue" with no owner or resolution plan
 
 ## Further Reading
 - Google SRE Workbook, "Postmortem Culture: Learning from Failure" — on the value of honest, blameless disclosure over concealment: https://sre.google/workbook/postmortem-culture/
