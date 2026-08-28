@@ -55,11 +55,11 @@ For AEO, this same cluster thinking extends into natural-question form: each clu
 - When preparing AEO-style answer blocks for a page, to confirm they map back to a real cluster question rather than being generic filler
 
 ## Common Mistakes
-- Publishing standalone blog posts with no cluster, pillar, or conversion path connected to them
-- Chasing high-volume keywords that have no real connection to the services actually being sold
-- Mixing multiple search intents into one confused page (half sales pitch, half tutorial)
-- Creating a separate thin page for every minor keyword variation instead of consolidating near-duplicate intents
-- Writing purely educational content with no next step, wasting a visitor who was actually ready to act
+- **A new blog post goes live with no pillar page or conversion path linked to it** — Publishing standalone blog posts with no cluster, pillar, or conversion path connected to them
+- **A keyword has huge search volume but nothing to do with the services you sell** — Chasing high-volume keywords that have no real connection to the services actually being sold
+- **One page tries to be half sales pitch, half tutorial** — Mixing multiple search intents into one confused page (half sales pitch, half tutorial)
+- **Three near-identical keyword variations each get their own thin page** — Creating a separate thin page for every minor keyword variation instead of consolidating near-duplicate intents
+- **A visitor who's ready to buy lands on a purely educational post with no next step** — Writing purely educational content with no next step, wasting a visitor who was actually ready to act
 
 ## Further Reading
 - [HubSpot's "Topic Clusters" guide](https://blog.hubspot.com) — a practical, widely cited explanation of the pillar/cluster model

@@ -50,11 +50,11 @@ Known duplicate variants to redirect or canonicalize:
 - When migrating to a new domain, `www`/non-`www` scheme, or trailing-slash convention
 
 ## Common Mistakes
-- Using the same title template so literally that many pages end up duplicating each other
-- Writing a meta description that oversells or misrepresents what the page actually delivers
-- Canonicalizing every page to the homepage "to be safe," which erases the site's actual page-level signals
-- Using canonical tags to try to hide thin or low-quality pages instead of improving or noindexing them
-- Linking internally to a parameterized or non-canonical URL, undermining the canonical tag's own signal
+- **A title template is applied so literally that dozens of pages end up with near-identical titles** — Using the same title template so literally that many pages end up duplicating each other
+- **A meta description promises more than the page actually delivers** — Writing a meta description that oversells or misrepresents what the page actually delivers
+- **Every page on the site canonicalizes to the homepage, "to be safe"** — Canonicalizing every page to the homepage "to be safe," which erases the site's actual page-level signals
+- **A thin, low-quality page gets a canonical tag pointing elsewhere instead of being improved or noindexed** — Using canonical tags to try to hide thin or low-quality pages instead of improving or noindexing them
+- **Internal links point at a parameterized URL while the canonical tag names the clean one** — Linking internally to a parameterized or non-canonical URL, undermining the canonical tag's own signal
 
 ## Further Reading
 - Google Search Central's "Canonicalization" and "Title Links" documentation — the primary source on how canonical signals and title rewriting actually work

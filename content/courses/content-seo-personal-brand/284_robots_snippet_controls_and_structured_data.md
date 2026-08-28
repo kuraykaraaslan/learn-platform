@@ -48,11 +48,11 @@ Structured data (JSON-LD is the preferred format) adds explicit, machine-readabl
 - When validating structured data before a launch, using Rich Results Test and the Schema.org validator
 
 ## Common Mistakes
-- Using robots.txt to try to remove already-indexed private content instead of noindex plus authentication
-- Applying `nosnippet` site-wide or by default without a specific reason, quietly reducing AI/search visibility
-- Marking up services, ratings, or FAQ content that isn't actually visible on the page
-- Adding conflicting or duplicate Organization/Person identities across schema blocks
-- Copying a competitor's schema implementation without checking whether it actually matches your own visible content
+- **Private content that's already indexed gets blocked in robots.txt to try to remove it** — Using robots.txt to try to remove already-indexed private content instead of noindex plus authentication
+- **`nosnippet` is applied site-wide by default, with no specific page it's meant to protect** — Applying `nosnippet` site-wide or by default without a specific reason, quietly reducing AI/search visibility
+- **Schema markup lists services, ratings, or FAQ content that isn't actually visible on the page** — Marking up services, ratings, or FAQ content that isn't actually visible on the page
+- **Two schema blocks on the same site name conflicting Organization or Person identities** — Adding conflicting or duplicate Organization/Person identities across schema blocks
+- **A competitor's schema markup gets copied onto your own site as-is** — Copying a competitor's schema implementation without checking whether it actually matches your own visible content
 
 ## Further Reading
 - Google Search Central's "Robots Meta Tags" and "Structured Data" documentation — the definitive reference for both topics

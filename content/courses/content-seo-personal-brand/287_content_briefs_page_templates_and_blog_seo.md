@@ -71,11 +71,11 @@ Organic sessions to page + scope-review form submissions from this page
 - When auditing whether a blog post answers its own title's question quickly enough in the opening paragraphs
 
 ## Common Mistakes
-- Starting to write before the brief exists, then discovering mid-draft that the intent or audience was never actually decided
-- Using the same generic outline for a service page, a blog post, and a case study
-- Publishing a thousand words of preamble before answering the question the title promises
-- Writing code-heavy developer content with no explanation of why the decisions matter, or business content so jargon-heavy a non-technical buyer can't follow it
-- Treating keyword choice as a final polish step instead of a brief-stage decision
+- **A draft is half-written before anyone decided what intent or audience it's actually for** — Starting to write before the brief exists, then discovering mid-draft that the intent or audience was never actually decided
+- **A service page, a blog post, and a case study all use the same generic outline** — Using the same generic outline for a service page, a blog post, and a case study
+- **A page runs a thousand words of preamble before answering the question its own title asks** — Publishing a thousand words of preamble before answering the question the title promises
+- **Developer content walks through code with no explanation of why any decision was made** — Writing code-heavy developer content with no explanation of why the decisions matter, or business content so jargon-heavy a non-technical buyer can't follow it
+- **Keyword targeting gets decided during a final editing pass, not before the draft started** — Treating keyword choice as a final polish step instead of a brief-stage decision
 
 ## Further Reading
 - [HubSpot's content brief templates and blog SEO guidance](https://blog.hubspot.com) — practical, widely used starting points for brief structure

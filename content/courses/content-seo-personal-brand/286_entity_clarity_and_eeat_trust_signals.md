@@ -56,11 +56,11 @@ Discovery → scope → architecture → build → test → deploy → handover.
 - Before publishing any content that makes a specific technical or business claim, to confirm real experience backs it
 
 ## Common Mistakes
-- Writing confident technical advice on a topic with no real hands-on experience behind it
-- Using an anonymous or generic voice for expertise-heavy content when a named, specific author would build more trust
-- Letting name, title, or brand spelling drift across the website, LinkedIn, and GitHub
-- Claiming certifications, partnerships, or credentials that don't actually exist
-- Treating the About page as a formality instead of the highest-leverage trust asset on the site
+- **A post gives confident technical advice on a topic you've never actually worked with hands-on** — Writing confident technical advice on a topic with no real hands-on experience behind it
+- **Expertise-heavy content is published under an anonymous or generic "team" byline** — Using an anonymous or generic voice for expertise-heavy content when a named, specific author would build more trust
+- **Your name is spelled one way on the site, another way on LinkedIn, another on GitHub** — Letting name, title, or brand spelling drift across the website, LinkedIn, and GitHub
+- **A bio lists a certification or partnership that isn't actually current, or never existed** — Claiming certifications, partnerships, or credentials that don't actually exist
+- **The About page is a paragraph nobody has touched since launch** — Treating the About page as a formality instead of the highest-leverage trust asset on the site
 
 ## Further Reading
 - [Google's "Creating Helpful, Reliable, People-First Content" and E-E-A-T documentation](https://developers.google.com/search) — the primary source defining these signals

@@ -54,11 +54,11 @@ Bad:  /page?id=123, /blog/post_2026_final_v3
 - When deciding whether a new page type (admin dashboard, internal tool, staging preview) should be indexable at all
 
 ## Common Mistakes
-- Relying on client-side-only rendering for the main heading, body text, or links on a page that needs to rank
-- Returning HTTP 200 for a broken or "not found" page instead of a proper 404/410
-- Including noindexed, redirected, or 404 URLs in the XML sitemap
-- Letting staging or development environments accidentally become crawlable and indexed
-- Skipping URL redirect planning before a redesign, causing an avoidable traffic and ranking collapse
+- **A page's main heading and body text only render after client-side JavaScript runs** — Relying on client-side-only rendering for the main heading, body text, or links on a page that needs to rank
+- **A broken or removed page returns HTTP 200 instead of a 404/410** — Returning HTTP 200 for a broken or "not found" page instead of a proper 404/410
+- **The XML sitemap lists a URL that's noindexed, redirected, or 404s** — Including noindexed, redirected, or 404 URLs in the XML sitemap
+- **A staging environment is reachable at a public URL with no crawl block** — Letting staging or development environments accidentally become crawlable and indexed
+- **A site redesign changes URLs with no redirect plan in place first** — Skipping URL redirect planning before a redesign, causing an avoidable traffic and ranking collapse
 
 ## Further Reading
 - [Google Search Central's "Crawling and Indexing" documentation](https://developers.google.com/search/docs/crawling-indexing) — the authoritative technical reference

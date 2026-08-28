@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 998,
-    "lessonsWithZeroDrillable": 186,
+    "single": 958,
+    "lessonsWithZeroDrillable": 178,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 173
+    "lessonsWithTwoPlusDrillable": 181
   },
   "lessons": [
     {
@@ -2458,14 +2458,14 @@
       "file": "281_search_intent_topic_clusters_and_keyword_query_mapping.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2473,14 +2473,14 @@
       "file": "282_technical_seo_foundations_crawl_render_index.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2488,14 +2488,14 @@
       "file": "283_metadata_titles_descriptions_and_canonical_url_strategy.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2503,14 +2503,14 @@
       "file": "284_robots_snippet_controls_and_structured_data.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2518,14 +2518,14 @@
       "file": "285_ai_search_and_answer_engine_optimization.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2533,14 +2533,14 @@
       "file": "286_entity_clarity_and_eeat_trust_signals.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2548,14 +2548,14 @@
       "file": "287_content_briefs_page_templates_and_blog_seo.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2563,14 +2563,14 @@
       "file": "288_landing_page_local_and_service_seo.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {

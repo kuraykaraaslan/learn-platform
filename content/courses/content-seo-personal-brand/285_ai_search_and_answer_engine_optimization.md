@@ -58,11 +58,11 @@ should usually wait unless they are essential to the first use case.
 - When reporting on content performance and clicks alone don't explain a rise in branded search or direct inquiries
 
 ## Common Mistakes
-- Opening a page with generic scene-setting instead of a direct answer, losing both human readers and answer-engine extraction
-- Publishing generic, AI-assisted filler with no real practitioner experience behind it, hoping volume compensates for depth
-- Claiming or promising guaranteed AI Overview or answer-engine inclusion to a client or in marketing copy
-- Overusing FAQ-style blocks as a formatting trick without real depth behind the answers
-- Judging AEO content purely by click volume and concluding it "isn't working" when it's actually satisfying queries with zero clicks
+- **A page opens with a paragraph of scene-setting before ever answering the question in its title** — Opening a page with generic scene-setting instead of a direct answer, losing both human readers and answer-engine extraction
+- **AI-assisted filler content goes out at high volume with no real practitioner experience behind any of it** — Publishing generic, AI-assisted filler with no real practitioner experience behind it, hoping volume compensates for depth
+- **A client asks whether you can guarantee AI Overview inclusion, and marketing copy implies yes** — Claiming or promising guaranteed AI Overview or answer-engine inclusion to a client or in marketing copy
+- **A page is broken into FAQ blocks that restate the same shallow point five different ways** — Overusing FAQ-style blocks as a formatting trick without real depth behind the answers
+- **A page's click volume is low, so it gets marked as underperforming** — Judging AEO content purely by click volume and concluding it "isn't working" when it's actually satisfying queries with zero clicks
 
 ## Further Reading
 - Aleyda Solis' SEO FOMO newsletter and Orainti's AI-search research — a consistently current, practitioner-level source on AEO specifically

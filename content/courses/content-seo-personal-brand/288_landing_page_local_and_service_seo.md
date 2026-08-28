@@ -52,11 +52,11 @@ across "software developer Istanbul / Ankara / Izmir" with no unique content.
 - Before publishing any page that states or implies a service area, to confirm the wording matches business reality
 
 ## Common Mistakes
-- Combining every service into one generic page that ranks for nothing specific
-- Omitting what's excluded from a service description, leaving scope boundaries to be discovered later in a dispute
-- Implying a local office or presence that doesn't actually exist
-- Publishing near-identical city pages with only the city name changed
-- Letting business name or description drift across LinkedIn, GitHub, and directory profiles
+- **Every service you offer lives on one combined landing page** — Combining every service into one generic page that ranks for nothing specific
+- **A service description says what's included, but never what's excluded** — Omitting what's excluded from a service description, leaving scope boundaries to be discovered later in a dispute
+- **A landing page's copy implies a local office that doesn't actually exist** — Implying a local office or presence that doesn't actually exist
+- **Ten city pages exist, each one a copy of the last with only the city name swapped** — Publishing near-identical city pages with only the city name changed
+- **Your business name reads slightly differently on LinkedIn, GitHub, and a directory listing** — Letting business name or description drift across LinkedIn, GitHub, and directory profiles
 
 ## Further Reading
 - [Google's guidance on "duplicate content" and "doorway pages"](https://developers.google.com/search) — the primary source on why templated local pages get suppressed
