@@ -53,10 +53,10 @@ payment of the additional fee.
 - Before agreeing to "just add it, we'll figure out the details later."
 
 ## Common Mistakes
-- Absorbing new work silently because saying no feels confrontational, then resenting the project later.
-- Treating every change request as a fight instead of offering the calm, standard add/replace/defer framework.
-- Verbally agreeing to a change in a call without ever producing the written document and approval.
-- Letting "urgent" language from the client skip the change-request process entirely instead of routing it through an accelerated version of the same process.
+- **"Just one small thing" gets absorbed for free, again, because saying no feels like an awkward conversation** — Absorbing new work silently because saying no feels confrontational, then resenting the project later.
+- **A scope change request turns into a tense back-and-forth about whether it's really "in scope"** — Treating every change request as a fight instead of offering the calm, standard add/replace/defer framework.
+- **A change gets agreed to on a call, and work on it starts the same day with nothing written down** — Verbally agreeing to a change in a call without ever producing the written document and approval.
+- **"This is urgent" is enough to skip the change-request process entirely and just start building** — Letting "urgent" language from the client skip the change-request process entirely instead of routing it through an accelerated version of the same process.
 
 ## Further Reading
 - Tom DeMarco and Timothy Lister, *Peopleware* — on managing shifting requirements without destroying a project's structure.

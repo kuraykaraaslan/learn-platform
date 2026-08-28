@@ -55,9 +55,9 @@ The following are not included unless added through a written change request:
 - Any time you notice yourself reaching for a vague, comfortable phrase like "full" or "complete" instead of a specific list.
 
 ## Common Mistakes
-- Writing an inclusions list without a matching exclusions list, leaving unstated assumptions for both sides to fill in differently.
-- Calling something MVP while quietly including every feature the client has ever mentioned.
-- Letting a feature stay in fixed scope because it "shouldn't be too hard," without actually being able to describe it.
+- **The scope doc lists everything that's included, with no list of what isn't** — Writing an inclusions list without a matching exclusions list, leaving unstated assumptions for both sides to fill in differently.
+- **The "MVP" scope document somehow includes every feature the client has mentioned across six months of conversations** — Calling something MVP while quietly including every feature the client has ever mentioned.
+- **A vague feature stays in the fixed-price scope because it "shouldn't be too hard," with no actual description of what it involves** — Letting a feature stay in fixed scope because it "shouldn't be too hard," without actually being able to describe it.
 - Treating boundary categories unevenly — nailing down functional scope while leaving content, design, or operational scope completely undefined.
 
 ## Further Reading

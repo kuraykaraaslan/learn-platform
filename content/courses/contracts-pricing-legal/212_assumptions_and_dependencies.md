@@ -45,10 +45,10 @@ This estimate assumes that:
 - Any time a client says "don't worry, we'll send that later" about content, access, or approvals.
 
 ## Common Mistakes
-- Writing a timeline as an unconditional promise instead of naming what it depends on.
-- Listing assumptions once in an internal notebook but never putting them in the client-facing document.
-- Treating "known unknowns" as something to quietly absorb rather than name and price around.
-- Assuming a dependency has an owner because it's "obviously" the client's job, without writing it down.
+- **The timeline says "6 weeks," full stop, with nothing about what that assumes has to go right** — Writing a timeline as an unconditional promise instead of naming what it depends on.
+- **The assumptions list lives in a private notes doc, and the client-facing proposal has none of it** — Listing assumptions once in an internal notebook but never putting them in the client-facing document.
+- **Nobody's reviewed the legacy database yet, and the estimate just quietly prices in "should be fine"** — Treating "known unknowns" as something to quietly absorb rather than name and price around.
+- **The domain access is "obviously" the client's responsibility, and that assumption never made it into the dependency table** — Assuming a dependency has an owner because it's "obviously" the client's job, without writing it down.
 
 ## Further Reading
 - Steve McConnell, *Software Estimation: Demystifying the Black Art* — on the relationship between estimate accuracy and stated assumptions.

@@ -44,10 +44,10 @@ to begin. What questions do you have about what's included?"
 - Reviewing a draft proposal for accidental apology language or premature price placement.
 
 ## Common Mistakes
-- Presenting a single take-it-or-leave-it price with no anchor, so the client invents their own low reference point.
-- Naming tiers "Basic / Standard / Premium," which implies the recommended option is a middle-quality compromise rather than the smart choice.
-- Putting the price on page one before any value has been described.
-- Using manufactured urgency ("this price expires in 48 hours") that damages trust if the price is still available afterward.
+- **The proposal has one number on it, with nothing to compare it against** — Presenting a single take-it-or-leave-it price with no anchor, so the client invents their own low reference point.
+- **The three tiers are labeled Basic, Standard, and Premium, right there on the proposal** — Naming tiers "Basic / Standard / Premium," which implies the recommended option is a middle-quality compromise rather than the smart choice.
+- **The price is the first thing on page one, before a single sentence about the client's problem** — Putting the price on page one before any value has been described.
+- **"This price expires in 48 hours" goes into the proposal, and the same number is still on offer a month later** — Using manufactured urgency ("this price expires in 48 hours") that damages trust if the price is still available afterward.
 
 ## Further Reading
 - William Poundstone, *Priceless: The Myth of Fair Value*.

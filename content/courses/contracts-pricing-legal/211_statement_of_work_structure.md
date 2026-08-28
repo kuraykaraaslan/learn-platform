@@ -79,10 +79,10 @@ Contractor: _______________  Date: _______
 - Any time a client, PM, or future maintainer needs a single source of truth for what was agreed.
 
 ## Common Mistakes
-- Reusing proposal language (persuasive, outcome-focused) directly in the SOW instead of rewriting it as control language.
-- Leaving out exclusions, payment gates, or an acceptance process because "the relationship is friendly, we don't need to be formal."
-- Letting the SOW and the underlying contract/commercial terms silently contradict each other with no stated precedence.
-- Treating the SOW as a one-time document instead of the reference both sides return to when a change request or dispute arises.
+- **The SOW is the proposal's persuasive copy, pasted in with the price updated** — Reusing proposal language (persuasive, outcome-focused) directly in the SOW instead of rewriting it as control language.
+- **"We're on good terms, we don't need to be that formal about it" is why the SOW skips exclusions and payment gates** — Leaving out exclusions, payment gates, or an acceptance process because "the relationship is friendly, we don't need to be formal."
+- **The SOW says one thing about revisions and the commercial terms say another, with no note on which one wins** — Letting the SOW and the underlying contract/commercial terms silently contradict each other with no stated precedence.
+- **The SOW gets signed and filed away, and nobody reopens it when the first change request comes in** — Treating the SOW as a one-time document instead of the reference both sides return to when a change request or dispute arises.
 
 ## Further Reading
 - Mike Monteiro, *You're My Favorite Client* — practical SOW and scope-writing guidance for client-facing software work.

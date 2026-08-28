@@ -49,10 +49,10 @@ know if this matches your understanding before I update the proposal."
 - Before any negotiation conversation you know is coming — rehearse the specific script, don't improvise cold.
 
 ## Common Mistakes
-- Filling an uncomfortable silence after stating a price by immediately offering a discount.
-- Matching a competitor's number without first comparing what's actually included in each scope.
-- Offering multiple concessions in a single message instead of one at a time.
-- Leaving a negotiated change verbal instead of confirming it in writing before proceeding.
+- **The price is stated, the room goes quiet for a second, and a discount gets offered to fill the silence** — Filling an uncomfortable silence after stating a price by immediately offering a discount.
+- **"A competitor quoted less" gets met with "I can match that," before anyone's compared what the two scopes actually include** — Matching a competitor's number without first comparing what's actually included in each scope.
+- **The response to "too expensive" offers a lower deposit, fewer revisions, and a longer timeline, all in the same message** — Offering multiple concessions in a single message instead of one at a time.
+- **A price change gets agreed on a call, and work continues with nothing written down about it** — Leaving a negotiated change verbal instead of confirming it in writing before proceeding.
 
 ## Further Reading
 - Roger Fisher, William Ury, and Bruce Patton, *Getting to Yes: Negotiating Agreement Without Giving In*.

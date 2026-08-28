@@ -45,9 +45,9 @@ written feedback list.
 - Before final delivery, to confirm the full acceptance bundle is actually complete.
 
 ## Common Mistakes
-- Writing deliverables as vague outcomes ("the app will work great") instead of testable, inspectable outputs.
-- Treating every piece of feedback as equally urgent instead of classifying it as blocking or non-blocking first.
-- Never stating a feedback window, so milestones stay technically "pending" for months with no consequence.
+- **The deliverable for Milestone 2 reads "the app will work great," with nothing testable behind it** — Writing deliverables as vague outcomes ("the app will work great") instead of testable, inspectable outputs.
+- **A request for a different shade of blue and a report that checkout is broken land in the same inbox and get the same priority** — Treating every piece of feedback as equally urgent instead of classifying it as blocking or non-blocking first.
+- **Milestone 2 has been sitting "pending client review" for two months, with no stated deadline that would ever close it** — Never stating a feedback window, so milestones stay technically "pending" for months with no consequence.
 - Releasing final source code or production access before the full acceptance bundle — including payment — is actually complete.
 
 ## Further Reading

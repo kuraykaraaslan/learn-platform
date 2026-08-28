@@ -59,10 +59,10 @@ updated proposal."
 - Near a proposal's expiry date, before deciding whether to extend, re-price, or close it.
 
 ## Common Mistakes
-- Sending a proposal that states price with no exclusions, no payment schedule, and no validity date.
-- Opening with the price instead of the business problem being solved.
-- Following up daily out of anxiety, which reads as desperation rather than diligence.
-- Leaving a stalled proposal open indefinitely instead of closing the loop and reserving the option to revisit later.
+- **The proposal states a price, with nothing about what's excluded, how payment works, or when the offer expires** — Sending a proposal that states price with no exclusions, no payment schedule, and no validity date.
+- **The proposal's first line is the price, before the client's actual problem gets a mention** — Opening with the price instead of the business problem being solved.
+- **A "just checking in" message goes out every single day the proposal sits unanswered** — Following up daily out of anxiety, which reads as desperation rather than diligence.
+- **A proposal sent two months ago is still technically "pending," with no follow-up and no close-out message** — Leaving a stalled proposal open indefinitely instead of closing the loop and reserving the option to revisit later.
 
 ## Further Reading
 - Blair Enns, *Pricing Creativity: A Guide to Profit Beyond the Billable Hour* — proposal structure and framing for creative/technical services.

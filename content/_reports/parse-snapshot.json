@@ -1844,7 +1844,7 @@
         "keyConcepts": "718640ef853d0b2f",
         "exampleCode": "ee0d86e51c616a2e",
         "whenToUse": "ce7bffbef8f20c10",
-        "commonMistakes": "02ff31e01866104f",
+        "commonMistakes": "6078a7102f5de0a5",
         "furtherReading": "d89bfaf73433487b"
       },
       "208_negotiating_price_pressure.md": {
@@ -1853,7 +1853,7 @@
         "keyConcepts": "53ee118c16767f5a",
         "exampleCode": "8988103b0dc211d0",
         "whenToUse": "8b1f0163ed9d1377",
-        "commonMistakes": "44256d8597ddc235",
+        "commonMistakes": "27248651c5058eea",
         "furtherReading": "0c89e6f6210dac5e"
       },
       "209_proposal_structure_and_follow_up.md": {
@@ -1862,7 +1862,7 @@
         "keyConcepts": "9a91a71303ea00b0",
         "exampleCode": "53a0229579141368",
         "whenToUse": "a9d416719bf26cbd",
-        "commonMistakes": "9abf5c552cb43381",
+        "commonMistakes": "668ed8af428da6a3",
         "furtherReading": "670682c754eaff2c"
       },
       "210_scope_definition_and_boundaries.md": {
@@ -1871,7 +1871,7 @@
         "keyConcepts": "74e09879a96db4ac",
         "exampleCode": "92edf3d7f94c84cb",
         "whenToUse": "99fa6b89c3ad78c4",
-        "commonMistakes": "27d8a009a68829fd",
+        "commonMistakes": "67abf4f34cf5e312",
         "furtherReading": "7d290815490648e5"
       },
       "211_statement_of_work_structure.md": {
@@ -1880,7 +1880,7 @@
         "keyConcepts": "e9fb2654b5aba4ad",
         "exampleCode": "4d8991e86f107eec",
         "whenToUse": "528b6dd1b0d79f02",
-        "commonMistakes": "7cf764f29dc8decb",
+        "commonMistakes": "645efe0262a30a8c",
         "furtherReading": "c2fc4abd98ef158a"
       },
       "212_assumptions_and_dependencies.md": {
@@ -1889,7 +1889,7 @@
         "keyConcepts": "9a2b0414a653ffe5",
         "exampleCode": "2134c081a059d8e0",
         "whenToUse": "7797de38171a9bad",
-        "commonMistakes": "e7adf4e7a7056b4d",
+        "commonMistakes": "8142a24f5f1c9518",
         "furtherReading": "634c2f134b767e23"
       },
       "213_deliverables_and_acceptance_criteria.md": {
@@ -1898,7 +1898,7 @@
         "keyConcepts": "159094608c6eb2be",
         "exampleCode": "a7a80ea22d97e143",
         "whenToUse": "7cd0cc95f5f0eef0",
-        "commonMistakes": "3e92c4ab39f4ec47",
+        "commonMistakes": "c7e708378bcb7281",
         "furtherReading": "d04810e0553d3ab1"
       },
       "214_change_request_control.md": {
@@ -1907,7 +1907,7 @@
         "keyConcepts": "dca15af1e1dd6e16",
         "exampleCode": "0ee2b6a21a04a335",
         "whenToUse": "e0ca740cc4f2af3b",
-        "commonMistakes": "c5d9acb3af9e2723",
+        "commonMistakes": "6f9d5049c9482acb",
         "furtherReading": "142e3c407379be58"
       },
       "215_revision_policy.md": {
