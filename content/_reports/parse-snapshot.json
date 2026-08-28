@@ -1309,7 +1309,7 @@
         "keyConcepts": "ee990175fd33895b",
         "exampleCode": "1339d96a77fbcbb3",
         "whenToUse": "6762429b2eac607b",
-        "commonMistakes": "1d57a32a82cf4cb1",
+        "commonMistakes": "2a9fb5a9f549d277",
         "furtherReading": "a37e5b36511821e8"
       },
       "261_client_facing_postmortem_reports.md": {
@@ -1318,7 +1318,7 @@
         "keyConcepts": "166d358ba74e6100",
         "exampleCode": "a8b3864836401aa5",
         "whenToUse": "8bee14479d600be0",
-        "commonMistakes": "2881710551b92ad1",
+        "commonMistakes": "a44df48e863e97e7",
         "furtherReading": "1151a5e819a80556"
       },
       "262_issue_triage_and_severity_classification.md": {
@@ -1327,7 +1327,7 @@
         "keyConcepts": "bac4bf14d3e91edc",
         "exampleCode": "e5f97bbf13dcef08",
         "whenToUse": "a4c97def8f0c713c",
-        "commonMistakes": "6940d5c4e4b49530",
+        "commonMistakes": "32b50c989bb351ff",
         "furtherReading": "3ab0c550584be453"
       },
       "263_offboarding_and_vendor_transition.md": {
@@ -1336,7 +1336,7 @@
         "keyConcepts": "fa9b7c9f031d940a",
         "exampleCode": "56dd8c65d945e1da",
         "whenToUse": "6bab4dba2d862571",
-        "commonMistakes": "c425a5d9d5d3320a",
+        "commonMistakes": "5ce943cf482744de",
         "furtherReading": "a3ab5c91ae91edbe"
       },
       "264_renewal_upsell_and_expansion.md": {
@@ -1345,7 +1345,7 @@
         "keyConcepts": "a9e380abe175d773",
         "exampleCode": "fb75a86b720b5496",
         "whenToUse": "e0f3b632235c17c8",
-        "commonMistakes": "7fcfebcb8c09b273",
+        "commonMistakes": "979346340a52735f",
         "furtherReading": "f7812226abd6d6de"
       },
       "265_support_operations_channels_slas_and_boundaries.md": {
@@ -1354,7 +1354,7 @@
         "keyConcepts": "5115593a4fde27f1",
         "exampleCode": "3f7de5eb760bd446",
         "whenToUse": "5a8f3437e2ff352c",
-        "commonMistakes": "e200395d33fc6cb9",
+        "commonMistakes": "d27826247d2bdb27",
         "furtherReading": "5df67a1d0d0107c5"
       },
       "266_customer_success_metrics_and_health_reporting.md": {
@@ -1363,7 +1363,7 @@
         "keyConcepts": "38d4b1f0120ee91d",
         "exampleCode": "4e3c6c5edd926ee8",
         "whenToUse": "4485ae671b8c6c1d",
-        "commonMistakes": "9661a1a6600ad4e4",
+        "commonMistakes": "c238910ae49128b6",
         "furtherReading": "a4919dcda2883599"
       },
       "267_delivery_playbooks_codifying_project_types.md": {
@@ -1372,7 +1372,7 @@
         "keyConcepts": "5403fc915fba206e",
         "exampleCode": "84bf8150c1ef3f74",
         "whenToUse": "827df465b2ec8feb",
-        "commonMistakes": "b7b925b1a061493a",
+        "commonMistakes": "e7e9f7642a18cc17",
         "furtherReading": "ec327bd70092d55e"
       },
       "268_discovery_calls_red_flags_and_disqualification.md": {

@@ -73,10 +73,10 @@ will include what caused this and what I'm changing to prevent recurrence.
 - Immediately after resolution, to send the short stability-confirmation message that bridges to the full postmortem
 
 ## Common Mistakes
-- Over-explaining technical root cause in the very first message, before it's even confirmed, out of a need to seem in control
-- Going silent during an unresolved incident because there's genuinely no update yet, instead of sending a "still investigating" message on schedule
-- Saying "this is fully fixed" before actual verification, then having to walk it back if the fix doesn't hold
-- Using a personal chat account or informal channel to send incident updates instead of the agreed professional support channel
+- **The first message to the client walks through the connection pool config and the exact stack trace, before the cause is even confirmed** — Over-explaining technical root cause in the very first message, before it's even confirmed, out of a need to seem in control
+- **Thirty minutes pass with genuinely nothing new to report, and no update goes out because there's nothing to say** — Going silent during an unresolved incident because there's genuinely no update yet, instead of sending a "still investigating" message on schedule
+- **"This is fully fixed" goes out the moment the rollback finishes, before anyone's actually verified it holds** — Saying "this is fully fixed" before actual verification, then having to walk it back if the fix doesn't hold
+- **The incident update goes out over a personal WhatsApp number instead of the agreed support channel** — Using a personal chat account or informal channel to send incident updates instead of the agreed professional support channel
 
 ## Further Reading
 - Google SRE Book, "Managing Incidents" — the operational foundation for severity-based response timing and communication rhythm: https://sre.google/sre-book/managing-incidents/

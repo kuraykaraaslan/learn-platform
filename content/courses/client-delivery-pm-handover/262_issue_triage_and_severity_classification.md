@@ -51,10 +51,10 @@ reproduce it or find it in the logs.
 - When an issue's apparent cause shifts during investigation — from what looked like a defect to a client configuration problem, for instance — as the moment to update its ownership classification rather than leaving the original guess in place
 
 ## Common Mistakes
-- Treating every client message as equally critical regardless of actual severity, burning urgency on cosmetic issues while a real production problem waits
-- Attempting a fix before understanding scope or confirming reproducibility, risking a change that doesn't actually address the reported problem
-- Blaming the user or the client's data before investigation has actually confirmed where the fault lies
-- Skipping the post-incident note for a critical issue once it's fixed, losing the record of what happened and why
+- **A cosmetic color complaint and a report of orders silently failing to save land in the inbox back to back, and both get the same urgency** — Treating every client message as equally critical regardless of actual severity, burning urgency on cosmetic issues while a real production problem waits
+- **A fix goes out for a reported bug before anyone's actually reproduced what's happening** — Attempting a fix before understanding scope or confirming reproducibility, risking a change that doesn't actually address the reported problem
+- **"This is probably something on your end" gets said before the logs have even been checked** — Blaming the user or the client's data before investigation has actually confirmed where the fault lies
+- **A critical issue gets fixed and closed, with no note written down about what actually happened** — Skipping the post-incident note for a critical issue once it's fixed, losing the record of what happened and why
 
 ## Further Reading
 - Google SRE Book, "Managing Incidents" — the severity-based triage model this lesson's classification structure is adapted from: https://sre.google/sre-book/managing-incidents/

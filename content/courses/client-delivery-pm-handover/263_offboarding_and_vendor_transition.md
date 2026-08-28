@@ -64,10 +64,10 @@ known limitations are already documented in the handover package.
 - Whenever a relationship winds down gradually rather than ending on a single clear date, as the prompt to set an explicit end date rather than letting the ambiguity persist
 
 ## Common Mistakes
-- Leaving freelancer access to client systems active indefinitely after the relationship has effectively ended, with no stated reason
-- Withholding client-owned assets or documentation out of frustration about how the relationship ended
-- Criticizing the incoming vendor or developer, which reflects worse on the outgoing freelancer than on anyone else
-- Providing unlimited free consultation to the incoming developer instead of pricing additional live walkthrough time appropriately
+- **The relationship ended three months ago, and the old developer account still has full production access** — Leaving freelancer access to client systems active indefinitely after the relationship has effectively ended, with no stated reason
+- **The client moved to another vendor on bad terms, and the handover docs never quite get sent over** — Withholding client-owned assets or documentation out of frustration about how the relationship ended
+- **A question from the incoming developer gets answered with a comment about how they're doing everything wrong** — Criticizing the incoming vendor or developer, which reflects worse on the outgoing freelancer than on anyone else
+- **The incoming developer keeps scheduling calls, and each one happens for free because the relationship is "basically over anyway"** — Providing unlimited free consultation to the incoming developer instead of pricing additional live walkthrough time appropriately
 
 ## Further Reading
 - David Maister, *Managing the Professional Service Firm* — on ending client relationships in a way that preserves reputation and future referral potential

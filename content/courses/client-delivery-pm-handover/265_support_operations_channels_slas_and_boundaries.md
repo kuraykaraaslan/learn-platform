@@ -66,10 +66,10 @@ maintenance boundary definitions this classification depends on.
 - When defining what a paid emergency or after-hours tier actually includes, before ever agreeing to one in the moment
 
 ## Common Mistakes
-- Treating every channel a client happens to use as equally valid, so nothing is tracked in one place and triage becomes guesswork
-- Promising fast resolution instead of fast response, then being unable to honor it once a fix turns out to be more complex than expected
-- Accepting a voice note or a bare screenshot as a complete report and starting to debug from it instead of requesting the missing reproduction details
-- Using the word "SLA" casually for an unpriced, unstaffed solo operation, creating an expectation of guarantees that don't actually exist
+- **Requests come in over email, WhatsApp, and a random comment on last month's invoice, and all three get treated as equally trackable** — Treating every channel a client happens to use as equally valid, so nothing is tracked in one place and triage becomes guesswork
+- **"I'll have this fixed by tomorrow" gets said before anyone's confirmed how complex the fix actually is** — Promising fast resolution instead of fast response, then being unable to honor it once a fix turns out to be more complex than expected
+- **A blurry screenshot with no context arrives, and debugging starts from that alone** — Accepting a voice note or a bare screenshot as a complete report and starting to debug from it instead of requesting the missing reproduction details
+- **"We have a 24-hour SLA" gets said to a client, with no pricing or staffing behind that promise** — Using the word "SLA" casually for an unpriced, unstaffed solo operation, creating an expectation of guarantees that don't actually exist
 
 ## Further Reading
 - Matthew Dixon, Nick Toman, Rick DeLisi, *The Effortless Experience* — on why reducing customer effort (clear channels, clear expectations) matters more than heroic individual responses

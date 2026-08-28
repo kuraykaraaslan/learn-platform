@@ -56,10 +56,10 @@ from the original kickoff notes).
 - When a client asks a strategic question themselves ("could this also handle X?") — the door is already open
 
 ## Common Mistakes
-- Pitching new scope before the currently delivered system has proven stable and valuable
-- Labeling every small client request as a major growth opportunity instead of just fixing it
-- Proposing features that aren't tied to any observed usage, pain, or stated goal
-- Selling new work while known support debt or open bugs remain unresolved, which reads as prioritizing revenue over the existing commitment
+- **The system launched two weeks ago, and a phase-two proposal already goes out before adoption's been checked** — Pitching new scope before the currently delivered system has proven stable and valuable
+- **A one-line bug fix request gets reframed as a "growth opportunity" worth a proposal** — Labeling every small client request as a major growth opportunity instead of just fixing it
+- **"Have you considered AI-powered analytics?" goes out with nothing behind it beyond it sounding impressive** — Proposing features that aren't tied to any observed usage, pain, or stated goal
+- **A new module gets pitched while three known bugs from last month are still sitting open** — Selling new work while known support debt or open bugs remain unresolved, which reads as prioritizing revenue over the existing commitment
 
 ## Further Reading
 - Nick Mehta, Dan Steinman, Lincoln Murphy, *Customer Success: How Innovative Companies Are Reducing Churn and Growing Recurring Revenue* — the foundational text on treating renewal and expansion as an evidence-driven discipline rather than an opportunistic sales push

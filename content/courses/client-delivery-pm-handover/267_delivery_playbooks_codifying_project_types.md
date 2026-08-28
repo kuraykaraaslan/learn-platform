@@ -74,10 +74,10 @@ Codification trigger: this playbook was written after the 3rd instance of
 - When onboarding a subcontractor or new team member, so they inherit the same scoping discipline instead of learning it project by project
 
 ## Common Mistakes
-- Showing the internal playbook document directly to a client instead of translating it into clean proposal language
-- Writing a playbook after a single project instead of waiting for the pattern to repeat, which bakes a one-off guess in as if it were a proven default
-- Treating a playbook as fixed once written, instead of feeding new red flags or recurring add-on requests back into it as they're discovered
-- Skipping the red flags section, so the same problematic client pattern gets missed and repeated on every new instance of that project type
+- **The internal admin-panel playbook, red flags and pricing notes included, gets forwarded straight to a prospect as the proposal** — Showing the internal playbook document directly to a client instead of translating it into clean proposal language
+- **The first e-commerce MVP just wrapped, and a playbook gets written from that single project's numbers** — Writing a playbook after a single project instead of waiting for the pattern to repeat, which bakes a one-off guess in as if it were a proven default
+- **The fourth admin panel hits a red flag the playbook never mentioned, and nothing gets added back to it afterward** — Treating a playbook as fixed once written, instead of feeding new red flags or recurring add-on requests back into it as they're discovered
+- **A client pattern that caused trouble on two past projects shows up again, unflagged, because the playbook never had a red flags section** — Skipping the red flags section, so the same problematic client pattern gets missed and repeated on every new instance of that project type
 
 ## Further Reading
 - Michael E. Gerber, *The E-Myth Revisited* — on systemizing a service business by documenting the repeatable process instead of relying on tribal knowledge for each new engagement

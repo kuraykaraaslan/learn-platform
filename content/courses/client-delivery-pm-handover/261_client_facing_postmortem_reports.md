@@ -74,10 +74,10 @@ call this week.
 - Any time an SLA or expected response time was breached during the incident, as the required moment to acknowledge that directly and state the concrete fix
 
 ## Common Mistakes
-- Sending a postmortem full of technical jargon and stack traces that a business stakeholder can't actually use to judge whether the issue is really resolved
-- Writing vague prevention measures like "I will be more careful" instead of specific, dated actions already taken
-- Rounding down the actual duration or user impact to make the incident look smaller than it was
-- Turning a client-caused incident into a blame document instead of a factual account paired with a forward-looking safeguard
+- **The postmortem's root cause section includes the actual stack trace and the exact SQL error code** — Sending a postmortem full of technical jargon and stack traces that a business stakeholder can't actually use to judge whether the issue is really resolved
+- **The prevention section reads "I will be more careful with deployments going forward"** — Writing vague prevention measures like "I will be more careful" instead of specific, dated actions already taken
+- **The outage ran 55 minutes, and the report rounds it down to "briefly affected a few users"** — Rounding down the actual duration or user impact to make the incident look smaller than it was
+- **The client's own action triggered the incident, and the report reads like a list of what they did wrong** — Turning a client-caused incident into a blame document instead of a factual account paired with a forward-looking safeguard
 
 ## Further Reading
 - Google SRE Workbook, "Postmortem Culture: Learning from Failure" — the foundational case for blameless, specific, and proactive postmortems: https://sre.google/workbook/postmortem-culture/

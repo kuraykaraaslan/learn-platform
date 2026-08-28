@@ -63,10 +63,10 @@ month, concentrated around the CSV export feature.
 - When deciding whether an expansion or upsell recommendation (Lesson 264) is actually justified by usage, rather than just convenient timing
 
 ## Common Mistakes
-- Measuring only technical uptime and ignoring client sentiment, which misses relationship risk that pure system metrics can't see
-- Letting a recurring support theme go unnoticed because each individual ticket looked minor in isolation
-- Sending a report that lists completed activity with no risks or recommendations, leaving the client to draw their own conclusions
-- Waiting until a renewal conversation to surface a health risk that had been visible for months in the data
+- **Uptime has been 100% all quarter, and that's the entire basis for calling the relationship healthy** — Measuring only technical uptime and ignoring client sentiment, which misses relationship risk that pure system metrics can't see
+- **Three different tickets this month asked the same question about filtering exports, each one logged as a one-off** — Letting a recurring support theme go unnoticed because each individual ticket looked minor in isolation
+- **This month's report lists three bug fixes and a call held, with nothing about what any of it means going forward** — Sending a report that lists completed activity with no risks or recommendations, leaving the client to draw their own conclusions
+- **Support volume has been climbing for three months, and it only comes up when the renewal conversation starts** — Waiting until a renewal conversation to surface a health risk that had been visible for months in the data
 
 ## Further Reading
 - Nick Mehta, Dan Steinman, Lincoln Murphy, *Customer Success: How Innovative Companies Are Reducing Churn and Growing Recurring Revenue* — the source of the adoption/health-score framing used across customer success practice
