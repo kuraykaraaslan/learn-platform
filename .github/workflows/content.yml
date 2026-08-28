@@ -31,3 +31,18 @@ jobs:
       # slipped past content:lint's offline self-consistency check, and a
       # behavior change (a tool's real output changed) that needs a re-stamp.
       - run: npx tsx scripts/stamp-verify.ts --check
+
+      # content:check is vitest + standalone scripts — none of it runs the
+      # real Next.js/tsc build pipeline, which has its own type-checking
+      # pass over files vitest never touches (route files, layouts) and its
+      # own module-resolution behavior (client-vs-server bundle boundaries).
+      # Both already caught a real bug apart from vitest in this repo's own
+      # history: a type-only export missing from course_content.blocks.ts's
+      # re-exports compiled fine under vitest but failed `next build`'s tsc
+      # pass outright.
+      # NEXT_PUBLIC_WEBCONTAINER_API_KEY is deliberately not set here —
+      # confirmed directly (npm run build with .env.local removed, matching
+      # what CI actually sees) that the build succeeds without it. It's only
+      # read inside an async function a reader's click triggers at runtime
+      # (runtime/webcontainer.client.ts), never during static generation.
+      - run: npm run build
