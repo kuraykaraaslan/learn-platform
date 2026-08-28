@@ -62,11 +62,11 @@ Comment angle: mention hidden complexity under event-tech posts.
 - When testing a new format or hook and needing to isolate one variable instead of changing everything at once
 
 ## Common Mistakes
-- Writing "DM me" or a soft pitch under nearly every post, eroding the trust built by educational content
-- Treating one project or blog post as good for exactly one LinkedIn post instead of a full repurposing map
-- Chasing impressions and follower count while ignoring DM quality, profile visits, and actual leads
-- Copying a high-performing post word-for-word instead of varying it into a genuinely new angle
-- Running multiple content experiments simultaneously, making it impossible to tell which change actually worked
+- **Nearly every post ends with "DM me" or a soft pitch** — Writing "DM me" or a soft pitch under nearly every post, eroding the trust built by educational content
+- **One blog post becomes exactly one LinkedIn post and nothing else** — Treating one project or blog post as good for exactly one LinkedIn post instead of a full repurposing map
+- **Impressions and follower count are climbing, so the strategy is called a success** — Chasing impressions and follower count while ignoring DM quality, profile visits, and actual leads
+- **A high-performing post gets reposted word-for-word a few weeks later** — Copying a high-performing post word-for-word instead of varying it into a genuinely new angle
+- **Three content changes go live in the same week** — Running multiple content experiments simultaneously, making it impossible to tell which change actually worked
 
 ## Further Reading
 - Justin Welsh's content-repurposing frameworks — a widely used, current practitioner system for turning one idea into a week of content

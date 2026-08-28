@@ -62,11 +62,11 @@ The value is not the table. The value is operational clarity.
 - When turning confidential client work into proof content that needs sanitizing first
 
 ## Common Mistakes
-- Posting code with no context about why the decision mattered
-- Publishing a case study post that's just a screenshot with a caption and no problem/solution narrative
-- Cramming an entire project's worth of technical detail into a single overwhelming post instead of a series
-- Defaulting to Level 3 (code/schema) depth on every post instead of reserving it as occasional proof
-- Making a client look incompetent or exposing confidential details while telling a case study story
+- **A post shows a code snippet with no explanation of why that decision was made** — Posting code with no context about why the decision mattered
+- **A case study post is a screenshot and a caption, no problem/solution narrative** — Publishing a case study post that's just a screenshot with a caption and no problem/solution narrative
+- **One post tries to cover an entire project's worth of technical detail** — Cramming an entire project's worth of technical detail into a single overwhelming post instead of a series
+- **Every single post goes to full code/schema depth** — Defaulting to Level 3 (code/schema) depth on every post instead of reserving it as occasional proof
+- **A case study post tells the story in a way that makes the client look incompetent, or names confidential details** — Making a client look incompetent or exposing confidential details while telling a case study story
 
 ## Further Reading
 - [Julia Evans' technical zines and blog](https://jvns.ca) — a widely cited example of explaining deep technical mechanisms in plain, concrete language

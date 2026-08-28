@@ -61,11 +61,11 @@ Takeaway: <one lesson>.
 - When planning a monthly content mix that needs variety beyond problem posts and technical proof
 
 ## Common Mistakes
-- Turning every problem-solution post into fear-based selling or insulting the prospect's current process
-- Using personal trauma or exaggerated struggle as engagement bait in a founder story
-- Overloading carousel slides with full paragraphs instead of one idea per slide
-- Recording a screen demo without checking for visible private data, credentials, or client names first
-- Publishing carousels or videos with inconsistent visual style so they don't build a recognizable format over time
+- **A problem-solution post leans on fear or implies the prospect's current process is embarrassing** — Turning every problem-solution post into fear-based selling or insulting the prospect's current process
+- **A founder story leans on personal trauma or an exaggerated struggle to drive engagement** — Using personal trauma or exaggerated struggle as engagement bait in a founder story
+- **A carousel slide is a full paragraph of text** — Overloading carousel slides with full paragraphs instead of one idea per slide
+- **A screen recording goes out without checking what's visible in the background** — Recording a screen demo without checking for visible private data, credentials, or client names first
+- **Carousels and videos each look different from the last, with no consistent visual style** — Publishing carousels or videos with inconsistent visual style so they don't build a recognizable format over time
 
 ## Further Reading
 - *Made to Stick* — Chip and Dan Heath: the standard reference for why concrete, specific stories and frameworks are remembered when abstract advice isn't

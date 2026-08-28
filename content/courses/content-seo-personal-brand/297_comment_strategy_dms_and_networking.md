@@ -56,11 +56,11 @@ allocated?
 - When distinguishing which outreach situations are warm (this lesson) versus cold (a separate outreach discipline)
 
 ## Common Mistakes
-- Posting generic praise comments ("Great post!") that add no value and read as spam
-- Spending comment time under broad viral posts with no relevant target audience
-- Pivoting to a DM pitch immediately after a connection is accepted, with no established context
-- Pushing price or a hard pitch before understanding the prospect's actual situation
-- Sending repeated unprompted follow-ups to a quiet contact instead of one respectful closing-the-loop message
+- **A comment just says "Great post!"** — Posting generic praise comments ("Great post!") that add no value and read as spam
+- **Comment time goes to a broad viral post whose audience has nothing to do with your target buyer** — Spending comment time under broad viral posts with no relevant target audience
+- **A connection request gets accepted, and the very next message is a pitch** — Pivoting to a DM pitch immediately after a connection is accepted, with no established context
+- **A DM conversation moves to price before you understand the prospect's actual situation** — Pushing price or a hard pitch before understanding the prospect's actual situation
+- **A contact goes quiet, and you send another follow-up, then another** — Sending repeated unprompted follow-ups to a quiet contact instead of one respectful closing-the-loop message
 
 ## Further Reading
 - *Never Eat Alone* — Keith Ferrazzi: the standard reference for relationship-first networking that applies directly to comment and DM strategy

@@ -59,11 +59,11 @@ with a short description of the problem and current workflow.
 - When drafting proposals or DMs, to reuse the same positioning anchors established on the profile
 
 ## Common Mistakes
-- Leading the profile with a stack list instead of the buyer and the outcome
-- Writing a personal biography before ever stating what problem is solved for whom
-- Defaulting to job-seeker language ("passionate," "looking for opportunities") when the actual goal is client acquisition
-- Listing every technology ever touched instead of the handful that matter to the target buyer
-- Letting the headline go stale after a positioning or service change instead of treating it as a living asset
+- **A profile headline opens with a stack list: "React | Node.js | AWS"** — Leading the profile with a stack list instead of the buyer and the outcome
+- **The About section opens with personal biography before ever saying what problem you solve, for whom** — Writing a personal biography before ever stating what problem is solved for whom
+- **A profile written for client acquisition uses phrases like "passionate" and "looking for opportunities"** — Defaulting to job-seeker language ("passionate," "looking for opportunities") when the actual goal is client acquisition
+- **The skills section lists every technology you've ever touched** — Listing every technology ever touched instead of the handful that matter to the target buyer
+- **Your positioning changed months ago, but the headline never did** — Letting the headline go stale after a positioning or service change instead of treating it as a living asset
 
 ## Further Reading
 - *Building a StoryBrand* — Donald Miller: the clearest general framework for why buyer-outcome framing beats feature/self framing in any profile or pitch

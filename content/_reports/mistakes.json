@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 958,
-    "lessonsWithZeroDrillable": 178,
+    "single": 923,
+    "lessonsWithZeroDrillable": 171,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 181
+    "lessonsWithTwoPlusDrillable": 188
   },
   "lessons": [
     {
@@ -2623,14 +2623,14 @@
       "file": "292_linkedin_authority_operating_system_pillars_and_weekly_cadence.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2638,14 +2638,14 @@
       "file": "293_linkedin_profile_positioning_headline_and_about_section.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2653,14 +2653,14 @@
       "file": "294_featured_section_proof_assets_and_credibility_signals.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2668,14 +2668,14 @@
       "file": "295_technical_post_frameworks_and_case_study_posts.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2683,14 +2683,14 @@
       "file": "296_problem_solution_founder_story_carousel_and_video_posts.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2698,14 +2698,14 @@
       "file": "297_comment_strategy_dms_and_networking.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -2713,14 +2713,14 @@
       "file": "298_soft_pitching_repurposing_and_analytics_on_linkedin.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {

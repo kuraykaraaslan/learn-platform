@@ -51,11 +51,11 @@ A professional handover should include...
 - When auditing existing content for anti-credibility signals (vague claims, inconsistent posting, aggressive pitching)
 
 ## Common Mistakes
-- Featuring random posts because they received likes, rather than deliberately curated proof assets
-- Using vague titles ("My project," "Recent work") instead of specific, outcome-oriented ones
-- Making unfalsifiable claims ("I build great software") instead of specific, evaluable ones
-- Skipping process explanation entirely and jumping straight to the finished result
-- Exposing confidential client details instead of using a properly sanitized, specific-sounding description
+- **The Featured section is filled with whatever posts happened to get the most likes** — Featuring random posts because they received likes, rather than deliberately curated proof assets
+- **A featured item is titled "My project" or "Recent work"** — Using vague titles ("My project," "Recent work") instead of specific, outcome-oriented ones
+- **A proof asset claims "I build great software"** — Making unfalsifiable claims ("I build great software") instead of specific, evaluable ones
+- **A case study jumps straight to the finished result with no mention of the process that got there** — Skipping process explanation entirely and jumping straight to the finished result
+- **A proof asset names the actual client and specific confidential details** — Exposing confidential client details instead of using a properly sanitized, specific-sounding description
 
 ## Further Reading
 - *Influence* — Robert Cialdini: the standard reference for how specificity, authority, and consistency function as trust signals

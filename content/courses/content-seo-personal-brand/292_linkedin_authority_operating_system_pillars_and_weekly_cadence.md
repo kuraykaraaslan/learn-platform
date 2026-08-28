@@ -50,11 +50,11 @@ Friday:    1 process/trust/personal post + weekly analytics review
 - Before a new service or case study launch, to decide whether a temporary high-energy posting mode is warranted
 
 ## Common Mistakes
-- Naming pillars after technologies ("React," "Node.js," "AI") instead of buyer value or positioning
-- Chasing viral reach instead of relevant engagement from the specific dozen people who could become clients or referrers
-- Running high-energy launch-mode cadence indefinitely instead of for a bounded 2-3 week window
-- Posting purely to satisfy the calendar with no real insight behind the post
-- Letting one easy, generic pillar dominate every week because it's the fastest to write
+- **Content pillars are named "React," "Node.js," "AI"** — Naming pillars after technologies ("React," "Node.js," "AI") instead of buyer value or positioning
+- **A post gets huge reach but the people engaging aren't anyone who could hire or refer you** — Chasing viral reach instead of relevant engagement from the specific dozen people who could become clients or referrers
+- **A high-energy launch-mode posting cadence is still running three months later** — Running high-energy launch-mode cadence indefinitely instead of for a bounded 2-3 week window
+- **A post goes out purely because the calendar says it's due today** — Posting purely to satisfy the calendar with no real insight behind the post
+- **One pillar is the fastest to write, so it ends up in most weeks' rotation** — Letting one easy, generic pillar dominate every week because it's the fastest to write
 
 ## Further Reading
 - Justin Welsh's LinkedIn content frameworks and newsletter — a widely followed, current practitioner source specifically for solo/creator LinkedIn strategy
