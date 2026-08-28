@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 240,
-    "lessonsWithZeroDrillable": 28,
+    "single": 208,
+    "lessonsWithZeroDrillable": 20,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 355
+    "lessonsWithTwoPlusDrillable": 363
   },
   "lessons": [
     {
@@ -2308,14 +2308,14 @@
       "file": "271_content_pillars_and_strategic_positioning.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2323,14 +2323,14 @@
       "file": "272_idea_capture_system.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2338,14 +2338,14 @@
       "file": "273_audience_and_intent_mapping.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2353,14 +2353,14 @@
       "file": "274_content_angles_and_storytelling_frameworks.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2368,14 +2368,14 @@
       "file": "275_technical_writing_style_for_business_readers.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2383,14 +2383,14 @@
       "file": "276_content_repurposing_one_idea_many_assets.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2398,14 +2398,14 @@
       "file": "277_content_calendar_cadence_and_quality_gate.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -2413,14 +2413,14 @@
       "file": "278_ai_assisted_content_without_losing_your_voice.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {

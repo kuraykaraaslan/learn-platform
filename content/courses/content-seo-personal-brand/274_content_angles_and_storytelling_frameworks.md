@@ -51,10 +51,10 @@ order, and what happens when something goes wrong.
 - When building a content calendar and needing variety — rotating angle types (mistake one week, checklist the next, opinion after that) prevents every post from feeling the same
 
 ## Common Mistakes
-- Writing about a topic without ever committing to a specific angle, producing a post that informs without arguing anything
-- Choosing purely motivational or clickbait angles with no real insight behind them, which erodes credibility over time
-- Reusing the same angle and framework every single time, making the content feel formulaic even when the substance changes
-- Inventing dramatic story details or fake specificity to make a Before/After post sound more impressive than the real situation
+- **The post covers "MVP scoping" broadly, informative but not actually arguing anything a reader could agree or disagree with** — Writing about a topic without ever committing to a specific angle, producing a post that informs without arguing anything
+- **"You won't believe what happened when this client asked for a dashboard" opens the post, with no real insight anywhere underneath the hook** — Choosing purely motivational or clickbait angles with no real insight behind them, which erodes credibility over time
+- **Every single post this month opens with "Most people think X, but the real issue is Y," whether or not the idea actually fits that shape** — Reusing the same angle and framework every single time, making the content feel formulaic even when the substance changes
+- **The before/after numbers in the case study post got rounded up "to make the story land better"** — Inventing dramatic story details or fake specificity to make a Before/After post sound more impressive than the real situation
 
 ## Further Reading
 - *Made to Stick* — Chip and Dan Heath: the clearest general treatment of why specific, concrete, unexpected ideas are remembered and generic ones aren't

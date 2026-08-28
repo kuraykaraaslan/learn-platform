@@ -60,10 +60,10 @@ until later."
 - When content keeps attracting the wrong audience (e.g., mostly other developers) despite a goal of client acquisition
 
 ## Common Mistakes
-- Writing one version of an idea and assuming it works for every reader type without adjusting tone, depth, or CTA
-- Skipping the desired-belief sentence and starting from "what do I want to say" instead of "what do I want them to believe"
-- Using a hard CTA on unaware or problem-aware readers who haven't been given enough context to act yet
-- Letting developer-peer engagement (likes, technical debates) substitute for actually reaching the buyer audience the content was meant to attract
+- **The same role-based-access post goes out unchanged for the CTO audience and the SME-owner audience, same tone, same depth** — Writing one version of an idea and assuming it works for every reader type without adjusting tone, depth, or CTA
+- **The draft starts from "here's what I want to say about this," with no sentence written first about what the reader should walk away believing** — Skipping the desired-belief sentence and starting from "what do I want to say" instead of "what do I want them to believe"
+- **A reader who's never even heard of the underlying problem gets a "book a call" CTA at the end of the first post they've ever seen** — Using a hard CTA on unaware or problem-aware readers who haven't been given enough context to act yet
+- **The post gets forty likes and a lively thread of developers debating implementation details, and that gets read as proof the content is working** — Letting developer-peer engagement (likes, technical debates) substitute for actually reaching the buyer audience the content was meant to attract
 
 ## Further Reading
 - *Breakthrough Advertising* — Eugene Schwartz: the original, deeply detailed treatment of matching message to a reader's stage of awareness (dense but foundational)

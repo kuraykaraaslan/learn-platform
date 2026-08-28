@@ -52,10 +52,10 @@ human memory."
 - When technical peers are the only audience engaging with a post meant to reach buyers, which usually signals the depth calibration drifted toward "developer" and away from "founder/SME"
 
 ## Common Mistakes
-- Opening with the technology or tool name instead of the problem it solves, losing non-technical readers in the first sentence
-- Making unsupported absolute claims ("always," "never," "X is always better") that read as inexperience rather than authority
-- Publishing large, unexplained code blocks in content meant for a mixed or non-technical audience
-- Removing all technical substance in an attempt to be "accessible," producing content indistinguishable from generic marketing copy
+- **The post opens with "Redis is an in-memory data store that supports many data structures," and the non-technical reader is already gone** — Opening with the technology or tool name instead of the problem it solves, losing non-technical readers in the first sentence
+- **"Always use microservices" goes out as the take, with no mention of when that's actually the wrong call** — Making unsupported absolute claims ("always," "never," "X is always better") that read as inexperience rather than authority
+- **A forty-line unexplained code snippet sits in the middle of a post meant for founders and SME owners** — Publishing large, unexplained code blocks in content meant for a mixed or non-technical audience
+- **Every technical detail got stripped out "to make it accessible," and now it reads exactly like every other "we build secure, scalable solutions" post** — Removing all technical substance in an attempt to be "accessible," producing content indistinguishable from generic marketing copy
 
 ## Further Reading
 - *On Writing Well* — William Zinsser: the classic general reference for clear, jargon-aware nonfiction prose, directly applicable to technical writing for mixed audiences

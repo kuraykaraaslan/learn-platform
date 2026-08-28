@@ -56,10 +56,10 @@ Before anything gets published, it should pass a five-gate quality check: strate
 - When reviewing whether a content habit is realistic against actual weekly capacity, not aspirational capacity
 
 ## Common Mistakes
-- Designing a daily, multi-platform posting plan that looks aggressive on paper but collapses within two weeks of real client work
-- Treating a missed week as a reason to abandon the whole system instead of simply resuming with the next piece
-- Skipping the quality gate under time pressure and publishing generic, unspecific content just to "keep the streak going"
-- Spreading effort evenly across many platforms instead of committing to one primary channel and treating the rest as secondary or optional
+- **The plan calls for a daily post across four platforms, and it collapses the first week a client project gets busy** — Designing a daily, multi-platform posting plan that looks aggressive on paper but collapses within two weeks of real client work
+- **One missed week turns into the whole content habit quietly stopping instead of just resuming with the next post** — Treating a missed week as a reason to abandon the whole system instead of simply resuming with the next piece
+- **A generic, unspecific post goes out anyway, just to keep the streak alive under a busy week's time pressure** — Skipping the quality gate under time pressure and publishing generic, unspecific content just to "keep the streak going"
+- **Effort gets split evenly across LinkedIn, Twitter, a blog, YouTube, and a newsletter, with none of them getting enough attention to actually work** — Spreading effort evenly across many platforms instead of committing to one primary channel and treating the rest as secondary or optional
 
 ## Further Reading
 - *Atomic Habits* — James Clear: the general framework for sustainable habit design that the cadence-level and missed-week rules are built on

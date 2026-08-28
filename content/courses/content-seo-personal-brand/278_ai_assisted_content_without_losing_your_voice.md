@@ -64,10 +64,10 @@ workflow audits. Do not imply guaranteed savings."
 - When translating content while trying to preserve tone and voice across languages or platforms
 
 ## Common Mistakes
-- Publishing AI output with no edit pass, resulting in generic, forgettable content that damages rather than builds authority
-- Prompting with vague, underspecified requests and blaming the model for generic results instead of providing the required inputs
-- Using AI to fabricate case studies, metrics, or testimonials to make content sound more impressive than the real situation
-- Letting AI-typical phrases ("unlock the power of," "game-changer") slip into published content unnoticed because the edit pass was skipped
+- **The AI draft goes straight to publish, unedited, and it reads exactly like every other generic AI-written post** — Publishing AI output with no edit pass, resulting in generic, forgettable content that damages rather than builds authority
+- **"Write a LinkedIn post about software development" is the entire prompt, and the generic output gets blamed on the model** — Prompting with vague, underspecified requests and blaming the model for generic results instead of providing the required inputs
+- **A believable-sounding case study with a specific percentage improvement gets generated, for a client engagement that never actually happened** — Using AI to fabricate case studies, metrics, or testimonials to make content sound more impressive than the real situation
+- **"Unlock the power of" and "game-changer" are sitting in the published post, missed because the edit pass got skipped** — Letting AI-typical phrases ("unlock the power of," "game-changer") slip into published content unnoticed because the edit pass was skipped
 
 ## Further Reading
 - [Anthropic's guide to prompting Claude](https://docs.claude.com) — practical, current guidance on providing the context a model needs to produce specific rather than generic output

@@ -59,10 +59,10 @@ Week 4 — add FAQ to service page, review which asset drove replies
 - When a completed client project or technical decision has enough substance to support a case study — that single project should feed a portfolio page, several posts, a video, and a proposal snippet
 
 ## Common Mistakes
-- Copy-pasting the same paragraph across platforms instead of reshaping the hook, structure, and depth for each format
-- Repurposing weak ideas excessively, producing many mediocre assets instead of one honest, well-developed piece
-- Expanding a post into a blog based on broad but irrelevant engagement (likes from an unrelated audience) rather than qualified signals from the actual target buyer
-- Forgetting to link repurposed assets back to the original piece, the lead magnet, or the relevant service page, losing the compounding value of the system
+- **The exact same paragraph gets posted on LinkedIn, in the newsletter, and on the blog, word for word** — Copy-pasting the same paragraph across platforms instead of reshaping the hook, structure, and depth for each format
+- **A thin, half-formed idea gets stretched into a post, a carousel, a video, and a newsletter section, producing four mediocre pieces instead of one solid one** — Repurposing weak ideas excessively, producing many mediocre assets instead of one honest, well-developed piece
+- **A short post got two hundred likes from an unrelated audience, and that alone triggers the decision to expand it into a full blog post** — Expanding a post into a blog based on broad but irrelevant engagement (likes from an unrelated audience) rather than qualified signals from the actual target buyer
+- **Six repurposed assets go out from one strong blog post, and not one of them links back to the original article or the service page** — Forgetting to link repurposed assets back to the original piece, the lead magnet, or the relevant service page, losing the compounding value of the system
 
 ## Further Reading
 - Derek Halpern / Justin Welsh's writing on "content atomization" (justinwelsh.me blog) — a widely referenced practical breakdown of turning one long-form idea into a week of shorter content

@@ -55,10 +55,10 @@ sound impressive? If yes, discard or rewrite grounded in a real pattern.
 - When repositioning the business (e.g., moving from generalist freelancer to a specific niche) and content needs to catch up to the new positioning
 
 ## Common Mistakes
-- Naming pillars after technologies ("React," "AI") instead of buyer value or positioning
-- Defining five pillars that are really one pillar restated five ways, which produces repetitive content
-- Letting one easy pillar (usually generic engineering opinions) dominate every week because it's the fastest to write
-- Treating pillars as fixed forever instead of revisiting them when the business or audience shifts
+- **The five content pillars are named "React," "Node.js," "TypeScript," "AI," and "Testing"** — Naming pillars after technologies ("React," "AI") instead of buyer value or positioning
+- **All five pillars, read side by side, turn out to be the same "I know good engineering" idea restated five different ways** — Defining five pillars that are really one pillar restated five ways, which produces repetitive content
+- **"Generic engineering opinions" ends up being every single week's post, because it's the fastest one to write** — Letting one easy pillar (usually generic engineering opinions) dominate every week because it's the fastest to write
+- **The pillar list from eighteen months ago is still the pillar list today, even though the business has moved to a completely different niche** — Treating pillars as fixed forever instead of revisiting them when the business or audience shifts
 
 ## Further Reading
 - *Building a StoryBrand* — Donald Miller: not content-specific, but the clearest explanation of why audience-value framing beats feature/topic framing in any positioning work

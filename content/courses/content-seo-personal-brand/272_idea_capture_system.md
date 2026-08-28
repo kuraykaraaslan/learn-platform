@@ -58,10 +58,10 @@ scope is not.
 - When onboarding a new client or starting a new project, since the first-contact questions reveal exactly what your audience doesn't yet understand
 
 ## Common Mistakes
-- Waiting for a fully-formed, "blog-worthy" idea instead of capturing rough fragments and refining them later
-- Storing ideas only in memory or scattered chat history instead of a searchable, structured backlog
-- Discarding technical lessons because they feel too routine to be interesting to anyone else
-- Publishing every raw capture unfiltered instead of using capture as a backlog that still gets curated before drafting
+- **A good half-idea comes up mid-bug-fix, and it gets waved off because it's "not really a full post yet"** — Waiting for a fully-formed, "blog-worthy" idea instead of capturing rough fragments and refining them later
+- **A dozen good ideas from the last two months exist only somewhere in old Slack messages and memory** — Storing ideas only in memory or scattered chat history instead of a searchable, structured backlog
+- **The two-hour Redis debugging session gets skipped as a topic, because it felt too routine to be worth writing about** — Discarding technical lessons because they feel too routine to be interesting to anyone else
+- **Every raw capture from the week's notes goes straight to publish, with no curation pass in between** — Publishing every raw capture unfiltered instead of using capture as a backlog that still gets curated before drafting
 
 ## Further Reading
 - *Building a Second Brain* — Tiago Forte: the general framework for lightweight capture-and-resurface systems that idea capture borrows its logic from
