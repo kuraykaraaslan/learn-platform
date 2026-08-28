@@ -51,9 +51,9 @@ they revert to the spreadsheet and the product fails to displace the workaround 
 - When onboarding a new team member to an existing product — the role map is faster context than a walkthrough of every screen
 
 ## Common Mistakes
-- Writing personas as narrative fiction (age, hobbies, a name with no bearing on the product) instead of job, pain, permission, and success
-- Treating "users" as one undifferentiated group when a buyer, an admin, and a daily user clearly want different things
-- Skipping the permission-awareness fields and discovering the gaps only when the RBAC model is being implemented, at which point changing it is a migration, not an edit
+- **The persona doc opens with "Ayşe, 34, enjoys coffee and hiking," and nothing about what she can actually do in the system** — Writing personas as narrative fiction (age, hobbies, a name with no bearing on the product) instead of job, pain, permission, and success
+- **The buyer, the admin, and the daily user all get lumped together as "users" in the same paragraph** — Treating "users" as one undifferentiated group when a buyer, an admin, and a daily user clearly want different things
+- **The RBAC model is already being built when someone first asks what each role should actually be allowed to view or edit** — Skipping the permission-awareness fields and discovering the gaps only when the RBAC model is being implemented, at which point changing it is a migration, not an edit
 - Assuming the buyer and the user are the same person by default, without checking — even solo internal tools often have a manager who approves and a staff member who executes
 
 ## Further Reading

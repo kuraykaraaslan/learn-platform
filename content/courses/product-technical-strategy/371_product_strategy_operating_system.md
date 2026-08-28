@@ -54,9 +54,9 @@ V2 (route optimization).
 - When handing work from strategy to architecture, design, or delivery — the handoff artifact is the contract between phases
 
 ## Common Mistakes
-- Treating "clone X" as a completed problem statement instead of a solution direction that still needs a problem underneath it
-- Starting with a feature list instead of a problem, which produces a product that is a pile of capabilities with no coherent job to do
-- Writing the roadmap before scope boundaries exist, so "later" and "not included" become the same undefined bucket
+- **"Build us something like Airbnb" gets treated as a finished problem statement, ready to start designing screens from** — Treating "clone X" as a completed problem statement instead of a solution direction that still needs a problem underneath it
+- **The kickoff doc opens with a list of forty features, with no problem statement anywhere above it** — Starting with a feature list instead of a problem, which produces a product that is a pile of capabilities with no coherent job to do
+- **The roadmap gets drafted before anyone's written down what's actually out of scope** — Writing the roadmap before scope boundaries exist, so "later" and "not included" become the same undefined bucket
 - Skipping the risk and assumption log because the project "feels simple" — simple projects still have unvalidated assumptions, they just have fewer of them
 
 ## Further Reading

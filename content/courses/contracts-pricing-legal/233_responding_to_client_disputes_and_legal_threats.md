@@ -62,10 +62,10 @@ response is warranted at all.]
 - After any dispute closes, to review whether it exposed a gap in your contract template, acceptance process, or documentation habits.
 
 ## Common Mistakes
-- Responding within minutes, in an emotional register, before reviewing the contract and gathering evidence.
-- Apologizing in a way that admits fault ("we failed to deliver X") instead of acknowledging frustration without conceding the underlying claim.
-- Issuing a refund or discount immediately under pressure, which reads as an admission and invites the same pressure on the next disagreement.
-- Continuing a dispute over voice calls or informal chat instead of moving it to a written channel that produces a record.
+- **A refund demand lands at 9pm, and a reply goes out within the hour, before the contract's even been reopened** — Responding within minutes, in an emotional register, before reviewing the contract and gathering evidence.
+- **"I'm sorry, we failed to deliver X" goes out in writing, conceding exactly the claim now in dispute** — Apologizing in a way that admits fault ("we failed to deliver X") instead of acknowledging frustration without conceding the underlying claim.
+- **A partial refund gets offered on the spot just to make an angry client's message stop** — Issuing a refund or discount immediately under pressure, which reads as an admission and invites the same pressure on the next disagreement.
+- **The dispute keeps happening over phone calls, with nothing in writing to show what was actually said** — Continuing a dispute over voice calls or informal chat instead of moving it to a written channel that produces a record.
 
 ## Further Reading
 - Roger Fisher and William Ury, *Getting to Yes* — the negotiation framework this lesson's de-escalation and classification approach draws from.

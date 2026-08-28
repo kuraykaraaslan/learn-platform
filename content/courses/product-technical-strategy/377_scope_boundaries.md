@@ -61,9 +61,9 @@ Assumptions and constraints are the quiet cousins of scope: facts you're buildin
 - When scope feels like it's drifting — re-reading the out-of-scope list is often faster than re-running the whole strategy sequence
 
 ## Common Mistakes
-- Writing in-scope items as vague categories ("dashboard included") that can be reinterpreted after delivery
-- Treating exclusions as too obvious to write down, then losing the argument when the client disagrees about what "obvious" meant
-- Skipping change-request triggers, so every new request becomes a fresh negotiation instead of a pre-agreed classification
+- **"Admin panel included" is the entire in-scope statement, with nothing specific enough to check the delivered product against** — Writing in-scope items as vague categories ("dashboard included") that can be reinterpreted after delivery
+- **A native mobile app never made it into the out-of-scope list because it seemed too obvious to need stating** — Treating exclusions as too obvious to write down, then losing the argument when the client disagrees about what "obvious" meant
+- **Every new request becomes its own negotiation from scratch, because no change-request triggers were ever pre-agreed** — Skipping change-request triggers, so every new request becomes a fresh negotiation instead of a pre-agreed classification
 - Confusing "out of scope" with "rejected" — out-of-scope items still belong on the roadmap, just not in this phase
 
 ## Further Reading

@@ -60,10 +60,10 @@ on the same technician in the first place."
 - When differentiation feels vague — rewrite it against the specific current alternative (spreadsheet, inbox, memory) instead of an abstract competitor
 
 ## Common Mistakes
-- Writing a feature list copied from a competitor's marketing page instead of deriving features from an actual situational job
-- Stopping at the functional job and ignoring the emotional or social one, then being surprised when a technically correct feature still doesn't get adopted
-- Asserting differentiation ("modern," "innovative," "AI-powered") without naming the specific workflow, constraint, or data model that makes it true
-- Writing the value proposition against an imagined competitor instead of the real current alternative, which is usually a spreadsheet, an inbox, or a person's memory
+- **The feature list is copied straight from a competitor's marketing page, with no situational job behind any of it** — Writing a feature list copied from a competitor's marketing page instead of deriving features from an actual situational job
+- **A technically correct approval feature ships, and nobody predicted that managers would avoid it because it feels like being watched** — Stopping at the functional job and ignoring the emotional or social one, then being surprised when a technically correct feature still doesn't get adopted
+- **"A modern, innovative, AI-powered platform" is the entire differentiation claim, with nothing specific backing it up** — Asserting differentiation ("modern," "innovative," "AI-powered") without naming the specific workflow, constraint, or data model that makes it true
+- **The value proposition compares the product against an imagined rival platform, when the real competition is a shared spreadsheet** — Writing the value proposition against an imagined competitor instead of the real current alternative, which is usually a spreadsheet, an inbox, or a person's memory
 
 ## Further Reading
 - Clayton Christensen, Taddy Hall, Karen Dillon, David Duncan — "Competing Against Luck" (the foundational JTBD text)

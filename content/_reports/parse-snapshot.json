@@ -2078,7 +2078,7 @@
         "keyConcepts": "e61f498ea30d991b",
         "exampleCode": "a25c73ce6dd89d7d",
         "whenToUse": "fbcffd0f62be1a3e",
-        "commonMistakes": "49079132e622e436",
+        "commonMistakes": "275b0ea57bbdac0d",
         "furtherReading": "ed1b05207da28681"
       }
     },
@@ -3342,7 +3342,7 @@
         "keyConcepts": "889a34c8d3e6979f",
         "exampleCode": "3c40986634bdd572",
         "whenToUse": "ae3ef9d57bce8c6b",
-        "commonMistakes": "5c0be9a7b5e1aca7",
+        "commonMistakes": "31141f8048291abf",
         "furtherReading": "405a9a96700ecfb9"
       },
       "372_problem_framing.md": {
@@ -3351,7 +3351,7 @@
         "keyConcepts": "f740e7913864da7f",
         "exampleCode": "826e30867bce8c2f",
         "whenToUse": "80b6369c192e614d",
-        "commonMistakes": "c8005c9005b9ed50",
+        "commonMistakes": "e163b5045c72bb53",
         "furtherReading": "5686a2594b1f1ed9"
       },
       "373_personas_role_mapping.md": {
@@ -3360,7 +3360,7 @@
         "keyConcepts": "952a4ea0db505c7c",
         "exampleCode": "a0c0bb1ad25102e0",
         "whenToUse": "6278654357be6767",
-        "commonMistakes": "c6ecf4908d6ac703",
+        "commonMistakes": "208c7c754c724e83",
         "furtherReading": "0e02c4bef6a095a4"
       },
       "374_jtbd_value_proposition.md": {
@@ -3369,7 +3369,7 @@
         "keyConcepts": "bfef17f6d65aad21",
         "exampleCode": "24a4585ddc4df18b",
         "whenToUse": "e5781d437e6c3de9",
-        "commonMistakes": "459671c4fc478477",
+        "commonMistakes": "862fd6aefbe38f74",
         "furtherReading": "641a66780b5eeca8"
       },
       "375_mvp_scoping.md": {
@@ -3378,7 +3378,7 @@
         "keyConcepts": "3be40340df6fad81",
         "exampleCode": "82e9801d7b83027d",
         "whenToUse": "ab2ef57a29369206",
-        "commonMistakes": "d6d7d32d97a256f2",
+        "commonMistakes": "a523ebc82ff0cae6",
         "furtherReading": "09da7ae6bcc80dcc"
       },
       "376_feature_prioritization.md": {
@@ -3387,7 +3387,7 @@
         "keyConcepts": "26c5eb903f917269",
         "exampleCode": "0a81fd0f53fbd4ae",
         "whenToUse": "dd1654b6d706bb14",
-        "commonMistakes": "a0acc96a892593ea",
+        "commonMistakes": "4b22a9ad63bc1811",
         "furtherReading": "f4171c2422c535b8"
       },
       "377_scope_boundaries.md": {
@@ -3396,7 +3396,7 @@
         "keyConcepts": "12d7b02de2135649",
         "exampleCode": "5cee85da1eb9bb1a",
         "whenToUse": "a0bc501dedbf3cf0",
-        "commonMistakes": "b0bc679e40f4ab1e",
+        "commonMistakes": "dfab0efcaa4e6013",
         "furtherReading": "ded20100025f50d6"
       },
       "378_product_requirements_document.md": {

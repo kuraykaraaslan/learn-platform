@@ -37,10 +37,10 @@ The dependency dimension is the one teams most often skip, and it's the one that
 - Periodically (quarterly, or at each roadmap phase boundary) to re-bucket backlog items as circumstances change
 
 ## Common Mistakes
-- Scoring every feature as high-value because saying no feels uncomfortable, which produces a priority list that prioritizes nothing
-- Ignoring the dependency dimension and scheduling a feature before its prerequisite (data, integration, policy) exists, discovering the gap mid-sprint
-- Accepting "the competitor has it" as sufficient justification without checking whether the underlying job (see lesson 374) is even shared
-- Treating the P0/P1/P2 buckets as permanent instead of periodically re-scoring backlog items as the product and its data maturity change
+- **Every feature on the list scores a 5 out of 5 on value, because marking anything lower feels like picking a fight** — Scoring every feature as high-value because saying no feels uncomfortable, which produces a priority list that prioritizes nothing
+- **Route optimization gets scheduled for next sprint, and the three months of assignment data it actually depends on doesn't exist yet** — Ignoring the dependency dimension and scheduling a feature before its prerequisite (data, integration, policy) exists, discovering the gap mid-sprint
+- **"The competitor has this" is the entire justification, with nobody checking whether it's actually solving the same job** — Accepting "the competitor has it" as sufficient justification without checking whether the underlying job (see lesson 374) is even shared
+- **A feature marked P3 six months ago is still sitting there, never reconsidered even though the product has changed a lot since then** — Treating the P0/P1/P2 buckets as permanent instead of periodically re-scoring backlog items as the product and its data maturity change
 
 ## Further Reading
 - Itamar Gilad — "Confidence Meter" and the RICE-adjacent prioritization writing on itamargilad.com

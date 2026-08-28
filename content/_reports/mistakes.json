@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 329,
-    "lessonsWithZeroDrillable": 38,
+    "single": 301,
+    "lessonsWithZeroDrillable": 34,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 331
+    "lessonsWithTwoPlusDrillable": 339
   },
   "lessons": [
     {
@@ -3433,14 +3433,14 @@
       "file": "233_responding_to_client_disputes_and_legal_threats.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5503,14 +5503,14 @@
       "file": "371_product_strategy_operating_system.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {
@@ -5518,14 +5518,14 @@
       "file": "372_problem_framing.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {
@@ -5533,14 +5533,14 @@
       "file": "373_personas_role_mapping.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {
@@ -5548,14 +5548,14 @@
       "file": "374_jtbd_value_proposition.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5563,14 +5563,14 @@
       "file": "375_mvp_scoping.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5578,14 +5578,14 @@
       "file": "376_feature_prioritization.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5593,14 +5593,14 @@
       "file": "377_scope_boundaries.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {

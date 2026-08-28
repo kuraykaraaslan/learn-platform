@@ -66,10 +66,10 @@ across a 2-week pilot.
 - Before every pilot or first release — the pilot context field forces you to name who exactly the first real users are, rather than launching to an undefined "everyone"
 
 ## Common Mistakes
-- Confusing "minimum" with "minimum quality" and cutting authentication, validation, or error handling to hit a deadline instead of cutting scope
-- Including a feature because it's technically interesting or because a stakeholder is excited about it, without applying the "does the core job break without it" test
-- Treating manual operations as a shameful compromise instead of a legitimate, explicitly-scoped scope reduction that preserves learning without overbuilding
-- Defining an MVP with no success metric, which makes it impossible to know afterward whether the assumption was validated or the team just shipped something
+- **Input validation gets cut to hit the deadline, on the reasoning that it's an MVP so quality corners are fair game** — Confusing "minimum" with "minimum quality" and cutting authentication, validation, or error handling to hit a deadline instead of cutting scope
+- **A stakeholder is excited about AI recommendations, and it makes the MVP list without anyone checking whether the core job breaks without it** — Including a feature because it's technically interesting or because a stakeholder is excited about it, without applying the "does the core job break without it" test
+- **Handling refunds manually through an admin panel gets treated as an embarrassing shortcut instead of a deliberate, documented scope decision** — Treating manual operations as a shameful compromise instead of a legitimate, explicitly-scoped scope reduction that preserves learning without overbuilding
+- **The MVP launches with no defined success metric, so nobody can say afterward whether the underlying assumption was actually validated** — Defining an MVP with no success metric, which makes it impossible to know afterward whether the assumption was validated or the team just shipped something
 
 ## Further Reading
 - Eric Ries — "The Lean Startup" (the original MVP concept, before "smallest version" drifted into "cheapest version" in common usage)

@@ -62,10 +62,10 @@ ongoing cost of the current process."
 - Periodically on an existing product, when a feature request doesn't obviously map to a known problem — re-derive the problem before building
 
 ## Common Mistakes
-- Accepting "we need an app" or "we want something like X" as a final problem statement instead of treating it as the starting point for discovery questions
-- Writing a problem statement without a business impact clause, which makes it impossible to later justify prioritization or say no to competing requests
+- **"We need something like Notion" is written down as the problem statement, and the discovery questions never get asked** — Accepting "we need an app" or "we want something like X" as a final problem statement instead of treating it as the starting point for discovery questions
+- **The problem statement names the pain but never says what it's actually costing anyone** — Writing a problem statement without a business impact clause, which makes it impossible to later justify prioritization or say no to competing requests
 - Inventing pain points because the real ones weren't investigated — a fabricated problem statement is more dangerous than an honest "unknown," because it looks resolved
-- Framing the problem so broadly ("users need better visibility") that it can't be falsified or scoped into an MVP
+- **"Users need better visibility" is the entire problem statement, vague enough that nothing built against it could ever be wrong** — Framing the problem so broadly ("users need better visibility") that it can't be falsified or scoped into an MVP
 
 ## Further Reading
 - Rob Fitzpatrick — "The Mom Test" (how to ask discovery questions without leading the witness)
