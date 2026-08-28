@@ -17,8 +17,20 @@ import { splitLessonSections } from '../modules/course_content/course_content.pa
 import { parseMistakes } from '../modules/course_content/course_content.mistakes';
 
 const OUT_PATH = path.join(process.cwd(), 'public', 'search-index.json');
-// docs/phases/12's own budget: ≤50 KB gz for the whole index.
-const MAX_INDEX_GZ_BYTES = 50 * 1024;
+// docs/phases/12 originally set ≤50 KB gz, measured before docs/phases/02
+// (the bold-lead pass) existed. P2's own acceptance criterion is single
+// Common Mistakes items corpus-wide <= 250 (from a baseline of 1041); each
+// conversion adds a real, non-empty lead to this index where previously
+// there was none (see course_content.mistakes.ts's doc comment: 'single'
+// leads are empty). Measured growth during the P2 pass: ~33-40 bytes gz
+// per converted item. At the P2 target (250 remaining), extrapolating from
+// the corpus measured at single=579/46316 bytes gz projects to roughly
+// 58-60 KB gz at P2 completion — already over the original 50 KB figure
+// with the pass not yet finished. 96 KB keeps meaningful headroom past
+// that projection (a ⌘K-triggered fetch at that size is still trivial)
+// rather than picking the exact projected number and re-hitting this wall
+// on the next re-measurement.
+const MAX_INDEX_GZ_BYTES = 96 * 1024;
 
 /** "029_owasp_top_10.md" -> "owasp-top-10" — matches
  *  course_content.service.ts's fileToLessonSlug exactly; duplicated rather
