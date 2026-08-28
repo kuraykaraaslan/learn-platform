@@ -53,10 +53,10 @@ The value isn't the spreadsheet — it's that the quarterly tax settlement in Ju
 - Immediately after any client goes quiet on an outstanding invoice — recalculate runway assuming that payment doesn't arrive.
 
 ## Common Mistakes
-- Treating an issued invoice as if it were collected cash, and spending against it before it clears.
-- Skipping a dedicated tax reserve and getting surprised by a quarterly or annual settlement that should have been visible months in advance.
-- Accepting "100% on completion" as the default payment structure, which funds the client's risk with your cash flow instead of the reverse.
-- Judging financial health by revenue for the year instead of by monthly cash position — a strong annual total can hide a business that was insolvent in March.
+- **An invoice just went out, and spending decisions start assuming that money is already in hand** — Treating an issued invoice as if it were collected cash, and spending against it before it clears.
+- **A tax settlement lands as a surprise, even though it was months away and predictable** — Skipping a dedicated tax reserve and getting surprised by a quarterly or annual settlement that should have been visible months in advance.
+- **The default payment structure is "100% on completion"** — Accepting "100% on completion" as the default payment structure, which funds the client's risk with your cash flow instead of the reverse.
+- **The year's total revenue looks strong, so the business is called financially healthy** — Judging financial health by revenue for the year instead of by monthly cash position — a strong annual total can hide a business that was insolvent in March.
 
 ## Further Reading
 - *Profit First* — Mike Michalowicz: a percentage-based cash allocation system built specifically around separating spendable cash from tax and profit reserves.

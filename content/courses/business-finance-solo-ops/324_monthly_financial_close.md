@@ -59,10 +59,10 @@ Nothing here required more than twenty minutes once the invoice tracker and expe
 - Immediately after noticing the business "feels" off financially, to replace the feeling with numbers.
 
 ## Common Mistakes
-- Skipping the close during busy delivery months, which is when overdue invoices and dying subscriptions are most likely to go unnoticed.
-- Reviewing only revenue and ignoring the expense and subscription side entirely.
-- Treating the close as a one-off event instead of a recurring, identically-structured monthly ritual that makes month-over-month trends visible.
-- Waiting until year-end or accountant deadline pressure to organize records that should have been closed monthly.
+- **Delivery is busy this month, so the financial close gets skipped** — Skipping the close during busy delivery months, which is when overdue invoices and dying subscriptions are most likely to go unnoticed.
+- **The monthly review looks at revenue only, expenses and subscriptions untouched** — Reviewing only revenue and ignoring the expense and subscription side entirely.
+- **The monthly close happens a little differently each time, whatever feels right that month** — Treating the close as a one-off event instead of a recurring, identically-structured monthly ritual that makes month-over-month trends visible.
+- **Records only get organized once a year, right before the accountant needs them** — Waiting until year-end or accountant deadline pressure to organize records that should have been closed monthly.
 
 ## Further Reading
 - *Profit First* — Mike Michalowicz: pairs well with a monthly close by giving a concrete allocation system to act on what the close reveals.

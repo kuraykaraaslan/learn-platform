@@ -49,10 +49,10 @@ Same contract value, wildly different real return — the difference is entirely
 - When deciding whether to keep, renegotiate, or exit a recurring client relationship.
 
 ## Common Mistakes
-- Treating "deployed" as equivalent to "financially closed" and skipping the review entirely.
-- Excluding communication and revision time from the hours total, which flatters every project's apparent profitability.
-- Ignoring small unpaid "quick fixes" that, summed over a project, quietly erase the margin.
-- Repricing the next project from the quoted estimate instead of the actual hours a similar past project consumed.
+- **A project deploys, and the financial review gets skipped because the work is "done"** — Treating "deployed" as equivalent to "financially closed" and skipping the review entirely.
+- **The hours total for a project excludes communication and revision time** — Excluding communication and revision time from the hours total, which flatters every project's apparent profitability.
+- **A handful of small unpaid "quick fixes" happened along the way and never got tallied** — Ignoring small unpaid "quick fixes" that, summed over a project, quietly erase the margin.
+- **The next similar project gets priced from the old quoted estimate, not the hours the last one actually took** — Repricing the next project from the quoted estimate instead of the actual hours a similar past project consumed.
 
 ## Further Reading
 - *Pricing Creativity: A Guide to Profit Beyond the Billable Hour* — Blair Enns: a sharp argument for pricing on value while still knowing your real numbers underneath.

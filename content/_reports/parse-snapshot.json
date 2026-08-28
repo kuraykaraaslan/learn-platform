@@ -466,7 +466,7 @@
         "keyConcepts": "e5bf36238324bc8e",
         "exampleCode": "0162040df47359ce",
         "whenToUse": "9a0dbd50802affed",
-        "commonMistakes": "1f3278807f36d580",
+        "commonMistakes": "a0dc3e8376c09a43",
         "furtherReading": "8e1d809c22acae22"
       },
       "317_invoicing_and_payment_tracking.md": {
@@ -475,7 +475,7 @@
         "keyConcepts": "14061be6db9c7a76",
         "exampleCode": "1b38230b4488cf67",
         "whenToUse": "a29ef13ea0900d21",
-        "commonMistakes": "3ab6d2f65809d900",
+        "commonMistakes": "4a40df4c617d6877",
         "furtherReading": "b92c88e96a47ea8b"
       },
       "318_banking_and_payment_methods.md": {
@@ -484,7 +484,7 @@
         "keyConcepts": "41bfb5f161110dbc",
         "exampleCode": "555e510f2bef98dc",
         "whenToUse": "2a33d46476908cd5",
-        "commonMistakes": "e9606da5ab2a8ffe",
+        "commonMistakes": "25a4c669feaaaf81",
         "furtherReading": "017acb5640323613"
       },
       "319_tax_and_accounting_readiness.md": {
@@ -502,7 +502,7 @@
         "keyConcepts": "4e4d235e1e823669",
         "exampleCode": "98f99566689b9c9b",
         "whenToUse": "dd3db7a7a3fdcbdd",
-        "commonMistakes": "900da50bbf130ee2",
+        "commonMistakes": "72f70a654995e559",
         "furtherReading": "580000cf16391644"
       },
       "321_project_accounting_and_costing.md": {
@@ -511,7 +511,7 @@
         "keyConcepts": "0524c37dd789ff15",
         "exampleCode": "a5aa3ffeceac416f",
         "whenToUse": "b76f754d8ed5f647",
-        "commonMistakes": "8c20f87150c8f8ca",
+        "commonMistakes": "5388765b365fdcfb",
         "furtherReading": "7423305e5271d8ee"
       },
       "322_time_tracking_and_effective_rate.md": {
@@ -520,7 +520,7 @@
         "keyConcepts": "8922ec17deaaa413",
         "exampleCode": "b393d1e6b7570f78",
         "whenToUse": "549593fedee8e31c",
-        "commonMistakes": "6047ffd96efd1a4b",
+        "commonMistakes": "20fa9bfe1c9dec08",
         "furtherReading": "8b1f7828e1010ce1"
       },
       "323_revenue_stream_design.md": {
@@ -529,7 +529,7 @@
         "keyConcepts": "9bb9fda7d4867de0",
         "exampleCode": "575b120b33579260",
         "whenToUse": "6272a58bee681019",
-        "commonMistakes": "73a11250c3d57140",
+        "commonMistakes": "f4e844eb370a3c97",
         "furtherReading": "4e595d8018ff78cb"
       },
       "324_monthly_financial_close.md": {
@@ -538,7 +538,7 @@
         "keyConcepts": "9def00bb0dedc82d",
         "exampleCode": "4d6ece3669bb04a1",
         "whenToUse": "0fd0052ebe4095e5",
-        "commonMistakes": "2a47aa4b6f6fe9e3",
+        "commonMistakes": "756d71b6755f0049",
         "furtherReading": "71c8d69bec8a6ee7"
       },
       "325_finance_dashboard_and_kpis.md": {

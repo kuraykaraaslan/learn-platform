@@ -51,10 +51,10 @@ If it reaches day +14 with no resolution, the pre-agreed consequence fires autom
 - When a client proposes an unusual payment structure (e.g., "pay you after our own client pays us") — this is the moment to require standard terms in writing, not after work has started.
 
 ## Common Mistakes
-- Letting an invoice exist only as a mention in a chat thread instead of a recorded, numbered document with a status.
-- Accepting "I'll pay soon" without pinning it to a specific date and writing that date down as the new follow-up trigger.
-- Delivering final files, source access, or production credentials before the corresponding invoice is confirmed paid.
-- Bundling several unrelated milestones or projects into one invoice, which makes partial payments and disputes impossible to track cleanly.
+- **An invoice exists only as a line in a chat thread, no numbered document behind it** — Letting an invoice exist only as a mention in a chat thread instead of a recorded, numbered document with a status.
+- **A client says "I'll pay soon," and that's accepted with no specific date attached** — Accepting "I'll pay soon" without pinning it to a specific date and writing that date down as the new follow-up trigger.
+- **Final files and production credentials go out before the invoice is confirmed paid** — Delivering final files, source access, or production credentials before the corresponding invoice is confirmed paid.
+- **Three unrelated milestones from two different projects get bundled into one invoice** — Bundling several unrelated milestones or projects into one invoice, which makes partial payments and disputes impossible to track cleanly.
 
 ## Further Reading
 - [Stripe Invoicing documentation](https://docs.stripe.com/invoicing) — payment terms, reminders and reconciliation as an actual product implements them

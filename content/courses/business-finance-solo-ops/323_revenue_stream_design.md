@@ -47,10 +47,10 @@ The quarterly total looked fine; the stream breakdown is what surfaced the one c
 - When deciding which kind of work to actively pursue versus quietly let go.
 
 ## Common Mistakes
-- Treating every paying client as equally good for the business regardless of stream, terms, or support burden.
-- Letting time-and-materials work creep upward because it's easy to say yes to, without noticing its low quality score.
-- Never actually naming which revenue stream a given engagement belongs to, which makes the quarterly mix impossible to evaluate.
-- Chasing a new revenue stream (a course, a SaaS side product) while the core project/retainer mix is still unstable.
+- **Every paying client is treated as equally good for the business, regardless of terms or support burden** — Treating every paying client as equally good for the business regardless of stream, terms, or support burden.
+- **Time-and-materials work keeps growing because it's the easiest thing to say yes to** — Letting time-and-materials work creep upward because it's easy to say yes to, without noticing its low quality score.
+- **An engagement is running, and no one's named which revenue stream it actually belongs to** — Never actually naming which revenue stream a given engagement belongs to, which makes the quarterly mix impossible to evaluate.
+- **A new SaaS side product gets chased while the core retainer mix is still unstable** — Chasing a new revenue stream (a course, a SaaS side product) while the core project/retainer mix is still unstable.
 
 ## Further Reading
 - *Built to Sell* — John Warrillow: makes the case for productized, recurring revenue as the foundation of a business that isn't entirely dependent on the owner's hours.

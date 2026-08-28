@@ -57,10 +57,10 @@ Reference/note: Please include "INV-0042" in the transfer memo.
 - At month-end close, to confirm every "sent" invoice either has a matching confirmed payment or an explicit overdue status — no invoice should be in limbo.
 
 ## Common Mistakes
-- Marking an invoice paid based on a screenshot or a verbal "it's on its way" instead of a confirmed transaction.
-- Accepting transfers with no reference to an invoice number, then spending time later guessing which payment belongs to which client and project.
-- Ignoring transfer fees and exchange-rate differences, so the amount that lands never quite matches the amount invoiced and nobody notices the drift.
-- Mixing client payments with personal transfers in the same account, which makes it impossible to hand clean records to an accountant at tax time.
+- **A client sends a screenshot claiming payment is on its way, and the invoice gets marked paid on the spot** — Marking an invoice paid based on a screenshot or a verbal "it's on its way" instead of a confirmed transaction.
+- **A transfer arrives with no invoice number attached to it** — Accepting transfers with no reference to an invoice number, then spending time later guessing which payment belongs to which client and project.
+- **A transfer fee and exchange-rate difference mean the amount that lands doesn't quite match the invoice** — Ignoring transfer fees and exchange-rate differences, so the amount that lands never quite matches the amount invoiced and nobody notices the drift.
+- **Client payments and personal transfers land in the same account** — Mixing client payments with personal transfers in the same account, which makes it impossible to hand clean records to an accountant at tax time.
 
 ## Further Reading
 - [Wise's guide to receiving international payments as a freelancer](https://wise.com/gb/blog) — practical detail on fees, settlement times, and multi-currency accounts for independent contractors.

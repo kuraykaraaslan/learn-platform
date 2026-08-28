@@ -53,10 +53,10 @@ Decision: approve
 - Whenever cash flow tightens — the subscription register is the fastest place to find real, immediate savings without touching client-facing capability.
 
 ## Common Mistakes
-- Letting a subscription renew silently for months after the project or use case that justified it has ended.
-- Keeping two tools that do the same job (two design tools, two project trackers) out of inertia rather than picking one.
-- Buying a course, gadget, or tool as an emotional response to stress or a slow pipeline, rather than against a defined skill or delivery gap.
-- Treating small recurring charges as too minor to review, when their sum is often larger than a single purchase that would have triggered scrutiny.
+- **A subscription keeps renewing months after the project that justified it ended** — Letting a subscription renew silently for months after the project or use case that justified it has ended.
+- **Two project-tracking tools are both still paid for, out of inertia** — Keeping two tools that do the same job (two design tools, two project trackers) out of inertia rather than picking one.
+- **A slow week prompts buying a new course or gadget** — Buying a course, gadget, or tool as an emotional response to stress or a slow pipeline, rather than against a defined skill or delivery gap.
+- **A handful of small recurring charges never get reviewed because each one looks too minor on its own** — Treating small recurring charges as too minor to review, when their sum is often larger than a single purchase that would have triggered scrutiny.
 
 ## Further Reading
 - *Profit First* — Mike Michalowicz: frames every business cost as competing for a share of a deliberately scarce operating account, which naturally forces the keep/cancel discipline described here.

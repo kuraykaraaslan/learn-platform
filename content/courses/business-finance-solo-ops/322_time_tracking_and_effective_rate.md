@@ -46,10 +46,10 @@ The number that matters isn't the 54% in isolation — it's noticing that "unpla
 - When a specific project or client consistently produces "unplanned firefighting" hours — the log is the evidence for a pricing or boundary conversation.
 
 ## Common Mistakes
-- Logging only coding time, which hides communication, QA, and admin load entirely.
-- Treating every non-billable hour as waste, which discourages tracking the sales and learning time that keeps the business alive.
-- Accepting new urgent work without checking the current week's actual capacity first.
-- Continuing to price future projects from optimistic estimates instead of the actual hours similar past projects consumed.
+- **Time tracking only logs coding hours** — Logging only coding time, which hides communication, QA, and admin load entirely.
+- **Every non-billable hour gets treated as wasted time** — Treating every non-billable hour as waste, which discourages tracking the sales and learning time that keeps the business alive.
+- **An urgent request comes in, and it's accepted before checking this week's actual capacity** — Accepting new urgent work without checking the current week's actual capacity first.
+- **The next project's price comes from the original optimistic estimate, not what similar past projects actually took** — Continuing to price future projects from optimistic estimates instead of the actual hours similar past projects consumed.
 
 ## Further Reading
 - *Getting Things Done* — David Allen: not time-tracking specific, but the underlying discipline of capturing everything rather than trusting memory applies directly here.
