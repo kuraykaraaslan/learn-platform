@@ -55,10 +55,10 @@ The red-flag list did the real work here: "we actually have 15 entity types" is 
 - When a project touches an existing codebase you haven't personally inspected — to insert a paid audit before any fixed number is quoted.
 
 ## Common Mistakes
-- Quoting a fixed price against undefined data entities, roles, or permissions instead of scoping a workshop first.
-- Leaving revision rounds unlimited or vaguely defined, so every future request becomes a negotiation instead of a scoped change request.
-- Quoting a fixed price on an unfamiliar existing codebase without an audit, absorbing the resulting surprises as unpaid rework.
-- Failing to write red flags into the scope document, so warning signs observed during discovery never actually change the quote.
+- **The admin panel quote goes out before anyone's defined what the user roles or data entities actually are** — Quoting a fixed price against undefined data entities, roles, or permissions instead of scoping a workshop first.
+- **The proposal says "revisions included" with no number attached** — Leaving revision rounds unlimited or vaguely defined, so every future request becomes a negotiation instead of a scoped change request.
+- **A fixed price goes out for work on an existing codebase nobody's actually opened yet** — Quoting a fixed price on an unfamiliar existing codebase without an audit, absorbing the resulting surprises as unpaid rework.
+- **The discovery call surfaced three warning signs, and none of them made it into the scope document** — Failing to write red flags into the scope document, so warning signs observed during discovery never actually change the quote.
 
 ## Further Reading
 - *Managing Successful Projects with PRINCE2* (or any standard scope-management reference): the general discipline of defining boundaries before committing to a fixed number applies directly here.

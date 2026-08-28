@@ -56,10 +56,10 @@ Nothing in the interim pitch is fabricated — it's the true adjacent experience
 - When a warm referral into a new vertical appears — to recognize it as a proof-gap-closing opportunity, not just one more project.
 
 ## Common Mistakes
-- Claiming a niche or vertical expertise publicly with no genuine proof behind it, which collapses the first time a prospect asks a specific question.
-- Waiting passively for the "right" case study to appear instead of deliberately engineering a first engagement to create it.
-- Abandoning reliable current work and revenue before the new positioning's pipeline has actually been validated.
-- Treating every discount in a new vertical as a proof investment, without consciously tracking whether it's actually producing a usable case study afterward.
+- **The new landing page says "logistics software specialist," and there isn't a single logistics project behind it** — Claiming a niche or vertical expertise publicly with no genuine proof behind it, which collapses the first time a prospect asks a specific question.
+- **The plan for entering the new vertical is to keep doing regular work until the right case study happens to show up** — Waiting passively for the "right" case study to appear instead of deliberately engineering a first engagement to create it.
+- **Existing retainer clients are being wound down to make room for the new positioning, before it's landed a single client** — Abandoning reliable current work and revenue before the new positioning's pipeline has actually been validated.
+- **Every discounted project this quarter gets filed as "building the portfolio," whether or not it produced anything usable afterward** — Treating every discount in a new vertical as a proof investment, without consciously tracking whether it's actually producing a usable case study afterward.
 
 ## Further Reading
 - *Positioning: The Battle for Your Mind* — Al Ries and Jack Trout: the classic framing of positioning as a claim that must be earned and defensible, not just declared.

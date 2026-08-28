@@ -55,10 +55,10 @@ The brief is deliberately narrow — three components against a documented inter
 - When pricing any project involving a contractor — to explicitly check that management and review time are actually covered in the price.
 
 ## Common Mistakes
-- Outsourcing work you cannot personally evaluate on return, removing your ability to actually be accountable for its quality.
-- Jumping straight to module- or client-facing delegation with an unproven contractor instead of starting at task-level.
-- Skipping a written brief and acceptance criteria, leading to rework that erodes any margin the delegation was supposed to create.
-- Pricing contractor engagements at break-even, leaving no room for the management, review, and rework time delegation actually requires.
+- **The contractor's specialty is a security-critical area nobody in-house actually knows how to review** — Outsourcing work you cannot personally evaluate on return, removing your ability to actually be accountable for its quality.
+- **A contractor hired last week is already handling an entire feature module and talking directly to the client** — Jumping straight to module- or client-facing delegation with an unproven contractor instead of starting at task-level.
+- **The contractor got a two-line description of the task and started right away** — Skipping a written brief and acceptance criteria, leading to rework that erodes any margin the delegation was supposed to create.
+- **The contractor's fee eats the entire margin on this piece of the project once review time is counted** — Pricing contractor engagements at break-even, leaving no room for the management, review, and rework time delegation actually requires.
 
 ## Further Reading
 - *The E-Myth Revisited* — Michael E. Gerber: on building systems and delegation structures rather than staying the sole bottleneck indefinitely.

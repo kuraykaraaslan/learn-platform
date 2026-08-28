@@ -52,10 +52,10 @@ The bundle didn't invent a new need — it formalized and priced advisory time t
 - Never for a new or unproven client relationship — use a standard tier or project model until the relationship earns a custom arrangement.
 
 ## Common Mistakes
-- Building a custom bundle for a client who hasn't yet proven the relationship, before trust and usage patterns are established.
-- Using a custom bundle to avoid having an overdue scope-change conversation instead of actually addressing the scope problem.
-- Leaving rollover policy undefined, which quietly creates an unlimited future liability of accumulated unused hours.
-- Operating under a verbally agreed custom arrangement with no written confirmation before work begins.
+- **A client signed two weeks ago, and a custom bundle is already being drawn up around their stated preferences** — Building a custom bundle for a client who hasn't yet proven the relationship, before trust and usage patterns are established.
+- **Scope has been drifting for months, and a custom bundle gets proposed instead of naming the actual problem** — Using a custom bundle to avoid having an overdue scope-change conversation instead of actually addressing the scope problem.
+- **The custom bundle's terms don't say what happens to hours the client doesn't use in a given month** — Leaving rollover policy undefined, which quietly creates an unlimited future liability of accumulated unused hours.
+- **The custom terms were agreed on a call, and work started the same day** — Operating under a verbally agreed custom arrangement with no written confirmation before work begins.
 
 ## Further Reading
 - *Managing the Professional Service Firm* — David H. Maister: on tailoring service delivery to strategic accounts without losing structural discipline.

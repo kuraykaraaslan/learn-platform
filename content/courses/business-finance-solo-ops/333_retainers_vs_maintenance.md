@@ -48,10 +48,10 @@ A client asking "can you also add a new reporting page?" under the Hosting & Upt
 - When reviewing total recurring commitments against the 30–50% capacity ceiling before adding a new client to any tier.
 
 ## Common Mistakes
-- Selling "unlimited support" or "unlimited revisions" under either a maintenance or retainer label.
-- Letting a maintenance client's requests quietly grow into development work without renegotiating into a retainer tier.
-- Leaving the unused-hours rollover policy undefined, which creates disputes the first month a client under-uses their hours.
-- Waiting for something to break before ever offering a maintenance or retainer plan to a delivered client.
+- **The maintenance plan is pitched as "unlimited support, whatever you need"** — Selling "unlimited support" or "unlimited revisions" under either a maintenance or retainer label.
+- **A maintenance client keeps asking for small new features, and each one gets folded into the same monthly fee** — Letting a maintenance client's requests quietly grow into development work without renegotiating into a retainer tier.
+- **The retainer agreement never says what happens to hours a client doesn't use that month** — Leaving the unused-hours rollover policy undefined, which creates disputes the first month a client under-uses their hours.
+- **A project delivered three months ago, and no maintenance or retainer offer has been mentioned since** — Waiting for something to break before ever offering a maintenance or retainer plan to a delivered client.
 
 ## Further Reading
 - *Recurring Revenue* — Roman Stanek and John Warrillow (concepts drawn from *The Automatic Customer*): the broader business case for recurring revenue structures.

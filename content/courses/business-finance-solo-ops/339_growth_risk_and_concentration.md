@@ -54,10 +54,10 @@ The checklist didn't reject the project — it surfaced two specific, manageable
 - When feeling stretched thin — to name specifically which risk categories are actually the source, rather than treating it as generalized stress.
 
 ## Common Mistakes
-- Accepting every opportunity that comes in regardless of current capacity, leading to quality and delivery risk on all fronts at once.
-- Letting one client's revenue share climb past 60% without any deliberate diversification response.
-- Skipping a written contract or scope document because a client relationship feels informal and trustworthy.
-- Delegating work to a contractor without a defined review step, exposing reputation risk under your own name.
+- **A promising new project comes in while two others are already running at full capacity, and it gets accepted anyway** — Accepting every opportunity that comes in regardless of current capacity, leading to quality and delivery risk on all fronts at once.
+- **One client now represents 65% of trailing revenue, and the acquisition pipeline looks exactly like it did last quarter** — Letting one client's revenue share climb past 60% without any deliberate diversification response.
+- **The client is a friend of a friend, so this one starts on a handshake instead of a contract** — Skipping a written contract or scope document because a client relationship feels informal and trustworthy.
+- **A contractor's work goes straight to the client with nobody checking it first** — Delegating work to a contractor without a defined review step, exposing reputation risk under your own name.
 
 ## Further Reading
 - *The Millionaire Fastlane* is not needed here; better: *Company of One* — Paul Jarvis: makes the direct case for growth that protects quality and capacity rather than chasing scale for its own sake.

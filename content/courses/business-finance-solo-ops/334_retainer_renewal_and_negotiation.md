@@ -50,10 +50,10 @@ The upgrade wasn't pitched from a hunch that the client "seemed busier" — it w
 - Whenever a client raises cancellation — to run the listen-first process rather than negotiate defensively.
 
 ## Common Mistakes
-- Waiting until the last week before a renewal date to raise the conversation, or waiting for the client to bring it up first.
-- Proposing an upgrade based on a feeling rather than a documented pattern of out-of-scope requests.
-- Offering an open-ended pause with no defined resume conditions, which can quietly become a permanent cancellation.
-- Arguing, defending, or over-explaining during a cancellation conversation instead of listening and closing gracefully.
+- **The retainer's end date is five days away, and renewal hasn't come up yet** — Waiting until the last week before a renewal date to raise the conversation, or waiting for the client to bring it up first.
+- **The client "seems busier lately," so an upgrade gets pitched on that impression** — Proposing an upgrade based on a feeling rather than a documented pattern of out-of-scope requests.
+- **A client asks to pause the retainer, and "sure, just let me know when you're ready" is the whole agreement** — Offering an open-ended pause with no defined resume conditions, which can quietly become a permanent cancellation.
+- **A client says they want to cancel, and the reply walks through all the reasons that would be a mistake** — Arguing, defending, or over-explaining during a cancellation conversation instead of listening and closing gracefully.
 
 ## Further Reading
 - *Never Split the Difference* — Chris Voss: negotiation principles (labeling, calibrated questions, listening first) that map directly onto renewal and cancellation conversations.

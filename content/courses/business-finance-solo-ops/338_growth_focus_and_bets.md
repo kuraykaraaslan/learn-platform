@@ -53,10 +53,10 @@ Three other reasonable growth ideas got explicitly deferred to the backlog inste
 - Whenever a compelling new idea appears — to route it into the Now/Next/Later backlog rather than immediately chasing it.
 
 ## Common Mistakes
-- Running outbound, content, partnerships, and a side product simultaneously, none of them long enough to produce a real signal.
-- Abandoning a channel before its minimum trial period has elapsed, based on early impatience rather than evidence.
-- Treating every new growth idea as urgent instead of filing it in the backlog for later consideration.
-- Chasing a new growth channel while current delivery capacity is already at its limit, guaranteeing that any new leads can't actually be served well.
+- **This quarter's growth plan runs outbound, a content calendar, a partnership push, and a side SaaS idea, all at once** — Running outbound, content, partnerships, and a side product simultaneously, none of them long enough to produce a real signal.
+- **Two content posts went out with no results, and the content channel gets shelved this week** — Abandoning a channel before its minimum trial period has elapsed, based on early impatience rather than evidence.
+- **A promising new channel idea comes up mid-week, and it gets started immediately** — Treating every new growth idea as urgent instead of filing it in the backlog for later consideration.
+- **Delivery is already at full capacity, and a new outbound campaign launches anyway** — Chasing a new growth channel while current delivery capacity is already at its limit, guaranteeing that any new leads can't actually be served well.
 
 ## Further Reading
 - *Essentialism* — Greg McKeown: the broader case for disciplined focus over scattered effort, directly applicable to solo growth planning.
