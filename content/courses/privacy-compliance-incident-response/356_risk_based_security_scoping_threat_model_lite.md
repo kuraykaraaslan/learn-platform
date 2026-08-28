@@ -76,10 +76,10 @@ The risk register is what keeps this from being a one-time exercise that gets st
 - When a system's risk tier changes — a formerly internal tool becomes customer-facing, or a Low-risk project starts processing payment data
 
 ## Common Mistakes
-- Applying the same security checklist to every project regardless of what data it touches, which wastes effort on trivial systems and under-invests in critical ones
-- Treating the threat model as a one-time document written at kickoff and never revisited as scope, integrations, or data types change
+- **The same full security checklist gets run against a static marketing page and a multi-tenant billing dashboard, identically** — Applying the same security checklist to every project regardless of what data it touches, which wastes effort on trivial systems and under-invests in critical ones
+- **The threat model was written at kickoff eight months ago and hasn't been touched since two new integrations and a payments feature shipped** — Treating the threat model as a one-time document written at kickoff and never revisited as scope, integrations, or data types change
 - Skipping the "residual risk" column entirely — every control has limits, and not naming what's left over gives false confidence
-- Letting security scope be assumed rather than stated explicitly, so a client or stakeholder believes penetration testing or 24/7 monitoring was included when it was never funded
+- **The client assumes 24/7 monitoring is included, because nobody ever wrote down that it wasn't** — Letting security scope be assumed rather than stated explicitly, so a client or stakeholder believes penetration testing or 24/7 monitoring was included when it was never funded
 
 ## Further Reading
 - [OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)

@@ -88,10 +88,10 @@ const applicable = routeIncident(["EU", "US_HIPAA"]);
 - When drafting the incident communication plan — the legally required deadline should shape the internal escalation timeline, not be discovered only once legal gets involved
 
 ## Common Mistakes
-- Assuming "72 hours" is a single universal number and not realizing UK GDPR, EU GDPR, and KVKK route to three different regulators even though the deadline number matches
-- Starting the notification clock from when the breach occurred instead of from when it was *discovered*, misjudging how much time remains
-- Treating HIPAA's 60-day window as generous and therefore low-urgency, missing that a business associate's own notification to the covered entity must happen fast enough for the covered entity's 60-day clock to still close on time
-- Waiting for legal counsel to determine jurisdiction and deadlines from scratch during the incident instead of having the facts and a jurisdiction map ready to hand over immediately
+- **The EU notification goes out within 72 hours, and nobody realizes the UK arm of the same incident needed its own separate ICO notification** — Assuming "72 hours" is a single universal number and not realizing UK GDPR, EU GDPR, and KVKK route to three different regulators even though the deadline number matches
+- **The 72-hour clock gets counted from when the breach actually happened three weeks ago, not from when it was discovered yesterday** — Starting the notification clock from when the breach occurred instead of from when it was *discovered*, misjudging how much time remains
+- **HIPAA's 60 days feels like plenty of time, so the business associate takes two weeks just deciding how to word the notice to the covered entity** — Treating HIPAA's 60-day window as generous and therefore low-urgency, missing that a business associate's own notification to the covered entity must happen fast enough for the covered entity's 60-day clock to still close on time
+- **Legal counsel starts researching which regulators apply from a standing start, hours into an incident that's already burning through its notification window** — Waiting for legal counsel to determine jurisdiction and deadlines from scratch during the incident instead of having the facts and a jurisdiction map ready to hand over immediately
 
 ## Further Reading
 - [GDPR Article 33 — Notification of a Personal Data Breach to the Supervisory Authority](https://gdpr-info.eu/art-33-gdpr/)

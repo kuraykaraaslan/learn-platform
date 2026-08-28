@@ -83,10 +83,10 @@ document.getElementById("accept-all")?.addEventListener("click", () =>
 - When choosing between a cookie-based analytics tool and a cookieless edge-analytics alternative for basic traffic reporting
 
 ## Common Mistakes
-- Shipping a consent banner where "Accept all" is a prominent button and "Reject" is a small text link or buried in a preferences submenu
-- Loading Google Analytics or ad pixels before the user has made a consent choice, on the assumption that IP anonymization alone makes it exempt
-- Ignoring the Global Privacy Control signal because it doesn't correspond to a visible UI click, when California treats it as a mandatory opt-out
-- Treating "we added a cookie banner" as proof of compliance without checking whether the underlying consent *model* (opt-in vs. opt-out) matches the visitor's jurisdiction
+- **"Accept all" is a big bright button, and "Reject" is a small gray link buried at the bottom of the banner** — Shipping a consent banner where "Accept all" is a prominent button and "Reject" is a small text link or buried in a preferences submenu
+- **GA4 fires the moment the page loads, on the reasoning that IP anonymization is turned on so consent doesn't really apply** — Loading Google Analytics or ad pixels before the user has made a consent choice, on the assumption that IP anonymization alone makes it exempt
+- **A California visitor's browser sends the Global Privacy Control signal, and the site keeps tracking anyway because nobody's checking for it** — Ignoring the Global Privacy Control signal because it doesn't correspond to a visible UI click, when California treats it as a mandatory opt-out
+- **A cookie banner went up on the EU site, using the same opt-out model built for the US version** — Treating "we added a cookie banner" as proof of compliance without checking whether the underlying consent *model* (opt-in vs. opt-out) matches the visitor's jurisdiction
 
 ## Further Reading
 - [ICO — Guidance on the Use of Cookies and Similar Technologies](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/cookies-and-similar-technologies/)

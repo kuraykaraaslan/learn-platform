@@ -75,10 +75,10 @@ Use only this pattern — no speculation beyond it:
 - As the input to the blameless post-mortem (#79) once the incident is stabilized — this runbook produces the timeline and evidence the post-mortem analyzes
 
 ## Common Mistakes
-- Rushing to fix or delete the compromised state before preserving logs and evidence, destroying the ability to later determine scope
-- Treating "the personal data question" as an afterthought instead of asking it explicitly in the first hour, delaying the separate breach-notification clock
-- Making public statements about cause or scope before the facts are confirmed, then having to retract or contradict an earlier statement
-- Continuing to use a secret or credential that is known or suspected to be exposed while still "investigating" whether it was actually misused
+- **The compromised database gets rolled back within minutes of discovery, before anyone thought to pull the logs first** — Rushing to fix or delete the compromised state before preserving logs and evidence, destroying the ability to later determine scope
+- **Containment wraps up, and it's hour three before anyone actually asks whether personal data might have been involved** — Treating "the personal data question" as an afterthought instead of asking it explicitly in the first hour, delaying the separate breach-notification clock
+- **"This wasn't a data breach" goes out in a public statement an hour into the investigation, before the facts are actually confirmed** — Making public statements about cause or scope before the facts are confirmed, then having to retract or contradict an earlier statement
+- **The exposed API key stays live "while we confirm whether it was actually used," instead of getting rotated immediately** — Continuing to use a secret or credential that is known or suspected to be exposed while still "investigating" whether it was actually misused
 
 ## Further Reading
 - [NIST SP 800-61 Rev. 2 — Computer Security Incident Handling Guide](https://csrc.nist.gov/pubs/sp/800/61/r2/final)

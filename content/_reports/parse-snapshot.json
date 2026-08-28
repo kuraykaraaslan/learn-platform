@@ -3104,7 +3104,7 @@
         "keyConcepts": "ac0b937282c6eab6",
         "exampleCode": "45ed3ed06b11f6aa",
         "whenToUse": "2267c805972ded9e",
-        "commonMistakes": "c762bdf3fa5df2e8",
+        "commonMistakes": "7670f57ec0df3dd8",
         "furtherReading": "a1224412fb73803a"
       },
       "357_government_regulated_sector_security_baselines.md": {
@@ -3113,7 +3113,7 @@
         "keyConcepts": "6e233e802ea2d0f6",
         "exampleCode": "0521ded470000fee",
         "whenToUse": "f48d89815951469e",
-        "commonMistakes": "0942ea83764db071",
+        "commonMistakes": "3ab55b48a7cb46cd",
         "furtherReading": "08b97ab9e139517f"
       },
       "358_data_classification_storage_residency_tiers.md": {
@@ -3122,7 +3122,7 @@
         "keyConcepts": "700a386aceb11b6a",
         "exampleCode": "d011403558f0bf53",
         "whenToUse": "7284199c2bde9e49",
-        "commonMistakes": "ee8323b4101aa27a",
+        "commonMistakes": "3c7ddd8cfcafc616",
         "furtherReading": "4e50f06dc9318e15"
       },
       "359_privacy_by_design_process_multi_jurisdiction_basis.md": {
@@ -3131,7 +3131,7 @@
         "keyConcepts": "d0db94d7f4b8656c",
         "exampleCode": "3c3f3bd5acbc38e7",
         "whenToUse": "b6c106a712f64524",
-        "commonMistakes": "236fcf978d72d296",
+        "commonMistakes": "91c9144f35a7d3b1",
         "furtherReading": "e6547ebaae9fa97b"
       },
       "360_cookie_consent_tracking_governance.md": {
@@ -3140,7 +3140,7 @@
         "keyConcepts": "70cc67aae35cc810",
         "exampleCode": "83f2f307e59997ef",
         "whenToUse": "bf94f081f1688f09",
-        "commonMistakes": "9ab427f4df042be9",
+        "commonMistakes": "62bc68f4b293fd35",
         "furtherReading": "b283d8bf8ec14443"
       },
       "361_vulnerability_management_lifecycle_patch_slas.md": {
@@ -3149,7 +3149,7 @@
         "keyConcepts": "23b8a7c12b1dd0c0",
         "exampleCode": "95086687c4e3cebf",
         "whenToUse": "d06cccdc77c9411d",
-        "commonMistakes": "a20091fb6d696907",
+        "commonMistakes": "ef553db7debf0e0f",
         "furtherReading": "ccc892d07f0c6304"
       },
       "362_incident_response_process_detection_to_postmortem.md": {
@@ -3158,7 +3158,7 @@
         "keyConcepts": "ba0d2b5156efaca4",
         "exampleCode": "9a35f8270dd02586",
         "whenToUse": "47321757b26226d8",
-        "commonMistakes": "db4b87127dbf7ac5",
+        "commonMistakes": "a4c2ae5bdbedaf72",
         "furtherReading": "89d9481b9901de47"
       },
       "363_breach_notification_requirements_across_jurisdictions.md": {
@@ -3167,7 +3167,7 @@
         "keyConcepts": "5e2de791ade2eff4",
         "exampleCode": "c4ae82feda02d5e1",
         "whenToUse": "ec7eee78b1150454",
-        "commonMistakes": "ee2f6d14af8d1ebb",
+        "commonMistakes": "cad783cb66f71f65",
         "furtherReading": "dbdfa7b4d6a0fe87"
       },
       "364_third_party_vendor_risk_data_processing_agreements.md": {

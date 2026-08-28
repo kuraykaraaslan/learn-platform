@@ -54,10 +54,10 @@ processing time.
 - When pricing a proposal for regulated-sector work — certification and hosting requirements can add significant, front-loaded cost that needs to be visible in the quote
 
 ## Common Mistakes
-- Discovering a mandatory certification requirement (Cyber Essentials, FedRAMP) after the contract is signed instead of during discovery, when it's too late to fast-track
-- Treating Cyber Essentials and Cyber Essentials Plus as interchangeable when a contract specifically requires the Plus tier's independent verification
-- Assuming a commercial cloud provider's general SOC 2 or ISO 27001 certification satisfies FedRAMP or NIST 800-53 requirements, when they are separate, non-equivalent programs
-- Quoting a regulated-sector project without pricing in the certification, hosting, and audit lead time as explicit, visible line items
+- **The contract's signed, and that's when someone first mentions the client needs FedRAMP authorization on the hosting** — Discovering a mandatory certification requirement (Cyber Essentials, FedRAMP) after the contract is signed instead of during discovery, when it's too late to fast-track
+- **The self-assessed Cyber Essentials certificate gets submitted, for a contract that specifically required the Plus tier's independent verification** — Treating Cyber Essentials and Cyber Essentials Plus as interchangeable when a contract specifically requires the Plus tier's independent verification
+- **The cloud provider's SOC 2 report gets cited as proof of FedRAMP compliance, which it isn't** — Assuming a commercial cloud provider's general SOC 2 or ISO 27001 certification satisfies FedRAMP or NIST 800-53 requirements, when they are separate, non-equivalent programs
+- **The government-sector quote has one line for "development," with no separate line for certification, hosting, or audit lead time** — Quoting a regulated-sector project without pricing in the certification, hosting, and audit lead time as explicit, visible line items
 
 ## Further Reading
 - [NCSC Cyber Essentials](https://www.ncsc.gov.uk/cyberessentials/overview) — official UK scheme overview and control requirements

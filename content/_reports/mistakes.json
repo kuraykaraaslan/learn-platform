@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 208,
-    "lessonsWithZeroDrillable": 20,
+    "single": 177,
+    "lessonsWithZeroDrillable": 13,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 363
+    "lessonsWithTwoPlusDrillable": 371
   },
   "lessons": [
     {
@@ -5113,14 +5113,14 @@
       "file": "356_risk_based_security_scoping_threat_model_lite.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {
@@ -5128,14 +5128,14 @@
       "file": "357_government_regulated_sector_security_baselines.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5143,14 +5143,14 @@
       "file": "358_data_classification_storage_residency_tiers.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5158,14 +5158,14 @@
       "file": "359_privacy_by_design_process_multi_jurisdiction_basis.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5173,14 +5173,14 @@
       "file": "360_cookie_consent_tracking_governance.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5188,14 +5188,14 @@
       "file": "361_vulnerability_management_lifecycle_patch_slas.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5203,14 +5203,14 @@
       "file": "362_incident_response_process_detection_to_postmortem.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5218,14 +5218,14 @@
       "file": "363_breach_notification_requirements_across_jurisdictions.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {

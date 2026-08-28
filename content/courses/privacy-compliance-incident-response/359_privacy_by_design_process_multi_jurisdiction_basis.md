@@ -60,10 +60,10 @@ Backup snapshot (nightly, encrypted)
 - Before a privacy-focused enterprise security questionnaire or SOC 2 Type II audit — the artifact package (inventory, flow map, vendor list) is exactly what's requested
 
 ## Common Mistakes
-- Treating a generic, copy-pasted privacy policy as proof of compliance instead of an artifact that has to match what the system actually does
-- Assuming GDPR covers every non-US jurisdiction, missing that UK GDPR has its own transfer mechanism and that US states use an opt-out model instead of opt-in
-- Building the consent/export/delete mechanisms but never producing the data flow map, so a Data Subject Access Request becomes a multi-day investigation instead of a query
-- Letting engineering decide the legal basis or retention period unilaterally instead of routing that decision to legal/privacy counsel and simply implementing it
+- **A privacy policy template got copy-pasted from another site, and nobody checked whether it actually describes what this system does** — Treating a generic, copy-pasted privacy policy as proof of compliance instead of an artifact that has to match what the system actually does
+- **The UK launch reuses the EU GDPR transfer paperwork, since "it's basically the same regulation"** — Assuming GDPR covers every non-US jurisdiction, missing that UK GDPR has its own transfer mechanism and that US states use an opt-out model instead of opt-in
+- **A Data Subject Access Request comes in, and answering it means grepping through six services because no data flow map was ever produced** — Building the consent/export/delete mechanisms but never producing the data flow map, so a Data Subject Access Request becomes a multi-day investigation instead of a query
+- **The engineer picks "legitimate interest" as the legal basis for a new feature, without ever running it past legal counsel** — Letting engineering decide the legal basis or retention period unilaterally instead of routing that decision to legal/privacy counsel and simply implementing it
 
 ## Further Reading
 - [GDPR.eu — Developer Guide to Compliance](https://gdpr.eu/developers/)

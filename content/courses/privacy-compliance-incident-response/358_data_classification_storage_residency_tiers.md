@@ -78,10 +78,10 @@ function assertTierCompliance(field: FieldClassification, actualTier: number): v
 - During a compliance audit or enterprise security questionnaire — the data classification table is one of the first artifacts requested
 
 ## Common Mistakes
-- Adding fields "just in case we need them later," which expands the classification surface and the retention burden for data that may never be used
-- Assuming a single cloud provider's general security posture satisfies residency requirements, when the actual rule is about which country the data physically sits in
-- Using a production database dump in a local or staging environment "just to debug one issue," treating a serious data-handling violation as a convenience
-- Logging full request or response bodies "temporarily for debugging" on an endpoint that handles personal or payment data, then forgetting to remove it
+- **A "company size" field gets added to the schema "in case it's useful someday," with no feature actually needing it yet** — Adding fields "just in case we need them later," which expands the classification surface and the retention burden for data that may never be used
+- **The cloud provider has a great security reputation, and that gets treated as satisfying the domestic-hosting requirement for health data** — Assuming a single cloud provider's general security posture satisfies residency requirements, when the actual rule is about which country the data physically sits in
+- **A real production dump gets loaded into the local dev database "just to debug this one issue," and it's the fastest way to reproduce the bug** — Using a production database dump in a local or staging environment "just to debug one issue," treating a serious data-handling violation as a convenience
+- **Full request bodies get logged "temporarily" on the checkout endpoint, and the log statement is still there three months later** — Logging full request or response bodies "temporarily for debugging" on an endpoint that handles personal or payment data, then forgetting to remove it
 
 ## Further Reading
 - [NIST SP 800-60 — Guide for Mapping Types of Information to Security Categories](https://csrc.nist.gov/pubs/sp/800/60/v1/r1/final) — a formal framework for the classification exercise
