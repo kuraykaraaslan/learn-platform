@@ -2810,7 +2810,7 @@
         "keyConcepts": "592e27206e373569",
         "exampleCode": "fd68a291533bc548",
         "whenToUse": "9c488a6767fe9e52",
-        "commonMistakes": "6ca8415369269d9a",
+        "commonMistakes": "d2a6f7b784222eb7",
         "furtherReading": "b02609a31a1f8267"
       },
       "120_git_fundamentals.md": {
@@ -2819,7 +2819,7 @@
         "keyConcepts": "6b3b39ffad2a6ce6",
         "exampleCode": "c62b0c66d590ea28",
         "whenToUse": "c1d0b509709c27d4",
-        "commonMistakes": "4a9d1ff3f3338680",
+        "commonMistakes": "5e90eead790f9238",
         "furtherReading": "c3a1d91ab014b8ce"
       },
       "121_sql_fundamentals.md": {
@@ -2828,7 +2828,7 @@
         "keyConcepts": "21200b80c9bcc75a",
         "exampleCode": "23215ce431314b76",
         "whenToUse": "e8f81ce6a867f29c",
-        "commonMistakes": "1d3146e521eb831c",
+        "commonMistakes": "6a2050640cfbea87",
         "furtherReading": "cca29f6e81cd01f2"
       },
       "122_oop_data_structures_basics.md": {
@@ -2837,7 +2837,7 @@
         "keyConcepts": "6c4c00ecf202a36f",
         "exampleCode": "4f2e27ceec14e27c",
         "whenToUse": "58f487e974b6a181",
-        "commonMistakes": "3d004f498cb92f50",
+        "commonMistakes": "785ca5e33d9b8117",
         "furtherReading": "b49ae276a5f1f392"
       },
       "123_debugging_fundamentals.md": {
@@ -2846,7 +2846,7 @@
         "keyConcepts": "ba0c68f90b3e602d",
         "exampleCode": "1e7c7013f96cb5c2",
         "whenToUse": "39c84e10bf5d8721",
-        "commonMistakes": "109043bb0d37ba15",
+        "commonMistakes": "c03246384c46a81a",
         "furtherReading": "1b45f26dc46e357d"
       },
       "124_unit_testing_basics.md": {
@@ -2855,7 +2855,7 @@
         "keyConcepts": "78187cf836b67272",
         "exampleCode": "08d06a646f3fdcaf",
         "whenToUse": "a74b243e359e5a12",
-        "commonMistakes": "4833d92571642720",
+        "commonMistakes": "c582d81e815ddc19",
         "furtherReading": "554bf8e6d0751f08"
       },
       "125_rest_api_basics.md": {
@@ -2864,7 +2864,7 @@
         "keyConcepts": "dd9aa1f79b56ea5f",
         "exampleCode": "cdaaa1a12679aa3b",
         "whenToUse": "8202f8030e30a29f",
-        "commonMistakes": "8e5efce6d23f7cae",
+        "commonMistakes": "2af6c89c79d8ea7e",
         "furtherReading": "895cdf67350e073b"
       },
       "126_cli_dev_environment_basics.md": {
@@ -2873,7 +2873,7 @@
         "keyConcepts": "d55da9fc651f74d8",
         "exampleCode": "88ed4dbe6b082a24",
         "whenToUse": "8bc3bcf63857afc4",
-        "commonMistakes": "1fb3de2e499e27b4",
+        "commonMistakes": "93d1349dec17f027",
         "furtherReading": "a4e29d5d03b00200"
       },
       "127_auth_basics.md": {

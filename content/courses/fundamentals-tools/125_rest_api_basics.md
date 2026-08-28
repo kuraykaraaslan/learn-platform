@@ -48,10 +48,10 @@ export async function DELETE(_req: Request, { params }: { params: { id: string }
 - Designing filtering/pagination from the start, even for an endpoint with little data today
 
 ## Common Mistakes
-- Verb-based URLs (`/api/getUser`, `/api/updateProject`) that fight the HTTP method instead of using it
-- Inconsistent pluralization or casing across endpoints (`/project` here, `/Users` there)
-- Mixing RPC-style actions into REST resources without naming them clearly as commands
-- Ignoring pagination until a collection has grown large enough that `GET /projects` is a production incident
+- **The API has `/api/getUser` and `/api/updateProject`, fighting the HTTP verb that's already doing that job** — Verb-based URLs (`/api/getUser`, `/api/updateProject`) that fight the HTTP method instead of using it
+- **One endpoint is `/project`, another is `/Users`, and there's no consistent rule for which is which across the API** — Inconsistent pluralization or casing across endpoints (`/project` here, `/Users` there)
+- **An "archive project" action gets bolted onto the resource endpoint with no clear naming, indistinguishable from a normal update** — Mixing RPC-style actions into REST resources without naming them clearly as commands
+- **`GET /projects` returns every row in the table, and it only becomes a problem the day the table crosses a hundred thousand rows** — Ignoring pagination until a collection has grown large enough that `GET /projects` is a production incident
 
 ## Further Reading
 - "REST API Design Rulebook" by Mark Massé

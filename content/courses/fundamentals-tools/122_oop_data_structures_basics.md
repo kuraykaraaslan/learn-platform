@@ -48,10 +48,10 @@ function dedupeActiveUserIds(events: { userId: string }[]): string[] {
 - Use encapsulation to hide a representation you expect to change (e.g., internal caching) behind a stable method signature
 
 ## Common Mistakes
-- Deep inheritance chains (3+ levels) that make it impossible to reason about behavior without reading every ancestor
+- **Understanding one class means reading through four levels of ancestors first, none of which behave quite the way their name suggests** — Deep inheritance chains (3+ levels) that make it impossible to reason about behavior without reading every ancestor
 - Using `array.find()`/`array.includes()` inside a loop over another array — an accidental O(n²) that a `Map` fixes in one line
-- Mutating a shared object passed by reference instead of returning a new one, causing surprising action-at-a-distance bugs
-- Exposing internal mutable state directly (public fields) instead of through methods, making future refactors breaking changes
+- **A function mutates the config object it was passed, and a completely unrelated part of the app starts behaving differently** — Mutating a shared object passed by reference instead of returning a new one, causing surprising action-at-a-distance bugs
+- **A public field gets read directly all over the codebase, and now changing its type breaks a dozen unrelated call sites** — Exposing internal mutable state directly (public fields) instead of through methods, making future refactors breaking changes
 
 ## Further Reading
 - "Head First Design Patterns" — early chapters, "favor composition over inheritance"

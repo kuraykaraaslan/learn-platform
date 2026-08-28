@@ -43,9 +43,9 @@ const topCustomers = await prisma.customer.findMany({
 
 ## Common Mistakes
 - Joining without a condition (accidental cross join) — silently multiplies row counts
-- Comparing to `NULL` with `=` instead of `IS NULL`, silently dropping rows
-- Normalizing a hot-path read query into oblivion, causing 5-way joins for a simple page load
-- Not understanding what the ORM generates, then "fixing" performance by guessing instead of reading the query (see #18)
+- **`WHERE deleted_at = NULL` runs in production, silently returning zero rows instead of the expected ones** — Comparing to `NULL` with `=` instead of `IS NULL`, silently dropping rows
+- **A simple page load requires a 5-way join, because the schema was normalized without any regard for what the hot-path query actually needs** — Normalizing a hot-path read query into oblivion, causing 5-way joins for a simple page load
+- **A slow endpoint gets "fixed" by adding a random index, without anyone actually reading the query the ORM generated** — Not understanding what the ORM generates, then "fixing" performance by guessing instead of reading the query (see #18)
 
 ## Further Reading
 - "SQL Performance Explained" by Markus Winand (also at use-the-index-luke.com)

@@ -46,9 +46,9 @@ git reset --hard HEAD@{3}
 
 ## Common Mistakes
 - Rebasing a branch other people have already pulled — their history and yours diverge permanently, causing a mess on next pull
-- Force-pushing with plain `--force` instead of `--force-with-lease` (which fails safely if someone else pushed in the meantime)
-- Committing generated files (`node_modules`, build output) because `.gitignore` wasn't set up first
-- Panic-deleting a branch after a bad merge instead of checking `git reflog` first
+- **`git push --force` runs on a shared branch, silently overwriting a teammate's commit that landed five minutes earlier** — Force-pushing with plain `--force` instead of `--force-with-lease` (which fails safely if someone else pushed in the meantime)
+- **`node_modules` shows up in the first commit, because `.gitignore` didn't exist yet when `git add .` ran** — Committing generated files (`node_modules`, build output) because `.gitignore` wasn't set up first
+- **A bad merge triggers a panic-deleted branch, before anyone thought to check `git reflog` for a way back** — Panic-deleting a branch after a bad merge instead of checking `git reflog` first
 
 ## Further Reading
 - "Pro Git" by Scott Chacon & Ben Straub — free online, chapters 2–3 cover this completely

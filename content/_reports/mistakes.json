@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 177,
-    "lessonsWithZeroDrillable": 13,
+    "single": 153,
+    "lessonsWithZeroDrillable": 11,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 371
+    "lessonsWithTwoPlusDrillable": 377
   },
   "lessons": [
     {
@@ -4633,14 +4633,14 @@
       "file": "119_http_fundamentals.md",
       "verified": true,
       "total": 4,
-      "single": 2,
-      "drillable": 2,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 2,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 2,
-        "single": 2
+        "single": 0
       }
     },
     {
@@ -4648,14 +4648,14 @@
       "file": "120_git_fundamentals.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {
@@ -4663,14 +4663,14 @@
       "file": "121_sql_fundamentals.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {
@@ -4678,14 +4678,14 @@
       "file": "122_oop_data_structures_basics.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {
@@ -4693,14 +4693,14 @@
       "file": "123_debugging_fundamentals.md",
       "verified": true,
       "total": 4,
-      "single": 3,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 3,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 3
+        "single": 0
       }
     },
     {
@@ -4708,14 +4708,14 @@
       "file": "124_unit_testing_basics.md",
       "verified": true,
       "total": 4,
-      "single": 2,
-      "drillable": 2,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 2,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 2,
-        "single": 2
+        "single": 0
       }
     },
     {
@@ -4723,14 +4723,14 @@
       "file": "125_rest_api_basics.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -4738,14 +4738,14 @@
       "file": "126_cli_dev_environment_basics.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {

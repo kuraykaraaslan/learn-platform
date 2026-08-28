@@ -56,8 +56,8 @@ it("rejects registration when email already exists", async () => {
 
 ## Common Mistakes
 - Testing implementation details (e.g., "was this private method called") instead of observable behavior — breaks on every harmless refactor
-- One giant test with many unrelated assertions instead of several small, clearly-named tests
-- Shared mutable state between tests (a module-level array, a `beforeAll` that isn't reset) causing order-dependent failures
+- **One test named "user registration" contains fifteen unrelated assertions, and a single failure gives no idea which one broke** — One giant test with many unrelated assertions instead of several small, clearly-named tests
+- **The test suite passes when run in one order and fails in another, because a module-level array never gets reset between tests** — Shared mutable state between tests (a module-level array, a `beforeAll` that isn't reset) causing order-dependent failures
 - Mocking everything, including simple pure logic — turns the test into a restatement of the implementation instead of a check on behavior
 
 ## Further Reading

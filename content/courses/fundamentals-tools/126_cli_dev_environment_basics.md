@@ -52,10 +52,10 @@ JWT_SECRET=change-me-in-local-env
 - Debugging "works locally, fails in CI" — the answer is very often a missing env var or a PATH difference
 
 ## Common Mistakes
-- Committing `.env` with real secrets (always `.gitignore` it, always keep `.env.example` in sync)
-- Hardcoding absolute local paths (`/Users/name/project/...`) instead of relative paths or env vars
-- Assuming a globally-installed CLI version matches what CI uses instead of pinning it in the project
-- Not knowing `lsof -i :PORT` exists, and restarting the whole machine to free up a port instead
+- **The real `.env` file, database password included, gets committed alongside the first PR** — Committing `.env` with real secrets (always `.gitignore` it, always keep `.env.example` in sync)
+- **A script hardcodes `/Users/name/project/data.json`, and it breaks the moment anyone else on the team tries to run it** — Hardcoding absolute local paths (`/Users/name/project/...`) instead of relative paths or env vars
+- **The build passes locally and fails in CI, because the globally installed CLI version is two majors ahead of what's actually pinned in the project** — Assuming a globally-installed CLI version matches what CI uses instead of pinning it in the project
+- **Port 3000 is stuck in use, and the fix is restarting the whole laptop instead of running `lsof -i :3000`** — Not knowing `lsof -i :PORT` exists, and restarting the whole machine to free up a port instead
 
 ## Further Reading
 - MIT's "The Missing Semester of Your CS Education" (missing.semester.mit.edu) — shell, environment, tools

@@ -59,9 +59,9 @@ async function fetchWithRetry(url: string, init: RequestInit, attempts = 3): Pro
 
 ## Common Mistakes
 - Using POST for everything, including reads — breaks caching and safe retries
-- Returning `200 OK` for application-level errors, forcing every client to parse the body to know if it worked
+- **A failed checkout returns HTTP 200 with `{ error: "card declined" }` in the body** — Returning `200 OK` for application-level errors, forcing every client to parse the body to know if it worked
 - Treating PUT as a partial update (that's PATCH) — PUT means "replace this resource entirely"
-- Assuming any server-side "session" exists without an explicit cookie/token mechanism behind it
+- **A new server instance gets deployed, and a user's "logged in" state just disappears, because nothing was actually behind it but memory** — Assuming any server-side "session" exists without an explicit cookie/token mechanism behind it
 
 ## Further Reading
 - [MDN: HTTP overview](https://developer.mozilla.org/en-US/docs/Web/HTTP) — methods, status codes and headers, with the semantics spelled out

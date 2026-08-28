@@ -75,9 +75,9 @@ Switched to branch 'master'
 
 ## Common Mistakes
 - Guessing at a fix instead of reproducing the failure first — "I think it's this" without confirming wastes more time than it saves
-- Wrapping the failing code in `try/catch` to make the error go away instead of finding the root cause
-- Reading only the top stack frame and missing where the bad data actually originated
-- Debugging directly in production without a safe read-only path (see #111 for the production-specific version of this)
+- **A `try/catch` gets wrapped around the failing line, and the error stops showing up in the logs without anyone knowing why it happened** — Wrapping the failing code in `try/catch` to make the error go away instead of finding the root cause
+- **The stack trace's top frame points at a library internal, and that's as far as the investigation goes** — Reading only the top stack frame and missing where the bad data actually originated
+- **A breakpoint gets set directly in the production process to catch an intermittent bug live** — Debugging directly in production without a safe read-only path (see #111 for the production-specific version of this)
 
 ## Further Reading
 - "Debugging" by David J. Agans — the general-purpose methodology, works outside software too
