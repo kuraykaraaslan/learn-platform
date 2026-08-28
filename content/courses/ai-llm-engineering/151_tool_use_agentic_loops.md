@@ -91,10 +91,10 @@ export async function runAgentLoop(userMessage: string): Promise<string> {
 - Never reach for tool use when a simple prompt plus Zod-validated JSON output (see the Structured Output lesson) would suffice — it adds real latency and complexity
 
 ## Common Mistakes
-- Running the agentic loop with no iteration cap, letting a stuck model burn tokens indefinitely
-- Executing a tool call's input without schema validation, trusting the model's output as if it were pre-vetted
-- Wiring an irreversible-action tool (send email, delete record, charge payment) without a human confirmation step in the UI
-- Writing a vague tool description ("process the request") that leaves the model guessing about when to call it
+- **An agentic loop has no cap on how many iterations it can run** — Running the agentic loop with no iteration cap, letting a stuck model burn tokens indefinitely
+- **A tool call's input gets executed directly, no schema validation first** — Executing a tool call's input without schema validation, trusting the model's output as if it were pre-vetted
+- **A "delete record" tool executes the moment the model calls it, no confirmation step** — Wiring an irreversible-action tool (send email, delete record, charge payment) without a human confirmation step in the UI
+- **A tool is described as "process the request"** — Writing a vague tool description ("process the request") that leaves the model guessing about when to call it
 
 ## Further Reading
 - Anthropic — "Tool use with Claude" (official documentation, including parallel and sequential tool calling)

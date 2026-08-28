@@ -58,10 +58,10 @@ function flagSuspiciousDocument(text: string): boolean {
 - Before enabling any AI-initiated irreversible action — the confirmation gate is the backstop when delimiting alone isn't enough
 
 ## Common Mistakes
-- Interpolating user content directly into the system prompt string instead of keeping it delimited in the user message
-- Treating XML delimiting as a complete solution rather than one layer in a defense that also needs output validation and tool-input validation
-- Rendering AI-generated content as raw HTML, turning a successful injection into an actual XSS vulnerability
-- Trying to "harden" a system prompt against jailbreaks with increasingly emphatic wording instead of narrowing scope and adding validation layers
+- **User content gets interpolated directly into the system prompt string** — Interpolating user content directly into the system prompt string instead of keeping it delimited in the user message
+- **XML delimiting around untrusted content is treated as the entire defense** — Treating XML delimiting as a complete solution rather than one layer in a defense that also needs output validation and tool-input validation
+- **AI-generated content gets rendered as raw HTML on the page** — Rendering AI-generated content as raw HTML, turning a successful injection into an actual XSS vulnerability
+- **A system prompt gets more emphatic wording added every time a new jailbreak is found** — Trying to "harden" a system prompt against jailbreaks with increasingly emphatic wording instead of narrowing scope and adding validation layers
 
 ## Further Reading
 - [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — LLM01 Prompt Injection is the entry that applies most directly here

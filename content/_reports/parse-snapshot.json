@@ -172,7 +172,7 @@
         "keyConcepts": "8156ac177c98f568",
         "exampleCode": "93a54e0cb1852f3d",
         "whenToUse": "17cd2511fa12bd22",
-        "commonMistakes": "cff228f22f6c2f1e",
+        "commonMistakes": "da1b45df5dfc2606",
         "furtherReading": "6c8cb222f835a22c"
       },
       "151_tool_use_agentic_loops.md": {
@@ -181,7 +181,7 @@
         "keyConcepts": "1d107e7e471c4128",
         "exampleCode": "d5ceb3a28cf53180",
         "whenToUse": "feb47cc0419fe74d",
-        "commonMistakes": "7d1be0aeb0b2a628",
+        "commonMistakes": "d0d4707ce17820fb",
         "furtherReading": "c50106971a678229"
       },
       "152_advanced_rag_chunking_reranking_grounding.md": {
@@ -199,7 +199,7 @@
         "keyConcepts": "3c3f63a5d13c03f8",
         "exampleCode": "f5768f452d0505b8",
         "whenToUse": "b11118546093d9d3",
-        "commonMistakes": "2c314ffb6f0289e3",
+        "commonMistakes": "6b0dc0bf9acd979b",
         "furtherReading": "3c86d67e83548919"
       },
       "154_token_budget_cost_engineering.md": {
@@ -208,7 +208,7 @@
         "keyConcepts": "535bc9038f48cbf5",
         "exampleCode": "7035b5cccd5bd539",
         "whenToUse": "67870864714f9f99",
-        "commonMistakes": "8e70b5b4b7c6ea6a",
+        "commonMistakes": "27040e2d05e039eb",
         "furtherReading": "f959c82540f3e64c"
       },
       "155_streaming_ai_responses_production.md": {
@@ -217,7 +217,7 @@
         "keyConcepts": "0be33326ecf9fb17",
         "exampleCode": "196abc8310454c64",
         "whenToUse": "dd3c272895a446c1",
-        "commonMistakes": "00773d67e397d06e",
+        "commonMistakes": "863e30190678a99a",
         "furtherReading": "b4df7456c21c1930"
       },
       "156_fallback_graceful_degradation.md": {
@@ -226,7 +226,7 @@
         "keyConcepts": "0bcb8fb011d8076d",
         "exampleCode": "c15a9648b969a599",
         "whenToUse": "1d886d63875a6916",
-        "commonMistakes": "bf5a2d30fe0d4cb7",
+        "commonMistakes": "a3bd06561ee1a2e6",
         "furtherReading": "04a4a9527f9eec75"
       },
       "157_building_eval_pipeline.md": {
@@ -244,7 +244,7 @@
         "keyConcepts": "4fab0da0d806cb15",
         "exampleCode": "3797b3336cad9db8",
         "whenToUse": "992b5b2930ee4651",
-        "commonMistakes": "2f8068d04ffff6fa",
+        "commonMistakes": "7203efef8256b496",
         "furtherReading": "120295e4b35bc4c8"
       },
       "159_prompt_injection_defense.md": {
@@ -253,7 +253,7 @@
         "keyConcepts": "7458c29286d963e0",
         "exampleCode": "ad604d505d7b4aa9",
         "whenToUse": "efd4a122c6b4bf81",
-        "commonMistakes": "10d0257fedd879d4",
+        "commonMistakes": "f9f095ab0dedc61b",
         "furtherReading": "cf29d26f3dd1a0c0"
       },
       "160_ai_data_privacy_regulatory_compliance.md": {

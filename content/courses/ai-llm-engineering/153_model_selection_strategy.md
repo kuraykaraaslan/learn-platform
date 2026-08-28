@@ -58,10 +58,10 @@ export const ARCHITECTURE_REVIEW_CONFIG = {
 - Never for a runtime, per-user-tier model switch without explicit product approval
 
 ## Common Mistakes
-- Defaulting to the most capable (and most expensive) model "to be safe" without ever testing whether a cheaper tier meets the quality bar
-- Using Opus in a user-facing interactive path, causing latency the user directly feels
-- Pinning to a model alias instead of a full versioned model ID, so behavior can shift underneath the application without a deliberate upgrade
-- Never revisiting model choice after shipping, even as call volume or output requirements change significantly
+- **The most expensive model gets used everywhere "to be safe," never tested against a cheaper tier** — Defaulting to the most capable (and most expensive) model "to be safe" without ever testing whether a cheaper tier meets the quality bar
+- **A user-facing interactive feature calls the largest, slowest model in the lineup** — Using Opus in a user-facing interactive path, causing latency the user directly feels
+- **The integration pins to a model alias instead of a specific versioned model ID** — Pinning to a model alias instead of a full versioned model ID, so behavior can shift underneath the application without a deliberate upgrade
+- **Model choice was made at launch and hasn't been revisited since, even as usage has changed a lot** — Never revisiting model choice after shipping, even as call volume or output requirements change significantly
 
 ## Further Reading
 - [Anthropic — "Models overview" and pricing page](https://anthropic.com/pricing) — verify current tiers before writing a cost spec

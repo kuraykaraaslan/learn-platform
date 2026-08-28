@@ -90,10 +90,10 @@ export function useAiStream() {
 - Never for classification/extraction outputs, background jobs, or anything requiring pre-display validation
 
 ## Common Mistakes
-- Attempting to use streaming under the Edge runtime, where the Anthropic SDK's streaming interface is unsupported
-- Writing streamed chunks directly into a database as they arrive instead of accumulating, validating, then persisting the complete response
-- Relying on HTTP status codes to signal a mid-stream failure after the 200 response has already started
-- Not handling client disconnects, leaving the model generating (and the meter running) for a response nobody will ever see
+- **Streaming is wired up under the Edge runtime** — Attempting to use streaming under the Edge runtime, where the Anthropic SDK's streaming interface is unsupported
+- **Each streamed chunk gets written straight into the database as it arrives** — Writing streamed chunks directly into a database as they arrive instead of accumulating, validating, then persisting the complete response
+- **A stream fails partway through, after the 200 response has already gone out** — Relying on HTTP status codes to signal a mid-stream failure after the 200 response has already started
+- **A client closes the tab mid-stream, and the model keeps generating** — Not handling client disconnects, leaving the model generating (and the meter running) for a response nobody will ever see
 
 ## Further Reading
 - Anthropic — "Streaming Messages" (official SDK and API documentation)

@@ -82,10 +82,10 @@ export async function classifyWithCache(text: string, traceId: string): Promise<
 - During a cost review — per-feature token attribution is what turns "AI costs went up" into "feature X's prompt regressed on Tuesday"
 
 ## Common Mistakes
-- Logging full user input or AI output "just for debugging," creating a PII exposure risk in the log aggregator
-- Only logging failures and skipping metadata on successful calls, leaving no baseline to detect latency or cost drift
-- Caching a chat or personalized response because the input text happens to look identical to a previous call
-- Setting up dashboards without alert thresholds, so a real regression sits unnoticed until a user complains
+- **Full user input and AI output get logged "just for debugging"** — Logging full user input or AI output "just for debugging," creating a PII exposure risk in the log aggregator
+- **Only failed calls get logged, successful ones leave no trace at all** — Only logging failures and skipping metadata on successful calls, leaving no baseline to detect latency or cost drift
+- **A personalized chat response gets cached because the input text happened to match a previous call** — Caching a chat or personalized response because the input text happens to look identical to a previous call
+- **A dashboard shows latency and cost, with no alert threshold set on either** — Setting up dashboards without alert thresholds, so a real regression sits unnoticed until a user complains
 
 ## Further Reading
 - [Claude API rate limits](https://platform.claude.com/docs/en/api/rate-limits) — the headers to read for usage and remaining quota

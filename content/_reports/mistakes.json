@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 763,
-    "lessonsWithZeroDrillable": 139,
+    "single": 731,
+    "lessonsWithZeroDrillable": 131,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 220
+    "lessonsWithTwoPlusDrillable": 228
   },
   "lessons": [
     {
@@ -283,14 +283,14 @@
       "file": "150_context_window_conversation_management.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -298,14 +298,14 @@
       "file": "151_tool_use_agentic_loops.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -328,14 +328,14 @@
       "file": "153_model_selection_strategy.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -343,14 +343,14 @@
       "file": "154_token_budget_cost_engineering.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -358,14 +358,14 @@
       "file": "155_streaming_ai_responses_production.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -373,14 +373,14 @@
       "file": "156_fallback_graceful_degradation.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -403,14 +403,14 @@
       "file": "158_observability_logging_ai_features.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -418,14 +418,14 @@
       "file": "159_prompt_injection_defense.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {

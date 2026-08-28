@@ -85,10 +85,10 @@ export async function continueConversation(
 - When you notice API costs rising per conversation — unbounded history growth is a common silent cause
 
 ## Common Mistakes
-- Sending the entire, unbounded conversation history on every turn, so cost and latency grow linearly with conversation length
-- Storing full conversation history in a cookie or client-side localStorage for an authenticated session, risking both size overflow and data exposure on shared devices
-- Prepending the system prompt as the first user message instead of using the dedicated `system` parameter
-- Reconstructing conversation context from the database on every streaming chunk instead of loading it once before the stream starts
+- **Every turn re-sends the entire conversation history with no cap** — Sending the entire, unbounded conversation history on every turn, so cost and latency grow linearly with conversation length
+- **An authenticated session's full conversation history is stored in a client-side cookie or localStorage** — Storing full conversation history in a cookie or client-side localStorage for an authenticated session, risking both size overflow and data exposure on shared devices
+- **The system prompt is sent as the first message in the user role, not the dedicated `system` parameter** — Prepending the system prompt as the first user message instead of using the dedicated `system` parameter
+- **Conversation context gets reloaded from the database on every single streaming chunk** — Reconstructing conversation context from the database on every streaming chunk instead of loading it once before the stream starts
 
 ## Further Reading
 - Anthropic — Messages API reference, particularly the `system` parameter and multi-turn conversation examples

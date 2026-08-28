@@ -70,10 +70,10 @@ export async function getSummaryWithFallback(
 - When adding a new failure category not covered by the existing taxonomy (e.g., a new refusal pattern) — extend the mapping, don't special-case it inline
 
 ## Common Mistakes
-- Wrapping `anthropic.messages.create` in a custom retry loop on top of the SDK's own `maxRetries`, causing compounded retries during an outage
-- Retrying a 400 (invalid input) error, which wastes time since the request will fail identically every time
-- Shipping a feature with no defined fallback, so an API outage produces a blank error state instead of degraded-but-useful output
-- Exposing `err.message` from the Anthropic SDK directly in an HTTP response, leaking internal details to the client
+- **A call to `anthropic.messages.create` is wrapped in its own retry loop on top of the SDK's built-in `maxRetries`** — Wrapping `anthropic.messages.create` in a custom retry loop on top of the SDK's own `maxRetries`, causing compounded retries during an outage
+- **A 400 invalid-input error gets retried like any other failure** — Retrying a 400 (invalid input) error, which wastes time since the request will fail identically every time
+- **The API is down, and the feature shows a blank error state with no fallback** — Shipping a feature with no defined fallback, so an API outage produces a blank error state instead of degraded-but-useful output
+- **`err.message` from the Anthropic SDK gets returned directly in the HTTP response** — Exposing `err.message` from the Anthropic SDK directly in an HTTP response, leaking internal details to the client
 
 ## Further Reading
 - [Claude API errors](https://platform.claude.com/docs/en/api/errors) — HTTP status codes, which are retryable, and the typed SDK exception classes that map to them

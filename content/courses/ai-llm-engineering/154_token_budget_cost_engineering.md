@@ -73,10 +73,10 @@ export async function generateSummaryWithBudget(text: string): Promise<string> {
 - When a billing alert or weekly cost dashboard shows an unexpected spike — token attribution by feature is what lets you find the cause quickly
 
 ## Common Mistakes
-- Shipping an AI feature with no documented token budget, discovering the actual cost only from a billing surprise
-- Setting `max_tokens` to a large round number "for safety" instead of sizing it to what the task needs
-- Sending full database records or entire documents to the model when only a relevant excerpt (via retrieval or truncation) is needed
-- Running AI on every request for input that's deterministic and cacheable, instead of caching results (see the Observability lesson)
+- **An AI feature ships with no documented token budget, and the first real signal is the billing statement** — Shipping an AI feature with no documented token budget, discovering the actual cost only from a billing surprise
+- **`max_tokens` is set to a large round number "for safety"** — Setting `max_tokens` to a large round number "for safety" instead of sizing it to what the task needs
+- **A full database record gets sent to the model when only two fields are actually relevant** — Sending full database records or entire documents to the model when only a relevant excerpt (via retrieval or truncation) is needed
+- **The same deterministic input runs through the model on every single request** — Running AI on every request for input that's deterministic and cacheable, instead of caching results (see the Observability lesson)
 
 ## Further Reading
 - [Anthropic pricing page](https://anthropic.com/pricing) — always verify current rates before writing a cost spec, prices change
