@@ -74,10 +74,10 @@ The decision rule was fixed before the first post went out — so whatever the r
 - When choosing what to test next from a backlog with more ideas than available time — use the ICE score, prioritizing ease at solo scale.
 
 ## Common Mistakes
-- Changing multiple variables at once (new format, new CTA, new posting time) and then claiming the result proves one specific change worked.
-- Running an experiment with no baseline, making it impossible to know afterward whether anything actually improved.
-- Stopping an experiment after one disappointing result without letting it run the full planned duration.
-- Scaling a tactic based on a vanity metric (likes, impressions) rather than the qualified-lead-connected success metric defined up front.
+- **The post format, the posting time, and the call-to-action all changed at once, and the results get credited to the new format** — Changing multiple variables at once (new format, new CTA, new posting time) and then claiming the result proves one specific change worked.
+- **The new outreach script is being tested, and nobody wrote down what the old response rate actually was** — Running an experiment with no baseline, making it impossible to know afterward whether anything actually improved.
+- **The first week of the four-week test came in weak, and the experiment gets shelved the same day** — Stopping an experiment after one disappointing result without letting it run the full planned duration.
+- **Engagement on the new post format is way up, and that's the reason it's being made the default going forward** — Scaling a tactic based on a vanity metric (likes, impressions) rather than the qualified-lead-connected success metric defined up front.
 
 ## Further Reading
 - *Testing Business Ideas* — David J. Bland and Alexander Osterwalder: a structured catalog of experiment types matched to the strength of evidence they produce.

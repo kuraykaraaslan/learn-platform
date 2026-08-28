@@ -60,10 +60,10 @@ Each rewrite keeps the persuasive intent of the original tactic while removing t
 - Before using any client-related data, screenshot, or metric as proof, to confirm permission was actually given for that specific use.
 
 ## Common Mistakes
-- Using soft scarcity or urgency language ("spots filling fast") that isn't actually true, treating it as harmless marketing convention rather than a fabricated claim.
-- Publishing a testimonial that was lightly edited or invented to sound stronger than what the client actually said.
-- Collecting more personal data on an intake form than is actually needed for qualification, without a clear reason or stated purpose.
-- Assuming a tactic is fine because "everyone does it" rather than checking it against the specific truthful/permission-aware/privacy-conscious standard.
+- **The landing page says "spots filling fast" with no actual capacity limit behind it** — Using soft scarcity or urgency language ("spots filling fast") that isn't actually true, treating it as harmless marketing convention rather than a fabricated claim.
+- **The client's testimonial gets tightened up with a stronger line that wasn't quite what they said** — Publishing a testimonial that was lightly edited or invented to sound stronger than what the client actually said.
+- **The intake form asks for company revenue and team size details that have nothing to do with qualifying the lead** — Collecting more personal data on an intake form than is actually needed for qualification, without a clear reason or stated purpose.
+- **Every competitor uses countdown timers on their pricing page, so one gets added here too** — Assuming a tactic is fine because "everyone does it" rather than checking it against the specific truthful/permission-aware/privacy-conscious standard.
 
 ## Further Reading
 - *Influence* — Robert Cialdini: the foundational text on persuasion principles, useful precisely because it shows how easily the same techniques tip into manipulation.

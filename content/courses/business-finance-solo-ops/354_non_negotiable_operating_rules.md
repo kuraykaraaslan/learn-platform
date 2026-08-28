@@ -64,10 +64,10 @@ None of the three rules were bent, and the response still left the door open for
 - When a deadline is presented as non-negotiable by someone else — to separate a genuine emergency from an artificial pressure tactic before responding.
 
 ## Common Mistakes
-- Making an exception to the payment-before-work rule for a trusted referral or a "sure thing" client, which is exactly the case most likely to go wrong quietly.
-- Accepting a fourth active responsibility "just this once" during a busy season, degrading delivery quality across all four commitments at once.
-- Making a real pricing or contract decision immediately, under pressure, instead of using the complete and professional "I'll get back to you by [time]" response.
-- Conceding on payment terms or scope during a relationship conflict to avoid short-term discomfort, setting a precedent that costs far more over the life of the engagement.
+- **A trusted friend's referral asks to start before the deposit clears, and "sure, this one's fine" is the answer** — Making an exception to the payment-before-work rule for a trusted referral or a "sure thing" client, which is exactly the case most likely to go wrong quietly.
+- **Three active clients are already at capacity, and a fourth gets accepted "just for this one project"** — Accepting a fourth active responsibility "just this once" during a busy season, degrading delivery quality across all four commitments at once.
+- **A client is pushing for a price decision on the call, right now, and a number gets given on the spot** — Making a real pricing or contract decision immediately, under pressure, instead of using the complete and professional "I'll get back to you by [time]" response.
+- **A tense conversation ends with the scope quietly expanding, just to keep things smooth** — Conceding on payment terms or scope during a relationship conflict to avoid short-term discomfort, setting a precedent that costs far more over the life of the engagement.
 
 ## Further Reading
 - *Boundaries* — Henry Cloud and John Townsend: a foundational framework for defining and holding firm limits in professional relationships without unnecessary conflict.

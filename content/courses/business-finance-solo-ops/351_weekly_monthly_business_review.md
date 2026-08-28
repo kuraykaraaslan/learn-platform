@@ -74,10 +74,10 @@ The weekly overdue-follow-up flag and the monthly lost-deal pattern pointed to t
 - When deciding what to focus on next month — use the monthly review's single-theme rule instead of running several initiatives in parallel.
 
 ## Common Mistakes
-- Skipping the weekly review during busy weeks, which is exactly when overdue follow-ups and stalled proposals are most likely to go unnoticed.
-- Setting more than one primary focus for the coming month, which dilutes the limited hours available to a solo operator across too many initiatives.
-- Judging performance by activity metrics (posts published, messages sent) instead of the outcome metrics they're supposed to support.
-- Noticing a diagnostic pattern (e.g., leads up, close rate down) but not tracing it to a specific cause before the next review cycle.
+- **Delivery is heavy this week, so the weekly review gets skipped to make room** — Skipping the weekly review during busy weeks, which is exactly when overdue follow-ups and stalled proposals are most likely to go unnoticed.
+- **Next month's review names four different priorities, each with its own action list** — Setting more than one primary focus for the coming month, which dilutes the limited hours available to a solo operator across too many initiatives.
+- **Fifteen posts went out this month, and that's what gets reported as this month's progress** — Judging performance by activity metrics (posts published, messages sent) instead of the outcome metrics they're supposed to support.
+- **Leads are up and close rate is down this month, and the review moves on to the next line item without asking why** — Noticing a diagnostic pattern (e.g., leads up, close rate down) but not tracing it to a specific cause before the next review cycle.
 
 ## Further Reading
 - *Traction: Get a Grip on Your Business* — Gino Wickman: the EOS framework's weekly and quarterly review rhythm, scalable down to a one-person operation.

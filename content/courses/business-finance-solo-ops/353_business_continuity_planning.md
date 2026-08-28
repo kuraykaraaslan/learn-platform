@@ -62,9 +62,9 @@ The SLA was never at risk of an undisclosed breach — the client was told proac
 - When drafting or renewing a client contract, to confirm SLA terms have a documented internal response plan behind them, not just a promised response time.
 
 ## Common Mistakes
-- Having root or sole admin access to a production system with no documented recovery path if you become unavailable.
-- Storing critical credentials only in browser autofill, which a new device or browser reset destroys instantly.
-- Waiting until an SLA window has already closed to notify the client, instead of notifying proactively while time remains.
+- **Only one account holds admin access to the production database, and nothing is written down about what happens if that account is unreachable** — Having root or sole admin access to a production system with no documented recovery path if you become unavailable.
+- **The API keys for three client projects live only in the browser's saved passwords** — Storing critical credentials only in browser autofill, which a new device or browser reset destroys instantly.
+- **The 4-hour SLA window closed an hour ago, and the client still hasn't heard anything** — Waiting until an SLA window has already closed to notify the client, instead of notifying proactively while time remains.
 - Letting the annual review lapse — an untested cloud dev environment or an outdated backup contact is only discovered to be broken during the actual emergency.
 
 ## Further Reading

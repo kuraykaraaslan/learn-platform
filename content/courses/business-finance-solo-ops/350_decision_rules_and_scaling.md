@@ -53,10 +53,10 @@ Each tactic got a different verdict from the same six-way framework — the fram
 - When a tactic that once worked starts underperforming — to decide deliberately between iterate, pause, and stop rather than continuing on inertia.
 
 ## Common Mistakes
-- Scaling a tactic based on impressions or engagement alone, without confirming it produces qualified leads and closed revenue.
-- Increasing lead generation activity while follow-up is already falling behind, compounding a capacity problem instead of fixing it.
-- Jumping straight to a paid tool or paid distribution before a tactic has been validated manually at small scale.
-- Continuing a tactic indefinitely out of sunk-cost attachment, well past the point where repeated iteration attempts have failed to improve it.
+- **Engagement on the new content format is strong, and posting frequency triples on the strength of that alone** — Scaling a tactic based on impressions or engagement alone, without confirming it produces qualified leads and closed revenue.
+- **Three follow-ups are already overdue, and this week's plan adds a bigger outbound push on top** — Increasing lead generation activity while follow-up is already falling behind, compounding a capacity problem instead of fixing it.
+- **The manual version of the outreach hasn't been tested yet, and a paid automation tool is already being set up for it** — Jumping straight to a paid tool or paid distribution before a tactic has been validated manually at small scale.
+- **The referral partnership hasn't produced a single lead in eight months, and it's still getting a monthly check-in call** — Continuing a tactic indefinitely out of sunk-cost attachment, well past the point where repeated iteration attempts have failed to improve it.
 
 ## Further Reading
 - *Scaling Up* — Verne Harnish: a broader operating framework for deciding what to grow and what to leave alone, adaptable down to a one-person business.

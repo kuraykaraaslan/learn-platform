@@ -61,10 +61,10 @@ The load review didn't wait for output to visibly collapse — it triggered on t
 - Before any critical decision, as a check on whether sleep and stress levels are adequate enough to trust the judgment behind it.
 
 ## Common Mistakes
-- Dismissing early burnout signals as ordinary tiredness or a rough week, and only responding once output has visibly and significantly declined.
-- Accepting a high-paying but energy-negative project without weighting its likely drag on the quality of every other concurrent commitment.
-- Pushing through a triggered load review because a deadline feels close, rather than communicating proactively with the client and adjusting the timeline.
-- Making a pricing, contract, or scope decision on inadequate sleep because the client is waiting, instead of deferring with a specific follow-up time.
+- **Starting to code has felt harder than usual for a week now, and it's being written off as just a rough patch** — Dismissing early burnout signals as ordinary tiredness or a rough week, and only responding once output has visibly and significantly declined.
+- **The client pays well but has indecisive, constantly shifting requirements, and the project gets accepted on the price alone** — Accepting a high-paying but energy-negative project without weighting its likely drag on the quality of every other concurrent commitment.
+- **Three load-review signals showed up this week, and the deadline two days out means pushing through anyway** — Pushing through a triggered load review because a deadline feels close, rather than communicating proactively with the client and adjusting the timeline.
+- **Sleep was under five hours last night, and the client is waiting on a pricing answer right now** — Making a pricing, contract, or scope decision on inadequate sleep because the client is waiting, instead of deferring with a specific follow-up time.
 
 ## Further Reading
 - *Burnout: The Secret to Unlocking the Stress Cycle* — Emily Nagoski and Amelia Nagoski: on the physiological difference between the stressor and the stress itself, and why removing the task doesn't automatically resolve the stress response.
