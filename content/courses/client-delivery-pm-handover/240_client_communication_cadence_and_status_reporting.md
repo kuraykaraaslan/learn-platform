@@ -59,10 +59,10 @@ The status report itself follows a fixed shape for a reason: overall status (usi
 - Any time you notice communication scattering across WhatsApp, calls, email, and memory with no single source of truth
 
 ## Common Mistakes
-- Sending vague updates like "working on it" instead of specific completed/in-progress/blocked items
-- Marking status green when a major client-owed dependency is already overdue, hiding real risk from the report
-- Treating a phone call as sufficient record for an important approval instead of following up in writing
-- Letting scattered channels (chat, voice notes, calls) become the only record of a decision, with nothing durable to reference later
+- **This week's status update says "still working on it, going well"** — Sending vague updates like "working on it" instead of specific completed/in-progress/blocked items
+- **The status list is a week overdue from the client, and this week's report still says green** — Marking status green when a major client-owed dependency is already overdue, hiding real risk from the report
+- **The scope change got agreed on a call, and that's the only place it exists** — Treating a phone call as sufficient record for an important approval instead of following up in writing
+- **A decision from three weeks ago lives somewhere between a voice note and a WhatsApp thread, and nobody can quite reconstruct it** — Letting scattered channels (chat, voice notes, calls) become the only record of a decision, with nothing durable to reference later
 
 ## Further Reading
 - Tom DeMarco and Timothy Lister, *Waltzing with Bears: Managing Risk on Software Projects* — on the value of surfacing risk early and visibly rather than smoothing over status

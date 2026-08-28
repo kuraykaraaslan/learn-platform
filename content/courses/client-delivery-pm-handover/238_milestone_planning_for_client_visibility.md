@@ -49,10 +49,10 @@ Sizing matters too. A small project needs 2–4 milestones; a large one, 7–12.
 - Any time a project has gone more than two weeks without a client-visible checkpoint, which is itself a signal the plan needs a milestone inserted
 
 ## Common Mistakes
-- Naming milestones after internal work structure ("Frontend part," "Bug fixing week") instead of the business state they represent
-- Calling a milestone complete without a client review or internal quality gate, which erodes the entire purpose of having checkpoints
-- Tying a payment to vague progress instead of a specific, demonstrable delivery state, which invites disputes about whether the milestone was really reached
-- Cramming too many unrelated features into a single milestone, making it impossible for the client to give focused, useful feedback on any one of them
+- **The milestone plan lists "Backend part 2" and "Bug fixing week" as its next two checkpoints** — Naming milestones after internal work structure ("Frontend part," "Bug fixing week") instead of the business state they represent
+- **Milestone 2 gets marked complete internally, and nobody on the client side has actually seen it yet** — Calling a milestone complete without a client review or internal quality gate, which erodes the entire purpose of having checkpoints
+- **The 30% payment is due "once things are looking good," with no more specific trigger than that** — Tying a payment to vague progress instead of a specific, demonstrable delivery state, which invites disputes about whether the milestone was really reached
+- **One milestone bundles the order workflow, the reporting dashboard, and the notification system together** — Cramming too many unrelated features into a single milestone, making it impossible for the client to give focused, useful feedback on any one of them
 
 ## Further Reading
 - Robert G. Cooper, *Winning at New Products* — the origin of the stage-gate model that milestone-based delivery borrows its review-and-decide structure from

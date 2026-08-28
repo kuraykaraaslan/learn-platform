@@ -40,10 +40,10 @@ transition list (Elena), needed before P6 can move from verification-owed to don
 - When handing a phase-tracked project to another developer or agent, so the incoming owner inherits an accurate picture instead of an optimistic one
 
 ## Common Mistakes
-- Reporting "all phases started" as though breadth of activity were the same thing as progress toward completion
-- Marking a phase done the moment its code ships, before its definition-of-done has actually been verified and recorded
-- Omitting the close-out report entirely on a session that closed nothing, training everyone to stop reading it
-- Keeping this rule only in per-machine agent memory instead of the project's checked-in instructions, so it silently disappears on a different checkout or machine
+- **Every phase in the program shows some activity, and the status report calls that "good progress"** — Reporting "all phases started" as though breadth of activity were the same thing as progress toward completion
+- **The code for a phase just shipped, and it gets checked off as done in the same breath** — Marking a phase done the moment its code ships, before its definition-of-done has actually been verified and recorded
+- **Nothing closed this session, so the close-out report just doesn't get written** — Omitting the close-out report entirely on a session that closed nothing, training everyone to stop reading it
+- **The verification-owed rule lives in one machine's local agent memory, and a fresh checkout on another machine has no idea it exists** — Keeping this rule only in per-machine agent memory instead of the project's checked-in instructions, so it silently disappears on a different checkout or machine
 
 ## Further Reading
 - Annie Duke, *Thinking in Bets* — on the discipline of separating "I did the work" from "the outcome is confirmed," which underlies the verification-owed distinction

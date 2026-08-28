@@ -81,10 +81,10 @@ Excluded:
 - Any time you notice the client's mental model of scope diverging from yours — a mini re-kickoff on the disputed area resets the record
 
 ## Common Mistakes
-- Starting implementation before the decision maker (not just the daily contact) has confirmed scope, which risks a late-stage reversal after "internal review"
-- Treating kickoff as a single call with no written output, so nothing exists to point back to when memories of the call diverge weeks later
-- Accepting "we'll decide later" on a scope-defining question instead of converting it into a dated dependency, open question, or risk
-- Requesting all possible credentials and access up front instead of just what the current phase needs, which increases both security exposure and client friction
+- **The daily contact signed off on the mockups, and coding starts the same afternoon** — Starting implementation before the decision maker (not just the daily contact) has confirmed scope, which risks a late-stage reversal after "internal review"
+- **The kickoff call ran an hour, everyone nodded along, and nothing was written down afterward** — Treating kickoff as a single call with no written output, so nothing exists to point back to when memories of the call diverge weeks later
+- **"We'll figure out the reporting requirements later" gets a nod, and the conversation moves on** — Accepting "we'll decide later" on a scope-defining question instead of converting it into a dated dependency, open question, or risk
+- **The kickoff email asks for admin access to every system the client has, before the first phase has even started** — Requesting all possible credentials and access up front instead of just what the current phase needs, which increases both security exposure and client friction
 
 ## Further Reading
 - PMI, *A Guide to the Project Management Body of Knowledge (PMBOK Guide)* — the Initiating process group covers charter and stakeholder identification, the formal ancestor of a kickoff: https://www.pmi.org/pmbok-guide-standards

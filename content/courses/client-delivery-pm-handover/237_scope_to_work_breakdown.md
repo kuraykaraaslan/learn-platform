@@ -48,10 +48,10 @@ Deferred: Bulk CSV import of events (candidate for Phase 2).
 - When a project stalls because "everything is in progress" — a proper breakdown usually reveals the vague mega-tasks hiding the real status
 
 ## Common Mistakes
-- Tracking a large feature as one vague board card instead of decomposing it, which makes "90% done" meaningless
-- Starting implementation directly from a proposal paragraph, skipping the exclusion-mapping step that would have caught an assumed feature
-- Treating client-owed items (content, data, approvals) as outside the work breakdown instead of tracking them with the same owner/date discipline as developer tasks
-- Ignoring documentation, deployment, and error/empty-state tasks because they don't feel like "real" features, then discovering them unplanned during QA
+- **"Build the admin panel" sits as one card on the board for three weeks, marked "in progress"** — Tracking a large feature as one vague board card instead of decomposing it, which makes "90% done" meaningless
+- **Coding starts straight from the proposal's one-line description of "payment integration"** — Starting implementation directly from a proposal paragraph, skipping the exclusion-mapping step that would have caught an assumed feature
+- **The client owes the final category list, and that line never made it onto the work breakdown** — Treating client-owed items (content, data, approvals) as outside the work breakdown instead of tracking them with the same owner/date discipline as developer tasks
+- **QA turns up a missing empty state and no deployment task anywhere on the board** — Ignoring documentation, deployment, and error/empty-state tasks because they don't feel like "real" features, then discovering them unplanned during QA
 
 ## Further Reading
 - Mike Cohn, *User Stories Applied: For Agile Software Development* — the standard reference for decomposing scope into outcome-based, evaluable units of work

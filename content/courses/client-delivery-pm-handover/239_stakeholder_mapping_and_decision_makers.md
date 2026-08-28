@@ -44,10 +44,10 @@ consolidated list, categorized before it reaches the developer.
 - For operational or internal-tool projects, before final UAT, to confirm a real daily user has reviewed the workflow rather than only a manager
 
 ## Common Mistakes
-- Assuming the first or most responsive contact is also the final decision maker, without confirming it explicitly
-- Accepting conflicting feedback from multiple client-side people without asking for a single consolidated list first
-- Waiting until final delivery to involve actual end users, discovering workflow objections only after the system is "done"
-- Letting a hidden senior stakeholder appear only at the end, after a lower-authority contact has already approved the direction
+- **Elena replies fastest and approves everything asked of her, so she's treated as the final word on scope** — Assuming the first or most responsive contact is also the final decision maker, without confirming it explicitly
+- **Three different people on the client side send three different sets of comments on the same demo, through three different channels** — Accepting conflicting feedback from multiple client-side people without asking for a single consolidated list first
+- **The warehouse staff who'll actually use the system see it for the first time at final delivery** — Waiting until final delivery to involve actual end users, discovering workflow objections only after the system is "done"
+- **The COO shows up after everything's been approved by the ops manager and asks why it doesn't work the way he expected** — Letting a hidden senior stakeholder appear only at the end, after a lower-authority contact has already approved the direction
 
 ## Further Reading
 - R. Edward Freeman, *Strategic Management: A Stakeholder Approach* — the foundational text on stakeholder theory and mapping influence versus interest

@@ -53,10 +53,10 @@ to lock the list. If we do not resolve it by Friday, the likely impact is a
 - When a milestone date starts to look shaky, as the trigger to escalate in writing rather than waiting for the date to actually slip
 
 ## Common Mistakes
-- Keeping a risk register that gets filled in once at kickoff and never opened again, so it stops reflecting reality within the first two weeks
-- Logging a dependency without a needed-by date, which guarantees it will be rediscovered as an active blocker instead of caught in advance
-- Waiting until a milestone is missed to mention the client dependency that caused it, which reads as blaming the client after the fact instead of managing risk in real time
-- Treating "mark it blocked" as the whole missing-dependency response instead of also notifying the client in writing, explaining impact, and offering a workaround
+- **The risk register got filled out at kickoff and hasn't been opened since** — Keeping a risk register that gets filled in once at kickoff and never opened again, so it stops reflecting reality within the first two weeks
+- **"Confirmed status list from client" sits in the dependency log with no date attached** — Logging a dependency without a needed-by date, which guarantees it will be rediscovered as an active blocker instead of caught in advance
+- **The milestone slips, and only then does the status update mention the client data that never arrived** — Waiting until a milestone is missed to mention the client dependency that caused it, which reads as blaming the client after the fact instead of managing risk in real time
+- **A blocked task gets marked "blocked" on the board, and that's the entire response** — Treating "mark it blocked" as the whole missing-dependency response instead of also notifying the client in writing, explaining impact, and offering a workaround
 
 ## Further Reading
 - Tom DeMarco and Timothy Lister, *Waltzing with Bears: Managing Risk on Software Projects* — the foundational case for why visible risk management outperforms optimistic silence

@@ -1093,7 +1093,7 @@
         "keyConcepts": "5768b78a4c3eea41",
         "exampleCode": "527c8c3fbf028280",
         "whenToUse": "4d551ca2063f7418",
-        "commonMistakes": "64912ad80bbbcfe7",
+        "commonMistakes": "083f71f6a02004eb",
         "furtherReading": "edb8b1b5d78307b2"
       },
       "237_scope_to_work_breakdown.md": {
@@ -1102,7 +1102,7 @@
         "keyConcepts": "cf3c4b9eed2f5432",
         "exampleCode": "96bd533109f47bd4",
         "whenToUse": "cb65f58844128bb9",
-        "commonMistakes": "9fc083c99e6987c2",
+        "commonMistakes": "554e490a68e4fb6f",
         "furtherReading": "d696933fde175c27"
       },
       "238_milestone_planning_for_client_visibility.md": {
@@ -1111,7 +1111,7 @@
         "keyConcepts": "80ffe613defb52ad",
         "exampleCode": "7ca22b09e84b61eb",
         "whenToUse": "0aa65027cfa568ba",
-        "commonMistakes": "998b89a29116e4ca",
+        "commonMistakes": "de66f8e49ac76a15",
         "furtherReading": "9429f977d2799726"
       },
       "239_stakeholder_mapping_and_decision_makers.md": {
@@ -1120,7 +1120,7 @@
         "keyConcepts": "94e4430087478c0e",
         "exampleCode": "28a0bd4669640f62",
         "whenToUse": "e354219b6b467631",
-        "commonMistakes": "69929f2c90adc4e7",
+        "commonMistakes": "75018e16286484ac",
         "furtherReading": "e087c8ae09eaaf34"
       },
       "240_client_communication_cadence_and_status_reporting.md": {
@@ -1129,7 +1129,7 @@
         "keyConcepts": "6ecf44fcfeab89a8",
         "exampleCode": "46bcd327385ba53d",
         "whenToUse": "ee7a4fbe90c6a552",
-        "commonMistakes": "c3a5a0a182c491e2",
+        "commonMistakes": "27afebfce1a1d557",
         "furtherReading": "06adcba067866056"
       },
       "241_phase_status_and_session_closeout.md": {
@@ -1138,7 +1138,7 @@
         "keyConcepts": "ce95eecb59c87d5d",
         "exampleCode": "e2f1dcee54dda715",
         "whenToUse": "a39b7173b44865e2",
-        "commonMistakes": "9bdff9a9fa16e1a5",
+        "commonMistakes": "b971db030ea669fd",
         "furtherReading": "11af62c327ca77b3"
       },
       "242_risk_issue_and_dependency_logs.md": {
@@ -1147,7 +1147,7 @@
         "keyConcepts": "eb409e02c6bf4d33",
         "exampleCode": "28906684b1322800",
         "whenToUse": "3303168e6afd5e8e",
-        "commonMistakes": "f2205398d74f48fe",
+        "commonMistakes": "2350d11a9be0067a",
         "furtherReading": "a9404c30590588a4"
       },
       "243_decisions_and_change_requests.md": {
@@ -1156,7 +1156,7 @@
         "keyConcepts": "7e0a819a21e26e7e",
         "exampleCode": "5fafce7fbac6ce89",
         "whenToUse": "fbf789de0416b285",
-        "commonMistakes": "d9c5be82303dfdb7",
+        "commonMistakes": "caa59e545c1564a0",
         "furtherReading": "dd8761a124d0d39a"
       },
       "244_feedback_triage_bug_vs_change_request.md": {

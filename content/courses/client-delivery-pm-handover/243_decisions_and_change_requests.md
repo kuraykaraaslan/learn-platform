@@ -87,10 +87,10 @@ Date: 2026-08-31
 - At the end of any milestone review, to confirm in writing which decisions and approvals were reached during that session
 
 ## Common Mistakes
-- Letting an important decision live only in a call, so that six weeks later two people confidently recall two different outcomes
-- Saying yes to a client request immediately because it "seems small," then discovering it required new architecture, a new workflow, or new testing surface
-- Calling a genuinely significant feature addition a "small change" to avoid the friction of the change request process
-- Logging a change request but implementing it before the client has actually approved the cost and timeline impact in writing
+- **The decision about whether cancelled orders can reopen was made on a call, with nothing written down afterward** — Letting an important decision live only in a call, so that six weeks later two people confidently recall two different outcomes
+- **"Sure, that's a small add" gets said before checking what the request actually touches** — Saying yes to a client request immediately because it "seems small," then discovering it required new architecture, a new workflow, or new testing surface
+- **A second export format with a different schema gets filed as a "small change" to skip the approval process** — Calling a genuinely significant feature addition a "small change" to avoid the friction of the change request process
+- **The change request is logged, and the code for it ships before the client has signed off on the cost** — Logging a change request but implementing it before the client has actually approved the cost and timeline impact in writing
 
 ## Further Reading
 - PMI, *A Guide to the Project Management Body of Knowledge (PMBOK Guide)* — the Integrated Change Control process formalizes assessing impact before approving any change
