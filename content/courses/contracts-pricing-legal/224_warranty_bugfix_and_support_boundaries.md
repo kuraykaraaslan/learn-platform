@@ -47,10 +47,10 @@ maintenance agreement, hourly support, or change request.
 - When deciding whether to offer an ongoing retainer and how to bound it.
 
 ## Common Mistakes
-- Offering "lifetime support" or an unbounded warranty period as a selling point without realizing what it commits to.
-- Treating every post-launch bug report as equally valid without checking it against the original acceptance criteria.
-- Doing free "just this once" fixes for out-of-warranty issues, which quietly resets the client's expectation for every future issue.
-- Leaving a maintenance retainer's scope and hours vague, so "monthly support" becomes whatever the client needs that month.
+- **"Lifetime support included" goes on the proposal as a selling point, with no thought given to what that actually commits to** — Offering "lifetime support" or an unbounded warranty period as a selling point without realizing what it commits to.
+- **A bug report six months post-launch gets fixed the same way a warranty-period bug would, with nobody checking the acceptance criteria first** — Treating every post-launch bug report as equally valid without checking it against the original acceptance criteria.
+- **An out-of-warranty fix gets done for free "just this once," and the client starts expecting the same every time after that** — Doing free "just this once" fixes for out-of-warranty issues, which quietly resets the client's expectation for every future issue.
+- **The maintenance retainer says "monthly support included," with no hours or scope attached to what that actually covers** — Leaving a maintenance retainer's scope and hours vague, so "monthly support" becomes whatever the client needs that month.
 
 ## Further Reading
 - ITIL's service-level and support-tier concepts, adapted down to freelance scale, for structuring maintenance offerings.

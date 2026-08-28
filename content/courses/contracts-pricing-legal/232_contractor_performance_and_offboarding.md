@@ -46,9 +46,9 @@ to end the engagement per our agreement's termination terms."
 - On the last day of any subcontractor engagement, regardless of how it ended.
 
 ## Common Mistakes
-- Escalating immediately to threats or termination over a single missed check-in, before giving a chance to course-correct.
-- Terminating for cause without a documented formal warning, weakening your position if the subcontractor disputes it.
-- Delaying access revocation "until we sort out the final details," leaving credentials active longer than necessary.
+- **A subcontractor misses one check-in, and the response jumps straight to a termination warning** — Escalating immediately to threats or termination over a single missed check-in, before giving a chance to course-correct.
+- **The engagement ends "for cause," with no documented warning ever having been sent first** — Terminating for cause without a documented formal warning, weakening your position if the subcontractor disputes it.
+- **The engagement ended a week ago, and repository access is still active because revoking it "can wait until things settle"** — Delaying access revocation "until we sort out the final details," leaving credentials active longer than necessary.
 - Skipping API key rotation because the departure felt amicable — the risk exists independent of how the relationship ended.
 
 ## Further Reading

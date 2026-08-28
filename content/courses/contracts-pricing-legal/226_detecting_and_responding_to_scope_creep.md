@@ -43,10 +43,10 @@ it as a phase-two item."
 - Any time you notice yourself about to say "sure, no problem" before actually checking the SOW.
 
 ## Common Mistakes
-- Accepting friendly framing at face value instead of running the detection checklist regardless of tone.
-- Saying yes quickly to avoid an awkward moment, then trying to claw back scope or price later once the pattern repeats.
-- Treating classification as confrontational rather than as a standard, expected part of professional delivery.
-- Letting "we can decide later" become the default answer, which leaves scope, price, and timeline all unresolved simultaneously.
+- **"Just one small thing while you're in there" gets treated as genuinely small because of how it's phrased, not what it actually involves** — Accepting friendly framing at face value instead of running the detection checklist regardless of tone.
+- **"Sure, no problem" goes out to avoid an awkward moment, and the scope conversation gets attempted three weeks later instead** — Saying yes quickly to avoid an awkward moment, then trying to claw back scope or price later once the pattern repeats.
+- **Classifying a request as out-of-scope feels like starting a fight, so it just doesn't get said out loud** — Treating classification as confrontational rather than as a standard, expected part of professional delivery.
+- **"We can decide later" becomes the answer to a scope question, leaving price and timeline hanging along with it** — Letting "we can decide later" become the default answer, which leaves scope, price, and timeline all unresolved simultaneously.
 
 ## Further Reading
 - Tom DeMarco and Timothy Lister, *Peopleware* — on managing incremental requirement drift without derailing delivery.

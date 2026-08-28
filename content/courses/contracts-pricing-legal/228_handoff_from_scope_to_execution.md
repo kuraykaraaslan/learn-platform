@@ -58,10 +58,10 @@ Tasks:
 - Whenever a project's task board seems to have drifted from what was actually signed.
 
 ## Common Mistakes
-- Building a backlog from memory or a fresh conversation instead of directly from the signed SOW's deliverables.
-- Losing exclusions and deferred items in the translation, so features explicitly marked out of scope quietly reappear as tasks.
-- Treating kickoff as a purely social event instead of confirming the operational checklist (decision maker, access, payment status) in the same sitting.
-- Letting the project board track "done" independent of whether the associated payment gate has actually been met.
+- **The backlog gets built from a fresh conversation about what the project "should" include, not from the signed SOW itself** — Building a backlog from memory or a fresh conversation instead of directly from the signed SOW's deliverables.
+- **A feature explicitly marked excluded in the SOW shows up as a task on the board a few weeks into the project** — Losing exclusions and deferred items in the translation, so features explicitly marked out of scope quietly reappear as tasks.
+- **Kickoff is a friendly hour-long call, with nobody confirming the decision maker, access, or payment status in the room** — Treating kickoff as a purely social event instead of confirming the operational checklist (decision maker, access, payment status) in the same sitting.
+- **A milestone gets marked "done" on the board while its payment gate is still unpaid** — Letting the project board track "done" independent of whether the associated payment gate has actually been met.
 
 ## Further Reading
 - Henrik Kniberg's writing on translating requirements into actionable backlogs in agile delivery.

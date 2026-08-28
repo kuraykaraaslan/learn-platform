@@ -44,10 +44,10 @@ updated timeline, and a reactivation fee before work resumes.
 - When hiring a subcontractor, to define your own termination-for-convenience and termination-for-cause terms toward them.
 
 ## Common Mistakes
-- Promising a full refund after work has already started, removing any protection for time already invested.
-- Continuing unpaid work indefinitely rather than invoking the pause or termination clause once payment is genuinely overdue.
-- Resuming a long-paused project on the original timeline and price as if nothing had changed.
-- Using threatening or aggressive language in a termination notice instead of calm, pre-agreed, factual language.
+- **The client cancels three weeks in, and a full refund gets promised on the spot, work already done included** — Promising a full refund after work has already started, removing any protection for time already invested.
+- **The invoice has been overdue for six weeks, and work continues anyway rather than pausing per the contract** — Continuing unpaid work indefinitely rather than invoking the pause or termination clause once payment is genuinely overdue.
+- **A project paused for four months resumes on the exact same timeline and price quoted a year ago** — Resuming a long-paused project on the original timeline and price as if nothing had changed.
+- **The termination notice reads like an angry email instead of the calm, factual language the contract actually called for** — Using threatening or aggressive language in a termination notice instead of calm, pre-agreed, factual language.
 
 ## Further Reading
 - Mike Monteiro, *You're My Favorite Client* — on ending client relationships professionally when they aren't working.

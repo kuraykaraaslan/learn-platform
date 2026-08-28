@@ -52,10 +52,10 @@ files within [2] business days of termination.
 - Whenever you're about to pass a subcontractor's deliverable through to your own client and need to confirm the IP chain is unbroken.
 
 ## Common Mistakes
-- Letting a subcontractor start work on a verbal understanding "because they seem trustworthy," with no signed agreement at all.
-- Accepting a subcontractor's own proposed contract without checking for a missing or watered-down IP clause.
-- Paying 100% upfront with no milestone structure, removing all leverage if delivery is late or incomplete.
-- Writing a status clause that describes something close to employment (fixed hours, exclusive engagement, your tools and instructions) while calling it a contractor relationship.
+- **A subcontractor starts work on a handshake, "because they come well recommended," with nothing signed yet** — Letting a subcontractor start work on a verbal understanding "because they seem trustworthy," with no signed agreement at all.
+- **The subcontractor's own contract template gets signed as-is, with nobody checking whether it actually assigns IP or just licenses it** — Accepting a subcontractor's own proposed contract without checking for a missing or watered-down IP clause.
+- **The full fee gets paid upfront to a new subcontractor before a single deliverable has shown up** — Paying 100% upfront with no milestone structure, removing all leverage if delivery is late or incomplete.
+- **The "independent contractor" agreement requires fixed hours, exclusive availability, and the hiring party's own tools and instructions** — Writing a status clause that describes something close to employment (fixed hours, exclusive engagement, your tools and instructions) while calling it a contractor relationship.
 
 ## Further Reading
 - WIPO's guides on IP assignment and work-for-hire concepts as background before drafting or reviewing a subcontractor agreement.

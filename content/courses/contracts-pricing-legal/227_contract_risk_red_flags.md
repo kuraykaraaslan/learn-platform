@@ -51,10 +51,10 @@ step is a paid discovery phase or a smaller, clearly defined first version."
 - When deciding whether an unusual client demand needs a firm correction or is actually manageable with an added clause.
 
 ## Common Mistakes
-- Recognizing a red flag internally but rationalizing it away because the deal otherwise looks attractive.
-- Responding to a red flag with an apologetic or defensive tone instead of a calm, matter-of-fact correction.
-- Treating every red flag as equally severe, spending scarce negotiating energy on a medium-severity item while accepting a critical one.
-- Waiting until a dispute is already underway to notice that several red flags were present from the very first conversation.
+- **No deposit and a vague scope both show up in the first call, and the deal still feels too good to walk away from** — Recognizing a red flag internally but rationalizing it away because the deal otherwise looks attractive.
+- **Asking for a deposit comes out sounding like an apology instead of a normal, matter-of-fact term** — Responding to a red flag with an apologetic or defensive tone instead of a calm, matter-of-fact correction.
+- **Energy goes into negotiating a minor third-party dependency clause while the no-deposit red flag sails through unaddressed** — Treating every red flag as equally severe, spending scarce negotiating energy on a medium-severity item while accepting a critical one.
+- **A dispute is already underway before anyone notices that three red flags were visible in the very first conversation** — Waiting until a dispute is already underway to notice that several red flags were present from the very first conversation.
 
 ## Further Reading
 - Mike Monteiro, *You're My Favorite Client* — on recognizing and responding to problematic client behavior before signing.

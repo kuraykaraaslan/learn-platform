@@ -44,10 +44,10 @@ Two habits round out a clean payment process: define upfront whether project-rel
 - When deciding whether a project-related expense is reimbursable and under what documentation standard.
 
 ## Common Mistakes
-- Paying a subcontractor before receiving the invoicing/tax document their jurisdiction requires, purely to keep the relationship friendly.
-- Paying 100% upfront for a new or unproven subcontractor relationship, removing all leverage if the work is late or substandard.
-- Reimbursing expenses without requiring receipts, which is both hard to justify later and often not tax-deductible.
-- Keeping payment records scattered across email and chat instead of filed together per contractor, per engagement.
+- **Payment goes out the same day the work is delivered, before the required invoice has actually shown up** — Paying a subcontractor before receiving the invoicing/tax document their jurisdiction requires, purely to keep the relationship friendly.
+- **A brand-new subcontractor gets the full fee upfront, before any deliverable has actually been reviewed** — Paying 100% upfront for a new or unproven subcontractor relationship, removing all leverage if the work is late or substandard.
+- **A subcontractor's expense claim gets reimbursed with no receipt attached, on trust alone** — Reimbursing expenses without requiring receipts, which is both hard to justify later and often not tax-deductible.
+- **The transfer confirmation is in the bank app, the invoice is in email, and the written acceptance is somewhere in a chat thread** — Keeping payment records scattered across email and chat instead of filed together per contractor, per engagement.
 
 ## Further Reading
 - Your local accountant or tax advisor — this lesson's specific document types, withholding rates, and retention periods are jurisdiction-dependent and change over time.
