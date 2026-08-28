@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 833,
-    "lessonsWithZeroDrillable": 153,
+    "single": 803,
+    "lessonsWithZeroDrillable": 147,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 206
+    "lessonsWithTwoPlusDrillable": 212
   },
   "lessons": [
     {
@@ -5713,14 +5713,14 @@
       "file": "385_product_risk_and_assumption_log.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -5758,14 +5758,14 @@
       "file": "388_requirements_to_architecture_translation.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -5803,14 +5803,14 @@
       "file": "391_nfr_production_readiness_strategy.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -5818,14 +5818,14 @@
       "file": "392_data_architecture_ownership_lifecycle.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -5848,14 +5848,14 @@
       "file": "394_auth_identity_multi_tenancy_decisions.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {
@@ -5863,14 +5863,14 @@
       "file": "395_legacy_system_migration_strategy.md",
       "verified": true,
       "total": 5,
-      "single": 5,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 5,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 5
+        "single": 0
       }
     },
     {

@@ -63,11 +63,11 @@ standard daily backup already in place.
 - Before adding an index reactively in response to a performance complaint — check whether it matches an identified query pattern or is a guess
 
 ## Common Mistakes
-- Creating database tables before domain terms and ownership are clear, producing schema that encodes technical convenience instead of business meaning
-- Storing payment secrets or full card data locally instead of relying on the payment provider as the source of truth for that data
-- Hard-deleting business-critical records by default because it's the simplest code path, without considering audit or reporting consequences
-- Duplicating a data object's ownership across two systems with no defined sync strategy, so the two systems drift out of agreement silently
-- Adding indexes speculatively instead of deriving them from actual identified query patterns
+- **Tables get created before the team agrees on what the domain terms actually mean** — Creating database tables before domain terms and ownership are clear, producing schema that encodes technical convenience instead of business meaning
+- **Full card data gets stored in your own database instead of left with the payment provider** — Storing payment secrets or full card data locally instead of relying on the payment provider as the source of truth for that data
+- **A business-critical record gets hard-deleted because that's the simplest code path** — Hard-deleting business-critical records by default because it's the simplest code path, without considering audit or reporting consequences
+- **The same customer record is owned and edited in two different systems with no sync strategy between them** — Duplicating a data object's ownership across two systems with no defined sync strategy, so the two systems drift out of agreement silently
+- **An index gets added because it seems like it might help someday** — Adding indexes speculatively instead of deriving them from actual identified query patterns
 
 ## Further Reading
 - Martin Kleppmann — "Designing Data-Intensive Applications" (source-of-truth and consistency framing across systems)

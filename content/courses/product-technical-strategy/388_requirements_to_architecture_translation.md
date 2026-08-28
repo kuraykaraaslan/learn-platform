@@ -76,11 +76,11 @@ data owned by this system.
 - Before quoting an estimate — the architecture input template is what should actually be estimated against, not an unexamined feature list
 
 ## Common Mistakes
-- Designing database tables or API routes directly from a one-sentence product pitch, skipping the translation step entirely
-- Assuming a third-party system is always available and building no fallback behavior for the case where it isn't
-- Treating "the client will provide clean data" as a certainty instead of stating it explicitly as an assumption with a named risk
-- Drawing the system context map after implementation has already started, once boundary decisions are already baked into the code
-- Applying uniform trust and validation logic across all boundaries instead of treating public, authenticated, and privileged boundaries differently
+- **Database tables and API routes get designed straight from a one-sentence pitch** — Designing database tables or API routes directly from a one-sentence product pitch, skipping the translation step entirely
+- **A third-party integration has no fallback for what happens when that system is down** — Assuming a third-party system is always available and building no fallback behavior for the case where it isn't
+- **"The client will provide clean data" is treated as a given, never written down as an assumption** — Treating "the client will provide clean data" as a certainty instead of stating it explicitly as an assumption with a named risk
+- **The system context map gets drawn after implementation has already started** — Drawing the system context map after implementation has already started, once boundary decisions are already baked into the code
+- **Public, authenticated, and privileged boundaries all get the same validation logic** — Applying uniform trust and validation logic across all boundaries instead of treating public, authenticated, and privileged boundaries differently
 
 ## Further Reading
 - Eric Evans — "Domain-Driven Design" (the origin of context mapping as a technique)

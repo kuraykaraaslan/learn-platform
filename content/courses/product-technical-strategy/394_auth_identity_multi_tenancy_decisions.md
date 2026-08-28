@@ -66,11 +66,11 @@ a per-tenant backup-purge capability not yet built.
 - When scoping V1 architecture (lesson 388) for a product that might become multi-tenant — decide the isolation model deliberately rather than discovering it under pressure once a second customer signs
 
 ## Common Mistakes
-- Adding SSO or social login because it looks professional, without a client requirement actually calling for it, adding implementation cost with no corresponding need
-- Adding a `tenantId` column "just in case" without the accompanying membership model, role scoping, and audit strategy that make tenant isolation actually work
-- Relying on frontend-only filtering to separate tenant data instead of enforcing tenant scope server-side on every query
-- Building enterprise-grade per-tenant database isolation before validating that the product needs more than one tenant at all
-- Treating cross-jurisdiction compliance as a legal afterthought instead of an architecture constraint that determines the isolation model upfront
+- **SSO gets added because it looks professional, with no client requirement actually asking for it** — Adding SSO or social login because it looks professional, without a client requirement actually calling for it, adding implementation cost with no corresponding need
+- **A `tenantId` column gets added "just in case," with no membership model or role scoping behind it** — Adding a `tenantId` column "just in case" without the accompanying membership model, role scoping, and audit strategy that make tenant isolation actually work
+- **Tenant data separation happens by filtering in the frontend, not enforced on the server** — Relying on frontend-only filtering to separate tenant data instead of enforcing tenant scope server-side on every query
+- **Per-tenant database isolation gets built before it's confirmed the product will ever have more than one tenant** — Building enterprise-grade per-tenant database isolation before validating that the product needs more than one tenant at all
+- **Cross-jurisdiction compliance gets raised as a legal question after the isolation model is already built** — Treating cross-jurisdiction compliance as a legal afterthought instead of an architecture constraint that determines the isolation model upfront
 
 ## Further Reading
 - AWS Well-Architected Framework — SaaS Lens (aws.amazon.com — practical tenant isolation model guidance at each isolation tier)

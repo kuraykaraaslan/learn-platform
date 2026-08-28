@@ -69,11 +69,11 @@ risk found during assessment.
 - Before any destructive cutover step — confirm a backup exists and a rollback condition is defined in writing
 
 ## Common Mistakes
-- Promising a clean migration before seeing an actual sample of the real data, then discovering format inconsistencies mid-execution
-- Migrating every historical record by default instead of asking which ones the business actually needs versus can archive
-- Skipping a pre-migration backup before a destructive operation because the migration "should just work"
-- Treating the cutover as an informal step instead of a planned event with a defined go/no-go decision and rollback condition
-- Cutting over without explicit client sign-off, leaving ambiguity later about whether the client actually approved the final migrated state
+- **A clean migration gets promised before anyone has actually looked at a real data sample** — Promising a clean migration before seeing an actual sample of the real data, then discovering format inconsistencies mid-execution
+- **Every historical record gets migrated by default, no one asked what can just be archived** — Migrating every historical record by default instead of asking which ones the business actually needs versus can archive
+- **A destructive migration step runs with no pre-migration backup, because it "should just work"** — Skipping a pre-migration backup before a destructive operation because the migration "should just work"
+- **Cutover happens as an informal step, no defined go/no-go moment or rollback condition** — Treating the cutover as an informal step instead of a planned event with a defined go/no-go decision and rollback condition
+- **The system cuts over to the new version with no explicit client sign-off on record** — Cutting over without explicit client sign-off, leaving ambiguity later about whether the client actually approved the final migrated state
 
 ## Further Reading
 - Michael Feathers — "Working Effectively with Legacy Code" (the mindset of treating an existing system's behavior as a spec to be understood, not assumed)

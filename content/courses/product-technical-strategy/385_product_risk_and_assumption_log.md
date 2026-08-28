@@ -37,11 +37,11 @@ The assumption resolution rule is what keeps the log from becoming a graveyard o
 - During any handoff to architecture or development, so the next phase inherits known risks instead of rediscovering them
 
 ## Common Mistakes
-- Keeping the log informally in chat history or meeting notes instead of a structured, shared document with owners and statuses
-- Recording a risk once and never revisiting its status, so "Open" risks silently become "ignored" risks
-- Letting a high-severity risk ride into a signed proposal because addressing it felt like it would slow down the sale
-- Saying "we'll figure it out later" instead of the professional reframe: naming the assumption explicitly and tying it to a validation step before pricing is locked
-- Treating the log as the PM's private tracking tool rather than a document the client and delivery team both see and act on
+- **The risk log lives in scattered chat messages and meeting notes, not one shared document** — Keeping the log informally in chat history or meeting notes instead of a structured, shared document with owners and statuses
+- **A risk got logged once, months ago, status still "Open"** — Recording a risk once and never revisiting its status, so "Open" risks silently become "ignored" risks
+- **A high-severity risk is still unaddressed, and the proposal is about to be signed** — Letting a high-severity risk ride into a signed proposal because addressing it felt like it would slow down the sale
+- **An unresolved unknown gets a shrug and "we'll figure it out later"** — Saying "we'll figure it out later" instead of the professional reframe: naming the assumption explicitly and tying it to a validation step before pricing is locked
+- **The risk log only ever gets opened by the PM** — Treating the log as the PM's private tracking tool rather than a document the client and delivery team both see and act on
 
 ## Further Reading
 - Tom DeMarco & Timothy Lister — "Waltzing with Bears: Managing Risk on Software Projects" (risk visibility as a project management discipline, not a formality)

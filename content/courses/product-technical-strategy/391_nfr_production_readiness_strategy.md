@@ -54,11 +54,11 @@ platform's built-in rollback; no destructive migration planned for pilot.
 - When a critical-path flow (checkout, login, booking) is being designed — apply stronger recovery and observability investment there than elsewhere
 
 ## Common Mistakes
-- Saying "scalable," "secure," or "highly available" without defining what scale, which threats, or what uptime number is actually meant
-- Designing only for the happy path and treating failure-mode analysis as optional because "it probably won't happen"
-- Letting a non-critical dependency (analytics, a recommendation engine) block a critical user flow like checkout when it fails
-- Leaving backup and restore as an assumed platform feature instead of a stated, tested policy with an owner
-- Deciding on serverless or VPS hosting by habit or familiarity rather than by matching the project's actual traffic pattern and operational capacity
+- **A requirements doc says the system must be "scalable" and "highly available," no numbers attached** — Saying "scalable," "secure," or "highly available" without defining what scale, which threats, or what uptime number is actually meant
+- **The design covers the happy path; failure modes never got their own analysis pass** — Designing only for the happy path and treating failure-mode analysis as optional because "it probably won't happen"
+- **The analytics service goes down, and checkout goes down with it** — Letting a non-critical dependency (analytics, a recommendation engine) block a critical user flow like checkout when it fails
+- **Backups are assumed to be handled by the hosting platform, with no one having actually tested a restore** — Leaving backup and restore as an assumed platform feature instead of a stated, tested policy with an owner
+- **Serverless or VPS gets picked because it's the one you know, not because it matches the traffic pattern** — Deciding on serverless or VPS hosting by habit or familiarity rather than by matching the project's actual traffic pattern and operational capacity
 
 ## Further Reading
 - Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy (eds.) — "Site Reliability Engineering" (Google's SRE book — the origin of much of the reliability/observability framing here)

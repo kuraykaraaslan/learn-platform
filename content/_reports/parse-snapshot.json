@@ -3468,7 +3468,7 @@
         "keyConcepts": "624270cb173eb91e",
         "exampleCode": "f4be2da30c851775",
         "whenToUse": "401307252541ece6",
-        "commonMistakes": "92d43d0cc9c4c570",
+        "commonMistakes": "bb35bd91083b3075",
         "furtherReading": "492bcb74061b0612"
       },
       "386_release_strategy.md": {
@@ -3495,7 +3495,7 @@
         "keyConcepts": "04c66c715c68fc13",
         "exampleCode": "ab071185d90c15f6",
         "whenToUse": "5828de3a975d09c9",
-        "commonMistakes": "41bd836dbe226ad2",
+        "commonMistakes": "196fa2c9afea62d0",
         "furtherReading": "9f522d604a596979"
       },
       "389_domain_modeling_module_boundaries_scaling_path.md": {
@@ -3522,7 +3522,7 @@
         "keyConcepts": "5e5343e4fc9fc7f2",
         "exampleCode": "cbf6b55539985004",
         "whenToUse": "b2797fa9b0e1b9a3",
-        "commonMistakes": "0cb651565b30f8aa",
+        "commonMistakes": "740c4d41b3349793",
         "furtherReading": "fce6f0d379271229"
       },
       "392_data_architecture_ownership_lifecycle.md": {
@@ -3531,7 +3531,7 @@
         "keyConcepts": "6fd2ce0d375a5a95",
         "exampleCode": "558b3668f475b601",
         "whenToUse": "be955985723400ad",
-        "commonMistakes": "836a7121bdc062e6",
+        "commonMistakes": "748bc0c2a046b2cd",
         "furtherReading": "206c153e3277cdcb"
       },
       "393_api_integration_event_driven_decisions.md": {
@@ -3549,7 +3549,7 @@
         "keyConcepts": "75883a0933629d0d",
         "exampleCode": "971ed33c44f084ec",
         "whenToUse": "e714eebfda36caeb",
-        "commonMistakes": "2235f2650ba3b3fd",
+        "commonMistakes": "39d0e35b14ca0bfc",
         "furtherReading": "cc36f24ebbe57843"
       },
       "395_legacy_system_migration_strategy.md": {
@@ -3558,7 +3558,7 @@
         "keyConcepts": "3e35dae9d97fde54",
         "exampleCode": "b8bcb9cdf554b8f5",
         "whenToUse": "8556cac012489571",
-        "commonMistakes": "630feb33f6061377",
+        "commonMistakes": "fb6a3039f6305f0e",
         "furtherReading": "0c5553ed3adf6393"
       }
     },
