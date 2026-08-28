@@ -46,3 +46,32 @@ describe('lesson ordering', () => {
     expect(seen.size).toBe(412);
   });
 });
+
+describe('getLessonNeighbors', () => {
+  it('gives the first lesson in a course no prev, but a real next', () => {
+    const sorted = [...readCourseManifest('fundamentals-tools').items].sort((a, b) => a.id - b.id);
+    const { prev, next } = CourseContentService.getLessonNeighbors(
+      'fundamentals-tools',
+      CourseContentService.listLessonItems('fundamentals-tools').find((i) => i.id === sorted[0].id)!.lessonSlug
+    );
+    expect(prev).toBeNull();
+    expect(next?.title).toBe(sorted[1].title);
+  });
+
+  it('gives the last lesson in a course no next, but a real prev', () => {
+    const sorted = [...readCourseManifest('fundamentals-tools').items].sort((a, b) => a.id - b.id);
+    const last = sorted[sorted.length - 1];
+    const { prev, next } = CourseContentService.getLessonNeighbors(
+      'fundamentals-tools',
+      CourseContentService.listLessonItems('fundamentals-tools').find((i) => i.id === last.id)!.lessonSlug
+    );
+    expect(next).toBeNull();
+    expect(prev?.title).toBe(sorted[sorted.length - 2].title);
+  });
+
+  it('returns null/null for an unknown lesson slug instead of throwing', () => {
+    const { prev, next } = CourseContentService.getLessonNeighbors('fundamentals-tools', 'does-not-exist');
+    expect(prev).toBeNull();
+    expect(next).toBeNull();
+  });
+});

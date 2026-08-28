@@ -5,6 +5,7 @@
 import Link from 'next/link';
 import { DashboardShell } from '@/modules/shared/ui/DashboardShell';
 import { CourseContentService } from '@/modules/course_content/course_content.service';
+import { SearchLauncher } from '@/modules/course_content/ui/SearchLauncher';
 
 export default async function CourseLayout({
   children,
@@ -30,6 +31,17 @@ export default async function CourseLayout({
       }
       mobileSidebarTitle="Course Content"
       navGroups={navGroups}
+      topbarExtra={
+        <div className="flex items-center gap-3">
+          <SearchLauncher />
+          <Link href="/review" className="text-xs text-text-secondary hover:text-text-primary transition-colors">
+            Review
+          </Link>
+          <Link href="/settings" className="text-xs text-text-secondary hover:text-text-primary transition-colors">
+            Settings
+          </Link>
+        </div>
+      }
     >
       {children}
     </DashboardShell>

@@ -88,6 +88,25 @@ export class CourseContentService {
     };
   }
 
+  /** P12 (docs/phases/12): within-course prev/next, same authored-id order
+   *  as the sidebar (see getSidebarNavGroups' own comment on why bracket
+   *  never reorders it). No cross-course chaining at the boundary — the
+   *  first/last lesson in a course simply has no prev/next, rather than
+   *  silently jumping into an unrelated course's reading order. */
+  static getLessonNeighbors(
+    courseSlug: string,
+    lessonSlug: string
+  ): { prev: { title: string; href: string } | null; next: { title: string; href: string } | null } {
+    const sorted = [...CourseContentService.listLessonItems(courseSlug)].sort((a, b) => a.id - b.id);
+    const index = sorted.findIndex((i) => i.lessonSlug === lessonSlug);
+    if (index === -1) return { prev: null, next: null };
+
+    const toLink = (item: (typeof sorted)[number] | undefined) =>
+      item ? { title: item.title, href: `/courses/${courseSlug}/${item.lessonSlug}` } : null;
+
+    return { prev: toLink(sorted[index - 1]), next: toLink(sorted[index + 1]) };
+  }
+
   /** Sidebar nav: a single flat list in AUTHORED order (manifest id).
    *
    * This used to sort by experience bracket first, which reordered 20 of the

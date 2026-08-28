@@ -12,7 +12,15 @@ export default function FrontendLayout({ children }: { children: React.ReactNode
         <Link href="/" className="font-semibold text-text-primary hover:text-primary transition-colors">
           learn.kuray.dev
         </Link>
-        <ThemeToggle />
+        <div className="flex items-center gap-4">
+          <Link href="/review" className="text-sm text-text-secondary hover:text-text-primary transition-colors">
+            Review
+          </Link>
+          <Link href="/settings" className="text-sm text-text-secondary hover:text-text-primary transition-colors">
+            Settings
+          </Link>
+          <ThemeToggle />
+        </div>
       </header>
       <main id="main-content" className="mx-auto max-w-5xl px-6 py-10">
         {children}

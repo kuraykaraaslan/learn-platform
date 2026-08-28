@@ -19,7 +19,7 @@ import { useHydrated } from '@/modules/progress/useHydrated';
 import type { Lesson } from '../course_content.types';
 import type { LessonMistake } from '../course_content.mistakes';
 import type { LessonBlock } from '../course_content.blocks';
-import { LessonSectionCard } from './LessonSectionCard';
+import { LessonSectionCard, sectionAnchorId } from './LessonSectionCard';
 
 const ASSESSMENT_LABEL: Record<MistakeAssessment, string> = {
   knew: 'I knew it',
@@ -116,7 +116,7 @@ export function FailureDrillCard({ lesson, blocks }: { lesson: Lesson; blocks: L
     );
 
   return (
-    <section className="rounded-lg border border-border bg-surface-raised p-5">
+    <section id={sectionAnchorId('Common Mistakes')} className="scroll-mt-20 rounded-lg border border-border bg-surface-raised p-5">
       <div className="mb-1 flex items-center justify-between">
         <h2 className="text-sm font-semibold text-text-primary uppercase tracking-wide">Common Mistakes</h2>
         <button

@@ -133,6 +133,18 @@ function BlockView({
   }
 }
 
+/** "What It Is" -> "what-it-is" — deep-link anchor for P12's search
+ *  results and any other in-page section link. Exported so
+ *  FailureDrillCard's own <section> (which bypasses this component
+ *  entirely in drill mode) can render the identical id for "Common
+ *  Mistakes", keeping every section's anchor computed one way. */
+export function sectionAnchorId(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
 export function LessonSectionCard({
   title,
   blocks,
@@ -154,7 +166,7 @@ export function LessonSectionCard({
   if (blocks.length === 0) return null;
 
   return (
-    <section className={cn('rounded-lg border border-border bg-surface-raised p-5', className)}>
+    <section id={sectionAnchorId(title)} className={cn('scroll-mt-20 rounded-lg border border-border bg-surface-raised p-5', className)}>
       <h2 className="text-sm font-semibold text-text-primary uppercase tracking-wide mb-3">
         {title}
       </h2>

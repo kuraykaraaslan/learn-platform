@@ -4,6 +4,34 @@ import { createQuotaSafeStorage } from './quota';
 
 export type MistakeAssessment = 'knew' | 'partial' | 'missed';
 
+/** P12 Return Queue (docs/phases/12-search-and-review-queue.md): 5 boxes,
+ *  index 0..4, each named by its own review interval in days — box 0
+ *  reviews tomorrow, box 4 (the longest) reviews in two months. No
+ *  progress/completion semantics: this is per-item scheduling data for a
+ *  spaced-repetition queue, not a metric the reader is shown as a score. */
+export const BOX_INTERVAL_DAYS = [1, 3, 7, 21, 60] as const;
+
+export type ReviewBoxEntry = { box: number; nextReviewAt: string };
+
+function todayPlusDays(days: number): string {
+  const d = new Date();
+  d.setDate(d.getDate() + days);
+  return d.toISOString().slice(0, 10);
+}
+
+/** `missed` always resets to box 0 (review tomorrow) regardless of where it
+ *  was — that's the whole mechanism: the Return Queue only exists to
+ *  resurface exactly the things you said you missed. `knew` graduates one
+ *  box (capped at the last). `partial` neither resets nor graduates — it
+ *  stays at its current box, reviewed again at that same box's interval. */
+function nextReviewBox(current: ReviewBoxEntry | undefined, assessment: MistakeAssessment): ReviewBoxEntry {
+  let box: number;
+  if (assessment === 'missed') box = 0;
+  else if (assessment === 'knew') box = Math.min((current?.box ?? -1) + 1, BOX_INTERVAL_DAYS.length - 1);
+  else box = current?.box ?? 0;
+  return { box, nextReviewAt: todayPlusDays(BOX_INTERVAL_DAYS[box]) };
+}
+
 /** `<courseSlug>/<lessonFile>#<mistakeId>` — the composite key every
  *  per-mistake self-assessment is stored under. */
 export function mistakeKey(courseSlug: string, lessonFile: string, mistakeId: string): string {
@@ -33,6 +61,11 @@ export function editorKey(courseSlug: string, lessonFile: string, blockId: strin
 
 type PersistedProgress = {
   mistake: Record<string, MistakeAssessment>;
+  /** P12: Leitner box + next review date, keyed identically to `mistake`
+   *  (same mistakeKey) — no deck of its own, this is purely the schedule
+   *  for replaying `mistake`'s own entries. Written only as a side effect
+   *  of setMistakeAssessment, never set directly. */
+  reviewBox: Record<string, ReviewBoxEntry>;
   expandAll: Record<string, boolean>;
   /** ui/widgets/TemplateFormCard.tsx field values, keyed by widgetFieldKey(). */
   templateValues: Record<string, string>;
@@ -64,17 +97,20 @@ function touch<V>(map: Record<string, V>, key: string, value: V): Record<string,
   return next;
 }
 
-// Actions are never persisted, only these five data maps — and that's
+// Actions are never persisted, only these six data maps — and that's
 // exactly what progress.store.test.ts pins: the persisted key set is
-// {checklistChecked, editors, expandAll, mistake, templateValues}.
+// {checklistChecked, editors, expandAll, mistake, reviewBox, templateValues}.
 // Deliberately no completed/streak/percentage field — see
-// docs/phases/README.md's invariants. Exported (rather than left inline in
-// the persist() call below) so the test can call it directly with a real
-// type, instead of fighting zustand's persist generics through
-// `.persist.getOptions()`.
+// docs/phases/README.md's invariants; reviewBox is per-item spaced-
+// repetition scheduling, not a metric, and the pinned test's own comment
+// explains why it's not the same kind of field the guard exists to block.
+// Exported (rather than left inline in the persist() call below) so the
+// test can call it directly with a real type, instead of fighting
+// zustand's persist generics through `.persist.getOptions()`.
 export function partializeProgress(state: ProgressState): PersistedProgress {
   return {
     mistake: state.mistake,
+    reviewBox: state.reviewBox,
     expandAll: state.expandAll,
     templateValues: state.templateValues,
     checklistChecked: state.checklistChecked,
@@ -86,11 +122,16 @@ export const useProgressStore = create<ProgressState>()(
   persist(
     (set) => ({
       mistake: {},
+      reviewBox: {},
       expandAll: {},
       templateValues: {},
       checklistChecked: {},
       editors: {},
-      setMistakeAssessment: (key, value) => set((state) => ({ mistake: touch(state.mistake, key, value) })),
+      setMistakeAssessment: (key, value) =>
+        set((state) => ({
+          mistake: touch(state.mistake, key, value),
+          reviewBox: touch(state.reviewBox, key, nextReviewBox(state.reviewBox[key], value)),
+        })),
       setExpandAll: (key, value) => set((state) => ({ expandAll: touch(state.expandAll, key, value) })),
       setTemplateValue: (key, value) => set((state) => ({ templateValues: touch(state.templateValues, key, value) })),
       setChecklistChecked: (key, value) =>
@@ -109,3 +150,47 @@ export const useProgressStore = create<ProgressState>()(
     }
   )
 );
+
+const PERSISTED_KEYS = ['mistake', 'reviewBox', 'expandAll', 'templateValues', 'checklistChecked', 'editors'] as const;
+
+/** All of localStorage's actual content, not just an in-app summary — the
+ *  Return Queue's box schedule lives only in this store (docs/phases/12
+ *  calls JSON export/import "zorunlu" specifically because of that: with
+ *  no server and no account, a browser data wipe is otherwise permanent
+ *  loss of every self-assessment and its schedule). */
+export function exportProgressJson(): string {
+  return JSON.stringify(partializeProgress(useProgressStore.getState()), null, 2);
+}
+
+export type ImportResult = { ok: true } | { ok: false; error: string };
+
+/** Merges rather than replaces: an imported map's keys overwrite matching
+ *  local keys, but a key only present locally survives. Restoring an old
+ *  export should never silently erase progress made since that backup was
+ *  taken. */
+export function importProgressJson(json: string): ImportResult {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(json);
+  } catch {
+    return { ok: false, error: 'Not valid JSON.' };
+  }
+  if (typeof parsed !== 'object' || parsed === null) {
+    return { ok: false, error: 'Expected a JSON object.' };
+  }
+
+  const incoming = parsed as Record<string, unknown>;
+  const patch: Partial<PersistedProgress> = {};
+  for (const key of PERSISTED_KEYS) {
+    const value = incoming[key];
+    if (value && typeof value === 'object' && !Array.isArray(value)) {
+      patch[key] = { ...useProgressStore.getState()[key], ...(value as Record<string, never>) } as never;
+    }
+  }
+  if (Object.keys(patch).length === 0) {
+    return { ok: false, error: 'No recognized progress fields found in this file.' };
+  }
+
+  useProgressStore.setState(patch);
+  return { ok: true };
+}

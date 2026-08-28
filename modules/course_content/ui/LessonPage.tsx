@@ -5,7 +5,17 @@ import { LessonSectionCard } from './LessonSectionCard';
 import { FailureDrillCard } from './FailureDrillCard';
 import { ConceptTooltipProvider } from './ConceptTooltip';
 
-export function LessonPage({ lesson, courseTitle }: { lesson: Lesson; courseTitle: string }) {
+type LessonNeighbor = { title: string; href: string };
+
+export function LessonPage({
+  lesson,
+  courseTitle,
+  neighbors,
+}: {
+  lesson: Lesson;
+  courseTitle: string;
+  neighbors?: { prev: LessonNeighbor | null; next: LessonNeighbor | null };
+}) {
   return (
     <div className="max-w-3xl mx-auto">
       <nav className="text-xs text-text-secondary mb-4 flex items-center gap-1.5" aria-label="Breadcrumb">
@@ -34,6 +44,30 @@ export function LessonPage({ lesson, courseTitle }: { lesson: Lesson; courseTitl
         <FailureDrillCard lesson={lesson} blocks={lesson.blocks.commonMistakes} />
         <LessonSectionCard title="Further Reading" blocks={lesson.blocks.furtherReading} courseSlug={lesson.courseSlug} lessonFile={lesson.file} verified={lesson.verified === true} />
       </ConceptTooltipProvider>
+
+      {/* P12 (docs/phases/12): prev/next only — no tick, streak, or
+          completion percentage anywhere here. That's the roadmap's explicit
+          ban: those measure the page turned, not what was learned, which is
+          exactly the illusion of knowing this whole project exists to
+          undo. */}
+      {neighbors && (neighbors.prev || neighbors.next) && (
+        <nav className="mt-8 flex items-center justify-between gap-4 border-t border-border pt-4 text-sm" aria-label="Lesson navigation">
+          {neighbors.prev ? (
+            <Link href={neighbors.prev.href} className="text-text-secondary hover:text-text-primary">
+              ← {neighbors.prev.title}
+            </Link>
+          ) : (
+            <span />
+          )}
+          {neighbors.next ? (
+            <Link href={neighbors.next.href} className="text-right text-text-secondary hover:text-text-primary">
+              {neighbors.next.title} →
+            </Link>
+          ) : (
+            <span />
+          )}
+        </nav>
+      )}
     </div>
   );
 }

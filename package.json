@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run content:search-index && npm run content:review-index",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -12,6 +13,8 @@
     "content:verify-code": "tsx scripts/verify-code.ts --strict",
     "content:snapshot": "tsx scripts/parse-snapshot.ts",
     "content:concepts": "tsx scripts/build-concepts.ts",
+    "content:search-index": "tsx scripts/build-search-index.ts",
+    "content:review-index": "tsx scripts/build-review-index.ts",
     "content:check": "npm run content:lint && npm run content:verify-code && npm run test"
   },
   "dependencies": {
