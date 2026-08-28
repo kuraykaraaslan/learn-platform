@@ -54,10 +54,10 @@ manual reassignment, SMS notification.
 - Immediately after scope boundaries (lesson 377) are settled, to give every excluded item a stated future phase
 
 ## Common Mistakes
-- Building a roadmap that's a feature-difficulty ranking ("basic first, advanced later, AI last") with no dependency reasoning behind the order
-- Placing an advanced feature ahead of the foundational capability it silently depends on (analytics before clean data, refund automation before a refund policy)
-- Writing phases as feature lists with no stated goal, so nobody can evaluate whether the phase actually succeeded
-- Treating the roadmap as fixed once written, instead of revisiting it when a dependency resolves faster or slower than expected
+- **The roadmap reads "Phase 1: basics, Phase 2: advanced, Phase 3: AI," with no dependency logic behind the ordering** — Building a roadmap that's a feature-difficulty ranking ("basic first, advanced later, AI last") with no dependency reasoning behind the order
+- **Advanced analytics lands in V1, ahead of the clean event-data pipeline it actually depends on** — Placing an advanced feature ahead of the foundational capability it silently depends on (analytics before clean data, refund automation before a refund policy)
+- **V2 is a bullet list of features with no stated goal, so nobody can say afterward whether the phase actually worked** — Writing phases as feature lists with no stated goal, so nobody can evaluate whether the phase actually succeeded
+- **The roadmap was written six months ago and hasn't been touched since, even though V1's dependency resolved twice as fast as expected** — Treating the roadmap as fixed once written, instead of revisiting it when a dependency resolves faster or slower than expected
 
 ## Further Reading
 - C. Todd Lombardo, Bruce McCarthy, Evan Ryan, Michael Connors — "Product Roadmaps Relaunched" (on outcome-based, not feature-timeline, roadmaps)

@@ -62,11 +62,11 @@ pilot and reports the conflict warning as sufficient in a short debrief.
 - When a feature is live but adoption is flat — check whether the original assumption was ever actually validated or just assumed true because it felt obvious
 
 ## Common Mistakes
-- Treating every piece of feedback as equally actionable instead of classifying it first, which lets one loud feature request skip the line ahead of a documented usability blocker
-- Running validation without a stated success signal, so the team can't agree afterward on whether the assumption was confirmed or not
+- **A loud feature request jumps the queue ahead of a documented usability blocker nobody classified first** — Treating every piece of feedback as equally actionable instead of classifying it first, which lets one loud feature request skip the line ahead of a documented usability blocker
+- **The pilot runs for two weeks, and nobody agreed in advance on what result would actually confirm the assumption** — Running validation without a stated success signal, so the team can't agree afterward on whether the assumption was confirmed or not
 - Confusing a stakeholder's confidence in an assumption with evidence that it's true — the whole point of validation is that confidence isn't proof
-- Letting validated feedback become scope automatically instead of running it through the change-request triggers from scope boundaries (lesson 377)
-- Skipping the "decision after validation" step, so a validation exercise happens but nothing about the plan actually changes based on the result
+- **A validated piece of feedback turns straight into a backlog item, skipping the change-request classification entirely** — Letting validated feedback become scope automatically instead of running it through the change-request triggers from scope boundaries (lesson 377)
+- **The validation test runs, the results come in, and the plan proceeds exactly as if nothing had been learned** — Skipping the "decision after validation" step, so a validation exercise happens but nothing about the plan actually changes based on the result
 
 ## Further Reading
 - Teresa Torres — "Continuous Discovery Habits" (on running lightweight validation as a continuous practice rather than a pre-launch gate)

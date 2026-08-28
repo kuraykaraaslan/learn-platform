@@ -48,10 +48,10 @@ so that I can sell different categories of tickets for the same event.
 - When a story feels too big to demo in one sitting — that's the signal to split it by user action
 
 ## Common Mistakes
-- Writing stories from the developer's perspective ("As a developer, I want to cache the query") instead of the user's
-- Sizing a story so large it spans multiple unrelated workflows, making it impossible to estimate or demo as one unit
-- Writing acceptance criteria that cover only the happy path, leaving validation, permission, and empty/error states undefined until QA finds them
-- Writing subjective acceptance criteria ("the form works well") instead of a testable Given/When/Then statement
+- **The story reads "As a developer, I want to cache the query," with no actual user or benefit named** — Writing stories from the developer's perspective ("As a developer, I want to cache the query") instead of the user's
+- **"As an admin, I want to manage the entire event system" is the whole story, bundling five unrelated workflows into one card** — Sizing a story so large it spans multiple unrelated workflows, making it impossible to estimate or demo as one unit
+- **The acceptance criteria cover the happy path only, and QA is the first to ask what happens when the price field is blank** — Writing acceptance criteria that cover only the happy path, leaving validation, permission, and empty/error states undefined until QA finds them
+- **"The form works well" is the entire acceptance criteria for the story** — Writing subjective acceptance criteria ("the form works well") instead of a testable Given/When/Then statement
 
 ## Further Reading
 - Mike Cohn — "User Stories Applied" (the foundational text on story format and sizing)

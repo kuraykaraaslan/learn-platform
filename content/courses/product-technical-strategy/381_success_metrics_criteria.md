@@ -41,10 +41,10 @@ indicating the tool hasn't earned enough trust to be the single source of truth.
 - When a stakeholder disagrees about whether something succeeded — the minimum/strong/failure triad settles the argument in advance instead of after
 
 ## Common Mistakes
-- Declaring success based on delivery or subjective impression instead of a predefined metric
-- Measuring only one category (usually quality or delivery) and ignoring whether the business or behavior outcome actually moved
-- Defining a target with no failure signal, so a disappointing result gets quietly reframed as acceptable after the fact
-- Choosing metrics nobody will actually track after launch, which is the same as having no metric at all
+- **"It shipped and the client liked the demo" is the entire case for calling the pilot a success** — Declaring success based on delivery or subjective impression instead of a predefined metric
+- **Zero bugs and 100% uptime get reported as proof of success, with nobody checking whether the business metric it was meant to move actually moved** — Measuring only one category (usually quality or delivery) and ignoring whether the business or behavior outcome actually moved
+- **The pilot has a target number, and no stated signal for what would count as it not working** — Defining a target with no failure signal, so a disappointing result gets quietly reframed as acceptable after the fact
+- **The chosen metric requires a report nobody's actually going to run after launch** — Choosing metrics nobody will actually track after launch, which is the same as having no metric at all
 
 ## Further Reading
 - John Doerr — "Measure What Matters" (on outcome-based goal setting, the OKR framing behind minimum/strong success)

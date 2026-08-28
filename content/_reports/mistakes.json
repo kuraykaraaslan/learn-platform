@@ -2,10 +2,10 @@
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
     "lessons": 412,
-    "single": 301,
-    "lessonsWithZeroDrillable": 34,
+    "single": 269,
+    "lessonsWithZeroDrillable": 29,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 339
+    "lessonsWithTwoPlusDrillable": 347
   },
   "lessons": [
     {
@@ -5608,14 +5608,14 @@
       "file": "378_product_requirements_document.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5623,14 +5623,14 @@
       "file": "379_user_stories_acceptance_criteria.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5638,14 +5638,14 @@
       "file": "380_user_journey_flow_mapping.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5653,14 +5653,14 @@
       "file": "381_success_metrics_criteria.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5668,14 +5668,14 @@
       "file": "382_roadmap_planning.md",
       "verified": true,
       "total": 4,
-      "single": 4,
-      "drillable": 0,
+      "single": 0,
+      "drillable": 4,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5683,14 +5683,14 @@
       "file": "383_feedback_and_validation_loops.md",
       "verified": true,
       "total": 5,
-      "single": 4,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5698,14 +5698,14 @@
       "file": "384_market_and_competitive_positioning.md",
       "verified": true,
       "total": 5,
-      "single": 4,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 4
+        "single": 0
       }
     },
     {
@@ -5728,14 +5728,14 @@
       "file": "386_release_strategy.md",
       "verified": true,
       "total": 5,
-      "single": 4,
-      "drillable": 1,
+      "single": 0,
+      "drillable": 5,
       "formCounts": {
-        "bold-dash": 0,
+        "bold-dash": 4,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
-        "single": 4
+        "single": 0
       }
     },
     {

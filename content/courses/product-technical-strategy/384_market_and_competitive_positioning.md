@@ -58,11 +58,11 @@ have rather than build that layer.
 - Before MVP scoping (lesson 375) starts, so the MVP is shaped by the client's real gap rather than by an unexamined reference product
 
 ## Common Mistakes
-- Accepting "build me a clone of X" literally instead of extracting the specific workflow and market difference that makes a custom build justified
-- Treating any feature gap in an existing tool as automatic justification to build a full custom replacement instead of considering integration
-- Presenting UI polish as differentiation against a mature, well-resourced competitor
+- **"Build me something like ServiceTitan" gets scoped as literally that, with nobody asking which specific workflow is actually needed** — Accepting "build me a clone of X" literally instead of extracting the specific workflow and market difference that makes a custom build justified
+- **An existing tool almost does the job except for one missing integration, and the answer is to build a full custom replacement anyway** — Treating any feature gap in an existing tool as automatic justification to build a full custom replacement instead of considering integration
+- **The pitch to the client is "same workflow as the incumbent, just a nicer interface"** — Presenting UI polish as differentiation against a mature, well-resourced competitor
 - Skipping this gate for smaller projects, which often produces the most bloated MVPs — a small client asking for "something like X" absorbs the incumbent's entire feature shape by default if nobody reframes the request
-- Never revisiting positioning after launch, so the differentiation that justified the build quietly stops being true as competitors catch up
+- **The differentiation story from launch day is still being told two years later, even though every competitor has since caught up** — Never revisiting positioning after launch, so the differentiation that justified the build quietly stops being true as competitors catch up
 
 ## Further Reading
 - Geoffrey A. Moore — "Crossing the Chasm" (positioning against a market category, not just a competitor)

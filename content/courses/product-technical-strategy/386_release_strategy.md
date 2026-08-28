@@ -60,11 +60,11 @@ to a second region.
 - Before quoting a go-live date to a client — the go/no-go checklist is what that date is actually promising
 
 ## Common Mistakes
-- Treating an informal demo to real customers as if it were a monitored pilot, with no support path or rollback plan behind it
-- Skipping stages under deadline pressure and discovering the rollback plan doesn't exist only after something breaks in front of real users
+- **A quick demo to a few real customers turns into their daily driver, with no support path or rollback plan behind it** — Treating an informal demo to real customers as if it were a monitored pilot, with no support path or rollback plan behind it
+- **The beta stage gets skipped to hit the deadline, and the rollback plan only gets written the day something breaks in front of real users** — Skipping stages under deadline pressure and discovering the rollback plan doesn't exist only after something breaks in front of real users
 - Choosing a rollout strategy that doesn't match the pilot context — for example, a single-launch release when the pilot context specifically named one region as the controlled first exposure
-- Treating the go/no-go checklist as advisory rather than a genuine gate, so releases proceed on schedule regardless of what the checklist shows
-- Never scheduling the post-release review, so lessons from the pilot never make it back into the next stage's plan
+- **Three items on the go/no-go checklist are unchecked, and the release goes out on schedule anyway** — Treating the go/no-go checklist as advisory rather than a genuine gate, so releases proceed on schedule regardless of what the checklist shows
+- **The pilot ends, the team moves on to the next thing, and no post-release review ever gets scheduled** — Never scheduling the post-release review, so lessons from the pilot never make it back into the next stage's plan
 
 ## Further Reading
 - Marty Cagan — "Inspired" (on treating a release as a risk-managed decision rather than a milestone to hit)

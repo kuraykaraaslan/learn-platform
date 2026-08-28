@@ -63,10 +63,10 @@ then the system rejects it and names the conflicting job.
 - Before estimating — a PRD's functional requirements are what actually get sized, not a verbal feature list
 
 ## Common Mistakes
-- Writing a PRD that's a feature list with headings, missing users, goals, non-goals, flows, edge cases, or metrics
-- Writing requirements in vague adjectives ("easy to use," "modern," "fast") instead of specific, testable behavior
-- Hiding uncertainty by quietly picking an answer instead of listing it under Open Questions
-- Writing the PRD before the problem, MVP, and scope boundaries exist, so it inherits no real constraints and reads as a wishlist
+- **The PRD is a feature list with headings on it, with no users, goals, or edge cases section anywhere** — Writing a PRD that's a feature list with headings, missing users, goals, non-goals, flows, edge cases, or metrics
+- **FR-004 reads "the dashboard should be modern and easy to use," with nothing testable behind it** — Writing requirements in vague adjectives ("easy to use," "modern," "fast") instead of specific, testable behavior
+- **Nobody's decided which payment provider to use, and the PRD just quietly picks one without flagging it as an open question** — Hiding uncertainty by quietly picking an answer instead of listing it under Open Questions
+- **The PRD gets written the same week as the sales call, before the problem statement or MVP scope exist to constrain it** — Writing the PRD before the problem, MVP, and scope boundaries exist, so it inherits no real constraints and reads as a wishlist
 
 ## Further Reading
 - Karl Wiegers & Joy Beatty — "Software Requirements" (the standard reference for the specific/testable/owned quality bar used here)

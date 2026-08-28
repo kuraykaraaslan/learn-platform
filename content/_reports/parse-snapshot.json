@@ -3405,7 +3405,7 @@
         "keyConcepts": "e72739745fbb777d",
         "exampleCode": "20d834067e2aad3e",
         "whenToUse": "213c0f1cf2f0d5b1",
-        "commonMistakes": "f03b4437df737119",
+        "commonMistakes": "71dffa1299e6eaa9",
         "furtherReading": "afe9508aa63acb83"
       },
       "379_user_stories_acceptance_criteria.md": {
@@ -3414,7 +3414,7 @@
         "keyConcepts": "9240e37b3afced00",
         "exampleCode": "799696158eaedf24",
         "whenToUse": "fafbfda1c5ea48f8",
-        "commonMistakes": "e8619d1fd6fd9eb4",
+        "commonMistakes": "204e43bfd8916995",
         "furtherReading": "705fd3167d91d5ec"
       },
       "380_user_journey_flow_mapping.md": {
@@ -3423,7 +3423,7 @@
         "keyConcepts": "ecfee03350a4ab38",
         "exampleCode": "f1a9b8be0d8e73f2",
         "whenToUse": "dc506128fea71f38",
-        "commonMistakes": "8381de0eb0f1ed63",
+        "commonMistakes": "e14c70a3ff3cb791",
         "furtherReading": "2fbb935574b776a0"
       },
       "381_success_metrics_criteria.md": {
@@ -3432,7 +3432,7 @@
         "keyConcepts": "0ecf689c726e7c20",
         "exampleCode": "0804d7ab615cdf62",
         "whenToUse": "063ca56e7c22e379",
-        "commonMistakes": "f8ea6ad4fc0d8242",
+        "commonMistakes": "9f98d14bfa908b9e",
         "furtherReading": "fde8f074c854336d"
       },
       "382_roadmap_planning.md": {
@@ -3441,7 +3441,7 @@
         "keyConcepts": "a07225f504d8dfcc",
         "exampleCode": "83d9eb630fa1aec0",
         "whenToUse": "e8459dc3646c0a2d",
-        "commonMistakes": "25957ad5b5d7de52",
+        "commonMistakes": "49867d5d2f440536",
         "furtherReading": "d5a05fdb22534975"
       },
       "383_feedback_and_validation_loops.md": {
@@ -3450,7 +3450,7 @@
         "keyConcepts": "ff1701d360819e59",
         "exampleCode": "9df0e72f3b65d091",
         "whenToUse": "f45f376b372428eb",
-        "commonMistakes": "7de78036210dc4a6",
+        "commonMistakes": "c620daf155276979",
         "furtherReading": "f346a1a4da6e5d5d"
       },
       "384_market_and_competitive_positioning.md": {
@@ -3459,7 +3459,7 @@
         "keyConcepts": "4f99f9e8a94365b2",
         "exampleCode": "33e5f547381f5279",
         "whenToUse": "4d9513a6cca456d9",
-        "commonMistakes": "c4e9e27e361529d2",
+        "commonMistakes": "47ffe3e01b28455e",
         "furtherReading": "83ae763251189420"
       },
       "385_product_risk_and_assumption_log.md": {
@@ -3477,7 +3477,7 @@
         "keyConcepts": "da63551bfcce24ec",
         "exampleCode": "b38d99b65537cbcd",
         "whenToUse": "c44573f7a0510230",
-        "commonMistakes": "932d28dc06aaa054",
+        "commonMistakes": "cc5efe260c0a4382",
         "furtherReading": "46799701522128c5"
       },
       "387_technical_architecture_operating_system.md": {

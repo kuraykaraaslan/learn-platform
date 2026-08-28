@@ -50,10 +50,10 @@ Flows aren't complete until they're accountable for screen state, not just scree
 - When a support ticket reveals a flow nobody had traced (e.g., "what happens when a technician's phone has no signal")
 
 ## Common Mistakes
-- Moving to UI design with only a list of pages instead of a traced flow with decision points and states
-- Tracing only the happy path and treating error recovery as something to figure out during implementation
-- Forgetting the admin-side visibility step that corresponds to a customer-facing action
-- Omitting permission restrictions from the flow, so authorization gets bolted on after screens are already built
+- **Design starts from "home, login, dashboard, settings," with no traced sequence of decisions and states behind any of it** — Moving to UI design with only a list of pages instead of a traced flow with decision points and states
+- **The purchase flow is fully mapped, and what happens when the payment fails is left as "we'll figure that out during implementation"** — Tracing only the happy path and treating error recovery as something to figure out during implementation
+- **The customer's order flow is fully mapped, and nowhere does it say the admin needs to see that order land in the dashboard** — Forgetting the admin-side visibility step that corresponds to a customer-facing action
+- **The flow gets built and the screens get designed before anyone's decided who's actually allowed to do each step** — Omitting permission restrictions from the flow, so authorization gets bolted on after screens are already built
 
 ## Further Reading
 - Jesse James Garrett — "The Elements of User Experience" (the structural layers a flow sits inside)
