@@ -1916,7 +1916,7 @@
         "keyConcepts": "679d7d4264c73e87",
         "exampleCode": "5d94cb5f6b4dac9b",
         "whenToUse": "7086e5871313bde9",
-        "commonMistakes": "cf42109e610d3680",
+        "commonMistakes": "aeaf80ce395f058e",
         "furtherReading": "2554289dfcefeee4"
       },
       "216_payment_gates_and_milestone_enforcement.md": {
@@ -1934,7 +1934,7 @@
         "keyConcepts": "332c534e099170ac",
         "exampleCode": "f83a3e00a3d25065",
         "whenToUse": "a08ab493fae788fd",
-        "commonMistakes": "c7c50448d30b4820",
+        "commonMistakes": "044764609aadfe62",
         "furtherReading": "734b04e7447faf54"
       },
       "218_confidentiality_and_client_data_handling.md": {
@@ -1943,7 +1943,7 @@
         "keyConcepts": "95c2ad3395fb26f8",
         "exampleCode": "cef9b6dbcca0a583",
         "whenToUse": "8fcd8fe829ff3ea5",
-        "commonMistakes": "94db0681cdbcbcda",
+        "commonMistakes": "b942517e3410c1c9",
         "furtherReading": "fcc21f202bab67fa"
       },
       "219_ndas_when_and_how_to_use_them.md": {
@@ -1952,7 +1952,7 @@
         "keyConcepts": "e2b4ad3923bced42",
         "exampleCode": "db367b8260be9791",
         "whenToUse": "b7168e20699d1067",
-        "commonMistakes": "3760b700c9f59fc3",
+        "commonMistakes": "ef833c9358d89572",
         "furtherReading": "7f47616b882979e2"
       },
       "220_third_party_services_and_license_risk.md": {
@@ -1961,7 +1961,7 @@
         "keyConcepts": "11f68be7ce4d3097",
         "exampleCode": "77eabce4cedd432b",
         "whenToUse": "a0099828d564cf81",
-        "commonMistakes": "1406e775076e96bb",
+        "commonMistakes": "de85cf4638ae1db6",
         "furtherReading": "9107ebe38b7bd792"
       },
       "221_client_responsibilities_and_decision_maker_rule.md": {
@@ -1970,7 +1970,7 @@
         "keyConcepts": "2570e60d3b7090e0",
         "exampleCode": "db537eba8f8491a3",
         "whenToUse": "6310ffc3a7b8cff3",
-        "commonMistakes": "6e067ad1ff8a4725",
+        "commonMistakes": "12b6bb510c8d0f78",
         "furtherReading": "7bb48325371ca482"
       },
       "222_communication_and_approval_protocols.md": {
@@ -1979,7 +1979,7 @@
         "keyConcepts": "3e9680f389d971c0",
         "exampleCode": "94bfc689b5f5a334",
         "whenToUse": "dd623ddb66a247e8",
-        "commonMistakes": "dad14cf308a69ad8",
+        "commonMistakes": "e6e7f97fa457b52c",
         "furtherReading": "ef3032fe7457bc78"
       },
       "223_timeline_commitments_and_delay_management.md": {
@@ -1988,7 +1988,7 @@
         "keyConcepts": "a555f709ddbfe497",
         "exampleCode": "9f55fd41bbb8fcd5",
         "whenToUse": "c4c91754cd53f9df",
-        "commonMistakes": "803979c5621e0f72",
+        "commonMistakes": "34a440e02c57c8a0",
         "furtherReading": "3357ee9c4d07fcc4"
       },
       "224_warranty_bugfix_and_support_boundaries.md": {

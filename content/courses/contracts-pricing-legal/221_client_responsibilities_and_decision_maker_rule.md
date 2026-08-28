@@ -41,10 +41,10 @@ before implementation continues.
 - Whenever a delay is being attributed to the freelancer and a review of client-side inputs might tell a different story.
 
 ## Common Mistakes
-- Never naming a single decision maker, then absorbing the cost of conflicting feedback from multiple stakeholders.
-- Assuming the client will provide content "eventually" without a stated deadline or consequence for lateness.
-- Accepting a verbal "yes, looks good" as sufficient approval without ever summarizing it in writing.
-- Letting the client's late input silently compress the freelancer's own timeline instead of shifting the schedule accordingly.
+- **Three different stakeholders send three different sets of feedback on the same screen, and all three get reconciled without ever naming who actually decides** — Never naming a single decision maker, then absorbing the cost of conflicting feedback from multiple stakeholders.
+- **The content is "coming soon" from the client, with no deadline attached and no plan for what happens if it doesn't** — Assuming the client will provide content "eventually" without a stated deadline or consequence for lateness.
+- **"Yeah, looks good" on a call is the entire record of the milestone approval** — Accepting a verbal "yes, looks good" as sufficient approval without ever summarizing it in writing.
+- **The client's content arrived two weeks late, and the launch date stayed exactly the same anyway** — Letting the client's late input silently compress the freelancer's own timeline instead of shifting the schedule accordingly.
 
 ## Further Reading
 - Mike Monteiro, *You're My Favorite Client* — on setting expectations for client-side participation from day one.

@@ -47,9 +47,9 @@ of final payment.
 - When hiring a subcontractor whose work you'll pass on to a client — the same chain needs to hold subcontractor → you → client, with no gap.
 
 ## Common Mistakes
-- Assuming payment automatically transfers ownership without any written clause saying so.
-- Using the word "license" when "assignment" (or the jurisdiction-appropriate equivalent) was actually intended, leaving the client with less than they think they bought.
-- Promising a client "full ownership of everything I ever write," which would improperly include the freelancer's own pre-existing tools and unrelated work.
+- **The final invoice is paid in full, and everyone assumes that alone made the client the legal owner of the code** — Assuming payment automatically transfers ownership without any written clause saying so.
+- **The contract grants a "license" to use the deliverable, when what the client actually thought they were buying was outright ownership** — Using the word "license" when "assignment" (or the jurisdiction-appropriate equivalent) was actually intended, leaving the client with less than they think they bought.
+- **"You'll own full rights to everything I write" gets promised, including the reusable utility library used across every other client project** — Promising a client "full ownership of everything I ever write," which would improperly include the freelancer's own pre-existing tools and unrelated work.
 - Accepting a subcontractor's refusal to sign an IP assignment or exclusive license clause and proceeding anyway — a break anywhere in the chain means the freelancer cannot guarantee clean IP to their own client.
 
 ## Further Reading

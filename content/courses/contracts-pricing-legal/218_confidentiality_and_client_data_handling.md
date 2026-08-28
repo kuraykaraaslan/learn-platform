@@ -47,10 +47,10 @@ compliance requirements with qualified legal counsel.
 - Any time you consider adding a client project to your public portfolio.
 
 ## Common Mistakes
-- Sending passwords or API keys over chat "just this once" because setting up a shared vault feels like overhead.
-- Defaulting to real customer data in development because it's more convenient than generating test data.
-- Publishing a case study or screenshot without checking whether it reveals a customer name, dashboard, or internal metric the client would consider confidential.
-- Telling a client "don't worry, this is fully compliant" about a data protection law you haven't actually had reviewed by a lawyer.
+- **The database password gets sent over chat "just this once" because setting up the shared vault felt like too much overhead** — Sending passwords or API keys over chat "just this once" because setting up a shared vault feels like overhead.
+- **Real customer records get copied into the local dev environment because generating test data felt like extra work** — Defaulting to real customer data in development because it's more convenient than generating test data.
+- **The new case study screenshot goes live with a customer's real dashboard numbers still visible in the corner** — Publishing a case study or screenshot without checking whether it reveals a customer name, dashboard, or internal metric the client would consider confidential.
+- **"Don't worry, this is fully GDPR compliant" gets said to a client, with no lawyer ever having reviewed it** — Telling a client "don't worry, this is fully compliant" about a data protection law you haven't actually had reviewed by a lawyer.
 
 ## Further Reading
 - [OWASP Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html) — a technical starting point for credential handling practices

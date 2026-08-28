@@ -50,10 +50,10 @@ scheduling and payment purposes, unless otherwise agreed in writing.
 - When a client has gone silent past the review window and a milestone needs to move forward.
 
 ## Common Mistakes
-- Letting major decisions happen only in calls with no written summary afterward.
-- Accepting vague approvals ("looks fine") as sufficient sign-off for a milestone with real cost implications.
-- Never stating a review window, so milestones stay in limbo indefinitely with no path to being marked accepted.
-- Allowing feedback to scatter across every channel available (WhatsApp, email, voice notes, in-person) instead of consolidating it into one.
+- **A scope decision gets made on a call, and no written summary of it ever gets sent afterward** — Letting major decisions happen only in calls with no written summary afterward.
+- **"Looks fine" is the entire sign-off on a milestone that unlocks a payment** — Accepting vague approvals ("looks fine") as sufficient sign-off for a milestone with real cost implications.
+- **There's no stated review window, and Milestone 2 has been "awaiting feedback" for six weeks with no path forward** — Never stating a review window, so milestones stay in limbo indefinitely with no path to being marked accepted.
+- **Feedback arrives across WhatsApp, email, a voice note, and an in-person comment, and none of it lives in one place** — Allowing feedback to scatter across every channel available (WhatsApp, email, voice notes, in-person) instead of consolidating it into one.
 
 ## Further Reading
 - Camille Fournier, *The Manager's Path* — on establishing clear communication norms in ambiguous working relationships.

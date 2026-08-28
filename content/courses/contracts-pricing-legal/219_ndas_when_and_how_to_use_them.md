@@ -44,10 +44,10 @@ If an NDA is ever actually breached — a contractor leaks something, or worse �
 - As a standard clause inside every contractor and client agreement, even when a standalone NDA isn't needed.
 
 ## Common Mistakes
-- Sharing sensitive project details in a discovery call before any NDA or confidentiality clause is in place.
-- Writing an indefinite confidentiality obligation instead of a bounded, more enforceable term.
-- Adding a broad non-compete to an NDA and assuming it will hold up, when a non-solicitation clause would have been both sufficient and more durable.
-- Responding to a suspected breach with an angry informal message instead of documenting first and involving a lawyer before escalating.
+- **Unreleased product details come up on the very first discovery call, before any NDA has been signed** — Sharing sensitive project details in a discovery call before any NDA or confidentiality clause is in place.
+- **The confidentiality clause says the obligation lasts "forever," with no bounded term** — Writing an indefinite confidentiality obligation instead of a bounded, more enforceable term.
+- **A broad non-compete clause gets added to the NDA on the assumption that it adds extra protection** — Adding a broad non-compete to an NDA and assuming it will hold up, when a non-solicitation clause would have been both sufficient and more durable.
+- **A suspected leak gets an angry message fired off within the hour, before anything's been documented** — Responding to a suspected breach with an angry informal message instead of documenting first and involving a lawyer before escalating.
 
 ## Further Reading
 - The Electronic Frontier Foundation's plain-language guides on NDAs for freelancers and small businesses.

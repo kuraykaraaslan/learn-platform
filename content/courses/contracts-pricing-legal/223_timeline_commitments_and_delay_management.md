@@ -46,10 +46,10 @@ explicitly, not absorbed silently.
 - Any time a delay has already happened and needs to be attributed correctly between client-side and freelancer-side causes.
 
 ## Common Mistakes
-- Presenting an estimate as a guaranteed date regardless of client responsiveness or third-party approval timelines.
-- Absorbing a client-caused delay into the existing deadline instead of visibly shifting the schedule.
-- Accepting a rush request by quietly working unpaid overtime instead of naming the real trade-offs available.
-- Leaving out the start condition, so the client's mental clock starts on the proposal date rather than the actual kickoff.
+- **"Launch is October 1st" gets said as a guarantee, with no mention of what it actually depends on** — Presenting an estimate as a guaranteed date regardless of client responsiveness or third-party approval timelines.
+- **The client's content arrived ten days late, and the launch date somehow stayed exactly where it was** — Absorbing a client-caused delay into the existing deadline instead of visibly shifting the schedule.
+- **"Can you just go faster?" gets answered with a few unpaid late nights instead of a scope or price conversation** — Accepting a rush request by quietly working unpaid overtime instead of naming the real trade-offs available.
+- **The client's mental clock started the day the proposal was signed, three weeks before the deposit or SOW were ever finalized** — Leaving out the start condition, so the client's mental clock starts on the proposal date rather than the actual kickoff.
 
 ## Further Reading
 - Tom DeMarco, *Waltzing with Bears: Managing Risk on Software Projects* — on the relationship between schedule commitments and unmanaged risk.

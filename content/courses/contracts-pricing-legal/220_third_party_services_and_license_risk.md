@@ -43,10 +43,10 @@ service providers.
 - Whenever a client or contractor proposes using a package or plugin you haven't personally vetted.
 
 ## Common Mistakes
-- Letting third-party costs go unassigned in the SOW, so hosting or API fees quietly become the freelancer's ongoing expense.
-- Promising that a provider's approval (payment processor KYC, app store review) will complete on a guaranteed date.
-- Bundling a GPL- or AGPL-licensed package into a client's proprietary product without checking the license or telling the client.
-- Treating "it's on GitHub with a lot of stars" as equivalent to "it's safe to use commercially."
+- **The SOW never says who pays for hosting, and six months later that bill is quietly coming out of the freelancer's own pocket** — Letting third-party costs go unassigned in the SOW, so hosting or API fees quietly become the freelancer's ongoing expense.
+- **"Payment processor approval will be done by Friday" gets promised, for a process the freelancer doesn't actually control** — Promising that a provider's approval (payment processor KYC, app store review) will complete on a guaranteed date.
+- **An AGPL-licensed package gets pulled into the client's closed-source product with nobody checking the license first** — Bundling a GPL- or AGPL-licensed package into a client's proprietary product without checking the license or telling the client.
+- **A package with 40,000 GitHub stars gets used commercially, with nobody checking what license it actually ships under** — Treating "it's on GitHub with a lot of stars" as equivalent to "it's safe to use commercially."
 
 ## Further Reading
 - [The Open Source Initiative's license list and comparison guide](https://opensource.org) for understanding license categories.

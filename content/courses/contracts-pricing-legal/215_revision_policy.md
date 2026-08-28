@@ -47,10 +47,10 @@ it to the next phase — your call."
 - The moment a "small" request turns out to touch a workflow or business rule, not just a visual detail.
 
 ## Common Mistakes
-- Advertising "unlimited revisions" as a selling point without realizing it removes your ability to ever call a milestone finished.
-- Accepting feedback from whoever happens to message first instead of requiring one consolidated, decision-maker-approved list.
-- Treating a bug fix and a new feature request identically because both arrived in the same feedback email.
-- Letting a design phase's generous revision allowance quietly carry over into the implementation phase, where each round costs far more.
+- **"Unlimited revisions" is right there on the pricing page as a selling point** — Advertising "unlimited revisions" as a selling point without realizing it removes your ability to ever call a milestone finished.
+- **Whoever messages first gets their feedback actioned, ahead of the decision-maker's consolidated list** — Accepting feedback from whoever happens to message first instead of requiring one consolidated, decision-maker-approved list.
+- **A broken checkout button and a request for a whole new reporting page arrive in the same email, and both get treated as revisions** — Treating a bug fix and a new feature request identically because both arrived in the same feedback email.
+- **The generous design-phase revision count is still being honored two months into implementation** — Letting a design phase's generous revision allowance quietly carry over into the implementation phase, where each round costs far more.
 
 ## Further Reading
 - Mike Monteiro, *You're My Favorite Client* — on structuring feedback rounds that protect both craft and margin.
