@@ -76,11 +76,11 @@ function ErrorBanner({ code }: { code: string }) {
 - Accessibility review of any AI feature before launch — loading, streaming, and error states each need their own pass
 
 ## Common Mistakes
-- Rendering AI output with no disclosure label, or a label small enough to require scrolling to notice
-- Auto-submitting an AI-generated email, form, or message without a user review step
-- Showing a blank area or a generic spinner with no context while an AI call is in flight for several seconds
-- Using one generic "something went wrong" message for every AI failure instead of mapping error codes to specific, actionable text
-- Suppressing a model's own expressed uncertainty because it makes the output look less polished
+- **AI-generated content renders on the page with no "AI-generated" label, or one small enough to scroll past** — Rendering AI output with no disclosure label, or a label small enough to require scrolling to notice
+- **An AI-drafted email or form gets sent the moment generation finishes, no review step in between** — Auto-submitting an AI-generated email, form, or message without a user review step
+- **An AI call is taking several seconds, and the UI shows a blank area or a generic spinner** — Showing a blank area or a generic spinner with no context while an AI call is in flight for several seconds
+- **Every AI failure, regardless of cause, shows the same "something went wrong" message** — Using one generic "something went wrong" message for every AI failure instead of mapping error codes to specific, actionable text
+- **A model hedges its own answer, and the UI strips that hedge out before displaying it** — Suppressing a model's own expressed uncertainty because it makes the output look less polished
 
 ## Further Reading
 - Microsoft — "Guidelines for Human-AI Interaction" (the HAX Toolkit) — a widely cited, concrete pattern library for exactly these interaction points

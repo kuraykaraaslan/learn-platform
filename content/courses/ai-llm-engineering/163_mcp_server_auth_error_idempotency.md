@@ -76,11 +76,11 @@ server.tool(
 - Any batch or multi-item operation where some items can succeed while others fail — the `partial` flag is what keeps that from being silently misreported as full success
 
 ## Common Mistakes
-- Checking the token inside each tool handler individually instead of once in shared middleware, creating gaps as handlers are added over time
-- Accepting a token as a tool input parameter or returning one in a tool's response, instead of confining it entirely to the `Authorization` header
-- Using an in-memory `Map` for idempotency keys, which silently stops working the moment the server restarts or runs behind more than one instance
-- Marking a `VALIDATION_ERROR` as `retryable: true`, causing an AI client to burn calls retrying input that will fail identically every time
-- Returning a batch result as if fully successful when some items actually failed, instead of setting `partial: true` with a breakdown
+- **Each new tool handler adds its own token check, copy-pasted from the last one** — Checking the token inside each tool handler individually instead of once in shared middleware, creating gaps as handlers are added over time
+- **A tool accepts a token as one of its input parameters** — Accepting a token as a tool input parameter or returning one in a tool's response, instead of confining it entirely to the `Authorization` header
+- **Idempotency keys are stored in an in-memory `Map`** — Using an in-memory `Map` for idempotency keys, which silently stops working the moment the server restarts or runs behind more than one instance
+- **A `VALIDATION_ERROR` response is marked `retryable: true`** — Marking a `VALIDATION_ERROR` as `retryable: true`, causing an AI client to burn calls retrying input that will fail identically every time
+- **A batch of 10 items has 2 failures, and the response still reports full success** — Returning a batch result as if fully successful when some items actually failed, instead of setting `partial: true` with a breakdown
 
 ## Further Reading
 - [Model Context Protocol specification](https://modelcontextprotocol.io/specification) — read the authentication and error-handling sections

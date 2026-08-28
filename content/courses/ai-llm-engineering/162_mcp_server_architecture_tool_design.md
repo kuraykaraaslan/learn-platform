@@ -73,11 +73,11 @@ server.resource('project-member', 'project://{projectId}/members/{userId}', asyn
 - Before publishing any server that another team's or client's AI agent will call — naming and description quality directly determine how reliably the model uses it
 
 ## Common Mistakes
-- Modeling an action with a side effect as a Resource because "it's just returning data," breaking the read-only contract clients assume for Resources
-- Merging unrelated domains (files, issues, users) into one server instead of splitting along auth scope and release cadence boundaries
-- Writing business logic directly inside a tool handler instead of delegating to a service layer, making the rule untestable outside the MCP transport
-- Using a generic tool name (`process`, `handle`, `do_thing`) or an abbreviated one (`proj_lst_mem`) instead of the full `{domain}_{verb}_{noun}` form
-- Shipping a tool description that omits preconditions or error cases, leaving the model to guess when the tool is safe to call
+- **An action that writes data is modeled as a Resource because "it's just returning data" too** — Modeling an action with a side effect as a Resource because "it's just returning data," breaking the read-only contract clients assume for Resources
+- **One MCP server exposes files, issues, and users together** — Merging unrelated domains (files, issues, users) into one server instead of splitting along auth scope and release cadence boundaries
+- **A business rule lives directly inside a tool handler function** — Writing business logic directly inside a tool handler instead of delegating to a service layer, making the rule untestable outside the MCP transport
+- **A tool is named `process` or `proj_lst_mem`** — Using a generic tool name (`process`, `handle`, `do_thing`) or an abbreviated one (`proj_lst_mem`) instead of the full `{domain}_{verb}_{noun}` form
+- **A tool's description says what it does but not when it's safe to call or what can go wrong** — Shipping a tool description that omits preconditions or error cases, leaving the model to guess when the tool is safe to call
 
 ## Further Reading
 - [Model Context Protocol specification](https://modelcontextprotocol.io) — the authoritative reference for Tool, Resource, and Prompt semantics

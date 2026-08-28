@@ -69,11 +69,11 @@ function assertAllCategoriesReviewed(report: ReviewReport, requiredCategories: s
 - Tracking review quality over time — a structured verdict format is what makes a category-level trend (an escalating FAIL rate) visible at all
 
 ## Common Mistakes
-- Accepting a freeform written review as a substitute for a structured verdict, leaving a human to reconstruct the actual decision from prose
-- Letting a downstream system treat a non-blocking read of an otherwise-blocking report as good enough to proceed automatically
-- Having the same agent invocation both perform the review and execute the reviewed action, eliminating the independence the gate depends on
-- Marking a checklist item as passed without a citation, on the assumption that it was "probably fine"
-- Silently skipping a tedious category and still reporting an overall PASS, manufacturing confidence in a section nobody actually checked
+- **A review comes back as a paragraph of prose instead of a structured pass/fail verdict** — Accepting a freeform written review as a substitute for a structured verdict, leaving a human to reconstruct the actual decision from prose
+- **A downstream system reads a blocking report's summary and proceeds automatically anyway** — Letting a downstream system treat a non-blocking read of an otherwise-blocking report as good enough to proceed automatically
+- **The same agent invocation both reviews the action and then executes it** — Having the same agent invocation both perform the review and execute the reviewed action, eliminating the independence the gate depends on
+- **A checklist item is marked passed with no citation backing it up** — Marking a checklist item as passed without a citation, on the assumption that it was "probably fine"
+- **A tedious review category gets skipped, and the overall report still says PASS** — Silently skipping a tedious category and still reporting an overall PASS, manufacturing confidence in a section nobody actually checked
 
 ## Further Reading
 - Anthropic — "Building effective agents" (the evaluator-optimizer and human-in-the-loop patterns this lesson generalizes from)

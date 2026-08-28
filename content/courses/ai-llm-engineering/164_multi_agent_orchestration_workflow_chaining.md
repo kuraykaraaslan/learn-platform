@@ -76,11 +76,11 @@ export async function runSupportReplyChain(ticketText: string) {
 - Building any workflow where one stage's output must be independently verifiable before the next stage acts on it
 
 ## Common Mistakes
-- Running two agents against the same document or artifact in parallel and attempting to reconcile conflicting outputs afterward
-- Using one expensive model tier uniformly across every stage in a chain instead of matching tier to each stage's actual reasoning demand
-- Validating only the chain's final output and treating intermediate handoffs as trusted, letting a schema drift or hallucination three stages back corrupt everything after it
-- Applying the untrusted-content/prompt-injection posture only to the first stage that ingests external input, forgetting that every later stage touching its output inherits the same risk
-- Rewriting a shared workflow prompt after a single unusual failure, degrading it for the broader set of cases it was already handling correctly
+- **Two agents work on the same document at the same time, and their outputs need reconciling afterward** — Running two agents against the same document or artifact in parallel and attempting to reconcile conflicting outputs afterward
+- **Every stage in a multi-step chain uses the same expensive model tier, including the simple ones** — Using one expensive model tier uniformly across every stage in a chain instead of matching tier to each stage's actual reasoning demand
+- **A chain validates its final output only, trusting every handoff in between** — Validating only the chain's final output and treating intermediate handoffs as trusted, letting a schema drift or hallucination three stages back corrupt everything after it
+- **Only the first stage that reads external input gets prompt-injection defenses** — Applying the untrusted-content/prompt-injection posture only to the first stage that ingests external input, forgetting that every later stage touching its output inherits the same risk
+- **A shared workflow prompt gets rewritten right after one unusual failure case shows up** — Rewriting a shared workflow prompt after a single unusual failure, degrading it for the broader set of cases it was already handling correctly
 
 ## Further Reading
 - Anthropic — "Building effective agents" (the prompt-chaining and orchestrator-worker patterns, directly applicable to this lesson)

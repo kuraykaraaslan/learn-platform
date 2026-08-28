@@ -271,7 +271,7 @@
         "keyConcepts": "84d2be8504679cd4",
         "exampleCode": "94a772f89ba6d2c0",
         "whenToUse": "57bfec8cb6da8ae2",
-        "commonMistakes": "7cd977e1b8a209d3",
+        "commonMistakes": "c26c359cdd0fee75",
         "furtherReading": "25129358807c79b2"
       },
       "162_mcp_server_architecture_tool_design.md": {
@@ -280,7 +280,7 @@
         "keyConcepts": "3acde1aeda7e1bb0",
         "exampleCode": "6d704cbf1303cac9",
         "whenToUse": "03c181ea5dd2471a",
-        "commonMistakes": "99aad3209ad28430",
+        "commonMistakes": "2690e66b6ddfa393",
         "furtherReading": "94c7a254ab159b3e"
       },
       "163_mcp_server_auth_error_idempotency.md": {
@@ -289,7 +289,7 @@
         "keyConcepts": "a8ebd9e1ecbc7491",
         "exampleCode": "4d087ae5a4486c56",
         "whenToUse": "a93c61c82b752e64",
-        "commonMistakes": "dfc56079325b1dfe",
+        "commonMistakes": "6c684c714eee9318",
         "furtherReading": "89b49cf38a8e63df"
       },
       "164_multi_agent_orchestration_workflow_chaining.md": {
@@ -298,7 +298,7 @@
         "keyConcepts": "bee2a38770d6cf80",
         "exampleCode": "3b59580e1cf576d6",
         "whenToUse": "8f9d1579ca6370a1",
-        "commonMistakes": "d814f38c96ad54ef",
+        "commonMistakes": "88b3e7e024796ed3",
         "furtherReading": "5132abf35ce1a2de"
       },
       "165_human_in_the_loop_review_gates.md": {
@@ -307,7 +307,7 @@
         "keyConcepts": "92e76a63140445ba",
         "exampleCode": "885e77dcc507e667",
         "whenToUse": "34330e5c388c6f2c",
-        "commonMistakes": "b9f678f726a1802d",
+        "commonMistakes": "09ba8ec0196e1d96",
         "furtherReading": "ed95b7d08db7590b"
       }
     },
