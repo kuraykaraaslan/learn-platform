@@ -7,7 +7,7 @@
     "prebuild": "npm run content:search-index && npm run content:review-index",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "test": "vitest run",
     "content:lint": "tsx scripts/content-lint --strict",
     "content:verify-code": "tsx scripts/verify-code.ts --strict",
@@ -27,10 +27,10 @@
     "@webcontainer/api": "^1.6.4",
     "clsx": "^2.1.1",
     "mermaid": "^11.17.2",
-    "next": "^15.0.0",
+    "next": "^16.3.3",
     "next-themes": "^0.4.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
     "rehype-highlight": "^7.0.1",
     "rehype-stringify": "^10.0.1",
     "remark-gfm": "^4.0.0",
@@ -44,19 +44,18 @@
     "zustand": "^5.0.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^20.14.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "eslint": "^9.0.0",
-    "eslint-config-next": "^15.0.0",
+    "eslint-config-next": "^16.3.3",
     "tailwindcss": "^4.0.0",
     "tsx": "^4.19.0",
     "typescript": "^5.5.0",
     "vitest": "^2.0.0"
   },
   "engines": {
-    "node": ">=18.17"
+    "node": ">=20.9"
   }
 }
