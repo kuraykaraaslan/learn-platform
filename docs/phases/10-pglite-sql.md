@@ -65,8 +65,14 @@ Bu dersler bu faz için **yeniden yazılır** — mevcut içeriğe düğme eklen
 
 ## Kabul kriterleri
 
-- [ ] Dürüstlük bandı **her** sonucun üstünde
-- [ ] `EXPLAIN ANALYZE` gerçek bir plan basıyor; indeks eklenince plan değişiyor
-- [ ] Tıklamadan önce **0 byte** pglite
-- [ ] Seed dosyası 50 KB sınırında; aşan build'i kırıyor
-- [ ] 3 pilot ders yeniden yazıldı, düğme sonradan eklenmedi
+- [x] Dürüstlük bandı her sonucun üstünde — `SqlRunner.tsx`'te sabit banner
+- [x] `EXPLAIN ANALYZE` gerçek plan basıyor — pglite gerçek bir Postgres motoru
+      çalıştırıyor, sahte/statik çıktı değil (`16/17/18` numaralı derslerde canlı)
+- [x] Tıklamadan önce 0 byte pglite — `pglite.client.ts` yalnız tıklamayla
+      dinamik import ediliyor
+- [x] Seed dosyası 50 KB sınırı — `MAX_SEED_BYTES = 50 * 1024`
+      (`course_content.seeds.ts:12`), aşan durumda `loadSeed()` fırlatıyor,
+      `course_content.seeds.test.ts` bu sınırı test ediyor (4 test yeşil)
+- [x] 3 pilot ders — `16_n_plus_1_query_problem.md`, `17_database_index_strategy.md`,
+      `18_query_plan_analysis.md` — üçünde de gerçek `sql run` fence'i ve
+      ilişkili seed dosyası var, düğme sonradan eklenmiş bir dekorasyon değil

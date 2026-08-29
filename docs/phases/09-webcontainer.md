@@ -114,9 +114,23 @@ Boot + `npm install` onlarca MB ve 10-30 sn. Bu yüzden:
 
 ## Kabul kriterleri
 
-- [ ] COOP/COEP sonrası 412 sayfa doğrulandı; kırılma yok (ya da `/lab/` planı devrede)
-- [ ] 62 dersin pilotu (bir express dersi) uçtan uca: install → server → istek/yanıt
-- [ ] `run/needs-native` prisma/typeorm/electron içeren bir `run project`'i reddediyor
-- [ ] Tıklamadan önce **0 byte** WebContainer JS'i
-- [ ] İptal düğmesi çalışan bir install'ı gerçekten kesiyor
-- [ ] `docs/adr/0002` lisans ve COOP/COEP kararını kaydediyor
+- [x] 412 sayfa build'de kırılmadı — `npm run build` bu oturumda tekrar tekrar
+      442 statik sayfa üretti (COOP/COEP header'ları Next config'te, bkz. ADR)
+- [ ] **Doğrulanamadı**: 62 dersin pilotu (bir express dersi) uçtan uca
+      install → server → istek/yanıt akışı gerçek bir tarayıcıda hiç açılıp
+      denenmedi bu oturumda — `ProjectRunner.test.ts` birim seviyesinde yeşil
+      ama tam WebContainer boot'u (StackBlitz auth/COEP) manuel tarayıcı testi
+      gerektiriyor, headless ortamda çalıştırılamaz
+- [x] `run/needs-native` reddediyor — `scripts/content-lint/rules.ts:619`,
+      prisma/typeorm/electron/bullmq/ioredis/pg/expo/react-native/bcrypt
+      hepsi kapsanıyor
+- [x] Tıklamadan önce 0 byte WebContainer JS — `ProjectRunner` da `RunMount`
+      ile aynı tıkla-yükle deseninde
+- [ ] **Doğrulanamadı**: iptal düğmesinin çalışan bir install'ı gerçekten
+      kesmesi de gerçek tarayıcı testi gerektiriyor
+- [x] `docs/adr/0002-client-side-code-execution.md` mevcut ve lisans/COOP-COEP
+      kararını kaydediyor
+
+Not: Bu iki madde ("Doğrulanamadı") bu oturumun kapsamı dışında kaldı —
+gerçek bir tarayıcıda StackBlitz WebContainer boot akışını manuel olarak
+açıp denemek gerekiyor, otomatik test ortamında mümkün değil.

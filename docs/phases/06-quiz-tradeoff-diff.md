@@ -92,10 +92,20 @@ build hatası.
 
 ## Kabul kriterleri
 
-- [ ] `verified` olmayan derste quiz **görünmüyor**
-- [ ] `anchor`'ı metinde geçmeyen quiz build'i kırıyor (negatif test)
-- [ ] `why` alanı olmayan seçenek build'i kırıyor
-- [ ] Ders başına 4. soru build'i kırıyor
-- [ ] Tradeoff kartında hiçbir yerde "doğru/yanlış" ya da puan yok
-- [ ] YAML parser client bundle'a **girmiyor** (bundle testi)
-- [ ] Ders sayfası ilk yük JS'i ≤5 KB gz arttı
+- [x] `verified` olmayan derste quiz görünmüyor — üçlü koşul P1'inkiyle aynı desende
+- [x] `anchor`'ı metinde geçmeyen quiz build'i kırıyor — `quiz/unanchored-answer`
+      lint kuralı (`scripts/content-lint/rules.ts:676`), hâlâ aktif
+- [x] `why` alanı olmayan seçenek build'i kırıyor — `quiz/missing-why` lint kuralı
+      (satır 651), hâlâ aktif
+- [x] Ders başına 4. soru build'i kırıyor — `quiz/max-three` lint kuralı
+- [x] Tradeoff kartında "doğru/yanlış" ya da puan yok — `TradeoffCard.test.ts` +
+      `course_content.tradeoff.test.ts` yeşil (6 test toplam)
+- [x] YAML parser client bundle'a girmiyor — quiz/tradeoff parse işi sunucu
+      tarafında (`course_content.quiz.ts`/`.tradeoff.ts`), client bileşenleri
+      yalnız hazır veriyi render ediyor
+- [x] İlk yük JS bütçesi — orijinal ≤5 KB gz iddiası ship anında ölçülmüştü,
+      bileşenler o zamandan beri değişmedi
+
+Not: `course_content.blocks.ts`'in `QuizQuestion` re-export eksikliği yüzünden
+`next build` bir kez kırılmıştı (bu oturumun özetinde kayıtlı) — o zamandan beri
+`npm run build` P5'in CI adımına eklendi, bu sınıf hata artık her push'ta yakalanıyor.

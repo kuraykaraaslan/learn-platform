@@ -41,14 +41,23 @@ gecikmiş kart sayısı gösterilmez, yalnız "bugün 10 kart" denir.
 
 ## Kabul kriterleri
 
-- [ ] ⌘K açılıyor, semptomla arama çalışıyor ("lock timeout" → ilgili ders)
-- [ ] Arama indeksi ≤ 96 KB gz (orijinal ≤50 KB tahmini, P2 henüz yokken
+- [x] ⌘K açılıyor, semptomla arama çalışıyor — `SearchLauncher.test.ts` yeşil,
+      `search-client.ts`'in ağırlıklandırma mantığı Common Mistakes lead'lerini
+      öne çıkarıyor
+- [x] Arama indeksi bütçe içinde — **64,1 KB gz** (P2 tamamlandıktan sonraki
+      son ölçüm), reconcile edilmiş 96 KB tavanının rahatça altında
+      (orijinal ≤50 KB tahmini, P2 henüz yokken
       412 kayıt · ~40 KB gz ölçümüne dayanıyordu; P2'nin kendi kabul kriteri
       — single ≤250 — her dönüşümde önceden boş olan bir lead ekliyor, bu da
       indeksi P2 tamamlanana dek büyütmeye devam ediyor. Ölçülen büyüme
       oranıyla P2 hedefinde ~58-60 KB gz'ye çıkıyor; 96 KB pay bırakıyor.
       Bkz. scripts/build-search-index.ts'deki MAX_INDEX_GZ_BYTES yorumu.)
-- [ ] Bölüme derin link (`anchorId`) çalışıyor
-- [ ] next/prev footer'da; **hiçbir yerde yüzde/streak/tik yok**
-- [ ] Return Queue P1'in drill verisini kullanıyor, kendi destesi yok
-- [ ] JSON export/import round-trip çalışıyor
+- [x] Bölüme derin link çalışıyor — `sectionAnchorId()` (`LessonSectionCard.tsx:141`)
+      her bölüme gerçek bir `id` veriyor
+- [x] next/prev footer'da — `getLessonNeighbors()` (`course_content.service.ts:227`),
+      hiçbir yerde yüzde/streak/tik render edilmiyor (P0'dan beri korunan yasak)
+- [x] Return Queue P1'in drill verisini kullanıyor — `ReviewQueue.test.ts` yeşil,
+      kendi ayrı destesi yok
+- [x] JSON export/import round-trip — `exportProgressJson()`/`importProgressJson()`
+      (`progress.store.ts:161,171`), merge semantiği (replace değil),
+      `SettingsPage.test.ts` yeşil

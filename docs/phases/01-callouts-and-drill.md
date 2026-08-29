@@ -165,15 +165,32 @@ inanca çevirir."*
 
 ## Kabul kriterleri
 
-- [ ] `npm run content:check` yeşil, snapshot kımıldamadı
-- [ ] `parseMistakes` 1746 maddede çalışıyor; 705'i drill'lenebilir sınıflanıyor
-- [ ] `verified` olmayan derste drill **açılmıyor**, bugünkü kart görünüyor
-- [ ] `single` maddeler düz liste, düğme değil
-- [ ] "Hepsini aç" tercihi sayfa yenilenince hatırlanıyor
-- [ ] `stamp-verified.ts` elle düzenlenmiş bir `verified`'ı reddediyor
-- [ ] `progress.store.test.ts` `completed` eklemeye karşı koruyor
-- [ ] `> [!WARNING]` callout kartı olarak render oluyor, düz metin değil
-- [ ] Klavyeyle gezinilebiliyor; `aria-expanded` doğru
+- [x] `npm run content:check` yeşil, snapshot kımıldamadı — 29 P2 batch'inin
+      her birinde tekrar doğrulandı
+- [x] `parseMistakes` çalışıyor — **P2 tamamlandıktan sonraki güncel rakamlar**:
+      1772 madde, 1631'i drill'lenebilir sınıflanıyor (%92,0 — P2 öncesi %40,4'ten).
+      Orijinal 1746/705 rakamı P1'in ship anındaki baseline'dı, mekanizma değişmedi
+- [x] `verified` olmayan derste drill **açılmıyor** — üçlü koşul hâlâ yerinde,
+      `drill/unverified-lesson` lint kuralı hâlâ aktif
+- [x] `single` maddeler düz liste, düğme değil — P2 bu formu kasıtlı olarak
+      140'a kadar düşürdü, kalan `single` maddeler hâlâ düz liste render oluyor
+- [x] "Hepsini aç" tercihi sayfa yenilenince hatırlanıyor — `useHydrated` +
+      localStorage mekanizması değişmedi
+- [x] `stamp-verified.ts` elle düzenlenmiş bir `verified`'ı reddediyor —
+      bu oturumda her batch'te restamp/lint döngüsüyle fiilen test edildi
+- [x] `progress.store.test.ts` koruyor — `progress.store.ts` P10-P12'de genişledi
+      (`reviewBox`, export/import) ama pin edilmiş testler hâlâ yeşil
+- [x] `> [!WARNING]` callout kartı olarak render oluyor — `remark-callouts.test.ts`
+      hâlâ yeşil (9 test)
+- [x] Klavyeyle gezinilebiliyor; `aria-expanded` doğru — bileşen değişmedi
+
+## Güncelleme (P2 sonrası)
+
+Bu dosyanın "Dürüst beyan" bölümü **412 dersi değil, 215 dersi** kapsadığını
+söylüyordu ve "P2'ye kadar öyle raporlanır" diyordu. P2 tamamlandı
+(`docs/phases/02-bold-lead-pass.md`): artık **402/412 ders en az 1 drill'lenebilir
+madde içeriyor**, 380'i ise ≥2 içeriyor. Kapsam beyanı artık gerçeği yansıtmıyor —
+korpus fiilen 412 dersin neredeyse tamamında interaktif.
 
 ## Riskler
 

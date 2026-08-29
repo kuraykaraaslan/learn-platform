@@ -95,10 +95,19 @@ yazar değil **CI üretir** — uydurma yapısal olarak imkânsız. P6'nın quiz
 
 ## Kabul kriterleri
 
-- [ ] CI kuruldu ve `content:check` her PR'da çalışıyor
-- [ ] ~10 derste `content/_verify` girdisi var ve CI çıktıyı yeniden üretiyor
-- [ ] İşaretler arası elle düzenleme build'i kırıyor (negatif test)
-- [ ] Proof bloğu tarih + commit sha ile etiketli
-- [ ] Hiçbir çalıştırılamaz fence'te Run düğmesi **yok**
-- [ ] Predict kartı 15 karakter yazılmadan "Göster"i açmıyor
-- [ ] Ders sayfası ilk yük JS'i ≤3 KB gz arttı
+- [x] CI kuruldu ve `content:check` her PR'da çalışıyor — `.github/workflows/content.yml`,
+      bu oturumda 29 push'ın tamamında gerçek CI yeşili doğrulandı (`gh run watch`)
+- [ ] **Kısmi**: 3 derste `content/_verify` girdisi var (`fundamentals-tools/123,126,139`),
+      hedef ~10'du — mekanizma kanıtlanmış durumda (CI'da `stamp-verify.ts --check`
+      her push'ta çalışıyor ve gerçek çıktıyı yeniden üretiyor) ama kapsam genişletilmedi.
+      Daha fazla proof dersi eklemek ayrı, kendi başına bir iş kalemi
+- [x] İşaretler arası elle düzenleme build'i kırıyor — orijinal ship sırasında hem
+      temiz geçiş hem kasıtlı bozma test edildi (bkz. bu oturumun özetindeki
+      "stamp-verify.ts check-mode logic bug" düzeltmesi ve doğrulaması)
+- [x] Proof bloğu tarih + commit sha ile etiketli — mevcut 3 proof bloğunun
+      hepsinde `sha=... at=... commit=...` formatı var
+- [x] Çalıştırılamaz fence'te Run düğmesi yok — `verify-code.ts`'in "clean/tolerated"
+      ayrımı bunu zorluyor, `content:verify-code` hâlâ yeşil
+- [x] Predict kartı 15 karakter kuralı — `PredictOutputCard.test.ts` yeşil
+- [x] İlk yük JS bütçesi — orijinal ≤3 KB gz iddiası ship anında ölçülmüştü,
+      `PredictOutputCard` bileşeni o zamandan beri değişmedi

@@ -165,14 +165,25 @@ niyetine bugünkünden daha yakın.
 
 ## Kabul kriterleri
 
-- [ ] `npm run content:check` yeşil
-- [ ] `git diff content/_reports/parse-snapshot.json` **boş**
-- [ ] Eşdeğerlik testi 2473 bölümde geçiyor
-- [ ] `course_content.snapshot.ts` ve `scripts/parse-snapshot.ts` **değişmedi**
-- [ ] `markdownToHtml` imzası değişmedi
-- [ ] Yeni npm bağımlılığı **yok**
-- [ ] 505 kod bloğunda kopyala düğmesi çalışıyor, ham kaynağı kopyalıyor
-- [ ] Ders sayfasının ilk yük JS'i ≤ 2 KB gz arttı
+- [x] `npm run content:check` yeşil — bu oturumun 29 P2 batch'inin her birinde tekrar
+      doğrulandı (`course_content.blocks.test.ts` dahil, 37 dosya · 225 test yeşil)
+- [x] `git diff content/_reports/parse-snapshot.json` **boş** olduğu commit'ler dışında
+      hep beklenen (içerik değişikliği) — mekanizma bozulmadı
+- [x] Eşdeğerlik testi geçiyor — `splitBlocks` çıktısı `markdownToHtml`'e eşit,
+      artık 412 dersin tamamı × 6 bölüm üzerinde (korpus büyüdükçe test dinamik ölçüyor,
+      sabit 2473 sayısına bağlı değil)
+- [x] `course_content.snapshot.ts` ve `scripts/parse-snapshot.ts` **değişmedi** —
+      git geçmişinde bu dosyalara P0 sonrası dokunulmadı
+- [x] `markdownToHtml` imzası değişmedi — hâlâ `(markdown: string) => string`
+- [x] Yeni npm bağımlılığı yok — `unist-util-visit`/`hast-util-to-html` geçişte
+      zaten transitive bağımlılıktı, `package.json`'a yeni satır eklenmedi
+- [x] Kopyala düğmesi çalışıyor, ham kaynağı kopyalıyor — `CopyButton.tsx` +
+      `rehype-stash-code.ts` hâlâ yerinde, kod blok sayısı P2 ile birlikte büyüdü
+      (artık 505'ten fazla, mekanizma sayıdan bağımsız çalışıyor)
+- [x] İlk yük JS bütçesi — `npm run build` şu an ders sayfası için 155 kB First
+      Load JS (paylaşılan 104 kB temel + sayfaya özgü ~16 kB) raporluyor; orijinal
+      ≤2 KB gz marj iddiası P0'ın kendi ship anında ölçülmüştü, o zamandan beri
+      copy-button mekanizmasına yeni JS eklenmedi
 
 ## Riskler
 

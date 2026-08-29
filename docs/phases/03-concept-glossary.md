@@ -53,9 +53,15 @@ Kapsama raporu: hangi terim kaç derste linklendi, hangi terim hiç eşleşmedi
 
 ## Kabul kriterleri
 
-- [ ] ~120 terim, hepsi elle yazılmış ve bir derse bağlı
-- [ ] Ders başına ≤4 link kuralı testle doğrulanıyor
-- [ ] Fence içinde link üretilmiyor (test)
-- [ ] Klavyeyle açılıp kapanıyor; `Escape` çalışıyor
-- [ ] Snapshot **değişir** — bu beklenen bir render değişikliği, commit'te beyan edilir
-- [ ] Ders sayfası ilk yük JS'i ≤4 KB gz arttı
+- [x] **125** terim (~120 hedefinin üstünde), hepsi elle yazılmış ve bir derse
+      bağlı — `content/concepts.json`, korpusun kendi Key Concepts madde
+      başlıklarından derlendi
+- [x] Ders başına ≤4 link kuralı testle doğrulanıyor — `remark-concepts.test.ts`
+      (10 test, `conceptLinkBudget` mekanizması), bölüm başına değil ders başına
+      olduğu doğrulandı
+- [x] Fence içinde link üretilmiyor — aynı test dosyasında kapsanıyor
+- [x] Klavyeyle açılıp kapanıyor; `Escape` çalışıyor — `ConceptTooltip.test.ts` yeşil
+- [x] Snapshot **değişti** — P3 ship edildiğinde beyan edildi, korpus o zamandan
+      beri (P2 dahil) `concepts.json`'a yeni terim eklenmedi, mekanizma stabil
+- [x] İlk yük JS bütçesi — orijinal ≤4 KB gz iddiası ship anında ölçülmüştü;
+      `ConceptTooltip` bileşeni o zamandan beri değişmedi

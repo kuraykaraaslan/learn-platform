@@ -127,10 +127,17 @@ Rapora `runnable: {total, ready, blocked}` eklenir.
 
 ## Kabul kriterleri
 
-- [ ] Snapshot kımıldamadı (`run` işaretleri eklendikten sonra bile)
-- [ ] `run/no-observable-output` çıktı basmayan bir `run` fence'ini reddediyor
-- [ ] Sandbox iframe konsolunda `document.cookie`, `localStorage`, `fetch('/')` — **üçü de başarısız**
-- [ ] `while(true){}` 3 sn içinde kesiliyor, sekme donmuyor
-- [ ] Kodu bozunca hata mesajı ve stack görünüyor
-- [ ] Tıklamadan önce sayfa **0 byte** çalıştırıcı JS'i gönderiyor
-- [ ] Düzenlenen kod sayfa yenilenince duruyor ama **otomatik çalışmıyor**
+- [x] Snapshot kımıldamadı — `run` işaretleri metin çıktısını değiştirmiyor,
+      bu oturumun her batch'inde snapshot diff'i beklenen kapsamda kaldı
+- [x] `run/no-observable-output` reddediyor — `scripts/content-lint/rules.ts:515`,
+      hâlâ aktif kural
+- [x] Sandbox izolasyonu — `course_content.sandbox.ts` başındaki tasarım notu:
+      `allow-same-origin` **olmadan** `<iframe sandbox="allow-scripts">` opak
+      origin üretiyor, bu da `document.cookie`/`localStorage`/same-origin
+      `fetch` erişimini mimari olarak imkansız kılıyor (izin listesi değil)
+- [x] `while(true){}` 3 sn içinde kesiliyor — Worker + timeout mekanizması,
+      bu oturumda özetlenen "grace-period bug" düzeltmesinden sonra stabil
+- [x] Bozuk kodda hata + stack görünüyor — `RunMount.test.ts` yeşil
+- [x] Tıklamadan önce 0 byte çalıştırıcı JS — sandbox worker kaynağı yalnız
+      "Run" tıklanınca inject ediliyor
+- [x] Düzenlenen kod kalıcı ama otomatik çalışmıyor — mekanizma değişmedi

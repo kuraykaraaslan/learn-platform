@@ -56,8 +56,18 @@ affordance'ı; `contracts-pricing-legal/205`, `business-finance-solo-ops/319`,
 
 ## Kabul kriterleri
 
-- [ ] Recall yalnız `verified` derslerde görünüyor
-- [ ] 15 karakter yazılmadan "Göster" açılmıyor
-- [ ] `expr.ts` `eval` içermiyor (grep testi) ve birim testleri var
-- [ ] `CalcCard` yalnız onu gerektiren dersler yazıldıktan sonra merge edildi
-- [ ] Ders sayfası ilk yük JS'i ≤6 KB gz arttı
+- [x] Recall yalnız `verified` derslerde görünüyor — üçlü koşul aynı desende
+- [x] 15 karakter kuralı — `MIN_ANSWER_LENGTH = 15` (`RecallCard.tsx:14`),
+      `RecallCard.test.ts` bunu doğruluyor
+- [ ] **Yapılmadı**: `CalcCard`/`expr.ts` hiç yazılmadı — bu fazın kendi kuralı
+      ("`CalcCard` yalnız onu gerektiren dersler yazıldıktan sonra merge edildi")
+      gereği kasıtlı olarak ertelendi. Gerektiren üç ders
+      (`contracts-pricing-legal/205`, `business-finance-solo-ops/319` — T1.7
+      zarar listesinde, ikame gerekiyor —, `saas-business-skills/86`) hiçbiri
+      henüz CalcCard'ı gerektirecek şekilde yeniden yazılmadı
+- [x] İlk yük JS bütçesi (Recall için) — orijinal ≤6 KB gz iddiası ship
+      anında ölçülmüştü, `RecallCard` o zamandan beri değişmedi
+
+Not: Bu fazın "CalcCard" yarısı P11'in kendi kuralı gereği bilinçli olarak
+tamamlanmamış durumda — önkoşul dersler yazılana kadar merge edilmemesi
+gereken bir bileşen, eksik bir uygulama değil.

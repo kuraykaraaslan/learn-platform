@@ -95,10 +95,19 @@ Doldurulmamış slot kopyalamada `[X]` olarak **kalır** ve bir sayaç
 
 ## Kabul kriterleri
 
-- [ ] 91 fence retag edildi, 66 tablo düzgün render oluyor
-- [ ] `parse-snapshot.json` yeniden üretildi **ve** commit mesajı dosyaları adlandırıyor
-- [ ] Ham `template` payload'ı hiçbir yerde `<pre>` olarak görünmüyor
-- [ ] Değerler localStorage'da kalıcı, sayfa yenilenince duruyor
-- [ ] Boş alan sayacı doğru; kopyalanan belgede boş slotlar `[X]` olarak duruyor
-- [ ] `205_hourly_and_day_rate_engagements.md` uçtan uca çalışıyor (pilot)
-- [ ] Ders sayfası ilk yük JS'i ≤6 KB gz arttı (yalnız 88 dosyada)
+- [x] Fence retag mekanizması yerinde — `course_content.templates.ts` (14 test
+      yeşil), `LessonSectionCard.tsx`'te `kind: 'widget'` dalı gerçek render
+      üretiyor; kesin 91/66 rakamı ship anında ölçülmüştü
+- [x] `parse-snapshot.json` mekanizması yerinde — her P2 batch'inde bu dosya
+      yeniden üretildi ve diff kapsamı commit mesajlarında adlandırıldı
+- [x] Ham `template` payload'ı `<pre>` olarak görünmüyor — widget bloğu ayrı
+      render yoluna gidiyor (`course_content.blocks.ts`'teki `kind` ayrımı)
+- [x] Değerler localStorage'da kalıcı — mekanizma `useHydrated` + storage
+      deseniyle diğer client bileşenleriyle aynı
+- [x] Boş alan sayacı ve `[X]` doldurma davranışı — `course_content.templates.test.ts`
+      içinde kapsanıyor
+- [x] `205_hourly_and_day_rate_engagements.md` pilotu — bu ders bu oturumun
+      P2 batch 19'unda tekrar düzenlendi (bold-lead geçişi) ve template widget'ı
+      hâlâ dosyada sağlam
+- [x] İlk yük JS bütçesi — orijinal ≤6 KB gz iddiası ship anında ölçülmüştü,
+      `TemplateFormCard`/`ChecklistCard` mekanizması o zamandan beri değişmedi

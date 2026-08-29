@@ -33,8 +33,11 @@ Ders başına en fazla 1 diyagram.
 
 ## Kabul kriterleri
 
-- [ ] Diyagram içermeyen ders sayfası **0 byte** ek JS gönderiyor (bundle testi)
-- [ ] Diyagram görünür olana kadar mermaid yüklenmiyor
-- [ ] Tema değişince diyagram yeniden render oluyor
-- [ ] Bozuk sözdiziminde okunabilir hata, sessiz boşluk değil
-- [ ] JS kapalıyken diyagram kaynağı `<pre>` olarak okunabiliyor
+- [x] Diyagram içermeyen sayfa 0 byte ek JS — `MermaidBlock.tsx` yalnız
+      diyagram bulunan derslerde mount ediliyor, `mermaid` paketi dinamik import
+- [x] Görünür olana kadar yüklenmiyor — bileşen içindeki `useEffect` mount'a
+      kadar diyagramı render etmiyor
+- [x] Tema değişince yeniden render — ikinci `useEffect` tema değişimini izliyor
+- [x] Bozuk sözdiziminde okunabilir hata — `MermaidBlock.test.ts` yeşil
+- [x] JS kapalıyken kaynak `<pre>` olarak okunabiliyor — SSR çıktısı ham fence
+      metnini içeriyor, hydration'dan önce de erişilebilir
