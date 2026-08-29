@@ -15,7 +15,7 @@ export default async function CourseOverviewRoute({
   const summary = CourseContentService.getCourseSummary(courseSlug);
   if (!summary) notFound();
 
-  const items = CourseContentService.listLessonItems(courseSlug);
+  const lessons = CourseContentService.listLessonCards(courseSlug);
 
-  return <CourseOverviewPage summary={summary} items={items} />;
+  return <CourseOverviewPage summary={summary} lessons={lessons} />;
 }

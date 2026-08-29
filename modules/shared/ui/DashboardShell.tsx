@@ -16,9 +16,8 @@
 // This file stays a Server Component (no "use client") so a page.tsx/layout.tsx
 // Server Component can render it directly with server-computed nav data.
 import type { AppSidebarNavGroup } from '@kui/app/AppSidebar';
-import { AppShell } from '@kui/app/AppShell';
-import { AppSidebar } from '@kui/app/AppSidebar';
 import { AppTopBar } from '@kui/app/AppTopBar';
+import { DashboardChrome } from './DashboardChrome';
 import { ThemeToggle } from './ThemeToggle';
 
 type DashboardShellProps = {
@@ -42,11 +41,12 @@ export function DashboardShell({
   children,
 }: DashboardShellProps) {
   return (
-    <AppShell
+    <DashboardChrome
       logo={logo}
       compactLogo={compactLogo}
       mobileSidebarTitle={mobileSidebarTitle}
-      sidebar={navGroups ? <AppSidebar navGroups={navGroups} activeId={activeId} /> : undefined}
+      navGroups={navGroups}
+      activeId={activeId}
       topbar={
         <AppTopBar>
           <div className="flex-1" />
@@ -58,6 +58,6 @@ export function DashboardShell({
       }
     >
       {children}
-    </AppShell>
+    </DashboardChrome>
   );
 }

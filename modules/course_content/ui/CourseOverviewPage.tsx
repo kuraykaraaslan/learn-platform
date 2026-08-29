@@ -1,54 +1,75 @@
 import Link from 'next/link';
 import { Badge } from '@kui/ui/Badge';
-import { BRACKET_LABELS, BRACKET_ORDER, type CourseSummary, type ManifestItem } from '../course_content.types';
-
-type Item = ManifestItem & { lessonSlug: string };
+import { BracketBar, bracketSummary } from './BracketBar';
+import { LessonFeatureChips } from './LessonFeatureChips';
+import { BRACKET_LABELS, type CourseSummary, type LessonCard } from '../course_content.types';
 
 export function CourseOverviewPage({
   summary,
-  items,
+  lessons,
 }: {
   summary: CourseSummary;
-  items: Item[];
+  lessons: LessonCard[];
 }) {
+  const ordered = [...lessons].sort((a, b) => a.id - b.id);
+  const totalMinutes = ordered.reduce((sum, l) => sum + l.minutes, 0);
+  const totalDrills = ordered.reduce((sum, l) => sum + l.features.drills, 0);
+
   return (
     <div className="max-w-3xl mx-auto">
-      <h1 className="text-2xl font-semibold text-text-primary mb-2">{summary.title}</h1>
-      <p className="text-text-secondary mb-6">{summary.description}</p>
+      <div className="mb-6 overflow-hidden rounded-lg border border-border bg-surface-raised">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={summary.cover}
+          alt=""
+          className="aspect-[16/6] w-full object-cover"
+          onError={undefined}
+        />
+        <div className="p-5">
+          <h1 className="text-2xl font-semibold text-text-primary">{summary.title}</h1>
+          <p className="mt-1 text-text-secondary">{summary.description}</p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
-        {BRACKET_ORDER.map((bracket) => (
-          <div key={bracket} className="rounded-lg border border-border bg-surface-raised p-3">
-            <div className="text-xs text-text-secondary mb-1">{BRACKET_LABELS[bracket]}</div>
-            <div className="text-xl font-semibold text-text-primary">
-              {summary.bracketCounts[bracket]}
-            </div>
+          <div className="mt-4 max-w-xs">
+            <BracketBar bracketCounts={summary.bracketCounts} total={summary.count} />
+            <p className="mt-1.5 text-xs text-text-secondary">
+              {summary.count} lessons · {bracketSummary(summary.bracketCounts)} · ~{totalMinutes} min
+              {totalDrills > 0 && ` · ${totalDrills} drills`}
+            </p>
           </div>
-        ))}
+        </div>
       </div>
 
-      {/* Authored order (manifest id), not bracket order: grouping by bracket
-          moved lessons up to 37 positions out of the sequence they were
-          written in. The bracket travels with the lesson as a badge. */}
-      <ol className="space-y-1">
-        {[...items]
-          .sort((a, b) => a.id - b.id)
-          .map((item, index) => (
-            <li key={item.id}>
-              <Link
-                href={`/courses/${summary.slug}/${item.lessonSlug}`}
-                className="flex items-center gap-3 rounded-md px-3 py-2 text-sm text-text-primary hover:bg-surface-overlay transition-colors"
-              >
-                <span className="w-6 shrink-0 text-right text-xs tabular-nums text-text-disabled">
+      <ol className="space-y-1.5">
+        {ordered.map((lesson, index) => (
+          <li key={lesson.id}>
+            <Link
+              href={`/courses/${summary.slug}/${lesson.lessonSlug}`}
+              className="block rounded-md px-3 py-2.5 hover:bg-surface-overlay transition-colors"
+            >
+              <div className="flex items-baseline gap-3">
+                <span className="w-5 shrink-0 text-right text-xs tabular-nums text-text-disabled">
                   {index + 1}
                 </span>
-                <span className="flex-1">{item.title}</span>
+                <span className="flex-1 text-sm font-medium text-text-primary">{lesson.title}</span>
                 <Badge variant="neutral" size="sm">
-                  {BRACKET_LABELS[item.bracket]}
+                  {BRACKET_LABELS[lesson.bracket]}
                 </Badge>
-              </Link>
-            </li>
-          ))}
+              </div>
+
+              {lesson.teaser && (
+                <p className="mt-1 pl-8 text-xs text-text-secondary line-clamp-1">{lesson.teaser}</p>
+              )}
+
+              <div className="mt-1.5 flex flex-wrap items-center gap-x-2 gap-y-1 pl-8">
+                <LessonFeatureChips features={lesson.features} />
+                <span className="text-[10px] text-text-disabled">
+                  ~{lesson.minutes} min
+                  {lesson.verified !== true && ' · draft'}
+                </span>
+              </div>
+            </Link>
+          </li>
+        ))}
       </ol>
     </div>
   );

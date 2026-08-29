@@ -18,6 +18,7 @@ function baseLesson(overrides: Partial<Lesson> = {}): Lesson {
     category: 'Testing',
     courseSlug: 'test-course',
     lessonSlug: 'test',
+    minutes: 5,
     blocks: {
       whatItIs: [],
       keyConcepts: [],

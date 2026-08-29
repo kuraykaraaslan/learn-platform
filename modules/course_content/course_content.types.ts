@@ -1,6 +1,7 @@
 import type { LessonBlock } from './course_content.blocks';
 import type { LessonMistake } from './course_content.mistakes';
 import type { ConceptSummary } from './course_content.concepts';
+import type { CourseSectionId } from './course_content.sections';
 
 export type Bracket = '0-1' | '1-3' | '3-7' | '7-10';
 
@@ -34,6 +35,57 @@ export type CourseSummary = {
   description: string;
   count: number;
   bracketCounts: Record<Bracket, number>;
+  /** Which home-page track this course sits in (course_content.sections.ts). */
+  section: CourseSectionId;
+  /** The bracket holding the most lessons — the card's "mostly N yrs" hint. */
+  dominantBracket: Bracket;
+  /** Static cover path under public/, always /covers/<slug>.webp. */
+  cover: string;
+};
+
+/** One home-page track: a heading, a blurb, and its courses in reading order. */
+export type CourseSection = {
+  id: CourseSectionId;
+  title: string;
+  blurb: string;
+  courses: CourseSummary[];
+};
+
+/** Which interactive mechanisms a lesson actually contains — surfaced as chips
+ *  on the course-overview list so a reader can see a lesson isn't just prose. */
+export type LessonFeatures = {
+  /** Predict-then-reveal Common Mistakes drills (0 when the lesson is unverified). */
+  drills: number;
+  checklist: boolean;
+  template: boolean;
+  quiz: boolean;
+  tradeoff: boolean;
+  recall: boolean;
+  diff: boolean;
+  /** A runnable JS/TS snippet (```… run). */
+  runnableCode: boolean;
+  /** A full runnable project (```… project — WebContainer). */
+  project: boolean;
+  /** A runnable SQL cell (PGlite). */
+  sql: boolean;
+  mermaid: boolean;
+};
+
+export type LessonCard = ManifestItem & {
+  lessonSlug: string;
+  /** First sentence of "What It Is", plain text. */
+  teaser: string;
+  /** Rounded reading-time estimate in minutes (prose only, ~200 wpm). */
+  minutes: number;
+  features: LessonFeatures;
+};
+
+/** Corpus-wide numbers for the home-page hero. Measured, not hardcoded. */
+export type CatalogStats = {
+  lessons: number;
+  courses: number;
+  drillableLessons: number;
+  conceptTerms: number;
 };
 
 export type LessonSections = {
@@ -48,6 +100,8 @@ export type LessonSections = {
 export type Lesson = ManifestItem & {
   courseSlug: string;
   lessonSlug: string;
+  /** Rounded reading-time estimate in minutes (prose only, ~200 wpm). */
+  minutes: number;
   blocks: Record<keyof LessonSections, LessonBlock[]>;
   mistakes: LessonMistake[];
   /** Only the concepts actually linked somewhere in this lesson (keyed by
