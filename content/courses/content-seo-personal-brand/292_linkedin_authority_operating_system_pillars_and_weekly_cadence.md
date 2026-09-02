@@ -7,6 +7,47 @@ Content pillars translate that positioning into something repeatable: four to si
 
 Cadence turns pillars into an actual habit that survives real client work. The default sustainable rhythm is three posts a week (Monday: problem/point-of-view, Wednesday: technical proof/case study, Friday: process/trust/personal lesson), five to ten meaningful comments per weekday, one proof asset a week, and one relationship-building action per weekday, reviewed weekly. A monthly rhythm should include roughly four problem posts, four technical posts, two case-study/proof posts, two process/trust posts, one soft offer, and one personal story — a mix, not an even split, because problem and technical posts do most of the buyer-attraction and credibility work. Two escape valves matter for a solo operator: a low-energy mode (one post, fifteen comments, one proof screenshot) for busy client weeks that keeps the account from going dark, and a short high-energy launch mode (four to five posts, a carousel, a demo video, heavier commenting and DMs) for two to three weeks around a new service or case study — never sustained indefinitely.
 
+```quiz
+- q: "One post draws twelve relevant comments from founders, agency owners and CTOs. Another goes viral with an audience that will never buy. Which is worth more?"
+  anchor: "Authority beats virality specifically because the goal is being trusted by the right dozen people, not liked by the wrong ten thousand"
+  options:
+    - text: "The viral one — reach compounds, and the right people eventually see it"
+      correct: false
+      why: "Reach into the wrong audience is not a slower route to the right one, and \"reached more people\" is not among the six outcomes an action is supposed to serve."
+    - text: "The twelve-comment one — trusted by the right dozen beats liked by the wrong ten thousand"
+      correct: true
+      why: "Twelve relevant comments is the conversation stage of the system doing its job."
+    - text: "Neither — engagement is a vanity metric whichever way it lands"
+      correct: false
+      why: "It is the audience that makes engagement count, not the number. Relevant comments from buyers are exactly what the system is built to produce."
+
+- q: "Which of these is NOT one of the six outcomes every LinkedIn action should serve?"
+  anchor: "being remembered, trusted, referred, contacted, shortlisted, or invited"
+  options:
+    - text: "Being shortlisted"
+      correct: false
+      why: "On the list, alongside remembered, trusted, referred, contacted and invited."
+    - text: "Maximizing likes and impressions"
+      correct: true
+      why: "The six-outcome framing exists precisely to rule this out, along with chasing virality and generic motivational content."
+    - text: "Being referred"
+      correct: false
+      why: "Also on the list — it is one of the six the whole cadence is built to produce."
+
+- q: "It is Wednesday, the slot calls for a technical post, and nothing you have carries a real insight. What do you do?"
+  anchor: "if a scheduled post has no real insight, turn it into a comment, a draft, or a DM instead of publishing filler"
+  options:
+    - text: "Post anyway — consistency is the whole point of a cadence"
+      correct: false
+      why: "Posting for the calendar's sake is the named anti-pattern. The cadence serves the six outcomes, not the other way round."
+    - text: "Turn it into a comment, a draft or a DM instead"
+      correct: true
+      why: "All three keep the idea working without spending credibility on filler."
+    - text: "Drop into low-energy mode for the rest of the month"
+      correct: false
+      why: "Low-energy mode is for busy client weeks, and it still includes a real post — one post, fifteen comments and a proof screenshot."
+```
+
 ## Key Concepts
 - **The seven-stage system**: positioning → profile trust → content pillars → consistent publishing → conversation → soft conversion → measurement.
 - **Six outcomes, not virality**: every action should aim to be remembered, trusted, referred, contacted, shortlisted, or invited — likes and impressions are not on this list.
@@ -60,3 +101,34 @@ Friday:    1 process/trust/personal post + weekly analytics review
 - Justin Welsh's LinkedIn content frameworks and newsletter — a widely followed, current practitioner source specifically for solo/creator LinkedIn strategy
 - *Influence* — Robert Cialdini: the foundational reference for why specific, consistent signals build more trust than broad, generic ones
 - [LinkedIn's own Creator resources](https://linkedin.com/business/marketing) — for platform-specific, first-party guidance that stays current with algorithm changes
+
+```recall
+- q: "List the seven stages of the LinkedIn authority system in order."
+  must:
+    - "positioning"
+    - "profile trust"
+    - "content pillars"
+    - "consistent publishing"
+    - "conversation"
+    - "soft conversion, then measurement"
+
+- q: "State the default weekly cadence in full."
+  must:
+    - "three posts a week — Monday problem/point-of-view, Wednesday technical proof, Friday process/trust"
+    - "five to ten meaningful comments per weekday"
+    - "one proof asset a week"
+    - "one relationship-building action per weekday"
+    - "reviewed weekly"
+
+- q: "Give the monthly content mix and say why it is deliberately uneven."
+  must:
+    - "roughly 4 problem, 4 technical, 2 case-study, 2 process, 1 soft offer, 1 personal story"
+    - "problem and technical posts do most of the buyer-attraction and credibility work"
+
+- q: "Name the two escape valves and the rule attached to each."
+  must:
+    - "low-energy mode — one post, fifteen comments, one proof screenshot, for busy client weeks"
+    - "its job is keeping the account from going dark"
+    - "high-energy launch mode — four to five posts, a carousel, a demo video, heavier commenting and DMs"
+    - "two to three weeks around a launch only, never sustained indefinitely"
+```

@@ -9,6 +9,47 @@ A working pillar system for a solo technical business typically spans five areas
 
 The payoff of pillars compounds slowly: after a few months of consistent pillar-mapped content, a stranger who reads five of your posts should be able to describe, unprompted, what you do and who you do it for. That's the actual test of whether pillars are working — not follower count, but whether the pattern is legible from the outside.
 
+```quiz
+- q: "Your pillars are listed as \"React\", \"Node.js\" and \"AI\". What is wrong with that?"
+  anchor: "A pillar is not a topic bucket, it is a positioning statement"
+  options:
+    - text: "Nothing — those are the technologies the work actually uses"
+      correct: false
+      why: "What the work uses is a tag cloud. A pillar has to express the buyer value and the kind of authority being built."
+    - text: "They are topic buckets, not positioning statements — they carry no buyer value"
+      correct: true
+      why: "\"Engineering Quality\" tells a reader what trust is being earned. \"React\" says nothing about why anyone should care."
+    - text: "There are too few — the default set is five"
+      correct: false
+      why: "Count is not the problem. Five technology names would fail for exactly the same reason three do."
+
+- q: "A candidate pillar runs out of ideas after six posts. What does that tell you?"
+  anchor: "generate at least 20 distinct post ideas without repeating itself"
+  options:
+    - text: "It is fine — six posts is a couple of months of content"
+      correct: false
+      why: "The test is not how long it lasts. A pillar that runs dry cannot compound into recognizable authority."
+    - text: "It fails the 20-idea test — the pillar is too narrow or too vague"
+      correct: true
+      why: "That is exactly what the test is for: a pillar is well-defined only if it can generate 20 distinct ideas without repeating itself."
+    - text: "It should be merged into another pillar to make up the count"
+      correct: false
+      why: "Merging may be the fix, but the finding comes first — as written, the pillar is not well-defined."
+
+- q: "What is the actual test of whether a pillar system is working?"
+  anchor: "a stranger who reads five of your posts should be able to describe, unprompted, what you do and who you do it for"
+  options:
+    - text: "Follower count rising month over month"
+      correct: false
+      why: "Named explicitly as the wrong measure. What matters is whether the pattern is legible from the outside, not how many people see it."
+    - text: "A stranger who reads five posts can describe, unprompted, what you do and who for"
+      correct: true
+      why: "That is the payoff pillars compound toward, and it is checkable without any platform metric."
+    - text: "Every post maps to exactly one pillar, with no secondary"
+      correct: false
+      why: "Mapping is the input discipline — one primary, optionally one secondary. Legibility from outside is the output."
+```
+
 ## Key Concepts
 - **Pillar vs. topic bucket**: A pillar expresses buyer value and positioning ("Engineering Quality"); a topic bucket is just a technology name ("React") with no argument attached.
 - **Primary and secondary pillar mapping**: Every content idea should map to one primary pillar and optionally one secondary pillar — if it maps to none, it's off-strategy or belongs on a different channel entirely.
@@ -64,3 +105,29 @@ sound impressive? If yes, discard or rewrite grounded in a real pattern.
 - *Building a StoryBrand* — Donald Miller: not content-specific, but the clearest explanation of why audience-value framing beats feature/topic framing in any positioning work
 - *They Ask, You Answer* — Marcus Sheridan: a practical case for building content pillars around the actual questions buyers ask before purchasing
 - [HubSpot's guide to "pillar pages and topic clusters"](https://blog.hubspot.com) — the SEO-adjacent version of the same idea, useful for seeing how pillars and search topics reinforce each other
+
+```recall
+- q: "Name the five default pillars for a technical solo business, with what each covers."
+  must:
+    - "product thinking — scope, MVPs, roadmap trade-offs"
+    - "engineering quality — architecture, security, testing, deployment discipline"
+    - "business automation — the operational pain that makes SMEs buy software"
+    - "client education — teaching prospects how to buy well, filtering bad-fit leads"
+    - "proof — case studies, before/after stories, decisions made visible"
+
+- q: "What question does every content idea have to answer before it gets written?"
+  must:
+    - "which of my four or five themes does this serve"
+    - "which audience does it move closer to hiring or referring me"
+
+- q: "An idea interests you but maps to no pillar. What are the two readings?"
+  must:
+    - "the pillar system itself needs revision"
+    - "or it belongs on a personal channel rather than the business one"
+
+- q: "Why should pillars evolve slowly rather than monthly?"
+  must:
+    - "pillars should change as the business changes"
+    - "changing them every month prevents any of them compounding"
+    - "recognizable authority is the thing that compounds"
+```

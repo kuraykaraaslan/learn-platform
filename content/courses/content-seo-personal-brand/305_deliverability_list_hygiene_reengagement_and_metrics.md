@@ -7,6 +7,47 @@ Re-engagement exists for the specific, common case where contacts stop opening, 
 
 Metrics close the loop on all of it, and the discipline that matters most is resisting vanity numbers. The priority order runs qualified replies, project inquiries, discovery calls, referrals, and case study clicks well above lead magnet conversions and list growth — with open rate explicitly useful but never the primary business metric, because a list can grow every month while the actual business outcomes it's supposed to produce quietly stall. A simple interpretation table turns raw numbers into action: high opens with low replies signals a CTA or relevance problem to fix; high unsubscribes signals a promise mismatch or a frequency that's too aggressive for what was set up front; low replies with high clicks signals a CTA that needs to ask for less friction; slow list growth signals the opt-in placement or lead magnet needs improvement, not that the newsletter itself is failing. The optimization cadence mirrors the hygiene cadence — monthly reviews of metrics, the best-performing topic, and one small sequence improvement; quarterly reviews of positioning, lead quality, and whether the lead magnet and welcome sequence still reflect where the business actually is now.
 
+```quiz
+- q: "Opens are high, replies are near zero. What does the interpretation table point at?"
+  anchor: "high opens with low replies signals a CTA or relevance problem to fix"
+  options:
+    - text: "The subject lines — they are clearly the weak point"
+      correct: false
+      why: "High opens mean the subject lines are already working. The problem is everything after the open."
+    - text: "The CTA, or the relevance of the content itself"
+      correct: true
+      why: "Those are the two things a reader who opened and then did nothing was failed by."
+    - text: "Sending frequency — cut it until replies recover"
+      correct: false
+      why: "Frequency is the answer to high unsubscribes, which signal a promise mismatch or a cadence more aggressive than what was set up front."
+
+- q: "A contact has stayed silent through a check-in and a close-the-loop message. What now?"
+  anchor: "one useful check-in, one final close-the-loop message, then suppress or reduce frequency"
+  options:
+    - text: "A third message with a deadline, to create some urgency"
+      correct: false
+      why: "Faked urgency is named as the wrong tone, and repeated chasing reads as exactly the desperation the whole trust-building system exists to avoid."
+    - text: "Suppress or reduce frequency — the cap has been reached"
+      correct: true
+      why: "The frequency rule caps re-engagement at two messages precisely so silence stays respected."
+    - text: "Move them into a different sequence and start the count over"
+      correct: false
+      why: "Same chase, different label. The cap is on contacting someone who has already gone quiet, not on any one sequence."
+
+- q: "Which ordering of metrics matches this lesson?"
+  anchor: "qualified replies, project inquiries, discovery calls, referrals, and case study clicks well above lead magnet conversions and list growth"
+  options:
+    - text: "List growth first, then open rate, then replies"
+      correct: false
+      why: "That inverts it. A list can grow every month while the business outcomes it exists to produce quietly stall."
+    - text: "Qualified replies and project inquiries first; list growth and open rate as supporting signals"
+      correct: true
+      why: "Open rate stays explicitly useful, but never as the primary business metric."
+    - text: "Open rate first — nothing else can happen until the mail is opened"
+      correct: false
+      why: "It is a precondition, not a goal, and the lesson demotes it deliberately for that reason."
+```
+
 ## Key Concepts
 - **Technical deliverability baseline**: SPF, DKIM, DMARC, a custom sending domain, and a consistent sender identity should be configured and verified before scaling send volume.
 - **Monthly vs. quarterly hygiene cadence**: bounces, unsubscribes, and duplicates get cleaned monthly; re-engagement campaigns and opt-in form review happen quarterly.
@@ -82,3 +123,32 @@ Slow list growth           → fix opt-in placement, sharpen the lead magnet
 - [Google's sender guidelines for bulk email](https://support.google.com/mail) — first-party detail on the authentication and reputation thresholds that affect inbox placement
 - [Litmus's guide to email deliverability](https://litmus.com) — a current, practitioner-level reference connecting technical setup to actual inbox outcomes
 - A practical guide to RFM (recency, frequency, monetary) segmentation — useful for deciding which inactive contacts are worth one more re-engagement attempt versus suppression
+
+```recall
+- q: "State the technical deliverability baseline that must exist before send volume scales."
+  must:
+    - "SPF, DKIM and DMARC"
+    - "a custom sending domain"
+    - "a consistent sender identity"
+    - "a visible unsubscribe link"
+    - "configured and verified before scaling, not discovered afterwards as the explanation"
+
+- q: "Split list hygiene into its monthly and its quarterly work."
+  must:
+    - "monthly: remove hard bounces, suppress unsubscribes, review inactive subscribers"
+    - "monthly: merge duplicates, check source quality"
+    - "quarterly: run a re-engagement campaign, suppress long-term inactive contacts"
+    - "quarterly: review the opt-in forms, check for deliverability warnings"
+
+- q: "Why is a modest predictable cadence safer than six quiet months followed by a big campaign?"
+  must:
+    - "the gap-then-blast pattern reads as spam to recipients and to inbox providers"
+    - "a predictable monthly-minimum cadence protects sender reputation over time"
+
+- q: "Give the right re-engagement message for an old lead, a past client, and an inactive subscriber."
+  must:
+    - "old lead — \"should I close the loop on this?\", referencing the specific previous conversation"
+    - "past client — a check-in on how the delivered system is working now"
+    - "inactive subscriber — ask whether a different topic focus would help, and say plainly that unsubscribing is fine"
+    - "tone throughout: contextual, brief, useful, explicitly respectful of silence"
+```
