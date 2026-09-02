@@ -109,6 +109,64 @@ export async function withIdempotency(
 }
 ```
 
+The pattern above, as a server you can actually retry against. Press Run, open
+the preview at `/provision`, and refresh it several times — then change the
+`?key=` and refresh again.
+
+```typescript run project entry=server.ts
+// server.ts
+import express from 'express';
+import { withIdempotency } from './libs/idempotency.ts';
+
+const app = express();
+
+// The side effect we must not repeat. In a real service this is the charge,
+// the provisioning call, the outbound email.
+let executions = 0;
+
+app.get('/provision', async (req, res) => {
+  const key = String(req.query.key ?? 'demo-key-1');
+
+  const { result, replayed } = await withIdempotency(key, async () => {
+    executions += 1;
+    return { tenantId: 1000 + executions, createdOnExecution: executions };
+  });
+
+  res.json({ key, replayed, executionsSoFar: executions, result });
+});
+
+app.listen(3000, () => {
+  console.log('Open the preview at /provision and refresh a few times.');
+  console.log('Then change ?key=something-else and watch executionsSoFar move.');
+});
+
+// libs/idempotency.ts
+// The store maps a key to the in-flight promise, not to the finished value.
+// That is what handles the concurrent case this lesson calls out: two
+// simultaneous requests with the same key must not both execute — the second
+// awaits the first one's result instead of starting its own.
+const inFlight = new Map<string, Promise<unknown>>();
+
+export async function withIdempotency<T>(
+  key: string,
+  operation: () => Promise<T>,
+): Promise<{ result: T; replayed: boolean }> {
+  const existing = inFlight.get(key);
+  if (existing) return { result: (await existing) as T, replayed: true };
+
+  const started = operation();
+  inFlight.set(key, started);
+  return { result: await started, replayed: false };
+}
+```
+
+`executionsSoFar` is the number that matters. It stays put no matter how many
+times you refresh with the same key, and moves the moment the key changes —
+that is the whole guarantee, visible without instrumentation. Note what the
+store holds: the in-flight promise rather than the finished value, which is what
+makes two simultaneous requests with one key resolve to a single execution
+instead of racing.
+
 ## When to Use
 - All payment and billing mutations — charges, refunds, subscription changes; pass idempotency keys to Stripe AND enforce them in your own handlers
 - Tenant provisioning and onboarding — a partial provision followed by a retry must not create duplicate database schemas

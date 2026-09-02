@@ -2,16 +2,16 @@
   "generatedFrom": "scripts/verify-code.ts",
   "defectsByClass": {},
   "totals": {
-    "fences": 290,
-    "clean": 65,
-    "onlyMissingModules": 225,
+    "fences": 294,
+    "clean": 67,
+    "onlyMissingModules": 227,
     "failing": 0,
     "lessonsAffected": 0,
     "privateAliasImports": 23
   },
   "runnable": {
-    "total": 11,
-    "ready": 11,
+    "total": 15,
+    "ready": 15,
     "blocked": 0
   },
   "lessons": []

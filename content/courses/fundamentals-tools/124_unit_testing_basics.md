@@ -49,6 +49,72 @@ it("rejects registration when email already exists", async () => {
 });
 ```
 
+Two functions and their tests, running for real. Press Run and read the output —
+`npm install` fetches vitest into the page, then the suite executes.
+
+```typescript run project entry=cart.test.ts cmd="npx vitest run"
+// cart.ts
+export type LineItem = { sku: string; unitPrice: number; qty: number };
+
+// The collaborator that talks to the outside world. In production this reads a
+// tax table over the network; in a unit test it gets replaced.
+export interface RateSource {
+  rateFor(country: string): number;
+}
+
+export function subtotal(items: LineItem[]): number {
+  return items.reduce((sum, item) => sum + item.unitPrice * item.qty, 0);
+}
+
+export function totalWithTax(items: LineItem[], country: string, rates: RateSource): number {
+  const base = subtotal(items);
+  return Math.round(base * (1 + rates.rateFor(country)) * 100) / 100;
+}
+
+// cart.test.ts
+import { describe, expect, it } from 'vitest';
+import { subtotal, totalWithTax, type LineItem, type RateSource } from './cart.ts';
+
+// A FAKE, not a mock: a real working implementation, just a tiny one. It makes
+// no assertions about how it was called, so a refactor that changes the number
+// of lookups does not break these tests.
+const fakeRates: RateSource = {
+  rateFor: (country) => (country === 'DE' ? 0.19 : 0),
+};
+
+const items: LineItem[] = [
+  { sku: 'A', unitPrice: 10, qty: 2 },
+  { sku: 'B', unitPrice: 5.5, qty: 4 },
+];
+
+describe('subtotal', () => {
+  it('multiplies each line and sums them', () => {
+    expect(subtotal(items)).toBe(42);
+  });
+
+  it('is 0 for an empty cart', () => {
+    expect(subtotal([])).toBe(0);
+  });
+});
+
+describe('totalWithTax', () => {
+  it('applies the rate the source returns', () => {
+    expect(totalWithTax(items, 'DE', fakeRates)).toBe(49.98);
+  });
+
+  it('leaves the total alone for a zero-rate country', () => {
+    expect(totalWithTax(items, 'US', fakeRates)).toBe(42);
+  });
+});
+```
+
+The tax lookup is replaced with a **fake** — a real, tiny implementation —
+rather than a mock. Try it: change `totalWithTax` to call `rateFor` twice and
+re-run. The tests still pass, because they assert on the returned total rather
+than on how the collaborator was used. A mock asserting "called exactly once"
+would have failed on a refactor that changed nothing the caller can observe,
+which is the over-mocking trap described above.
+
 ## When to Use
 - Any function/module with non-trivial branching logic — pure functions first, they're the cheapest tests to write
 - A service with an external dependency — use a fake/stub, reach for a full mocking framework only when a fake is impractical
