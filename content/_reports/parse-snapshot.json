@@ -1224,12 +1224,12 @@
       },
       "251_access_credentials_and_environment_handover.md": {
         "title": "5d9fd9e2d51f45c0",
-        "whatItIs": "0a16789b456cb05e",
+        "whatItIs": "0fdda6b7bbe23c6d",
         "keyConcepts": "e1e4ef22b259cd2f",
         "exampleCode": "d43e4c6757e8b2c2",
         "whenToUse": "61ae8dbede9ea1a7",
         "commonMistakes": "3e61a79fe372780a",
-        "furtherReading": "5c1e5f0ad8ca04ad"
+        "furtherReading": "c3e23bd4df3f4c2f"
       },
       "252_database_api_and_integration_handover_docs.md": {
         "title": "b0126545d6f8fed8",
@@ -1260,12 +1260,12 @@
       },
       "255_known_issues_and_troubleshooting_disclosure.md": {
         "title": "c61250d75a7bb00c",
-        "whatItIs": "537f52b95c9f1402",
+        "whatItIs": "ffdb9f075b14aeb9",
         "keyConcepts": "3eac44d9b66c3f28",
         "exampleCode": "a6bfb3ea53116d14",
         "whenToUse": "d921ab8c82ef49cf",
         "commonMistakes": "24046b1f8149eb30",
-        "furtherReading": "18d2831d2d3c8e4b"
+        "furtherReading": "9c685766d8ea3764"
       },
       "256_ownership_ip_and_source_code_handover.md": {
         "title": "8d166896e02cdba4",
@@ -1323,12 +1323,12 @@
       },
       "262_issue_triage_and_severity_classification.md": {
         "title": "0d52f5ee51260c24",
-        "whatItIs": "07f85a3fad6cc924",
+        "whatItIs": "130f21d16824979d",
         "keyConcepts": "bac4bf14d3e91edc",
         "exampleCode": "e5f97bbf13dcef08",
         "whenToUse": "a4c97def8f0c713c",
         "commonMistakes": "32b50c989bb351ff",
-        "furtherReading": "3ab0c550584be453"
+        "furtherReading": "537b4c030db26a82"
       },
       "263_offboarding_and_vendor_transition.md": {
         "title": "8021d8863a6beecb",
@@ -1350,12 +1350,12 @@
       },
       "265_support_operations_channels_slas_and_boundaries.md": {
         "title": "8d01d902d386018f",
-        "whatItIs": "745643a6c2cafe90",
+        "whatItIs": "1ef650c37c04982b",
         "keyConcepts": "5115593a4fde27f1",
         "exampleCode": "3f7de5eb760bd446",
         "whenToUse": "5a8f3437e2ff352c",
         "commonMistakes": "d27826247d2bdb27",
-        "furtherReading": "5df67a1d0d0107c5"
+        "furtherReading": "4c56904a913bff50"
       },
       "266_customer_success_metrics_and_health_reporting.md": {
         "title": "0659568244338c1f",
@@ -1386,12 +1386,12 @@
       },
       "269_scope_ladders_included_vs_priced_add_ons.md": {
         "title": "d4f7745135db0d72",
-        "whatItIs": "8ac481e28c35b5a9",
+        "whatItIs": "74aab001250db32d",
         "keyConcepts": "01fcb675f7d0749d",
         "exampleCode": "babe9535ebcba127",
         "whenToUse": "8fab6ad69891bac1",
         "commonMistakes": "b5aecc7835e7bc84",
-        "furtherReading": "5b3ce0b84bacf55e"
+        "furtherReading": "558a583bd7588c47"
       }
     },
     "content-seo-personal-brand": {

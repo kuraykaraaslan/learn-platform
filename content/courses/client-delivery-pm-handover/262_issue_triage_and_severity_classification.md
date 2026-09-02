@@ -7,6 +7,47 @@ The classification covers more ground than just "how bad is it." Severity (is pr
 
 Reproducibility deserves its own discipline because fixing what you can't actually observe is guesswork dressed up as engineering. Before attempting a fix, the goal is exact steps, an affected account, a timestamp, a screenshot or video, and the expected versus actual behavior — and when that information isn't available, the honest answer is "I cannot confirm the root cause yet, please send X, Y, Z" rather than either refusing to engage or guessing at a fix for a problem that hasn't been confirmed to exist in the form described. Ownership, meanwhile, is provisional until investigated — a report that sounds like a developer defect might turn out to be a client configuration issue or a third-party outage, and the classification should be willing to move as the investigation reveals more.
 
+```quiz
+- q: "A panicked message reports a cosmetic glitch; a calm one reports a production outage. What happens first?"
+  anchor: "starting to code before triage, unless the system is obviously down, risks solving the wrong problem first"
+  options:
+    - text: "Handle the panicked one first — to a client, perceived urgency is urgency"
+      correct: false
+      why: "Tone is not severity. Reacting to whichever message sounded most urgent is precisely what triage replaces."
+    - text: "Both go through the same classification step before anyone fixes anything"
+      correct: true
+      why: "The single exception is a system that is obviously down."
+    - text: "Fix the cosmetic one — it is quick, and clears the queue"
+      correct: false
+      why: "Quick is not a priority signal, and coding before triage leaves something more severe waiting unaddressed."
+
+- q: "An important workflow is broken but a workaround exists. Which severity, and what response does it get?"
+  anchor: "Severity 2 means an important workflow is broken but a workaround exists, triaged same business day"
+  options:
+    - text: "Severity 1 — immediate stabilization"
+      correct: false
+      why: "Severity 1 is a core business process blocked, with no workaround in the picture."
+    - text: "Severity 2 — triaged the same business day"
+      correct: true
+      why: "The workaround is what separates it from the immediate-stabilization tier above."
+    - text: "Severity 3 — scheduled normally, since nobody is blocked"
+      correct: false
+      why: "A workaround is not the same as being unaffected. Severity 3 is the normally-scheduled tier below this one."
+
+- q: "You cannot reproduce a reported bug from the description you were given. What is the honest response?"
+  anchor: "please send X, Y, Z\" rather than either refusing to engage or guessing at a fix"
+  options:
+    - text: "Ship a plausible fix — it beats another round trip with the client"
+      correct: false
+      why: "Fixing what you cannot observe is guesswork dressed up as engineering, and the problem may not exist in the form described."
+    - text: "Say you cannot confirm the root cause yet, and name exactly what you need"
+      correct: true
+      why: "Exact steps, an affected account, a timestamp, a screenshot or video, and expected versus actual behaviour."
+    - text: "Close it as not reproducible"
+      correct: false
+      why: "Refusing to engage is the other failure mode the lesson names, right alongside guessing."
+```
+
 ## Key Concepts
 - **Triage before fixing, unless the system is clearly down**: classifying first prevents solving the wrong problem or over-reacting to tone instead of actual severity
 - **Seven classification dimensions**: severity, business impact, reproducibility, environment, affected users, ownership, and whether it's included or billable
@@ -60,3 +101,34 @@ reproduce it or find it in the logs.
 - Google SRE Book, "Managing Incidents" — the severity-based triage model this lesson's classification structure is adapted from: https://sre.google/sre-book/managing-incidents/
 - Atlassian, "Incident severity levels" — practical reference for defining and communicating severity tiers: https://www.atlassian.com/incident-management/kpis/severity-levels
 - Steve Krug, *Don't Make Me Think* — indirectly relevant: on why some "bugs" are actually usability or training issues in disguise, worth ruling out before committing to a fix
+
+```recall
+- q: "Name the four severity levels and the response each one gets."
+  must:
+    - "Severity 1 — a core business process is blocked, immediate stabilization"
+    - "Severity 2 — an important workflow broken with a workaround, triaged same business day"
+    - "Severity 3 — scheduled normally"
+    - "Severity 4 — logged and batched, or reclassified as a change request if it is not actually a defect"
+
+- q: "Classification covers more ground than \"how bad is it\". What else?"
+  must:
+    - "business impact"
+    - "reproducibility"
+    - "which environment it is happening in"
+    - "how many users are affected"
+    - "who actually owns the fix"
+    - "whether it is inside existing scope or billable as new work"
+
+- q: "What does the reproducibility standard require before a fix is attempted?"
+  must:
+    - "exact steps"
+    - "an affected account and a timestamp"
+    - "a screenshot or video"
+    - "the expected versus actual behaviour"
+
+- q: "Why is ownership described as provisional until investigated?"
+  must:
+    - "a report that sounds like a developer defect may turn out to be client configuration"
+    - "or a third-party outage"
+    - "the classification should be willing to move as the investigation reveals more"
+```

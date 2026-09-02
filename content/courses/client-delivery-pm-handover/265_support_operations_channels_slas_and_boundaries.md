@@ -7,6 +7,47 @@ The channel hierarchy is simple by design: a primary channel (email or a support
 
 The other half of running support well is being honest about time. "Response" and "resolution" are not the same promise, and collapsing them is how freelancers back into commitments they can't keep: response is acknowledging and starting triage, resolution is when the thing is actually fixed, and resolution depends on severity, reproducibility, and how many third parties are involved. A severity table with realistic targets — same-day acknowledgment for a production-down issue, a few business days for a cosmetic one — replaces vague reassurance with something the client can actually plan around, and it protects against the single most common failure mode in solo support: promising availability that isn't priced, staffed, or sustainable.
 
+```quiz
+- q: "A client texts you a bug report outside the agreed channel. What is the right move?"
+  anchor: "it's to acknowledge receipt and redirect"
+  options:
+    - text: "Start working from the text — the report is what matters, not the channel"
+      correct: false
+      why: "Quietly working from it is one of the two named wrong moves: it leaves the request untracked, untriaged, and unbillable."
+    - text: "Acknowledge receipt, then redirect it to the support form with the affected page and steps"
+      correct: true
+      why: "Redirecting is not friction for its own sake — it is what makes triage, prioritization and billing possible at all."
+    - text: "Ignore it — the channel agreement exists precisely so this does not happen"
+      correct: false
+      why: "Ignoring is the other wrong move. The agreement is enforced by redirecting, not by silence."
+
+- q: "Which part of the channel hierarchy exists only under specific conditions?"
+  anchor: "an emergency channel (phone or direct message) that only exists if it's been explicitly agreed and, ideally, priced"
+  options:
+    - text: "The primary channel — email or a support form"
+      correct: false
+      why: "That is the unconditional default, and its job is creating a written record."
+    - text: "The emergency channel — phone or direct message"
+      correct: true
+      why: "It exists only if it has been explicitly agreed and, ideally, priced."
+    - text: "The secondary channel — a project board or ticketing system"
+      correct: false
+      why: "That covers anything needing tracking across more than one message. It is not conditional either."
+
+- q: "Your agreement says \"we respond within one business day\". What has that actually promised?"
+  anchor: "response is acknowledging and starting triage, resolution is when the thing is actually fixed"
+  options:
+    - text: "That the issue will be fixed inside a business day"
+      correct: false
+      why: "That is resolution. Collapsing the two is how freelancers back into commitments they cannot keep."
+    - text: "That it will be acknowledged and triage will start inside a business day"
+      correct: true
+      why: "Resolution is a separate promise, and it depends on severity, reproducibility and how many third parties are involved."
+    - text: "Nothing enforceable — response times are courtesy language"
+      correct: false
+      why: "A severity table with realistic targets is exactly what replaces vague reassurance with something a client can plan around."
+```
+
 ## Key Concepts
 - **Channel hierarchy, stated up front**: primary (email/support form) for the written record, secondary (board/ticket system) for tracked work, emergency (phone/DM) only if explicitly agreed
 - **Structured intake beats casual reports**: every request should capture environment, affected user/account, page or workflow, steps to reproduce, expected vs. actual result, evidence (screenshot/video), timing, and business impact — the first reply to an incomplete report is a request for the missing pieces, not a guess
@@ -75,3 +116,27 @@ maintenance boundary definitions this classification depends on.
 - Matthew Dixon, Nick Toman, Rick DeLisi, *The Effortless Experience* — on why reducing customer effort (clear channels, clear expectations) matters more than heroic individual responses
 - Atlassian, ITSM and service desk guidance on ticket triage and severity classification: https://www.atlassian.com/itsm/service-desk
 - AXELOS, ITIL Foundation guidance on service level definitions — the formal ancestor of the response/resolution distinction used in solo support operations: https://www.axelos.com/certifications/itil-service-management
+
+```recall
+- q: "Name the three channels and what each is for."
+  must:
+    - "primary — email or a support form, because it creates a written record"
+    - "secondary — a project board or ticketing system, for anything tracked across more than one message"
+    - "emergency — phone or direct message, only if explicitly agreed and ideally priced"
+
+- q: "Distinguish response from resolution, and say what resolution depends on."
+  must:
+    - "response is acknowledging and starting triage"
+    - "resolution is when the thing is actually fixed"
+    - "resolution depends on severity, reproducibility, and how many third parties are involved"
+
+- q: "A request arrives off-channel. Give the move, and why it is not bureaucracy for its own sake."
+  must:
+    - "acknowledge receipt, then redirect to the agreed channel with the affected page and steps"
+    - "neither ignoring it nor quietly working from it"
+    - "redirecting is what makes triage, prioritization and billing possible at all"
+
+- q: "What does the lesson name as the single most common failure mode in solo support?"
+  must:
+    - "promising availability that is not priced, staffed, or sustainable"
+```

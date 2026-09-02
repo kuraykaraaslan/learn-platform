@@ -7,6 +7,47 @@ The severity classification matters because it tells the reader how urgently to 
 
 Troubleshooting documentation extends this same instinct forward to the client's own team: for common categories like login problems, email delivery, and payment or webhook failures, a short list of possible causes and a numbered set of diagnostic steps lets non-technical staff self-serve the easy cases, and tells them explicitly when to escalate instead. This isn't about delivering broken work — it's about being honest about deferred items and operational realities so the people relying on the system are never blindsided by something the developer already knew about.
 
+```quiz
+- q: "A known limitation would be awkward to raise at handover. What does hiding it actually buy?"
+  anchor: "it just guarantees the client discovers it themselves, at a less convenient moment, with less trust in the relationship"
+  options:
+    - text: "A cleaner handover, in exchange for a small amount of future risk"
+      correct: false
+      why: "The limitation does not go away. The only thing lost is the chance to frame it first."
+    - text: "Nothing — they find it later, at a worse moment, with less trust than before"
+      correct: true
+      why: "The real choice is never whether limitations exist, only whether they are disclosed."
+    - text: "Time to quietly fix it before anyone notices"
+      correct: false
+      why: "Sometimes true, but the lesson is about deferred items nobody is going to fix — those need naming, not silence."
+
+- q: "A known-issue entry reads, in full: \"there's a known export issue\". What is missing?"
+  anchor: "is something a client's staff member can actually act on"
+  options:
+    - text: "Nothing — the client has been told"
+      correct: false
+      why: "Knowing something is wrong, without knowing how bad or what to do instead, is not usable information."
+    - text: "Severity, a concrete workaround, and who owns resolving it"
+      correct: true
+      why: "A workaround should be written as concretely as the fix: export one month at a time until pagination-based export exists."
+    - text: "A committed date for the fix"
+      correct: false
+      why: "A date would be nice, but without a severity the reader still cannot tell \"ignore this for now\" from \"escalate this immediately\"."
+
+- q: "An important workflow is broken, but the client's staff have a usable workaround. Which severity?"
+  anchor: "a blocker means the system is unusable, high means a critical workflow is broken, medium means something important has a workaround, and low is cosmetic"
+  options:
+    - text: "High — a critical workflow is broken, and that is what high means"
+      correct: false
+      why: "The existence of a usable workaround is exactly what the level below is defined by."
+    - text: "Medium — something important has a workaround"
+      correct: true
+      why: "The four levels are graded by how urgently the reader should react, and a workaround changes that answer."
+    - text: "Blocker — a broken core workflow blocks the business"
+      correct: false
+      why: "Blocker means the system is unusable. A workflow with a route around it is not that."
+```
+
 ## Key Concepts
 - **Disclosure over concealment**: a known limitation named at handover is a manageable fact; the same limitation discovered independently by the client later is a trust cost
 - **Four severity levels, always stated**: blocker (system unusable), high (critical workflow broken), medium (workaround exists), low (cosmetic) — every entry needs one of these, not just a description
@@ -70,3 +111,31 @@ export — scheduled for the Growth Care retainer's first sprint.
 - Google SRE Workbook, "Postmortem Culture: Learning from Failure" — on the value of honest, blameless disclosure over concealment: https://sre.google/workbook/postmortem-culture/
 - Atlassian, "How to write a good bug report" and adjacent troubleshooting-doc guidance — practical structure for severity and reproducibility: https://www.atlassian.com/software/jira/guides/issues/bug-tracking
 - Michael Nygard, *Release It!: Design and Deploy Production-Ready Software* — on designing for and documenting known failure modes rather than assuming a system is failure-free
+
+```recall
+- q: "Give the four severity levels and what each one means."
+  must:
+    - "blocker — the system is unusable"
+    - "high — a critical workflow is broken"
+    - "medium — something important has a workaround"
+    - "low — cosmetic"
+
+- q: "What must a known-issue entry carry besides the issue itself, and why is severity non-negotiable?"
+  must:
+    - "its severity"
+    - "its workaround, if one exists, written as concretely as the fix"
+    - "who owns eventually resolving it"
+    - "without a severity the reader cannot distinguish \"ignore this for now\" from \"escalate this immediately\""
+
+- q: "What does troubleshooting documentation add, and who is it for?"
+  must:
+    - "for common categories — login problems, email delivery, payment or webhook failures"
+    - "a short list of possible causes and a numbered set of diagnostic steps"
+    - "so non-technical staff can self-serve the easy cases"
+    - "and it says explicitly when to escalate instead"
+
+- q: "This is not about shipping broken work. What is it about?"
+  must:
+    - "being honest about deferred items and operational realities"
+    - "so the people relying on the system are never blindsided by something the developer already knew"
+```

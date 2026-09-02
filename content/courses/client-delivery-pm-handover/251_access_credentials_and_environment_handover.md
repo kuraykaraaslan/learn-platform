@@ -7,6 +7,47 @@ Ownership has three common models, and they carry very different risk profiles. 
 
 Environment and configuration documentation is the technical half of this same problem. Every project needs an `.env.example`, a variable table separating required from optional and public from secret, and explicit rotation notes — because a project without this cannot be safely deployed, debugged, or transferred by anyone who isn't the original developer. The public/secret distinction matters specifically because public variables are safe to expose in browser-side code and secret ones are catastrophic to expose there; conflating the two is a security defect, not a documentation nicety.
 
+```quiz
+- q: "You are writing the access handover doc and the client will need the database password. What goes in the document?"
+  anchor: "document ownership and location, never document the actual secret"
+  options:
+    - text: "The password itself, so nobody is blocked at 2am"
+      correct: false
+      why: "A markdown file, a chat message or a shared spreadsheet creates a durable, searchable record of something that is supposed to stay rotatable and revocable."
+    - text: "Who owns it, where it lives, and that it must be rotated at handover"
+      correct: true
+      why: "All three facts the client actually needs can be documented completely without a real secret ever being written down."
+    - text: "The password in a separate file, deleted right after the handover meeting"
+      correct: false
+      why: "\"Deleted afterwards\" is a promise, not a control — the record existed, was copyable and was searchable for as long as it did."
+
+- q: "The developer will keep owning the hosting account after handover. When is that legitimate?"
+  anchor: "only legitimate when there's an actual maintenance agreement backing it"
+  options:
+    - text: "Whenever the client would rather not deal with infrastructure"
+      correct: false
+      why: "Preference is not an agreement. Without one it quietly becomes an unpaid, unbounded obligation."
+    - text: "Only when a real maintenance agreement backs it"
+      correct: true
+      why: "Absent that, it is also a single point of failure the moment the developer becomes unreachable."
+    - text: "Never — client-owned-from-the-start is the only defensible model"
+      correct: false
+      why: "There are three models. Client-owned is the best default, but freelancer-created-then-transferred is fine when documented honestly."
+
+- q: "Why does the variable table separate public from secret rather than just listing every variable?"
+  anchor: "public variables are safe to expose in browser-side code and secret ones are catastrophic to expose there"
+  options:
+    - text: "It makes the documentation tidier to read"
+      correct: false
+      why: "The lesson calls conflating the two a security defect, not a documentation nicety."
+    - text: "Public values are safe in browser-side code and secret ones are catastrophic there"
+      correct: true
+      why: "The split governs where a value is allowed to appear at all, which is why getting it wrong is a defect rather than a style issue."
+    - text: "Only secret variables need rotation notes"
+      correct: false
+      why: "Rotation notes are their own explicit requirement. The public/secret split answers a different question."
+```
+
 ## Key Concepts
 - **Document ownership and location, never the value**: an access inventory lists what system, which provider, who owns it, and how it's accessed — the actual password or token never appears in the document
 - **Three ownership models, one clearly preferred**: client-owned-from-start (best), freelancer-created-then-transferred (acceptable if documented), freelancer-owned-long-term (only with a maintenance agreement backing it)
@@ -76,3 +117,26 @@ provider dashboard, update the hosting environment variable, and redeploy.
 - 1Password, "Team vaults and sharing best practices" — practical patterns for secure credential handover between organizations
 - The Twelve-Factor App, "Config" — the canonical case for strict separation of configuration/secrets from code: https://12factor.net/config
 - [GOV.UK Service Manual](https://www.gov.uk/service-manual) — a public, worked standard for running and handing over a service, useful as a reference model rather than a rulebook
+
+```recall
+- q: "State the one rule that overrides everything in access handover, and the three facts the client still gets."
+  must:
+    - "document ownership and location, never the actual secret"
+    - "what the client owns"
+    - "what the developer can still access after handover"
+    - "which credentials should be rotated the moment ownership changes hands"
+
+- q: "Name the three ownership models and the risk each carries."
+  must:
+    - "client-owned-from-the-start — the best default, developer invited with only the access the current phase needs"
+    - "freelancer-created-then-transferred — acceptable when documented honestly, transferred or recreated at handover"
+    - "freelancer-owned-long-term — only legitimate with a real maintenance agreement behind it"
+    - "otherwise an unpaid unbounded obligation, and a single point of failure if the developer is unreachable"
+
+- q: "What must environment documentation contain, and why is none of it optional?"
+  must:
+    - "an .env.example"
+    - "a variable table separating required from optional and public from secret"
+    - "explicit rotation notes"
+    - "without it the project cannot be safely deployed, debugged or transferred by anyone but the original developer"
+```

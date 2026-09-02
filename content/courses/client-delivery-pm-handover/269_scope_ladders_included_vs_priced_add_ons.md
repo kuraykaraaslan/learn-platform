@@ -7,6 +7,47 @@ Building the ladder well means drawing the default line in the right place. The 
 
 The ladder also does quiet risk management that a plain feature list can't. Some requests aren't add-ons at all — they're signals that the whole project is bigger than the playbook assumes, and the ladder should say so explicitly with a reprice trigger: "the client mentions fifteen entities" isn't a $2,000 add-on, it's a signal to stop and rescope or phase the whole engagement. Without that distinction written down in advance, a request that's actually three times the assumed scope can slip through as if it were routine, because in the moment it's easier to say yes to "one more thing" than to recognize that the thing changes the shape of the project. The ladder is an internal document — the client sees the resulting proposal, with add-ons framed as options, not the raw internal pricing table — but every "yes, that's available for $X" a client hears in a sales call or a change-request conversation should be traceable back to a ladder that was built calmly, in advance, rather than invented on the spot.
 
+```quiz
+- q: "A client asks for something sitting on the excluded tier. What is the answer meant to be?"
+  anchor: "it's a number you already decided, calmly, before this particular client ever asked"
+  options:
+    - text: "A fresh estimate, built for this client's particular version of the request"
+      correct: false
+      why: "That is the improvised negotiation under time pressure that the ladder exists to eliminate."
+    - text: "A pre-decided add-on price, looked up rather than renegotiated"
+      correct: true
+      why: "Once an add-on has been priced accurately a couple of times, it is quoted, not rebuilt."
+    - text: "A polite no — excluded means out of scope"
+      correct: false
+      why: "Excluded means priced separately, not refused. The point is turning \"can we also get X\" into an instant, consistent answer."
+
+- q: "The client mentions fifteen data entities on a playbook that assumes a handful. Is that an add-on?"
+  anchor: "isn't a $2,000 add-on, it's a signal to stop and rescope or phase the whole engagement"
+  options:
+    - text: "Yes — quote it as several extra-entity add-ons"
+      correct: false
+      why: "Stacking add-ons is exactly how a request that is three times the assumed scope slips through as routine."
+    - text: "No — it is a reprice trigger: stop, then rescope or phase the engagement"
+      correct: true
+      why: "These are written down in advance precisely because in the moment it is easier to say yes to \"one more thing\"."
+    - text: "Yes, with a volume discount for the extra entities"
+      correct: false
+      why: "Volume pricing on a project whose shape has changed compounds the error instead of catching it."
+
+- q: "Does the client ever see the scope ladder itself?"
+  anchor: "The ladder is an internal document — the client sees the resulting proposal, with add-ons framed as options, not the raw internal pricing table"
+  options:
+    - text: "Yes — showing the pricing table is what makes the add-ons feel fair"
+      correct: false
+      why: "What the client sees is the proposal that comes out of it, with add-ons framed as options."
+    - text: "No — it is internal; the client sees the proposal it produces"
+      correct: true
+      why: "Every \"yes, that's available for $X\" a client hears should still be traceable back to it."
+    - text: "Only the included tier, never the add-on prices"
+      correct: false
+      why: "Add-on options do reach the client, as options in the proposal. What stays internal is the raw pricing table."
+```
+
 ## Key Concepts
 - **Two tiers, not a flat feature list**: "Included by Default" (bundled into the base price) and "Commonly Excluded — Offer as Add-Ons" (a pre-priced menu, each item with a price range) give every scope question a fast, consistent answer
 - **The default line is drawn by frequency and risk, not by what's easy to build**: baseline scope covers what nearly every client of that project type needs; add-ons cover what only some clients need or what materially increases complexity
@@ -67,3 +108,32 @@ The ladder also does quiet risk management that a plain feature list can't. Some
 - Ronald J. Baker, *Implementing Value Pricing* — on structuring productized, pre-priced service offerings instead of custom-quoting every request from scratch
 - Blair Enns, *Pricing Creativity: A Guide to Profit Beyond the Billable Hour* — on pricing options and add-ons in a way that protects margin without turning every conversation into a negotiation
 - John Warrillow, *Built to Sell* — on productizing a service business into a repeatable, well-defined offering, the same discipline that makes a scope ladder possible in the first place
+
+```recall
+- q: "What is a scope ladder, and what problem does it solve?"
+  must:
+    - "a two-tier list built for a specific project type"
+    - "everything included by default in the base price"
+    - "everything commonly requested but excluded, each pre-priced as an add-on"
+    - "it turns \"can we also get X\" from an improvised negotiation into an instant, consistent answer"
+
+- q: "Where does the line between the included tier and the add-on menu go?"
+  must:
+    - "included: what nearly every client of that project type genuinely needs"
+    - "for an admin panel — auth, role-based access up to a few roles, a handful of core entities with full CRUD, a basic dashboard"
+    - "add-on: what only some clients need, or what materially raises delivery risk or complexity"
+    - "each add-on carries a real price range"
+
+- q: "What is a reprice trigger, and why must it be written down in advance?"
+  must:
+    - "a request that signals the whole project is bigger than the playbook assumes"
+    - "the response is to stop and rescope or phase the engagement, not to quote an add-on"
+    - "in the moment it is easier to say yes to \"one more thing\" than to notice the shape of the project changed"
+
+- q: "Who sees the ladder, and what does the client see instead?"
+  must:
+    - "the ladder is an internal document"
+    - "the client sees the resulting proposal, with add-ons framed as options"
+    - "never the raw internal pricing table"
+    - "every \"yes, that's available for $X\" should be traceable back to the ladder"
+```
