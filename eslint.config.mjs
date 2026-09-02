@@ -8,6 +8,18 @@ const eslintConfig = [
   ...nextCoreWebVitals,
   ...nextTypescript,
   {
+    // Not on in eslint-config-next, but this repo renders build-time markdown
+    // output through dangerouslySetInnerHTML in six places and each one already
+    // carried a disable comment explaining why it is safe — comments that were
+    // doing nothing, because the rule they suppressed was never enabled. Turning
+    // it on makes those six load-bearing and makes a seventh, unannotated use
+    // fail the build. Straight to `error` rather than `warn`: the repo rule is
+    // that a rule graduates once the codebase is clean of it, and it is.
+    rules: {
+      'react/no-danger': 'error',
+    },
+  },
+  {
     // Vendored copies of kui-react v1.0.1 — see modules/shared/ui/kui/PROVENANCE.md,
     // which states the rule these overrides exist to keep: "Do not patch copied files
     // with unrelated local changes." An upstream fix is pulled in by re-copying the

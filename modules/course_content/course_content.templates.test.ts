@@ -82,7 +82,7 @@ describe('looksLikeChecklist', () => {
 describe('composeFilledText', () => {
   it('substitutes a filled field, keeps bold markers, and leaves an empty field as [placeholder]', () => {
     const widget = parseTemplate('**Rate:** $[X]/hour or $[Y]/day');
-    const [fx, fy] = widget.lines[0].filter((t) => t.kind === 'field') as Extract<
+    const [fx] = widget.lines[0].filter((t) => t.kind === 'field') as Extract<
       (typeof widget.lines)[number][number],
       { kind: 'field' }
     >[];

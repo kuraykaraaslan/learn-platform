@@ -56,11 +56,12 @@ function CardView({ card, onDone }: { card: ReviewCard; onDone: () => void }) {
         </button>
       ) : (
         <div>
-          {/* eslint-disable-next-line react/no-danger -- card.bodyHtml comes from the same build-time markdown pipeline as every other lesson body, not user input */}
+          {/* eslint-disable react/no-danger -- card.bodyHtml comes from the same build-time markdown pipeline as every other lesson body, not user input */}
           <div
             className="mb-3 text-sm text-text-secondary [&_p]:mb-2 [&_code]:rounded [&_code]:bg-surface-sunken [&_code]:px-1 [&_code]:font-mono [&_code]:text-xs"
             dangerouslySetInnerHTML={{ __html: card.bodyHtml }}
           />
+          {/* eslint-enable react/no-danger */}
           <div className="flex gap-2">
             {ASSESSMENTS.map((value) => (
               <button
@@ -112,9 +113,15 @@ export function ReviewQueue() {
     // eslint-disable-next-line react-hooks/exhaustive-deps -- session is intentionally frozen at first render, see comment above
   }, [allCards, hydrated]);
 
-  useEffect(() => {
-    if (dueCards && session === null) setSession(shuffle(dueCards).slice(0, DAILY_CAP));
-  }, [dueCards, session]);
+  // Adjusting state during render rather than in an effect — React's own
+  // alternative for state that is only ever initialized from other state. The
+  // `session === null` guard makes it run exactly once; React throws away the
+  // in-progress render and redoes it immediately, so no intermediate frame
+  // reaches the reader, and the shuffle still happens exactly once per page
+  // load (which is the point of freezing the session at all).
+  if (dueCards && session === null) {
+    setSession(shuffle(dueCards).slice(0, DAILY_CAP));
+  }
 
   if (!hydrated || allCards === null || session === null) {
     return <p className="text-sm text-text-secondary">Loading…</p>;

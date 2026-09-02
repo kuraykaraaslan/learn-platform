@@ -8,7 +8,7 @@
 // is a view preference, not progress.
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import { cn } from '@/libs/utils/cn';
 import { BracketBar } from './BracketBar';
@@ -22,31 +22,51 @@ import {
 
 const STORAGE_KEY = 'learn:home:experience';
 
-function useRememberedBracket() {
-  const [bracket, setBracket] = useState<Bracket | null>(null);
-  const [hydrated, setHydrated] = useState(false);
+// localStorage is the external store this hook reads, so it is subscribed to
+// rather than copied into component state by an effect. The `storage` event
+// only fires in OTHER tabs, hence the local listener set: choose() writes and
+// then notifies this tab itself.
+const listeners = new Set<() => void>();
 
-  useEffect(() => {
-    try {
-      const saved = localStorage.getItem(STORAGE_KEY);
-      if (saved && (BRACKET_ORDER as string[]).includes(saved)) setBracket(saved as Bracket);
-    } catch {
-      /* private mode / disabled storage — just start unfiltered */
-    }
-    setHydrated(true);
-  }, []);
+function subscribe(onStoreChange: () => void) {
+  listeners.add(onStoreChange);
+  window.addEventListener('storage', onStoreChange);
+  return () => {
+    listeners.delete(onStoreChange);
+    window.removeEventListener('storage', onStoreChange);
+  };
+}
+
+// Returns a Bracket or null — primitives, so the identity useSyncExternalStore
+// compares between renders is the value itself and no caching is needed.
+function readSavedBracket(): Bracket | null {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    return saved && (BRACKET_ORDER as string[]).includes(saved) ? (saved as Bracket) : null;
+  } catch {
+    /* private mode / disabled storage — just start unfiltered */
+    return null;
+  }
+}
+
+// The server has no localStorage, so it renders unfiltered; the first client
+// render has to agree, and the saved bracket appears on the render after it.
+const noSavedBracket = () => null;
+
+function useRememberedBracket() {
+  const bracket = useSyncExternalStore(subscribe, readSavedBracket, noSavedBracket);
 
   function choose(next: Bracket | null) {
-    setBracket(next);
     try {
       if (next) localStorage.setItem(STORAGE_KEY, next);
       else localStorage.removeItem(STORAGE_KEY);
     } catch {
       /* ignore */
     }
+    listeners.forEach((notify) => notify());
   }
 
-  return { bracket: hydrated ? bracket : null, choose };
+  return { bracket, choose };
 }
 
 export function CourseCatalog({ sections }: { sections: CourseSection[] }) {

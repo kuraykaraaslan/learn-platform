@@ -3,7 +3,7 @@
 // including sucrase) never ships to a page until that click happens.
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { cn } from '@/libs/utils/cn';
 import { transpileForSandbox } from '../course_content.transpile';
 import { buildSandboxHtml } from '../course_content.sandbox';
@@ -20,18 +20,25 @@ const WATCHDOG_MS = 3000;
 const MAX_LOG_ENTRIES = 200;
 
 export function CodeRunner({ source, lang }: { source: string; lang: string }) {
-  const [status, setStatus] = useState<Status>('running');
+  // Transpiling is a pure function of the props, so its outcome — including a
+  // syntax error — is derived during render rather than mirrored into state by
+  // the effect. Nothing is running yet when it fails, so there is no external
+  // system to synchronize with, which is the only thing an effect is for.
+  const transpiled = useMemo(() => transpileForSandbox(source, lang), [source, lang]);
+
+  const [runStatus, setStatus] = useState<Status>('running');
   const [logs, setLogs] = useState<LogEntry[]>([]);
-  const [error, setError] = useState<{ message: string; stack: string } | null>(null);
+  const [runError, setError] = useState<{ message: string; stack: string } | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // A failed transpile outranks whatever the sandbox last reported: the effect
+  // below never starts a frame in that case, so runStatus/runError still hold
+  // the previous source's result until they are reset by remounting.
+  const status: Status = transpiled.ok ? runStatus : 'error';
+  const error = transpiled.ok ? runError : { message: transpiled.error, stack: '' };
+
   useEffect(() => {
-    const transpiled = transpileForSandbox(source, lang);
-    if (!transpiled.ok) {
-      setStatus('error');
-      setError({ message: transpiled.error, stack: '' });
-      return;
-    }
+    if (!transpiled.ok) return;
     const code = transpiled.code; // rebound so the closure below narrows correctly
 
     const nonce = crypto.randomUUID();
@@ -93,7 +100,7 @@ export function CodeRunner({ source, lang }: { source: string; lang: string }) {
     return () => {
       if (!settled) cleanup();
     };
-  }, [source, lang]);
+  }, [transpiled]);
 
   return (
     <div className="mt-2 rounded-md border border-border bg-surface-sunken p-3 font-mono text-xs">

@@ -59,9 +59,15 @@ export function SearchLauncher() {
     }
   }, [open, records]);
 
-  useEffect(() => {
+  // Same shape: the highlighted row resets when the query changes, which is
+  // derived state, not a synchronization with anything outside React. Tracking
+  // the previous query and adjusting during render is React's documented
+  // replacement for a reset-on-change effect.
+  const [lastQuery, setLastQuery] = useState(query);
+  if (query !== lastQuery) {
+    setLastQuery(query);
     setActiveIndex(0);
-  }, [query]);
+  }
 
   const results: SearchResult[] = records ? searchRecords(records, query) : [];
 

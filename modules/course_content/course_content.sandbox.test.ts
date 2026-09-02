@@ -88,7 +88,7 @@ describe('buildWorkerSource', () => {
       postMessage: (msg: unknown) => posted.push(msg),
       onmessage: undefined as unknown as (e: { data: { code: string } }) => void,
     };
-    // eslint-disable-next-line @typescript-eslint/no-implied-eval -- constructing the worker's own global scope is the point of this test
+    // new Function is deliberate here: constructing the worker's own global scope is the point of this test
     new Function('self', source)(fakeSelf);
     fakeSelf.onmessage({ data: { code: `console.log('sync'); setTimeout(() => console.log('async'), 0);` } });
 
@@ -120,7 +120,7 @@ describe('buildWorkerSource', () => {
       postMessage: (msg: unknown) => posted.push(msg),
       onmessage: undefined as unknown as (e: { data: { code: string } }) => void,
     };
-    // eslint-disable-next-line @typescript-eslint/no-implied-eval -- constructing the worker's own global scope is the point of this test
+    // new Function is deliberate here: constructing the worker's own global scope is the point of this test
     new Function('self', source)(fakeSelf);
     fakeSelf.onmessage({ data: { code: `console.log({ a: 1, b: [1, 2, 3] });` } });
 

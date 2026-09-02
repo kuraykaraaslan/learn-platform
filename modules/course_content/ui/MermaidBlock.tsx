@@ -9,6 +9,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
+import { useMounted } from '@/modules/shared/useMounted';
 
 type RenderState =
   | { status: 'pending' }
@@ -19,21 +20,25 @@ let mermaidIdCounter = 0;
 
 export function MermaidBlock({ source, html }: { source: string; html: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  const [intersected, setIntersected] = useState(false);
   const [state, setState] = useState<RenderState>({ status: 'pending' });
   const { resolvedTheme } = useTheme();
+
+  // A browser with no IntersectionObserver gets the diagram immediately, but
+  // that has to be decided after mount, not during render: the server has no
+  // IntersectionObserver either, and reading it during the hydrating render
+  // would make the two passes disagree.
+  const mounted = useMounted();
+  const visible = intersected || (mounted && typeof IntersectionObserver === 'undefined');
 
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
-    if (typeof IntersectionObserver === 'undefined') {
-      setVisible(true); // no-JS/older-browser fallback: just load it
-      return;
-    }
+    if (typeof IntersectionObserver === 'undefined') return; // handled by `visible` above
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0]?.isIntersecting) {
-          setVisible(true);
+          setIntersected(true);
           observer.disconnect();
         }
       },

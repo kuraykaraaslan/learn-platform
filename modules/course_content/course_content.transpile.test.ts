@@ -25,7 +25,7 @@ describe('transpileForSandbox', () => {
     expect(result.ok).toBe(true);
     if (!result.ok) return;
     const logs: unknown[] = [];
-    // eslint-disable-next-line @typescript-eslint/no-implied-eval -- this is exactly what the sandbox worker does with the same output
+    // new Function is deliberate here: this is exactly what the sandbox worker does with the same output
     new Function('console', result.code)({ log: (...args: unknown[]) => logs.push(...args) });
     expect(logs).toEqual([42]);
   });

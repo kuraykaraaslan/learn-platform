@@ -34,7 +34,7 @@ function isPlanResult(result: SqlStatementResult): boolean {
   return result.columns.length === 1 && /query plan/i.test(result.columns[0]);
 }
 
-function ResultView({ result, index }: { result: SqlStatementResult; index: number }) {
+function ResultView({ result }: { result: SqlStatementResult }) {
   if (isPlanResult(result)) {
     return (
       <pre className="whitespace-pre-wrap rounded bg-surface-overlay p-2 font-mono text-text-primary">
@@ -149,7 +149,7 @@ export function SqlRunner({
           {status === 'running' && <p className="text-text-secondary">{statusText || 'Running…'}</p>}
           {results.map((result, i) => (
             <div key={i} className={cn(i > 0 && 'mt-3 border-t border-border pt-2')}>
-              <ResultView result={result} index={i} />
+              <ResultView result={result} />
             </div>
           ))}
           {errorMessage && <pre className="whitespace-pre-wrap text-error">{errorMessage}</pre>}

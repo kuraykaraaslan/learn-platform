@@ -67,11 +67,12 @@ function MistakeRow({
 
       {isOpen && (
         <div role="region" aria-label={mistake.lead} className="mt-2">
-          {/* eslint-disable-next-line react/no-danger -- mistake.bodyHtml is our own build-time markdown pipeline output, not user input */}
+          {/* eslint-disable react/no-danger -- mistake.bodyHtml is our own build-time markdown pipeline output, not user input */}
           <div
             className="text-sm text-text-secondary [&_p]:mb-2 [&_code]:rounded [&_code]:bg-surface-sunken [&_code]:px-1 [&_code]:font-mono [&_code]:text-xs"
             dangerouslySetInnerHTML={{ __html: mistake.bodyHtml }}
           />
+          {/* eslint-enable react/no-danger */}
           <div className="mt-2 flex gap-2">
             {ASSESSMENTS.map((value) => (
               <button
