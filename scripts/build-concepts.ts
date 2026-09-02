@@ -13,6 +13,10 @@ import path from 'node:path';
 import { listCourseSlugs, readCourseManifest, readLessonMarkdown } from '../modules/course_content/course_content.manifest';
 import { parseLessonBlocks } from '../modules/course_content/course_content.parser';
 import { loadConcepts, buildConceptIndex } from '../modules/course_content/course_content.concepts';
+import { unified } from 'unified';
+import remarkParse from 'remark-parse';
+import remarkGfm from 'remark-gfm';
+import { splitLessonSections } from '../modules/course_content/course_content.parser';
 
 const OUT_DIR = path.join(process.cwd(), 'content', '_reports');
 
@@ -66,6 +70,71 @@ if (pattern) {
   }
 }
 
+// Exactly the text remark-concepts can see. It matches inside `text` nodes
+// only, and skips link/linkReference subtrees — so `inlineCode` and fenced
+// `code` are unreachable by construction, not by a strip-the-tags
+// approximation. Collecting the same nodes here is what lets a term the cap
+// dropped be told apart from one that only ever occurs inside code.
+const mdast = unified().use(remarkParse).use(remarkGfm);
+
+function linkableText(markdown: string): string {
+  const out: string[] = [];
+  const walk = (node: { type: string; value?: string; children?: unknown[] }) => {
+    if (node.type === 'link' || node.type === 'linkReference') return;
+    if (node.type === 'text' && typeof node.value === 'string') out.push(node.value);
+    if (Array.isArray(node.children)) for (const c of node.children) walk(c as typeof node);
+  };
+  walk(mdast.parse(markdown) as unknown as { type: string; children?: unknown[] });
+  return out.join('\n');
+}
+
+const linkableByLesson = new Map<string, number[]>(); // pattern resolved TO this slug
+// Same text, but asking only "do these words occur", ignoring which concept the
+// shared alternation awards the span to. A term present here and absent above
+// was out-matched by an overlapping variant of another concept — e.g.
+// "connection pool exhaustion" is claimed by connection-pooling's alias
+// "connection pool", which consumes the word `pool` before `pool exhaustion`
+// can match. That is a distinct failure from occurring only inside code.
+const presentByLesson = new Map<string, number[]>();
+const presentRawByLesson = new Map<string, number[]>();
+const plainRe = new Map<string, RegExp>();
+for (const [slug, c] of Object.entries(concepts)) {
+  const variants = [c.term, ...(c.aliases ?? [])].map((v) => v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  plainRe.set(slug, new RegExp(`\\b(?:${variants.join('|')})\\b`, 'i'));
+}
+{
+  const { lookup, pattern } = buildConceptIndex(concepts);
+  if (pattern) {
+    for (const courseSlug of listCourseSlugs()) {
+      for (const item of readCourseManifest(courseSlug).items) {
+        const sections = splitLessonSections(readLessonMarkdown(courseSlug, item.file)).sections;
+        const text = linkableText(Object.values(sections).join('\n\n'));
+        pattern.lastIndex = 0;
+        for (const match of text.matchAll(pattern)) {
+          const found = lookup.get(match[0].toLowerCase());
+          if (!found) continue;
+          const seen = linkableByLesson.get(found.slug) ?? [];
+          if (!seen.includes(item.id)) seen.push(item.id);
+          linkableByLesson.set(found.slug, seen);
+        }
+        const rawMd = readLessonMarkdown(courseSlug, item.file);
+        for (const [slug, re] of plainRe) {
+          if (re.test(text)) {
+            const seen = presentByLesson.get(slug) ?? [];
+            if (!seen.includes(item.id)) seen.push(item.id);
+            presentByLesson.set(slug, seen);
+          }
+          if (re.test(rawMd)) {
+            const seen = presentRawByLesson.get(slug) ?? [];
+            if (!seen.includes(item.id)) seen.push(item.id);
+            presentRawByLesson.set(slug, seen);
+          }
+        }
+      }
+    }
+  }
+}
+
 const byTerm = Object.keys(concepts)
   .sort()
   .map((slug) => ({
@@ -93,12 +162,31 @@ const neverLinked = byTerm
   .filter((t) => t.lessonsLinkedIn.length === 0)
   .map((t) => {
     const own = concepts[t.slug].lesson;
-    const elsewhere = rawByLesson.get(t.slug)?.filter((id) => id !== own) ?? [];
+    const rawElsewhere = rawByLesson.get(t.slug)?.filter((id) => id !== own) ?? [];
+    const linkableElsewhere = linkableByLesson.get(t.slug)?.filter((id) => id !== own) ?? [];
+    const presentElsewhere = presentByLesson.get(t.slug)?.filter((id) => id !== own) ?? [];
+    const presentRaw = presentRawByLesson.get(t.slug) ?? [];
+    // Ordered on the plain scans, not on the shared pattern: the pattern awards
+    // an overlapping span to whichever variant it reaches first, so using it to
+    // answer "does this term occur here at all" mislabels a shadowed term as
+    // one that simply never occurs. pool-exhaustion is the case that caught it.
+    const cause =
+      presentRaw.length === 0
+        ? 'never-matched'
+        : presentRaw.filter((id) => id !== own).length === 0
+          ? 'own-lesson-only'
+          : linkableElsewhere.length > 0
+            ? 'cap-starved'
+            : presentElsewhere.length > 0
+              ? 'shadowed'
+              : 'code-only';
     return {
       slug: t.slug,
       term: t.term,
-      cause: t.rawOccurrences === 0 ? 'never-matched' : elsewhere.length === 0 ? 'own-lesson-only' : 'unlinked-elsewhere',
-      alsoAppearsInLessons: elsewhere,
+      cause,
+      linkableInLessons: linkableElsewhere,
+      presentInLessons: presentElsewhere,
+      alsoAppearsInLessons: rawElsewhere,
     };
   });
 
@@ -115,7 +203,9 @@ fs.writeFileSync(
         neverLinked: neverLinked.length,
         neverLinkedByCause: {
           'own-lesson-only': neverLinked.filter((t) => t.cause === 'own-lesson-only').length,
-          'unlinked-elsewhere': neverLinked.filter((t) => t.cause === 'unlinked-elsewhere').length,
+          'code-only': neverLinked.filter((t) => t.cause === 'code-only').length,
+          shadowed: neverLinked.filter((t) => t.cause === 'shadowed').length,
+          'cap-starved': neverLinked.filter((t) => t.cause === 'cap-starved').length,
           'never-matched': neverLinked.filter((t) => t.cause === 'never-matched').length,
         },
         atCapLessons: atCapLessons.length,
@@ -133,9 +223,12 @@ fs.writeFileSync(
 console.log(
   `${Object.keys(concepts).length} terms · ${totalLessons} lessons · ${neverMatched.length} never matched · ${atCapLessons.length} lessons at the 4-link cap`
 );
+const count = (c: string) => neverLinked.filter((t) => t.cause === c).length;
 console.log(
-  `${neverLinked.length} terms never render a link  (own-lesson-only ${neverLinked.filter((t) => t.cause === 'own-lesson-only').length} · unlinked-elsewhere ${neverLinked.filter((t) => t.cause === 'unlinked-elsewhere').length} · never-matched ${neverLinked.filter((t) => t.cause === 'never-matched').length})`
+  `${neverLinked.length} terms never render a link  (own-lesson-only ${count('own-lesson-only')} · code-only ${count('code-only')} · shadowed ${count('shadowed')} · cap-starved ${count('cap-starved')} · never-matched ${count('never-matched')})`
 );
-for (const t of neverLinked.filter((x) => x.cause === 'unlinked-elsewhere'))
-  console.log(`  unlinked-elsewhere: ${t.slug} — text appears in lesson(s) ${t.alsoAppearsInLessons.join(', ')}`);
+for (const t of neverLinked.filter((x) => x.cause === 'shadowed'))
+  console.log(`  shadowed: ${t.slug} — words present in lesson(s) ${t.presentInLessons.join(', ')}, but an overlapping variant of another concept claims the span`);
+for (const t of neverLinked.filter((x) => x.cause === 'cap-starved'))
+  console.log(`  cap-starved: ${t.slug} — linkable prose in lesson(s) ${t.linkableInLessons.join(', ')}, but the 4-link cap was already spent`);
 console.log('report -> content/_reports/concepts.json');

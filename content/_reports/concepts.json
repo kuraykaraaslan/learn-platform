@@ -6,8 +6,10 @@
     "neverMatched": 0,
     "neverLinked": 17,
     "neverLinkedByCause": {
-      "own-lesson-only": 3,
-      "unlinked-elsewhere": 14,
+      "own-lesson-only": 2,
+      "code-only": 13,
+      "shadowed": 1,
+      "cap-starved": 1,
       "never-matched": 0
     },
     "atCapLessons": 10
@@ -17,7 +19,9 @@
     {
       "slug": "correlation-id",
       "term": "Correlation ID",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         111
       ]
@@ -25,7 +29,9 @@
     {
       "slug": "cve",
       "term": "CVE",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         361
       ]
@@ -33,7 +39,9 @@
     {
       "slug": "dip",
       "term": "DIP",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         117,
         122
@@ -42,7 +50,9 @@
     {
       "slug": "git-bisect",
       "term": "git bisect",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         139
       ]
@@ -50,7 +60,13 @@
     {
       "slug": "index-bloat",
       "term": "Index bloat",
-      "cause": "unlinked-elsewhere",
+      "cause": "cap-starved",
+      "linkableInLessons": [
+        104
+      ],
+      "presentInLessons": [
+        104
+      ],
       "alsoAppearsInLessons": [
         104
       ]
@@ -58,7 +74,9 @@
     {
       "slug": "index-only-scan",
       "term": "Index Only Scan",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         17
       ]
@@ -66,7 +84,9 @@
     {
       "slug": "mass-assignment",
       "term": "Mass assignment",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         38
       ]
@@ -74,7 +94,9 @@
     {
       "slug": "outbox-relay",
       "term": "Outbox relay",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         15
       ]
@@ -82,7 +104,9 @@
     {
       "slug": "partial-index",
       "term": "Partial index",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         44
       ]
@@ -90,13 +114,21 @@
     {
       "slug": "pool-exhaustion",
       "term": "Pool exhaustion",
-      "cause": "own-lesson-only",
+      "cause": "shadowed",
+      "linkableInLessons": [],
+      "presentInLessons": [
+        132,
+        28,
+        61
+      ],
       "alsoAppearsInLessons": []
     },
     {
       "slug": "primary-key",
       "term": "Primary key",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         12,
         411
@@ -105,7 +137,9 @@
     {
       "slug": "principle-of-least-privilege",
       "term": "Principle of least privilege",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         50
       ]
@@ -114,12 +148,16 @@
       "slug": "readiness-probe",
       "term": "Readiness probe",
       "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": []
     },
     {
       "slug": "scoped-packages",
       "term": "Scoped packages",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         95
       ]
@@ -128,12 +166,16 @@
       "slug": "traffic-cutover",
       "term": "Traffic cutover",
       "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": []
     },
     {
       "slug": "vacuum-freeze",
       "term": "VACUUM FREEZE",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         41
       ]
@@ -141,7 +183,9 @@
     {
       "slug": "x-forwarded-for",
       "term": "X-Forwarded-For",
-      "cause": "unlinked-elsewhere",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
       "alsoAppearsInLessons": [
         33
       ]
