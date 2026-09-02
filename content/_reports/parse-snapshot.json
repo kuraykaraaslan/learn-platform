@@ -3035,21 +3035,21 @@
     "open-source-community": {
       "94_contributing_to_open_source.md": {
         "title": "d2336e31fed7b4e6",
-        "whatItIs": "a5b797a70679dff6",
+        "whatItIs": "39f7e478247d862a",
         "keyConcepts": "05cb397e52ebc110",
         "exampleCode": "75d90a8935cca3ca",
         "whenToUse": "229f5462bac32df4",
         "commonMistakes": "257d023cb2d2dfe3",
-        "furtherReading": "58b3925db7364d4e"
+        "furtherReading": "0d0541d1975eb422"
       },
       "95_publishing_maintaining_oss_tool.md": {
         "title": "2f738f75cefc7fca",
-        "whatItIs": "1dae313b7c018c88",
+        "whatItIs": "6ae5e0cb65e86f8c",
         "keyConcepts": "f90ae1217c37ba72",
         "exampleCode": "4edd83ba2d1cd70f",
         "whenToUse": "e52c8a53277951ac",
         "commonMistakes": "8868f45ba74957e2",
-        "furtherReading": "25d9bda6c34e4b9e"
+        "furtherReading": "1c7c3b4f0b637576"
       },
       "96_semver_changelog_management.md": {
         "title": "8e6ee48785811b98",
@@ -3062,12 +3062,12 @@
       },
       "97_publishing_npm_github_packages.md": {
         "title": "8de77cc381db0cb3",
-        "whatItIs": "f129bb459eddee1a",
+        "whatItIs": "194b69a7485db178",
         "keyConcepts": "cb77e47bb4958fa2",
         "exampleCode": "397af3473734fa4d",
         "whenToUse": "57214b7e928da4ef",
         "commonMistakes": "2b74f30d1aa44715",
-        "furtherReading": "50826dff9c04926b"
+        "furtherReading": "d1966719e4eb1e2f"
       },
       "98_writing_stack_overflow_answers.md": {
         "title": "0fbfe02acb9b6ce7",
@@ -3080,12 +3080,12 @@
       },
       "99_conference_meetup_speaking.md": {
         "title": "3c5e8962d8d65b56",
-        "whatItIs": "e23f36572049bbfe",
+        "whatItIs": "ad33359357d124f9",
         "keyConcepts": "f77cb77814bb06d2",
         "exampleCode": "b52916061e5fe868",
         "whenToUse": "af0b76658c811948",
         "commonMistakes": "9c7a59219f6b98c1",
-        "furtherReading": "6ebc3659fcd0af6c"
+        "furtherReading": "b5a86e19e381103b"
       },
       "100_creating_reference_resource.md": {
         "title": "a1d389e442b4ee1a",

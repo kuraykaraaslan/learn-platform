@@ -52,9 +52,9 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 | Ölçüm | P0 zemini | Bugün |
 |---|---:|---:|
 | Ders / kurs / bölüm | 412 / 23 / 2473 | 412 / 23 / **2472** |
-| Fence | 505 | 749 |
-| Yalnız kod fence'i olan ders | 179 | 106 |
-| Yalnız şablon fence'i olan ders | 211 | 160 |
+| Fence | 505 | 757 |
+| Yalnız kod fence'i olan ders | 179 | 105 |
+| Yalnız şablon fence'i olan ders | 211 | 157 |
 | Hiç fence'i olmayan ders | 0 | 0 |
 | TS/TSX/JS fence | 161 | 166 |
 | Common Mistakes maddesi | 1746 | 1772 |
@@ -84,8 +84,8 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 
 | Widget | Fence | Ders |
 |---|---:|---:|
-| `quiz` | 85 | 85 |
-| `recall` | 85 | 85 |
+| `quiz` | 89 | 89 |
+| `recall` | 89 | 89 |
 | `mermaid` | 17 | 17 |
 | `tradeoff` | 13 | 13 |
 | `calc` | 13 | 13 |

@@ -7,6 +7,47 @@ Maintaining an OSS project means handling incoming issues, reviewing PRs from th
 
 The strategic value for a solo developer running a software company is significant. A well-maintained open source tool in your niche is the most durable form of content marketing: it is indexed by search engines, linked from StackOverflow answers, referenced in conference talks, and discovered by exactly the kind of technical decision-maker who can become your next client. "Built by the author of X" is a more powerful signal than "three years of full-stack experience."
 
+```quiz
+- q: "How does the effort actually split between releasing and maintaining?"
+  anchor: "the initial release is 10% of the total effort; keeping it useful over two years is the remaining 90%"
+  options:
+    - text: "Roughly half and half"
+      correct: false
+      why: "Not close. The release is a tenth of it."
+    - text: "Release is 10%; keeping it useful over two years is the other 90%"
+      correct: true
+      why: "Which is why scoping the first project tightly matters — maintain one small package well rather than abandon a large one."
+    - text: "Maintenance shrinks once the API stabilizes"
+      correct: false
+      why: "Issues, PR review, dependency updates, releases and status communication do not stop when the API does."
+
+- q: "Which license for a general-purpose utility library?"
+  anchor: "MIT is correct for most utility libraries"
+  options:
+    - text: "AGPL, so commercial users have to contribute back"
+      correct: false
+      why: "Copyleft forces commercial users to open source their changes — a deliberate choice for a different kind of project."
+    - text: "MIT — permissive, and the most widely adopted for libraries"
+      correct: true
+      why: "Apache 2.0 is the permissive option when patent protection matters."
+    - text: "Whatever the largest dependency uses"
+      correct: false
+      why: "The choice is yours, and it is about what you want downstream users to be able to do."
+
+- q: "What decides whether a first-time visitor adopts your tool or goes elsewhere?"
+  anchor: "whether the README answers \"what does this do and how do I use it in 60 seconds\""
+  options:
+    - text: "The star count"
+      correct: false
+      why: "One health indicator among several, and not the one answering the question a visitor actually arrived with."
+    - text: "Whether the README answers what it does and how to use it, in 60 seconds"
+      correct: true
+      why: "Alongside downloads, open issues and time since the last release — but this is the one being read right now."
+    - text: "A test coverage badge"
+      correct: false
+      why: "Not among the health indicators this lesson names."
+```
+
 ## Key Concepts
 - **Extraction candidate**: Any module in your codebase that solves a problem generic enough to be useful outside your specific application — tenant isolation patterns, webhook signature verification, multi-provider email abstraction
 - **Repository structure for an npm package**: `src/`, `dist/`, `README.md`, `CHANGELOG.md`, `LICENSE`, `package.json`, `.github/workflows/` for CI — have these before the first release
@@ -177,3 +218,24 @@ git push origin v0.1.0
 - [**"Small, Sharp Software Tools" — Mike Perham](https://mikeperham.com)** — Essay on the philosophy of building focused, well-maintained tools rather than ambitious frameworks; the reference for thinking about scope
 - [**`tsup` documentation](https://tsup.egoist.dev)** — The fastest way to build a TypeScript npm package with ESM and CJS output and type declarations; used by the majority of new TypeScript packages in 2024–2025
 - **"Maintainer's Guide to Staying Positive" — Josh Comeau and others** — Resources on handling the psychological load of public-facing OSS maintenance; important before you release something that gets significant adoption
+
+```recall
+- q: "What is an extraction candidate?"
+  must:
+    - "any module in your codebase solving a problem generic enough to be useful outside your own application"
+    - "tenant isolation patterns, webhook signature verification, multi-provider email abstraction"
+
+- q: "Give the repository structure expected before a first release."
+  must:
+    - "src/ and dist/"
+    - "README.md, CHANGELOG.md, LICENSE"
+    - "package.json"
+    - ".github/workflows/ for CI"
+
+- q: "Name the health indicators and what each tells a visitor."
+  must:
+    - "stars and weekly downloads"
+    - "open issues"
+    - "time since the last release"
+    - "whether the README answers what it does and how to use it in 60 seconds"
+```

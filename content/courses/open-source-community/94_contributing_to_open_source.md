@@ -7,6 +7,47 @@ The credibility that comes from merged contributions to well-known projects is c
 
 The path from "I'd like to contribute" to "I have merged PRs" is more accessible than most developers believe. The majority of maintainers are stretched thin and genuinely want contributors. The most valuable contributions are often not feature additions — they are fixing a documentation gap that misled you, adding a test for a bug that bit you, or providing a clear reproduction case for an issue that others have struggled to diagnose. These contributions require understanding of the codebase, not deep familiarity with its full implementation.
 
+```quiz
+- q: "You need to fix a bug in a dependency you run in production. Fork it, or push upstream?"
+  anchor: "push the fix upstream rather than forking; upstream merge means all your future upgrades include the fix"
+  options:
+    - text: "Fork — it ships today instead of waiting on a maintainer"
+      correct: false
+      why: "It ships today and then every future upgrade has to re-apply it. The fork is a cost you keep paying."
+    - text: "Upstream — a merged fix arrives in every future upgrade"
+      correct: true
+      why: "That is the upstream-first principle: the fix stops being yours to carry."
+    - text: "Both — fork now, push upstream when there is time"
+      correct: false
+      why: "\"When there is time\" is what leaves the permanent fork behind."
+
+- q: "A 500-line feature and a 20-line fix with a test are both open. Which moves?"
+  anchor: "a 20-line fix with a test is reviewed in days; a 500-line feature is reviewed in months (or never)"
+  options:
+    - text: "The feature — more value per unit of review effort"
+      correct: false
+      why: "Value per review is not what governs merge time. Size is."
+    - text: "The 20-line fix — small, focused PRs get merged faster"
+      correct: true
+      why: "Days against months, or never."
+    - text: "Whichever has been open longest"
+      correct: false
+      why: "Age does not move a large PR through review."
+
+- q: "Someone files a bug you can reproduce but not fix. Is there a contribution to make?"
+  anchor: "Reproducing issues reported by others, adding details, and labeling them correctly is valuable maintainer work"
+  options:
+    - text: "No — a contribution means a code change"
+      correct: false
+      why: "Contributions include bug reports, documentation, tests, reproducible examples and triage."
+    - text: "Yes — reproducing, adding detail and labelling is maintainer work, and it builds familiarity before you write code"
+      correct: true
+      why: "Maintainers frequently close issues for lack of reproduction, which is why a minimal reproduction is often worth more than the fix."
+    - text: "Only if you open a draft PR alongside it"
+      correct: false
+      why: "A draft PR is for a larger change you have already started. Triage stands on its own."
+```
+
 ## Key Concepts
 - **Good first issue label**: Most mature projects tag issues that are suitable for new contributors; this is your entry point — filter by `good first issue` or `help wanted` before reading any code
 - **Reproduction before fix**: For bug reports and bug fixes, a minimal reproduction case (the smallest possible code that demonstrates the issue) is often more valuable than the fix itself — maintainers frequently close issues for lack of reproduction
@@ -129,3 +170,29 @@ Keep a running list:
 - **"How to Contribute to Open Source" — opensource.guide** — The authoritative guide maintained by GitHub; covers every aspect from finding a project to handling rejections
 - **"How Open Source Maintainers Think" — Nadia Eghbal (Working in Public)** — Book-length treatment of the dynamics, incentives, and constraints of OSS maintenance; reading it makes you a better contributor because you understand what maintainers actually need
 - [**"First Contributions"](https://github.com/firstcontributions/first-contributions)** — A live-practice repository specifically for making your first PR; use this to practice the mechanical workflow before doing it in a real project
+
+```recall
+- q: "Name the contributions that are not code."
+  must:
+    - "bug reports"
+    - "documentation improvements"
+    - "test additions"
+    - "reproducible examples"
+    - "triage work on the issue tracker"
+
+- q: "What gets read, and what gets filtered, before any code?"
+  must:
+    - "read CONTRIBUTING.md first — it specifies the process, code style, test requirements and communication norms"
+    - "filter issues by `good first issue` or `help wanted` before reading any code"
+
+- q: "Why is a minimal reproduction often worth more than the fix?"
+  must:
+    - "it is the smallest possible code demonstrating the issue"
+    - "maintainers frequently close issues for lack of reproduction"
+
+- q: "When does a draft PR earn its place?"
+  must:
+    - "when you start on a larger change"
+    - "opened early to get feedback on the direction"
+    - "before investing significant time"
+```

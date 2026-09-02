@@ -7,6 +7,47 @@ The entry point to conference speaking is almost universally the local meetup, n
 
 The strategic value of speaking is different from the value of writing. Writing reaches people who search for your topic; speaking reaches people who were not specifically looking for you but encounter you in a room they chose to be in. The in-person credibility transfer that happens in a conference talk — the audience sees your expertise demonstrated live, asks questions you answer confidently, and connects with you after the talk — is a qualitatively different signal than any written content. For a developer building a client practice, one talk at a relevant conference is routinely worth multiple client inquiries.
 
+```quiz
+- q: "You have never spoken publicly and want a slot at a major conference. What is the path?"
+  anchor: "Submitting a CFP (Call for Proposals) to a major conference with zero speaking history is nearly always unsuccessful"
+  options:
+    - text: "Submit anyway — a strong abstract can carry it"
+      correct: false
+      why: "Nearly always unsuccessful with no history: the abstract is weighed alongside apparent expertise and track record."
+    - text: "Local meetups first — three talks plus one recorded video makes a competitive submission"
+      correct: true
+      why: "The meetup is where you calibrate the material and build the record committees look for."
+    - text: "Co-present with someone already established"
+      correct: false
+      why: "Reasonable in general, but it is not the entry point this lesson describes."
+
+- q: "Which topic is a program committee likelier to accept?"
+  anchor: "not \"everything about Next.js\" but \"one insight about multi-tenant routing in Next.js\""
+  options:
+    - text: "\"Everything about Next.js\" — broader appeal, bigger room"
+      correct: false
+      why: "Breadth reads as unspecific, and specificity is one of the four review criteria."
+    - text: "\"One insight about multi-tenant routing in Next.js\""
+      correct: true
+      why: "Weighed alongside relevance to the audience, apparent expertise and originality."
+    - text: "Whichever aligns with the conference's headline sponsor"
+      correct: false
+      why: "Not among the criteria."
+
+- q: "The slides are done and you know the material cold. Is the talk ready?"
+  anchor: "A talk you have not rehearsed out loud is a draft, not a talk"
+  options:
+    - text: "Yes — the material is what matters; delivery adapts on the day"
+      correct: false
+      why: "Unrehearsed it is a draft, and delivery under time pressure is precisely the part that has to be practised."
+    - text: "No — rehearse out loud at full speed with slides at least three times, timing every run"
+      correct: true
+      why: "Timed every time, so the room's clock never surprises you."
+    - text: "Yes, if you have already given it once at a meetup"
+      correct: false
+      why: "A prior delivery helps, but each version still gets rehearsed and timed."
+```
+
 ## Key Concepts
 - **CFP (Call for Proposals / Call for Papers)**: The open invitation that conferences publish when they are accepting talk submissions; each CFP has a deadline, format requirements, and topic focus
 - **Abstract vs. talk**: The CFP submission is a 150–300 word abstract that sells the talk to the program committee; the talk is what you actually deliver; write the abstract to optimize for acceptance, then build the talk to deliver on the abstract's promise
@@ -133,3 +174,32 @@ why this topic is relevant now, why you are specifically qualified to give this 
 - [**"Demystifying Public Speaking" — Lara Hogan](https://larahogan.me)** — The most practical guide to conference speaking specifically for developers; covers finding your topic, writing the abstract, handling nerves, and post-talk follow-up
 - [**"Speaking.io" — Zach Holman](https://speaking.io)** — A curated collection of advice from experienced conference speakers on every aspect of talk preparation and delivery; free to read online
 - [**Notist](https://noti.st) and Speakerdeck (speakerdeck.com)** — Platforms for hosting and sharing your slide decks; publishing your slides after a talk gives the audience a reference and increases the talk's findability online
+
+```recall
+- q: "Distinguish the abstract from the talk."
+  must:
+    - "the CFP submission is a 150-300 word abstract that sells the talk to the program committee"
+    - "the talk is what you actually deliver"
+    - "write the abstract to optimize for acceptance, then build the talk to deliver on its promise"
+
+- q: "Name the program committee's review criteria."
+  must:
+    - "relevance to the conference audience"
+    - "specificity of the topic"
+    - "the speaker's apparent expertise"
+    - "originality"
+
+- q: "Give the talk formats and where a first-timer starts."
+  must:
+    - "lightning talks — 5 minutes, good for first-timers"
+    - "standard talks — 20-30 minutes"
+    - "longer sessions — 45-60 minutes"
+    - "start with lightning and standard before committing to longer formats"
+
+- q: "State the slide-design fundamentals."
+  must:
+    - "one idea per slide"
+    - "code slides use a large font, minimum 24pt, and short snippets"
+    - "avoid walls of text, use contrast for emphasis"
+    - "dark backgrounds for code-heavy talks in large rooms"
+```

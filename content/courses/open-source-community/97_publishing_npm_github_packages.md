@@ -7,6 +7,47 @@ GitHub Packages (GitHub Container Registry / GitHub npm Registry) is an alternat
 
 For most utility packages you intend to make public, npm is the correct registry — it has broader tooling support, better CDN caching, and is the default for `npm install`. For internal tools you want to share across multiple client project repositories without making them public, GitHub Packages is the correct choice. The mechanics of both are nearly identical; the main difference is authentication configuration and the registry URL in your `package.json`.
 
+```quiz
+- q: "`files` in package.json, or `.npmignore`?"
+  anchor: "always use this instead of `.npmignore` — it is an allowlist (more explicit and safer than a denylist)"
+  options:
+    - text: "`.npmignore` — easier to keep up as the project grows"
+      correct: false
+      why: "It is a denylist: anything you forget to add ships."
+    - text: "`files` — an allowlist, so nothing ships unless you named it"
+      correct: true
+      why: "More explicit and safer than a denylist."
+    - text: "Neither — npm's defaults already exclude what matters"
+      correct: false
+      why: "Its defaults are not an allowlist, and that property is the point."
+
+- q: "What should CI use to authenticate a publish?"
+  anchor: "create a `publish` npm access token with automation type and store it as `NPM_TOKEN`"
+  options:
+    - text: "Your personal npm login, stored as a repository secret"
+      correct: false
+      why: "Never use personal credentials in CI."
+    - text: "A publish access token of automation type, stored as NPM_TOKEN in repository secrets"
+      correct: true
+      why: "Scoped to the job it does, and revocable without touching your account."
+    - text: "A GitHub personal access token"
+      correct: false
+      why: "That authenticates GitHub Packages, not the npm registry."
+
+- q: "You are about to publish. What do you run first?"
+  anchor: "`npm publish --dry-run` shows exactly what will be published without publishing it; run this before every real publish"
+  options:
+    - text: "`npm pack`, then inspect the tarball by hand"
+      correct: false
+      why: "That gets you there, but the built-in does it in one step and is what the lesson names."
+    - text: "`npm publish --dry-run`, which shows exactly what would ship"
+      correct: true
+      why: "Before every real publish, not only the first."
+    - text: "Nothing — `prepublishOnly` already guards the publish"
+      correct: false
+      why: "It builds and tests. It does not show you the file list about to go out."
+```
+
 ## Key Concepts
 - **npm account**: Required for publishing to the public registry; create at npmjs.com; enable 2FA before publishing your first package
 - **Scoped packages**: `@yourusername/package-name` — scoped packages prevent name collisions and signal authorship; required for GitHub Packages, optional but recommended for npm
@@ -182,3 +223,29 @@ GITHUB_TOKEN=your_token npm publish
 - [**npm Documentation: Creating and Publishing Packages](https://docs.npmjs.com)** — The authoritative reference; the sections on package.json `exports` field and provenance attestation are worth reading even if you have published before
 - [**`tsup` documentation](https://tsup.egoist.dev)** — The simplest TypeScript build tool for libraries; replaces Rollup + tsc for most package use cases; the configuration section covers dual ESM/CJS output and type declarations
 - **"Publishing TypeScript Packages" — Matt Pocock (total-typescript.com)** — The most current guide to the package.json `exports` field configuration for TypeScript packages that support both ESM and CJS consumers
+
+```recall
+- q: "What does `prepublishOnly` do, and what does it prevent?"
+  must:
+    - "it runs before every npm publish"
+    - "use it to build the TypeScript output and run the tests"
+    - "it prevents publishing broken packages"
+
+- q: "Explain scoped packages and where they are required."
+  must:
+    - "@yourusername/package-name"
+    - "they prevent name collisions and signal authorship"
+    - "required for GitHub Packages"
+    - "optional but recommended on npm"
+
+- q: "When is GitHub Packages the right registry rather than npm?"
+  must:
+    - "for private packages shared across your own repositories without making them public"
+    - "for packages tightly coupled to a specific GitHub organization"
+    - "it hosts privately for free within storage limits, where npm private packages need a paid account"
+
+- q: "What does `--provenance` add?"
+  must:
+    - "it links the published package to its source commit via a signed attestation"
+    - "consumers can verify the package was built from the stated source"
+```

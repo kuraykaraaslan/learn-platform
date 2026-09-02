@@ -1084,7 +1084,7 @@
       "slug": "scoped-packages",
       "term": "Scoped packages",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 3
+      "rawOccurrences": 4
     },
     {
       "slug": "secrets-manager",
@@ -1352,7 +1352,7 @@
         "open-source-community/95_publishing_maintaining_oss_tool.md",
         "product-technical-strategy/393_api_integration_event_driven_decisions.md"
       ],
-      "rawOccurrences": 7
+      "rawOccurrences": 8
     },
     {
       "slug": "websocket-handshake",
