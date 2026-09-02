@@ -9,6 +9,35 @@ The failure mode to watch for is defaulting to fixed price because clients like 
 
 This is general business education, not legal advice; nothing here should be read as a template contract clause. Any commercial terms you actually put in front of a client should be checked against your own jurisdiction's contract law, and a real agreement worth meaningful money is worth a short conversation with a lawyer before it's signed.
 
+
+```quiz
+- q: "A developer prices every engagement hourly regardless of the project. What does the lesson call the mistake?"
+  anchor: "The model is a tool selected for the job, not a personality trait of your business"
+  options:
+    - text: "Underpricing \u2014 hourly almost always leaves money on the table"
+      correct: false
+      why: "Hourly can be exactly right. The error is applying one model everywhere, not the rate it produces."
+    - text: "Treating the pricing model as a fixed trait instead of choosing it per engagement"
+      correct: true
+      why: "Scope clarity, where the risk sits, and how the client prefers to buy should pick the model \u2014 in that order, before the number."
+    - text: "Failing to offer value-based pricing, which is where the upside is"
+      correct: false
+      why: "Value-based needs a trusting, sophisticated client and a high-impact outcome. It is one tool, not the goal."
+
+- q: "You switch to fixed price but keep working the way you did on hourly. What does the lesson predict?"
+  anchor: "Choosing the model without building its supporting structure is how each model fails"
+  options:
+    - text: "It will work, since fixed price is simpler to administer than hourly"
+      correct: false
+      why: "It has less admin and more risk. The administration you drop is exactly what was containing the risk."
+    - text: "It fails, because fixed price needs a locked scope document and revision limits to be safe"
+      correct: true
+      why: "Each model carries its own supporting infrastructure; adopting the model without it is how the model fails."
+    - text: "It works until the first change request, then converts back to hourly"
+      correct: false
+      why: "Without a scope document there is nothing to convert from \u2014 the change request is not visible as one."
+```
+
 ## Key Concepts
 - **Paid discovery/audit**: used when scope is genuinely unclear; the deliverable is a scope document, risk list, and estimate range — not working software.
 - **Fixed price**: requires written scope, acceptance criteria, milestones, and change-request rules to be safe; otherwise it silently transfers all uncertainty to you.
@@ -55,3 +84,27 @@ This is general business education, not legal advice; nothing here should be rea
 - Jonathan Stark, *Hourly Billing Is Nuts* — a practical case for outcome- and scope-based pricing over time-based billing.
 - Blair Enns, *Pricing Creativity: A Guide to Profit Beyond the Billable Hour*.
 - [Rafael Corrales / a16z-style writing on SaaS and service pricing models is widely available, but for freelance/agency-specific pricing, Jonathan Stark's "Ditching Hourly" newsletter and podcast archive is a solid, free primary source](https://ditchinghourly.com).
+
+```recall
+- q: "Name the seven usable pricing structures."
+  must:
+    - "paid discovery or audit"
+    - "fixed price, and phased fixed price"
+    - "hourly"
+    - "day rate"
+    - "retainer"
+    - "value-based"
+
+- q: "What decides which model to use?"
+  must:
+    - "how clear the scope actually is"
+    - "where the risk sits, with you or the client"
+    - "how the client prefers to buy"
+    - "the model is chosen for the job, not fixed by habit"
+
+- q: "Give the supporting structure each of three models needs to be safe."
+  must:
+    - "hourly \u2014 time tracking and a weekly cap"
+    - "fixed price \u2014 a locked scope document and revision limits"
+    - "retainer \u2014 explicit exclusions and a rollover policy"
+```

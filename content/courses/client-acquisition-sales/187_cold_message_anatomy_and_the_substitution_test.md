@@ -7,6 +7,35 @@ The mechanism that actually separates a personalized message from a mail-merge i
 
 Research supports this discipline through three personalization tiers. T1 is the default: a specific, named, verifiable fact you found yourself, stated flatly and without flattery, with enough detail to prove you actually looked. T2 — segment-level framing shared across a list — is only acceptable for B or C tier prospects where the segment is genuinely narrow. T3, a fixed template with only the name and company swapped, is forbidden outright; inserting `<FirstName>` is not personalization, it is a mail-merge with manners. The evidence sentence itself follows a specific shape: it is falsifiable. "Your careers page has two backend roles open, both referencing the internal ordering tool" could be wrong, which is exactly what makes it evidence of having looked — a compliment about "innovative approach" could never be wrong, because it says nothing at all. Research has firm boundaries too: personal life, health, politics, private social accounts, and anything from a data breach are off-limits regardless of public availability, and referencing any of it doesn't just cross the line, it announces that you crossed it.
 
+
+```quiz
+- q: "Your cold message runs well over its length budget. Which part do you cut?"
+  anchor: "the fix is almost always to cut part three"
+  options:
+    - text: "The researched fact, since it takes the most words to establish"
+      correct: false
+      why: "That is the part that proves the message is not a template. Cutting it removes the only reason to keep reading."
+    - text: "Part three \u2014 the capability sentence, which is where a service catalogue creeps in"
+      correct: true
+      why: "\"What I do\" is where length quietly accumulates, and it is the part the recipient asked for least."
+    - text: "The question, since a first message does not need an ask"
+      correct: false
+      why: "The ask is the whole point of the touch. A message with no question is an announcement."
+
+- q: "Which of these is acceptable in a first cold message?"
+  anchor: "one question, answerable with a yes or no, costing the recipient nothing to answer"
+  options:
+    - text: "A calendar link, so an interested reader can act immediately"
+      correct: false
+      why: "A calendar link is a favour asked of a stranger who has shown no interest yet \u2014 the lesson groups it with attachments and prices."
+    - text: "One yes-or-no question that costs the recipient nothing to answer"
+      correct: true
+      why: "The one-ask rule is absolute: one question, low cost, answerable without work."
+    - text: "Two questions, if the second is optional"
+      correct: false
+      why: "A second question is a second ask however it is framed. The rule is one."
+```
+
 ## Key Concepts
 - **Four-part structure, fixed order**: specific context → consequence framed as a pattern → one capability sentence → one soft question.
 - **The one-ask rule**: exactly one low-cost, yes/no-answerable question — no calendar link, no price, no attachment, no second ask in a first touch.
@@ -57,3 +86,24 @@ If N — the message passes; check the one-ask rule and length budget before sen
 - *Never Split the Difference* — Chris Voss: the value of specificity and calibrated questions, which is exactly what the "one soft question" rule is built on.
 - *The Sales Development Playbook* — Trish Bertuzzi: message and cadence discipline at the rep level, scaled down to a solo operator's first touch.
 - *Cold Calling Techniques (That Really Work!)* — Stephan Schiffman: openers built on specificity rather than volume, applicable well beyond the phone.
+
+```recall
+- q: "Give the four parts of a cold message in order."
+  must:
+    - "a specific researched fact"
+    - "the consequence, framed as a pattern rather than an accusation"
+    - "one sentence of capability tied to that consequence"
+    - "exactly one soft, low-cost question"
+
+- q: "What is the first message for, and what is it not for?"
+  must:
+    - "it starts a conversation"
+    - "it does not close a sale or book a meeting"
+    - "it does not explain the whole service"
+
+- q: "State the one-ask rule and what it rules out."
+  must:
+    - "one question, answerable yes or no, costing nothing"
+    - "no calendar link, no price, no attachment"
+    - "no second question, however softly framed"
+```

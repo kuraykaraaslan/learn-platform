@@ -17,6 +17,21 @@ The right moment to introduce either offer is not "whenever it comes up" — it'
 - **Capacity ceiling**: total recurring commitments should occupy roughly 30–50% of working capacity, leaving 50–70% for project and growth work.
 - **Forbidden patterns**: selling "unlimited" anything, vague "I'll help when I can" arrangements, and unpaid ongoing support drifting on informally after a project's official handover.
 
+```tradeoff
+question: "Maintenance agreement, or retainer?"
+sides:
+  - name: "Maintenance"
+    wins_when:
+      - signal: "write down what the client actually asked for: if every item is dependency updates, bug fixes, hosting checks and backups, it is upkeep"
+      - signal: "the system is delivered and stable \u2014 there is no roadmap waiting, only the need to keep what exists working"
+      - signal: "you can state the exclusions in one line (no new modules, no redesigns, no major integrations) and the client agrees without negotiating"
+  - name: "Retainer"
+    wins_when:
+      - signal: "the client keeps describing things that are not yet built \u2014 new features, refinements, roadmap questions"
+      - signal: "you can name a monthly hour budget and both sides can say what happens to unused hours; if you cannot, the product is not scoped yet"
+      - signal: "the value is your continuing capacity and judgement, not the absence of breakage"
+```
+
 ## Example Code
 A three-tier structure distinguishing maintenance from retainer, priced and bounded:
 
