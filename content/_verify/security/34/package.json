@@ -1,0 +1,8 @@
+{
+  "name": "verify-security-34",
+  "private": true,
+  "description": "Runs crypto.timingSafeEqual against unequal-length buffers for real, then shows the length guard still answering the attacker's question, then the fixed-length HMAC that removes it — for lesson 34's proof block. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "bash run.sh"
+  }
+}

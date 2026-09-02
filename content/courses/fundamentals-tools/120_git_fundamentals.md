@@ -38,6 +38,27 @@ git reflog
 git reset --hard HEAD@{3}
 ```
 
+Merge and rebase applied to the same two-branch history, run for real with pinned commit dates so the hashes below are the actual ones git produced. Predict what happens to the feature commit's hash in each case before revealing it.
+
+```proof sha=8e683f19cfad0ad0 at=2026-09-02 commit=9614387
+$ bash run.sh
+$ git log --format="%h %s" feature -1   # the feature commit, before anything
+cb7b115 feature: add feature.txt
+
+--- merge: nothing is rewritten ---
+$ git log --format="%h %p %s" -1   # the merge commit and its two parents
+e833489 ee3b722 cb7b115 merge feature into main
+feature commit is still cb7b115: commit
+
+--- rebase: the same change gets a new hash ---
+$ git log --format="%h %s" -2   # linear now, and the hash changed
+607cc5e feature: add feature.txt
+ee3b722 main: add main.txt
+before rebase: cb7b115
+after rebase:  607cc5e
+same tree, same message, different commit — this is why you never rebase what others pulled
+```
+
 ## When to Use
 - **Rebase** your own local, unpushed (or not-yet-pulled-by-others) feature branch to keep history linear before opening a PR
 - **Merge** when the branch is shared, or when you want an honest record of when work actually diverged

@@ -40,6 +40,27 @@ const results = await Promise.allSettled(userIds.map((id) => sendWelcomeEmail(id
 const failed = results.filter((r) => r.status === "rejected");
 ```
 
+The `withdraw` shape above, run for real: two concurrent calls each withdrawing 60 from an opening balance of 100, then the same pair against an atomic compare-and-set. Predict both final balances before revealing them — is the naive one lower than the safe one?
+
+```proof sha=4742acde7e6baef4 at=2026-09-02 commit=9614387
+$ bash run.sh
+$ node race.js
+--- naive read-then-write: two concurrent withdrawals of 60 from 100 ---
+A: read  balance=100
+B: read  balance=100
+A: write balance=40
+B: write balance=40
+A: withdrew 60
+B: withdrew 60
+final balance: 40
+120 was withdrawn from an opening balance of 100, and neither call failed
+
+--- atomic compare-and-set, same two concurrent withdrawals ---
+A: withdrew 60
+B: refused (insufficient funds)
+final balance: 40
+```
+
 ## When to Use
 - Any code with more than one `await` touching shared state (a balance, a counter, an inventory count) — assume interleaving is possible
 - Independent async operations with no shared state — run them with `Promise.all` instead of sequential `await`s to cut latency

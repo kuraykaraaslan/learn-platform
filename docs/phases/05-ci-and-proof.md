@@ -97,10 +97,27 @@ yazar değil **CI üretir** — uydurma yapısal olarak imkânsız. P6'nın quiz
 
 - [x] CI kuruldu ve `content:check` her PR'da çalışıyor — `.github/workflows/content.yml`,
       bu oturumda 29 push'ın tamamında gerçek CI yeşili doğrulandı (`gh run watch`)
-- [ ] **Kısmi**: 3 derste `content/_verify` girdisi var (`fundamentals-tools/123,126,139`),
-      hedef ~10'du — mekanizma kanıtlanmış durumda (CI'da `stamp-verify.ts --check`
-      her push'ta çalışıyor ve gerçek çıktıyı yeniden üretiyor) ama kapsam genişletilmedi.
-      Daha fazla proof dersi eklemek ayrı, kendi başına bir iş kalemi
+- [x] **10 derste** `content/_verify` girdisi var — hedef ~10'a ulaşıldı:
+      `fundamentals-tools/120,121,122,123,126,139`, `algorithms-concurrency/129,130`,
+      `security/30,34`. CI'da `stamp-verify.ts --check` her push'ta onunu da yeniden
+      çalıştırıp byte-byte karşılaştırıyor.
+
+      Aday kıstası determinizmdi: çıktıda saat, süre, rastgele id ya da araç
+      sürümüne bağlı metin bulunamaz. Kullanılan teknikler, sonradan proof
+      eklerken tekrar başvurulmak üzere:
+
+      | Ders | Kanıtladığı şey | Determinizm nereden geliyor |
+      |---|---|---|
+      | `120` | rebase commit hash'ini değiştirir, merge değiştirmez | pinlenmiş author+committer tarihleri; `git rebase --committer-date-is-author-date` (düz `rebase` committer date'e *şimdi*'yi yazıp hash'i her koşuda değiştiriyordu) |
+      | `121` | `WHERE x = NULL` sessizce 0 satır döner; `NOT IN (…, NULL)` hiçbir şey eşleştirmez | pglite (gerçek Postgres), sabit seed, her `SELECT` `ORDER BY id` |
+      | `122` | düz nesne integer-benzeri anahtarları yeniden sıralar, `Map` sıralamaz | anahtar sırası ECMAScript spec'iyle sabit |
+      | `129` | tek thread yarış koşulunu engellemez | aynı gecikmeli `setTimeout`'ların FIFO sırası |
+      | `130` | binary search azalan dizide sessizce -1 döner | dizi literal, prob'lar yalnız ondan türüyor |
+      | `30` | birleştirilmiş sorgu auth'u atlatır, parametreli atlatmaz | pglite, sabit seed |
+      | `34` | `timingSafeEqual` farklı uzunlukta `RangeError` fırlatır | digest'in kendisi hiç basılmaz, yalnız uzunluğu ve karşılaştırma sonucu |
+
+      `EXPLAIN ANALYZE`, benchmark ve ağ isteyen her şey bu kıstası geçemez —
+      aday listesine alınmamalı.
 - [x] İşaretler arası elle düzenleme build'i kırıyor — orijinal ship sırasında hem
       temiz geçiş hem kasıtlı bozma test edildi (bkz. bu oturumun özetindeki
       "stamp-verify.ts check-mode logic bug" düzeltmesi ve doğrulaması)

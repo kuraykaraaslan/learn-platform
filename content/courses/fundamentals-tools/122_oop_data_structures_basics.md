@@ -42,6 +42,27 @@ function dedupeActiveUserIds(events: { userId: string }[]): string[] {
 }
 ```
 
+The "no guaranteed order" claim above, run for real: the same four keys inserted into a plain object and into a `Map`. Predict the two key orders before revealing them — and what `map.get("4")` returns when the key was inserted as the number `4`.
+
+```proof sha=4f7d5514b4f281d5 at=2026-09-02 commit=9614387
+$ node keys.js
+inserted in this order: 30, 4, 100, 4.5
+
+--- plain object as a lookup table ---
+Object.keys(obj): ["4","30","100","4.5"]
+the integer-like keys were sorted numerically; "4.5" is not integer-like, so it kept its slot
+
+--- Map with the same insertions ---
+[...map.keys()]: [30,4,100,4.5]
+insertion order preserved, and the keys are still numbers, not strings
+
+--- and the key type is not the same either ---
+typeof Object.keys(obj)[0]: string
+typeof [...map.keys()][0]:  number
+obj[4] and obj["4"] are the same slot: true
+map.get(4) is a hit, map.get("4") is: undefined
+```
+
 ## When to Use
 - Reach for composition first; only use inheritance for a genuinely stable "is-a" relationship (rare in application code)
 - Use a `Map`/`Set` the moment you're checking membership or looking up by key inside a loop — an `array.includes()` there is a silent O(n²)

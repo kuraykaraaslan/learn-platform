@@ -1,0 +1,8 @@
+{
+  "name": "verify-algorithms-concurrency-129",
+  "private": true,
+  "description": "Runs a real interleaved read-then-write race between two concurrent withdrawals, then the atomic compare-and-set that fixes it — for lesson 129's proof block. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "bash run.sh"
+  }
+}

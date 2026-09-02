@@ -42,6 +42,32 @@ function flattenBreadthFirst(root: Category): Category[] {
 }
 ```
 
+Binary search's one precondition, run for real: the same ten numbers ascending and descending, searching for a value that is present in both. Predict whether the second search finds it before revealing the probes.
+
+```proof sha=257fc432dcdb3117 at=2026-09-02 commit=9614387
+$ node search.js
+--- searching for 72 in the ascending array ---
+  [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]
+  probe index 4 -> 16
+  probe index 7 -> 56
+  probe index 8 -> 72
+  result: found at index 8
+  is 72 actually in this array? true
+
+--- searching for 72 in the descending array ---
+  [91, 72, 56, 38, 23, 16, 12, 8, 5, 2]
+  probe index 4 -> 23
+  probe index 7 -> 8
+  probe index 8 -> 5
+  probe index 9 -> 2
+  result: not found (-1)
+  is 72 actually in this array? true
+
+both arrays hold the same ten numbers, and both are sorted —
+but binary search assumes ascending, so the second one silently misses.
+it returns -1 rather than raising: the precondition is never checked.
+```
+
 ## When to Use
 - Modeling any hierarchical domain data (categories, comment threads, org structures, nested permissions)
 - Choosing DFS when order/flattening matters, BFS when "closest/shallowest first" matters
