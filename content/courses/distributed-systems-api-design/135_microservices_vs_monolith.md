@@ -13,6 +13,21 @@ The **modular monolith** is the underrated middle step: a single deployable, but
 - **What you gain**: independent scaling, independent deploys, fault isolation
 - **What you pay**: network calls replace function calls (latency + failure modes), distributed transactions become eventual consistency problems (#1, #3, #14, #15), and the full observability stack becomes mandatory per service
 
+```tradeoff
+question: "Split into services, or stay one deployable?"
+sides:
+  - name: "Modular monolith"
+    wins_when:
+      - signal: "you cannot yet name the bounded contexts \u2014 if the split lines are still being argued about, a wrong boundary costs more than no boundary"
+      - signal: "count the people who would own each service: if it is the same person twice, that is one service"
+      - signal: "operational overhead has to stay flat \u2014 one pipeline, one log stream, and transactions that are just database transactions"
+  - name: "Separate services"
+    wins_when:
+      - signal: "a specific module's failure or deploy cadence is demonstrably hurting the rest \u2014 point at the incidents or the blocked releases, not at a feeling"
+      - signal: "the split follows a business capability, not a technical layer: \"orders\" is a boundary, \"the database service\" is the distributed-monolith anti-pattern"
+      - signal: "you can already fund per-service deployment, observability and on-call \u2014 before the split, not after"
+```
+
 ## Example Code
 ```typescript
 // BEFORE — monolith: a direct, in-process, transactional call

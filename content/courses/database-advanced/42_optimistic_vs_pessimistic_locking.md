@@ -19,6 +19,21 @@ As a default: pessimistic locking for low-frequency, high-stakes operations — 
 - **Retry with backoff** — Optimistic lock conflicts should be retried with exponential backoff; too-aggressive retry can amplify contention
 - **Version column** — An `INTEGER` or `TIMESTAMP` field incremented on every update; serves as the conflict detection token
 
+```tradeoff
+question: "Optimistic or pessimistic locking?"
+sides:
+  - name: "Optimistic"
+    wins_when:
+      - signal: "conflicts are genuinely rare \u2014 measure it before deciding: log how often two writes to the same row land inside one another's transaction window over a normal day"
+      - signal: "the write is a single-row UPDATE you can guard with `WHERE version = $readVersion`"
+      - signal: "a retry is safe and cheap \u2014 the operation is idempotent, or redoing it costs nothing the user would notice"
+  - name: "Pessimistic"
+    wins_when:
+      - signal: "the check and the write span multiple rows or tables, so one version column cannot guard the whole decision"
+      - signal: "a lost conflict is expensive to redo \u2014 the transaction already did real work (an external charge, a generated document) that a retry would repeat"
+      - signal: "measured contention is high enough that optimistic retries would thrash \u2014 if your conflict rate is more than a few percent, queueing on `SELECT FOR UPDATE` is cheaper than looping"
+```
+
 ## Example Code
 ```typescript
 // ─── Optimistic locking in TypeORM ────────────────────────────────────────

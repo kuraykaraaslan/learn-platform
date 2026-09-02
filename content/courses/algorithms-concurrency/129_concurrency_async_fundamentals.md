@@ -43,6 +43,22 @@ This is exactly why "single-threaded" doesn't mean "race-condition-free." If two
 - **`Promise.all` vs `Promise.allSettled`**: fail-fast on first rejection vs wait for every outcome
 - **`worker_threads`**: Node's actual escape hatch for CPU-bound parallelism — a real OS thread, not the event loop
 
+```mermaid
+sequenceDiagram
+    participant A as withdraw("A", 60)
+    participant B as withdraw("B", 60)
+    participant DB as balance (starts at 100)
+    A->>DB: read
+    DB-->>A: 100
+    Note over A: A awaits here — the event loop is free to run B
+    B->>DB: read
+    DB-->>B: 100
+    Note over B: B checks 100 >= 60 against the same stale value
+    A->>DB: write 100 - 60 = 40
+    B->>DB: write 100 - 60 = 40
+    Note over A,DB: 120 withdrawn from a balance of 100,<br/>and neither call reported an error
+```
+
 ## Example Code
 ```typescript
 // A race condition despite JS being single-threaded: two concurrent calls interleave

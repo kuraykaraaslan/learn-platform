@@ -19,6 +19,21 @@ For a multi-tenant SaaS, this matters earlier than most founders expect. As soon
 - **DuckDB** — an embeddable in-process OLAP engine; can query Parquet files or Postgres directly; great for smaller-scale analytics
 - **HTAP** — Hybrid Transactional/Analytical Processing; some databases (TiDB, SingleStore) claim to handle both, but with trade-offs
 
+```tradeoff
+question: "Run the analytical query against production, or move it off?"
+sides:
+  - name: "Keep it on the primary"
+    wins_when:
+      - signal: "the query is rare, bounded and off-peak \u2014 you can state how often it runs and roughly how many rows it touches"
+      - signal: "no user is waiting on the result, so a slow run costs nothing visible"
+      - signal: "check `EXPLAIN` first: if it is an index scan over thousands of rows rather than a scan over millions, this is not an OLAP query yet"
+  - name: "Move it to a separate system"
+    wins_when:
+      - signal: "`EXPLAIN` shows a scan over millions of rows, or the query already runs for seconds"
+      - signal: "real users have seen slowdowns that line up in time with reporting runs \u2014 check the slow-query log for lock contention and sequential scans at those timestamps"
+      - signal: "the need is recurring rather than a one-off, so a read replica, a warehouse or a materialized view pays for itself"
+```
+
 ## Example Code
 ```typescript
 // Scenario: you need a "tenant activity summary" for an admin dashboard.

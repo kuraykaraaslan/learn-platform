@@ -46,6 +46,24 @@ The fix is almost always **eager loading** — telling the ORM to fetch related 
 - **Select only what you need**: Fetching all columns (`SELECT *`) when you need 3 columns wastes bandwidth and cache memory
 - **JOIN vs two queries**: For large datasets, a single JOIN can be slower than two targeted queries; profile before assuming a JOIN is always better
 
+```mermaid
+sequenceDiagram
+    participant App
+    participant DB as Database
+    Note over App,DB: Lazy: the shape a .map() over the member list produces
+    App->>DB: SELECT * FROM tenant_members WHERE tenant_id = 42
+    DB-->>App: 120 rows
+    loop once per member — this is the N
+        App->>DB: SELECT * FROM users WHERE id = ?
+        DB-->>App: 1 row
+    end
+    Note over App,DB: 121 round trips, every one of them fast on its own
+    Note over App,DB: Eager: the same data, pre-loaded
+    App->>DB: SELECT ... FROM tenant_members JOIN users ON users.id = user_id
+    DB-->>App: 120 rows, already populated
+    Note over App,DB: 1 round trip
+```
+
 ## Example Code
 
 Same seeded table as the query-plan-analysis and index-strategy lessons. This is the shape a naive per-item loop actually fires — one query, run once per member of tenant 42 (~120 of them):
