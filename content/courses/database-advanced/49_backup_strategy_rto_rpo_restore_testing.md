@@ -7,6 +7,47 @@ For your multi-tenant SaaS with a system database and N per-tenant databases, th
 
 The part most developers skip — and the part that matters most — is restore testing. A backup you have never restored from is untested. Compressed backups can be corrupted. Automated backup jobs can silently fail. Restore procedures documented two years ago can be outdated. The industry standard is to test restores regularly (monthly for production, whenever the restore procedure changes) and to keep evidence that you did.
 
+```quiz
+- q: "\"Back online within 2 hours, and no more than 15 minutes of data lost.\" Name both numbers."
+  anchor: "a 4-hour RPO means you can lose up to 4 hours of data"
+  options:
+    - text: "RTO 15 minutes, RPO 2 hours"
+      correct: false
+      why: "Reversed. RTO bounds the downtime, RPO bounds the data loss."
+    - text: "RTO 2 hours, RPO 15 minutes"
+      correct: true
+      why: "Recovery *time* is how long you may be down; recovery *point* is how far back the last usable state may sit."
+    - text: "Both are RTO — one for the restore, one for replication lag"
+      correct: false
+      why: "Replication lag is what drives RPO. They are two distinct objectives."
+
+- q: "A bad migration corrupted data at 14:32. You have nightly full backups and nothing else. What can you restore to?"
+  anchor: "Restore a base backup, then apply WAL logs up to a specific timestamp"
+  options:
+    - text: "14:32, by restoring last night's backup and replaying the application logs"
+      correct: false
+      why: "Application logs are not a redo stream. Nothing can replay them into the database."
+    - text: "Only last night — recovering to 14:32 needs archived WAL for PITR"
+      correct: true
+      why: "PITR restores a base backup and applies WAL to a chosen timestamp; with no WAL archive there is nothing to apply."
+    - text: "14:31, since PostgreSQL keeps a rolling one-hour WAL buffer"
+      correct: false
+      why: "WAL on disk is recycled, not retained. PITR needs it archived deliberately."
+
+- q: "Primary DB, an automated snapshot in the same region, and a replica in the same region. Does that satisfy 3-2-1?"
+  anchor: "3 copies of data, on 2 different media, 1 offsite"
+  options:
+    - text: "Yes — three copies is the number the rule names"
+      correct: false
+      why: "Three copies is one third of the rule. Two media and one offsite are the rest of it."
+    - text: "No — nothing is offsite, and it is arguably a single medium"
+      correct: true
+      why: "One regional failure takes all three at once, which is the scenario the offsite copy exists for."
+    - text: "Yes, provided the snapshot is encrypted at rest"
+      correct: false
+      why: "Encryption is a confidentiality control and has no bearing on the rule."
+```
+
 ## Key Concepts
 - **RPO (Recovery Point Objective)** — Maximum acceptable data loss; a 4-hour RPO means you can lose up to 4 hours of data
 - **RTO (Recovery Time Objective)** — Maximum acceptable downtime; a 2-hour RTO means you must be operational within 2 hours of a disaster
@@ -159,3 +200,21 @@ testRestoreLatestBackup();
 - [AWS RDS automated backups and point-in-time recovery](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithAutomatedBackups.html)
 - [Barman — PostgreSQL Backup and Recovery Manager](https://www.pgbarman.org/)
 - [PostgreSQL: continuous archiving and PITR](https://www.postgresql.org/docs/current/continuous-archiving.html) — what point-in-time recovery actually requires you to have set up in advance
+
+```recall
+- q: "Contrast full and incremental backups."
+  must:
+    - "a full backup is a complete copy at a point in time — slowest to create, simplest to restore"
+    - "an incremental backup holds only the changes since the last one — faster to create, more complex to restore, since the increments must be applied in order"
+
+- q: "What is WAL archiving for?"
+  must:
+    - "the Write-Ahead Log records every change"
+    - "archiving WAL enables Point-in-Time Recovery"
+    - "it lets you restore to any second in the past"
+
+- q: "Name PostgreSQL's built-in backup tools and their scope."
+  must:
+    - "`pg_dump` for an individual database"
+    - "`pg_dumpall` for the entire cluster"
+```

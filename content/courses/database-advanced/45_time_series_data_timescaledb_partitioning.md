@@ -7,6 +7,47 @@ There are two main approaches for managing this in PostgreSQL. The first is nati
 
 The second approach is TimescaleDB, a PostgreSQL extension that wraps the partitioning concept in a higher-level API called hypertables, and adds time-series-specific features: automatic chunk creation, continuous aggregates (materialized views that stay updated automatically), data compression, and tiered storage (hot/warm/cold data at different storage costs). TimescaleDB is compelling if your use case is genuinely time-series (metrics, telemetry, IoT data, financial ticks). For audit logs and session analytics, native partitioning is simpler and sufficient.
 
+```quiz
+- q: "Your table is range-partitioned on `created_at`, but a query filters only on `tenant_id`. What happens?"
+  anchor: "only works when the WHERE clause contains the partition key"
+  options:
+    - text: "Postgres selects the partitions holding that tenant"
+      correct: false
+      why: "It has no way to know which those are. The partition boundaries encode `created_at` and nothing else."
+    - text: "Every partition is scanned — pruning needs the partition key in the WHERE clause"
+      correct: true
+      why: "Partitioning helps queries that filter on the key; the rest get no benefit and still pay the overhead."
+    - text: "The query is rejected as invalid against a partitioned table"
+      correct: false
+      why: "It runs perfectly well. It just runs against all of it."
+
+- q: "You need to remove data older than a year from a partitioned table. `DELETE`, or something else?"
+  anchor: "more efficient than `DELETE WHERE created_at < $threshold`"
+  options:
+    - text: "`DELETE WHERE created_at < now() - interval '1 year'`"
+      correct: false
+      why: "That rewrites rows, generates WAL, and leaves bloat for vacuum to reclaim afterwards."
+    - text: "Drop the partitions that fall entirely past the threshold"
+      correct: true
+      why: "A retention policy dropping whole partitions or chunks is the efficient form of the same intent."
+    - text: "`TRUNCATE` the table and reload what you meant to keep"
+      correct: false
+      why: "That removes the recent data too, and reloading it is strictly more work than dropping the old partitions."
+
+- q: "What is a continuous aggregate?"
+  anchor: "TimescaleDB's auto-updating materialized view"
+  options:
+    - text: "A view recomputed on every query, so it is never stale"
+      correct: false
+      why: "That is a plain view. The point here is that the result is precomputed and stored."
+    - text: "An auto-updating materialized view — the GROUP BY is precomputed and refreshed for you"
+      correct: true
+      why: "Materialized-view speed without scheduling the refresh yourself."
+    - text: "A trigger maintaining a summary table on every insert"
+      correct: false
+      why: "That is the hand-rolled equivalent, and it puts the whole cost on the write path."
+```
+
 ## Key Concepts
 - **Table partitioning** — A single logical table split into multiple physical storage units based on a partition key; queries that filter on the partition key only scan relevant partitions
 - **Range partitioning** — `PARTITION BY RANGE (created_at)` — most natural for time-series; one partition per week/month/quarter
@@ -169,3 +210,22 @@ export async function getAuditLogsInRange(
 - [PostgreSQL declarative partitioning documentation](https://www.postgresql.org/docs/current/ddl-partitioning.html)
 - [TimescaleDB getting started guide](https://docs.timescale.com/getting-started/latest/)
 - [pg_partman — PostgreSQL partition management extension](https://github.com/pgpartman/pg_partman)
+
+```recall
+- q: "What is table partitioning, and what does range partitioning look like for time-series?"
+  must:
+    - "a single logical table split into multiple physical storage units based on a partition key"
+    - "queries filtering on the partition key only scan the relevant partitions"
+    - "`PARTITION BY RANGE (created_at)` — one partition per week, month or quarter"
+
+- q: "What is a hypertable, and what is a chunk?"
+  must:
+    - "a hypertable is a partitioned table managed by TimescaleDB, with chunks created automatically"
+    - "it supports compression and continuous aggregates"
+    - "a chunk is TimescaleDB's term for a partition, with a default interval of 7 days"
+
+- q: "What is declarative partitioning?"
+  must:
+    - "PostgreSQL syntax for defining partitions directly in the DDL"
+    - "supported since PostgreSQL 10"
+```

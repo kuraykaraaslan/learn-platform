@@ -2121,12 +2121,12 @@
       },
       "45_time_series_data_timescaledb_partitioning.md": {
         "title": "f0a50b67c51883fc",
-        "whatItIs": "1859329b58cee31b",
+        "whatItIs": "3a0380e199a32341",
         "keyConcepts": "ef651f17ec53769f",
         "exampleCode": "d09e57c082c6fd21",
         "whenToUse": "e3c9c9062696b944",
         "commonMistakes": "2b1a696424d9d17d",
-        "furtherReading": "d183e79c495507bd"
+        "furtherReading": "ef4253d576679f6d"
       },
       "46_full_text_search_postgres_tsvector_elasticsearch.md": {
         "title": "012a518ae5669da5",
@@ -2139,12 +2139,12 @@
       },
       "47_audit_log_design_application_level.md": {
         "title": "d6e273048500c59a",
-        "whatItIs": "694faf37be828859",
+        "whatItIs": "4444098765a77311",
         "keyConcepts": "843421e0aabf113d",
         "exampleCode": "0435e6f17eae3a16",
         "whenToUse": "bc230ef09f5741e1",
         "commonMistakes": "edbebce8ca5dce93",
-        "furtherReading": "3dafd1b5076de598"
+        "furtherReading": "1c88a2ed955ebbaf"
       },
       "48_data_retention_gdpr_kvkk_deletion_flow.md": {
         "title": "b9f3ab6cbffd5688",
@@ -2157,21 +2157,21 @@
       },
       "49_backup_strategy_rto_rpo_restore_testing.md": {
         "title": "a8f5deae2e31e0cd",
-        "whatItIs": "174608499e6c401e",
+        "whatItIs": "8aeb16e18131d40f",
         "keyConcepts": "5773658bcc5f1de0",
         "exampleCode": "02402a9a7ca49cd5",
         "whenToUse": "d49f831e8d8279ee",
         "commonMistakes": "e7e58942239668f4",
-        "furtherReading": "5bfbff81e71d3a84"
+        "furtherReading": "cda834f305ecd2b5"
       },
       "50_multi_tenant_data_isolation_models.md": {
         "title": "f58602b3dc6c14fb",
-        "whatItIs": "05dbbacfb28fbca7",
+        "whatItIs": "cd89a9d0da784154",
         "keyConcepts": "3a2b3eec0f7990b4",
         "exampleCode": "a462331271133ef6",
         "whenToUse": "67519024dd2e1c3b",
         "commonMistakes": "4fcfa44e77c613f0",
-        "furtherReading": "be91e3c42ecfb3b1"
+        "furtherReading": "816a4be9c9f65db1"
       },
       "51_event_log_rehydration.md": {
         "title": "f9c86a7668754888",

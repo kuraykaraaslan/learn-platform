@@ -251,7 +251,7 @@
         "database-advanced/51_event_log_rehydration.md",
         "distributed-systems-api-design/02_event_sourcing_cqrs.md"
       ],
-      "rawOccurrences": 5
+      "rawOccurrences": 8
     },
     {
       "slug": "audit-log",
@@ -275,7 +275,7 @@
         "security/143_compliance_frameworks.md",
         "security/39_rbac_vs_abac.md"
       ],
-      "rawOccurrences": 75
+      "rawOccurrences": 76
     },
     {
       "slug": "aws-secrets-manager",
@@ -339,7 +339,7 @@
         "process-soft-skills/77_technical_debt_prioritization.md",
         "security/40_supply_chain_security_lockfile_integrity.md"
       ],
-      "rawOccurrences": 12
+      "rawOccurrences": 13
     },
     {
       "slug": "bounded-context",
@@ -422,7 +422,7 @@
         "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md",
         "fundamentals-tools/133_networking_fundamentals.md"
       ],
-      "rawOccurrences": 27
+      "rawOccurrences": 28
     },
     {
       "slug": "constant-time-comparison",
@@ -818,7 +818,7 @@
         "database-advanced/45_time_series_data_timescaledb_partitioning.md",
         "database-advanced/52_oltp_vs_olap.md"
       ],
-      "rawOccurrences": 25
+      "rawOccurrences": 27
     },
     {
       "slug": "modular-monolith",
@@ -1008,7 +1008,7 @@
         "advanced-deep-dive-topics/104_database_internals.md",
         "distributed-systems-api-design/01_cap_theorem.md"
       ],
-      "rawOccurrences": 8
+      "rawOccurrences": 10
     },
     {
       "slug": "residual-risk",
@@ -1034,7 +1034,7 @@
       "lessonsLinkedIn": [
         "advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md"
       ],
-      "rawOccurrences": 3
+      "rawOccurrences": 4
     },
     {
       "slug": "retry-policy",
@@ -1122,7 +1122,7 @@
       "lessonsLinkedIn": [
         "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
       ],
-      "rawOccurrences": 5
+      "rawOccurrences": 9
     },
     {
       "slug": "singleton-scope",
@@ -1219,7 +1219,7 @@
       "lessonsLinkedIn": [
         "distributed-systems-api-design/12_database_sharding_strategies.md"
       ],
-      "rawOccurrences": 5
+      "rawOccurrences": 6
     },
     {
       "slug": "tax-reserve",
@@ -1246,7 +1246,7 @@
         "distributed-systems-api-design/06_distributed_locking.md",
         "distributed-systems-api-design/07_idempotency_key_pattern.md"
       ],
-      "rawOccurrences": 6
+      "rawOccurrences": 7
     },
     {
       "slug": "test-double",

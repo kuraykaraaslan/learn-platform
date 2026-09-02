@@ -9,6 +9,47 @@ The second model is separate schemas within a single database: each tenant gets 
 
 The third model — which you use — is separate databases. Each tenant has their own PostgreSQL database, provisioned dynamically when the tenant is created. This is the gold standard: a compromise of one tenant's database does not expose any other tenant's data, per-tenant backup and deletion are trivial, tenant-specific schema migrations can be run independently, and you can move a tenant's database to a different server for performance or compliance reasons. The cost is operational complexity: you manage N databases instead of one, migrations must run across all of them, and monitoring must cover all databases.
 
+```quiz
+- q: "Rank the three isolation models by strength."
+  anchor: "all tenants in shared tables with `tenantId` discriminator; simplest to build, highest risk of data leakage"
+  options:
+    - text: "Shared-schema strongest, then schema-per-tenant, then database-per-tenant"
+      correct: false
+      why: "Exactly inverted. A shared table with a discriminator is one missing WHERE clause away from a leak."
+    - text: "Database-per-tenant strongest, then schema-per-tenant, then shared-schema"
+      correct: true
+      why: "Strength runs opposite to ease of building: shared-schema is the simplest and leaks most readily."
+    - text: "They are equally strong — only operational cost differs"
+      correct: false
+      why: "Operational cost does differ, and so does the blast radius of a single bug."
+
+- q: "Database-per-tenant with a connection pool per tenant. What hits a wall first as tenants grow?"
+  anchor: "must be bounded to avoid exhausting PostgreSQL's `max_connections`"
+  options:
+    - text: "Disk, since every database carries its own catalog overhead"
+      correct: false
+      why: "Real, but not the first wall. The multiplication happens on connections."
+    - text: "`max_connections` — pools multiply by tenant count"
+      correct: true
+      why: "N databases times the connections per pool is the total, and it has to be bounded deliberately."
+    - text: "The migration runner, which now has to run N times"
+      correct: false
+      why: "It does, which is why provisioning is automated. That is a throughput problem, not a hard ceiling."
+
+- q: "You need total revenue across all tenants under database-per-tenant. What does that take?"
+  anchor: "require either federated queries or a separate analytics pipeline"
+  options:
+    - text: "One SQL query with a JOIN across the tenant databases"
+      correct: false
+      why: "They are separate databases. An ordinary join does not reach across them."
+    - text: "Federated queries, or a separate analytics pipeline"
+      correct: true
+      why: "That cost is the trade the strongest isolation model asks you to accept."
+    - text: "Nothing special — the dynamic DataSource handles it"
+      correct: false
+      why: "The dynamic DataSource resolves one tenant per request. It is the isolation mechanism, not an aggregation one."
+```
+
 ## Key Concepts
 - **Database-per-tenant** — Strongest isolation; each tenant's data in a separate database; your current model
 - **Schema-per-tenant** — Medium isolation; separate schemas in one database; simpler to operate, weaker isolation
@@ -245,3 +286,21 @@ remembering it on every query.
 - [The Database-Per-Tenant Multi-Tenancy Pattern (Microsoft Azure docs)](https://docs.microsoft.com/en-us/azure/architecture/patterns/sharding)
 - [TypeORM multiple data sources](https://typeorm.io/multiple-data-sources)
 - [Building multi-tenant SaaS on PostgreSQL (Citus / Azure)](https://www.citusdata.com/blog/2016/10/03/designing-your-saas-database-for-high-scalability/)
+
+```recall
+- q: "Name the three isolation models with the trade each one makes."
+  must:
+    - "database-per-tenant — strongest isolation, each tenant's data in a separate database"
+    - "schema-per-tenant — medium isolation, separate schemas in one database, simpler to operate"
+    - "shared-schema — weakest, all tenants in shared tables with a `tenantId` discriminator, simplest to build, highest risk of data leakage"
+
+- q: "What must tenant provisioning do, and what property must it have?"
+  must:
+    - "create a new database, run migrations and seed initial data"
+    - "it should be automated and idempotent"
+
+- q: "What makes tenant offboarding straightforward under database-per-tenant?"
+  must:
+    - "deleting a tenant means dropping a database"
+    - "complete data erasure is trivially auditable"
+```

@@ -7,6 +7,47 @@ The properties that distinguish a compliance-grade audit log from a simple event
 
 For immutability, the database-level approach is to revoke `UPDATE` and `DELETE` privileges on the audit log table from your application's database user. The application can only `INSERT`. Even if your application is compromised, the attacker cannot erase their tracks. For integrity, append a hash chain: each entry includes a hash of the previous entry, so any deletion or modification of a historical record invalidates all subsequent records' hashes — detectable by a periodic integrity check.
 
+```quiz
+- q: "Your audit service has no update or delete code paths anywhere. Is the log append-only?"
+  anchor: "enforced at the database permission level, not just application logic"
+  options:
+    - text: "Yes — nothing in the application can modify a record"
+      correct: false
+      why: "Append-only is enforced at the database permission level. Any query outside that service can still modify the table."
+    - text: "No — it takes DB permissions: `INSERT` only, with `UPDATE` and `DELETE` revoked"
+      correct: true
+      why: "Application logic is a convention. The grant is the guarantee."
+    - text: "Only if every write goes through an explicit transaction"
+      correct: false
+      why: "Transactions govern atomicity, not what a role is permitted to do."
+
+- q: "Someone with DB access edits one row in the middle of a hash-chained audit log. What shows?"
+  anchor: "tampering with any entry invalidates all subsequent hashes"
+  options:
+    - text: "Nothing — its own hash is simply recomputed to match"
+      correct: false
+      why: "That hash feeds the next entry, so everything after it stops verifying."
+    - text: "Every entry after it fails verification"
+      correct: true
+      why: "That is what the chain buys: one edit invalidates the entire tail."
+    - text: "Only the edited row fails verification"
+      correct: false
+      why: "That would be a per-row checksum. The chain is what propagates the break forward."
+
+- q: "A support engineer impersonates a customer and changes a setting. Who does the audit record name?"
+  anchor: "every action taken during impersonation should be visibly attributed to the impersonator"
+  options:
+    - text: "The customer — the action happened in their session"
+      correct: false
+      why: "That hides the support engineer entirely, which is exactly what impersonation flagging exists to prevent."
+    - text: "Both — the action is visibly attributed to the impersonator"
+      correct: true
+      why: "`actorType` and the JWT impersonation metadata are there to carry precisely this."
+    - text: "The support engineer alone, since they initiated it"
+      correct: false
+      why: "The affected account still matters, for filtering by resource and by tenant."
+```
+
 ## Key Concepts
 - **Append-only** — Audit records are inserted, never updated or deleted; enforced at the database permission level, not just application logic
 - **Immutability via DB permissions** — Application DB user has `INSERT` only on audit log tables; `UPDATE` and `DELETE` are revoked
@@ -179,3 +220,27 @@ export async function queryAuditLog(params: {
 - [OWASP Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html)
 - [Designing audit logs for compliance (AWS)](https://docs.aws.amazon.com/prescriptive-guidance/latest/logging-monitoring-for-application-owners/logging-best-practices.html)
 - [Hash chains and tamper evidence in audit logs](https://csrc.nist.gov/publications/detail/sp/800-92/final)
+
+```recall
+- q: "What is append-only, and how is it actually enforced?"
+  must:
+    - "audit records are inserted, never updated or deleted"
+    - "enforced at the database permission level, not just in application logic"
+    - "the application DB user holds `INSERT` only, with `UPDATE` and `DELETE` revoked"
+
+- q: "Why structured action names, and where do they live?"
+  must:
+    - "consistent naming such as `USER_CREATED`, `TENANT_MEMBER_INVITED`, `PAYMENT_CAPTURED`"
+    - "it enables programmatic filtering"
+    - "an exhaustive enum in `audit_log.enums.ts`"
+
+- q: "What is JSONB metadata for in an audit record?"
+  must:
+    - "it captures the diff — before and after values — or relevant context"
+    - "without requiring a schema change per event type"
+
+- q: "What must the query interface support, and who needs it?"
+  must:
+    - "filter by actor, action, resource, tenant and date range"
+    - "essential for support and compliance teams"
+```
