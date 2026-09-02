@@ -82,7 +82,6 @@ export function AppSidebar({
       setIsDesktop(event.matches);
     };
 
-    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsDesktop(mediaQuery.matches);
     mediaQuery.addEventListener('change', handleChange);
 

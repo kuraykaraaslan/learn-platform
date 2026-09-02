@@ -7,17 +7,17 @@
 // just for this. Swap in the full dropdown later if "system" needs to be user-selectable.
 'use client';
 
-import { useEffect, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSun, faMoon } from '@fortawesome/free-solid-svg-icons';
 import { cn } from '@/libs/utils/cn';
+import { useMounted } from '@/modules/shared/useMounted';
 
 export function ThemeToggle({ className }: { className?: string }) {
   const { resolvedTheme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
+  // next-themes only knows the resolved theme in the browser, so the first
+  // render has to match the server's guess and correct itself after hydration.
+  const mounted = useMounted();
 
   const isDark = mounted && resolvedTheme === 'dark';
 

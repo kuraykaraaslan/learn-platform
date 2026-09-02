@@ -14,7 +14,6 @@ type Options = {
   onClose: () => void;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function useRouteClose(_opts: Options): void {
   // TODO M6: subscribe to pathname / searchParams and call onClose
   // when they change while `active && closeOnRouteChange`.
