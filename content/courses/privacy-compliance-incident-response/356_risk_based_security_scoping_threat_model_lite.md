@@ -7,6 +7,47 @@ The practical tool for the "what can go wrong" half of this is a lightweight thr
 
 The risk register is what keeps this from being a one-time exercise that gets stale. It is a living table — Risk, Level, Impact, Control, Owner, Residual Risk — that travels with the project and gets revisited whenever scope changes, a new integration is added, or a new data type starts flowing through the system. This is also the artifact that shows up, almost unchanged, in a SOC 2 or ISO 27001 audit as evidence that risk is being actively managed rather than assumed away. The final discipline is scoping security work explicitly in any proposal, roadmap, or ticket: stating which controls are included (authentication, RBAC, input validation, basic audit logging) and which are explicitly excluded unless separately funded (penetration testing, 24/7 monitoring, formal compliance certification) prevents the common failure mode where security work is silently assumed to be someone else's responsibility.
 
+```quiz
+- q: "Who decides a project's risk tier, and when?"
+  anchor: "The tier is decided once, explicitly, at design time — not inferred implicitly by whoever happens to be writing the code that week"
+  options:
+    - text: "Whoever writes the code, from what the feature turns out to touch"
+      correct: false
+      why: "That is the implicit inference the lesson names as the failure — the tier stops being a decision and becomes an accident of who was on the ticket."
+    - text: "Once, explicitly, at design time"
+      correct: true
+      why: "The tier is what then determines which controls are mandatory rather than optional."
+    - text: "The client, since they carry the consequences"
+      correct: false
+      why: "The client carries consequences; the tier is a scoping decision made from what data the system touches."
+
+- q: "What makes Threat Model Lite different from a formal STRIDE workshop?"
+  anchor: "it is a five-question checklist applied by the engineer who is about to write the code, cheap enough that skipping it has no excuse"
+  options:
+    - text: "It covers fewer threat categories, so it finishes faster"
+      correct: false
+      why: "The categories are not what was trimmed. Who runs it, and how long it takes, are."
+    - text: "The engineer about to write the code runs it themselves, in about ten minutes"
+      correct: true
+      why: "No dedicated facilitator — and cheap enough that skipping it has no excuse."
+    - text: "It runs after shipping, once real traffic reveals the risks"
+      correct: false
+      why: "It is for any medium-or-higher risk feature, before the code is written."
+
+- q: "Which of these is a trust boundary rather than an entry point?"
+  anchor: "where data crosses from a domain you control into one you don't — frontend to backend, backend to a third-party API, one tenant's data plane into a shared service"
+  options:
+    - text: "A form on a public page"
+      correct: false
+      why: "That is an entry point. Entry points and trust boundaries are separate items on the checklist."
+    - text: "One tenant's data plane entering a shared service"
+      correct: true
+      why: "Along with frontend to backend and backend to a third-party API — each is a crossing out of a domain you control."
+    - text: "An admin page behind a login"
+      correct: false
+      why: "Also an entry point. The login does not turn it into a boundary crossing."
+```
+
 ## Key Concepts
 - **Risk tiering (Low/Medium/High/Critical)**: match required controls to how much damage a compromise of this specific system would cause, not a blanket policy applied everywhere
 - **Threat Model Lite**: Assets, Actors, Entry points, Trust boundaries, Abuse cases, Controls, Residual risks — a fast, repeatable design-time exercise, not a formal workshop
@@ -85,3 +126,25 @@ The risk register is what keeps this from being a one-time exercise that gets st
 - [OWASP Threat Modeling Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Threat_Modeling_Cheat_Sheet.html)
 - [OWASP Risk Rating Methodology](https://owasp.org/www-community/OWASP_Risk_Rating_Methodology)
 - Adam Shostack — *Threat Modeling: Designing for Security* (Wiley) — the standard reference for the Assets/Actors/Entry-points style of lightweight threat modeling
+
+```recall
+- q: "Name the Threat Model Lite items."
+  must:
+    - "Assets — what needs protecting"
+    - "Actors — who uses or attacks the system"
+    - "Entry points — forms, APIs, webhooks, uploads, admin pages"
+    - "Trust boundaries — where data crosses out of a domain you control"
+    - "Abuse cases — what a malicious or careless actor could do at each entry point"
+    - "Controls, and the residual risk left after them"
+
+- q: "Contrast the two ends of the tier scale by what each actually requires."
+  must:
+    - "a static content site with no login — HTTPS and spam protection"
+    - "a marketplace handling payments and multi-tenant records — a threat model, tenant isolation tests, MFA readiness for admins, and an incident response plan before it ships"
+
+- q: "What does risk-based scoping prevent, in both directions?"
+  must:
+    - "treating a public marketing page and a multi-tenant billing dashboard as equally risky"
+    - "it wastes effort in one direction"
+    - "and under-invests in the other"
+```

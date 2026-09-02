@@ -7,6 +7,47 @@ Each jurisdiction sets a different bar. The UK's Children's Code applies to any 
 
 The practical shape of compliance is the same regardless of jurisdiction, even though the exact age thresholds differ: age has to be established at signup (a neutral age screen, not a checkbox styled to be skipped), the flow has to route an under-age user to a real parental-consent mechanism rather than a soft block, tracking and profiling default to off for anyone who declares as under-age, and the privacy notice needs a plain-language version a child or parent can actually read. The one thing every jurisdiction agrees on is that age verification itself must be proportionate — collecting a scanned ID or a full birthdate just to confirm someone is over 13 collects far more data than the service needed in the first place, which is the same data-minimization principle from lesson #358 applied specifically to the age check.
 
+```quiz
+- q: "Your product is general-audience with no age gate. Does the UK's Children's Code apply?"
+  anchor: "\"likely to be accessed by children\" versus \"marketed at children\""
+  options:
+    - text: "No — it is not marketed at children"
+      correct: false
+      why: "Marketing is the wrong test. The Code asks whether the service is likely to be accessed by children."
+    - text: "Yes — without an age gate you have to assume children can reach it"
+      correct: true
+      why: "TikTok and YouTube were both fined without being \"for children\" in the marketing sense; they were simply accessible."
+    - text: "Only once analytics show under-18 users"
+      correct: false
+      why: "Waiting for evidence of access is exactly the assumption the Code reverses."
+
+- q: "COPPA is narrower in scope than the UK's Code but stricter in one respect. Which?"
+  anchor: "verifiable parental consent is required *before* any personal data is collected"
+  options:
+    - text: "It reaches more jurisdictions"
+      correct: false
+      why: "It is narrower — services directed at, or with actual knowledge of, under-13 users."
+    - text: "Verifiable parental consent is required before any personal data is collected"
+      correct: true
+      why: "Plus a neutral, non-cartoon age screen, with under-13 users routed to a consent flow rather than simply blocked."
+    - text: "It sets a higher age threshold"
+      correct: false
+      why: "Under-13 is lower than the Code's under-18."
+
+- q: "In a service children can reach, the banner gives \"Accept\" a bigger button than \"Decline\". What is that?"
+  anchor: "no nudge techniques (a bigger \"Accept\" button than \"Decline\")"
+  options:
+    - text: "Acceptable — both options are present"
+      correct: false
+      why: "Presence is not the test; the Code names this exact pattern."
+    - text: "A nudge technique, which the Code's standards rule out"
+      correct: true
+      why: "Alongside privacy-by-default, a DPIA before launch, plain-language transparency, and geolocation and profiling off by default."
+    - text: "A dark pattern, but one that only concerns adult-facing services"
+      correct: false
+      why: "It is named inside the Children's Code's own standards."
+```
+
 ## Key Concepts
 - **Scoping trigger**: "will users under 18 access this service, and does it collect personal data from them?" — asked at discovery, not discovered after launch
 - **"Likely to be accessed by" vs. "directed at"**: UK Children's Code applies based on accessibility, not marketing intent — a general-audience app with no age gate is in scope by default
@@ -76,3 +117,33 @@ minimum age, and does the service collect any personal data from them?"
 - [ICO — Age Appropriate Design Code (Children's Code)](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/childrens-information/) — the full 15-standard framework and applicability test
 - [FTC — Children's Online Privacy Protection Act (COPPA) Rule](https://www.ftc.gov/business-guidance/privacy-security/childrens-privacy) — verifiable parental consent mechanisms and enforcement examples
 - [GDPR Article 8 — Conditions Applicable to Child's Consent](https://gdpr-info.eu/art-8-gdpr/) — the member-state digital consent age variation
+
+```recall
+- q: "State the scoping question that triggers all of this."
+  must:
+    - "will users under 18 be able to access this service"
+    - "and if so, what personal data does it collect from them"
+    - "most projects never explicitly ask it"
+
+- q: "Name standards the UK's Children's Code imposes."
+  must:
+    - "privacy-by-default"
+    - "a data protection impact assessment before launch"
+    - "plain-language transparency"
+    - "geolocation and profiling off by default"
+    - "no nudge techniques"
+    - "parental controls where the service is child-directed"
+
+- q: "Contrast COPPA with the Children's Code on scope and on mechanism."
+  must:
+    - "the Code applies to any online service likely to be accessed by under-18s"
+    - "COPPA is narrower — directed at, or with actual knowledge of, under-13 users"
+    - "COPPA is stricter in mechanism: verifiable parental consent before any collection"
+    - "a neutral, non-cartoon age screen, and routing to a parental-consent flow rather than blocking"
+
+- q: "How do GDPR Article 8 and KVKK differ on consent age?"
+  must:
+    - "Article 8 sets a digital consent age that varies by member state — 16 in Germany and the Netherlands, 15 in France, Italy and Spain, 16 as the default elsewhere"
+    - "below which a parent or guardian must authorize processing"
+    - "KVKK treats anyone under 18 as unable to give their own consent, requiring guardian consent regardless"
+```

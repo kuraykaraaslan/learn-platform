@@ -7,6 +7,47 @@ A specific vocabulary makes this easier to apply consistently. Useful phrases na
 
 Incident communication to a client or end user is a distinct moment with its own narrow template, and it deliberately mirrors the internal communication pattern from lesson #362's response process but is adapted for an external, less technical audience: what happened (in plain terms), what is currently known, what containment action has already been taken, what impact is suspected, and — specifically for personal-data incidents — a direct pointer to involve their legal/privacy advisor to assess notification obligations under lesson #363's jurisdiction-specific rules, rather than the engineering team making that legal call itself. The same discipline that governs routine risk communication applies here even more strictly: no speculation about scope or cause beyond what is confirmed, because a client who repeats an unconfirmed claim to their own customers and has to retract it publicly is a worse outcome than a slightly less reassuring but accurate initial statement.
 
+```quiz
+- q: "Which phrase must never appear in client-facing security communication?"
+  anchor: "\"fully secure,\" \"100% compliant,\" \"guaranteed unhackable,\" \"GDPR/KVKK certified\""
+  options:
+    - text: "\"This is not a formal penetration test\""
+      correct: false
+      why: "That is on the useful list — it names what was actually done without overclaiming."
+    - text: "\"100% compliant\""
+      correct: true
+      why: "Along with fully secure, guaranteed unhackable, GDPR/KVKK certified, and no legal review needed — each makes a claim engineering cannot back."
+    - text: "\"This should be reviewed by your legal/privacy advisor\""
+      correct: false
+      why: "Also useful, and it is precisely the separation the discipline asks for."
+
+- q: "Two failure modes are named, both worse than plain language. Which pair?"
+  anchor: "security jargon used to pressure a sale creates distrust the moment the client learns enough to see through it"
+  options:
+    - text: "Too much detail, and too little detail"
+      correct: false
+      why: "Volume is not the axis. Pressure and false reassurance are."
+    - text: "Jargon used to pressure a sale, and vague reassurance that omits a real limitation"
+      correct: true
+      why: "The second creates a false sense of coverage that surfaces during an incident or an audit, when it is too late to have said it earlier."
+    - text: "Saying it too early, and saying it too late"
+      correct: false
+      why: "Timing is not what the lesson identifies as the failure."
+
+- q: "A security note names a real risk and stops there. What is missing?"
+  anchor: "end with an actual recommendation rather than just a warning"
+  options:
+    - text: "Nothing — naming the risk plainly is the honest thing to do"
+      correct: false
+      why: "Naming it is necessary and not sufficient; the discipline ends with a recommendation."
+    - text: "A recommendation"
+      correct: true
+      why: "Along with naming whose responsibility the risk is and explaining the trade-off being made."
+    - text: "A severity rating"
+      correct: false
+      why: "Useful elsewhere, but not what this list asks for."
+```
+
 ## Key Concepts
 - **Two failure modes, equally bad**: fear-mongering with jargon to pressure a decision, and vague reassurance that omits a real limitation — both erode trust, just on different timelines
 - **Safe-phrase vocabulary**: "this reduces the risk of...", "this supports privacy-aware implementation...", "this is included in the engineering scope...", "this requires legal/privacy review..." — specific, bounded, honest
@@ -78,3 +119,29 @@ timeframe) needed to make that determination quickly."
 - [ICO — Communicating Privacy Information to People](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/individual-rights/right-to-be-informed/) — plain-language communication standards applicable to client-facing privacy messaging
 - Course #362 — *Incident Response Process — Detection Through Containment* (the internal runbook and fact set this lesson's client-facing template draws from)
 - Course #363 — *Breach Notification Requirements Across Jurisdictions* (what the client's legal/privacy advisor is being asked to assess)
+
+```recall
+- q: "Name the elements of the discipline."
+  must:
+    - "be specific about the actual risk and state it plainly"
+    - "separate what engineering controls from what only a legal or privacy advisor can determine"
+    - "avoid exaggerated guarantees"
+    - "explain the trade-off being made"
+    - "name whose responsibility a given risk is"
+    - "end with an actual recommendation rather than just a warning"
+
+- q: "Give phrases that are useful, and phrases that must never appear."
+  must:
+    - "useful: \"this reduces the risk of...\", \"this supports privacy-aware implementation...\""
+    - "useful: \"this is included in the engineering scope...\", \"this is not a formal penetration test...\""
+    - "useful: \"this should be reviewed by your legal/privacy advisor...\""
+    - "never: fully secure, 100% compliant, guaranteed unhackable"
+    - "never: GDPR/KVKK certified, no legal review needed"
+
+- q: "State the scope boundary in both directions, and why it matters."
+  must:
+    - "included: authentication, authorization, input validation, secure configuration, basic audit logging"
+    - "not included: formal penetration testing, legal compliance certification, 24/7 monitoring, ongoing patching"
+    - "unless those are separately scoped"
+    - "so the client's assumption about coverage matches what was actually delivered"
+```

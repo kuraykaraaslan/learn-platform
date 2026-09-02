@@ -784,7 +784,7 @@
         "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
         "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
       ],
-      "rawOccurrences": 41
+      "rawOccurrences": 46
     },
     {
       "slug": "lazy-loading",
@@ -1016,7 +1016,7 @@
         "privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md",
         "privacy-compliance-incident-response/367_security_handover_access_transition_checklist.md"
       ],
-      "rawOccurrences": 13
+      "rawOccurrences": 15
     },
     {
       "slug": "retained-size",
@@ -1295,7 +1295,7 @@
         "framework-deep-dives/421_electron_process_model_and_typed_ipc.md",
         "product-technical-strategy/388_requirements_to_architecture_translation.md"
       ],
-      "rawOccurrences": 11
+      "rawOccurrences": 14
     },
     {
       "slug": "unit-test",

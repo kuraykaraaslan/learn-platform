@@ -7,6 +7,47 @@ The handover package has a fixed shape: repository link, production and staging 
 
 Credential transfer has its own narrow set of rules: raw passwords never go into a handover document, secrets move through a secure channel or the client's own password manager, temporary credentials get rotated once the transfer is complete, and shared admin accounts get replaced with individual ones wherever the platform supports it. The access review that accompanies this — who currently has access to the repository, hosting, production database, object storage, DNS, each third-party provider, and the admin panel itself — is the point where dormant access gets found and closed; a contractor who left the project four months ago but still has a valid database credential is a much more common finding than any exotic vulnerability. Finally, the maintenance boundary has to be stated as one explicit sentence, not implied: no ongoing maintenance, a fixed-length bug-fix warranty, an active monthly retainer, and specifically whether security patching, monitoring, and incident response are included or excluded — because an unstated assumption here is exactly how a production system quietly ends up unmonitored and unpatched a year after everyone stopped thinking about it.
 
+```quiz
+- q: "The handover document covers environment variables. What goes in it?"
+  anchor: "an environment-variable *list* — names only, never values, in a document"
+  options:
+    - text: "Names and values, so the client can redeploy without you"
+      correct: false
+      why: "Values never go into a document. The list is names only."
+    - text: "Names only"
+      correct: true
+      why: "The same discipline as access handover: document what exists and who owns it, never the secret itself."
+    - text: "Only the ones the client is likely to change"
+      correct: false
+      why: "The list is the inventory; trimming it hides what the system depends on."
+
+- q: "You know no penetration test was performed. Does that belong in the handover?"
+  anchor: "a handover that omits a known gap to look cleaner is worse than one that states it"
+  options:
+    - text: "No — it reads as an admission that the work was weak"
+      correct: false
+      why: "The lesson addresses this directly: the known-limitations list is not a liability admission to be avoided."
+    - text: "Yes — every true residual risk belongs in the stated limitations"
+      correct: true
+      why: "Only true statements belong there, but every true one does."
+    - text: "Only if the client asks about testing"
+      correct: false
+      why: "The list exists so the client's assumption matches what was delivered, without their having to know which question to ask."
+
+- q: "What kind of failure does a bad handover actually produce?"
+  anchor: "They show up eighteen months later when the original team is unreachable and something needs to change"
+  options:
+    - text: "An outage at launch"
+      correct: false
+      why: "The failure mode is not dramatic — nothing breaks on the day."
+    - text: "Silence now, then a wall eighteen months later when the original team is unreachable"
+      correct: true
+      why: "A repository nobody can access, a credential never rotated, an admin account the freelancer still controls, a vendor bill nobody knew about."
+    - text: "A failed code review"
+      correct: false
+      why: "None of these show up in a code review, which is exactly why handover needs a checklist of its own."
+```
+
 ## Key Concepts
 - **Handover package contents**: repo, prod/staging URLs, provider list, env-var names (no values), admin process, backup plan, deploy process, known limitations
 - **Overlap with the vendor inventory (#364)**: the provider list in a handover is the same artifact as the vendor inventory — one document, reused, not two separately maintained lists that drift apart
@@ -78,3 +119,28 @@ Credential transfer has its own narrow set of rules: raw passwords never go into
 - [OWASP — Secure Software Deployment Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secure_Deployment_Cheat_Sheet.html) — deployment and handover hygiene from a technical-controls angle
 - Course #364 — *Third-Party Vendor Risk & Data Processing Agreements* (the vendor inventory this handover's provider list reuses)
 - Course #361 — *Vulnerability Management Lifecycle & Patch SLAs* (the maintenance-boundary language this checklist's patching line depends on)
+
+```recall
+- q: "Give the fixed shape of the handover package."
+  must:
+    - "repository link, production and staging URLs"
+    - "the hosting/DNS/database/storage/email/SMS/payment provider list"
+    - "an environment-variable list — names only, never values"
+    - "the admin-account process"
+    - "the backup plan and the deployment process"
+    - "a named set of known security limitations"
+
+- q: "Name the residual risks a handover should state plainly."
+  must:
+    - "no formal penetration test was performed"
+    - "ongoing dependency patching is not included unless a maintenance agreement says so"
+    - "legal/privacy text was supplied by the client and not independently validated"
+    - "backups are configured but restore testing was not performed unless separately agreed"
+
+- q: "What are the quiet failure modes a bad handover creates?"
+  must:
+    - "a repository the client cannot access without the original developer"
+    - "a credential rotated once at launch and never again"
+    - "an admin account the freelancer still controls a year later"
+    - "a vendor bill the client did not know they were paying"
+```

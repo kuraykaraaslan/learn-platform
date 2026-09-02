@@ -3100,12 +3100,12 @@
     "privacy-compliance-incident-response": {
       "356_risk_based_security_scoping_threat_model_lite.md": {
         "title": "233ed7277cd5fa3f",
-        "whatItIs": "8ef36fa66d8ff4ec",
+        "whatItIs": "4b965f7c8c42c4ee",
         "keyConcepts": "ac0b937282c6eab6",
         "exampleCode": "45ed3ed06b11f6aa",
         "whenToUse": "2267c805972ded9e",
         "commonMistakes": "7670f57ec0df3dd8",
-        "furtherReading": "a1224412fb73803a"
+        "furtherReading": "067ca0de018905c0"
       },
       "357_government_regulated_sector_security_baselines.md": {
         "title": "9a39ec7532ecfa4d",
@@ -3181,12 +3181,12 @@
       },
       "365_childrens_data_compliance_age_verification_parental_consent.md": {
         "title": "76efb372cfe877e3",
-        "whatItIs": "63b24d81c5a01919",
+        "whatItIs": "44edd11dffaf168f",
         "keyConcepts": "34b9b2ec43395318",
         "exampleCode": "0d79dae3736ed31e",
         "whenToUse": "2cfccdb28f8ca403",
         "commonMistakes": "2bd5fafe9286087e",
-        "furtherReading": "efdd24c8182b4d0d"
+        "furtherReading": "bf8f377f59aaefeb"
       },
       "366_health_data_compliance_hipaa_nhs_kvkk_saglik.md": {
         "title": "7c2c4720d530a15d",
@@ -3199,21 +3199,21 @@
       },
       "367_security_handover_access_transition_checklist.md": {
         "title": "7c392a1ef042f70a",
-        "whatItIs": "352f1c70117921f0",
+        "whatItIs": "c76b02442300a040",
         "keyConcepts": "08af7491195e40bd",
         "exampleCode": "2feb9b0aeebd54a0",
         "whenToUse": "9f41035b3239fc0c",
         "commonMistakes": "2651a8b9e76dc6d4",
-        "furtherReading": "5b5a25a63d61bcc2"
+        "furtherReading": "fa5abf8ecde2d8b2"
       },
       "368_client_facing_security_communication_risk_framing.md": {
         "title": "ae605ab29e22e6f5",
-        "whatItIs": "665b08bdf54572dd",
+        "whatItIs": "29ccc0f0272e8d5a",
         "keyConcepts": "203aec73333d7c95",
         "exampleCode": "79f1b25bfaa4f484",
         "whenToUse": "1e6b499dcea50e24",
         "commonMistakes": "520db457a14affdd",
-        "furtherReading": "4a01e41d9b50cfed"
+        "furtherReading": "918c2695b140a718"
       }
     },
     "process-soft-skills": {
