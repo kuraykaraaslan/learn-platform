@@ -7,6 +7,35 @@ Parameterized queries — also called prepared statements — prevent injection 
 
 The gap that remains after adopting an ORM is raw query usage. Prisma's `$queryRaw` and `$executeRaw`, and TypeORM's `query()` and `createQueryBuilder()`, can both be used correctly (with parameters) or incorrectly (with string concatenation). These are the only places in an ORM-driven codebase where SQL injection is still possible, and they deserve the same level of scrutiny you would give any security-critical code.
 
+
+```quiz
+- q: "What actually stops a parameterized query from being injectable \u2014 as opposed to just escaping the input better?"
+  anchor: "sends the SQL template and the parameter values as separate protocol messages"
+  options:
+    - text: "The driver escapes dangerous characters like quotes before building the string"
+      correct: false
+      why: "Escaping is the old, error-prone approach. Parameterization does not escape the value into the string at all \u2014 the value never becomes part of the SQL text."
+    - text: "The template and the values travel as separate protocol messages, so a value can never become SQL syntax"
+      correct: true
+      why: "The engine compiles the plan from the template, then binds the values purely as data. There is no code path where a parameter alters query structure."
+    - text: "The database refuses any query containing SQL keywords in a parameter"
+      correct: false
+      why: "Nothing inspects parameters for keywords, and it would not need to \u2014 a bound value is data by construction, so the word DROP in a name is just a name."
+
+- q: "Your codebase uses Prisma everywhere. Where can SQL injection still hide?"
+  anchor: "These are the only places in an ORM-driven codebase where SQL injection is still possible"
+  options:
+    - text: "Nowhere \u2014 an ORM parameterizes everything by definition"
+      correct: false
+      why: "Standard ORM methods do parameterize, but raw-query escape hatches do not do it for you. That is precisely the gap the lesson names."
+    - text: "In raw query usage \u2014 $queryRaw/$executeRaw, or TypeORM's query()/createQueryBuilder()"
+      correct: true
+      why: "Those can be used correctly with parameters or incorrectly with string concatenation, and they are the only places left where the choice is yours to get wrong."
+    - text: "In the migration files, since they run arbitrary SQL"
+      correct: false
+      why: "Migrations run SQL you wrote, not user input. Injection needs an untrusted value reaching the query, which is the raw-query path at request time."
+```
+
 ## Key Concepts
 - **Parameterized query** — SQL template with `$1`, `?`, or `:name` placeholders; values passed separately as an array/object, never interpolated
 - **Prepared statement** — A query sent to the server for compilation before values are bound; provides both security and performance benefits

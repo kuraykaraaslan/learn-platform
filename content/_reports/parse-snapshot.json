@@ -314,21 +314,21 @@
     "algorithms-concurrency": {
       "129_concurrency_async_fundamentals.md": {
         "title": "05bd5a6745d56140",
-        "whatItIs": "f512b1c7f3e83fd6",
+        "whatItIs": "eeda2bf591df7ceb",
         "keyConcepts": "5fdcaa9829552fdc",
         "exampleCode": "c57672c3702e7558",
         "whenToUse": "4f7983e8e518e15e",
         "commonMistakes": "5d52cbc5682c4992",
-        "furtherReading": "882a986579b16233"
+        "furtherReading": "c41c22a39fa047c1"
       },
       "130_data_structures_algorithms_practice.md": {
         "title": "c5101c905fe8c9b7",
-        "whatItIs": "feab5f95e62f4b12",
+        "whatItIs": "a1d28daed5dd3692",
         "keyConcepts": "b382eecfb3664758",
         "exampleCode": "3cf56d5839ad9f08",
         "whenToUse": "e4c5e47bbd7f2844",
         "commonMistakes": "c7d5fd670f446bae",
-        "furtherReading": "e236df05163dd7cf"
+        "furtherReading": "e058a551664c4710"
       }
     },
     "architecture-design-patterns-testing": {
@@ -2195,12 +2195,12 @@
     "database-caching-performance": {
       "16_n_plus_1_query_problem.md": {
         "title": "45d41106d839eb1e",
-        "whatItIs": "2796b805235bc4c1",
+        "whatItIs": "6d334766506bcb8b",
         "keyConcepts": "d6495e81bffdd043",
         "exampleCode": "66d483f8e59b9ad0",
         "whenToUse": "b186107dd764ce22",
         "commonMistakes": "ec523975f9f4e017",
-        "furtherReading": "ab959b2f927e5dd6"
+        "furtherReading": "06ba987e3f1618d8"
       },
       "17_database_index_strategy.md": {
         "title": "a551e2011d930ae8",
@@ -2824,21 +2824,21 @@
       },
       "121_sql_fundamentals.md": {
         "title": "ac0ac1117407df97",
-        "whatItIs": "51a1d11ec784a682",
+        "whatItIs": "7a32a6f056eb7939",
         "keyConcepts": "21200b80c9bcc75a",
         "exampleCode": "f7de0a0db660dffa",
         "whenToUse": "e8f81ce6a867f29c",
         "commonMistakes": "6a2050640cfbea87",
-        "furtherReading": "cca29f6e81cd01f2"
+        "furtherReading": "910303c683e10b5b"
       },
       "122_oop_data_structures_basics.md": {
         "title": "864b58cdaeba6d06",
-        "whatItIs": "409fe91729dd6df0",
+        "whatItIs": "436011730e774046",
         "keyConcepts": "6c4c00ecf202a36f",
         "exampleCode": "bebda6395aeb1425",
         "whenToUse": "58f487e974b6a181",
         "commonMistakes": "785ca5e33d9b8117",
-        "furtherReading": "b49ae276a5f1f392"
+        "furtherReading": "9bb2b2260a764d3f"
       },
       "123_debugging_fundamentals.md": {
         "title": "b70711afcd2f5d89",
@@ -3648,7 +3648,7 @@
       },
       "30_sql_injection_protection.md": {
         "title": "fe02383fbe052da7",
-        "whatItIs": "32406b579ca87d10",
+        "whatItIs": "bafb013ccb2c6383",
         "keyConcepts": "ce1fbb25f86aac58",
         "exampleCode": "d7a3ac45cfb99959",
         "whenToUse": "91198fe2b9a85319",

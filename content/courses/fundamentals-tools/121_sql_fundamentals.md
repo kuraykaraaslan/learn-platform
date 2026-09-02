@@ -7,6 +7,35 @@ Normalization is the discipline of structuring tables so each fact lives in exac
 
 NULL deserves special attention: it means "unknown," not "empty" or "zero," and it propagates through comparisons in a way that surprises people the first time (`NULL = NULL` is `NULL`, not `true`).
 
+
+```quiz
+- q: "A soft-delete filter ships as `WHERE deleted_at = NULL` and the endpoint starts returning nothing. Why is there no error?"
+  anchor: "it means \"unknown,\" not \"empty\" or \"zero,\""
+  options:
+    - text: "`= NULL` is a syntax error that the driver silently swallows"
+      correct: false
+      why: "It is valid SQL. Nothing is swallowed \u2014 the comparison runs and simply never evaluates to true."
+    - text: "NULL means unknown, so `deleted_at = NULL` evaluates to unknown for every row and WHERE keeps none of them"
+      correct: true
+      why: "Three-valued logic: comparing to an unknown yields unknown, and WHERE only keeps rows where the predicate is true."
+    - text: "The column has no index, so the planner skips the rows"
+      correct: false
+      why: "Indexes affect how rows are found, never which rows match. This result is identical on an unindexed table."
+
+- q: "What is the correct way to ask \"has this row not been soft-deleted?\""
+  anchor: "use `IS NULL`, never `= NULL`"
+  options:
+    - text: "`WHERE deleted_at IS NULL`"
+      correct: true
+      why: "IS NULL is the operator that actually tests for the absence of a value, and it returns a real boolean rather than unknown."
+    - text: "`WHERE deleted_at = NULL`"
+      correct: false
+      why: "This is the exact mistake \u2014 it evaluates to unknown for every row and returns nothing at all."
+    - text: "`WHERE NOT deleted_at`"
+      correct: false
+      why: "Negating an unknown is still unknown, so this has the same silent-empty-result problem, and it also treats a timestamp as a boolean."
+```
+
 ## Key Concepts
 - **Primary key**: uniquely identifies a row; **foreign key**: references a primary key in another table, enforcing referential integrity
 - **Joins**: INNER (only matching rows), LEFT (all left rows + matches), RIGHT, FULL OUTER (all rows from both sides)
@@ -76,3 +105,24 @@ COUNT(deleted_at) -> 1
 - "SQL Performance Explained" by Markus Winand (also at use-the-index-luke.com)
 - PostgreSQL official tutorial (postgresql.org/docs — "Tutorial" section)
 - "Learning SQL" by Alan Beaulieu
+
+```recall
+- q: "Explain why `WHERE deleted_at = NULL` returns nothing, without using the word NULL as a value."
+  must:
+    - "NULL means unknown, not empty and not zero"
+    - "comparing anything to an unknown yields unknown, not true or false"
+    - "WHERE keeps only rows whose predicate is true, so unknown rows are dropped"
+    - "IS NULL is the operator that actually tests for absence"
+
+- q: "What makes `NOT IN` with a NULL in the list dangerous?"
+  must:
+    - "NOT IN expands to a chain of not-equal comparisons"
+    - "any comparison against the NULL is unknown, so the whole chain can never be true"
+    - "the query returns zero rows with no error"
+
+- q: "How do COUNT(*) and COUNT(column) differ, and why does it matter?"
+  must:
+    - "COUNT(*) counts rows"
+    - "COUNT(column) counts rows where that column is not NULL"
+    - "they answer different questions and silently disagree on a nullable column"
+```

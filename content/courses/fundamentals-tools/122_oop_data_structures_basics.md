@@ -5,6 +5,35 @@ SOLID Principles (#64) assumes you already have this vocabulary: classes as a bu
 
 The data structures underneath it are just as foundational. An array is a contiguous, ordered collection — great for iteration, O(n) to search by value. A hash map (`Map`, or a plain object) trades that for O(1) average-case lookup by key, at the cost of no guaranteed order (in most languages; `Map` in JS does preserve insertion order). A `Set` is a hash map with only keys — the right tool the moment you're asking "have I seen this before?" in a loop.
 
+
+```quiz
+- q: "Why does the lesson treat inheritance as the riskier of the two options when sharing behavior?"
+  anchor: "a change to the base class can silently break every subclass"
+  options:
+    - text: "It is slower at runtime than composition"
+      correct: false
+      why: "Performance is not the argument. The concern is coupling \u2014 what a later edit to the base class does to code you are not looking at."
+    - text: "It couples subclasses to the base class, so one edit there can silently break all of them"
+      correct: true
+      why: "That is the fragile base class problem: the breakage is distant from the change and nothing at the edit site warns you."
+    - text: "Most languages do not support it well"
+      correct: false
+      why: "It is built into the language, which is exactly why it is tempting. Availability is not the problem; coupling is."
+
+- q: "You are looping over records and need to know whether you have already seen an id. Which structure does the lesson point at?"
+  anchor: "the right tool the moment you're asking \"have I seen this before?\" in a loop"
+  options:
+    - text: "An array, checking with includes() each time"
+      correct: false
+      why: "That is O(n) per check inside a loop, which makes the whole pass O(n squared) \u2014 the shape the lesson is steering you away from."
+    - text: "A Set"
+      correct: true
+      why: "A Set is a hash map with only keys, giving O(1) average membership checks. The lesson names this exact question as its trigger."
+    - text: "A sorted array with binary search"
+      correct: false
+      why: "That works but costs a sort plus re-sorting on every insert. A Set answers membership directly with no ordering to maintain."
+```
+
 ## Key Concepts
 - **Class vs instance**: the class is the blueprint, the instance is the concrete object with its own state
 - **Encapsulation**: expose behavior through methods, hide the internal representation so it can change later
@@ -78,3 +107,24 @@ map.get(4) is a hit, map.get("4") is: undefined
 - "Head First Design Patterns" — early chapters, "favor composition over inheritance"
 - [MDN: `Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) — and the `Set` reference alongside it; read the complexity notes, not just the method list
 - Sandi Metz — "Practical Object-Oriented Design" (language-agnostic principles)
+
+```recall
+- q: "Give the argument for composition over inheritance when two classes share behavior."
+  must:
+    - "inheritance is an is-a relationship and couples the subclass to the base"
+    - "a change to the base class can silently break every subclass"
+    - "composition is a has-a relationship built from injected collaborators"
+    - "it is more verbose up front but far easier to change later"
+
+- q: "When do you reach for a Map or a Set instead of an array?"
+  must:
+    - "a Map when you need O(1) average lookup by key rather than O(n) search by value"
+    - "a Set the moment the question is have I seen this before"
+    - "an array when order and iteration matter more than keyed lookup"
+
+- q: "What surprises people about key order and key types in a plain object?"
+  must:
+    - "integer-like keys are enumerated in ascending numeric order, not insertion order"
+    - "object keys are always strings, so obj[4] and obj['4'] are the same slot"
+    - "a Map preserves insertion order and keeps the key's original type"
+```

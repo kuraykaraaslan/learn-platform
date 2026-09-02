@@ -5,6 +5,35 @@ Most application-level "algorithms" work reduces to recognizing which of a handf
 
 **Recursion** is the natural way to walk these structures: a function that calls itself on a smaller sub-problem, with a base case that stops it. The two things that make recursion fail are the same two things every time: a missing or unreachable base case (stack overflow), and redoing overlapping work exponentially (fixed by memoization — see #69). **Binary search** is the other workhorse — O(log n) instead of O(n) — but it has one precondition people forget: the data must already be sorted (or otherwise monotonic) along the dimension you're searching.
 
+
+```quiz
+- q: "Binary search returns -1 for a value you can see in the array. What is the most likely cause?"
+  anchor: "the data must already be sorted (or otherwise monotonic) along the dimension you're searching"
+  options:
+    - text: "An off-by-one in the loop bounds"
+      correct: false
+      why: "Possible in general, but the precondition is the far more common cause and it fails exactly this way \u2014 a confident wrong answer, not a crash."
+    - text: "The array is not sorted along the dimension being searched"
+      correct: true
+      why: "Binary search assumes monotonic order. Nothing checks it, so unsorted (or descending) input makes it discard the half that holds the target."
+    - text: "The array is too small for binary search to work"
+      correct: false
+      why: "It works at any size, down to one element. Size is not a precondition; order is."
+
+- q: "Which two failure modes does the lesson name for recursion?"
+  anchor: "a missing or unreachable base case (stack overflow)"
+  options:
+    - text: "Too many parameters, and too much memory per frame"
+      correct: false
+      why: "Neither is what the lesson names. Frame size matters only once the recursion is already running away."
+    - text: "A missing or unreachable base case, and redoing overlapping work exponentially"
+      correct: true
+      why: "Those are the two, every time: the first blows the stack, the second is fixed by memoization."
+    - text: "Mutating shared state, and forgetting to return a value"
+      correct: false
+      why: "Both are ordinary bugs that recursion does not cause. The lesson names termination and overlapping subproblems."
+```
+
 ## Key Concepts
 - **Tree traversal**: DFS (pre/in/post-order) goes deep before wide, good for "flatten this hierarchy"; BFS goes level by level, good for "shortest path" or "first N levels"
 - **Graph representation**: adjacency list (map of node → neighbors) is the default for sparse graphs; adjacency matrix for dense ones
@@ -83,3 +112,22 @@ it returns -1 rather than raising: the precondition is never checked.
 - "Grokking Algorithms" by Aditya Bhargava — approachable, visual, covers exactly this territory
 - "Algorithms, 4th Edition" by Sedgewick & Wayne (algs4.cs.princeton.edu — free online)
 - visualgo.net — interactive visualizations of tree/graph traversal and sorting
+
+```recall
+- q: "Before reaching for binary search, what must you confirm, and what happens if you skip it?"
+  must:
+    - "the data must already be sorted along the dimension you are searching"
+    - "nothing checks the precondition at runtime"
+    - "it returns not-found for a value that is present, rather than raising"
+
+- q: "Which standard shape does a comment thread with nested replies fit, and how do the two traversals differ?"
+  must:
+    - "it is a tree"
+    - "depth-first gives a single flattened conversation order"
+    - "breadth-first gives it level by level, for showing N levels of replies"
+
+- q: "What are the two ways recursion fails, and the fix for each?"
+  must:
+    - "a missing or unreachable base case, which overflows the stack"
+    - "redoing overlapping work exponentially, fixed by memoization"
+```

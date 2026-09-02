@@ -7,6 +7,35 @@ The insidious thing about N+1 is that it looks correct in code reviews and tests
 
 The fix is almost always **eager loading** — telling the ORM to fetch related data in the initial query using JOINs or a second bulk query. In Prisma, this means using `include` or `select` with nested relations. In some cases, the correct fix is a **DataLoader** (batch loader): collect individual IDs from a request cycle, issue one batched query, and fan results back. DataLoader is the standard solution for GraphQL resolvers but is equally applicable to REST endpoints with complex relational data.
 
+
+```quiz
+- q: "Why does an N+1 query problem usually survive code review?"
+  anchor: "it looks correct in code reviews and tests"
+  options:
+    - text: "Reviewers rarely read data-access code"
+      correct: false
+      why: "The code gets read. The problem is that reading it does not reveal anything wrong \u2014 each line is correct in isolation."
+    - text: "Every individual query is correct and fast; only the loop firing it N times is the defect"
+      correct: true
+      why: "Nothing on any single line is wrong, and with five records in dev the total cost is invisible. The defect lives in the repetition, not the query."
+    - text: "The ORM hides the SQL, so it cannot be reviewed at all"
+      correct: false
+      why: "You can log or inspect the SQL. The issue is that the emitted query is fine \u2014 it is the count of them that is not."
+
+- q: "What is the usual fix once you have found an N+1?"
+  anchor: "telling the ORM to fetch related data in the initial query"
+  options:
+    - text: "Add a cache in front of the per-item query"
+      correct: false
+      why: "Caching hides the round trips rather than removing them, and it adds an invalidation problem on top of the original defect."
+    - text: "Eager loading \u2014 tell the ORM to fetch the related data in the initial query"
+      correct: true
+      why: "That is the standard fix: Prisma's include/select with nested relations, collapsing N+1 round trips into one or two."
+    - text: "Raise the database connection pool size"
+      correct: false
+      why: "A bigger pool lets you fire the same N queries more concurrently. It raises database load instead of reducing the work."
+```
+
 ## Key Concepts
 - **N+1 query**: 1 query to fetch a list, N queries to fetch related data per item — total N+1 round trips
 - **Eager loading**: Pre-fetching related data in the initial query (via JOIN or a second bulk query) — Prisma's `include`
@@ -115,3 +144,22 @@ async function assertQueryCount(
 - **Prisma documentation — "Select fields and include relations"** — Explains how Prisma batches included relations and how to use `select` to minimize data transfer
 - [**"The N+1 Problem" by Dataloader GitHub README](https://github.com/graphql/dataloader)** — The DataLoader README explains batching and caching clearly; applies equally to REST and GraphQL
 - **"Solving the N+1 Problem in Rails" by thoughtbot** — Though Rails-specific, the conceptual explanation is language-agnostic and includes clear diagrams; the SQL patterns translate directly to PostgreSQL
+
+```recall
+- q: "Why is N+1 hard to catch before production, given the code passes review and tests?"
+  must:
+    - "each individual query is correct and fast on its own"
+    - "development data is small enough that the round-trip count is invisible"
+    - "the defect is the loop firing the query N times, not any single query"
+
+- q: "Name the two standard fixes and when each applies."
+  must:
+    - "eager loading via the ORM's include/select, for a known relation on a known list"
+    - "a DataLoader that batches individual ids from a request cycle into one query"
+    - "DataLoader is the standard answer for GraphQL resolvers but works for REST too"
+
+- q: "How would you stop an N+1 from coming back after you fix it?"
+  must:
+    - "assert the query count for the code path in a test"
+    - "run EXPLAIN ANALYZE or query logging on the slow endpoint to see the real count"
+```
