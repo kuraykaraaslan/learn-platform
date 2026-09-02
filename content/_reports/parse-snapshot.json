@@ -2961,12 +2961,12 @@
       },
       "58_dockerfile_best_practices.md": {
         "title": "c28ee559d0c9cf61",
-        "whatItIs": "00062b44e9297aae",
+        "whatItIs": "a70e3012eebc425d",
         "keyConcepts": "e09e2771d37395bf",
         "exampleCode": "24a0c61b05bb6998",
         "whenToUse": "942743ff32f6242f",
         "commonMistakes": "57ca848f66addb1c",
-        "furtherReading": "4191013a4a269b7c"
+        "furtherReading": "bd543afc48b57f31"
       },
       "59_kubernetes_fundamentals.md": {
         "title": "0d0e26cd9800673f",
@@ -2979,30 +2979,30 @@
       },
       "60_github_actions_ci_pipeline.md": {
         "title": "58773d21d35d54ef",
-        "whatItIs": "809dd7d7f496e934",
+        "whatItIs": "ef9530ebc46f0fc1",
         "keyConcepts": "224892a4c7d51f0c",
         "exampleCode": "3c3d5adbec015cb0",
         "whenToUse": "0e45a5c16b1b64b2",
         "commonMistakes": "5c3923c4d488a48a",
-        "furtherReading": "c982fd2286b9e066"
+        "furtherReading": "9efb28b391abe525"
       },
       "61_alerting_design.md": {
         "title": "b10b18bc0699b390",
-        "whatItIs": "809cc711de777131",
+        "whatItIs": "3f840effa967131d",
         "keyConcepts": "3d77568466445204",
         "exampleCode": "1d26f0ab162999f1",
         "whenToUse": "9c0ca084a1c8666d",
         "commonMistakes": "ff4b2e7205985957",
-        "furtherReading": "1e71e9ea94a0332f"
+        "furtherReading": "d7706187f8d36895"
       },
       "62_log_aggregation.md": {
         "title": "69b7b5586526a1a4",
-        "whatItIs": "7728610bba199b57",
+        "whatItIs": "add044dfca98133a",
         "keyConcepts": "232272289946f5c2",
         "exampleCode": "e62ae2fb34026dc7",
         "whenToUse": "f07e86f1ecdc6969",
         "commonMistakes": "fc246e4bd274b9ec",
-        "furtherReading": "a30b7d0634e9acf4"
+        "furtherReading": "3dc522639de63b8f"
       },
       "63_chaos_engineering.md": {
         "title": "8e21e8b2d9ea2c30",

@@ -9,6 +9,47 @@ The modern approach is to alert on **symptoms**, not causes, and to base those s
 
 For a solo developer, alerting design is about ruthless minimalism: pick three to five metrics that directly represent user experience, set burn-rate-based thresholds, and route everything else to a Slack channel for passive review. Never page yourself for something you cannot act on immediately.
 
+```quiz
+- q: "CPU sits at 95% and every request is served in 40 ms. Should that page someone?"
+  anchor: "alert on user-visible impact (high error rate, slow responses), not internal causes (high CPU, disk I/O)"
+  options:
+    - text: "Yes — 95% CPU is one step away from saturation"
+      correct: false
+      why: "Nobody is affected yet. Cause-based metrics belong on a dashboard; they rarely earn a page."
+    - text: "No — page on user-visible impact, not on internal causes"
+      correct: true
+      why: "A high error rate or slow responses would page. High CPU with healthy latency is a dashboard line."
+    - text: "Yes, but as a warning rather than a critical alert"
+      correct: false
+      why: "Warning routing goes to a Slack channel, which is not a page at all — and the question was whether to wake someone."
+
+- q: "What is the test for whether an alert deserves to page?"
+  anchor: "if you cannot write that, the alert should not page"
+  options:
+    - text: "Whether the underlying metric is reliable enough to trust"
+      correct: false
+      why: "A perfectly reliable metric with no response attached is still noise at 3 a.m."
+    - text: "Whether you can write its runbook: this fires → check X → do Y"
+      correct: true
+      why: "If that sentence cannot be written, the alert should not page."
+    - text: "Whether it has fired at least once in the last quarter"
+      correct: false
+      why: "Frequency is not actionability. A rare alert may be the most important one you have."
+
+- q: "Why does a burn-rate alert combine a 1-hour and a 6-hour window?"
+  anchor: "both must fire together to reduce false positives"
+  options:
+    - text: "To page twice, so a missed first page is caught by the second"
+      correct: false
+      why: "They form one condition, not two pages."
+    - text: "The fast window catches spikes, the slow one catches slow burns, and both must fire"
+      correct: true
+      why: "Requiring both is what suppresses the false positives a lone fast window would generate."
+    - text: "Because error budgets are computed on a rolling 6-hour basis"
+      correct: false
+      why: "The budget window belongs to the SLO. These two windows are about spike versus slow burn."
+```
+
 ## Key Concepts
 - **Symptom-based alerting** — alert on user-visible impact (high error rate, slow responses), not internal causes (high CPU, disk I/O)
 - **Cause-based alerting** — alerts on infrastructure metrics (CPU, memory, disk); useful in dashboards, rarely worth a page
@@ -118,3 +159,26 @@ export async function deduplicatedAlert(alert: Alert, cooldownMs = 15 * 60 * 100
 - Google SRE Book — Chapter 6 (Monitoring Distributed Systems): https://sre.google/sre-book/monitoring-distributed-systems/
 - Alerting on SLOs (burn rate model): https://sre.google/workbook/alerting-on-slos/
 - PagerDuty — The On-Call Engineer's Handbook: https://www.pagerduty.com/resources/learn/on-call-management/
+
+```recall
+- q: "What is alert fatigue, and why is it dangerous?"
+  must:
+    - "so many alerts fire that on-call engineers start ignoring all of them"
+    - "including the critical ones"
+
+- q: "What does a burn rate alert measure, and what is it tied to?"
+  must:
+    - "it fires when the error budget is being consumed faster than is sustainable"
+    - "it is tied directly to the SLO"
+
+- q: "How are alerts routed by severity?"
+  must:
+    - "critical alerts to PagerDuty or phone"
+    - "warning alerts to a Slack channel"
+    - "info to a dashboard only"
+
+- q: "What does a runbook contain, and where does it live?"
+  must:
+    - "it is linked from the alert itself"
+    - "what the alert means, how to triage it, and how to resolve it"
+```

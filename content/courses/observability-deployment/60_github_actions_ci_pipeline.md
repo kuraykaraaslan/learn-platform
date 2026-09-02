@@ -9,6 +9,47 @@ For your Next.js SaaS, a minimal but effective pipeline has four jobs that run i
 
 Even without a test suite today (item 71 covers this gap), setting up the pipeline now means you have infrastructure ready the moment you write your first test.
 
+```quiz
+- q: "Your workflow defines `lint`, `test` and `deploy` and uses no `needs:` anywhere. What happens?"
+  anchor: "jobs run in parallel by default unless you specify `needs:`"
+  options:
+    - text: "They run top to bottom, in the order written in the file"
+      correct: false
+      why: "File order is not execution order."
+    - text: "All three start at once — the deploy included"
+      correct: true
+      why: "`needs:` is what creates the dependency; `test` waits for `lint` only when you say so."
+    - text: "Nothing — a workflow without `needs:` is rejected as invalid"
+      correct: false
+      why: "It is perfectly valid, which is exactly why this mistake ships."
+
+- q: "Which single change speeds up a CI pipeline the most?"
+  anchor: "the single biggest speed improvement"
+  options:
+    - text: "Splitting the job into a matrix so it runs in parallel"
+      correct: false
+      why: "A matrix runs more combinations rather than the same work faster, and it can lengthen the critical path."
+    - text: "`actions/cache` on `node_modules` or `.next/cache`"
+      correct: true
+      why: "Named as the single biggest speed improvement available."
+    - text: "Moving from `npm install` to `npm ci`"
+      correct: false
+      why: "Right for reproducibility, but not the biggest lever on wall-clock time."
+
+- q: "A human must approve before the production deploy runs. What provides that?"
+  anchor: "named deploy targets (staging, production) with approval gates and scoped secrets"
+  options:
+    - text: "An `if:` condition on the job checking who triggered the run"
+      correct: false
+      why: "That gates on the actor rather than on an approval — nobody is ever asked."
+    - text: "A GitHub Environment — it carries approval gates and scoped secrets"
+      correct: true
+      why: "Named deploy targets are where both the gate and the production-only secrets live."
+    - text: "A separate workflow behind `workflow_dispatch`"
+      correct: false
+      why: "That puts the deploy behind a manual trigger, but it is not an approval gate on this pipeline and it scopes no secrets."
+```
+
 ## Key Concepts
 - **Workflow** — a YAML file in `.github/workflows/`; one workflow = one automated process
 - **Job** — a set of steps that run on the same runner machine; jobs run in parallel by default unless you specify `needs:`
@@ -164,3 +205,21 @@ jobs:
 - GitHub Actions documentation: https://docs.github.com/en/actions
 - Caching dependencies in GitHub Actions: https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows
 - GitHub Actions security hardening: https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions
+
+```recall
+- q: "Define workflow, job and step."
+  must:
+    - "a workflow is a YAML file in `.github/workflows/` — one workflow is one automated process"
+    - "a job is a set of steps that run on the same runner machine"
+    - "a step is a single action or shell command within a job"
+
+- q: "How are secrets stored, and how are they referenced?"
+  must:
+    - "encrypted key-value pairs stored in the GitHub repo settings"
+    - "referenced as `${{ secrets.MY_SECRET }}`"
+
+- q: "What is a matrix build, and what does `on: pull_request` guarantee?"
+  must:
+    - "a matrix runs the same job against multiple Node.js versions or OS combinations in parallel"
+    - "`on: pull_request` triggers on every PR, so code that breaks the build is never merged"
+```

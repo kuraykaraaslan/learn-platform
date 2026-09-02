@@ -230,7 +230,7 @@
       "lessonsLinkedIn": [
         "observability-deployment/55_slo_sli_sla.md"
       ],
-      "rawOccurrences": 3
+      "rawOccurrences": 4
     },
     {
       "slug": "api-documentation",
@@ -470,7 +470,7 @@
       "slug": "correlation-id",
       "term": "Correlation ID",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 3
+      "rawOccurrences": 4
     },
     {
       "slug": "cqrs",
@@ -601,7 +601,7 @@
       "lessonsLinkedIn": [
         "observability-deployment/61_alerting_design.md"
       ],
-      "rawOccurrences": 16
+      "rawOccurrences": 17
     },
     {
       "slug": "event-store",
@@ -1168,7 +1168,7 @@
         "observability-deployment/61_alerting_design.md",
         "product-technical-strategy/391_nfr_production_readiness_strategy.md"
       ],
-      "rawOccurrences": 31
+      "rawOccurrences": 33
     },
     {
       "slug": "soft-delete",

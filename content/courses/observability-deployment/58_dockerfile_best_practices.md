@@ -9,6 +9,47 @@ Layer caching means Docker reuses previously built layers if the inputs have not
 
 For your Next.js boilerplate specifically, Next.js has a `standalone` output mode that packages everything needed to run the server into a single self-contained directory — no `node_modules` folder needed at runtime. Combined with a multi-stage build, this produces very small images.
 
+```quiz
+- q: "Your image is 1.2 GB and contains the TypeScript compiler. What is missing?"
+  anchor: "multiple `FROM` statements in one Dockerfile; only the final stage ends up in the image"
+  options:
+    - text: "A smaller base image — swap `node:20` for `node:alpine`"
+      correct: false
+      why: "Alpine helps with the base, but the compiler is in there because the build stage was never discarded."
+    - text: "A multi-stage build — only the final `FROM` stage ships"
+      correct: true
+      why: "The build stage installs everything and compiles; the runtime stage copies only the artifacts out of it."
+    - text: "A `.dockerignore` — the build context is dragging files in"
+      correct: false
+      why: "That trims what is sent to the daemon, not a toolchain a `RUN` layer installed."
+
+- q: "Your Dockerfile does `COPY . .` and then `RUN npm ci`. Why is every build slow?"
+  anchor: "each `RUN`, `COPY`, `ADD` creates a layer; Docker reuses cached layers when inputs are unchanged"
+  options:
+    - text: "Because `npm ci` cannot make use of a cache mount"
+      correct: false
+      why: "The problem is upstream: the layer it sits on is invalidated before it ever runs."
+    - text: "Any source change invalidates the COPY layer, so `npm ci` re-runs"
+      correct: true
+      why: "Copy `package*.json` first, install, then copy the rest — the install layer then survives ordinary source edits."
+    - text: "Because `npm ci` removes `node_modules` before installing"
+      correct: false
+      why: "It does, but that happens inside a layer that would otherwise be reused wholesale."
+
+- q: "What is `ARG` for in a Dockerfile?"
+  anchor: "pass environment variables at build time (e.g., `NEXT_PUBLIC_API_URL`) without baking secrets into the image"
+  options:
+    - text: "Injecting runtime configuration, read when the container starts"
+      correct: false
+      why: "That is `ENV` and the runtime environment. An `ARG` exists only during the build."
+    - text: "Passing build-time values such as `NEXT_PUBLIC_API_URL` — not secrets"
+      correct: true
+      why: "The point is getting build-time configuration in without baking secrets into the image."
+    - text: "Declaring which layers Docker is allowed to cache"
+      correct: false
+      why: "Caching follows each instruction's inputs; there is nothing to declare."
+```
+
 ## Key Concepts
 - **Multi-stage build** — multiple `FROM` statements in one Dockerfile; only the final stage ends up in the image
 - **Build stage** — installs all dependencies, compiles TypeScript, runs `next build`; discarded after copying artifacts
@@ -110,3 +151,25 @@ export default nextConfig;
 - Next.js Docker deployment guide: https://nextjs.org/docs/app/building-your-application/deploying#docker-image
 - Docker multi-stage builds: https://docs.docker.com/build/building/multi-stage/
 - Snyk — 10 Docker Security Best Practices: https://snyk.io/blog/10-docker-image-security-best-practices/
+
+```recall
+- q: "What does each stage of a multi-stage build do?"
+  must:
+    - "the build stage installs all dependencies, compiles TypeScript and runs `next build`, then is discarded once its artifacts are copied"
+    - "the runtime stage starts from `node:alpine` or `node:slim`, copies only the compiled output, and runs `node server.js`"
+
+- q: "What is `.dockerignore`, and what always belongs in it?"
+  must:
+    - "it lists files excluded from the build context — like `.gitignore`, but for Docker"
+    - "always exclude `node_modules`, `.next` and `.git`"
+
+- q: "What does `node:alpine` buy, and what does it cost?"
+  must:
+    - "around 50 MB, with a smaller attack surface"
+    - "it uses musl libc, which occasionally breaks native modules"
+
+- q: "What does Next.js `output: 'standalone'` do?"
+  must:
+    - "Next.js bundles the minimal server together with all its dependencies"
+    - "it enables ultra-small images"
+```

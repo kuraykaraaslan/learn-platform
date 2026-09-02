@@ -11,6 +11,47 @@ Log aggregation is the practice of shipping all log streams to a central, querya
 
 Looking at your existing Winston setup in `libs/logger/index.ts`: the `printf` formatter overrides the JSON output with a plain string, which defeats the purpose of calling `json()`. Fixing that and adding a Loki transport is two changes.
 
+```quiz
+- q: "You add `userId` as a Loki label so you can filter by user. What did that do?"
+  anchor: "high-cardinality values (like `userId`) go in the log body, not labels"
+  options:
+    - text: "Made per-user queries fast, at the cost of some index size"
+      correct: false
+      why: "Labels are meant to be low-cardinality. A unique value per user is not a mere cost — it is the failure mode."
+    - text: "Created a new log stream per user — high-cardinality values belong in the body"
+      correct: true
+      why: "A stream is all logs sharing a label set, so a unique label value per user fragments the index."
+    - text: "Nothing — Loki ignores labels past a cardinality threshold"
+      correct: false
+      why: "It does not quietly drop them. It indexes them, and that is the problem."
+
+- q: "One request touched four services. How do you find all of its log lines?"
+  anchor: "a unique ID injected into each log line (often the `traceId`) that lets you find all logs for one request"
+  options:
+    - text: "Filter by timestamp range across all four services"
+      correct: false
+      why: "Every concurrent request shares that range, so it narrows almost nothing."
+    - text: "Filter on the correlation ID carried in every line — often the `traceId`"
+      correct: true
+      why: "That is exactly what the ID is injected for."
+    - text: "Query each service's stream and match on `userId`"
+      correct: false
+      why: "One user may have several requests in flight, and `userId` does not belong in labels anyway."
+
+- q: "What is the shape of a LogQL query?"
+  anchor: "filter by labels then search log content"
+  options:
+    - text: "Search the content first, then narrow the result by label"
+      correct: false
+      why: "The other way round: the label selector picks the streams, and only then is content searched."
+    - text: "Select streams by label, then search inside them: `{service=\"acme-web\"} |= \"error\"`"
+      correct: true
+      why: "The label selector is the index; the content filter runs within the selected streams."
+    - text: "A SQL-like SELECT over a table of log rows"
+      correct: false
+      why: "Loki has no such table. It queries label-selected streams."
+```
+
 ## Key Concepts
 - **Structured log** — a log entry formatted as JSON with consistent fields (`level`, `message`, `timestamp`, `tenantId`, `userId`, `traceId`)
 - **Label** — in Loki, a small, low-cardinality key-value tag used for indexing (e.g., `service`, `level`, `env`); high-cardinality values (like `userId`) go in the log body, not labels
@@ -135,3 +176,25 @@ export default class Logger {
 - Grafana Loki documentation: https://grafana.com/docs/loki/latest/
 - `winston-loki` npm package: https://github.com/JaniAnttonen/winston-loki
 - ELK Stack getting started: https://www.elastic.co/guide/en/elastic-stack-get-started/current/get-started-elastic-stack.html
+
+```recall
+- q: "What is a structured log, and which fields does it carry?"
+  must:
+    - "a log entry formatted as JSON with consistent fields"
+    - "`level`, `message`, `timestamp`, `tenantId`, `userId`, `traceId`"
+
+- q: "Define a Loki label and a log stream."
+  must:
+    - "a label is a small, low-cardinality key-value tag used for indexing — `service`, `level`, `env`"
+    - "a log stream is all logs sharing the same label set, and querying within one stream is efficient"
+
+- q: "Give two ways to ship logs, and how they differ."
+  must:
+    - "Filebeat is a lightweight shipper that tails files and forwards to Elasticsearch or Logstash"
+    - "winston-loki is a Winston transport shipping straight to Loki's push API, with no agent needed"
+
+- q: "What is typical log retention?"
+  must:
+    - "production is 30-90 days"
+    - "longer requires more storage, or cold-storage archiving"
+```
