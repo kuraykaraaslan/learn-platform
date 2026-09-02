@@ -107,6 +107,30 @@ async function checkPoolHealth() {
 // Prisma connection_limit per instance should be 1-3 when pgBouncer is in front
 ```
 
+The serverless arithmetic from What It Is. The defaults are the crisis the
+lesson describes — Prisma's default `connection_limit` on a 2-CPU instance,
+multiplied by 100 concurrent invocations, against PostgreSQL's default
+`max_connections` of 100.
+
+```calc
+inputs:
+  - { id: cpus, label: "Physical CPUs per instance", type: number, default: 2, min: 1 }
+  - { id: instances, label: "Concurrent instances (serverless invocations)", type: number, default: 100, min: 1 }
+  - { id: max_conn, label: "PostgreSQL max_connections", type: number, default: 100, min: 1 }
+  - { id: reserved, label: "Connections reserved for superuser / admin", type: number, default: 3, min: 0 }
+outputs:
+  - { label: "Prisma default connection_limit per instance", expr: "cpus * 2 + 1", format: number }
+  - { label: "Connections presented to PostgreSQL", expr: "instances * (cpus * 2 + 1)", format: number }
+  - { label: "Headroom against max_connections", expr: "max_conn - reserved - instances * (cpus * 2 + 1)", format: number }
+  - { label: "Connections actually available per instance", expr: "(max_conn - reserved) / instances", format: number }
+```
+
+At the defaults the headroom is negative by several hundred, and the last line
+is below one — there is not a single connection per invocation to hand out,
+let alone five. That is the shape of the problem: no `connection_limit` value
+fixes it, because the multiplier is the instance count. A pooler in front of
+PostgreSQL is what changes the arithmetic.
+
 ## When to Use
 - Any time your Next.js app is deployed to a serverless platform (Vercel, Netlify, AWS Lambda) — pgBouncer or Prisma Accelerate is mandatory, not optional
 - When you see "Connection pool timeout" errors in production — the pool is exhausted; investigate before increasing limits (the cause might be slow queries holding connections)

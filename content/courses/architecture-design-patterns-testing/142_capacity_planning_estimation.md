@@ -39,6 +39,31 @@ console.log({
 });
 ```
 
+The standard shape from What It Is, made arithmetic: a business number, an
+action rate, a peak multiplier, and storage as rows × row size × retention.
+The point is not the output — it is that every assumption is a field someone
+reviewing this can disagree with by name.
+
+```calc
+inputs:
+  - { id: dau, label: "Daily active users", type: number, default: 10000, min: 0, step: 1000 }
+  - { id: actions, label: "Actions per user per day", type: number, default: 20, min: 0 }
+  - { id: peak, label: "Peak-to-average multiplier", type: number, default: 4, min: 1 }
+  - { id: row_bytes, label: "Average row size (bytes)", type: number, default: 500, min: 0, step: 50 }
+  - { id: retention, label: "Retention (days)", type: number, default: 365, min: 0 }
+outputs:
+  - { label: "Average requests per second", expr: "dau * actions / 86400", format: number }
+  - { label: "Peak requests per second", expr: "dau * actions * peak / 86400", format: number }
+  - { label: "Rows retained", expr: "dau * actions * retention", format: number }
+  - { label: "Storage at retention (GB)", expr: "dau * actions * retention * row_bytes / 1000000000", format: number }
+```
+
+Note how little the average RPS moves the design and how much the peak does —
+that gap is the reason the multiplier is written down as its own assumption
+rather than folded into the action rate. A 3-5x peak-to-average ratio is a
+starting assumption, not a measurement; replace it with real data as soon as
+there is any.
+
 ## When to Use
 - System design discussions — ground the conversation in numbers before debating architecture
 - Deciding whether a specific piece of complexity (sharding #12, a read replica #11, a cache #20) is justified yet, or premature for the actual scale

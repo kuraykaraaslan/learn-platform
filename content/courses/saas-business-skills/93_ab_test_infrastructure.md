@@ -194,6 +194,28 @@ const results = calculateSignificance({
 // → 25% relative uplift with p=0.034 — variant wins
 ```
 
+The sample size calculator the Key Concepts tell you to use before starting
+any test. The `(Z_α/2 + Z_β)²` term is evaluated here at the lesson's own
+stated defaults — 95% confidence and 80% power — which makes it the constant
+7.84; change either of those and the constant changes with them.
+
+```calc
+inputs:
+  - { id: base, label: "Baseline conversion rate (%)", type: number, default: 5, min: 0, step: 0.5 }
+  - { id: lift, label: "Relative improvement you want to detect — MDE (%)", type: number, default: 10, min: 0.1, step: 1 }
+  - { id: visitors, label: "Visitors per day entering the test", type: number, default: 800, min: 1, step: 100 }
+outputs:
+  - { label: "Samples needed per arm", expr: "7.84 * ((base / 100) * (1 - base / 100) + (base * (1 + lift / 100) / 100) * (1 - base * (1 + lift / 100) / 100)) / ((base * lift / 10000) * (base * lift / 10000))", format: number }
+  - { label: "Total samples (both arms)", expr: "2 * 7.84 * ((base / 100) * (1 - base / 100) + (base * (1 + lift / 100) / 100) * (1 - base * (1 + lift / 100) / 100)) / ((base * lift / 10000) * (base * lift / 10000))", format: number }
+  - { label: "Days the test has to run", expr: "2 * 7.84 * ((base / 100) * (1 - base / 100) + (base * (1 + lift / 100) / 100) * (1 - base * (1 + lift / 100) / 100)) / ((base * lift / 10000) * (base * lift / 10000)) / visitors", format: number }
+```
+
+Halve the MDE and watch the required sample roughly quadruple — that is the
+relationship behind "a 0.5% improvement requires thousands of samples." The
+last line is the one that decides whether an experiment is worth running at
+all: if the honest answer is longer than you will wait, the choice is a bigger
+MDE or a different test, not a shorter run with a peek at the end.
+
 ## When to Use
 - When changing your pricing page, signup flow, or any conversion touchpoint — these changes have direct MRR impact; test before permanent rollout
 - When a client asks "should we use wording A or wording B on this CTA?" — the answer is "run a test"; a two-week test with 500 visitors per variant is faster and more reliable than any amount of debate

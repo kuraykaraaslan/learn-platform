@@ -119,6 +119,29 @@ export async function getBudgetStatus(tenantId: string): Promise<BudgetStatus> {
 }
 ```
 
+The error budget from What It Is, as a number you can actually check a
+running month against. The defaults are the lesson's own example — a 99.5%
+SLO over a 30-day window.
+
+```calc
+inputs:
+  - { id: slo, label: "SLO target (% of requests that must succeed)", type: number, default: 99.5, min: 0, step: 0.1 }
+  - { id: window, label: "SLO window (days)", type: number, default: 30, min: 1 }
+  - { id: requests, label: "Requests in the window", type: number, default: 5000000, min: 0, step: 100000 }
+  - { id: failed, label: "Failed requests so far in this window", type: number, default: 12000, min: 0, step: 500 }
+outputs:
+  - { label: "Error budget (share of requests)", expr: "100 - slo", format: percent }
+  - { label: "Error budget (minutes of full downtime)", expr: "(100 - slo) / 100 * window * 24 * 60", format: number }
+  - { label: "Error budget (requests)", expr: "(100 - slo) / 100 * requests", format: number }
+  - { label: "Budget consumed so far", expr: "failed / ((100 - slo) / 100 * requests) * 100", format: percent }
+```
+
+Two things are worth doing to this. Move the SLO from 99.5 to 99.9 and watch
+the downtime budget fall from about 3.6 hours to roughly 43 minutes — that is
+what one extra nine costs in engineering terms. Then put your real failure
+count in the last field: the consumed figure is what decides whether you are
+deploying aggressively or freezing non-critical deploys this week.
+
 ## When to Use
 1. **Before signing enterprise contracts** — a customer's legal team will ask for your SLA. Define your internal SLO first so you know what you can commit to.
 2. **Deciding whether to deploy** — if your error budget for the month is 80% consumed with 15 days left, hold non-critical deployments.

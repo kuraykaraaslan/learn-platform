@@ -107,6 +107,30 @@ export async function generateSummaryWithBudget(text: string): Promise<string> {
 }
 ```
 
+The cost math from What It Is, with your own numbers. The defaults reproduce
+the worked example above, so change one field at a time and watch which one
+actually moves the monthly figure.
+
+```calc
+inputs:
+  - { id: in_tokens, label: "Input tokens per call", type: number, default: 1200, min: 0, step: 100 }
+  - { id: out_tokens, label: "Output tokens per call (your max_tokens ceiling)", type: number, default: 300, min: 0, step: 50 }
+  - { id: in_price, label: "Input price per 1M tokens (USD)", type: number, default: 2, min: 0 }
+  - { id: out_price, label: "Output price per 1M tokens (USD)", type: number, default: 10, min: 0 }
+  - { id: calls, label: "Calls per day", type: number, default: 50, min: 0 }
+outputs:
+  - { label: "Cost per call", expr: "(in_tokens * in_price + out_tokens * out_price) / 1000000", format: usd }
+  - { label: "Cost per day", expr: "(in_tokens * in_price + out_tokens * out_price) / 1000000 * calls", format: usd }
+  - { label: "Cost per month (× 30)", expr: "(in_tokens * in_price + out_tokens * out_price) / 1000000 * calls * 30", format: usd }
+  - { label: "Share of the bill that is output tokens", expr: "out_tokens * out_price / (in_tokens * in_price + out_tokens * out_price) * 100", format: percent }
+```
+
+The last line is the one that argues for scrutinising `max_tokens`. At the
+defaults, output is a little over half the bill on a call that returns a
+quarter as many tokens as it consumed — which is what "output tokens are
+priced several times higher" costs in practice. Rates move; re-check the
+pricing page and re-run the arithmetic rather than the conclusion.
+
 ## When to Use
 - Before shipping any new AI feature — the cost estimate is part of the feature spec, not an afterthought
 - When call volume for an existing feature grows significantly — re-run the cost math, it may justify a model tier change (see the Model Selection lesson)
