@@ -5,6 +5,47 @@ A project can have a perfectly clear technical scope and still fail, because sco
 
 Budget and timeline sit right next to authority as the two topics people instinctively avoid raising, treating them as impolite rather than as what they actually are: feasibility constraints that determine whether a proposal is even possible to write responsibly. The reframe that makes asking about budget feel professional instead of awkward is explaining why the question exists — "the same business problem can be solved as a lean MVP, a phased build, or a business-critical platform, and without a range I might design the wrong level of solution" — which shifts the ask from "how much can I get out of you" to "help me not waste your time recommending the wrong thing." Timeline gets the same treatment: a date is only useful once its driver is known, so "do you have a target launch date" is immediately followed by "what drives that date," because a deadline tied to a live external event is a very different constraint than a deadline that's really just an unfounded assumption that software ships fast. A budget-timeline-scope matrix turns the combination of signals into a concrete recommendation rather than a gut call: high budget with a clear timeline moves toward proposal, high budget with unclear scope points to paid discovery, low budget with high scope means reducing the MVP or disqualifying, and a client who insists on fixed scope, a fixed near-term deadline, and a low budget simultaneously is a high-risk combination worth declining or renegotiating rather than accepting all three constraints at once and hoping delivery finds a way.
 
+```quiz
+- q: "Why name all four stakeholder roles even when one person plainly holds three of them?"
+  anchor: "naming the roles is what prevents a proposal from being written for the wrong audience"
+  options:
+    - text: "For the CRM record, so the account data is complete"
+      correct: false
+      why: "The roles do their work in the proposal, not in the database."
+    - text: "Because naming the roles is what stops the proposal being written for the wrong audience"
+      correct: true
+      why: "Economic buyer, primary user, technical/operational contact and final approver each imply something different the proposal has to answer."
+    - text: "Because one person holding three roles is itself a red flag"
+      correct: false
+      why: "The lesson treats that as ordinary and still asks for the roles to be named."
+
+- q: "The person on the call clearly does not approve spending. What is the correct move?"
+  anchor: "a direct, non-awkward ask to include the actual decision-maker, or an offer to prepare a shareable internal summary"
+  options:
+    - text: "Proceed — the approver can be looped in at proposal time"
+      correct: false
+      why: "Proceeding as if authority does not matter is exactly what the lesson rules out."
+    - text: "Ask directly to include the decision-maker, or offer a shareable internal summary instead"
+      correct: true
+      why: "Both are non-awkward, and one of the two is usually available."
+    - text: "Disqualify — no authority on the call means no deal"
+      correct: false
+      why: "A stronger conclusion than the signal supports. The ask comes first."
+
+- q: "A client wants fixed scope, a fixed near-term deadline, and has a low budget. What does the matrix say?"
+  anchor: "a high-risk combination worth declining or renegotiating rather than accepting all three constraints at once"
+  options:
+    - text: "Reduce the MVP until it fits the budget"
+      correct: false
+      why: "That is the answer to low budget with high scope. Here all three constraints are fixed simultaneously, which is a different situation."
+    - text: "High risk — decline or renegotiate rather than accept all three and hope delivery finds a way"
+      correct: true
+      why: "Accepting all three at once is the combination the matrix exists to catch."
+    - text: "Move to paid discovery to de-risk it"
+      correct: false
+      why: "Paid discovery is what high budget with unclear scope points to. It does not resolve a fixed low budget against a fixed deadline."
+```
+
 ## Key Concepts
 - **Four stakeholder roles, always named**: economic buyer, project owner/primary user, technical/operational contact, final approver — even when one person fills several roles.
 - **Strong vs. weak authority signals**: a founder on the call, an open budget range, a known decision date, and a named approver are strong; "I need to ask my boss" and an absent decision-maker are weak.
@@ -57,3 +98,33 @@ Fixed scope + fixed deadline + low budget -> High risk; decline or redefine
 - *Flawless Consulting* — Peter Block: contracting clearly with the real decision-makers before any diagnostic work begins.
 - *The Challenger Customer* — Brent Adamson, Matthew Dixon, Pat Spenner & Nick Toman: mobilizing and aligning multiple stakeholders inside one complex B2B decision.
 - *Managing the Professional Service Firm* — David Maister: the economics of client relationships, authority, and trust that sit underneath every budget and stakeholder conversation.
+
+```recall
+- q: "Name the four stakeholder roles."
+  must:
+    - "economic buyer"
+    - "primary user"
+    - "technical/operational contact"
+    - "final approver"
+
+- q: "Give the strong and the weak authority signals."
+  must:
+    - "strong: a founder joining the call, an openly discussed budget range"
+    - "strong: a known decision date, a named approver"
+    - "weak: \"I need to ask my boss\", \"no budget yet\", \"just collecting prices\""
+    - "weak: a decision-maker who will not join discovery"
+
+- q: "Give the reframe that makes a budget question professional rather than awkward."
+  must:
+    - "explain why the question exists"
+    - "the same business problem can be solved as a lean MVP, a phased build, or a business-critical platform"
+    - "without a range I might design the wrong level of solution"
+    - "it shifts the ask from \"how much can I get out of you\" to \"help me not waste your time\""
+
+- q: "Give the budget-timeline-scope matrix."
+  must:
+    - "high budget with a clear timeline — move toward proposal"
+    - "high budget with unclear scope — paid discovery"
+    - "low budget with high scope — reduce the MVP or disqualify"
+    - "fixed scope plus a fixed near-term deadline plus a low budget — decline or renegotiate"
+```

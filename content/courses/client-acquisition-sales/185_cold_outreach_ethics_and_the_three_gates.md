@@ -9,6 +9,47 @@ Gate two is legal basis, and which rule applies depends entirely on where the re
 
 Gate three is suppression: has this person, or anyone at their company domain, already said stop — on any channel, in any wording, ever? A refusal does not need the word "unsubscribe" to count, and once it lands, the person is off every channel permanently, not just the one where they said no. The three gates together are what make automation and scale defensible: a system that checks all three before a message can be queued is not a mail-merge with manners, it is a person writing to one other person who happens to use software to remember the rules.
 
+```quiz
+- q: "When do the three gates have to pass?"
+  anchor: "all three have to pass **before a single word of the message is drafted** — not before sending"
+  options:
+    - text: "Before sending — the last point at which a mistake can still be caught"
+      correct: false
+      why: "A draft that already exists is a draft that eventually gets sent."
+    - text: "Before a single word of the message is drafted"
+      correct: true
+      why: "The gate has to sit upstream of the writing, not downstream of it."
+    - text: "Before the campaign launches, as a one-time list review"
+      correct: false
+      why: "The gates are per contact — gate one asks where this particular contact detail came from."
+
+- q: "Gate one is provenance. What is the actual test?"
+  anchor: "can you name the exact URL you opened to find it"
+  options:
+    - text: "Whether the information is publicly accessible"
+      correct: false
+      why: "Scraped data and LinkedIn exports are often publicly accessible and are still out. Accessibility is not provenance."
+    - text: "Whether you can name the exact URL you opened to find it, in one sentence"
+      correct: true
+      why: "A contact whose origin cannot be stated that way is not a contact — it is dropped, not parked for later."
+    - text: "Whether the contact has engaged with your content before"
+      correct: false
+      why: "That would make it warm outreach. Gate one is about where the detail came from, not about the relationship."
+
+- q: "Which of these contact sources passes gate one?"
+  anchor: "a \"contact us\" page, a team page, a public tender notice, a business card exchanged at an event"
+  options:
+    - text: "A guessed address in the firstname.lastname@domain form, filtered by which ones bounce"
+      correct: false
+      why: "Explicitly out, alongside scraped data, purchased or \"shared\" lists, leaked databases and LinkedIn exports."
+    - text: "A public tender notice"
+      correct: true
+      why: "Along with a contact-us page, a team page, and a business card exchanged at an event — information a company published for external contact."
+    - text: "A LinkedIn export of a group's member list"
+      correct: false
+      why: "On the excluded list regardless of how easy it is to obtain."
+```
+
 ## Key Concepts
 - **Gate 1 — Provenance**: a documented `source_url` and `captured_at` date for every contact; no real URL means the contact is dropped, not parked.
 - **Allowed vs. prohibited sources**: company-published contact routes, team pages, tender notices, and event exchanges are allowed; scraping, purchased lists, leaked data, and guessed emails are prohibited outright.
@@ -61,3 +102,22 @@ trigger_ref:     <the dated trigger justifying contact now>
 - *Permission Marketing* — Seth Godin: the foundational argument for why unsolicited contact has to earn its way rather than assume the right to interrupt.
 - *Fanatical Prospecting* — Jeb Blount: outbound discipline and the psychology of a cold first touch, independent of the legal specifics.
 - *New Sales. Simplified.* — Mike Weinberg: a plain, no-nonsense outbound framework compatible with a gate-based approach to who gets contacted at all.
+
+```recall
+- q: "Why is cold outreach described as the highest-risk acquisition channel?"
+  must:
+    - "it interrupts someone who never asked to hear from you"
+    - "on a channel they did not opt into"
+
+- q: "State gate one, including what passes, what fails, and the disposal rule."
+  must:
+    - "provenance — where did this contact detail come from, and can you name the exact URL you opened to find it"
+    - "fair game: a contact-us page, a team page, a public tender notice, a business card from an event"
+    - "out: scraped data, purchased or shared lists, leaked databases, LinkedIn exports, guessed addresses"
+    - "a contact whose origin cannot be stated in one sentence with a real URL is dropped, not parked for later"
+
+- q: "Why must the gates sit before drafting rather than before sending?"
+  must:
+    - "a draft that already exists is a draft that eventually gets sent"
+    - "the gate has to sit upstream of the writing, not downstream of it"
+```

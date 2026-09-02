@@ -9,6 +9,47 @@ Competitor and alternative analysis is the homework that makes differentiation h
 
 The trap to watch for is differentiating on things that attract exactly the clients you don't want: cheapest price, unlimited revisions, 24/7 availability, "I never say no." These aren't differentiators — they're concessions dressed up as a value proposition, and they select for clients who will test every one of those promises against you later.
 
+```quiz
+- q: "Your positioning already names who you help and what outcome you create. What does differentiation add on top?"
+  anchor: "why should the client pick you over the specific alternative they're actually weighing"
+  options:
+    - text: "A stronger claim about quality and experience"
+      correct: false
+      why: "Every competitor claims both, and neither can be verified before the engagement starts."
+    - text: "The answer to why they pick you over the specific alternative they are actually weighing"
+      correct: true
+      why: "And that alternative is rarely another developer with the same positioning."
+    - text: "A price advantage over the cheaper freelancer"
+      correct: false
+      why: "A cheaper freelancer wins on cost by definition. Differentiation is not a race down the axis the alternative already owns."
+
+- q: "Each of the five real alternatives wins on a genuine axis. What happens if you pretend they do not?"
+  anchor: "pretending they have no advantages makes your differentiation sound insecure rather than honest"
+  options:
+    - text: "The comparison stays simple, which helps a busy buyer decide"
+      correct: false
+      why: "It reads as insecurity, not simplicity — the buyer already knows what the alternatives are good at."
+    - text: "Your differentiation sounds insecure rather than honest"
+      correct: true
+      why: "Cost, perceived capacity, long-term control, speed and avoided spend are each genuinely owned by one of the five."
+    - text: "You lose the ability to name a specific competitor"
+      correct: false
+      why: "The alternatives are categories — a cheaper freelancer, an agency, an internal hire, a no-code tool, doing nothing — not named firms."
+
+- q: "Which of these is a real differentiator by this lesson's own test?"
+  anchor: "is falsifiable and checkable against your actual process"
+  options:
+    - text: "\"I care more about quality than most developers\""
+      correct: false
+      why: "Not falsifiable, and every competitor claims it."
+    - text: "\"Unlike a developer who waits for feature instructions, I scope the workflow first\""
+      correct: true
+      why: "Specific enough to be checked against your actual process, which is what makes it a differentiator rather than a slogan."
+    - text: "\"I have more years of experience than a junior freelancer\""
+      correct: false
+      why: "\"More experienced\" is on the vague-claims list, and it cannot be verified before the engagement starts."
+```
+
 ## Key Concepts
 - **Buying criteria differentiation**: Competing on scope clarity, ownership, and communication discipline instead of price or vague quality claims.
 - **The five standard alternatives**: Cheap freelancer, agency, internal hire, no-code/SaaS tool, doing nothing — know which one a given prospect is actually comparing you to.
@@ -62,3 +103,25 @@ as scope drift on agency projects."
 - *Obviously Awesome* — April Dunford: includes a structured method for competitive alternative mapping, not just feature comparison.
 - *Play Bigger* — Al Ramadan et al.: on category design and legitimate ways to make comparisons work in your favor.
 - *Never Split the Difference* — Chris Voss: useful for the calm, non-defensive tone that honest contrast requires under objection pressure.
+
+```recall
+- q: "Name the five alternatives a client is actually weighing, and the axis each one wins on."
+  must:
+    - "a cheaper freelancer — cost"
+    - "an agency — perceived capacity"
+    - "an internal hire — long-term control"
+    - "a no-code/SaaS tool — speed"
+    - "doing nothing — avoided spend"
+
+- q: "Give the differentiation formula, and say what makes it work."
+  must:
+    - "Unlike <alternative>, I help <audience> achieve <outcome> by <specific method>, which reduces <risk>"
+    - "the specificity of the method is what makes it a real differentiator instead of a slogan"
+
+- q: "Which buying criteria are worth differentiating on, and which claims are not?"
+  must:
+    - "worth it: scope clarity, business understanding, end-to-end ownership"
+    - "worth it: communication discipline and handover quality"
+    - "not: \"better quality\" or \"more experienced\""
+    - "every competitor claims those, and they cannot be verified before the engagement starts"
+```
