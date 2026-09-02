@@ -40,6 +40,19 @@ jobs:
       # header for why that gap is stated instead of closed with jsdom.
       - run: npm run content:verify-mermaid
 
+      # Rebuilds the concept coverage report and fails if it differs from what is
+      # committed. The report records which lessons each glossary term links in,
+      # so this is a regression guard on *linking behaviour*: a change that
+      # silently starts or stops linking somewhere has to show up as a diff
+      # someone explains, instead of shipping unnoticed.
+      #
+      # Scope stated honestly: this would not have caught the BASE bug
+      # (af2f3ea), because that shipped wrong from the beginning and the report
+      # faithfully recorded the wrong state as normal. What it does is stop a
+      # fixed one from coming back — verified by re-introducing it (a lowercase
+      # alias on the acronym) and watching this exit 1.
+      - run: npm run content:concepts-check
+
       # ESLint, which nothing else here runs. Verified empirically rather than
       # assumed: with a deliberate `@typescript-eslint/no-explicit-any` error
       # planted in modules/shared/useMounted.ts, `npm run build` still exited 0

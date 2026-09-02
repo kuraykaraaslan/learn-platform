@@ -20,6 +20,16 @@ import { splitLessonSections } from '../modules/course_content/course_content.pa
 
 const OUT_DIR = path.join(process.cwd(), 'content', '_reports');
 
+// Same shape as scripts/stamp-verify.ts --check: rebuild, compare against what
+// is committed, fail instead of writing. What it guards is drift in *linking
+// behaviour* — the report records which lessons each term links in, so a
+// change that silently starts or stops linking somewhere shows up here as a
+// diff that has to be explained, rather than shipping unnoticed. It would not
+// have caught af2f3ea's BASE bug on its own (that shipped wrong from day one,
+// so the report recorded it as normal), but it does stop a fixed one from
+// quietly coming back.
+const checkMode = process.argv.includes('--check');
+
 const concepts = loadConcepts();
 const { pattern } = buildConceptIndex(concepts);
 
@@ -214,9 +224,8 @@ const neverLinked = byTerm
     };
   });
 
-fs.mkdirSync(OUT_DIR, { recursive: true });
-fs.writeFileSync(
-  path.join(OUT_DIR, 'concepts.json'),
+const reportPath = path.join(OUT_DIR, 'concepts.json');
+const report =
   JSON.stringify(
     {
       generatedFrom: 'scripts/build-concepts.ts',
@@ -242,8 +251,22 @@ fs.writeFileSync(
     },
     null,
     2
-  ) + '\n'
-);
+  ) + '\n';
+
+if (checkMode) {
+  const onDisk = fs.existsSync(reportPath) ? fs.readFileSync(reportPath, 'utf-8') : '';
+  if (onDisk !== report) {
+    console.error(
+      `MISMATCH: ${reportPath} is not what a fresh run produces. Concept linking changed — run \`npm run content:concepts\` and explain the diff in the commit.`
+    );
+    process.exit(1);
+  }
+  console.log('concepts report matches a fresh run');
+  process.exit(0);
+}
+
+fs.mkdirSync(OUT_DIR, { recursive: true });
+fs.writeFileSync(reportPath, report);
 
 console.log(
   `${Object.keys(concepts).length} terms · ${totalLessons} lessons · ${neverMatched.length} never matched · ${atCapLessons.length} lessons at the 4-link cap`
