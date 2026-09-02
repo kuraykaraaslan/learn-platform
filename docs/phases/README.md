@@ -32,44 +32,70 @@ P12 arama + return queue  ← P1'in drill sonuçlarına dayanır
 | P2 | [02-bold-lead-pass.md](02-bold-lead-pass.md) | ~1-2 hafta (içerik) | tamamlandı — 29 batch, single 1041→141, `>=2 drill` 159→380 |
 | P3 | [03-concept-glossary.md](03-concept-glossary.md) | ~2 gün | tamamlandı — 125 terim |
 | P4 | [04-template-widgets.md](04-template-widgets.md) | ~3 gün | tamamlandı |
-| P5 | [05-ci-and-proof.md](05-ci-and-proof.md) | ~4 gün | tamamlandı — 10 proof dersi (hedef ~10), CI yeşil |
-| P6 | [06-quiz-tradeoff-diff.md](06-quiz-tradeoff-diff.md) | ~4 gün | tamamlandı, daraltılmış — 1 ders/mekanizma |
-| P7 | [07-mermaid.md](07-mermaid.md) | ~1 gün | tamamlandı — 7 diyagram |
-| P8 | [08-live-js-runner.md](08-live-js-runner.md) | ~4-5 gün | tamamlandı — 5 `run` fence |
+| P5 | [05-ci-and-proof.md](05-ci-and-proof.md) | ~4 gün | tamamlandı — 12 proof dersi (hedef ~10), CI yeşil |
+| P6 | [06-quiz-tradeoff-diff.md](06-quiz-tradeoff-diff.md) | ~4 gün | tamamlandı — mekanizma başına 1 dersle açıldı, sonra yayıldı: quiz 76, tradeoff 13 |
+| P7 | [07-mermaid.md](07-mermaid.md) | ~1 gün | tamamlandı — 17 diyagram (13'ü `verify-mermaid`'de tam doğrulanıyor) |
+| P8 | [08-live-js-runner.md](08-live-js-runner.md) | ~4-5 gün | tamamlandı — 8 JS/TS `run` fence |
 | P9 | [09-webcontainer.md](09-webcontainer.md) | ~5-6 gün | pilot yazıldı (korpusun ilk `run project` fence'i), boot hâlâ tarayıcıda doğrulanmalı |
-| P10 | [10-pglite-sql.md](10-pglite-sql.md) | ~3-4 gün | tamamlandı — 3 pilot ders yeniden yazıldı |
-| P11 | [11-recall-and-calc.md](11-recall-and-calc.md) | ~3 gün | tamamlandı — RecallCard + CalcCard/`expr.ts`, 3 önkoşul dersiyle birlikte |
+| P10 | [10-pglite-sql.md](10-pglite-sql.md) | ~3-4 gün | tamamlandı — 3 pilot ders, sonra 14 `sql run` fence |
+| P11 | [11-recall-and-calc.md](11-recall-and-calc.md) | ~3 gün | tamamlandı — RecallCard + CalcCard/`expr.ts`; recall 76, calc 13 derse yayıldı |
 | P12 | [12-search-and-review-queue.md](12-search-and-review-queue.md) | ~4 gün | tamamlandı — ⌘K, next/prev, Return Queue, export/import |
 
 ## Ölçülen zemin
 
-Bu sayılar bu repoda çalıştırılarak elde edildi; şartnameler bunlara dayanıyor.
-Korpus değiştikçe yeniden ölçün — tahmin etmeyin.
+Sol sütun, şartnamelerin yazıldığı P0 zeminidir — **değiştirilmez**, çünkü her
+faz o sayılara göre gerekçelendirildi. Sağ sütun bugünkü korpustur; ikisinin
+arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
+(`listFences`, `splitLessonSections`, `parseMistakes`, `parseFenceMeta`)
+ölçüldü — tahmin edilmedi.
 
-| Ölçüm | Değer |
-|---|---:|
-| Ders / kurs / bölüm | 412 / 23 / 2473 |
-| Fence | 505 |
-| `<pre>` düğümünün bölüm kökünün doğrudan çocuğu olması | **505 / 505** (iç içe: 0) |
-| Yalnız kod fence'i olan ders | 179 |
-| Yalnız şablon fence'i olan ders | 211 |
-| Hiç fence'i olmayan ders | 0 |
-| TS/TSX/JS fence | 161 |
-| — hiç import etmeyen | 44 (**yalnız 5'i `console.log` yapıyor**) |
-| — yalnız tarayıcı-güvenli import | 10 |
-| — WebContainer'da çalışabilen | **62 (62 ders)** |
-| — yerel eklenti/harici sunucu isteyen | 42 |
-| — var olmayan `@/` alias'ı | 45 |
-| Common Mistakes maddesi | 1746 |
-| — drill'lenebilir formda | **705 (%40,4)** |
-| — tek cümlelik (P2'nin işi) | 1041 |
-| ≥1 drill'lenebilir maddesi olan ders | **215** (sıfır olan: 197) |
-| Form şeklinde fence / dosya | 91 / 88 |
-| Checklist fence / madde | 35 / 293 |
-| `sql` fence | 9 (`database-caching-performance`'ta 0) |
-| `java` fence | 10 (hepsi Spring Boot/JPA) |
-| Blockquote kullanan ders | 45 |
-| Mermaid kullanan ders | 0 |
+| Ölçüm | P0 zemini | Bugün |
+|---|---:|---:|
+| Ders / kurs / bölüm | 412 / 23 / 2473 | 412 / 23 / **2472** |
+| Fence | 505 | 731 |
+| Yalnız kod fence'i olan ders | 179 | 109 |
+| Yalnız şablon fence'i olan ders | 211 | 166 |
+| Hiç fence'i olmayan ders | 0 | 0 |
+| TS/TSX/JS fence | 161 | 166 |
+| Common Mistakes maddesi | 1746 | 1772 |
+| — drill'lenebilir | 705 (%40,4) | **1631 (%92,0)** |
+| — tek cümlelik (P2'nin işi) | 1041 | **141** |
+| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **402** (sıfır: 10) |
+| Form fence / dosya | 91 / 88 | 91 / 88 |
+| Checklist fence / madde | 35 / 293 | 36 / 295 |
+| `sql` fence | 9 | 23 |
+| `java` fence | 10 | 10 |
+| Blockquote kullanan ders | 45 | 45 |
+| Mermaid kullanan ders | 0 | 17 |
+
+Bölüm sayısındaki fark bir ölçüm hatasıdır, korpus değişimi değil: 412 ders × 6
+bölüm = **2472**, ve hiçbir bölüm boş değil. P0'ın 2473'ü bir fazla saymış.
+
+P8/P9'un tek seferlik fence analizleri (hiç import etmeyen 44, yalnız
+tarayıcı-güvenli import 10, WebContainer'da çalışabilen 62, yerel eklenti
+isteyen 42, var olmayan `@/` alias'ı 45) ve P0'ın `<pre>` yerleşim sayımı
+(505/505) burada **yeniden ölçülmedi** — ilkleri o fazların kendi
+şartnamelerinde duruyor, sonuncusu `course_content.blocks.test.ts` tarafından
+sürekli korunuyor.
+
+## Widget kapsamı
+
+P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
+
+| Widget | Fence | Ders |
+|---|---:|---:|
+| `quiz` | 76 | 76 |
+| `recall` | 76 | 76 |
+| `mermaid` | 17 | 17 |
+| `tradeoff` | 13 | 13 |
+| `calc` | 13 | 13 |
+| `proof` | 12 | 12 |
+| `run` (toplam) | 25 | 17 |
+| — `sql run` | 14 | |
+| — JS/TS `run` | 8 | |
+| — `run project` | 3 | |
+
+Her kurs en az bir `quiz` ve bir `recall` taşıyor.
 
 ## Değişmezler — her fazda geçerli
 
