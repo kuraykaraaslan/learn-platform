@@ -7,6 +7,47 @@ A complete metrics definition draws from six categories, using whichever are rel
 
 The three-part success criteria rule turns a metric into a real decision tool: minimum success (the bar below which the effort didn't pay off), strong success (the bar that justifies doubling down), and a failure signal (a specific, observable sign that the assumption was wrong, not just "it didn't feel great"). "Minimum success: 3 pilot organizers can publish events and sell tickets without manual order tracking. Strong success: 80% of attendees complete purchase without support. Failure signal: organizers still maintain a parallel spreadsheet because admin visibility is insufficient" gives you three different, actionable outcomes instead of one vague verdict. Without the failure signal in particular, teams tend to quietly redefine "success" after the fact to match whatever actually happened.
 
+```quiz
+- q: "The client liked the demo and everything works. Is the project a success?"
+  anchor: "Those are not measurements, they're impressions"
+  options:
+    - text: "Yes — the deliverable works and the stakeholder is satisfied"
+      correct: false
+      why: "Delivery and satisfaction are impressions, and impressions can be argued with equal confidence in either direction."
+    - text: "Unknowable as stated — none of those are measurements"
+      correct: true
+      why: "Success has to be defined before delivery, or it gets decided afterwards by whoever is most invested in a particular answer."
+    - text: "Yes, as long as the quality metrics were met"
+      correct: false
+      why: "A feature can hit every quality metric and still fail on the business metric it was actually built to move."
+
+- q: "Every metric you have listed for a pilot is a quality metric. What is the risk?"
+  anchor: "Picking metrics from only one category is how teams end up proving the wrong thing"
+  options:
+    - text: "None — quality metrics are the most objective ones available"
+      correct: false
+      why: "Objectivity is not the issue. One category proves one kind of thing, and possibly not the thing the work existed to do."
+    - text: "Proving the wrong thing — a feature can pass every quality bar and still miss the business metric it was built to move"
+      correct: true
+      why: "Which is why a complete definition draws from whichever of the six categories are relevant."
+    - text: "Being unable to compare against the MVP's single metric"
+      correct: false
+      why: "The MVP's single metric belongs to an earlier stage. The problem here is category coverage, not comparability."
+
+- q: "Which of the three parts stops a team quietly redefining success after the fact?"
+  anchor: "teams tend to quietly redefine \"success\" after the fact to match whatever actually happened"
+  options:
+    - text: "Minimum success — the bar below which the effort did not pay off"
+      correct: false
+      why: "A floor is easy to argue was cleared. It is the signal named in advance that cannot be reinterpreted."
+    - text: "The failure signal — a specific, observable sign that the assumption was wrong"
+      correct: true
+      why: "Not \"it didn't feel great\", but something like organizers still maintaining a parallel spreadsheet because admin visibility is insufficient."
+    - text: "Strong success — the bar that justifies doubling down"
+      correct: false
+      why: "That defines the upside case, which is not the one anyone needs protecting from."
+```
+
 ## Key Concepts
 - **Six metric categories**: business, user behavior, operational, quality, learning, delivery — pick the ones relevant to what's being evaluated, not just one
 - **Minimum / strong / failure signal triad**: every MVP, feature, pilot, or release needs all three defined before launch, not just a single target
@@ -50,3 +91,27 @@ indicating the tool hasn't earned enough trust to be the single source of truth.
 - John Doerr — "Measure What Matters" (on outcome-based goal setting, the OKR framing behind minimum/strong success)
 - Avinash Kaushik — "Web Analytics 2.0" (on distinguishing actionable metrics from vanity metrics)
 - Sean Ellis & Morgan Brown — "Hacking Growth" (on defining a single measurable "North Star" alongside supporting metrics)
+
+```recall
+- q: "Name the six metric categories with an example of each."
+  must:
+    - "business — paid orders, conversion rate, manual hours saved"
+    - "user behaviour — activation rate, first task completion, repeat usage, abandonment"
+    - "operational — approval time, processing time, reconciliation count"
+    - "quality — bug count, error rate, uptime, support volume after launch"
+    - "learning — was the core assumption validated or not"
+    - "delivery — did the phase land on time and in scope"
+
+- q: "Give the three-part success criteria rule and what each part is for."
+  must:
+    - "minimum success — the bar below which the effort did not pay off"
+    - "strong success — the bar that justifies doubling down"
+    - "a failure signal — a specific, observable sign the assumption was wrong, not \"it didn't feel great\""
+    - "three different actionable outcomes instead of one vague verdict"
+
+- q: "Why does this lesson exist separately from MVP scoping's single metric?"
+  must:
+    - "an MVP needs one clear thing to prove"
+    - "past MVP — a feature, a pilot, a full release — one metric usually is not enough"
+    - "success gets defined before delivery, or it is decided afterwards by whoever is most invested in an answer"
+```

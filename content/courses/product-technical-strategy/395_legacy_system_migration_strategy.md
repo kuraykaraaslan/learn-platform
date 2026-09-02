@@ -7,6 +7,47 @@ The migration type is a deliberate choice matched to risk, not a default reached
 
 The cutover itself is a planned event, not a moment of hope: a freeze time, a backup taken immediately before migration, the migration execution itself, validation checks run against the mapping rules, an explicit go/no-go decision, a defined rollback condition, and client sign-off before the old system is retired. The single most common failure in this category isn't technical at all — it's promising a clean migration before anyone has actually looked at the real data, and then discovering during execution that the spreadsheet has three different date formats and a status column with three different capitalizations depending on which employee entered each row.
 
+```quiz
+- q: "In a project replacing an existing system, where does the risk actually live?"
+  anchor: "the risk almost never lives in the new system's code. It lives in the migration"
+  options:
+    - text: "In the new system's code — it is the part being written from scratch"
+      correct: false
+      why: "That is the part under your control and under test. The legacy data is neither."
+    - text: "In the migration"
+      correct: true
+      why: "Which is why the current system gets assessed honestly before a replacement is even proposed."
+    - text: "In the cutover window, as the only irreversible step"
+      correct: false
+      why: "The cutover is one planned event inside the migration, and it carries a defined rollback condition."
+
+- q: "A legacy status value matches neither of your mapping rules. What happens to that row?"
+  anchor: "exported to a review file for a human to resolve — never silently dropped and never silently guessed at"
+  options:
+    - text: "Mapped to the closest matching target value"
+      correct: false
+      why: "That is a silent guess, which the mapping discipline forbids by name."
+    - text: "Exported to a review file for a human to resolve"
+      correct: true
+      why: "Every mapping also names an owner for whatever does not map cleanly."
+    - text: "Skipped, with a line written to the migration log"
+      correct: false
+      why: "Skipping is silent dropping with a log line attached. The row needs a named human to resolve it."
+
+- q: "What does the lesson name as the single most common failure in migration projects?"
+  anchor: "it's promising a clean migration before anyone has actually looked at the real data"
+  options:
+    - text: "Choosing a migration type that does not match the risk profile"
+      correct: false
+      why: "A real mistake, but a technical one — and the lesson says the most common failure is not technical at all."
+    - text: "Promising a clean migration before anyone has looked at the real data"
+      correct: true
+      why: "Then discovering three date formats and a status column capitalized three different ways depending on who typed each row."
+    - text: "Cutting over without a defined rollback condition"
+      correct: false
+      why: "Serious, but the rollback condition is one item on the cutover checklist rather than the category-level failure."
+```
+
 ## Key Concepts
 - **Legacy assessment questions**: current system/process, data ownership, data quality (verified, not assumed), mandatory fields, which historical records must migrate vs. can be archived, acceptable downtime, who validates migrated data
 - **Migration type selection**: manual (small/low-risk), CSV import (structured spreadsheets), API migration (reliable existing API), direct database migration (safe controlled access only), parallel run (business can't risk immediate cutover), phased migration (modules move gradually) — matched to risk profile, not chosen by convenience
@@ -79,3 +120,39 @@ risk found during assessment.
 - Michael Feathers — "Working Effectively with Legacy Code" (the mindset of treating an existing system's behavior as a spec to be understood, not assumed)
 - Martin Fowler — "StranglerFigApplication" (martinfowler.com — the pattern behind phased and parallel-run migrations)
 - David H. Maister, Charles H. Green, Robert M. Galford — "The Trusted Advisor" (on the client-communication and sign-off discipline that makes a migration a shared decision, not a unilateral technical act)
+
+```recall
+- q: "What gets assessed before a replacement is even proposed?"
+  must:
+    - "what exists today, and what data actually has to move"
+    - "who owns that data, and how clean it really is — not how clean the client believes it is"
+    - "which fields are mandatory"
+    - "which historical records genuinely matter versus can be archived instead of migrated"
+    - "what downtime is acceptable"
+    - "who is responsible for validating that the migrated data is correct"
+
+- q: "Name the migration types and what each one is matched to."
+  must:
+    - "manual — small, low-risk data"
+    - "CSV import — structured spreadsheet data"
+    - "API migration — when the existing system has a reliable API"
+    - "direct database migration — only with safe, controlled source access"
+    - "parallel run — when the business genuinely cannot risk an immediate cutover"
+    - "phased — when distinct modules can move gradually"
+
+- q: "What does an explicit mapping contain, per migrated data object?"
+  must:
+    - "source field and target field"
+    - "transformation rule"
+    - "validation rule"
+    - "a named owner for whatever does not map cleanly"
+
+- q: "Give the cutover plan in order."
+  must:
+    - "a freeze time"
+    - "a backup taken immediately before migration"
+    - "the migration execution itself"
+    - "validation checks run against the mapping rules"
+    - "an explicit go/no-go decision and a defined rollback condition"
+    - "client sign-off before the old system is retired"
+```

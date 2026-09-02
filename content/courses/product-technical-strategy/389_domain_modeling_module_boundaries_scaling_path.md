@@ -7,6 +7,47 @@ Module boundaries decide where responsibilities live once that vocabulary exists
 
 The staged scaling path turns this into a sequence instead of a one-time guess, and it directly informs when — if ever — a service split from the previous paragraph becomes justified. Stage 1 is clean queries, pagination, indexes, and optimized assets — the fixes that resolve most early performance complaints without adding a single piece of new infrastructure. Stage 2 adds caching, background jobs, and CDN or object storage. Stage 3 is vertical scaling, read replicas, and dedicated queue workers. Stage 4 — service extraction — is the last stage, not the first, and it applies only to modules that hit one of the concrete triggers above. A performance budget stated explicitly per critical flow ("checkout completes in under 3 seconds, excluding provider delay") is what tells you which stage actually applies to your system right now, rather than architecting for a scale anxiety hasn't earned yet.
 
+```quiz
+- q: "A modular monolith is running fine and someone proposes splitting it into services. What actually justifies that?"
+  anchor: "an independent scaling requirement, a separate deployment lifecycle, a genuinely strong data-ownership boundary, security isolation, or a real team-ownership boundary"
+  options:
+    - text: "The codebase has grown large enough that the modules feel crowded"
+      correct: false
+      why: "Size is not a trigger. Every named trigger is about independence — of scaling, deployment, data, security or team ownership."
+    - text: "An independent scaling requirement, a separate deployment lifecycle, a strong data-ownership boundary, security isolation, or a real team-ownership boundary"
+      correct: true
+      why: "Never because microservices sound more professional for a product that has not yet proven it has users."
+    - text: "Being past stage 1 of the scaling path"
+      correct: false
+      why: "Service extraction is stage 4 — the last stage, not the second — and only for modules that hit one of the concrete triggers."
+
+- q: "Users report the app is slow. Which stage of the scaling path applies first?"
+  anchor: "Stage 1 is clean queries, pagination, indexes, and optimized assets"
+  options:
+    - text: "Stage 3 — vertical scaling and read replicas, since the load is evidently real"
+      correct: false
+      why: "Two stages too far. Most early performance complaints resolve without adding a single piece of new infrastructure."
+    - text: "Stage 1 — clean queries, pagination, indexes and optimized assets"
+      correct: true
+      why: "And what tells you which stage genuinely applies is an explicit performance budget per critical flow, not the volume of complaints."
+    - text: "Whichever stage the performance budget names, which is usually 2 or 3"
+      correct: false
+      why: "The budget identifies the stage; it does not skip stage 1's fixes when those are what the numbers point at."
+
+- q: "Which of these module names does the lesson rule out?"
+  anchor: "never \"Helpers,\" \"Utils,\" or \"Managers\""
+  options:
+    - text: "Appointments"
+      correct: false
+      why: "A business capability, which is exactly the naming rule."
+    - text: "Helpers"
+      correct: true
+      why: "Along with Utils and Managers — names that say nothing about the business the module serves."
+    - text: "Payments"
+      correct: false
+      why: "Also a business capability, alongside Auth, Users and Appointments."
+```
+
 ## Key Concepts
 - **Domain vocabulary discipline**: a project-specific glossary that prevents the same business concept from acquiring different names across different modules
 - **Bounded context**: a business area with its own language and rules (Identity, Catalog, Ordering, Fulfillment, Notifications, Reporting, Admin) — don't mix unrelated business rules into one module just because they share a database
@@ -74,3 +115,32 @@ extraction (Stage 4) — none of the triggers for these stages are present yet.
 - Eric Evans — "Domain-Driven Design" (bounded contexts and the strategic-design half of DDD, distinct from tactical patterns)
 - Sam Newman — "Building Microservices" (the concrete triggers for splitting, written by an author who is also candid about when not to)
 - Martin Fowler — "MonolithFirst" (martinfowler.com — the case for defaulting to a monolith and splitting only once boundaries are proven)
+
+```recall
+- q: "What has to be defined before schema and API routes exist?"
+  must:
+    - "a domain glossary specific to the business"
+    - "the bounded contexts partitioning it — Identity, Catalog, Ordering, Fulfillment, Notifications, Reporting, Admin Operations"
+    - "for any workflow with a lifecycle, an explicit state machine"
+    - "naming who can trigger each transition, what side effects follow, and what must be audited"
+
+- q: "Why is a modular monolith the default for a solo or small team?"
+  must:
+    - "clear domain modules named after business capabilities, explicit interfaces between them, a single deployable unit"
+    - "shared database transactions"
+    - "fast iteration"
+    - "a limited operational budget usually outweighs the theoretical benefit of a service split this early"
+
+- q: "Give the four scaling stages in order."
+  must:
+    - "stage 1 — clean queries, pagination, indexes, optimized assets"
+    - "stage 2 — caching, background jobs, CDN or object storage"
+    - "stage 3 — vertical scaling, read replicas, dedicated queue workers"
+    - "stage 4 — service extraction, last not first, only for modules hitting a concrete trigger"
+
+- q: "What tells you which stage your system is actually at right now?"
+  must:
+    - "an explicit performance budget stated per critical flow"
+    - "for example: checkout completes in under 3 seconds, excluding provider delay"
+    - "rather than architecting for a scale that anxiety has not earned"
+```

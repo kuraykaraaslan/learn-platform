@@ -7,6 +7,47 @@ Multi-tenancy is a major architecture decision, not a casual one, because it tou
 
 Cross-jurisdiction tenancy raises the isolation bar independent of technical preference. When tenants in different legal jurisdictions — a GDPR-covered EU company and a KVKK-covered Turkish company, for instance — share the same shared-schema infrastructure, a most-restrictive-law-wins rule applies to whatever they share: if personal data flows through shared audit logs or shared analytics, GDPR's stricter standard effectively governs the whole shared surface. The practical response is not to lift every tenant to the highest common burden, but to isolate the stricter tenants at the schema or database level instead. This has a concrete architectural consequence: a GDPR erasure request must be fulfillable per tenant, including from backups — which means a backup-purge flag scoped per tenant is a real architecture requirement, not a legal footnote to handle later.
 
+```quiz
+- q: "A client asks for SSO. What decides whether it goes in?"
+  anchor: "SSO and social login are additions justified by a specific, stated requirement, not defaults reached for because they seem more professional"
+  options:
+    - text: "Whether it is technically feasible in the chosen stack"
+      correct: false
+      why: "Feasibility is not the question. The question is whether a specific stated requirement calls for it."
+    - text: "Whether the client's environment actually requires it, rather than it simply seeming more professional"
+      correct: true
+      why: "For most SME and internal systems, email/password or invitation-based login is genuinely enough."
+    - text: "Whether the system is multi-tenant, since the two decisions travel together"
+      correct: false
+      why: "They are separate decisions, and tenancy has its own trigger question."
+
+- q: "What is the trigger question for multi-tenancy?"
+  anchor: "do multiple companies or organizations actually need isolated data and roles"
+  options:
+    - text: "Should we add a tenantId column now, in case it is useful later"
+      correct: false
+      why: "Named explicitly as the wrong question — tenancy touches the data model, authorization, billing, support, analytics, backups and security all at once."
+    - text: "Do multiple companies or organizations actually need isolated data and roles"
+      correct: true
+      why: "A major architecture decision needs a real yes, not a hedge."
+    - text: "Will the product eventually be sold to more than one customer"
+      correct: false
+      why: "Having many customers is not the same as needing isolated data and roles between them."
+
+- q: "A GDPR-covered EU tenant and a KVKK-covered Turkish tenant share the same shared-schema infrastructure. What follows?"
+  anchor: "a most-restrictive-law-wins rule applies to whatever they share"
+  options:
+    - text: "Each tenant stays governed by its own law, since rows are filtered by tenantId"
+      correct: false
+      why: "Not for what they share — if personal data flows through shared audit logs or shared analytics, the stricter standard effectively governs that whole surface."
+    - text: "The stricter standard governs the shared surface, so the practical answer is isolating the stricter tenant at schema or database level"
+      correct: true
+      why: "Rather than lifting every tenant to the highest common burden."
+    - text: "Every tenant must be raised to the stricter standard"
+      correct: false
+      why: "That is the response the lesson explicitly does not recommend."
+```
+
 ## Key Concepts
 - **Identity questions checklist**: self-registration vs. invitation-only, SSO/social login actually required vs. aesthetically desired, identity data ownership, offboarding behavior when a user leaves
 - **Authentication model selection**: email/password, magic link, OAuth/social login, enterprise SSO, API keys/service tokens — chosen by actual requirement, not maximal capability
@@ -76,3 +117,32 @@ a per-tenant backup-purge capability not yet built.
 - AWS Well-Architected Framework — SaaS Lens (aws.amazon.com — practical tenant isolation model guidance at each isolation tier)
 - Auth0 / Okta developer resources on session and SSO model selection (as background for the identity-model decision, distinct from implementation)
 - GDPR Article 17 (Right to Erasure) — the source text behind the per-tenant backup-purge requirement in cross-jurisdiction tenancy
+
+```recall
+- q: "What are this lesson's three decisions, upstream of any implementation?"
+  must:
+    - "who owns identity"
+    - "which authentication model actually fits the project"
+    - "whether the system needs tenant isolation at all"
+
+- q: "Name the identity questions that come first."
+  must:
+    - "can users self-register, or is invitation required"
+    - "is social login or SSO actually required by the client's environment, or just aesthetically appealing"
+    - "who owns the identity data"
+    - "what happens operationally when a user leaves the organization"
+
+- q: "Give the isolation spectrum and the default for an early SaaS MVP."
+  must:
+    - "shared database, shared schema, strict tenantId enforcement"
+    - "shared database, separate schema per tenant"
+    - "a fully separate database per tenant"
+    - "default is the cheapest end — shared schema with strict server-side tenant filtering on every query"
+    - "frontend filtering is not isolation"
+
+- q: "What concrete architecture requirement falls out of cross-jurisdiction tenancy?"
+  must:
+    - "a GDPR erasure request must be fulfillable per tenant, including from backups"
+    - "so a backup-purge flag scoped per tenant is a real architecture requirement"
+    - "not a legal footnote to be handled later"
+```

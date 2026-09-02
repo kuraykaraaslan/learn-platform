@@ -7,6 +7,47 @@ Three of those categories — reliability, observability, and deployment topolog
 
 Observability means deciding, at architecture time, how the system will be understood when something goes wrong: structured logs for business events and errors, a small set of metrics that actually indicate health (error rate, job failure rate, webhook status), audit logs for privileged actions kept distinct from debug logs, and health checks that reflect real dependencies (database, queue, storage) instead of returning "OK" unconditionally. Deployment topology closes the loop: an environment strategy (at minimum local plus production; add staging once the project is serious enough to justify it), a documented choice between serverless/managed hosting and a VPS based on actual operational fit rather than habit, clear secrets ownership and rotation, and a rollback plan agreed before the first production release rather than improvised during the first incident. (Setting up the tracing pipeline, defining formal SLO/SLI targets, and running the CI/CD deployment mechanics are deeper technical skills covered elsewhere — this lesson is about deciding, upfront, what must be true before an architecture is considered production-ready at all.)
 
+```quiz
+- q: "The requirement says the dashboard should be \"fast\". What is wrong with that?"
+  anchor: "will be reinterpreted by whoever is unhappy with the delivered system"
+  options:
+    - text: "Nothing — it is a reasonable starting point to sharpen later"
+      correct: false
+      why: "It is a placeholder, and the sharpening gets done after delivery by whoever is unhappy with the result."
+    - text: "It is not architecture-ready — \"loads in under 2 seconds for up to 10,000 records\" is"
+      correct: true
+      why: "The whole discipline is turning fast, secure and scalable into numbers and named threats."
+    - text: "It belongs under scalability rather than performance"
+      correct: false
+      why: "The category is fine. What is missing is a number."
+
+- q: "A payment provider returns an uncertain status. What does graceful degradation look like here?"
+  anchor: "if payment status is uncertain, mark the order pending review rather than guessing"
+  options:
+    - text: "Retry until a definite answer comes back, then proceed"
+      correct: false
+      why: "That is not a design for the failure mode, it is a hope that the failure resolves itself."
+    - text: "Mark the order pending review rather than guessing"
+      correct: true
+      why: "Same shape as the other examples: a fallback response if the AI provider fails, and analytics failing without blocking checkout."
+    - text: "Fail the order, so nothing incorrect is ever recorded"
+      correct: false
+      why: "Total failure is exactly what graceful degradation is defined against."
+
+- q: "Which health check is actually doing its job?"
+  anchor: "health checks that reflect real dependencies (database, queue, storage) instead of returning \"OK\" unconditionally"
+  options:
+    - text: "Returns 200 whenever the process is running"
+      correct: false
+      why: "That is the unconditional OK the lesson names — it reports that the process is alive and nothing else."
+    - text: "Checks database, queue and storage before answering"
+      correct: true
+      why: "A health check should reflect the real dependencies the system needs in order to work."
+    - text: "Returns the most recent error from the debug log"
+      correct: false
+      why: "Debug logs are kept distinct from audit logs and are not a health signal in either case."
+```
+
 ## Key Concepts
 - **NFR categories (twelve)**: performance, availability, scalability, security, privacy/compliance, reliability, maintainability, observability, backup/recovery, accessibility, data retention, support expectations
 - **NFR table template**: category, requirement, target, risk if ignored, architecture impact — the mechanism for turning "fast" and "secure" into numbers and named controls
@@ -65,3 +106,34 @@ platform's built-in rollback; no destructive migration planned for pilot.
 - Michael T. Nygard — "Release It!" (stability patterns and graceful degradation, written specifically for production systems that must survive real failure)
 - Niall Richard Murphy et al. — "The Site Reliability Workbook" (practical exercises for turning reliability principles into an actual operating decision)
 - [The Twelve-Factor App](https://12factor.net/) — the checklist most production-readiness requirements are a restatement of
+
+```recall
+- q: "Name the NFR categories a project states before it is ready for serious estimation."
+  must:
+    - "performance, availability, scalability"
+    - "security, privacy/compliance"
+    - "reliability, maintainability, observability"
+    - "backup/recovery, accessibility"
+    - "data retention and support expectations"
+
+- q: "What does reliability mean concretely here?"
+  must:
+    - "naming a failure mode for each critical component — database unavailable, email provider down, a webhook arriving twice"
+    - "designing graceful degradation instead of total failure"
+    - "setting an actual RTO and RPO with a backup policy"
+    - "even a simple daily-backup policy beats an unstated hope that the platform probably backs things up"
+
+- q: "What does observability mean at architecture time?"
+  must:
+    - "structured logs for business events and errors"
+    - "a small set of metrics that actually indicate health — error rate, job failure rate, webhook status"
+    - "audit logs for privileged actions kept distinct from debug logs"
+    - "health checks reflecting real dependencies rather than an unconditional OK"
+
+- q: "What does deployment topology have to settle before the first production release?"
+  must:
+    - "an environment strategy — at minimum local plus production, staging once the project justifies it"
+    - "a documented choice between serverless/managed hosting and a VPS, on operational fit rather than habit"
+    - "clear secrets ownership and rotation"
+    - "a rollback plan agreed in advance rather than improvised during the first incident"
+```

@@ -3428,12 +3428,12 @@
       },
       "381_success_metrics_criteria.md": {
         "title": "664e05fae0108ce3",
-        "whatItIs": "5fd2754abc512b10",
+        "whatItIs": "7f6c4e9081f7274f",
         "keyConcepts": "0ecf689c726e7c20",
         "exampleCode": "0804d7ab615cdf62",
         "whenToUse": "063ca56e7c22e379",
         "commonMistakes": "9f98d14bfa908b9e",
-        "furtherReading": "fde8f074c854336d"
+        "furtherReading": "bbfe16136684ac02"
       },
       "382_roadmap_planning.md": {
         "title": "c4f955b4ba9280d5",
@@ -3500,12 +3500,12 @@
       },
       "389_domain_modeling_module_boundaries_scaling_path.md": {
         "title": "e7e9133b30670c8c",
-        "whatItIs": "a0807c9b546e696d",
+        "whatItIs": "133e8e869704fbe8",
         "keyConcepts": "b5f97956ac556b3c",
         "exampleCode": "e1da5f2c9e8a80f2",
         "whenToUse": "ec67f381a98c4d6b",
         "commonMistakes": "c6bfd3bda9baff2a",
-        "furtherReading": "fb25001a69b0454e"
+        "furtherReading": "a7d4245f08af1f94"
       },
       "390_technology_selection_governance.md": {
         "title": "250878bf07963548",
@@ -3518,12 +3518,12 @@
       },
       "391_nfr_production_readiness_strategy.md": {
         "title": "161dde7dc6751537",
-        "whatItIs": "3911e248baf97fd6",
+        "whatItIs": "0960b6fa3bb50e49",
         "keyConcepts": "5e5343e4fc9fc7f2",
         "exampleCode": "cbf6b55539985004",
         "whenToUse": "b2797fa9b0e1b9a3",
         "commonMistakes": "740c4d41b3349793",
-        "furtherReading": "fce6f0d379271229"
+        "furtherReading": "40f974176f079776"
       },
       "392_data_architecture_ownership_lifecycle.md": {
         "title": "2a7f1e876f9fec4c",
@@ -3545,21 +3545,21 @@
       },
       "394_auth_identity_multi_tenancy_decisions.md": {
         "title": "3f8ab6037f66527e",
-        "whatItIs": "c11708d674884927",
+        "whatItIs": "9d67ed84597ab4a6",
         "keyConcepts": "75883a0933629d0d",
         "exampleCode": "971ed33c44f084ec",
         "whenToUse": "e714eebfda36caeb",
         "commonMistakes": "39d0e35b14ca0bfc",
-        "furtherReading": "cc36f24ebbe57843"
+        "furtherReading": "8681679056366f2e"
       },
       "395_legacy_system_migration_strategy.md": {
         "title": "23f11426cddd6940",
-        "whatItIs": "705b9887b10e0459",
+        "whatItIs": "5f68035d441eccd4",
         "keyConcepts": "3e35dae9d97fde54",
         "exampleCode": "b8bcb9cdf554b8f5",
         "whenToUse": "8556cac012489571",
         "commonMistakes": "fb6a3039f6305f0e",
-        "furtherReading": "0c5553ed3adf6393"
+        "furtherReading": "03a13767f4f132a0"
       }
     },
     "saas-business-skills": {
