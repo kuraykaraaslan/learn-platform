@@ -1,0 +1,8 @@
+{
+  "name": "verify-algorithms-concurrency-130",
+  "private": true,
+  "description": "Runs the same binary search over sorted and unsorted input, showing it silently miss an element that is present — for lesson 130's proof block. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node search.js"
+  }
+}

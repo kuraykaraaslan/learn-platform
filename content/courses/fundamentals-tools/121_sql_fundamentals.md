@@ -36,6 +36,31 @@ const topCustomers = await prisma.customer.findMany({
 // Note: replicating the HAVING + SUM exactly often needs a raw query or a materialized view (see #13)
 ```
 
+The NULL claims above, run for real against a real Postgres engine seeded with three posts, two of them live. Predict what `WHERE deleted_at = NULL` returns before revealing it — an error, every row, or something else?
+
+```proof sha=d8f2a1c229fd23cc at=2026-09-02 commit=9614387
+$ node nulls.js
+--- NULL is unknown, not a value ---
+NULL = NULL   -> NULL
+NULL <> NULL  -> NULL
+NULL IS NULL  -> true
+only the third one is a boolean; the first two are unknown, and WHERE drops unknown rows
+
+--- the soft-delete filter everyone writes first ---
+WHERE deleted_at = NULL  -> 0 rows
+WHERE deleted_at IS NULL -> 2 rows: 1, 3
+no error, no warning — the first query just quietly returns nothing
+
+--- and NOT IN with a NULL in the list matches nothing at all ---
+WHERE id IN (1, 2, NULL)  -> 2 rows: 1, 2
+WHERE id NOT IN (2, NULL) -> 0 rows
+id 1 and 3 are obviously not 2, but "1 <> NULL" is unknown, so NOT IN can never be true
+
+--- COUNT(*) and COUNT(column) are different questions ---
+COUNT(*)          -> 3
+COUNT(deleted_at) -> 1
+```
+
 ## When to Use
 - Any time you write a raw query, or want to reason about what an ORM call actually executes
 - Debugging a slow endpoint before reaching for indexing (#17) or query plan analysis (#18)

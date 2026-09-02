@@ -53,6 +53,24 @@ Finance/
   be categorized — expensed in May or spread across the period it covers?
 ```
 
+The 30% default withholding above is the clearest case of paperwork having a
+price. Enter one real invoice and the rates that apply to you — the treaty rate
+comes from your accountant, not from this page.
+
+```calc
+inputs:
+  - { id: invoice,  label: "Invoice amount to a US client (USD)", type: number, default: 5000, min: 0, step: 100 }
+  - { id: default_rate, label: "Default withholding with no W-8BEN on file (%)", type: number, default: 30, min: 0 }
+  - { id: treaty_rate,  label: "Your treaty withholding rate (%)", type: number, default: 0, min: 0 }
+outputs:
+  - { label: "You receive, no form on file", expr: "invoice * (1 - default_rate / 100)", format: usd }
+  - { label: "You receive, form on file",    expr: "invoice * (1 - treaty_rate / 100)", format: usd }
+  - { label: "Cost of the missing form",     expr: "invoice * (default_rate - treaty_rate) / 100", format: usd }
+```
+
+This is arithmetic on rates you supply, not advice about which rates apply —
+that determination is your accountant's, per the note at the top of this lesson.
+
 ## When to Use
 - Continuously, as invoices are issued and payments arrive — not batched at quarter-end.
 - Before invoicing a new client in a country you haven't billed before — confirm the correct treatment (VAT wording, withholding forms) before the first invoice goes out, not after a payment arrives short.

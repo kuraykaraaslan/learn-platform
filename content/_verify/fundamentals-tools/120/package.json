@@ -1,0 +1,8 @@
+{
+  "name": "verify-fundamentals-tools-120",
+  "private": true,
+  "description": "Merges and then rebases the same two-branch history in a scratch repo, showing merge preserving commit hashes and rebase rewriting them — for lesson 120's proof block. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "bash run.sh"
+  }
+}

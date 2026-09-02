@@ -1,0 +1,8 @@
+{
+  "name": "verify-fundamentals-tools-121",
+  "private": true,
+  "description": "Runs three-valued NULL logic against a real Postgres engine (pglite, resolved from the repo's own node_modules) — for lesson 121's proof block. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node nulls.js"
+  }
+}

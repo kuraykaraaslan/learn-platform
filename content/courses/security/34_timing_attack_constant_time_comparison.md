@@ -104,6 +104,28 @@ const session = await repo.findOne({ where: { refreshToken: hashedIncoming } });
 //   - Any `signature === expected` pattern
 ```
 
+The length guard and the fixed-length digest above, run for real against a 20-character secret. Predict what `crypto.timingSafeEqual` does when handed two buffers of different lengths before revealing it — does it return `false`, or something else?
+
+```proof sha=73272fc5efa5efeb at=2026-09-02 commit=9614387
+$ bash run.sh
+$ node timing.js
+--- crypto.timingSafeEqual refuses unequal lengths outright ---
+RangeError: Input buffers must have the same byte length
+so a length guard is not optional — the call throws without one
+
+--- but the guard itself answers the attacker's question ---
+5-char guess  reaches the comparison: false
+20-char guess reaches the comparison: true
+one bit of the secret — its length — leaked before any byte was compared
+
+--- HMAC both sides to a fixed 32 bytes first: the length is gone ---
+digest of the 5-char guess:  32 bytes
+digest of the 20-char secret: 32 bytes
+safeEqual(secret, 'wrong'): false
+safeEqual(secret, secret):  true
+every comparison now examines exactly 32 bytes, whatever the caller sent
+```
+
 ## When to Use
 - Webhook signature verification (Stripe, PayPal, GitHub): always use constant-time comparison
 - CSRF token validation: use constant-time comparison when comparing cookie value to header value

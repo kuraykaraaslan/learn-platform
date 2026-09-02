@@ -1,0 +1,8 @@
+{
+  "name": "verify-security-30",
+  "private": true,
+  "description": "Runs a real SQL injection against a real Postgres engine (pglite, resolved from the repo's own node_modules), then the same input through a parameterized query — for lesson 30's proof block. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node injection.js"
+  }
+}

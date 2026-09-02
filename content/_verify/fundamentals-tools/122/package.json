@@ -1,0 +1,8 @@
+{
+  "name": "verify-fundamentals-tools-122",
+  "private": true,
+  "description": "Shows a plain object silently reordering integer-like keys while Map preserves insertion order — for lesson 122's proof block. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node keys.js"
+  }
+}

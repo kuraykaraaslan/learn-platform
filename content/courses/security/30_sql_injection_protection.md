@@ -107,6 +107,27 @@ const sortCol = validateSortColumn(req.query.sort as string);
 const users = await prisma.user.findMany({ orderBy: { [sortCol]: 'asc' } });
 ```
 
+The concatenated query above, run for real against a real Postgres engine seeded with three users. Predict how many rows come back before revealing it — and whether the parameterized version returns an error or simply nothing.
+
+```proof sha=674fab5cb5fb46a6 at=2026-09-02 commit=9614387
+$ node injection.js
+attacker submits this as the email: ' OR '1'='1' --
+(password box left empty)
+
+--- concatenated into the SQL string ---
+SELECT id, email, role FROM users WHERE email = '' OR '1'='1' --' AND password = '' ORDER BY id
+rows returned: 3
+  1  ada@example.com  admin
+  2  linus@example.com  user
+  3  grace@example.com  user
+the trailing -- commented the password check out of existence
+
+--- same input, sent as a parameter ---
+SELECT id, email, role FROM users WHERE email = $1 AND password = $2 ORDER BY id
+rows returned: 0
+the engine looked for a user whose email is literally that string, and found none
+```
+
 ## When to Use
 - Always — parameterized queries should be the default and raw query concatenation should be treated as a code smell that requires a comment justifying it
 - When adding a search or filter feature: audit the query construction path end-to-end
