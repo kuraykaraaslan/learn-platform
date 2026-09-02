@@ -4,11 +4,11 @@
   "totalLessons": 412,
   "totals": {
     "neverMatched": 0,
-    "neverLinked": 17,
+    "neverLinked": 16,
     "neverLinkedByCause": {
       "own-lesson-only": 2,
       "code-only": 13,
-      "shadowed": 1,
+      "shadowed": 0,
       "cap-starved": 1,
       "never-matched": 0
     },
@@ -110,18 +110,6 @@
       "alsoAppearsInLessons": [
         44
       ]
-    },
-    {
-      "slug": "pool-exhaustion",
-      "term": "Pool exhaustion",
-      "cause": "shadowed",
-      "linkableInLessons": [],
-      "presentInLessons": [
-        132,
-        28,
-        61
-      ],
-      "alsoAppearsInLessons": []
     },
     {
       "slug": "primary-key",
@@ -430,7 +418,6 @@
       "slug": "connection-pooling",
       "term": "connection pooling",
       "lessonsLinkedIn": [
-        "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
         "client-delivery-pm-handover/260_production_incident_client_communication.md",
         "database-advanced/50_multi_tenant_data_isolation_models.md",
         "distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md",
@@ -438,7 +425,7 @@
         "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md",
         "fundamentals-tools/133_networking_fundamentals.md"
       ],
-      "rawOccurrences": 31
+      "rawOccurrences": 27
     },
     {
       "slug": "constant-time-comparison",
@@ -894,8 +881,10 @@
     {
       "slug": "pool-exhaustion",
       "term": "Pool exhaustion",
-      "lessonsLinkedIn": [],
-      "rawOccurrences": 1
+      "lessonsLinkedIn": [
+        "architecture-design-patterns-testing/132_load_stress_testing_basics.md"
+      ],
+      "rawOccurrences": 5
     },
     {
       "slug": "primary-key",

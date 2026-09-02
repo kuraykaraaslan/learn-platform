@@ -398,7 +398,10 @@
   "pool-exhaustion": {
     "term": "Pool exhaustion",
     "short": "When all connections are in use and a new request can't get one; results in timeout or 500 error.",
-    "lesson": 19
+    "lesson": 19,
+    "aliases": [
+      "connection pool exhaustion"
+    ]
   },
   "primary-key": {
     "term": "Primary key",
