@@ -5,7 +5,7 @@
       "101_realtime_systems.md": {
         "title": "63de2f46d9592ed3",
         "whatItIs": "527a41f3923c31c2",
-        "keyConcepts": "43ca7c73efb6f985",
+        "keyConcepts": "757f3940b7131767",
         "exampleCode": "996d95e85e79afad",
         "whenToUse": "4cbc6e293ba7ac5c",
         "commonMistakes": "b4515cf9dc71d1b4",
@@ -2232,7 +2232,7 @@
       "20_redis_cache_strategies.md": {
         "title": "4816350e2ec1814d",
         "whatItIs": "1bc9dca0816891af",
-        "keyConcepts": "b3049ec8f490de05",
+        "keyConcepts": "7a0d4142b5ce9369",
         "exampleCode": "2a8918643758d79c",
         "whenToUse": "09d5d2ce08a5f24a",
         "commonMistakes": "12a5cde600feeff8",
@@ -2297,7 +2297,7 @@
       "06_distributed_locking.md": {
         "title": "030162e56f046621",
         "whatItIs": "fa5ca38090aa5e02",
-        "keyConcepts": "d27eac5b5601d11f",
+        "keyConcepts": "65d3e0570b109003",
         "exampleCode": "8178fc7d2ea7ebfe",
         "whenToUse": "b0287bef7d8e8227",
         "commonMistakes": "ef691c8c739eaec7",
@@ -2769,7 +2769,7 @@
       "26_streaming_ssr_suspense.md": {
         "title": "81ac8b819ffc6fa4",
         "whatItIs": "0fed50aadb87b53b",
-        "keyConcepts": "e11477134bd1c4a4",
+        "keyConcepts": "cfb05ffaede9dbfc",
         "exampleCode": "e49086b72699c527",
         "whenToUse": "5479a1a2a7b11eed",
         "commonMistakes": "1f7cad81c24ced65",
@@ -2879,7 +2879,7 @@
       "127_auth_basics.md": {
         "title": "0e5875da089e1579",
         "whatItIs": "e4e8113200d9830d",
-        "keyConcepts": "64a29aed620706da",
+        "keyConcepts": "1e5800583451aa1d",
         "exampleCode": "8e6a13eb68c73a49",
         "whenToUse": "a89681133a52a45b",
         "commonMistakes": "953c30d0f0ef8fbd",

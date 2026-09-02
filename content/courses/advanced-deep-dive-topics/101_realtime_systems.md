@@ -17,6 +17,29 @@ For your multi-tenant SaaS, SSE is the correct choice for `notification_inapp`. 
 - **Reconnection logic**: SSE reconnects automatically using the `Last-Event-ID` header; WebSocket clients must implement exponential backoff themselves.
 - **Authentication at connection time**: JWT must be validated on the initial HTTP upgrade or SSE request, not on each message — pass it as a query param or cookie.
 
+The three transports are easiest to tell apart by counting connections and round trips for the same three server-side events:
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    C->>S: GET /events (held open)
+    S-->>C: event 1, connection closes
+    C->>S: GET /events again
+    S-->>C: event 2, connection closes
+    Note over C,S: Long polling — one connection and one round trip per message
+    C->>S: GET /stream, Accept text/event-stream
+    S-->>C: event 1
+    S-->>C: event 2
+    S-->>C: event 3
+    Note over C,S: SSE — one connection, server to client only, reconnects on its own
+    C->>S: Upgrade to WebSocket
+    S-->>C: 101 Switching Protocols
+    S-->>C: event 1
+    C->>S: client can also send, at any time
+    Note over C,S: WebSocket — full duplex, but stateful and no automatic reconnect
+```
+
 ## Example Code
 
 ```typescript

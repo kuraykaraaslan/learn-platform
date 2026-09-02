@@ -16,6 +16,25 @@ In a single-process Node.js app, the event loop gives you implicit single-thread
 - **PostgreSQL advisory locks**: `pg_advisory_lock(key)` / `pg_advisory_xact_lock(key)` — database-level locks that are ACID and auto-released; prefer for operations within a DB transaction
 - **Lock granularity**: Lock on the specific resource ID, not on the operation type — `lock:tenant:${tenantId}:provision` not `lock:provision`
 
+The lock is only half the mechanism; the TTL is the other half, and the contender's wait is where a wrong TTL shows up. Two workers reaching the same critical section:
+
+```mermaid
+sequenceDiagram
+    participant W1 as Worker 1
+    participant R as Redis
+    participant W2 as Worker 2
+    W1->>R: SET lock:tenant NX PX ttl
+    R-->>W1: OK — acquired
+    W2->>R: SET lock:tenant NX PX ttl
+    R-->>W2: nil — already held
+    Note over W2: Wait and retry, or fail fast — never proceed anyway
+    W1->>W1: critical section
+    W1->>R: DEL lock:tenant, only if still mine
+    W2->>R: SET lock:tenant NX PX ttl
+    R-->>W2: OK — acquired
+    Note over W1,R: If the section outlives the TTL, the lock expires under Worker 1 and both run
+```
+
 ## Example Code
 ```typescript
 // Minimal Redis-based distributed lock (Redlock-compatible single-node)

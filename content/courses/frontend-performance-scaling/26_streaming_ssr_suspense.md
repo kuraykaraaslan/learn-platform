@@ -17,6 +17,26 @@ The mechanism under the hood is HTTP chunked transfer encoding combined with Rea
 - **`generateStaticParams` + streaming** — Static-shell pages that still stream dynamic sections; the best of both worlds
 - **Time-to-first-byte (TTFB) vs largest contentful paint (LCP)** — Streaming improves TTFB dramatically; LCP depends on what you stream first
 
+Where the `await` sits decides which of these two shapes the browser gets. Both fetch the same data and take the same total time; only one of them shows the reader anything while it waits:
+
+```mermaid
+sequenceDiagram
+    participant B as Browser
+    participant S as Server
+    participant D as Data source
+    B->>S: GET /dashboard
+    S->>D: await, at the top of the Server Component
+    D-->>S: rows
+    S-->>B: full HTML, all at once
+    Note over B,S: Blocking — nothing renders until the slowest query returns
+    B->>S: GET /dashboard
+    S-->>B: shell — nav, header, layout, Suspense fallback
+    S->>D: await, inside the suspended component
+    D-->>S: rows
+    S-->>B: streamed chunk replaces the fallback
+    Note over B,S: Streaming — the shell arrives before the query finishes
+```
+
 ## Example Code
 ```tsx
 // app/dashboard/[tenantId]/page.tsx

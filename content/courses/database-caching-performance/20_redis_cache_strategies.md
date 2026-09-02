@@ -19,6 +19,24 @@ For a multi-tenant SaaS, a layered strategy makes sense: session data and tenant
 - **Cache stampede prevention**: Use a distributed lock during cache population so only one request populates the cache while others wait
 - **Cache warming**: Pre-populating the cache at startup or before a deploy to avoid cold-start misses
 
+Cache-aside is two different stories depending on whether the key is there, and the second one is where the thundering herd lives — the bullets name it, this shows the shape that causes it:
+
+```mermaid
+sequenceDiagram
+    participant A as App
+    participant R as Redis
+    participant DB as Database
+    A->>R: GET key
+    R-->>A: hit — value
+    Note over A,R: The cheap path. Nothing else happens.
+    A->>R: GET key
+    R-->>A: miss
+    A->>DB: SELECT ...
+    DB-->>A: rows
+    A->>R: SET key, TTL
+    Note over A,DB: On expiry every concurrent request runs this same miss path at once — the thundering herd
+```
+
 ## Example Code
 ```typescript
 // ─── Cache-aside with thundering herd prevention ───

@@ -14,6 +14,24 @@ Cookie flags matter as much as the auth mechanism itself: `HttpOnly` blocks Java
 - **CSRF vs XSS**: CSRF tricks a browser into sending a *valid* cookie somewhere unintended; XSS runs attacker JS that can read anything the page can — different threats, different mitigations
 - **Login flow**: verify credentials → hash comparison (never compare plaintext) → issue session/token → client stores/sends it on subsequent requests
 
+The two families differ in exactly one place — what the server has to touch to answer "who is this?" — and that one difference is what makes revocation easy on one side and hard on the other:
+
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant S as Server
+    participant St as Session store
+    C->>S: request + opaque cookie id
+    S->>St: look up session id
+    St-->>S: session record
+    S-->>C: response
+    Note over S,St: Session auth — delete the record and the next request is already unauthenticated
+    C->>S: request + signed token
+    S->>S: verify signature, read claims
+    S-->>C: response
+    Note over S: Token auth — no lookup, so nothing to delete. Revocation needs its own mechanism
+```
+
 ## Example Code
 ```typescript
 // Password hashing at signup — never store the plaintext, ever, even temporarily in logs
