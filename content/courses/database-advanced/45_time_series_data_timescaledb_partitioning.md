@@ -18,7 +18,7 @@ The second approach is TimescaleDB, a PostgreSQL extension that wraps the partit
 - **Data retention policy** — Automatically drop partitions/chunks older than a threshold; more efficient than `DELETE WHERE created_at < $threshold`
 
 ## Example Code
-```sql
+```sql run
 -- ─── Option A: Native PostgreSQL range partitioning ──────────────────────
 
 -- Create the parent (partitioned) table
@@ -51,9 +51,28 @@ CREATE TABLE audit_logs_2025_q3
 CREATE INDEX ON audit_logs (tenant_id, created_at);
 CREATE INDEX ON audit_logs (actor_id, created_at);
 
--- Efficient time-range query — only scans Q2 partition
+-- A row every ten days across all three quarters. Routing is automatic: the
+-- value of created_at decides which partition the row lands in.
+INSERT INTO audit_logs (audit_log_id, tenant_id, actor_id, action, created_at)
+SELECT gen_random_uuid(),
+       '11111111-1111-1111-1111-111111111111',
+       gen_random_uuid(),
+       'record.updated',
+       d
+FROM generate_series('2025-01-15'::timestamptz, '2025-09-15', '10 days') AS d;
+
+-- Where each row actually went:
+SELECT tableoid::regclass AS partition, count(*)
+FROM audit_logs GROUP BY 1 ORDER BY 1;
+
+-- Efficient time-range query — only scans Q2 partition. Read the plan: the
+-- scan names audit_logs_2025_q2, and the other two partitions never appear.
+-- (In application code the tenant id is a bound parameter; it is written out
+-- here so the query runs as-is — see lesson 30 on why you would not inline it
+-- for real.)
+EXPLAIN
 SELECT * FROM audit_logs
-WHERE tenant_id = $1
+WHERE tenant_id = '11111111-1111-1111-1111-111111111111'
   AND created_at BETWEEN '2025-04-01' AND '2025-06-30'
 ORDER BY created_at DESC
 LIMIT 50;
