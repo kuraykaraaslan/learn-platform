@@ -80,6 +80,17 @@ jobs:
       # what CI actually sees) that the build succeeds without it. It's only
       # read inside an async function a reader's click triggers at runtime
       # (runtime/webcontainer.client.ts), never during static generation.
+      # The same staleness problem, one level out: numbers written into prose.
+      # docs/phases/README.md's Ölçülen zemin table tells the reader to
+      # re-measure as the corpus changes, and that instruction had not been
+      # followed — it reported 0 mermaid lessons against 17, and 1041
+      # single-sentence Common Mistakes items against 141, a number its own P2
+      # status row three lines above contradicted. This recomputes all 16 rows
+      # of the "Bugün" column from the corpus and fails on any disagreement.
+      # The "P0 zemini" column is deliberately not checked: it is the ground the
+      # phase specs were argued from and must never move.
+      - run: npm run content:stats-check
+
       # Every committed report must equal what its script produces today.
       # The steps above already RUN most of these generators, but none of them
       # compares the result against what is in the repo — so a committed report
