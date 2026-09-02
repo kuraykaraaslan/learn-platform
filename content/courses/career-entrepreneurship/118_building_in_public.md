@@ -7,6 +7,47 @@ This works because authenticity compounds in ways that polish doesn't. A case st
 
 For a solo developer with a multi-tenant SaaS boilerplate, the content already exists. Every architectural decision, every tradeoff, every time you hit a wall and figured it out — those are posts. The question is whether you're extracting them or letting them disappear.
 
+```quiz
+- q: "One post reaching 10,000 people, or fifty posts each reaching 500 of your target clients?"
+  anchor: "Consistency builds trust; virality builds vanity metrics"
+  options:
+    - text: "The 10,000 — reach is reach, and some of them will be buyers"
+      correct: false
+      why: "Reach into the wrong audience is what the lesson files under vanity metrics."
+    - text: "The fifty — consistency builds trust where virality builds vanity metrics"
+      correct: true
+      why: "And those 500 are exactly the target client."
+    - text: "Neither counts without a call to action"
+      correct: false
+      why: "Not the axis this lesson is drawing."
+
+- q: "Which kind of post does the lesson expect to perform better?"
+  anchor: "Failure posts outperform success posts"
+  options:
+    - text: "A launch announcement with the numbers attached"
+      correct: false
+      why: "That is the polished case study — it proves you succeeded once."
+    - text: "What went wrong, and what you learned from it"
+      correct: true
+      why: "It generates more trust and engagement than showing wins."
+    - text: "A tutorial on a popular framework"
+      correct: false
+      why: "Useful, but not the contrast this lesson draws."
+
+- q: "\"I shipped a security feature today.\" How does the lesson rewrite that?"
+  anchor: "gets more engagement than \"I shipped a security feature today.\""
+  options:
+    - text: "Attach a screenshot of the feature working"
+      correct: false
+      why: "Presentation is not what is missing. Specificity is."
+    - text: "Name the thing, the stack, how long it took and the library used"
+      correct: true
+      why: "The lesson's own before-and-after: WebAuthn passkey support, in a Next.js app, in 3 hours, using @simplewebauthn."
+    - text: "Post it as a thread rather than a single message"
+      correct: false
+      why: "Format is not the variable being changed."
+```
+
 ## Key Concepts
 - **Process > outcome**: Share the decisions and reasoning, not just the results. "I chose PostgreSQL row-level security over separate schemas because..." is more valuable than "we launched."
 - **Consistency > virality**: One post that reaches 10,000 people once is less valuable than 50 posts that each reach 500 people who are exactly your target client. Consistency builds trust; virality builds vanity metrics.
@@ -95,3 +136,29 @@ Optional CTA:
 - *Show Your Work* — Austin Kleon: the original short book on building in public (not technical, but directly applicable)
 - *The 1,000 True Fans* — Kevin Kelly (essay): why a small, specific audience beats a large generic one
 - Pieter Levels (@levelsio) on Twitter — the canonical example of building in public for solo developers; study his post format and frequency
+
+```recall
+- q: "What does building in public share, and how does it differ from a case study?"
+  must:
+    - "the work process — decisions, tradeoffs, mistakes and learnings, as you build"
+    - "not after you have succeeded"
+    - "a case study proves you succeeded once"
+    - "a build-in-public record proves you are consistently working, thinking and improving"
+
+- q: "State the process-over-outcome rule with the lesson's own example."
+  must:
+    - "share the decisions and the reasoning, not just the results"
+    - "\"I chose PostgreSQL row-level security over separate schemas because...\""
+    - "is more valuable than \"we launched\""
+
+- q: "Why does content compound in a way client work does not?"
+  must:
+    - "content published six months ago still generates leads"
+    - "client work stops working when the project ends"
+
+- q: "Where does the first content come from?"
+  must:
+    - "your existing work is already content"
+    - "the boilerplate, the ruleset system, each architectural decision"
+    - "these are posts waiting to be written"
+```

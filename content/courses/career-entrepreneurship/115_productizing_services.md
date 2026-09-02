@@ -7,6 +7,47 @@ Your multi-tenant SaaS boilerplate is already the core of a productized service.
 
 The mental shift is from "I sell my time" to "I sell an outcome." The boilerplate is the mechanism that makes the outcome repeatable. The pricing is based on value to the client, not hours you'll spend.
 
+```quiz
+- q: "What actually separates a productized service from custom work?"
+  anchor: "Custom work scales with hours worked. A productized service scales with the process you've built."
+  options:
+    - text: "Productized work is cheaper, so it closes more deals"
+      correct: false
+      why: "Productized services typically command higher prices than hourly work, because they are lower risk for the client."
+    - text: "Custom work scales with hours; a productized service scales with the process"
+      correct: true
+      why: "Fixed scope, fixed price and repeatable delivery, against scoped-from-scratch, priced by time, delivered differently each time."
+    - text: "A productized service has no scope negotiation"
+      correct: false
+      why: "The scope is fixed in advance, which is not the same as absent — and a buffer is still built into it."
+
+- q: "Why does three-tier packaging change the conversation?"
+  anchor: "Creates anchoring — clients compare your tiers instead of your price to competitors"
+  options:
+    - text: "It gives the client a cheap option so they buy something"
+      correct: false
+      why: "The floor is not the point; what the client is comparing is."
+    - text: "Clients compare your tiers against each other rather than your price against competitors"
+      correct: true
+      why: "Starter / Growth / Scale is what creates the anchor."
+    - text: "It shows the full range of what you are able to build"
+      correct: false
+      why: "Displaying capability is not the job the tiers are doing."
+
+- q: "A €3,000/month tool replaces a €50K/year manual process. How is it priced?"
+  anchor: "Price is set by the value delivered to the client, not your cost"
+  options:
+    - text: "80 hours × €50, plus a margin"
+      correct: false
+      why: "That is cost-plus: it prices your effort rather than the client's outcome."
+    - text: "By the value delivered — what the manual process was costing them"
+      correct: true
+      why: "The lesson's own example: the replacement is worth more than the hours it took to build."
+    - text: "At whatever the nearest competitor charges"
+      correct: false
+      why: "Market position matters, but value-based pricing starts from the client's outcome."
+```
+
 ## Key Concepts
 - **Productized service**: Fixed scope + fixed price + documented delivery process. Repeatable.
 - **Custom project**: Unique scope + time-based pricing + custom delivery. Every engagement starts from zero.
@@ -78,3 +119,22 @@ The mental shift is from "I sell my time" to "I sell an outcome." The boilerplat
 - *The Freelancer's Bible* — Sara Horowitz: comprehensive freelance business guide including productizing
 - *Hourly Billing Is Nuts* — Jonathan Stark: short, direct argument for value-based pricing
 - *The Win Without Pitching Manifesto* — Blair Enns: positioning and pricing for technical consultants
+
+```recall
+- q: "Define productized service and custom project, side by side."
+  must:
+    - "productized — fixed scope, fixed price, a documented repeatable delivery process"
+    - "custom — unique scope, time-based pricing, custom delivery"
+    - "custom starts from zero on every engagement"
+
+- q: "What is a scope buffer, and what happens when it goes unused?"
+  must:
+    - "a defined buffer built into fixed-price projects, typically 20-30%"
+    - "it absorbs scope ambiguity"
+    - "unused, it is margin"
+
+- q: "Why do productized services command higher prices than hourly work?"
+  must:
+    - "they are lower risk for the client"
+    - "productized does not mean cheap"
+```

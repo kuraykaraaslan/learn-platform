@@ -7,6 +7,47 @@ The fundamental asymmetry: clients (especially larger ones) have legal teams who
 
 This is especially important for international contracts (Turkish developer, EU or US client), where jurisdiction and governing law become significant.
 
+```quiz
+- q: "What does this lesson say a developer actually needs?"
+  anchor: "You don't need a law degree. You need to understand the 5–6 clauses that actually matter"
+  options:
+    - text: "Enough law to draft your own contracts"
+      correct: false
+      why: "Drafting is not the goal. Identifying the dangerous clauses and negotiating them is."
+    - text: "The five or six clauses that actually matter, and what position to negotiate from"
+      correct: true
+      why: "The middle path between signing terms you do not understand and paying a lawyer for every contract."
+    - text: "A lawyer on retainer for every engagement"
+      correct: false
+      why: "That is the expensive end of the asymmetry the lesson is routing around."
+
+- q: "What is the standard position on a liability cap?"
+  anchor: "Standard position: cap at the total contract value"
+  options:
+    - text: "No cap — asking for one signals you expect to fail"
+      correct: false
+      why: "Without a cap a client could theoretically sue for consequential damages such as lost revenue."
+    - text: "Cap at the total contract value"
+      correct: true
+      why: "It bounds exposure to the size of the engagement itself."
+    - text: "Cap at whatever your professional indemnity insurance covers"
+      correct: false
+      why: "Insurance is a separate question from what the contract itself limits."
+
+- q: "An NDA bars you from using knowledge you developed during the project. What is wrong with it?"
+  anchor: "NDA should cover client's business information, not restrict you from using general skills and knowledge you develop on the project"
+  options:
+    - text: "Nothing — confidentiality clauses look like that"
+      correct: false
+      why: "Confidentiality is standard; a bar on general skills is a different and far wider restriction."
+    - text: "It should cover the client's business information, not general skills and knowledge"
+      correct: true
+      why: "The NDA's scope is one of the clauses worth negotiating rather than signing as drafted."
+    - text: "It is acceptable if the term is limited to two years"
+      correct: false
+      why: "A time limit does not repair a scope that covers what you know how to do."
+```
+
 ## Key Concepts
 - **IP assignment vs license**: Assignment transfers ownership permanently. A license lets the client use the code but you retain ownership. Most clients demand assignment; most contracts grant it implicitly on payment.
 - **Work-for-hire doctrine**: In some jurisdictions (notably US), work created by an independent contractor is owned by the contractor unless explicitly assigned. Get the assignment in writing.
@@ -86,3 +127,29 @@ This is especially important for international contracts (Turkish developer, EU 
 - *The Freelance Contract* — Andy Clarke: practical guide to software development contracts written for practitioners
 - TULIP (Turkish IP law) and KVKK — understand your obligations under Turkish law when processing client data
 - *Getting to Yes* — Fisher & Ury: negotiation principles for contract discussions
+
+```recall
+- q: "Contrast IP assignment with a licence."
+  must:
+    - "assignment transfers ownership permanently"
+    - "a licence lets the client use the code while you retain ownership"
+    - "most clients demand assignment"
+    - "most contracts grant it implicitly on payment"
+
+- q: "What does the work-for-hire doctrine mean for a contractor?"
+  must:
+    - "in some jurisdictions, notably the US, work created by an independent contractor is owned by the contractor"
+    - "unless it is explicitly assigned"
+    - "get the assignment in writing"
+
+- q: "What has to be defined in a termination-for-convenience clause?"
+  must:
+    - "the client can end the contract at any time with X days notice"
+    - "you must be paid for work completed"
+    - "define what \"work completed\" actually means"
+
+- q: "Why do governing law and jurisdiction matter here specifically?"
+  must:
+    - "they set which country's law applies and where disputes are resolved"
+    - "for a Turkish developer with EU or US clients this matters for enforcement"
+```
