@@ -7,6 +7,47 @@ Classification has a direct, practical consequence most teams skip: each data cl
 
 The other half of classification discipline that's routinely skipped is development environment hygiene: real personal, health, financial, or identity data must never appear in a local development database, a staging environment seeded from a production dump, or a bug report screenshot — not "temporarily," not "just this once to debug." The fix is synthetic data generators (Faker.js, Mimesis) or a formal, reviewed anonymized extract process, and if a client or teammate accidentally sends a database dump containing real records, the correct response is to treat it as a potential breach — stop, don't open the file, and follow the incident response process — rather than quietly using it because it's convenient.
 
+```quiz
+- q: "A feature needs to know roughly where a user is. What does classification tell you to collect?"
+  anchor: "The best protection for a sensitive field is not collecting it in the first place"
+  options:
+    - text: "The full address — it can always be truncated later"
+      correct: false
+      why: "Truncating later still means the full address was collected, stored and logged. The protection is in not collecting it."
+    - text: "The city, if the city is enough for the feature"
+      correct: true
+      why: "Classification's output at design time is whether to collect the field at all — city instead of full address is the lesson's own example."
+    - text: "A birthdate, so age checks work from the same field"
+      correct: false
+      why: "That is the lesson's other example of the same mistake: if age verification is the goal, do not store a birthdate."
+
+- q: "Identifiable patient records for a private clinic. Which storage tier?"
+  anchor: "Tier 2 is domestic commercial cloud, required for private health data, fintech, legal, and HR records"
+  options:
+    - text: "Tier 3 — any major commercial cloud region, with a signed DPA"
+      correct: false
+      why: "Tier 3 covers general personal data. Health sits higher, and several jurisdictions mandate domestic-only storage for identifiable patient records."
+    - text: "Tier 2 — domestic commercial cloud"
+      correct: true
+      why: "Alongside fintech, legal and HR records. Public-sector health goes further still, to Tier 1."
+    - text: "Tier 4 — CDN edge, because reads have to be fast"
+      correct: false
+      why: "Tier 4 is public assets with no restriction. Nothing personal belongs there, whatever the performance argument."
+
+- q: "A client emails you a production database dump so you can debug a report. What do you do with it?"
+  anchor: "the correct response is to treat it as a potential breach — stop, don't open the file, and follow the incident response process"
+  options:
+    - text: "Use it once and delete it — it is faster than building fixtures"
+      correct: false
+      why: "\"Just this once\" is the exact framing the lesson rules out, alongside \"temporarily\"."
+    - text: "Treat it as a potential breach: stop, do not open it, follow the incident response process"
+      correct: true
+      why: "Real personal data must never reach a local database, a staging seed, or a bug report screenshot."
+    - text: "Anonymize it locally first, then work from the anonymized copy"
+      correct: false
+      why: "Anonymizing means opening it. A reviewed anonymized extract is a process that runs before the data leaves production, not after it lands in your inbox."
+```
+
 ## Key Concepts
 - **Data classification tiers**: Public, Internal, Personal, Sensitive Personal, Financial/Payment, Credentials/Secrets, Uploaded Files, Logs/Telemetry — each with a distinct minimum handling rule
 - **Minimization question set**: why do we need this field, who uses it, how long do we keep it, can we derive it instead of storing it, can we store a less sensitive version — asked before adding any field, not after
@@ -87,3 +128,34 @@ function assertTierCompliance(field: FieldClassification, actualTier: number): v
 - [NIST SP 800-60 — Guide for Mapping Types of Information to Security Categories](https://csrc.nist.gov/pubs/sp/800/60/v1/r1/final) — a formal framework for the classification exercise
 - [ICO — Data Minimisation Guidance](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-protection-principles/a-guide-to-the-data-protection-principles/the-principles/data-minimisation/)
 - [Faker.js](https://fakerjs.dev/) — widely used synthetic data generator for development/test fixtures
+
+```recall
+- q: "Name the data classes."
+  must:
+    - "Public and Internal"
+    - "Personal and Sensitive Personal"
+    - "Financial/Payment"
+    - "Credentials/Secrets"
+    - "Uploaded Files"
+    - "Logs/Telemetry"
+
+- q: "Give the storage tiers and what each one is for."
+  must:
+    - "Tier 4 — CDN/edge, public assets, no restriction"
+    - "Tier 3 — any major commercial cloud region, general personal data with a signed data processing agreement"
+    - "Tier 2 — domestic commercial cloud, for private health, fintech, legal and HR records"
+    - "Tier 1 — sovereign or government cloud, public-sector health and national-security-adjacent work"
+    - "credentials and secrets get no tier exception — encrypted at rest regardless"
+
+- q: "How does classification differ from a retention or deletion pipeline?"
+  must:
+    - "retention handles what happens to data a user already gave you"
+    - "classification happens earlier, at design time"
+    - "its output is a decision about whether to collect the field at all"
+
+- q: "State the development-environment rule and its remedy."
+  must:
+    - "real personal, health, financial or identity data never appears in a local database, a staging environment seeded from production, or a bug report screenshot"
+    - "not temporarily, not just this once"
+    - "use synthetic data generators (Faker.js, Mimesis) or a formal, reviewed anonymized extract"
+```

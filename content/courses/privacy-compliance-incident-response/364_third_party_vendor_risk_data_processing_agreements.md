@@ -7,6 +7,47 @@ The inventory itself is the artifact: for every vendor, record its purpose, exac
 
 Two vendor categories carry rules specific enough to call out on their own. AI providers should never receive personal, sensitive, or client-confidential data unless that data flow was explicitly scoped and approved — prompts should be minimized, secrets and tokens kept out of them entirely, AI request logging handled carefully or disabled for sensitive paths, and outputs labeled as advisory rather than authoritative. Payment providers should be handled through redirect or hosted-checkout flows, or a tokenizing provider, rather than the system touching raw card data directly; a client who wants to store and process card numbers in a custom application is asking for a specialized compliance project (PCI DSS scope), not a checkbox to tick during a normal build. The account-ownership problem shows up specifically at handover: production vendor accounts should end up owned by the client, not left under a freelancer's personal login with no maintenance agreement, and any API key touched during the engagement should be rotated when ownership changes hands — an unrotated key under someone else's account is a standing access risk that outlives the contract.
 
+```quiz
+- q: "Who decides whether a DPA is required for a new vendor?"
+  anchor: "belongs to the client or their legal advisor, not to the engineer wiring up the integration"
+  options:
+    - text: "The engineer, who knows exactly what the integration sends"
+      correct: false
+      why: "Knowing what data leaves is the engineer's job. Deciding the legal requirement is not."
+    - text: "The client or their legal advisor"
+      correct: true
+      why: "The engineer answers the factual questions feeding that decision — what leaves, whether it is personal, where it is processed."
+    - text: "The vendor, since they are the ones who publish a DPA"
+      correct: false
+      why: "A vendor offering a DPA does not settle whether your use of them requires one."
+
+- q: "What makes the vendor inventory an artifact rather than a list of names?"
+  anchor: "record its purpose, exactly what data is shared with it, which environment uses it, who owns its API keys/secrets, who owns the account"
+  options:
+    - text: "That it is versioned in the repository alongside the code"
+      correct: false
+      why: "Where it lives is not what makes it useful."
+    - text: "Each entry records purpose, data shared, environment, key and account ownership, region, DPA need, blast radius and exit strategy"
+      correct: true
+      why: "Those fields are what let the inventory answer a question rather than just enumerate vendors."
+    - text: "That it lists only the vendors that touch personal data"
+      correct: false
+      why: "Every third party the system talks to extends its boundary, whether or not anyone wrote that down."
+
+- q: "Why is the data-residency field on each vendor entry not decorative?"
+  anchor: "applied to every place data leaves the system's own infrastructure"
+  options:
+    - text: "Because latency depends on which region serves the request"
+      correct: false
+      why: "A real concern, and not this one."
+    - text: "It is the storage-tier question from data classification, applied wherever data leaves your own infrastructure"
+      correct: true
+      why: "The same tier requirement does not stop at the edge of your own systems."
+    - text: "Because vendors move regions without telling anyone"
+      correct: false
+      why: "They can, which is a reason to record it — but the reason it matters is the tier requirement itself."
+```
+
 ## Key Concepts
 - **Vendor inventory fields**: provider, purpose, data shared, environment, secrets owner, account owner, data residency (country + cloud region), DPA/contract status, failure impact, exit strategy
 - **Pre-integration question set**: what data leaves the system, is it personal/sensitive, does the vendor train on or reuse it, where is it processed, does the client need to approve it, is a DPA required
@@ -62,3 +103,29 @@ Two vendor categories carry rules specific enough to call out on their own. AI p
 - [GDPR Article 28 — Processor Obligations](https://gdpr-info.eu/art-28-gdpr/) — the legal basis for requiring a DPA with any data processor
 - [PCI Security Standards Council](https://www.pcisecuritystandards.org/) — the compliance framework triggered by direct card-data storage or processing
 - Course #359 — *Privacy by Design — Process, Artifacts & Multi-Jurisdiction Legal Basis* (the data flow map this inventory feeds into)
+
+```recall
+- q: "What does each vendor inventory entry record?"
+  must:
+    - "its purpose, and exactly what data is shared with it"
+    - "which environment uses it"
+    - "who owns its API keys and secrets, and who owns the account"
+    - "which country and cloud region the data is processed or stored in"
+    - "whether a DPA or contract is needed"
+    - "what breaks if the vendor goes down, and the replacement or exit strategy"
+
+- q: "Give the questions answered before any vendor is integrated."
+  must:
+    - "what data leaves the system"
+    - "does it include personal or sensitive data"
+    - "does the vendor train on or reuse that data"
+    - "where is it processed"
+    - "can the client approve this vendor"
+    - "is a DPA required — and that legal answer belongs to the client or their advisor"
+
+- q: "Why does every third party count, not just the obviously sensitive ones?"
+  must:
+    - "every provider the system talks to extends its own security and privacy boundary"
+    - "whether or not anyone wrote that down"
+    - "hosting, managed database, object storage, email, SMS, payment, analytics, error monitoring, an AI API, CRM or helpdesk, CDN/DNS"
+```

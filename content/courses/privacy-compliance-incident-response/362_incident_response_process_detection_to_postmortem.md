@@ -7,6 +7,47 @@ The response flow is a fixed sequence: detect, preserve evidence, contain, asses
 
 Evidence preservation itself has a concrete checklist: logs, audit records, provider alerts, screenshots, timestamps, affected user or resource IDs, configuration snapshots, and commit/deploy history around the incident window. Communication during an active incident follows a specific, deliberately narrow pattern — what we know, what we don't know yet, what containment has already happened, what impact is suspected, what's needed from anyone else, and what happens next — because speculating publicly about scope or cause before the facts are confirmed routinely turns out to be wrong and has to be walked back. A handful of actions are flatly forbidden regardless of pressure: never delete logs to hide an error, never notify users before the facts are known unless legally required to move faster, never draw legal conclusions ("this was not a breach") without an actual investigation, and never keep using a secret that's known to be exposed while "confirming" whether it was actually misused.
 
+```quiz
+- q: "You find a compromised file and your instinct is to delete it. Why does evidence preservation come before containment?"
+  anchor: "can destroy the exact logs, timestamps, and snapshots needed to later determine scope"
+  options:
+    - text: "It does not — containment is first, since the exposure is still growing"
+      correct: false
+      why: "The sequence is detect, preserve evidence, then contain. Preservation sits second deliberately."
+    - text: "Fixing immediately can destroy the logs, timestamps and snapshots needed to determine scope"
+      correct: true
+      why: "And scope determination is what a breach-notification decision depends on."
+    - text: "Because the file may be needed to restore service later"
+      correct: false
+      why: "Recovery is a later step, and it is not the reason preservation precedes containment."
+
+- q: "Which single question on the first-hour checklist starts a separate clock?"
+  anchor: "because that single question is what triggers the separate breach-notification clock"
+  options:
+    - text: "Is the incident real?"
+      correct: false
+      why: "First on the checklist, but it starts nothing — it only decides whether the rest runs."
+    - text: "Might personal data be involved?"
+      correct: true
+      why: "It triggers the breach-notification clock, which runs separately from the technical response."
+    - text: "Who is the decision owner?"
+      correct: false
+      why: "On the checklist and necessary, but notification timing does not hang on it."
+
+- q: "How does this differ from a blameless post-mortem?"
+  anchor: "This lesson covers what happens *before* that retrospective is written"
+  options:
+    - text: "It replaces it — a security incident does not get a retrospective"
+      correct: false
+      why: "It does get one. The post-mortem covers the retrospective for any significant failure; this is what happens before it is written."
+    - text: "It is the time-pressured first response, where the first hour decides whether evidence survives"
+      correct: true
+      why: "And whether the exposure gets worse in the meantime."
+    - text: "It applies only when the site is actually down"
+      correct: false
+      why: "The incident list is deliberately broader — account takeover, an exposed bucket, secrets in a repository, a third-party compromise."
+```
+
 ## Key Concepts
 - **Incident types beyond outages**: unauthorized admin access, account takeover, data export/leak, public bucket exposure, secrets exposure, third-party compromise — a broader category than a downtime incident
 - **Response flow**: detect → preserve evidence → contain → assess impact → eradicate → recover → communicate → support legal/privacy assessment → document lessons learned
@@ -84,3 +125,32 @@ Use only this pattern — no speculation beyond it:
 - [NIST SP 800-61 Rev. 2 — Computer Security Incident Handling Guide](https://csrc.nist.gov/pubs/sp/800/61/r2/final)
 - [SANS Incident Handler's Handbook](https://www.sans.org/white-papers/33901/)
 - Course #79 — *Blameless Post-Mortem — Writing and Running One* (the retrospective process this runbook feeds into)
+
+```recall
+- q: "Give the response flow in order."
+  must:
+    - "detect"
+    - "preserve evidence"
+    - "contain"
+    - "assess impact"
+    - "eradicate the root cause"
+    - "recover service and data, communicate to stakeholders, support a legal/privacy assessment, document lessons learned"
+
+- q: "Run the first-hour checklist from memory."
+  must:
+    - "confirm the incident is real, capture timestamps and symptoms"
+    - "avoid deleting anything"
+    - "restrict the compromised account or rotate the exposed secret"
+    - "block the affected endpoint or feature if needed"
+    - "check logs for scope and notify the decision owner"
+    - "ask specifically whether personal data may be involved"
+
+- q: "Name incidents in this category beyond \"the site is down\"."
+  must:
+    - "unauthorized admin access and account takeover"
+    - "a data export or leak, a public storage bucket exposure"
+    - "lost or deleted data, upload or malware abuse"
+    - "payment or webhook manipulation"
+    - "secrets committed or exposed in a repository"
+    - "third-party provider compromise"
+```

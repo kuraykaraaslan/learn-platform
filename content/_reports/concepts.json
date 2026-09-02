@@ -337,7 +337,7 @@
         "process-soft-skills/77_technical_debt_prioritization.md",
         "security/40_supply_chain_security_lockfile_integrity.md"
       ],
-      "rawOccurrences": 11
+      "rawOccurrences": 12
     },
     {
       "slug": "bounded-context",

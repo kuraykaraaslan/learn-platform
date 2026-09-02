@@ -3118,12 +3118,12 @@
       },
       "358_data_classification_storage_residency_tiers.md": {
         "title": "e5b8d246aa903400",
-        "whatItIs": "4164ebc0a0304971",
+        "whatItIs": "f087d47009b9e51a",
         "keyConcepts": "700a386aceb11b6a",
         "exampleCode": "d011403558f0bf53",
         "whenToUse": "7284199c2bde9e49",
         "commonMistakes": "3c7ddd8cfcafc616",
-        "furtherReading": "4e50f06dc9318e15"
+        "furtherReading": "c5bcc8e82c16072b"
       },
       "359_privacy_by_design_process_multi_jurisdiction_basis.md": {
         "title": "3b6c8eeb3e9a8b91",
@@ -3136,30 +3136,30 @@
       },
       "360_cookie_consent_tracking_governance.md": {
         "title": "dc11465057a67a1e",
-        "whatItIs": "97b1b818db8926a2",
+        "whatItIs": "934e45d15b45c3cc",
         "keyConcepts": "70cc67aae35cc810",
         "exampleCode": "83f2f307e59997ef",
         "whenToUse": "bf94f081f1688f09",
         "commonMistakes": "62bc68f4b293fd35",
-        "furtherReading": "b283d8bf8ec14443"
+        "furtherReading": "76d775933d81464c"
       },
       "361_vulnerability_management_lifecycle_patch_slas.md": {
         "title": "5eebe761dab33301",
-        "whatItIs": "07fe434406fb5423",
+        "whatItIs": "ba5914a43be0620b",
         "keyConcepts": "23b8a7c12b1dd0c0",
         "exampleCode": "95086687c4e3cebf",
         "whenToUse": "d06cccdc77c9411d",
         "commonMistakes": "ef553db7debf0e0f",
-        "furtherReading": "ccc892d07f0c6304"
+        "furtherReading": "b818fd3f971abca9"
       },
       "362_incident_response_process_detection_to_postmortem.md": {
         "title": "a6e8315ccc9c22ca",
-        "whatItIs": "bf6cd40769845d71",
+        "whatItIs": "6bcf3c3698556a91",
         "keyConcepts": "ba0d2b5156efaca4",
         "exampleCode": "9a35f8270dd02586",
         "whenToUse": "47321757b26226d8",
         "commonMistakes": "a4c2ae5bdbedaf72",
-        "furtherReading": "89d9481b9901de47"
+        "furtherReading": "8544f711d6c50f94"
       },
       "363_breach_notification_requirements_across_jurisdictions.md": {
         "title": "b67ef49e3ffc6271",
@@ -3172,12 +3172,12 @@
       },
       "364_third_party_vendor_risk_data_processing_agreements.md": {
         "title": "d2a320e4807bc9ca",
-        "whatItIs": "7052e16fac93b6f7",
+        "whatItIs": "b50cf7d66005defc",
         "keyConcepts": "0bef08124fa27663",
         "exampleCode": "3661eb1dd5671c82",
         "whenToUse": "92d8f34f38611e52",
         "commonMistakes": "4ff3c875f0d904d3",
-        "furtherReading": "afb7a008e054a39b"
+        "furtherReading": "0d1eab2e70466bc4"
       },
       "365_childrens_data_compliance_age_verification_parental_consent.md": {
         "title": "76efb372cfe877e3",

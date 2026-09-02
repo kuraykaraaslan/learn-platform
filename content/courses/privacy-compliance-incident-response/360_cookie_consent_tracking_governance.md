@@ -7,6 +7,47 @@ The jurisdictions differ sharply on the consent *model*, and this is the detail 
 
 Analytics minimization is a second layer on top of consent: even with valid consent, prefer configurations that don't store full IP addresses, don't record sensitive form field values, and disable session replay on authenticated or otherwise sensitive pages by default — consent to be tracked is not the same as consent to have every keystroke on a billing page recorded. A useful edge case worth knowing: some edge-level analytics providers (Cloudflare Analytics is the common example) collect aggregate traffic data with no cookies and no personal-data storage under most interpretations, and are treated as acceptable without a consent banner in most jurisdictions — a genuinely different category from Google Analytics 4, which requires a consent banner in the EU/UK/Turkey regardless of IP-anonymization settings.
 
+```quiz
+- q: "Your banner shows a bright \"Accept all\" button with \"Reject\" as a text link beneath it. Does that satisfy the EU/UK/Turkey model?"
+  anchor: "a banner that makes \"Accept\" a bright button and hides \"Reject\" in a text link fails this even if a reject option technically exists"
+  options:
+    - text: "Yes — a reject option exists, which is what the rule asks for"
+      correct: false
+      why: "The requirement is equal visual prominence, not mere existence."
+    - text: "No — \"Reject all\" needs the same visual prominence as \"Accept all\""
+      correct: true
+      why: "Enforced explicitly by the CJEU in Planet49 and by the UK's ICO."
+    - text: "Yes, as long as the reject link sits above the fold"
+      correct: false
+      why: "Position is not prominence. The two controls have to look equally available."
+
+- q: "Which category is allowed to load before any consent decision?"
+  anchor: "strictly necessary (session cookies, CSRF tokens — allowed without consent because the app cannot function without them)"
+  options:
+    - text: "Analytics — page views are not personally identifying"
+      correct: false
+      why: "Analytics usually requires a consent decision depending on jurisdiction; it is not in the necessary category."
+    - text: "Strictly necessary — session cookies and CSRF tokens"
+      correct: true
+      why: "Allowed without consent precisely because the app cannot function without them."
+    - text: "Third-party embeds, since the data goes to the embedder rather than you"
+      correct: false
+      why: "That makes it worse, not exempt: embedding someone else's script means their tracking rides along, and each embed needs its own data-sharing assessment."
+
+- q: "What does California require that most implementations skip?"
+  anchor: "requires detecting and honoring the Global Privacy Control browser signal as a valid opt-out"
+  options:
+    - text: "An opt-in banner matching the EU model"
+      correct: false
+      why: "The US runs the opposite model — no federal opt-in requirement; California requires an opt-out mechanism instead."
+    - text: "Detecting and honouring the Global Privacy Control browser signal"
+      correct: true
+      why: "Skipped because it happens silently in the browser rather than through a visible UI action."
+    - text: "A cookie policy page listing every vendor by name"
+      correct: false
+      why: "Useful, but not the requirement this lesson names as the commonly-missed one."
+```
+
 ## Key Concepts
 - **Cookie/tracking categories**: strictly necessary, functional, analytics, marketing, third-party embedded — each with a different default consent requirement
 - **Opt-in vs. opt-out models**: EU/UK/TR require opt-in (script doesn't fire until consent given); US state laws (CCPA/CPRA and similar) use opt-out via a "Do Not Sell" mechanism
@@ -92,3 +133,26 @@ document.getElementById("accept-all")?.addEventListener("click", () =>
 - [ICO — Guidance on the Use of Cookies and Similar Technologies](https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guide-to-pecr/cookies-and-similar-technologies/)
 - [CJEU — Planet49 Judgment (C-673/17)](https://curia.europa.eu/juris/liste.jsf?num=C-673/17) — the ruling establishing that pre-ticked consent boxes are invalid under EU law
 - [Global Privacy Control — globalprivacycontrol.org](https://globalprivacycontrol.org/) — the technical specification California requires sites to honor
+
+```recall
+- q: "Name the tracking categories and each one's default."
+  must:
+    - "strictly necessary — session cookies, CSRF tokens, allowed without consent"
+    - "functional — UI preferences, generally documented rather than gated"
+    - "analytics — page views, heatmaps, usually needs a consent decision"
+    - "marketing — ad pixels, retargeting, explicit opt-in almost everywhere"
+    - "third-party embeds — maps, video, chat, each needing its own data-sharing assessment"
+
+- q: "Contrast the two consent models."
+  must:
+    - "EU, UK and Turkey — opt-in: the script must not fire until the user actively agrees"
+    - "plus a Reject all button with the same visual prominence as Accept all"
+    - "the US — no federal opt-in requirement"
+    - "California and a growing list of states require an opt-out mechanism, a \"Do Not Sell or Share My Personal Information\" link"
+
+- q: "Why is the risk not really about cookies as a technology?"
+  must:
+    - "it is about what a script does once it loads"
+    - "what data it collects, and whether it identifies a person"
+    - "whether that person had a genuine choice before it ran"
+```
