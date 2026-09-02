@@ -21,6 +21,8 @@ import { listCourseSlugs, readCourseManifest, readLessonMarkdown } from '../modu
 import { listFences } from '../modules/course_content/course_content.fences';
 import { splitLessonSections } from '../modules/course_content/course_content.parser';
 import { parseMistakes } from '../modules/course_content/course_content.mistakes';
+import { parseFenceMeta } from '../modules/course_content/course_content.fence-meta';
+import { looksLikeDiff } from '../modules/course_content/course_content.diff';
 
 const README = path.join(process.cwd(), 'docs', 'phases', 'README.md');
 const checkMode = process.argv.includes('--check');
@@ -90,11 +92,34 @@ const measured: Record<string, string> = {
   'Mermaid kullanan ders': String(lessonsWith('mermaid')),
 };
 
+// The widget table is the same kind of claim in the same file, and it had gone
+// stale inside a single session: three sql fences were marked runnable after
+// the table was written, so `run` read 25/17 against an actual 28/20. Keyed on
+// the widget label, checking both columns.
+const isRun = (f: (typeof fences)[number]) => parseFenceMeta(f.meta).run;
+const countBy = (p: (f: (typeof fences)[number]) => boolean) => fences.filter(p).length;
+const lessonsBy = (p: (f: (typeof fences)[number]) => boolean) =>
+  new Set(fences.filter(p).map((f) => `${f.courseSlug}/${f.file}`)).size;
+
+const widgets: Record<string, [string, string]> = {};
+for (const w of ['quiz', 'recall', 'mermaid', 'tradeoff', 'calc', 'proof'])
+  widgets[`\`${w}\``] = [String(lang(w)), String(lessonsWith(w))];
+widgets['`run` (toplam)'] = [String(countBy(isRun)), String(lessonsBy(isRun))];
+widgets['— `sql run`'] = [String(countBy((f) => isRun(f) && f.lang === 'sql')), ''];
+widgets['— JS/TS `run`'] = [
+  String(countBy((f) => isRun(f) && f.lang !== 'sql' && !parseFenceMeta(f.meta).project)),
+  '',
+];
+widgets['— `run project`'] = [String(countBy((f) => isRun(f) && parseFenceMeta(f.meta).project)), ''];
+widgets['`diff`'] = [String(countBy((f) => looksLikeDiff(f.code))), String(lessonsBy((f) => looksLikeDiff(f.code)))];
+
 const documented = new Map<string, string>();
+const documentedWidgets = new Map<string, [string, string]>();
 for (const line of fs.readFileSync(README, 'utf-8').split('\n')) {
   const cells = line.split('|').map((c) => c.trim());
   if (cells.length !== 5) continue; // "", label, baseline, today, ""
   documented.set(cells[1], cells[3]);
+  documentedWidgets.set(cells[1], [cells[2], cells[3]]);
 }
 
 let bad = 0;
@@ -105,7 +130,18 @@ for (const [label, value] of Object.entries(measured)) {
   if (!checkMode) console.log(`ok       ${label.padEnd(38)} ${value}`);
 }
 
-console.log(`\n${Object.keys(measured).length} rows checked · ${bad} disagree`);
+for (const [label, [fenceCount, lessonCount]] of Object.entries(widgets)) {
+  const doc = documentedWidgets.get(label);
+  if (doc === undefined) { console.error(`MISSING  widget row "${label}"`); bad++; continue; }
+  if (doc[0] !== fenceCount || doc[1] !== lessonCount) {
+    console.error(`STALE    widget "${label}"  documented ${doc[0]}/${doc[1] || '-'}  ·  measured ${fenceCount}/${lessonCount || '-'}`);
+    bad++;
+    continue;
+  }
+  if (!checkMode) console.log(`ok       ${label.padEnd(38)} ${fenceCount}${lessonCount ? ' / ' + lessonCount : ''}`);
+}
+
+console.log(`\n${Object.keys(measured).length + Object.keys(widgets).length} rows checked · ${bad} disagree`);
 if (bad > 0) {
   console.error("docs/phases/README.md's Bugün column no longer matches the corpus. Update it — the P0 zemini column must not move.");
   process.exit(1);

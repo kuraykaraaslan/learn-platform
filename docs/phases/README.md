@@ -90,8 +90,8 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 | `tradeoff` | 13 | 13 |
 | `calc` | 13 | 13 |
 | `proof` | 12 | 12 |
-| `run` (toplam) | 25 | 17 |
-| — `sql run` | 14 | |
+| `run` (toplam) | 28 | 20 |
+| — `sql run` | 17 | |
 | — JS/TS `run` | 8 | |
 | — `run project` | 3 | |
 | `diff` | 2 | 2 |
