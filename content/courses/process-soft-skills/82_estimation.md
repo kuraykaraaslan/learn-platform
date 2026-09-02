@@ -7,6 +7,47 @@ Confidence intervals are the formal version of this. Instead of "this will take 
 
 Story points, used in Scrum, are a relative sizing system (this feature is "twice as complex as that feature") that requires velocity calibration across sprints to convert to time. As a solo developer, you do not have sprints and velocity data — and even for teams, story points are frequently misused as time estimates rather than complexity proxies. The confidence interval approach is more honest, more communicable to clients (who do not understand story points), and more useful for project planning. The key tool is the three-point estimate (optimistic, most likely, pessimistic) combined with the PERT formula to produce an expected value with an implicit confidence range.
 
+```quiz
+- q: "A three-point estimate of 2 / 5 / 20 days. What does PERT expect?"
+  anchor: "`Expected = (O + 4M + P) / 6`"
+  options:
+    - text: "9 days — the plain average of the three points"
+      correct: false
+      why: "The plain average is 9. PERT weights the most likely case four times, which pulls the expectation down to 7."
+    - text: "7 days — (2 + 4×5 + 20) / 6"
+      correct: true
+      why: "That 4× weight on the most likely case is what separates PERT from a simple average."
+    - text: "5 days — the most likely case is the estimate"
+      correct: false
+      why: "That discards the spread entirely, which is what the optimistic and pessimistic points exist to capture."
+
+- q: "Your actuals keep landing beyond your pessimistic estimate. What does that tell you?"
+  anchor: "if your actuals frequently exceed your pessimistic estimate, your pessimistic estimates are not pessimistic enough"
+  options:
+    - text: "The work is genuinely unpredictable and the method does not fit it"
+      correct: false
+      why: "It is a calibration signal, not a verdict on the method."
+    - text: "Your pessimistic estimates are not pessimistic enough"
+      correct: true
+      why: "Which is why the three-point estimates and the actual outcomes get logged in the first place."
+    - text: "The optimistic case needs raising"
+      correct: false
+      why: "The optimistic point is not the one your actuals are exceeding."
+
+- q: "A client asks when it will be done and you give a number. What have you just given them?"
+  anchor: "An estimate is a prediction; a commitment is a promise; confusing them is the primary cause of strained client relationships"
+  options:
+    - text: "A commitment — any date given to a client is a promise"
+      correct: false
+      why: "It becomes one if you do not say otherwise, which is precisely the confusion the lesson names."
+    - text: "Whichever you said it was — a prediction and a promise are different things, and the difference has to be said out loud"
+      correct: true
+      why: "Confusing them is named as the primary cause of strained client relationships."
+    - text: "An estimate, since nothing was signed"
+      correct: false
+      why: "The absence of a contract does not stop the client hearing a promise."
+```
+
 ## Key Concepts
 - **Three-point estimate**: Optimistic (O), Most Likely (M), Pessimistic (P) — three scenarios for the same task
 - **PERT formula**: `Expected = (O + 4M + P) / 6` — the weighted average; weights the most likely case 4x
@@ -119,3 +160,21 @@ console.log(
 - **"Software Estimation: Demystifying the Black Art" — Steve McConnell** — The most comprehensive treatment of software estimation as a discipline; includes the PERT model, cone of uncertainty, and calibration tracking in detail
 - **"How to Measure Anything" — Douglas Hubbard** — The case for calibrated confidence intervals in business decision-making; Chapter 3 covers how to train yourself to make accurate probabilistic estimates
 - **"The Planning Fallacy" — Daniel Kahneman (Thinking, Fast and Slow, Chapter 23)** — The psychological explanation for why single-point estimates are systematically optimistic and how to correct for it using reference class forecasting
+
+```recall
+- q: "Give the three formulas."
+  must:
+    - "Expected = (O + 4M + P) / 6"
+    - "SD = (P − O) / 6"
+    - "90% confidence interval = Expected ± 1.645 × SD"
+
+- q: "What is the cone of uncertainty, and what does it oblige you to say?"
+  must:
+    - "estimates made at project start carry 4× wider uncertainty than estimates made after design is complete"
+    - "communicate which phase you are in"
+
+- q: "How is estimation accuracy tracked, and what does the tracking tell you?"
+  must:
+    - "log the three-point estimates against the actual outcomes"
+    - "if actuals frequently exceed the pessimistic estimate, the pessimistic estimates are not pessimistic enough"
+```

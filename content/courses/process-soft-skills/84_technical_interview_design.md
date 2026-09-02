@@ -7,6 +7,47 @@ Most self-designed technical interviews fail for one of two reasons: they test t
 
 For a solo developer hiring a first contractor or full-time developer, the interview should be designed around the actual work the candidate will do, at the actual level of complexity they will encounter. This means: look at your codebase, pick three representative problems, design a home exercise or pair programming session around them, and build a rubric that lets you score the response consistently. The rubric is the differentiator — it separates "I liked them" from "they demonstrated X, Y, and Z at level N."
 
+```quiz
+- q: "Algorithm puzzle, or work sample?"
+  anchor: "predicts job performance 3× better than algorithm puzzles"
+  options:
+    - text: "The algorithm puzzle — standardized, and easy to compare across candidates"
+      correct: false
+      why: "Comparability is what the structured format provides. Predictiveness is a different property."
+    - text: "The work sample — a simplified version of actual work from your codebase"
+      correct: true
+      why: "The most predictive format there is, at roughly 3× the puzzle."
+    - text: "Both, weighted equally"
+      correct: false
+      why: "Equal weight spends half the signal budget on the weaker predictor."
+
+- q: "\"How would you implement X?\" or \"here is a broken X — what is wrong with it?\""
+  anchor: "diagnosis reveals judgment better than synthesis under artificial conditions"
+  options:
+    - text: "The first — it shows how the candidate thinks from scratch"
+      correct: false
+      why: "Synthesis under artificial conditions is exactly the setting the lesson says reveals less."
+    - text: "The second — diagnosis reveals judgement better"
+      correct: true
+      why: "A broken implementation gives the candidate something real to reason about."
+    - text: "Neither is better; it depends on the seniority of the role"
+      correct: false
+      why: "The lesson states the ranking without a seniority carve-out."
+
+- q: "Why should the person asking a question not also score it in real time?"
+  anchor: "scoring while asking reduces question quality"
+  options:
+    - text: "Because it biases the score toward first impressions"
+      correct: false
+      why: "A real risk, but not the reason given here."
+    - text: "Because scoring while asking degrades the questions themselves"
+      correct: true
+      why: "Separating the roles keeps the interviewer's attention on the question being asked."
+    - text: "Because two independent scores are more reliable than one"
+      correct: false
+      why: "That is an argument for multiple scorers, not for splitting the two roles."
+```
+
 ## Key Concepts
 - **Job task analysis**: Start by listing the 5 most common tasks the hire will do; design your interview to sample those tasks directly
 - **Work sample test**: The most predictive interview format — give the candidate a simplified version of actual work from your codebase; predicts job performance 3× better than algorithm puzzles
@@ -123,3 +164,27 @@ in the first 90 days]
 - **"Work Rules!" — Laszlo Bock (Google's former SVP of People Operations)** — Includes Google's research on what actually predicts job performance versus what interviews typically measure; the chapter on structured interviews is directly applicable
 - **"The Effective Hiring Manager" — Mark Horstman** — Practical guide to designing work sample tests and evaluation rubrics for technical and non-technical roles
 - **"Hiring Engineers" — Gergely Orosz (Pragmatic Engineer)** — Industry-level breakdown of how top engineering teams design interviews, with worked examples from companies whose bar you can calibrate against
+
+```recall
+- q: "Where does interview design start?"
+  must:
+    - "job task analysis — list the 5 most common tasks the hire will do"
+    - "design the interview to sample those tasks directly"
+
+- q: "What makes an interview structured, and what does that buy?"
+  must:
+    - "all candidates get the same questions in the same order"
+    - "it reduces bias"
+    - "it makes comparisons valid"
+
+- q: "What is an evaluation rubric, and what does it prevent?"
+  must:
+    - "a scoring guide with specific observable behaviors at each level, 1-4 or 1-5"
+    - "it prevents \"vibe\" decisions"
+
+- q: "Distinguish red flags from yellow flags."
+  must:
+    - "a red flag is an absolute disqualifier"
+    - "a yellow flag is an area to probe further, not an automatic disqualifier"
+    - "the distinction prevents over-indexing on one weak answer"
+```

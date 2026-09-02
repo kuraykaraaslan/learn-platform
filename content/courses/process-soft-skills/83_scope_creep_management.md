@@ -7,6 +7,47 @@ The formal change request process exists to prevent this without damaging the cl
 
 "Saying no with alternatives" is the advanced skill on top of the process. A client who hears "that is out of scope" feels rejected. A client who hears "that is out of scope for this contract, here are your three options for how to add it" feels served. The alternatives give the client agency and transform the conversation from an adversarial one (developer protecting budget) to a collaborative one (developer helping client decide how to invest). Your existing rules cover the formal process; this entry gives you the exact language, the edge cases, and the decision framework for when a small change is worth absorbing versus escalating to a formal CR.
 
+```quiz
+- q: "A client reports that something is broken. Bug, or change request?"
+  anchor: "A bug is when delivered work does not meet the agreed specification; a CR is when the client wants something different from or in addition to the specification"
+  options:
+    - text: "A bug — the client is reporting a defect"
+      correct: false
+      why: "The client's label is not the test. The agreed specification is."
+    - text: "Whichever the specification says: a bug fails the agreed spec, a CR asks for something different or additional"
+      correct: true
+      why: "And that distinction has to be clear in writing, not just understood."
+    - text: "A bug if it is quick to fix, a CR if it is not"
+      correct: false
+      why: "Effort is not the classifier."
+
+- q: "A client adds scope verbally during a call. What do you do?"
+  anchor: "acknowledge it and commit to documenting it — never start work based on verbal additions alone"
+  options:
+    - text: "Start on it — the conversation was clear enough"
+      correct: false
+      why: "Never start work on a verbal addition alone."
+    - text: "Acknowledge it, and commit to documenting it"
+      correct: true
+      why: "The CR log is what prevents \"but I mentioned that in the kickoff\" months later."
+    - text: "Decline to discuss it until it arrives by email"
+      correct: false
+      why: "Acknowledging is not refusing — the commitment is to write it down yourself, not to make the client do it."
+
+- q: "A client raises a good idea that is out of scope. What is the parking lot for?"
+  anchor: "park it visibly in a \"future features\" list — this acknowledges the idea without committing to it now"
+  options:
+    - text: "Deflecting an idea you would rather not build"
+      correct: false
+      why: "It is for good ideas — the technique exists precisely because the idea has merit."
+    - text: "Acknowledging the idea visibly without committing to it now"
+      correct: true
+      why: "Visibly is the operative word: the client can see it was heard and kept."
+    - text: "Batching small changes that fall under the absorption threshold"
+      correct: false
+      why: "That is a separate mechanism with its own pre-defined limit."
+```
+
 ## Key Concepts
 - **Scope baseline**: The documented, signed-off list of deliverables from the original contract; this is your reference point for every CR conversation
 - **Change request (CR) vs. bug fix**: A bug is when delivered work does not meet the agreed specification; a CR is when the client wants something different from or in addition to the specification — the distinction must be clear in writing
@@ -150,3 +191,28 @@ Before deciding whether to absorb a small request or issue a CR:
 - **"The Business of Software" — Michael Feathers and Patrick McKenzie (various essays)** — Practical writing on managing client expectations and contract scope in consulting/freelance software work
 - **PMBOK Guide (Project Management Body of Knowledge)** — Section on Change Control; the formal framework that change request processes are derived from; useful as a reference for formal client engagements
 - **"Freelance Isn't Free" — creative legalese** — Practical guide to scope and contract management for independent contractors; includes worked examples of CR conversations and templates
+
+```recall
+- q: "What is the scope baseline, and what is it for?"
+  must:
+    - "the documented, signed-off list of deliverables from the original contract"
+    - "it is the reference point for every change-request conversation"
+
+- q: "Define the absorption threshold, and give the shape of one."
+  must:
+    - "small changes that do not affect timeline may be worth absorbing to maintain the relationship"
+    - "define the threshold in advance"
+    - "for example under 1 hour cumulative per month absorbed, above that a formal CR"
+
+- q: "What goes in the change request log, and why is every CR logged?"
+  must:
+    - "date, description, decision and reasoning"
+    - "every CR, whether approved or not"
+    - "it prevents \"but I mentioned that in the kickoff\" disputes"
+
+- q: "Separate the two impacts a change request can carry."
+  must:
+    - "cost impact — more hours"
+    - "timeline impact — dependencies shift"
+    - "a CR may carry either or both, addressed separately in the CR document"
+```

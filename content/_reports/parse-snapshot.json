@@ -3219,12 +3219,12 @@
     "process-soft-skills": {
       "75_writing_adrs.md": {
         "title": "61c5f69bb969c0a6",
-        "whatItIs": "576eaeb48e919908",
+        "whatItIs": "f292644f7506c912",
         "keyConcepts": "4ebd76a7d080b82b",
         "exampleCode": "8159115aa9798de7",
         "whenToUse": "69836793ee934fe8",
         "commonMistakes": "b9417a53080acd4a",
-        "furtherReading": "b0ca0cc89b01857a"
+        "furtherReading": "1c075d92c8fdffbc"
       },
       "76_rfc_process.md": {
         "title": "8d5598f24169cd0f",
@@ -3282,30 +3282,30 @@
       },
       "82_estimation.md": {
         "title": "58c995a42596f693",
-        "whatItIs": "8427577a90772002",
+        "whatItIs": "da44c9d7dade08fd",
         "keyConcepts": "a35d7dceb9c4014d",
         "exampleCode": "3051c0ec986e764f",
         "whenToUse": "15ebd6a1cc3dfacc",
         "commonMistakes": "a42b4acb7b9df85c",
-        "furtherReading": "c429f4368601f87f"
+        "furtherReading": "88ad92c974c3f72a"
       },
       "83_scope_creep_management.md": {
         "title": "65f2d44b6f7e46ae",
-        "whatItIs": "84b4b59f7f2eaa92",
+        "whatItIs": "87665cfd5ff0aee8",
         "keyConcepts": "84f77352beea2a50",
         "exampleCode": "368c0bf7dc529369",
         "whenToUse": "da4bb9f5e32563f6",
         "commonMistakes": "9f3045850f2e635a",
-        "furtherReading": "fa13e346cc400e4d"
+        "furtherReading": "10afa79838e09971"
       },
       "84_technical_interview_design.md": {
         "title": "c0c9bc0c210b3a1a",
-        "whatItIs": "8e010b3ee91eb399",
+        "whatItIs": "f8fe317898bcd006",
         "keyConcepts": "9877d2d74a0cb70f",
         "exampleCode": "bc8069356c5d1420",
         "whenToUse": "b30c3020c09fcba6",
         "commonMistakes": "130ad98d6684435d",
-        "furtherReading": "b5585e964d13b748"
+        "furtherReading": "f554c9a8859c5457"
       },
       "85_technical_blog_conference_talk.md": {
         "title": "9c5f6c09d12a438e",

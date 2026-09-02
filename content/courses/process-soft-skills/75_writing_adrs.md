@@ -7,6 +7,47 @@ ADRs matter most when you return to a decision a year later and ask "why are we 
 
 There are two dimensions where developers with ADR practices still write weak records: **options analysis** and **consequences**. A weak ADR documents the choice but skips the rejected alternatives — which means the record is no different from a comment in code. A strong ADR documents every serious option with honest trade-offs, so a future reader can evaluate whether the original constraints still apply. Consequences are equally important: an ADR that says "we chose HS256 because it is simpler" without saying "this means the secret must be shared with all services that validate tokens, and rotation requires a deployment" has captured the decision without the operational reality.
 
+```quiz
+- q: "You reverse a decision recorded in ADR-0007. What happens to that document?"
+  anchor: "you write a new ADR and update the old one's status to `Superseded by ADR-00XX`; both documents remain"
+  options:
+    - text: "Edit ADR-0007 so it describes the new decision"
+      correct: false
+      why: "That erases the record of what was believed and why, which is the thing an ADR exists to preserve."
+    - text: "Write a new ADR and mark 0007 `Superseded by` it — both stay"
+      correct: true
+      why: "ADRs are never deleted, only superseded."
+    - text: "Delete ADR-0007, since it is now wrong"
+      correct: false
+      why: "It was not wrong at the time, and the context that made it right is exactly what a future maintainer needs."
+
+- q: "When is an ADR worth writing at all?"
+  anchor: "ADRs are only needed when there were real alternatives"
+  options:
+    - text: "For every architectural choice, so the record is complete"
+      correct: false
+      why: "A decision with no real alternative has no decision driver to record."
+    - text: "When there were real alternatives — a constraint, requirement or risk made it non-obvious"
+      correct: true
+      why: "That constraint is the decision driver, and it is what makes the record worth keeping."
+    - text: "Whenever the team disagrees about the choice"
+      correct: false
+      why: "Disagreement often signals real alternatives, but the test is the alternatives themselves, not the argument."
+
+- q: "A draft ADR lists only benefits. What is missing?"
+  anchor: "a good ADR has real negatives, not just positives"
+  options:
+    - text: "Nothing, if the decision genuinely is the better one"
+      correct: false
+      why: "Consequences run both ways; a list with no cost reads as advocacy rather than a record."
+    - text: "The negative consequences — what you are accepting as a cost"
+      correct: true
+      why: "Along with the migration or reversal path, which is what forces the author to price the choice."
+    - text: "A longer context section"
+      correct: false
+      why: "Context matters, but it is not what an all-positive consequences list is missing."
+```
+
 ## Key Concepts
 - **Decision driver** — the constraint, requirement, or risk that made this decision non-obvious; ADRs are only needed when there were real alternatives
 - **Status lifecycle** — Proposed → Accepted → (Deprecated / Superseded); ADRs are never deleted, only superseded
@@ -157,3 +198,23 @@ run HS256 and RS256 validation in parallel for one access-token TTL cycle (15 mi
 - Joel Parker Henderson — ADR GitHub templates: https://github.com/joelparkerhenderson/architecture-decision-record
 - adr-tools — CLI for creating and managing ADRs: https://github.com/npryce/adr-tools
 - [adr.github.io](https://adr.github.io/) — templates and a catalogue of the formats teams actually use
+
+```recall
+- q: "Give the ADR status lifecycle and the deletion rule."
+  must:
+    - "Proposed → Accepted → Deprecated or Superseded"
+    - "ADRs are never deleted, only superseded"
+    - "reversing a decision means a new ADR plus `Superseded by ADR-00XX` on the old one"
+    - "both documents remain"
+
+- q: "What does the migration/reversal question force the author to do?"
+  must:
+    - "ask how hard it is to undo this decision"
+    - "it forces thinking through the actual cost of the choice"
+
+- q: "How long is a lightweight ADR, and what is it not?"
+  must:
+    - "1-2 pages maximum"
+    - "not a design document"
+    - "focus on the decision, not a full specification"
+```
