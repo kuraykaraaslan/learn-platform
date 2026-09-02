@@ -7,6 +7,47 @@ Webhook idempotency is the guarantee that processing the same webhook event twic
 
 Dispute handling (chargebacks) is the part of payment processing that most integrations ignore completely until the first chargeback arrives. A chargeback occurs when a cardholder disputes a charge with their bank. The bank reverses the payment and the merchant loses the funds plus a dispute fee ($15–$35 per dispute from Stripe). You have a response window (typically 7–21 days depending on the card network) to submit evidence. Automating the evidence collection — subscription records, login logs, IP addresses, email confirmations — is the difference between a dispute you win and one you lose by default.
 
+```quiz
+- q: "How does the event deduplication log actually decide whether an event was already processed?"
+  anchor: "the insert attempt is the idempotency check"
+  options:
+    - text: "A SELECT before processing, then an INSERT afterwards"
+      correct: false
+      why: "Two concurrent deliveries both see nothing and both proceed. The check has to be atomic."
+    - text: "The INSERT itself — a unique constraint violation means already processed"
+      correct: true
+      why: "The insert attempt *is* the idempotency check, which is what makes it safe under concurrency."
+    - text: "A timestamp comparison against the event's creation time"
+      correct: false
+      why: "A timestamp does not tell you whether you already acted on it."
+
+- q: "Your webhook handler provisions an account and sends a welcome email. Stripe redelivers the event. What must be true?"
+  anchor: "must be designed assuming it may be called multiple times for the same event"
+  options:
+    - text: "Nothing — Stripe delivers each event exactly once"
+      correct: false
+      why: "It does not. Every handler must assume it may be called more than once for the same event."
+    - text: "The side effects are guarded — neither provisioning nor the email may repeat"
+      correct: true
+      why: "Emails, provisioning and database writes all need the guard, not the write alone."
+    - text: "The handler returns 500 so Stripe stops redelivering"
+      correct: false
+      why: "A 500 causes more retries, not fewer."
+
+- q: "A subscription renewal fails. Where does the retry-and-email sequence belong?"
+  anchor: "configure this in Stripe's retry settings, not in custom code"
+  options:
+    - text: "In a job you own, so the logic is versioned alongside your code"
+      correct: false
+      why: "The dunning sequence belongs in Stripe's retry settings rather than in custom code."
+    - text: "In Stripe's retry settings"
+      correct: true
+      why: "The sequence determines how much MRR you recover, and the provider already implements it."
+    - text: "Nowhere — a failed renewal should cancel the subscription at once"
+      correct: false
+      why: "That forfeits exactly the revenue the dunning sequence exists to recover."
+```
+
 ## Key Concepts
 - **Webhook signature verification**: Every incoming webhook should have its signature verified against your provider's secret before any processing; skipping this allows attackers to forge payment events
 - **Idempotency key**: A unique identifier per logical operation (Stripe uses `Idempotency-Key` header; your own operations need equivalent protection) — guarantees at-most-once or exactly-once semantics
@@ -219,3 +260,20 @@ async function handlePaymentFailed(_invoice: Stripe.Invoice) { /* ... */ }
 - **"Stripe's Approach to Idempotency" — stripe.com/blog/idempotency** — Stripe's own engineering blog post explaining the full theory of idempotency keys and how they implement it at scale; directly applicable to your own API design
 - [**PayPal Webhook Verification Documentation](https://developer.paypal.com)** — The equivalent reference for PayPal; their verification approach differs from Stripe (certificate-based rather than HMAC) — worth reading if you extend your PayPal integration
 - [Stripe: idempotent requests](https://docs.stripe.com/api/idempotent_requests) — how a payment provider actually implements the guarantee you are relying on
+
+```recall
+- q: "What is an idempotency key, and what does it guarantee?"
+  must:
+    - "a unique identifier per logical operation — Stripe uses the `Idempotency-Key` header"
+    - "it guarantees at-most-once or exactly-once semantics"
+
+- q: "Trace the dispute state machine."
+  must:
+    - "`charge.dispute.created` → evidence submitted → `charge.dispute.closed`, won, lost or withdrawn"
+    - "automate evidence gathering on creation"
+
+- q: "Why must a webhook signature be verified before any processing?"
+  must:
+    - "verified against the provider's secret"
+    - "skipping it allows attackers to forge payment events"
+```

@@ -7,6 +7,47 @@ For a multi-tenant SaaS, timezone handling is the most commonly botched concern.
 
 RTL support is the most architecturally involved concern. Arabic and Hebrew read right-to-left, which means the entire page layout mirrors: navigation is on the right, text aligns right, icons for "back" and "forward" flip meaning, and CSS properties that use left/right (margin-left, padding-right, text-align: left) must be replaced with their logical equivalents (margin-inline-start, padding-inline-end, text-align: start) so they flip automatically based on the document direction. For a SaaS with plans to expand into Middle Eastern markets, implementing CSS logical properties from the start is a one-time cost that prevents an expensive refactor later.
 
+```quiz
+- q: "Where does the user's timezone live?"
+  anchor: "the `timezone` column belongs in the user or tenant settings table, not in every timestamp column"
+  options:
+    - text: "Beside each timestamp, so every row is self-describing"
+      correct: false
+      why: "That duplicates one setting across every row and turns changing it into a migration."
+    - text: "In the user or tenant settings table — every timestamp is stored as UTC"
+      correct: true
+      why: "Storage is UTC-only; the timezone is a display concern applied at render time."
+    - text: "In the JWT, so no lookup is needed"
+      correct: false
+      why: "It goes stale the moment the user changes it, and it is not where this belongs."
+
+- q: "Your i18n strings use `count === 1 ? singular : plural`. What breaks?"
+  anchor: "Arabic has 6 plural forms"
+  options:
+    - text: "Nothing — every language has a singular and a plural"
+      correct: false
+      why: "Arabic has six plural forms. The English rule is not a universal one."
+    - text: "Any language with more than two plural forms — Arabic has six"
+      correct: true
+      why: "ICU message format is the standard that handles this, along with gender and interpolation."
+    - text: "Only right-to-left languages"
+      correct: false
+      why: "Text direction and plural rules are independent properties."
+
+- q: "Your layout uses `margin-left: 16px` throughout. What happens under `dir=\"rtl\"`?"
+  anchor: "`margin-inline-start` instead of `margin-left`"
+  options:
+    - text: "It mirrors automatically — `dir` flips the box model"
+      correct: false
+      why: "`dir` mirrors the layout, and a physical `margin-left` stays on the left regardless."
+    - text: "The margin stays on the left — use `margin-inline-start`"
+      correct: true
+      why: "Logical properties respect the `dir` attribute automatically; physical ones never do."
+    - text: "Nothing renders — RTL requires a separate RTL stylesheet"
+      correct: false
+      why: "It renders, just wrongly, which is considerably harder to notice than a blank page."
+```
+
 ## Key Concepts
 - **UTC-only storage**: All `timestamp` columns store UTC; the `timezone` column belongs in the user or tenant settings table, not in every timestamp column
 - **`Intl.DateTimeFormat`**: The built-in JavaScript API for locale-aware date formatting; handles calendar systems, month names, and time format (12h vs 24h) automatically
@@ -157,3 +198,20 @@ export function getTextDirection(locale: string): 'ltr' | 'rtl' {
 - [**`next-intl` documentation](https://next-intl.dev)** — The most complete i18n solution for Next.js App Router; covers routing, message loading, timezone-aware formatting, and RTL; read the "Getting Started" and "Formatting" sections first
 - [**MDN Web Docs: Intl](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl)** — The canonical reference for JavaScript's built-in internationalization API; every method you need for dates, numbers, and currencies is here
 - [**"Internationalization Best Practices for Spec Developers" — W3C](https://w3.org/International)** — The authoritative guide to i18n in web standards; the "Authoring HTML and CSS" section covers RTL, logical properties, and bidirectional text handling
+
+```recall
+- q: "Which built-in APIs handle locale formatting, and what does each cover?"
+  must:
+    - "`Intl.DateTimeFormat` — calendar systems, month names, and 12h versus 24h time"
+    - "`Intl.NumberFormat` — decimal separators, thousands separators and currency symbols per locale"
+
+- q: "Where do locale settings live in a multi-tenant SaaS?"
+  must:
+    - "language, timezone and currency belong in the tenant settings table"
+    - "not hardcoded — each tenant may have different defaults"
+
+- q: "What is `next-intl` for?"
+  must:
+    - "the most mature i18n library for the Next.js App Router"
+    - "routing, message loading, and timezone-aware formatting with React Server Components support"
+```

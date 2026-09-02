@@ -7,6 +7,47 @@ WCAG 2.1 AA is organized around four principles (POUR): **Perceivable** (content
 
 For a Next.js SaaS, the highest-impact accessibility work falls into five areas: semantic HTML (using the correct element for the correct purpose so screen readers have the right context), ARIA attributes (filling gaps where HTML semantics are insufficient), keyboard navigability (every interactive element reachable and operable without a mouse), color contrast (text must have at least 4.5:1 contrast ratio against its background for normal text, 3:1 for large text), and focus management (when dialogs open, focus moves to them; when dialogs close, focus returns to the trigger). Getting these five right covers the majority of WCAG 2.1 AA criteria for a typical SaaS dashboard.
 
+```quiz
+- q: "You add `role=\"button\"` and `aria-label` to a clickable `<div>`. Is it accessible now?"
+  anchor: "ARIA on a `<div>` does not automatically make it keyboard-accessible like a real `<button>` does"
+  options:
+    - text: "Yes — the role tells assistive technology it is a button"
+      correct: false
+      why: "It announces as one, and it still is not focusable and still ignores Enter and Space."
+    - text: "No — ARIA adds no keyboard behaviour; use a real `<button>`"
+      correct: true
+      why: "The first rule of ARIA: if a native element with the right semantics exists, use that."
+    - text: "Yes, as long as `tabindex=\"0\"` is set as well"
+      correct: false
+      why: "Closer, since that adds focus — and you still owe the Enter and Space handlers a `<button>` gives you free."
+
+- q: "Grey 16px text on white looks perfectly readable to you. Is it compliant?"
+  anchor: "Minimum 4.5:1 for normal text (under 18px or 14px bold), 3:1 for large text; measure with tools, never by eye"
+  options:
+    - text: "Yes — if it reads clearly, it passes"
+      correct: false
+      why: "Measure with tools, never by eye. 16px is normal text and needs 4.5:1."
+    - text: "Unknown until measured — 16px normal text needs 4.5:1"
+      correct: true
+      why: "3:1 is the large-text threshold, and 16px does not reach it."
+    - text: "Yes — 3:1 is the requirement for body text"
+      correct: false
+      why: "3:1 applies to large text, meaning 18px, or 14px bold, and above."
+
+- q: "Your modal traps Tab correctly. What else does it owe a keyboard user?"
+  anchor: "Escape closes the modal and returns focus to the trigger"
+  options:
+    - text: "Nothing — trapping focus is the requirement"
+      correct: false
+      why: "Trapping is half of it. There has to be a way out, and focus has to land somewhere sensible."
+    - text: "Escape closes it, and focus returns to the trigger"
+      correct: true
+      why: "Otherwise focus drops to the top of the document and the user retraces their whole path."
+    - text: "An `aria-live` region announcing that the modal opened"
+      correct: false
+      why: "Useful in some designs, and not the missing half of the focus contract."
+```
+
 ## Key Concepts
 - **WCAG 2.1 AA**: The compliance level required by most legal frameworks; builds on Level A and adds 20 additional criteria including color contrast (1.4.3), reflow (1.4.10), and focus visible (2.4.7)
 - **Semantic HTML**: Using `<button>` instead of `<div onclick>`, `<nav>` for navigation, `<main>` for main content, `<h1>`–`<h6>` in logical order — screen readers depend on these to announce the page structure
@@ -180,3 +221,22 @@ export function AccessibleModal({
 - [**WebAIM](https://webaim.org)** — The most practical accessibility resource for web developers; their contrast checker, screen reader survey, and WCAG quick reference are daily-use tools
 - [**axe DevTools browser extension](https://deque.com/axe/devtools)** — The fastest way to audit a page; runs automated checks against WCAG 2.1 and reports violations with explanations and remediation guidance; the free browser extension catches roughly 30–40% of all WCAG issues automatically
 - [WCAG 2.2](https://www.w3.org/TR/WCAG22/) — the normative success criteria, not a summary of them
+
+```recall
+- q: "What is WCAG 2.1 AA, and name three of its criteria."
+  must:
+    - "the compliance level required by most legal frameworks"
+    - "it builds on Level A and adds 20 further criteria"
+    - "colour contrast (1.4.3), reflow (1.4.10) and focus visible (2.4.7)"
+
+- q: "Why does semantic HTML matter?"
+  must:
+    - "`<button>` rather than `<div onclick>`, `<nav>` for navigation, `<main>` for main content, `<h1>`-`<h6>` in logical order"
+    - "screen readers depend on these to announce the page structure"
+
+- q: "What is a skip link, and which tools automate a11y checks?"
+  must:
+    - "a visually hidden \"Skip to main content\" link as the first focusable element, letting keyboard users bypass repeated navigation"
+    - "axe-core and pa11y"
+    - "axe-core integrates into Jest or Playwright tests for CI-level checking"
+```

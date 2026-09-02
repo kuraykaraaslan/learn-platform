@@ -553,7 +553,7 @@
       "lessonsLinkedIn": [
         "content-seo-personal-brand/305_deliverability_list_hygiene_reengagement_and_metrics.md"
       ],
-      "rawOccurrences": 22
+      "rawOccurrences": 26
     },
     {
       "slug": "dmarc",
@@ -561,7 +561,7 @@
       "lessonsLinkedIn": [
         "content-seo-personal-brand/305_deliverability_list_hygiene_reengagement_and_metrics.md"
       ],
-      "rawOccurrences": 19
+      "rawOccurrences": 23
     },
     {
       "slug": "domain-event",
@@ -687,7 +687,7 @@
       "lessonsLinkedIn": [
         "client-acquisition-sales/189_followup_cadence_reply_handling_and_campaign_discipline.md"
       ],
-      "rawOccurrences": 7
+      "rawOccurrences": 10
     },
     {
       "slug": "hashicorp-vault",
@@ -734,7 +734,7 @@
         "distributed-systems-api-design/07_idempotency_key_pattern.md",
         "distributed-systems-api-design/131_message_queues_101.md"
       ],
-      "rawOccurrences": 19
+      "rawOccurrences": 20
     },
     {
       "slug": "index-bloat",
@@ -837,7 +837,7 @@
         "saas-business-skills/87_payment_integration_depth.md",
         "saas-business-skills/93_ab_test_infrastructure.md"
       ],
-      "rawOccurrences": 26
+      "rawOccurrences": 27
     },
     {
       "slug": "n-plus-1-query",

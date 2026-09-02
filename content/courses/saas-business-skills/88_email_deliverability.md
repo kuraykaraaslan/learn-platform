@@ -7,6 +7,47 @@ The foundational layer of deliverability is DNS authentication: three records th
 
 Beyond DNS authentication, the two factors that degrade deliverability over time are bounces and complaints. A bounce rate above 2% signals to inbox providers that you are sending to bad email addresses — which looks like spam behavior. A complaint rate above 0.08% (Postmaster Tools threshold) puts you at risk of being blocked entirely by Gmail. Handling bounces and complaints requires processing feedback webhooks from your email service provider (Resend, SendGrid, SES), suppressing bounced addresses automatically, and never sending to an address that marked your email as spam.
 
+```quiz
+- q: "You add a second SPF TXT record for a new sending provider. What happens?"
+  anchor: "only one SPF record allowed per domain"
+  options:
+    - text: "Both are evaluated, so mail from either provider passes"
+      correct: false
+      why: "Only one SPF record is allowed per domain. Two is a misconfiguration, not a union."
+    - text: "It breaks SPF — one record per domain, so both providers belong in that one record"
+      correct: true
+      why: "The include mechanisms are combined inside a single record."
+    - text: "The newer record silently supersedes the older one"
+      correct: false
+      why: "Nothing chooses between them. Having two is itself the error."
+
+- q: "SPF passes and DKIM passes, but DMARC fails. How?"
+  anchor: "Either SPF or DKIM must align with the From domain for DMARC to pass"
+  options:
+    - text: "Impossible — DMARC passes whenever either of them passes"
+      correct: false
+      why: "Passing is not sufficient. One of them must also *align* with the From domain."
+    - text: "Neither aligned with the From domain — passing and aligning are different things"
+      correct: true
+      why: "A common misconfiguration with third-party senders, which pass on their own domain."
+    - text: "The policy was `p=none`, which always reports a failure"
+      correct: false
+      why: "`p=none` is an observation policy. It does not manufacture failures."
+
+- q: "An address has soft-bounced four times in a row. What now?"
+  anchor: "after 3–5 soft bounces treat as hard bounce"
+  options:
+    - text: "Keep retrying — a soft bounce is temporary by definition"
+      correct: false
+      why: "After three to five of them, treat it as a hard bounce."
+    - text: "Treat it as a hard bounce and suppress it"
+      correct: true
+      why: "Repeated temporary failure stops being temporary, and sending reputation pays the difference."
+    - text: "Send once more, and suppress only if a complaint arrives"
+      correct: false
+      why: "A complaint is a separate and more serious signal demanding immediate permanent suppression."
+```
+
 ## Key Concepts
 - **SPF record**: DNS TXT record listing authorized sending IP addresses; receiving servers reject mail from IPs not on the list; only one SPF record allowed per domain
 - **DKIM**: Two keys — private key held by your email provider signs each outgoing message; public key in DNS is used by receivers to verify the signature; each selector can be different per provider
@@ -188,3 +229,20 @@ dig TXT _dmarc.yourdomain.com
 - [Resend: domain setup and authentication docs](https://resend.com/docs/dashboard/domains/introduction) — provider-specific but covers the universal principles; includes the SPF/DKIM/DMARC records you actually have to publish
 - [**"Postmaster Tools" — Google](https://postmaster.google.com)** — Free tool from Google that shows your domain and IP reputation as Gmail sees it; sign up and verify your domain before your first real send
 - [**MxToolbox](https://mxtoolbox.com/EmailHeaders.aspx)** — Free tool for testing SPF, DKIM, and DMARC configuration; paste an email header and see whether authentication passed or failed and why
+
+```recall
+- q: "What do SPF and DKIM each do?"
+  must:
+    - "SPF is a DNS TXT record listing authorized sending IP addresses, and receivers reject mail from IPs not on it"
+    - "DKIM: a private key at your provider signs each outgoing message, and a public key in DNS lets receivers verify the signature"
+
+- q: "What does a DMARC record specify, and where do you start?"
+  must:
+    - "a policy — `p=none`, `p=quarantine` or `p=reject` — and a reporting address"
+    - "start at `p=none` to observe before enforcing"
+
+- q: "What is warm-up, and why a separate transactional subdomain?"
+  must:
+    - "send low volumes from a new domain or IP first and increase gradually, since sudden high volume triggers spam filters"
+    - "use a subdomain such as mail.yourdomain.com so a reputation problem does not affect the main domain"
+```

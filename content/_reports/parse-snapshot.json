@@ -3574,39 +3574,39 @@
       },
       "87_payment_integration_depth.md": {
         "title": "30147502360c07f5",
-        "whatItIs": "f3ca51e8de6477ec",
+        "whatItIs": "2dc6c8e8d633b563",
         "keyConcepts": "38f5e1619d402002",
         "exampleCode": "772c5a0c71abfc48",
         "whenToUse": "b67ee5b89a00e15e",
         "commonMistakes": "c01ca5c8a74f7dd2",
-        "furtherReading": "429c30844f5e2f01"
+        "furtherReading": "3c5484291569d90e"
       },
       "88_email_deliverability.md": {
         "title": "61f60e93e175e185",
-        "whatItIs": "86c3a7d31736f186",
+        "whatItIs": "2c3b1ac9b0b7c0c1",
         "keyConcepts": "2fb260be068d1d26",
         "exampleCode": "95d42ee447fb5234",
         "whenToUse": "87250a3b71b540d0",
         "commonMistakes": "0dcc77b70ab2bc76",
-        "furtherReading": "6d401579e797b935"
+        "furtherReading": "e6569a7b4f7fda6c"
       },
       "89_internationalization.md": {
         "title": "b7cbc9eaa2f2318d",
-        "whatItIs": "de3ab3c4ecd18b44",
+        "whatItIs": "b3382d9f87a807e4",
         "keyConcepts": "1414158e6e3ccdd1",
         "exampleCode": "8e4235847b425af6",
         "whenToUse": "649b774e63869e20",
         "commonMistakes": "6e4d8b907cca4d89",
-        "furtherReading": "8446153d1f31c09c"
+        "furtherReading": "90d4ac7c2fd2dcd1"
       },
       "90_accessibility.md": {
         "title": "1cfddaafe8ea82cf",
-        "whatItIs": "1383dc0b035e705c",
+        "whatItIs": "78f946a287a1b51c",
         "keyConcepts": "94a375f5fd7a0348",
         "exampleCode": "d78f46570d0bb8d4",
         "whenToUse": "0cdc876f8532c278",
         "commonMistakes": "aa69ef32f4211434",
-        "furtherReading": "9a7cf068aee2412b"
+        "furtherReading": "5512e5593ffb9567"
       },
       "91_mobile_first_api_design.md": {
         "title": "fea79b7f6cea9936",
