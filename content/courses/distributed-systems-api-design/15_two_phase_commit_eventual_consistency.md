@@ -169,3 +169,32 @@ async function transferFundsWith2PC(
 - **"Designing Data-Intensive Applications" by Martin Kleppmann** — Chapters 7 and 9 cover transactions, 2PC, and consensus in depth; the most thorough treatment available
 - [**"Starbucks Does Not Use Two-Phase Commit" by Gregor Hohpe](https://enterpriseintegrationpatterns.com)** — A short, memorable analogy for why eventual consistency is the practical choice in real-world systems
 - **"Life Beyond Distributed Transactions" by Pat Helland (Microsoft Research, 2007)** — The original paper arguing that distributed transactions don't scale and entities + messaging is the correct model; available free online
+
+```recall
+- q: "State what 2PC provides and what it costs."
+  must:
+    - "a coordinator plus participants; a prepare phase, then a commit phase"
+    - "it provides atomicity across databases"
+    - "at the cost of blocking on coordinator failure"
+    - "participants hold locks during the commit phase"
+
+- q: "What is an in-doubt transaction, and why is it the crux of 2PC?"
+  must:
+    - "a participant sitting in the prepared state"
+    - "waiting for a commit or abort signal"
+    - "that may never arrive if the coordinator crashed"
+    - "the coordinator is a single point of failure in classic 2PC"
+
+- q: "Contrast ACID with BASE."
+  must:
+    - "ACID — atomic, consistent, isolated, durable; guaranteed for single-database operations"
+    - "the gold standard you give up when spanning databases"
+    - "BASE — basically available, soft state, eventual consistency"
+    - "AP systems are BASE systems"
+
+- q: "What replaces a rollback under eventual consistency?"
+  must:
+    - "a compensating transaction — the undo of an eventually consistent operation when a later step fails"
+    - "it is forward-moving, not a rollback"
+    - "eventual consistency needs sagas, outbox and idempotency to avoid permanent inconsistency"
+```

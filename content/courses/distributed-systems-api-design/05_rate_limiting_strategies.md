@@ -7,6 +7,47 @@ Rate limiting controls how many requests a client can make in a given period. Th
 
 One algorithm across every endpoint is almost always the wrong choice, because the endpoints are defending against different things. Public auth endpoints (login, register) want a sliding window — the whole point is that an attacker cannot burst at the window edge. API endpoints used by paying tenants want a token bucket — legitimate batch work arrives in bursts, and penalising it makes the product feel broken. Background job triggers want a leaky bucket, because what you are protecting there is the database's write throughput, not fairness between callers.
 
+```quiz
+- q: "Fixed-window rate limiting has a well-known hole. What is it?"
+  anchor: "a client can fire 2x the allowed rate by clustering requests at the end of one window and the start of the next"
+  options:
+    - text: "Counters drift because window boundaries are not synchronized across servers"
+      correct: false
+      why: "A genuine distributed-systems concern, but not the vulnerability named here."
+    - text: "A client can send 2x the allowed rate by clustering at the boundary between two windows"
+      correct: true
+      why: "The window resets, so the burst at the end and the burst at the start both count as within-limit."
+    - text: "It can only express global limits, not per-client ones"
+      correct: false
+      why: "It can express per-client limits. The problem is the boundary, not the granularity."
+
+- q: "You want to allow short bursts while still holding a long-term rate. Which algorithm?"
+  anchor: "This naturally allows short bursts (up to bucket capacity) while enforcing a long-term rate"
+  options:
+    - text: "Leaky bucket — the queue absorbs the burst"
+      correct: false
+      why: "Leaky bucket is the inverse: it drains at a fixed output rate regardless of burst, which smooths rather than allows."
+    - text: "Token bucket — it fills at a fixed rate, and its capacity is the burst allowance"
+      correct: true
+      why: "Each request consumes one token, so capacity bounds how large a burst can be while the fill rate holds the long-term limit."
+    - text: "Sliding window log — exact timestamps measure the burst precisely"
+      correct: false
+      why: "It measures precisely and rejects precisely. Precision is not a burst allowance."
+
+- q: "A fragile downstream service needs protecting from spiky input. Which algorithm fits?"
+  anchor: "useful for smoothing spiky input to protect downstream services"
+  options:
+    - text: "Token bucket — bursts are exactly what needs allowing"
+      correct: false
+      why: "Token bucket permits the burst, which is the thing the downstream cannot absorb."
+    - text: "Leaky bucket — requests queue and are processed at a fixed output rate regardless of burst"
+      correct: true
+      why: "Smoothing is its purpose, which is what a fragile downstream needs."
+    - text: "Sliding window counter, for its Redis efficiency"
+      correct: false
+      why: "Efficiency is its selling point, but it still admits traffic in bursts up to the limit."
+```
+
 ## Key Concepts
 - **Fixed window**: Count resets at interval boundaries; simple but allows 2x burst at window edges
 - **Sliding window log**: Exact per-request timestamp tracking; accurate but memory-intensive
@@ -167,3 +208,25 @@ boundary falls relative to the traffic.
 - **"Rate Limiting" chapter in "Building Microservices" by Sam Newman (2nd edition)** — Covers rate limiting in the context of API gateways and service meshes; practical framing
 - **redis-rate-limiter-flexible (npm)** — Production-tested Node.js library supporting all four algorithms with Redis; reading the documentation surfaces the edge cases you'll need to handle in a custom implementation
 - [RateLimit header fields for HTTP (IETF draft)](https://datatracker.ietf.org/doc/draft-ietf-httpapi-ratelimit-headers/) — the standard way to tell a client what its remaining quota is, instead of inventing your own headers
+
+```recall
+- q: "Name the rate-limiting algorithms and the one-line tradeoff of each."
+  must:
+    - "fixed window — simplest, but 2x the rate is reachable across a boundary"
+    - "sliding window log — exact per-request timestamps, perfectly accurate, expensive at high throughput"
+    - "sliding window counter — two fixed windows plus a weighted average; a fast, Redis-efficient approximation"
+    - "token bucket — fills at a fixed rate up to a capacity; allows bursts while holding a long-term rate"
+    - "leaky bucket — a queue draining at a fixed output rate; smooths spiky input"
+
+- q: "What does the choice of algorithm actually determine?"
+  must:
+    - "the user experience at limit boundaries"
+    - "the fairness of enforcement"
+    - "the complexity of your Redis operations"
+
+- q: "Contrast token bucket with leaky bucket."
+  must:
+    - "token bucket allows short bursts up to bucket capacity"
+    - "leaky bucket processes at a fixed output rate regardless of burst"
+    - "token bucket enforces a long-term rate; leaky bucket protects a downstream service from spikes"
+```

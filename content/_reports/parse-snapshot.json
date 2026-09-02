@@ -2251,12 +2251,12 @@
     "distributed-systems-api-design": {
       "01_cap_theorem.md": {
         "title": "6f027a5face35b5d",
-        "whatItIs": "907a91bc6ca7a878",
+        "whatItIs": "629a3995f9f7b8cc",
         "keyConcepts": "02ccf690801085d4",
         "exampleCode": "be2eb051bac85a61",
         "whenToUse": "5ecd0b4d4cabe0cb",
         "commonMistakes": "9edb6a2eacf58358",
-        "furtherReading": "a14fb1a03d997ba9"
+        "furtherReading": "b31bf398dacd6805"
       },
       "02_event_sourcing_cqrs.md": {
         "title": "4ac2da6e71710442",
@@ -2287,12 +2287,12 @@
       },
       "05_rate_limiting_strategies.md": {
         "title": "5450888d7e309e02",
-        "whatItIs": "be3e2c491fdcf099",
+        "whatItIs": "6aed160beaa4e47b",
         "keyConcepts": "59fef834748ea8f7",
         "exampleCode": "c0fb0618c527cfd2",
         "whenToUse": "66abbdf290a967c3",
         "commonMistakes": "d2aaf6e046c7f0ee",
-        "furtherReading": "82d1194d3b7fe935"
+        "furtherReading": "d640cafa80d983cb"
       },
       "06_distributed_locking.md": {
         "title": "030162e56f046621",
@@ -2314,12 +2314,12 @@
       },
       "08_webhook_security_retry.md": {
         "title": "82af9bb32ada51f9",
-        "whatItIs": "9165e7edf2697a9d",
+        "whatItIs": "c6bbe46fff69a6a0",
         "keyConcepts": "4dac469d085c1d70",
         "exampleCode": "2d1148366cb13333",
         "whenToUse": "e783a5f7637c4b08",
         "commonMistakes": "82f58b73b783ddc2",
-        "furtherReading": "d98b1ef7114af8ec"
+        "furtherReading": "5be1d39454cf7f06"
       },
       "09_api_versioning_strategies.md": {
         "title": "0fbe604bfd4b9124",
@@ -2350,12 +2350,12 @@
       },
       "12_database_sharding_strategies.md": {
         "title": "b5b990329163266c",
-        "whatItIs": "37db9180ef8bdeb7",
+        "whatItIs": "1c3bef3b0a47c48f",
         "keyConcepts": "78a208532dba5a96",
         "exampleCode": "c27c21d0f07c3f3f",
         "whenToUse": "040a2c04aa0f1f94",
         "commonMistakes": "336a7ddf8d8e7838",
-        "furtherReading": "f1dfb3883caf3abd"
+        "furtherReading": "a3d8e4c654ef2c00"
       },
       "13_cqrs_read_model_optimization.md": {
         "title": "e9da185e2285ab23",
@@ -2382,7 +2382,7 @@
         "exampleCode": "4c756e5fb074912d",
         "whenToUse": "26b3985faff0ed21",
         "commonMistakes": "9a6abc05b1cc7208",
-        "furtherReading": "a110ea09febc6e59"
+        "furtherReading": "8e42474dbc1b2bb2"
       },
       "131_message_queues_101.md": {
         "title": "df839942cb44ce58",

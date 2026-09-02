@@ -7,6 +7,47 @@ The practical implication is that this isn't a single system-wide decision — i
 
 Where developers go wrong is treating CAP as a binary "pick two" label on the entire system. Real systems mix CP and AP across subsystems. PACELC (an extension of CAP) adds latency to the model: even when there's no partition, you trade consistency for latency. This is why read replicas introduce replication lag, and why "eventual consistency" is the honest name for what most high-availability systems actually deliver.
 
+```quiz
+- q: "\"We're a CA system — we don't really have partitions.\" What is wrong with that?"
+  anchor: "Because network partitions are a physical reality in any distributed system, you effectively choose between CP and AP"
+  options:
+    - text: "Nothing, on a single-datacenter deployment"
+      correct: false
+      why: "A single datacenter lowers how often partitions happen; it does not remove them from the physical reality of a distributed system."
+    - text: "Partition tolerance is not optional — the real choice is CP or AP"
+      correct: true
+      why: "Two of three is the theorem's framing; the practical version is which of C and A you give up when a partition arrives."
+    - text: "CA is achievable, but only with synchronous replication"
+      correct: false
+      why: "Synchronous replication is a way of choosing CP. It does not make partitions go away."
+
+- q: "Your PostgreSQL primary and your Redis session cache. Which is which?"
+  anchor: "Your PostgreSQL primary is CP: if the primary goes down, reads from it fail rather than serving stale data"
+  options:
+    - text: "Both CP — they are part of the same system"
+      correct: false
+      why: "The tradeoff is per data store and per feature, not one system-wide decision."
+    - text: "Postgres is CP; the Redis session cache is AP"
+      correct: true
+      why: "Postgres fails the read rather than serving stale data; Redis may serve a stale session rather than erroring."
+    - text: "Postgres is AP, because replicas can still serve reads"
+      correct: false
+      why: "The claim is about the primary, which fails rather than serving something stale."
+
+- q: "What does the C in CAP actually promise?"
+  anchor: "every read receives the most recent write or an error"
+  options:
+    - text: "That stored data is never invalid or corrupted"
+      correct: false
+      why: "That is the C in ACID — a different property that happens to share a letter."
+    - text: "Every read receives the most recent write, or an error"
+      correct: true
+      why: "The \"or an error\" half is what makes it a genuine tradeoff against availability."
+    - text: "That every replica holds identical bytes at every instant"
+      correct: false
+      why: "The guarantee is about what a read observes, not about the physical state of every replica at all times."
+```
+
 ## Key Concepts
 - **Consistency (C)**: All nodes see the same data at the same time; a read always returns the latest committed write
 - **Availability (A)**: The system always responds to requests, even if the response may be stale
@@ -77,3 +118,24 @@ async function getUserDisplayNameAP(userId: string): Promise<string> {
 - **"Designing Data-Intensive Applications" by Martin Kleppmann** — Chapter 9 covers consistency and consensus in depth; the clearest treatment of CAP in a practical context
 - **"CAP Twelve Years Later: How the Rules Have Changed" by Eric Brewer (IEEE Computer, 2012)** — The original theorem author clarifying common misinterpretations; freely available online
 - **"PACELC" Wikipedia / Daniel Abadi's blog post** — Extends CAP with the latency dimension; explains why "eventual consistency" is the honest default for most cloud systems
+
+```recall
+- q: "State the three properties precisely."
+  must:
+    - "Consistency — every read receives the most recent write, or an error"
+    - "Availability — every request receives a non-error response, though possibly not the most recent write"
+    - "Partition tolerance — the system keeps operating despite arbitrary network partitions between nodes"
+
+- q: "Why is the real choice CP or AP rather than any two of the three?"
+  must:
+    - "network partitions are a physical reality in any distributed system"
+    - "so partition tolerance is not something you can decline"
+    - "what remains is choosing which of consistency and availability to give up during a partition"
+
+- q: "At what level is the CAP tradeoff decided, and why does that matter?"
+  must:
+    - "per data store and per feature, not system-wide"
+    - "a Postgres primary is CP — reads fail rather than serve stale data"
+    - "a Redis session cache is AP — it may serve stale session data rather than error"
+    - "knowing each component's tradeoff lets you reason about failure modes before they happen in production"
+```

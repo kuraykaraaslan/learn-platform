@@ -7,6 +7,47 @@ The critical decision is the **shard key** — the field used to determine which
 
 The uncomfortable truth about sharding is that it forces you to give up most of what makes relational databases convenient: JOINs across shards are impossible (or very expensive), foreign key constraints can't span shards, and distributed transactions require 2PC or sagas. Most SaaS applications don't need sharding at all — a well-indexed single PostgreSQL primary can handle hundreds of thousands of users. The point of learning this topic is to recognize the signals that indicate you're approaching the limit, and to know that your current per-tenant database architecture already gives you one dimension of horizontal scale for free.
 
+```quiz
+- q: "What separates sharding from replication?"
+  anchor: "Unlike replication (where every node has all the data), sharding means each node has only a portion"
+  options:
+    - text: "Sharding scales reads; replication scales writes"
+      correct: false
+      why: "Backwards on both counts — sharding is what scales write throughput and storage."
+    - text: "Every replica holds all the data; every shard holds only a portion"
+      correct: true
+      why: "Which is what lets sharding scale storage and write throughput past a single server."
+    - text: "Sharding requires a different database engine"
+      correct: false
+      why: "It is a partitioning strategy, not an engine choice."
+
+- q: "What makes a shard key a good one?"
+  anchor: "distributes data evenly (no hotspots), allows most queries to target a single shard (avoiding fan-out), and rarely needs to change"
+  options:
+    - text: "High cardinality, above every other consideration"
+      correct: false
+      why: "Cardinality helps distribution, but on its own says nothing about fan-out or about how often the key changes."
+    - text: "Even distribution, single-shard queries, and rarely changing"
+      correct: true
+      why: "Three properties — failing any one gives you hotspots, fan-out, or migrations."
+    - text: "Whatever the table's primary key already is"
+      correct: false
+      why: "Convenient, but a primary key is chosen for identity, not for placement."
+
+- q: "Multi-tenant SaaS. Which shard key does the lesson recommend?"
+  anchor: "`tenantId` is an excellent shard key for a multi-tenant SaaS"
+  options:
+    - text: "`userId`, as the finest-grained natural unit"
+      correct: false
+      why: "userId works well for user-data tables, but it scatters a single tenant's data across shards."
+    - text: "`tenantId` — tenant data is co-located, queries are naturally scoped, and cross-tenant fan-out is rare"
+      correct: true
+      why: "The rare cross-tenant query is the only fan-out case, which is the tradeoff worth taking."
+    - text: "A timestamp range, so old data can be archived a shard at a time"
+      correct: false
+      why: "Range sharding by month fits append-heavy events and logs, not tenant-scoped application data."
+```
+
 ## Key Concepts
 - **Shard key**: The field used to route data to a specific shard; choosing it wrong means re-sharding later, which is painful
 - **Range sharding**: Shards hold contiguous key ranges (e.g., tenantId A–M on shard 1, N–Z on shard 2); simple but prone to hotspots on the high end
@@ -122,3 +163,24 @@ async function getRecentEventsAcrossAllTenants(since: Date): Promise<AuditEvent[
 - **"Designing Data-Intensive Applications" by Martin Kleppmann** — Chapter 6 covers partitioning (sharding) in depth; explains consistent hashing, hot spots, and secondary indexes on sharded data
 - **PostgreSQL documentation — "Table Partitioning"** — Explains RANGE, LIST, and HASH partitioning within a single database; consider this before full sharding
 - **"How Notion Sharded Their Postgres" (Notion Engineering blog)** — A detailed real-world account of when and how a production SaaS chose to shard; excellent signal for recognizing the right time to make the decision
+
+```recall
+- q: "Define sharding, and contrast it with replication."
+  must:
+    - "horizontally partitioning data across multiple independent database instances"
+    - "each shard holds a subset of the total dataset"
+    - "replication puts all the data on every node; sharding puts a portion on each"
+    - "it scales write throughput and storage beyond a single server"
+
+- q: "Name the three properties of a good shard key."
+  must:
+    - "distributes data evenly, with no hotspots"
+    - "lets most queries target a single shard, avoiding fan-out"
+    - "rarely needs to change"
+
+- q: "Give the shard key for each of the three shapes named."
+  must:
+    - "multi-tenant SaaS — tenantId, co-locating tenant data and scoping queries naturally"
+    - "user-data tables — userId"
+    - "append-heavy tables like events and logs — timestamp range sharding, by month"
+```
