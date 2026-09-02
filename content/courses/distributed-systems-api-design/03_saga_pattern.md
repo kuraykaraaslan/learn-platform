@@ -16,6 +16,22 @@ For a solo developer on a SaaS, orchestration is almost always the right choice 
 - **Idempotency**: Each saga step must be idempotent — if retried due to a crash, it must not double-charge or double-allocate
 - **Durability**: Saga state must be persisted — if the orchestrator crashes mid-saga, it must be able to resume from the last known step
 
+```mermaid
+sequenceDiagram
+    participant O as Orchestrator
+    participant B as Billing
+    participant S as Seats
+    participant M as Mail
+    O->>B: charge(subscription)
+    B-->>O: ok — charge_id
+    O->>S: allocate(seats)
+    S--xO: failed — no capacity
+    Note over O: A later step failed, so completed side effects must be undone
+    O->>B: refund(charge_id)
+    B-->>O: ok
+    Note over O,M: The welcome email never runs. Compensation walks backwards<br/>from the failure, it does not roll the whole thing back atomically.
+```
+
 ## Example Code
 ```typescript
 // Orchestrated saga for tenant onboarding using BullMQ

@@ -2270,7 +2270,7 @@
       "03_saga_pattern.md": {
         "title": "f8ebbc04e935ea28",
         "whatItIs": "40ffc27de6369ed5",
-        "keyConcepts": "b4178fb331c87536",
+        "keyConcepts": "ef85631100bdf256",
         "exampleCode": "c3f53a1799701686",
         "whenToUse": "8e1106509c97fabf",
         "commonMistakes": "d00e96875972dcd0",
@@ -2315,7 +2315,7 @@
       "08_webhook_security_retry.md": {
         "title": "82af9bb32ada51f9",
         "whatItIs": "9165e7edf2697a9d",
-        "keyConcepts": "a2e93085cd4cb5d4",
+        "keyConcepts": "4dac469d085c1d70",
         "exampleCode": "2d1148366cb13333",
         "whenToUse": "e783a5f7637c4b08",
         "commonMistakes": "82f58b73b783ddc2",
@@ -2926,7 +2926,7 @@
       "54_distributed_tracing.md": {
         "title": "4a465f49d53a71d1",
         "whatItIs": "a6ba9d12feebfa6c",
-        "keyConcepts": "508eb5a7df6ad73f",
+        "keyConcepts": "7d7f673ac21bfa12",
         "exampleCode": "7f2eb0cac25d09e4",
         "whenToUse": "6507af56261f2f84",
         "commonMistakes": "395601794880b13b",

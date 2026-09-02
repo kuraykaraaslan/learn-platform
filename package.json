@@ -15,7 +15,8 @@
     "content:concepts": "tsx scripts/build-concepts.ts",
     "content:search-index": "tsx scripts/build-search-index.ts",
     "content:review-index": "tsx scripts/build-review-index.ts",
-    "content:check": "npm run content:lint && npm run content:verify-code && npm run test"
+    "content:check": "npm run content:lint && npm run content:verify-code && npm run test",
+    "content:verify-mermaid": "tsx scripts/verify-mermaid.ts"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.8",

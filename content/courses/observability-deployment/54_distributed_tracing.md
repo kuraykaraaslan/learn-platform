@@ -19,6 +19,22 @@ For a multi-tenant SaaS, tracing gives you something logging alone cannot: you c
 - **Child span** — a span whose parent is another span in the same trace; represents a sub-operation
 - **Baggage** — key-value metadata attached to a trace and propagated alongside the trace context (e.g., `tenantId`, `userId` for every span downstream)
 
+```mermaid
+sequenceDiagram
+    participant C as Client
+    participant A as API
+    participant DB as Postgres
+    participant X as Stripe
+    participant W as Queue worker
+    C->>A: POST /subscribe
+    Note over A: No trace header arrived, so the API mints a traceId
+    A->>DB: INSERT — traceId on the log line
+    A->>X: POST /charges — traceId in the outbound header
+    A->>W: enqueue job — traceId inside the payload
+    W->>DB: UPDATE — same traceId, minutes later
+    Note over C,W: One id threads every span, so the causal chain can be<br/>reassembled afterwards across processes that never shared a stack.
+```
+
 ## Example Code
 ```typescript
 // middleware/tracing.ts — inject traceId into every Next.js request

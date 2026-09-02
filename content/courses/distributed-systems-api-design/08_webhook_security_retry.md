@@ -17,6 +17,23 @@ On the outgoing side — if your SaaS sends webhooks to tenants — you need a r
 - **Dead letter queue**: After max retries, move the event to a DLQ and alert — don't silently discard
 - **Idempotency on receipt**: Tenants receiving your webhooks need idempotency keys too; send a unique event ID so they can deduplicate
 
+```mermaid
+sequenceDiagram
+    participant P as Provider
+    participant E as Your endpoint
+    P->>E: POST /webhooks — payload + signature header
+    Note over E: Recompute the HMAC over the RAW body.<br/>A re-serialized object is not the same bytes that were signed.
+    alt signature matches
+        E-->>P: 200
+    else forged or tampered
+        E-->>P: 400 — payload never parsed
+    end
+    P->>E: POST /webhooks — same event, your side was down
+    E-->>P: 500
+    P->>E: POST /webhooks — retry after backoff
+    Note over P,E: The same event id can arrive more than once,<br/>so the handler has to be idempotent, not merely correct.
+```
+
 ## Example Code
 ```typescript
 // 1. INCOMING: Verifying Stripe webhook signatures (applies to any HMAC-based provider)

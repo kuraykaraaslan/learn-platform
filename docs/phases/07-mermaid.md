@@ -39,5 +39,21 @@ Ders başına en fazla 1 diyagram.
       kadar diyagramı render etmiyor
 - [x] Tema değişince yeniden render — ikinci `useEffect` tema değişimini izliyor
 - [x] Bozuk sözdiziminde okunabilir hata — `MermaidBlock.test.ts` yeşil
+- [x] **Build zamanı sözdizim doğrulaması** — `scripts/verify-mermaid.ts`,
+      mermaid'in kendi `parse()`'ıyla her fence'i kontrol ediyor ve CI'da
+      çalışıyor. Okur tarafındaki okunabilir hata hâlâ ağ, bu ise yazar
+      tarafındaki: yalnız birinin tarayıcısında patlayacak bir diyagram artık
+      önce burada, dosya ve satır adıyla patlıyor. `sequenceDiagramm` yazılarak
+      ateşlendiği doğrulandı.
+
+      **Kısmi, ve bilinçli olarak öyle:** `graph` ve `stateDiagram-v2` parse
+      sırasında etiketleri sanitize ediyor, bu da DOM gerektiriyor; düz Node'da
+      `DOMPurify.addHook is not a function` atıyor. Bu diyagramın kusuru değil,
+      ortamın kısıtı — o yüzden `UNVERIFIED` olarak raporlanıp koşuyu
+      düşürmüyorlar. Geçerli 4 diyagramı bozuk ilan eden bir kontrol, hiç
+      kontrol olmamasından kötü olurdu. Kapatmak jsdom eklemeyi gerektirir;
+      repo bu takası yapmadı (P0'ın "yeni npm bağımlılığı yok" kriteri), o
+      yüzden boşluk gizlenmek yerine kaydedildi. Şu an: 12 fence, 8 doğrulandı,
+      4 unverified, 0 hata
 - [x] JS kapalıyken kaynak `<pre>` olarak okunabiliyor — SSR çıktısı ham fence
       metnini içeriyor, hydration'dan önce de erişilebilir

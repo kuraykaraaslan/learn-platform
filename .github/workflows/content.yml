@@ -32,6 +32,14 @@ jobs:
       # behavior change (a tool's real output changed) that needs a re-stamp.
       - run: npx tsx scripts/stamp-verify.ts --check
 
+      # Parses every `mermaid` fence with mermaid's own parser. Catches a
+      # diagram that would only fail in a reader's browser — docs/phases/
+      # 07-mermaid.md's readable-error fallback is the reader-facing net, this
+      # is the author-facing one. `graph`/`stateDiagram-v2` need a DOM to
+      # parse and are reported UNVERIFIED rather than failed; see the script
+      # header for why that gap is stated instead of closed with jsdom.
+      - run: npm run content:verify-mermaid
+
       # content:check is vitest + standalone scripts — none of it runs the
       # real Next.js/tsc build pipeline, which has its own type-checking
       # pass over files vitest never touches (route files, layouts) and its
