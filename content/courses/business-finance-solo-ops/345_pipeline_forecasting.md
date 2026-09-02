@@ -9,6 +9,47 @@ Forecasting only matters if it feeds a real decision, so the monthly view separa
 
 The forecast's real job is to surface warning signals early enough to act on them: no confirmed revenue for next month, one client representing too large a share of the pipeline, a pipeline that's full of activity but low quality, proposals sent with no follow-up, or cash flow that depends on a late final payment. A weekly cadence keeps stages and follow-ups current; a monthly cadence compares what was expected against what actually happened, reviews source quality and close rate, and checks for a widening cash gap before it becomes urgent.
 
+```quiz
+- q: "A client has given a verbal yes worth 20,000. Can you spend against it?"
+  anchor: "Only the 100% stage counts as real revenue for spending decisions"
+  options:
+    - text: "Yes — a verbal yes is 80%, and 80% is most of the way there"
+      correct: false
+      why: "Only the 100% stage — contract or deposit received — counts as real revenue for spending decisions."
+    - text: "No — only a contract or received deposit counts for spending"
+      correct: true
+      why: "The weighting is for forecasting. The spending rule is a separate and stricter line."
+    - text: "Yes, up to 80% of it — that is what the weighting is for"
+      correct: false
+      why: "Weighted value is a forecasting figure, not a budget."
+
+- q: "Why are confirmed, likely and possible kept visually separate?"
+  anchor: "kept visually separate so optimism doesn't blur into planning"
+  options:
+    - text: "So each tier can carry a different forecast weighting"
+      correct: false
+      why: "The stage weightings already do that. Separation serves a different purpose."
+    - text: "So optimism does not blur into planning"
+      correct: true
+      why: "A single blended number lets a merely possible lead quietly fund a real decision."
+    - text: "Because each tier is reviewed on a different cadence"
+      correct: false
+      why: "The cadence is weekly and monthly for the whole pipeline, not per tier."
+
+- q: "Your pipeline forecasts 40k next month; your capacity forecast says you can deliver 25k of work. What is the forecast?"
+  anchor: "revenue should never be forecast beyond what delivery capacity can actually absorb"
+  options:
+    - text: "40k — the pipeline is what a forecast measures"
+      correct: false
+      why: "Revenue should never be forecast beyond what delivery capacity can actually absorb."
+    - text: "At most 25k — capacity bounds the forecast"
+      correct: true
+      why: "The capacity forecast counts delivery days, meetings, support obligations, admin and finance time, business development and buffer."
+    - text: "40k, with the overflow scheduled into the following month"
+      correct: false
+      why: "That may well be the plan, and it is not next month's forecast."
+```
+
 ## Key Concepts
 - **Weighted pipeline stages**: new lead (10%), qualified (25%), discovery completed (40%), proposal sent (60%), verbal yes (80%), contract/deposit received (100%). Only the 100% stage counts as real revenue for spending decisions.
 - **Forecast fields per opportunity**: client, source, offer, estimated value, stage, weighted value, expected decision date, expected start date, payment structure, risk, and next action.
@@ -71,3 +112,24 @@ The forecast didn't just total the numbers — it caught a capacity conflict and
 ## Further Reading
 - *Predictable Revenue* — Aaron Ross and Marylou Tyler: on building a disciplined, stage-based approach to pipeline instead of relying on sporadic effort.
 - *Sales Management. Simplified.* — Mike Weinberg: practical discipline around pipeline reviews and forecasting accuracy, scaled down for a one-person operation.
+
+```recall
+- q: "Give the weighted pipeline stages."
+  must:
+    - "new lead 10%, qualified 25%, discovery completed 40%"
+    - "proposal sent 60%, verbal yes 80%, contract or deposit received 100%"
+    - "only the 100% stage counts as real revenue for spending decisions"
+
+- q: "Name the warning signals."
+  must:
+    - "no confirmed revenue for next month"
+    - "one client representing too much of the total"
+    - "a full but low-quality pipeline"
+    - "unfollowed-up proposals"
+    - "cash flow dependent on a late final payment"
+
+- q: "What happens weekly, and what happens monthly?"
+  must:
+    - "weekly: update stages, send follow-ups, check decision dates, review next month's capacity"
+    - "monthly: compare expected against actual revenue, review source quality and close rate, review cash gap risk"
+```

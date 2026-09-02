@@ -9,6 +9,47 @@ Five reserve types cover most of the exposure: a tax/obligation reserve (money t
 
 Client concentration is the risk category most solo operators underestimate until it bites. If one client represents 40% or more of revenue, that's worth monitoring; past 60% it's a high-risk dependency; past 80% the business is effectively that client's employee without the benefits. The response isn't panic — it's deliberately building reserves and acquisition pipeline in proportion to how concentrated the revenue already is.
 
+```quiz
+- q: "One client is 65% of your revenue. Which band is that?"
+  anchor: "40%+ of revenue from one client warrants monitoring, 60%+ is high risk, 80%+ is a critical dependency"
+  options:
+    - text: "Monitoring — 40% is where watching starts, and 65% is not yet double that"
+      correct: false
+      why: "40% starts monitoring; 60% is already the high-risk band, and 65% is past it."
+    - text: "High risk — the high-risk band opens at 60%"
+      correct: true
+      why: "80%+ is the critical dependency demanding immediate acquisition and reserve-building action."
+    - text: "Critical — anything past half your revenue is a critical dependency"
+      correct: false
+      why: "Critical begins at 80%. Overstating the band is not the same as reading it."
+
+- q: "Equipment fails and the equipment reserve is short. Take the difference from the tax reserve?"
+  anchor: "each with a distinct, non-interchangeable purpose"
+  options:
+    - text: "Yes — it is your money, and the tax bill is months away"
+      correct: false
+      why: "Spending the tax or obligation reserve for any other purpose is a named forbidden pattern."
+    - text: "No — the five reserves have distinct, non-interchangeable purposes"
+      correct: true
+      why: "The tax reserve in particular holds money that was never yours to spend."
+    - text: "Only if you repay it before the tax deadline"
+      correct: false
+      why: "That is the intention every time. The forbidden pattern is the withdrawal, not the failure to repay."
+
+- q: "What does the late-payment contingency plan actually ask?"
+  anchor: "what happens if the next payment is delayed 7 days, or 30 days; can work pause contractually"
+  options:
+    - text: "How likely each client is to pay late"
+      correct: false
+      why: "Likelihood is not the question. The plan assumes it happens and asks what follows."
+    - text: "What happens at 7 days and at 30 days, whether work can pause contractually, whether final handover is protected, and whether another income source exists"
+      correct: true
+      why: "A set of concrete answers prepared before the delay, not an estimate of risk."
+    - text: "How much of the emergency reserve covers one month"
+      correct: false
+      why: "Related, and the reserve is a separate item with its own distinct purpose."
+```
+
 ## Key Concepts
 - **Risk categories to track**: late client payment, project cancellation, scope dispute, equipment failure, health or capacity gap, cloud/tool outage, legal or accounting issue, data loss, pipeline gap, currency/fee volatility, client concentration.
 - **Five reserve types**: tax/obligation reserve, emergency runway reserve, equipment reserve, professional services reserve, operations reserve — each with a distinct, non-interchangeable purpose.
@@ -57,3 +98,26 @@ Neither of these risks required an emergency to identify — both were visible i
 ## Further Reading
 - *Profit First* — Mike Michalowicz: a concrete percentage-based system for building multiple reserves automatically rather than relying on discipline alone.
 - *The Black Swan* — Nassim Nicholas Taleb: broader framing on preparing for foreseeable-but-unscheduled disruption rather than predicting exact timing.
+
+```recall
+- q: "Name the five reserve types."
+  must:
+    - "tax or obligation reserve"
+    - "emergency runway reserve"
+    - "equipment reserve"
+    - "professional services reserve"
+    - "operations reserve"
+    - "each has a distinct, non-interchangeable purpose"
+
+- q: "What does the equipment failure plan document?"
+  must:
+    - "the primary work machine, and a backup machine or cloud-access option"
+    - "critical software licenses, and a backup location for records"
+    - "a repair or replacement budget, and a client-communication plan for downtime"
+
+- q: "Name the three forbidden patterns."
+  must:
+    - "spending the tax or obligation reserve for any other purpose"
+    - "relying indefinitely on one client"
+    - "operating without a backup of business records"
+```

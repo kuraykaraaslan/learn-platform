@@ -9,6 +9,47 @@ A proper close covers revenue issued versus revenue actually collected, the list
 
 The discipline that makes this work is doing it every month without exception, including the busy ones. Skipping the close during a heavy delivery month is exactly when problems compound quietest — an overdue invoice from six weeks ago, a subscription renewal nobody questioned, a client relationship that's been unprofitable for two months running. The close is what surfaces these before they require a fire drill.
 
+```quiz
+- q: "It has been a busy month and there is no time for the close. Skip it?"
+  anchor: "that is precisely when problems accumulate"
+  options:
+    - text: "Yes — the close is a review, and reviews can wait for a quiet month"
+      correct: false
+      why: "A busy month is precisely when problems accumulate. Deferring the close is a named forbidden pattern."
+    - text: "No — a busy month is exactly when the close matters most"
+      correct: true
+      why: "The other forbidden pattern is reviewing revenue while skipping expenses; both hide the same kind of trouble."
+    - text: "Do a revenue-only close, and catch up on expenses later"
+      correct: false
+      why: "Reviewing revenue while skipping expenses is itself the other named forbidden pattern."
+
+- q: "Why does the monthly summary keep a fixed document structure?"
+  anchor: "kept identically structured month to month so trends are easy to spot"
+  options:
+    - text: "So it can be handed to an accountant without rework"
+      correct: false
+      why: "Accountant notes are their own checklist item. The structure serves a different purpose."
+    - text: "So trends are easy to spot across months"
+      correct: true
+      why: "Revenue, Expenses, Profitability, Cash and Reserve, Decisions — identical every month, so what changed is what stands out."
+    - text: "Because a fixed template is faster to fill in"
+      correct: false
+      why: "It is, and speed is not why the lesson requires it."
+
+- q: "The monthly review asks which project produced the best profit. What is the paired question?"
+  anchor: "which project produced the best profit, which consumed too much unpaid time"
+  options:
+    - text: "Which project brought in the most revenue"
+      correct: false
+      why: "Revenue and profit is a distinction the question already makes. The pair is about time."
+    - text: "Which project consumed too much unpaid time"
+      correct: true
+      why: "The best-revenue project can be the worst-profit one precisely because of unpaid time."
+    - text: "Which project took longest to invoice"
+      correct: false
+      why: "Collection timing matters and belongs to receivables, not to this pairing."
+```
+
 ## Key Concepts
 - **What must be reviewed every month**: revenue issued, revenue collected, unpaid receivables, expenses by category, profit estimate, reserve status, cash runway, subscription register, active project profitability, and pipeline risk.
 - **The close checklist**: update invoice statuses, reconcile payments, list overdue invoices, categorize expenses, save receipts and subscription invoices, export bank/payment data, update the cash-flow forecast, update reserve balances, review active project profitability, review subscriptions, write accountant notes, and record lessons plus next actions.
@@ -67,3 +108,22 @@ Nothing here required more than twenty minutes once the invoice tracker and expe
 ## Further Reading
 - *Profit First* — Mike Michalowicz: pairs well with a monthly close by giving a concrete allocation system to act on what the close reveals.
 - *Financial Intelligence* — Karen Berman and Joe Knight: useful background on reading your own numbers without a finance background.
+
+```recall
+- q: "What must be reviewed every month?"
+  must:
+    - "revenue issued and revenue collected"
+    - "unpaid receivables, and expenses by category"
+    - "profit estimate, reserve status and cash runway"
+    - "the subscription register, active project profitability and pipeline risk"
+
+- q: "Name the sections of the standard summary, and why they never change."
+  must:
+    - "Revenue, Expenses, Profitability, Cash and Reserve, and Decisions"
+    - "kept identically structured month to month so trends are easy to spot"
+
+- q: "Name the two forbidden patterns."
+  must:
+    - "reviewing revenue while skipping expenses"
+    - "deferring the close because the business is too busy — which is precisely when problems accumulate"
+```

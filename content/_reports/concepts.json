@@ -379,7 +379,7 @@
         "contracts-pricing-legal/211_statement_of_work_structure.md",
         "process-soft-skills/83_scope_creep_management.md"
       ],
-      "rawOccurrences": 7
+      "rawOccurrences": 9
     },
     {
       "slug": "circuit-breaker",
@@ -1229,7 +1229,7 @@
         "business-finance-solo-ops/319_tax_and_accounting_readiness.md",
         "business-finance-solo-ops/327_risk_reserve_and_contingency.md"
       ],
-      "rawOccurrences": 10
+      "rawOccurrences": 12
     },
     {
       "slug": "tcp-handshake",

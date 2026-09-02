@@ -9,6 +9,47 @@ A well-scoped fixed-price package states its inclusions and exclusions side by s
 
 The size of the project changes what kind of scoping is needed. A landing page can be scoped from a short brief. An admin panel or anything with role-based permissions almost always needs a paid or explicitly time-boxed data-modeling workshop before a number can be quoted responsibly — quoting blind on undefined roles and entities is one of the most common sources of catastrophic scope creep in custom software work. When a project touches an unknown legacy codebase, the correct answer is never to guess; it's to sell a paid audit first and scope the fixed-price project only after the audit removes the biggest unknowns.
 
+```quiz
+- q: "A client wants a fixed price to extend an existing codebase you have never seen. What do you sell first?"
+  anchor: "never quote a fixed price against a system you haven't actually inspected"
+  options:
+    - text: "The fixed price, with a generous risk buffer"
+      correct: false
+      why: "A buffer prices uncertainty you can size. You cannot size an unknown codebase from outside it."
+    - text: "A paid audit — never quote fixed against an uninspected system"
+      correct: true
+      why: "The parallel rule is the paid discovery workshop, for undefined roles, permissions or entities."
+    - text: "A time-and-materials contract, so the risk sits with the client"
+      correct: false
+      why: "Sometimes the right call, and not the rule this lesson states for the fixed-price case."
+
+- q: "Why a side-by-side inclusion/exclusion table rather than scope described in the proposal text?"
+  anchor: "not embedded in narrative proposal text — this is what a client actually reads before signing"
+  options:
+    - text: "It is shorter, and shorter proposals close faster"
+      correct: false
+      why: "Length is not the argument. What the client actually reads is."
+    - text: "It is what the client actually reads before signing"
+      correct: true
+      why: "Scope buried in narrative text is scope that was never really agreed."
+    - text: "The change request process cannot function without it"
+      correct: false
+      why: "The CR process does need a baseline, but the table's justification here is about what gets read."
+
+- q: "The client asks for a fourth round of revisions on a three-round package. What is that?"
+  anchor: "anything beyond that is a change request, not free rework"
+  options:
+    - text: "Free rework — revisions are part of delivery"
+      correct: false
+      why: "*Included* revisions are part of delivery. The fourth round is past what was included."
+    - text: "A change request, not free rework"
+      correct: true
+      why: "Which is exactly why the number has to be specific and stated up front."
+    - text: "A scope dispute requiring the whole contract to be renegotiated"
+      correct: false
+      why: "The change request process exists so this is a routine step rather than a renegotiation."
+```
+
 ## Key Concepts
 - **Inclusion/exclusion table**: state exactly what's in and out side by side, not embedded in narrative proposal text — this is what a client actually reads before signing.
 - **Phased delivery structure**: break the fixed-price project into named phases with rough durations (brief/content collection, development, review, launch) so "on track" is observable mid-project.
@@ -62,3 +103,20 @@ The red-flag list did the real work here: "we actually have 15 entity types" is 
 
 ## Further Reading
 - *Managing Successful Projects with PRINCE2* (or any standard scope-management reference): the general discipline of defining boundaries before committing to a fixed number applies directly here.
+
+```recall
+- q: "What is the phased delivery structure for, and which phases does it name?"
+  must:
+    - "named phases with rough durations — brief and content collection, development, review, launch"
+    - "so that \"on track\" is observable mid-project"
+
+- q: "What are named red flags? Give examples."
+  must:
+    - "signals identified in advance that predict scope trouble for this project type"
+    - "missing content, no existing hosting, an undefined data model, a client history of \"just one more small change\""
+
+- q: "State the workshop-before-quote rule."
+  must:
+    - "for anything involving undefined roles, permissions or entities — most admin panels and internal tools"
+    - "scope a paid discovery workshop before quoting the fixed price"
+```
