@@ -7,6 +7,47 @@ In the Next.js App Router this is the default behavior the framework was designe
 
 The mechanism under the hood is HTTP chunked transfer encoding combined with React's selective hydration. The server sends the fallback HTML first, then later sends a `<script>` tag containing the resolved chunk, which React inserts into the right DOM position. The client does not do a round-trip; it receives everything over the same initial connection.
 
+```quiz
+- q: "One of six sections takes 4 seconds. With no Suspense boundaries, when does anything render?"
+  anchor: "Blocking: entire route waits for the slowest `await`. Streaming: each boundary resolves independently"
+  options:
+    - text: "Each section as it resolves — React streams by default"
+      correct: false
+      why: "Streaming needs boundaries. Without them the route blocks on the slowest await."
+    - text: "After 4 seconds — the whole route waits for the slowest await"
+      correct: true
+      why: "A Suspense boundary is what lets the other five resolve and render on their own."
+    - text: "Immediately, with the slow section left empty"
+      correct: false
+      why: "That is what a fallback does, and there is no boundary here to hold one."
+
+- q: "Three sequential awaits in one server component, 300 ms each. How long does it take?"
+  anchor: "to ensure multiple fetches run concurrently rather than sequentially"
+  options:
+    - text: "300 ms — server components await concurrently"
+      correct: false
+      why: "Sequential awaits are sequential. Nothing makes them overlap on its own."
+    - text: "900 ms — use `Promise.all` or independent async components to overlap them"
+      correct: true
+      why: "That is precisely what parallel data fetching means here."
+    - text: "300 ms, since Next.js dedupes fetches"
+      correct: false
+      why: "Deduplication removes duplicate requests, not the sequencing of different ones."
+
+- q: "You added streaming, TTFB dropped sharply, and LCP did not move. Why?"
+  anchor: "Streaming improves TTFB dramatically; LCP depends on what you stream first"
+  options:
+    - text: "LCP is not affected by streaming at all"
+      correct: false
+      why: "It is — but through what you stream first, not through the fact that you stream."
+    - text: "The largest contentful element is still arriving in a late chunk"
+      correct: true
+      why: "Streaming improves TTFB dramatically; LCP depends on what comes first."
+    - text: "TTFB and LCP measure the same thing at different scales"
+      correct: false
+      why: "First byte and largest paint are entirely different events."
+```
+
 ## Key Concepts
 - **Suspense boundary** — A `<Suspense fallback={...}>` wrapper that tells React "this subtree can be deferred; show the fallback until it resolves"
 - **Streaming vs blocking** — Blocking: entire route waits for the slowest `await`. Streaming: each boundary resolves independently
@@ -119,3 +160,20 @@ export default function Loading() {
 - [Next.js Streaming and Suspense docs](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
 - [React 18 Suspense and Streaming (RFC)](https://github.com/reactjs/rfcs/blob/main/text/0213-suspense-in-react-18.md)
 - [Vercel: How Streaming Works](https://vercel.com/blog/understanding-react-server-components)
+
+```recall
+- q: "What is a Suspense boundary, and what does `loading.tsx` do?"
+  must:
+    - "`<Suspense fallback={...}>` tells React the subtree can be deferred and to show the fallback until it resolves"
+    - "`loading.tsx` is a Next.js file convention that wraps the page in a Suspense boundary with whatever you export as the fallback"
+
+- q: "What is selective hydration?"
+  must:
+    - "React hydrates the streamed chunks independently"
+    - "interactivity arrives for visible parts before hidden parts resolve"
+
+- q: "What is the `use` hook for?"
+  must:
+    - "React 19 / Next.js, experimental"
+    - "it unwraps a Promise inside a Client Component and suspends on it"
+```

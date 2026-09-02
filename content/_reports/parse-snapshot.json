@@ -2732,30 +2732,30 @@
     "frontend-performance-scaling": {
       "22_http2_multiplexing.md": {
         "title": "c9e1d2b4b29468ac",
-        "whatItIs": "c61a21bc10b7238e",
+        "whatItIs": "ff267b836b7936b5",
         "keyConcepts": "2b2e8bfd3936496c",
         "exampleCode": "497e3eca0cf372c5",
         "whenToUse": "7d127b5019294781",
         "commonMistakes": "4a793064e408f0a2",
-        "furtherReading": "8421b18dcc23b8c6"
+        "furtherReading": "d9418bc35d75d5b8"
       },
       "23_react_server_components.md": {
         "title": "5accfc574e9d8a9c",
-        "whatItIs": "24fdd4df18628c83",
+        "whatItIs": "4b6a4e18c021d52a",
         "keyConcepts": "f5615075fa916762",
         "exampleCode": "4fb0d7dfb471b1dd",
         "whenToUse": "dcd352656c7a702b",
         "commonMistakes": "7760a39ce887b3e1",
-        "furtherReading": "72dde462c3e6e998"
+        "furtherReading": "f40e154defdd7fdb"
       },
       "24_bundle_size_optimization.md": {
         "title": "61c08f113d4b3186",
-        "whatItIs": "75827f0710d0b51d",
+        "whatItIs": "08967894a0da822c",
         "keyConcepts": "82c3904379a9862f",
         "exampleCode": "0bae654ef91dd6ce",
         "whenToUse": "3bfb89c57a8ae57e",
         "commonMistakes": "fc8c2e04b86e5a94",
-        "furtherReading": "c69616dc1daa489c"
+        "furtherReading": "cd693b5ac1535c46"
       },
       "25_web_vitals.md": {
         "title": "db5e62c36fa0b886",
@@ -2768,12 +2768,12 @@
       },
       "26_streaming_ssr_suspense.md": {
         "title": "81ac8b819ffc6fa4",
-        "whatItIs": "0fed50aadb87b53b",
+        "whatItIs": "3577403271a28816",
         "keyConcepts": "cfb05ffaede9dbfc",
         "exampleCode": "e49086b72699c527",
         "whenToUse": "5479a1a2a7b11eed",
         "commonMistakes": "1f7cad81c24ced65",
-        "furtherReading": "1fe22d45cb32bfa8"
+        "furtherReading": "e588b325f3175437"
       },
       "27_job_queue_bullmq.md": {
         "title": "2c8a60feddabc80c",

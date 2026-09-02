@@ -7,6 +7,47 @@ HTTP/2 also introduced **header compression** (HPACK), which significantly reduc
 
 For a Next.js app specifically, HTTP/2 means you should prefer many small, precisely split chunks over one large bundle. The old advice "minimize the number of requests" applied to HTTP/1.1. Under HTTP/2, sending 20 small JS chunks is roughly as fast as sending 1 large one — and has the advantage that only changed chunks need to be re-downloaded on deploy. Vercel enables HTTP/2 by default. When self-hosting, you need nginx or Caddy with HTTP/2 configured.
 
+```quiz
+- q: "Your assets are split across `static1.` and `static2.` subdomains, a habit from HTTP/1.1. Under HTTP/2?"
+  anchor: "counterproductive under HTTP/2, reduces header compression efficiency"
+  options:
+    - text: "Still helps — more domains still means more parallel connections"
+      correct: false
+      why: "HTTP/2 multiplexes over one connection, so the extra connections buy nothing and cost handshakes."
+    - text: "Counterproductive — and it fragments HPACK's shared compression context"
+      correct: true
+      why: "The trick existed to work around HTTP/1.1's per-origin connection limit, which HTTP/2 removed."
+    - text: "Neutral — HTTP/2 ignores the hostname when multiplexing"
+      correct: false
+      why: "A separate origin is a separate connection. The hostname is exactly what it does not ignore."
+
+- q: "You are on HTTP/2 and a single packet is lost. Do the other streams keep flowing?"
+  anchor: "HTTP/2 over TCP still suffers from TCP head-of-line blocking if a packet is lost"
+  options:
+    - text: "Yes — multiplexed streams are independent"
+      correct: false
+      why: "Independent at the HTTP layer. They still share one TCP connection, and TCP stalls all of them until the loss is repaired."
+    - text: "No — HTTP/2 solves head-of-line blocking at the HTTP layer, not the TCP layer"
+      correct: true
+      why: "HTTP/3 over QUIC and UDP is what removes the TCP-layer version."
+    - text: "Only if the lost packet belonged to a different stream"
+      correct: false
+      why: "TCP knows nothing about streams. It delivers one ordered byte stream."
+
+- q: "How do you tell the browser what to fetch next, now that server push has fallen out of favour?"
+  anchor: "are the modern equivalent of server push"
+  options:
+    - text: "Inline the resource, so there is no second fetch at all"
+      correct: false
+      why: "That works for tiny resources and defeats caching for everything else."
+    - text: "Resource hints — `<link rel=\"preload\">` and `<link rel=\"modulepreload\">`"
+      correct: true
+      why: "The browser stays in charge, which is what server push got wrong: it pushed what the client may already have held."
+    - text: "Open a second HTTP/2 connection dedicated to prefetching"
+      correct: false
+      why: "A second connection loses the shared HPACK context, and multiplexing already removed the reason for one."
+```
+
 ## Key Concepts
 - **Multiplexing**: Multiple request/response pairs in parallel over a single TCP connection; eliminates HTTP/1.1's head-of-line blocking at the HTTP layer
 - **Stream**: One request/response pair within an HTTP/2 connection; streams are multiplexed, not serialized
@@ -147,3 +188,22 @@ const ASSET_URL = 'https://cdn.yourdomain.com'; // One domain, HTTP/2 multiplexi
 - [HTTP/3 explained](https://http3-explained.haxx.se/) — a free online book on QUIC and HTTP/3, from the curl maintainer
 - **Next.js documentation — "Optimizing: Lazy Loading"** — Documents `next/dynamic` and how Next.js manages code splitting; understanding this is prerequisite for taking advantage of HTTP/2 granular caching
 - [RFC 9113 — HTTP/2](https://www.rfc-editor.org/rfc/rfc9113.html) — the specification; §5 on streams is what multiplexing actually means
+
+```recall
+- q: "What is multiplexing, and what is a stream?"
+  must:
+    - "multiple request/response pairs in parallel over a single TCP connection"
+    - "it eliminates HTTP/1.1's head-of-line blocking at the HTTP layer"
+    - "a stream is one request/response pair within the connection — streams are multiplexed, not serialized"
+
+- q: "What is HPACK, and which headers benefit most?"
+  must:
+    - "HTTP/2 compresses headers using a shared context"
+    - "repetitive headers such as Cookie and Authorization are compressed dramatically"
+
+- q: "What is HTTP/3, and what does it fix?"
+  must:
+    - "it uses UDP via QUIC instead of TCP"
+    - "that eliminates TCP head-of-line blocking"
+    - "supported on Cloudflare, Vercel and modern CDNs"
+```

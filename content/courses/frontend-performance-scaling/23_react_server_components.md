@@ -7,6 +7,47 @@ The key mental shift is that RSC is not just about performance — it's about wh
 
 The subtlest and most impactful optimization is **client component boundary placement**. In a page that is mostly static with one interactive widget, the client boundary should be drawn tightly around the widget — not at the page level. A `"use client"` directive at the page level converts the entire subtree to client components, negating the RSC benefit. Drawing the boundary at a leaf component (a `<LikeButton>`, a `<FilterDropdown>`) keeps the server-rendering benefit for all the surrounding static content. Streaming with `<Suspense>` allows the page shell to render immediately while slow data fetches complete in the background, dramatically improving TTFB and LCP.
 
+```quiz
+- q: "You want a Server Component rendered inside a Client Component. How?"
+  anchor: "you cannot import a Server Component inside a Client Component"
+  options:
+    - text: "Import it directly — the boundary only governs hooks"
+      correct: false
+      why: "You cannot import a Server Component inside a Client Component at all."
+    - text: "Pass it as `children` from a Server Component above"
+      correct: true
+      why: "Interleaving works in that direction: a Client Component may receive server-rendered children as props."
+    - text: "Add `\"use server\"` to the child so it opts back out"
+      correct: false
+      why: "`\"use server\"` marks Server Actions, not components."
+
+- q: "You add `\"use client\"` to one layout component. What is now in the client bundle?"
+  anchor: "marks a component and all its imports as client-side"
+  options:
+    - text: "That component only — the directive is per-file"
+      correct: false
+      why: "It is per-file where you write it, and everything that file imports comes across with it."
+    - text: "That component and everything it imports, on down the tree"
+      correct: true
+      why: "The boundary waterfalls, so one directive high in the tree can pull most of the app into the browser."
+    - text: "Nothing extra — it only enables hooks in that file"
+      correct: false
+      why: "Enabling hooks is exactly what requires shipping the code to the browser."
+
+- q: "Which components cost you client-side JavaScript?"
+  anchor: "Server Components have zero bundle cost; every Client Component import adds to the JS delivered to the browser"
+  options:
+    - text: "All of them — every component has to hydrate"
+      correct: false
+      why: "Server Components render on the server only and never reach the browser as JS."
+    - text: "Only Client Components — Server Components have zero bundle cost"
+      correct: true
+      why: "Which makes the boundary's position a bundle-size decision, not only an API one."
+    - text: "Only components that use hooks, whatever the directive says"
+      correct: false
+      why: "Using hooks requires the directive, and the directive is what decides what ships."
+```
+
 ## Key Concepts
 - **Server Component (RSC)**: Renders on server only; no client JS; can directly access DB/filesystem; no hooks, no browser APIs
 - **Client Component (`"use client"`)**: Rendered on server for initial HTML, then hydrated on client; has full React hook/event API; adds to client bundle
@@ -160,3 +201,22 @@ export function DisplayNameForm() {
 - **Next.js documentation — "Server Components" and "Client Components"** — The official docs now include excellent decision flow charts and the "passing Server Components to Client Components as props" pattern
 - [**"Making Sense of React Server Components" by Josh Comeau](https://joshwcomeau.com)** — The clearest conceptual explanation of RSC mental model; covers the rendering lifecycle with diagrams
 - **"React Server Components From Scratch" by Dan Abramov (GitHub: reactjs/server-components-demo)** — The original demo repository with detailed explanations; reading the commit history shows the design rationale
+
+```recall
+- q: "What can a Server Component do, and what can it not?"
+  must:
+    - "it renders on the server only, with no client JS"
+    - "it can directly access the database or filesystem"
+    - "no hooks, no browser APIs"
+
+- q: "What is a Client Component's lifecycle, and what does it cost?"
+  must:
+    - "rendered on the server for the initial HTML, then hydrated on the client"
+    - "it has the full React hook and event API"
+    - "it adds to the client bundle"
+
+- q: "What are Server Actions, and what do they replace?"
+  must:
+    - "`\"use server\"` functions run on the server but can be called from Client Components"
+    - "they replace API routes for form submissions and mutations"
+```

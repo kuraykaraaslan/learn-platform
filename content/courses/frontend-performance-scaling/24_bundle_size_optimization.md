@@ -7,6 +7,47 @@ The JavaScript bundle delivered to the user is one of the most direct levers on 
 
 **Code splitting** divides your application into chunks that are loaded on demand rather than all at once. Next.js App Router does automatic per-route code splitting — the code for `/dashboard` is not sent when the user visits `/login`. Within a route, `next/dynamic` (which wraps React's `React.lazy`) allows you to lazily load heavy components: a rich text editor, a chart library, a data table. These components load only when they're about to be rendered, not on initial page load.
 
+```quiz
+- q: "You import one icon from an `index.ts` that re-exports 200 components. What ships?"
+  anchor: "can prevent tree shaking by forcing the bundler to include the entire barrel; prefer direct imports"
+  options:
+    - text: "Just the icon — tree shaking removes the rest"
+      correct: false
+      why: "A barrel file can defeat tree shaking and force the whole barrel in."
+    - text: "Potentially all 200 — prefer a direct import"
+      correct: true
+      why: "The re-export chain is what forces the bundler's hand; importing the module directly sidesteps it."
+    - text: "All 200, always — barrels are never tree-shakeable"
+      correct: false
+      why: "It depends on the bundler and on side effects. The safe move is the direct import."
+
+- q: "A module registers a global polyfill at import time. Why does that matter for bundle size?"
+  anchor: "Code that runs when a module is imported (even if nothing is explicitly called); prevents tree shaking"
+  options:
+    - text: "It does not — the polyfill itself is small"
+      correct: false
+      why: "Its own size is not the issue. The bundler can no longer prove the module is safe to remove."
+    - text: "It is a side effect, so the bundler cannot tree-shake the module away"
+      correct: true
+      why: "`\"sideEffects\"` in `package.json` is how a package declares which files are safe to drop."
+    - text: "Polyfills are excluded from bundles by default"
+      correct: false
+      why: "Nothing excludes them by default. They are ordinary modules."
+
+- q: "A heavy editor is opened by 3% of users. What keeps it out of the initial bundle?"
+  anchor: "loads the component lazily on first render"
+  options:
+    - text: "Tree shaking — it removes what most users never reach"
+      correct: false
+      why: "Tree shaking removes what is never imported. This one is imported; it is merely rarely rendered."
+    - text: "`next/dynamic(() => import('./Editor'))` — loaded lazily on first render"
+      correct: true
+      why: "Code splitting puts it in its own chunk, fetched only when it is actually needed."
+    - text: "A barrel file, so the import resolves lazily"
+      correct: false
+      why: "Barrels work against splitting, not for it."
+```
+
 ## Key Concepts
 - **Tree shaking**: Dead code elimination — bundler removes exports that are never imported; requires ES modules
 - **Code splitting**: Divides bundle into chunks loaded on demand; Next.js does this per route automatically
@@ -145,3 +186,21 @@ import { Modal } from '@/components/ui/modal';
 - **Next.js documentation — "Optimizing: Bundle Analyzer"** — Official setup guide for `@next/bundle-analyzer`; the starting point for any bundle size investigation
 - **"How We Reduced Our JavaScript Bundle Size by 33%" by Storybook Blog** — A real-world case study; the techniques (barrel file elimination, dynamic imports) apply directly to Next.js apps
 - [**"Bundlephobia"](https://bundlephobia.com)** — Check any npm package's bundle size, tree-shaking support, and whether it's ES module compatible before installing it
+
+```recall
+- q: "What is tree shaking, and what does it require?"
+  must:
+    - "dead code elimination — the bundler removes exports that are never imported"
+    - "it requires ES modules"
+
+- q: "What is code splitting, and what does Next.js do automatically?"
+  must:
+    - "it divides the bundle into chunks loaded on demand"
+    - "Next.js splits per route automatically"
+    - "a chunk is a separate JS file the browser loads independently"
+
+- q: "What shows you what is in the bundle, and what do import hint comments do?"
+  must:
+    - "`next/bundle-analyzer` visualizes bundle composition and identifies which libraries take the most space"
+    - "`/* webpackChunkName: \"editor\" */` gives a dynamic import chunk a human-readable name"
+```
