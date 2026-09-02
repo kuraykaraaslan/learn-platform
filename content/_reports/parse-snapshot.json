@@ -1161,12 +1161,12 @@
       },
       "244_feedback_triage_bug_vs_change_request.md": {
         "title": "f37011b1c4db85c8",
-        "whatItIs": "d3a898296ed8a9be",
+        "whatItIs": "05d77c25e6c1e947",
         "keyConcepts": "80ba9c6111fe9f44",
         "exampleCode": "0cdce2c05c5260e3",
         "whenToUse": "ca7e20eec9ad178f",
         "commonMistakes": "37cdc4a0a528e3a9",
-        "furtherReading": "459ec44ee655a64c"
+        "furtherReading": "33fba40764c6172d"
       },
       "245_quality_gates_demo_to_handover.md": {
         "title": "7e9938604d410a53",
@@ -1433,12 +1433,12 @@
       },
       "275_technical_writing_style_for_business_readers.md": {
         "title": "bb17442b6ae9a934",
-        "whatItIs": "18728734c2aad184",
+        "whatItIs": "6a5be9f893c28d43",
         "keyConcepts": "089356160644cc23",
         "exampleCode": "f9e18fa756790429",
         "whenToUse": "f40a0fb5e81ee16e",
         "commonMistakes": "3ac34ef442b6dad7",
-        "furtherReading": "29825217902fb791"
+        "furtherReading": "da2ad2ed84c74025"
       },
       "276_content_repurposing_one_idea_many_assets.md": {
         "title": "3d42370ce267e9be",
@@ -1496,12 +1496,12 @@
       },
       "282_technical_seo_foundations_crawl_render_index.md": {
         "title": "b424a1b0cdd0b015",
-        "whatItIs": "92af398f5b74ce1f",
+        "whatItIs": "4fd185b49769a80d",
         "keyConcepts": "816defd451cb0fc8",
         "exampleCode": "1290f771cea3da83",
         "whenToUse": "3f4258828ffe7a34",
         "commonMistakes": "f9192a3b0612a0c8",
-        "furtherReading": "8726decd84da9b0e"
+        "furtherReading": "24ac64f0480fc903"
       },
       "283_metadata_titles_descriptions_and_canonical_url_strategy.md": {
         "title": "19a32a42abff167d",
@@ -2415,12 +2415,12 @@
     "framework-deep-dives": {
       "396_express_two_layer_architecture.md": {
         "title": "1a88fa5ca9c616f1",
-        "whatItIs": "85f3163fae2bd4f2",
+        "whatItIs": "cf81375ae12c3b4d",
         "keyConcepts": "1f8c5a2d3209dceb",
         "exampleCode": "12928f7d30bc32cc",
         "whenToUse": "1a16cfd67f3512bb",
         "commonMistakes": "c395f733c402b730",
-        "furtherReading": "4820f3332c5fa313"
+        "furtherReading": "b31d1633639c5c0c"
       },
       "397_express_middleware_pipeline_and_security.md": {
         "title": "0c0961c0980d19be",

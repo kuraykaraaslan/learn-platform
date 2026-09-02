@@ -9,6 +9,35 @@ Indexing is a deliberate choice, not a default outcome: admin pages, login/regis
 
 When a page mysteriously isn't showing up in search, the debugging path is always the same sequence: check the status code, then robots.txt, then meta robots, then the X-Robots-Tag header, then the canonical tag, then whether any page actually links to it internally, then sitemap inclusion, then whether the rendered content is actually visible, then whether it's a duplicate of something else, then overall page quality, then server errors, and finally Search Console's own URL inspection tool for a direct answer. Working this checklist in order finds the actual blocker far faster than guessing.
 
+
+```quiz
+- q: "A page has excellent content and clean metadata but gets no traffic at all. What does the lesson say to check first?"
+  anchor: "three gates in sequence"
+  options:
+    - text: "Keyword targeting and search intent match"
+      correct: false
+      why: "That is content-quality work, and it cannot help a page that never made it into the index."
+    - text: "Whether it is crawled, rendered and indexed \u2014 in that order"
+      correct: true
+      why: "Three gates in sequence. Work past a gate that never opened is wasted no matter how good it is."
+    - text: "Backlink profile and domain authority"
+      correct: false
+      why: "Authority influences ranking among indexed pages. It does nothing for a page that was never stored."
+
+- q: "The page renders fine in your browser but the crawler sees an empty shell. Which gate failed?"
+  anchor: "no amount of good writing rescues a page the crawler never rendered correctly"
+  options:
+    - text: "Crawl \u2014 the bot could not fetch the URL"
+      correct: false
+      why: "It fetched it; that is why there is a shell to look at. Discovery worked."
+    - text: "Render \u2014 the content is behind client-only JavaScript the crawler never ran"
+      correct: true
+      why: "Your browser runs the JS, so you see the finished page. The crawler is judging what it could extract."
+    - text: "Index \u2014 the engine judged the content not worth storing"
+      correct: false
+      why: "That decision comes after rendering, and here there was no rendered content to judge."
+```
+
 ## Key Concepts
 - **The three gates**: Crawl → Render → Index, each a hard prerequisite for the next — a page failing any gate cannot perform regardless of content quality.
 - **Discoverability requirement**: important URLs must be reachable via internal links, sitemap, and navigation — never rely solely on search boxes, forms, or client-side-only events to expose a URL.
@@ -64,3 +93,23 @@ Bad:  /page?id=123, /blog/post_2026_final_v3
 - [Google Search Central's "Crawling and Indexing" documentation](https://developers.google.com/search/docs/crawling-indexing) — the authoritative technical reference
 - web.dev's guidance on rendering strategies for JavaScript frameworks — practical detail on SSR/SSG/hydration trade-offs for SEO
 - [Next.js `generateMetadata`](https://nextjs.org/docs/app/api-reference/functions/generate-metadata) — for confirming framework-specific rendering and metadata behaviour rather than assuming it
+
+```recall
+- q: "Name the three gates in order and what each one means."
+  must:
+    - "crawled \u2014 the bot can discover and fetch the URL"
+    - "rendered \u2014 the content is extractable, not client-only JS"
+    - "indexed \u2014 the engine decided to store and serve it"
+
+- q: "Why check the gates before content work?"
+  must:
+    - "a page past no gate cannot rank however good it is"
+    - "the effort is completely avoidable waste"
+    - "the gates are sequential, so the first failure hides the rest"
+
+- q: "How would you tell a render failure from a crawl failure?"
+  must:
+    - "a crawl failure means the URL was never fetched"
+    - "a render failure fetches fine but extracts an empty shell"
+    - "your own browser runs the JS, so it cannot tell you either way"
+```

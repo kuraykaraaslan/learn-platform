@@ -7,6 +7,35 @@ The starting move is to open with the problem, not the technology. "Redis is an 
 
 Depth should be calibrated to audience without pretending the audience doesn't exist: an SME owner needs business impact and a simple explanation; a founder needs the product trade-off plus the technical risk; an agency needs delivery-reliability language; a CTO or senior developer wants the actual pattern and constraint, not a metaphor standing in for it. The recommended shape for a piece that has to serve more than one of these at once is: state the problem, explain why it matters, name the common mistake, describe the better technical approach, name its trade-off, translate that into business/client impact, then close. Concrete scenarios do more work than abstract claims in every version of this — "in a ticketing system, the seat map affects pricing, inventory, reservation locks, refund logic, and admin reporting" teaches more in one sentence than a paragraph of general principles about "complexity."
 
+
+```quiz
+- q: "\"We use Redis for availability with TTL-backed keys.\" What is wrong with this for a mixed audience?"
+  anchor: "it keeps the mechanism but explains why it matters in terms the reader's role actually cares about"
+  options:
+    - text: "It is too technical and the detail should be removed"
+      correct: false
+      why: "Removing it produces the other failure mode \u2014 copy that could describe any agency and gives a technical reader nothing to trust."
+    - text: "It states the mechanism but never says why it matters to this reader"
+      correct: true
+      why: "Keep the mechanism, add the consequence in the terms of the reader's role. Both halves, not one."
+    - text: "Redis is an implementation detail that belongs in documentation, not marketing"
+      correct: false
+      why: "The mechanism is what earns technical trust. The problem is the missing second half, not its presence."
+
+- q: "What is the failure mode on the other side, and why is it worse than it looks?"
+  anchor: "indistinguishable from generic marketing copy"
+  options:
+    - text: "Writing that is too long for a busy buyer to finish"
+      correct: false
+      why: "Length is a separate problem and easily fixed. This one survives editing."
+    - text: "Stripping all technical detail until the copy could describe any vendor"
+      correct: true
+      why: "\"Secure, scalable solutions\" carries no signal \u2014 the technical reader has nothing to evaluate and the buyer nothing to distinguish."
+    - text: "Using industry jargon the buyer does not know"
+      correct: false
+      why: "That is the first failure mode restated. The opposite one is the absence of substance, not its obscurity."
+```
+
 ## Key Concepts
 - **Problem-first opening**: start with what goes wrong or what's at stake before introducing the technology that fixes it — technology-first openings lose the reader who doesn't already care.
 - **Show the trade-off, not just the choice**: "I would not use X for every project" followed by when it makes sense and when it's overkill demonstrates judgment; a bare recommendation does not.
@@ -61,3 +90,23 @@ human memory."
 - *On Writing Well* — William Zinsser: the classic general reference for clear, jargon-aware nonfiction prose, directly applicable to technical writing for mixed audiences
 - [Julia Evans' technical zines and blog](https://jvns.ca) — a widely cited example of explaining deep technical mechanisms in plain, concrete language without dumbing them down
 - [Google's Technical Writing courses](https://developers.google.com/tech-writing) — a free, practical curriculum on writing for both technical and non-technical readers
+
+```recall
+- q: "Name the two failure modes and what each costs."
+  must:
+    - "stripping the detail until it reads as generic marketing"
+    - "dumping unexplained implementation detail"
+    - "the first loses technical trust, the second loses the buyer"
+
+- q: "State the rule that avoids both."
+  must:
+    - "keep the mechanism"
+    - "add why it matters in terms of the reader's role"
+    - "neither half works alone"
+
+- q: "How would you rewrite a bare technical claim for a mixed audience?"
+  must:
+    - "name the mechanism plainly"
+    - "state the consequence the reader's role cares about"
+    - "let the technical reader verify and the buyer decide"
+```

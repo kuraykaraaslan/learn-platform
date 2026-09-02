@@ -7,6 +7,35 @@ The classification itself is investigative, not diplomatic. A bug is a failure o
 
 Feedback also arrives scattered — a chat message here, a call there, a screenshot in an email — and the discipline starts before classification even begins: consolidate it into one list first. Triaging feedback one item at a time as it trickles in is how a defined review round quietly turns into unlimited, unstructured revisions. The right sequence is collect, categorize, respond with the categorized breakdown, then act only on what's approved.
 
+
+```quiz
+- q: "A client writes \"the export is broken \u2014 it should also include archived records.\" What is it?"
+  anchor: "the response, the cost, and who owns the fix are completely different"
+  options:
+    - text: "A bug \u2014 the client says the feature does not work"
+      correct: false
+      why: "Their word is the symptom, not the classification. Nothing here says the built behaviour fails its own spec."
+    - text: "A change request \u2014 the export works as specified, and the ask is new behaviour"
+      correct: true
+      why: "Classify before responding: the cost, the timeline and who owns it all change on this answer."
+    - text: "A configuration issue \u2014 archived records are probably filtered by a setting"
+      correct: false
+      why: "Possible, and worth checking, but you would be guessing at the cause instead of first deciding the category."
+
+- q: "Why does accepting the client's own label quietly erode scope?"
+  anchor: "everything gets called a \"bug\" because bugs are free"
+  options:
+    - text: "Because clients deliberately mislabel work to avoid paying"
+      correct: false
+      why: "It rarely needs bad faith. \"Broken\" is simply how a mismatch with expectation feels from the outside."
+    - text: "Because bugs are free, so unclassified work drifts into the free bucket by default"
+      correct: true
+      why: "The developer then either absorbs unpaid work or has a harder conversation later than the early one would have been."
+    - text: "Because bug reports skip the change-request queue and get done sooner"
+      correct: false
+      why: "Sequencing is a symptom. The erosion is about who pays, not about order."
+```
+
 ## Key Concepts
 - **Investigate, don't accept the client's label**: a client calling something a "bug" doesn't make it one — check it against what was actually agreed and delivered before responding
 - **Six categories, not two**: bug, change request, enhancement, configuration issue, training issue, and third-party issue each route to a different owner and a different cost model
@@ -54,3 +83,26 @@ Feedback also arrives scattered — a chat message here, a call there, a screens
 - Joel Spolsky, "The Joel Test" and associated writing on bug tracking discipline — on why every reported issue needs a written, classified record before action
 - Atlassian, "Bug vs. feature request: how to tell the difference" — practical framing for triage in a support queue: https://www.atlassian.com/agile/product-management/bug-tracking
 - David Maister, *Managing the Professional Service Firm* — on maintaining client trust by naming trade-offs honestly instead of always saying yes
+
+```recall
+- q: "List the categories a piece of client feedback can fall into."
+  must:
+    - "bug"
+    - "change request"
+    - "enhancement"
+    - "configuration issue"
+    - "training issue"
+    - "third-party problem"
+
+- q: "Why classify before responding?"
+  must:
+    - "the response, the cost and the owner all differ by category"
+    - "answering first commits you to a category implicitly"
+    - "the early conversation is much easier than the late one"
+
+- q: "What is the failure mode of accepting the client's label?"
+  must:
+    - "everything becomes a bug, because bugs are free"
+    - "new work quietly enters the unpaid bucket"
+    - "the correction, when it comes, feels like a reversal"
+```

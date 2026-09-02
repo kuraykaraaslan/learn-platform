@@ -7,6 +7,35 @@ The route file's job is narrow: parse `req.body`/`req.query`/`req.params` with Z
 
 Modules are organized by domain, not by technical layer: `modules/auth/auth.route.ts` sits next to `modules/auth/auth.service.ts`, `auth.dto.ts` (Zod schemas), and `auth.messages.ts` (string constants). This module-first layout means a developer working on the auth feature opens one folder, not four scattered directories keyed by "routes", "services", "models". Two top-level routers — `systemRouter` and `tenantRouter` — aggregate every module's router under `/api/v1/system/*` and `/api/v1/tenant/:tenantId/*` respectively, giving the whole API a predictable, greppable path convention.
 
+
+```quiz
+- q: "Where does input validation live in this two-layer shape?"
+  anchor: "the route validates input and shapes the HTTP response, and the service does everything else"
+  options:
+    - text: "In the service, so it is reused by every caller"
+      correct: false
+      why: "The service does everything else, but validation and HTTP shaping are the route's two jobs in this split."
+    - text: "In the route, along with shaping the HTTP response"
+      correct: true
+      why: "Those are precisely the route's two responsibilities; the service holds the rest, TypeORM included."
+    - text: "In a middleware layer between the two"
+      correct: false
+      why: "There is no third layer here \u2014 that is the simplification the lesson is arguing for."
+
+- q: "Why does this shop skip the Repository layer that a Spring Boot project would have?"
+  anchor: "wrapping them in a fourth abstraction buys nothing in a TypeScript codebase"
+  options:
+    - text: "TypeScript cannot express the repository pattern cleanly"
+      correct: false
+      why: "It expresses it fine. The argument is about value, not capability."
+    - text: "TypeORM repositories are already light enough that another wrapper adds nothing"
+      correct: true
+      why: "Java treats JpaRepository as a first-class independently testable unit; TypeORM does not need the same scaffolding."
+    - text: "Repositories make testing harder in Node"
+      correct: false
+      why: "They do not particularly. The claim is that the extra layer earns nothing here, not that it costs something."
+```
+
 ## Key Concepts
 - **Route handler**: validates input with Zod, calls one service method, maps the result to `res.status(...).json(...)` — contains zero business logic
 - **Static service class**: `static async` methods hold all business logic and DB access; services never import Express types (`Request`, `Response`)
@@ -111,3 +140,23 @@ export default tenantRouter;
 - Express official routing guide: https://expressjs.com/en/guide/routing.html
 - Express 5 migration guide (wildcard route removal): https://expressjs.com/en/guide/migrating-5.html
 - Martin Fowler — "PresentationDomainDataLayering": https://martinfowler.com/bliki/PresentationDomainDataLayering.html
+
+```recall
+- q: "Describe the two layers and what each owns."
+  must:
+    - "route \u2014 validates input and shapes the HTTP response"
+    - "service \u2014 everything else, including TypeORM directly"
+    - "no separate controller, no separate repository"
+
+- q: "Why is this not simply a worse version of the three-layer model?"
+  must:
+    - "TypeORM repositories are already light abstractions"
+    - "a fourth wrapper adds indirection without testability gains"
+    - "Java's JpaRepository is a first-class unit, TypeORM's is not"
+
+- q: "What would tell you this shape has stopped fitting?"
+  must:
+    - "services that only forward calls to other services"
+    - "route handlers accumulating business rules"
+    - "the same query logic duplicated across services"
+```
