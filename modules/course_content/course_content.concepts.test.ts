@@ -38,7 +38,33 @@ describe('assertNoGenericTerms', () => {
 
 describe('buildConceptIndex', () => {
   it('returns a null pattern for an empty glossary', () => {
-    expect(buildConceptIndex({})).toEqual({ lookup: new Map(), pattern: null });
+    const { lookup, pattern } = buildConceptIndex({});
+    expect(lookup).toEqual(new Map());
+    expect(pattern).toBeNull();
+  });
+
+  it('resolve() requires an all-caps acronym to be written in caps', () => {
+    // The regression this guards: "BASE" (the ACID counterpart) matched the
+    // ordinary English word "base" and wrapped it in 18 lessons — "base case",
+    // "base class", "base price" — each one handing the reader a tooltip about
+    // eventual consistency.
+    const { resolve, pattern } = buildConceptIndex({
+      base: { term: 'BASE', short: 'x', lesson: 1 },
+    });
+    expect(resolve('BASE')?.slug).toBe('base');
+    expect(resolve('base')).toBeUndefined();
+    expect(resolve('Base')).toBeUndefined();
+    // The pattern still finds the word — the case rule is applied on resolve,
+    // so a lowercase hit is matched and then declined rather than never seen.
+    expect(pattern!.test('a base case')).toBe(true);
+  });
+
+  it('resolve() leaves ordinary terms case-insensitive', () => {
+    const { resolve } = buildConceptIndex({
+      'idempotency-key': { term: 'idempotency key', short: 'x', lesson: 1 },
+    });
+    for (const written of ['idempotency key', 'Idempotency Key', 'IDEMPOTENCY KEY'])
+      expect(resolve(written)?.slug).toBe('idempotency-key');
   });
 
   it('matches the canonical term and every alias, case-insensitively', () => {

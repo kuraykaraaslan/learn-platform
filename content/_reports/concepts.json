@@ -4,11 +4,12 @@
   "totalLessons": 412,
   "totals": {
     "neverMatched": 0,
-    "neverLinked": 16,
+    "neverLinked": 17,
     "neverLinkedByCause": {
       "own-lesson-only": 2,
-      "code-only": 13,
+      "code-only": 12,
       "shadowed": 0,
+      "case-mismatch": 2,
       "cap-starved": 1,
       "never-matched": 0
     },
@@ -16,6 +17,14 @@
   },
   "neverMatched": [],
   "neverLinked": [
+    {
+      "slug": "base",
+      "term": "BASE",
+      "cause": "case-mismatch",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
+    },
     {
       "slug": "correlation-id",
       "term": "Correlation ID",
@@ -29,12 +38,10 @@
     {
       "slug": "cve",
       "term": "CVE",
-      "cause": "code-only",
+      "cause": "case-mismatch",
       "linkableInLessons": [],
       "presentInLessons": [],
-      "alsoAppearsInLessons": [
-        361
-      ]
+      "alsoAppearsInLessons": []
     },
     {
       "slug": "dip",
@@ -43,7 +50,6 @@
       "linkableInLessons": [],
       "presentInLessons": [],
       "alsoAppearsInLessons": [
-        117,
         122
       ]
     },
@@ -290,27 +296,8 @@
     {
       "slug": "base",
       "term": "BASE",
-      "lessonsLinkedIn": [
-        "algorithms-concurrency/130_data_structures_algorithms_practice.md",
-        "architecture-design-patterns-testing/64_solid_principles.md",
-        "architecture-design-patterns-testing/71_test_pyramid.md",
-        "business-finance-solo-ops/330_pricing_for_margin.md",
-        "business-finance-solo-ops/331_productized_offer_catalog.md",
-        "client-delivery-pm-handover/252_database_api_and_integration_handover_docs.md",
-        "client-delivery-pm-handover/269_scope_ladders_included_vs_priced_add_ons.md",
-        "content-seo-personal-brand/277_content_calendar_cadence_and_quality_gate.md",
-        "contracts-pricing-legal/214_change_request_control.md",
-        "database-advanced/43_zero_downtime_database_migration.md",
-        "database-advanced/49_backup_strategy_rto_rpo_restore_testing.md",
-        "fundamentals-tools/120_git_fundamentals.md",
-        "fundamentals-tools/122_oop_data_structures_basics.md",
-        "observability-deployment/61_alerting_design.md",
-        "saas-business-skills/86_saas_metrics.md",
-        "saas-business-skills/90_accessibility.md",
-        "security/32_jwt_security_rs256_hs256_rotation.md",
-        "security/33_ssrf_server_side_request_forgery.md"
-      ],
-      "rawOccurrences": 81
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 5
     },
     {
       "slug": "billable-utilization",
@@ -488,7 +475,7 @@
       "slug": "cve",
       "term": "CVE",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 6
+      "rawOccurrences": 3
     },
     {
       "slug": "data-minimization",
@@ -549,7 +536,7 @@
       "slug": "dip",
       "term": "DIP",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 6
+      "rawOccurrences": 5
     },
     {
       "slug": "dkim",
@@ -565,7 +552,7 @@
       "lessonsLinkedIn": [
         "content-seo-personal-brand/305_deliverability_list_hygiene_reengagement_and_metrics.md"
       ],
-      "rawOccurrences": 20
+      "rawOccurrences": 19
     },
     {
       "slug": "domain-event",
@@ -711,7 +698,7 @@
         "saas-business-skills/87_payment_integration_depth.md",
         "security/34_timing_attack_constant_time_comparison.md"
       ],
-      "rawOccurrences": 23
+      "rawOccurrences": 21
     },
     {
       "slug": "hmac-sha256",
@@ -784,7 +771,7 @@
         "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
         "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
       ],
-      "rawOccurrences": 42
+      "rawOccurrences": 41
     },
     {
       "slug": "lazy-loading",
@@ -835,7 +822,7 @@
         "saas-business-skills/87_payment_integration_depth.md",
         "saas-business-skills/93_ab_test_infrastructure.md"
       ],
-      "rawOccurrences": 39
+      "rawOccurrences": 26
     },
     {
       "slug": "n-plus-1-query",
@@ -1156,16 +1143,17 @@
         "observability-deployment/61_alerting_design.md",
         "product-technical-strategy/391_nfr_production_readiness_strategy.md"
       ],
-      "rawOccurrences": 23
+      "rawOccurrences": 19
     },
     {
       "slug": "slo",
       "term": "SLO",
       "lessonsLinkedIn": [
         "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
+        "observability-deployment/61_alerting_design.md",
         "product-technical-strategy/391_nfr_production_readiness_strategy.md"
       ],
-      "rawOccurrences": 37
+      "rawOccurrences": 31
     },
     {
       "slug": "soft-delete",

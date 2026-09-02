@@ -30,7 +30,7 @@ export function remarkConcepts() {
     // read) — rebuilding the ~120-term lookup/regex per section is cheap
     // relative to the rest of this pipeline, and it means content/concepts.json
     // is never a step behind a mocked or edited version.
-    const { lookup, pattern } = buildConceptIndex(loadConcepts());
+    const { resolve, pattern } = buildConceptIndex(loadConcepts());
     if (!pattern) return;
 
     // Rebound as plain consts so TypeScript narrows them inside the nested
@@ -67,7 +67,7 @@ export function remarkConcepts() {
 
         matchPattern.lastIndex = 0;
         for (let match = matchPattern.exec(value); match; match = matchPattern.exec(value)) {
-          const found = lookup.get(match[0].toLowerCase());
+          const found = resolve(match[0]);
           if (!found) continue;
           const { slug, concept } = found;
 

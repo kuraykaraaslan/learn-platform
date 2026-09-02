@@ -53,13 +53,13 @@ const rawOccurrences = new Map<string, number>();
 const rawByLesson = new Map<string, number[]>();
 if (pattern) {
   for (const slug of Object.keys(concepts)) rawOccurrences.set(slug, 0);
-  const lookup = buildConceptIndex(concepts).lookup;
+  const resolveRaw = buildConceptIndex(concepts).resolve;
   for (const courseSlug of listCourseSlugs()) {
     for (const item of readCourseManifest(courseSlug).items) {
       const raw = readLessonMarkdown(courseSlug, item.file);
       pattern.lastIndex = 0;
       for (const match of raw.matchAll(pattern)) {
-        const found = lookup.get(match[0].toLowerCase());
+        const found = resolveRaw(match[0]);
         if (!found) continue;
         rawOccurrences.set(found.slug, (rawOccurrences.get(found.slug) ?? 0) + 1);
         const seen = rawByLesson.get(found.slug) ?? [];
@@ -97,13 +97,27 @@ const linkableByLesson = new Map<string, number[]>(); // pattern resolved TO thi
 // can match. That is a distinct failure from occurring only inside code.
 const presentByLesson = new Map<string, number[]>();
 const presentRawByLesson = new Map<string, number[]>();
-const plainRe = new Map<string, RegExp>();
+const looseRawByLesson = new Map<string, number[]>();
+const plainRe = new Map<string, RegExp>();      // as the acronym rule requires
+const plainReLoose = new Map<string, RegExp>(); // ignoring case entirely
+const esc = (v: string) => v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const acronym = (v: string) => /^[A-Z][A-Z0-9-]+$/.test(v);
 for (const [slug, c] of Object.entries(concepts)) {
-  const variants = [c.term, ...(c.aliases ?? [])].map((v) => v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
-  plainRe.set(slug, new RegExp(`\\b(?:${variants.join('|')})\\b`, 'i'));
+  const variants = [c.term, ...(c.aliases ?? [])];
+  // An acronym only counts where it is written in capitals — same rule
+  // buildConceptIndex's resolve() applies, so the report cannot claim a term
+  // is reachable in prose the linker will refuse.
+  const caseAware = variants.map((v) => (acronym(v) ? `(?-i:${esc(v)})` : esc(v)));
+  plainRe.set(
+    slug,
+    variants.every(acronym)
+      ? new RegExp(`\\b(?:${variants.map(esc).join('|')})\\b`)
+      : new RegExp(`\\b(?:${caseAware.join('|')})\\b`, 'i')
+  );
+  plainReLoose.set(slug, new RegExp(`\\b(?:${variants.map(esc).join('|')})\\b`, 'i'));
 }
 {
-  const { lookup, pattern } = buildConceptIndex(concepts);
+  const { resolve, pattern } = buildConceptIndex(concepts);
   if (pattern) {
     for (const courseSlug of listCourseSlugs()) {
       for (const item of readCourseManifest(courseSlug).items) {
@@ -111,7 +125,7 @@ for (const [slug, c] of Object.entries(concepts)) {
         const text = linkableText(Object.values(sections).join('\n\n'));
         pattern.lastIndex = 0;
         for (const match of text.matchAll(pattern)) {
-          const found = lookup.get(match[0].toLowerCase());
+          const found = resolve(match[0]);
           if (!found) continue;
           const seen = linkableByLesson.get(found.slug) ?? [];
           if (!seen.includes(item.id)) seen.push(item.id);
@@ -128,6 +142,11 @@ for (const [slug, c] of Object.entries(concepts)) {
             const seen = presentRawByLesson.get(slug) ?? [];
             if (!seen.includes(item.id)) seen.push(item.id);
             presentRawByLesson.set(slug, seen);
+          }
+          if (plainReLoose.get(slug)!.test(rawMd)) {
+            const seen = looseRawByLesson.get(slug) ?? [];
+            if (!seen.includes(item.id)) seen.push(item.id);
+            looseRawByLesson.set(slug, seen);
           }
         }
       }
@@ -170,11 +189,16 @@ const neverLinked = byTerm
     // an overlapping span to whichever variant it reaches first, so using it to
     // answer "does this term occur here at all" mislabels a shadowed term as
     // one that simply never occurs. pool-exhaustion is the case that caught it.
+    const looseElsewhere = (looseRawByLesson.get(t.slug) ?? []).filter((id) => id !== own);
     const cause =
       presentRaw.length === 0
-        ? 'never-matched'
+        ? looseElsewhere.length > 0
+          ? 'case-mismatch'
+          : 'never-matched'
         : presentRaw.filter((id) => id !== own).length === 0
-          ? 'own-lesson-only'
+          ? looseElsewhere.length > 0
+            ? 'case-mismatch'
+            : 'own-lesson-only'
           : linkableElsewhere.length > 0
             ? 'cap-starved'
             : presentElsewhere.length > 0
@@ -205,6 +229,7 @@ fs.writeFileSync(
           'own-lesson-only': neverLinked.filter((t) => t.cause === 'own-lesson-only').length,
           'code-only': neverLinked.filter((t) => t.cause === 'code-only').length,
           shadowed: neverLinked.filter((t) => t.cause === 'shadowed').length,
+          'case-mismatch': neverLinked.filter((t) => t.cause === 'case-mismatch').length,
           'cap-starved': neverLinked.filter((t) => t.cause === 'cap-starved').length,
           'never-matched': neverLinked.filter((t) => t.cause === 'never-matched').length,
         },
@@ -225,8 +250,10 @@ console.log(
 );
 const count = (c: string) => neverLinked.filter((t) => t.cause === c).length;
 console.log(
-  `${neverLinked.length} terms never render a link  (own-lesson-only ${count('own-lesson-only')} · code-only ${count('code-only')} · shadowed ${count('shadowed')} · cap-starved ${count('cap-starved')} · never-matched ${count('never-matched')})`
+  `${neverLinked.length} terms never render a link  (own-lesson-only ${count('own-lesson-only')} · code-only ${count('code-only')} · shadowed ${count('shadowed')} · case-mismatch ${count('case-mismatch')} · cap-starved ${count('cap-starved')} · never-matched ${count('never-matched')})`
 );
+for (const t of neverLinked.filter((x) => x.cause === 'case-mismatch'))
+  console.log(`  case-mismatch: ${t.slug} — an acronym, written in some other case wherever it appears outside its own lesson`);
 for (const t of neverLinked.filter((x) => x.cause === 'shadowed'))
   console.log(`  shadowed: ${t.slug} — words present in lesson(s) ${t.presentInLessons.join(', ')}, but an overlapping variant of another concept claims the span`);
 for (const t of neverLinked.filter((x) => x.cause === 'cap-starved'))

@@ -323,18 +323,18 @@
       },
       "130_data_structures_algorithms_practice.md": {
         "title": "c5101c905fe8c9b7",
-        "whatItIs": "a1d28daed5dd3692",
-        "keyConcepts": "b382eecfb3664758",
+        "whatItIs": "fa796ff55ce6275e",
+        "keyConcepts": "e07d5b3b2fe0d23f",
         "exampleCode": "3cf56d5839ad9f08",
         "whenToUse": "e4c5e47bbd7f2844",
-        "commonMistakes": "c7d5fd670f446bae",
+        "commonMistakes": "588d25f593270283",
         "furtherReading": "e058a551664c4710"
       }
     },
     "architecture-design-patterns-testing": {
       "64_solid_principles.md": {
         "title": "52839825e69590c5",
-        "whatItIs": "bfcbe7e4d52cf08d",
+        "whatItIs": "5f4c2fd43e6ad207",
         "keyConcepts": "d9d6972b2d71eed5",
         "exampleCode": "19123c6b9473553d",
         "whenToUse": "73112894a654b5bc",
@@ -397,7 +397,7 @@
       },
       "71_test_pyramid.md": {
         "title": "1ad84a9db7e73941",
-        "whatItIs": "36b4b94dda0eaf32",
+        "whatItIs": "0a092074821e784d",
         "keyConcepts": "41fcfa668ec1c21a",
         "exampleCode": "88921a049d5e03fd",
         "whenToUse": "adb3575982f40edb",
@@ -588,16 +588,16 @@
       },
       "330_pricing_for_margin.md": {
         "title": "70d448564f91e43e",
-        "whatItIs": "91069bf4e04be185",
-        "keyConcepts": "9b4019ca2ee7c9de",
-        "exampleCode": "2b2edb173dcd5a16",
+        "whatItIs": "72f1227489b6dd44",
+        "keyConcepts": "ec2128c0195e7b47",
+        "exampleCode": "7f078cef3e1cb496",
         "whenToUse": "f78fdc85cc9f27a4",
         "commonMistakes": "72715fe14ab0c1b6",
         "furtherReading": "003e5281c6fda16c"
       },
       "331_productized_offer_catalog.md": {
         "title": "4fdbf50dc34b0835",
-        "whatItIs": "f902225a14e3cdaf",
+        "whatItIs": "1595113cc7180a79",
         "keyConcepts": "91b701942810ace2",
         "exampleCode": "e8c5e9e45254c6a5",
         "whenToUse": "475d8ea314f93247",
@@ -1234,7 +1234,7 @@
       "252_database_api_and_integration_handover_docs.md": {
         "title": "b0126545d6f8fed8",
         "whatItIs": "12cb4d268dae185e",
-        "keyConcepts": "c972b296517b9be5",
+        "keyConcepts": "7faf2e83bdedcc48",
         "exampleCode": "e14ba96909e578c2",
         "whenToUse": "61c896af67387fc2",
         "commonMistakes": "5bd2348d574a5e28",
@@ -1386,11 +1386,11 @@
       },
       "269_scope_ladders_included_vs_priced_add_ons.md": {
         "title": "d4f7745135db0d72",
-        "whatItIs": "74aab001250db32d",
-        "keyConcepts": "01fcb675f7d0749d",
+        "whatItIs": "deee8a183ffe1904",
+        "keyConcepts": "6f921e47f1f0d230",
         "exampleCode": "babe9535ebcba127",
         "whenToUse": "8fab6ad69891bac1",
-        "commonMistakes": "b5aecc7835e7bc84",
+        "commonMistakes": "dc8b0666f57f864a",
         "furtherReading": "558a583bd7588c47"
       }
     },
@@ -1451,7 +1451,7 @@
       },
       "277_content_calendar_cadence_and_quality_gate.md": {
         "title": "6f4c1cca2161de69",
-        "whatItIs": "8da923ee29a71761",
+        "whatItIs": "d41c2476c36e5351",
         "keyConcepts": "1ef34cc9000f9042",
         "exampleCode": "b2c802dab25f4b11",
         "whenToUse": "ad10b0293f539c54",
@@ -1903,7 +1903,7 @@
       },
       "214_change_request_control.md": {
         "title": "3c4400bd3910ddd6",
-        "whatItIs": "9f6ba04e784425fd",
+        "whatItIs": "f063cbf055e6497e",
         "keyConcepts": "dca15af1e1dd6e16",
         "exampleCode": "0ee2b6a21a04a335",
         "whenToUse": "e0ca740cc4f2af3b",
@@ -2103,7 +2103,7 @@
       },
       "43_zero_downtime_database_migration.md": {
         "title": "08f20a5d6bf010c9",
-        "whatItIs": "fcfdea0f8c81f28f",
+        "whatItIs": "abf870d1217a1b84",
         "keyConcepts": "239d768bb0216d57",
         "exampleCode": "76bcb9b0b5aa5b54",
         "whenToUse": "37a2193f4946abf9",
@@ -2158,7 +2158,7 @@
       "49_backup_strategy_rto_rpo_restore_testing.md": {
         "title": "a8f5deae2e31e0cd",
         "whatItIs": "174608499e6c401e",
-        "keyConcepts": "c797f391d09f7dde",
+        "keyConcepts": "5773658bcc5f1de0",
         "exampleCode": "02402a9a7ca49cd5",
         "whenToUse": "d49f831e8d8279ee",
         "commonMistakes": "e7e58942239668f4",
@@ -2815,8 +2815,8 @@
       },
       "120_git_fundamentals.md": {
         "title": "e7526fc6fa697b18",
-        "whatItIs": "705e6e6796ef9b5a",
-        "keyConcepts": "6b3b39ffad2a6ce6",
+        "whatItIs": "09aa8c40f5f0efa4",
+        "keyConcepts": "0d92ddb23404013a",
         "exampleCode": "d8ed053abdb14872",
         "whenToUse": "c1d0b509709c27d4",
         "commonMistakes": "5e90eead790f9238",
@@ -2833,7 +2833,7 @@
       },
       "122_oop_data_structures_basics.md": {
         "title": "864b58cdaeba6d06",
-        "whatItIs": "436011730e774046",
+        "whatItIs": "5e38663cc9b16e98",
         "keyConcepts": "6c4c00ecf202a36f",
         "exampleCode": "bebda6395aeb1425",
         "whenToUse": "58f487e974b6a181",
@@ -2988,8 +2988,8 @@
       },
       "61_alerting_design.md": {
         "title": "b10b18bc0699b390",
-        "whatItIs": "842d7dfea1a6397e",
-        "keyConcepts": "4dc8573dd6df5ef5",
+        "whatItIs": "809cc711de777131",
+        "keyConcepts": "3d77568466445204",
         "exampleCode": "1d26f0ab162999f1",
         "whenToUse": "9c0ca084a1c8666d",
         "commonMistakes": "ff4b2e7205985957",
@@ -3565,7 +3565,7 @@
     "saas-business-skills": {
       "86_saas_metrics.md": {
         "title": "8ff99fb7742f487e",
-        "whatItIs": "db1a6acbd1ccc741",
+        "whatItIs": "a61ad097fbef622c",
         "keyConcepts": "078b8b74b6babb21",
         "exampleCode": "29c1609ebe83e257",
         "whenToUse": "a945f3b6c080b1ac",
@@ -3604,7 +3604,7 @@
         "whatItIs": "1383dc0b035e705c",
         "keyConcepts": "94a375f5fd7a0348",
         "exampleCode": "d78f46570d0bb8d4",
-        "whenToUse": "fe8561f72b629353",
+        "whenToUse": "0cdc876f8532c278",
         "commonMistakes": "aa69ef32f4211434",
         "furtherReading": "9a7cf068aee2412b"
       },
@@ -3669,7 +3669,7 @@
         "whatItIs": "7bafb3d8398941c0",
         "keyConcepts": "e33c81798d552c16",
         "exampleCode": "a88b8d1f1e77539c",
-        "whenToUse": "8ed31c596c8cb593",
+        "whenToUse": "3b24598c19af1057",
         "commonMistakes": "3ec707a94951aa9a",
         "furtherReading": "1e1a788a9e005c27"
       },
@@ -3678,7 +3678,7 @@
         "whatItIs": "7fda9b2f3c198240",
         "keyConcepts": "3a16450742d7d186",
         "exampleCode": "fa299209855a939b",
-        "whenToUse": "0b6404f657a7d38c",
+        "whenToUse": "aef97af5ca9d2305",
         "commonMistakes": "9a907e74510991f2",
         "furtherReading": "9796cef6e8a25162"
       },

@@ -94,27 +94,53 @@ export type ConceptSummary = {
  * matches any of them as a whole word/phrase. Longest-first so "idempotency
  * key" is tried before a shorter alias that happens to be its prefix.
  */
+/** A variant written entirely in capitals is an acronym, and the capitals are
+ *  the signal. Matching it case-insensitively is how "BASE" (the ACID
+ *  counterpart) came to wrap the ordinary English word "base" in 18 lessons —
+ *  "base case", "base class", "base price" — handing the reader a tooltip
+ *  about eventual consistency. Measured across the corpus, requiring exact
+ *  case for these drops 25 links and all 25 are that same mistake; no other
+ *  concept loses one, because every other acronym is written in capitals
+ *  wherever it appears. */
+function isAcronym(variant: string): boolean {
+  return /^[A-Z][A-Z0-9-]+$/.test(variant);
+}
+
 export function buildConceptIndex(concepts: Record<string, Concept>): {
   lookup: Map<string, ConceptMatch>;
   pattern: RegExp | null;
+  /** Resolves matched text to a concept, enforcing the acronym case rule.
+   *  Prefer this over reading `lookup` directly — a bare lookup cannot tell
+   *  "BASE" from "base". */
+  resolve: (matched: string) => ConceptMatch | undefined;
 } {
   const lookup = new Map<string, ConceptMatch>();
   const variants: string[] = [];
+  // lowercase key -> the exact capitalisation an acronym must be written in
+  const acronyms = new Map<string, string>();
 
   for (const [slug, concept] of Object.entries(concepts)) {
     for (const variant of [concept.term, ...(concept.aliases ?? [])]) {
       const key = variant.toLowerCase();
       if (!lookup.has(key)) lookup.set(key, { slug, concept });
+      if (isAcronym(variant) && !acronyms.has(key)) acronyms.set(key, variant);
       variants.push(variant);
     }
   }
 
-  if (variants.length === 0) return { lookup, pattern: null };
+  const resolve = (matched: string): ConceptMatch | undefined => {
+    const key = matched.toLowerCase();
+    const exact = acronyms.get(key);
+    if (exact !== undefined && matched !== exact) return undefined;
+    return lookup.get(key);
+  };
+
+  if (variants.length === 0) return { lookup, pattern: null, resolve };
 
   const escaped = variants
     .sort((a, b) => b.length - a.length)
     .map((v) => v.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
   const pattern = new RegExp(`\\b(?:${escaped.join('|')})\\b`, 'gi');
 
-  return { lookup, pattern };
+  return { lookup, pattern, resolve };
 }
