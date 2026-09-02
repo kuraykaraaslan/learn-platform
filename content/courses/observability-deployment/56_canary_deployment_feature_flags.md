@@ -17,6 +17,21 @@ For a solo developer, both tools pay off more than you might think. A new paymen
 - **Flag evaluation context** — the data passed to the flag SDK at evaluation time: `userId`, `tenantId`, `plan`, `email`
 - **Technical debt from stale flags** — flags that are never cleaned up accumulate and make code unreadable; treat them as temporary
 
+```tradeoff
+question: "Put this change behind a canary, or behind a feature flag?"
+sides:
+  - name: "Canary deployment"
+    wins_when:
+      - signal: "the change is infrastructural \u2014 a runtime upgrade, a dependency bump, a rewritten data-access layer \u2014 with no single feature to toggle"
+      - signal: "what you need to watch is the new code path as a whole: error rate, latency and saturation, not one behaviour inside it"
+      - signal: "check whether your load balancer or ingress already does weighted routing; if it does not, the canary is a platform project first"
+  - name: "Feature flag"
+    wins_when:
+      - signal: "you can name the single user-visible behaviour that changes, which means it can go to 1% of users without a deployment"
+      - signal: "you want release decoupled from deploy \u2014 the code ships dark and turning it on stops being a deployment decision"
+      - signal: "you need to target by attribute rather than by traffic share: one tenant, one plan, a named beta cohort"
+```
+
 ## Example Code
 ```typescript
 // libs/feature-flags.ts — a minimal in-house feature flag evaluator

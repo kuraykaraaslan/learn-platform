@@ -17,6 +17,21 @@ For a multi-tenant SaaS starting from scratch, a hybrid is reasonable: URL versi
 - **Version lifetime**: How long you support an old version after releasing a new one — 6–12 months is common
 - **Changelog discipline**: Every breaking change must be documented with migration instructions before deployment
 
+```tradeoff
+question: "Version in the URL, or in a header?"
+sides:
+  - name: "URL versioning"
+    wins_when:
+      - signal: "your consumers reach for curl and Postman as much as an SDK \u2014 a version you can see is a version that shows up in their bug reports"
+      - signal: "you already route by path segment, so versioning adds no middleware you have to maintain"
+      - signal: "check whether your logs and dashboards can currently split traffic by version; with a path segment they can, with nothing else they cannot"
+  - name: "Header versioning"
+    wins_when:
+      - signal: "you intend to pin each consumer to a date and let them opt into breaking changes, rather than maintaining parallel URL trees forever"
+      - signal: "URL stability is something your consumers actually depend on \u2014 the identifier should not change because the contract did"
+      - signal: "check your CDN and cache-key configuration first: the version header has to be in `Vary`, and you have to control clients enough to guarantee it is always sent"
+```
+
 ## Example Code
 ```typescript
 // URL versioning in Next.js App Router

@@ -2131,7 +2131,7 @@
       "46_full_text_search_postgres_tsvector_elasticsearch.md": {
         "title": "012a518ae5669da5",
         "whatItIs": "5834984935f81985",
-        "keyConcepts": "66277b32edf9db30",
+        "keyConcepts": "2f6739843eb2e203",
         "exampleCode": "0cc96b368920bf71",
         "whenToUse": "b73ec2588c7710bf",
         "commonMistakes": "f20a26674209af0d",
@@ -2324,7 +2324,7 @@
       "09_api_versioning_strategies.md": {
         "title": "0fbe604bfd4b9124",
         "whatItIs": "f331a071eaf25ffe",
-        "keyConcepts": "d7bee574ffa17ced",
+        "keyConcepts": "e2ebf8ac39762ca0",
         "exampleCode": "df2d4e06238a3b4d",
         "whenToUse": "84729fab83e063fc",
         "commonMistakes": "888323068cf447d1",
@@ -2944,7 +2944,7 @@
       "56_canary_deployment_feature_flags.md": {
         "title": "0a12cbc194279878",
         "whatItIs": "ca6d50417a7c4b97",
-        "keyConcepts": "4304d5363c2c73fd",
+        "keyConcepts": "617468a10b9017a5",
         "exampleCode": "fdb7760550871fe8",
         "whenToUse": "f9c14e68a438b451",
         "commonMistakes": "74083ef952ceedc3",

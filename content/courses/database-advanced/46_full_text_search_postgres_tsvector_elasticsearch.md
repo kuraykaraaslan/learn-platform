@@ -17,6 +17,21 @@ Elasticsearch (and its managed equivalent, OpenSearch) is appropriate when your 
 - **Weighted columns** — Different parts of a document can carry different weight (`A` = title, `B` = body); title matches rank higher than body matches
 - **Elasticsearch** — Distributed search engine based on Apache Lucene; document-oriented; supports complex queries, aggregations, and real-time indexing
 
+```tradeoff
+question: "Postgres full-text search, or a dedicated search engine?"
+sides:
+  - name: "Postgres tsvector"
+    wins_when:
+      - signal: "run `SELECT count(*)` on the table you would actually index \u2014 a few million rows is still comfortably inside what GIN handles"
+      - signal: "count who would be on call for a second stateful system, and who patches it; if that list is one name, it is you"
+      - signal: "the requirement is stemming, ranking and phrase queries \u2014 write the requirement down and check whether tsquery already covers it"
+  - name: "Elasticsearch or similar"
+    wins_when:
+      - signal: "you can name the ticket that asked for faceting, aggregations, typo tolerance or per-language analyzers \u2014 not a feeling that search should be better"
+      - signal: "search queries appear in your slow-query log next to transactional work, so the two workloads are already competing"
+      - signal: "measure write latency on the indexed table with the GIN index in place; if index maintenance is visibly taxing writes, the search load has outgrown its host"
+```
+
 ## Example Code
 ```typescript
 // ─── Option A: PostgreSQL full-text search ────────────────────────────────
