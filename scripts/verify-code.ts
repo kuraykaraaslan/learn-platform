@@ -430,7 +430,17 @@ for (const r of results) for (const d of realDefects(r)) byClass.set(d.class, (b
 // Private aliases that cannot resolve for any reader — the first owner's repo.
 // Deliberately not /g: a global regex carries lastIndex across .test() calls,
 // so filtering a list with one skips every other match. This counter read 23
-// when the real number was higher, for exactly that reason.
+// when the real number was 31, for exactly that reason.
+//
+// What this number is NOT: a to-do list. Measured across the 21 fences that
+// carry these 51 imports, 11 point at a file the same fence declares and 40
+// point outside it, at a module the reader is meant to have in their own app
+// (`@/components/ui` in the barrel-import lesson IS the subject of that
+// lesson). Rewriting the 11 to relative paths buys nothing checkable either:
+// snippet files are written to disk under index names (`0012-03.ts`), so a
+// relative import cannot resolve here in any spelling — it just moves from one
+// tolerated missing-module to another. The count is a health signal about how
+// much corpus code assumes one specific repo layout, not a queue of fixes.
 const PRIVATE_ALIAS = /from\s+['"]@\/(libs|modules|stores|components)\//;
 const privateImports = results.filter((r) => PRIVATE_ALIAS.test(r.code));
 

@@ -165,6 +165,18 @@ Boot + `npm install` onlarca MB ve 10-30 sn. Bu yüzden:
       kılıyor. Yolu kasten bozarak ateşlendiği doğrulandı:
       `imports "./libs/app-errror.ts" … not one of the fence's files`
 
+      **Kuralın yalnız `run project`'e bakması bir eksiklik değil, gereklilik.**
+      (Ölçüldü 2026-09-02.) Aynı kontrolü tüm çok-dosyalı fence'lere genişletmek
+      denendi: 53 çok-dosyalı non-project TS fence'inde 29 göreli import var,
+      **18'i** fence'in tanımladığı bir dosyaya çözülmüyor — ve incelendiğinde
+      neredeyse hepsi meşru: 423 `./loadRendererContent`'i, 65
+      `./entities/user.entity`'yi import ediyor, ikisi de dersin göstermediği
+      komşular. Fark şu: `run project` fence'i **kapalı bir dünya** — mount
+      edilip çalıştırılıyor, yani çözülmeyen her import gerçekten patlar.
+      Sıradan bir açıklayıcı fence'te hiçbir şey çalışmıyor ve gösterilmeyen bir
+      komşuya atıfta bulunmak normal bir yazım tercihi. Genişletme 18 yanlış
+      pozitif üretirdi.
+
 Not: Kalan iki madde gerçek bir tarayıcıda StackBlitz WebContainer boot akışını
 manuel olarak açıp denemeyi gerektiriyor, otomatik test ortamında mümkün değil.
 Artık denenecek somut bir pilot var.
