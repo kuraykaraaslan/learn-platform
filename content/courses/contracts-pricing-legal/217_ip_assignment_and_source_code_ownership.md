@@ -7,6 +7,47 @@ The mechanism for transferring ownership differs by jurisdiction even though the
 
 The clause that actually protects a freelancer commercially is payment-contingent assignment: ownership transfers only upon receipt of full payment, not upon delivery. Framed well — "once it's paid, it's 100% yours, that's the deal" — this is standard, expected language that clients rarely push back on, and it gives the freelancer real leverage if a client tries to withhold final payment after receiving the work. Two categories deserve their own carve-outs in the same clause: pre-existing tools, generic components, and reusable know-how that the freelancer retains regardless of the engagement, and third-party open-source libraries, which remain governed by their own licenses no matter what the main assignment clause says. This lesson explains how IP assignment works conceptually — it is not a substitute for having your specific IP clause, and the governing law it relies on, reviewed by a lawyer qualified in your jurisdiction and your client's.
 
+```quiz
+- q: "A client has paid in full and taken delivery, and no IP clause was signed. Who owns the code?"
+  anchor: "Payment alone does not transfer ownership anywhere. Only a written, signed clause does that."
+  options:
+    - text: "The client — they commissioned it and paid for it"
+      correct: false
+      why: "In essentially every legal system the person who wrote the code owns it by default from the moment it was created."
+    - text: "The developer, unless a written signed clause transferred it"
+      correct: true
+      why: "Which is why this is the highest-stakes clause in a software contract, and also one of the easiest to get right."
+    - text: "Nobody, until delivery is formally accepted"
+      correct: false
+      why: "Ownership exists from the moment of creation. Acceptance is a separate question entirely."
+
+- q: "Why does the lesson recommend payment-contingent assignment?"
+  anchor: "ownership transfers only upon receipt of full payment, not upon delivery"
+  options:
+    - text: "It postpones the paperwork until the money has arrived"
+      correct: false
+      why: "The clause is signed up front. What is contingent is the transfer, not the agreement."
+    - text: "It gives real leverage if a client withholds final payment after receiving the work"
+      correct: true
+      why: "And framed as \"once it's paid, it's 100% yours, that's the deal\", it is standard language clients rarely push back on."
+    - text: "It removes the need for an assignment clause in jurisdictions that restrict assignment"
+      correct: false
+      why: "Those jurisdictions use an exclusive, irrevocable, perpetual licence instead — a different mechanism, not the absence of one."
+
+- q: "Which two categories need their own carve-outs inside the assignment clause?"
+  anchor: "pre-existing tools, generic components, and reusable know-how that the freelancer retains regardless of the engagement, and third-party open-source libraries"
+  options:
+    - text: "The client's brand assets and their existing database"
+      correct: false
+      why: "Those were never the freelancer's to assign, so they are not what a carve-out is for."
+    - text: "The freelancer's pre-existing tools and reusable know-how, and third-party open-source libraries"
+      correct: true
+      why: "The first is retained regardless of the engagement; the second stays governed by its own licences whatever the main clause says."
+    - text: "Test code and documentation, which are excluded by default anyway"
+      correct: false
+      why: "Nothing is excluded by default — writing the clause explicitly is the entire mechanism."
+```
+
 ## Key Concepts
 - **Default ownership rule**: the creator owns the work by default in virtually every jurisdiction; payment alone transfers nothing without a written assignment clause.
 - **Jurisdiction-dependent mechanism**: assignment (outright transfer), exclusive irrevocable license (used where full assignment to an individual is restricted), or work-made-for-hire (common-law doctrine making the hiring party the legal author from creation) — the right mechanism depends on governing law, not personal preference.
@@ -56,3 +97,30 @@ of final payment.
 - WIPO's introductory guides on copyright and software as a starting orientation to how authorship and assignment work internationally.
 - U.S. Copyright Office Circular 9 on "work made for hire" for a detailed look at one major jurisdiction's approach.
 - Orrick's or similar law firms' public client alerts on cross-border IP assignment in outsourced software development, as a starting point before engaging your own lawyer.
+
+```recall
+- q: "State the default ownership position and what actually changes it."
+  must:
+    - "the person who writes the code owns it by default from the moment it is created"
+    - "payment alone does not transfer ownership anywhere"
+    - "only a written, signed clause does"
+
+- q: "Name the three transfer mechanisms and when each applies."
+  must:
+    - "outright assignment language, which transfers ownership cleanly"
+    - "an exclusive, irrevocable, perpetual licence where full assignment by an individual creator is restricted — Germany and France are the cited examples"
+    - "work made for hire, making the hiring party the legal author from creation"
+    - "provided both sides signed a written agreement before the work began"
+
+- q: "What does payment-contingent assignment do, and how is it framed to a client?"
+  must:
+    - "ownership transfers only on receipt of full payment, not on delivery"
+    - "\"once it's paid, it's 100% yours, that's the deal\""
+    - "standard, expected language that clients rarely push back on"
+    - "it gives leverage if a client withholds final payment after receiving the work"
+
+- q: "What does this lesson explicitly not replace?"
+  must:
+    - "having your specific IP clause, and the governing law it relies on, reviewed by a lawyer"
+    - "one qualified in your jurisdiction and your client's"
+```

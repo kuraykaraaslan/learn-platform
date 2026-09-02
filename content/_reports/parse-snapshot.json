@@ -1894,12 +1894,12 @@
       },
       "213_deliverables_and_acceptance_criteria.md": {
         "title": "1abb302aa0b9e140",
-        "whatItIs": "e63fa3f9eb5f7845",
+        "whatItIs": "2e8aa3e1fceb583f",
         "keyConcepts": "159094608c6eb2be",
         "exampleCode": "a7a80ea22d97e143",
         "whenToUse": "7cd0cc95f5f0eef0",
         "commonMistakes": "c7e708378bcb7281",
-        "furtherReading": "d04810e0553d3ab1"
+        "furtherReading": "43ece81851da6fad"
       },
       "214_change_request_control.md": {
         "title": "3c4400bd3910ddd6",
@@ -1930,12 +1930,12 @@
       },
       "217_ip_assignment_and_source_code_ownership.md": {
         "title": "a6833440b74ee439",
-        "whatItIs": "4f7b47b0b943ec4b",
+        "whatItIs": "a8646d22c559c670",
         "keyConcepts": "332c534e099170ac",
         "exampleCode": "f83a3e00a3d25065",
         "whenToUse": "a08ab493fae788fd",
         "commonMistakes": "044764609aadfe62",
-        "furtherReading": "734b04e7447faf54"
+        "furtherReading": "dbfd35eff47b057d"
       },
       "218_confidentiality_and_client_data_handling.md": {
         "title": "06174f43161d5156",
@@ -1957,12 +1957,12 @@
       },
       "220_third_party_services_and_license_risk.md": {
         "title": "f5bdad3b1f027e3f",
-        "whatItIs": "18d2182c72dcbfd7",
+        "whatItIs": "ed1d983fedc90d0b",
         "keyConcepts": "11f68be7ce4d3097",
         "exampleCode": "77eabce4cedd432b",
         "whenToUse": "a0099828d564cf81",
         "commonMistakes": "de85cf4638ae1db6",
-        "furtherReading": "9107ebe38b7bd792"
+        "furtherReading": "955651a92023a86f"
       },
       "221_client_responsibilities_and_decision_maker_rule.md": {
         "title": "2b2d7ee7ac5634ed",
@@ -2011,12 +2011,12 @@
       },
       "226_detecting_and_responding_to_scope_creep.md": {
         "title": "329a200d699b0c8d",
-        "whatItIs": "8c21fbb01b43f805",
+        "whatItIs": "1c0b7c16ae14d3b5",
         "keyConcepts": "8731274edefce4cf",
         "exampleCode": "6f98658d8964084d",
         "whenToUse": "d6c592de78a1e616",
         "commonMistakes": "bf1319faa2d47e17",
-        "furtherReading": "3a82220033b4e5f4"
+        "furtherReading": "7dd3015be203d1ae"
       },
       "227_contract_risk_red_flags.md": {
         "title": "2cea64ca2036b36f",
@@ -2074,12 +2074,12 @@
       },
       "233_responding_to_client_disputes_and_legal_threats.md": {
         "title": "9fe6bfb2362bebb6",
-        "whatItIs": "5a74be7e2b6a8d8c",
+        "whatItIs": "c81ee6899840c0ef",
         "keyConcepts": "e61f498ea30d991b",
         "exampleCode": "a25c73ce6dd89d7d",
         "whenToUse": "fbcffd0f62be1a3e",
         "commonMistakes": "275b0ea57bbdac0d",
-        "furtherReading": "ed1b05207da28681"
+        "furtherReading": "242a331c0ccd9fc8"
       }
     },
     "database-advanced": {

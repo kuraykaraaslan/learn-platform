@@ -7,6 +7,47 @@ On the commercial side, the default that protects a freelancer is simple and wor
 
 On the license side, the risk is invisible until it isn't: open-source licenses range from essentially no-obligation (MIT, BSD, Apache with a notice file) through copyleft licenses that impose real constraints. GPL-licensed code bundled into a client's proprietary product can force the client's own code to be released under GPL terms; AGPL is even stricter and effectively incompatible with closed-source SaaS. A package with no stated license at all defaults, legally, to "all rights reserved" — meaning it isn't actually free to use commercially, whatever its GitHub star count suggests. Running an automated license audit (tools exist for essentially every major stack) before delivering a client's codebase is a cheap, mechanical step that catches this before it becomes an IP claim against the client, which is exactly the kind of problem that lands back on the freelancer's desk with far higher stakes. None of this is legal advice about whether a specific license is safe for a specific product — for anything commercially significant, a lawyer or a paid license-compliance review is worth the cost.
 
+```quiz
+- q: "A GPL-licensed package gets bundled into a client's proprietary product. What is the exposure?"
+  anchor: "GPL-licensed code bundled into a client's proprietary product can force the client's own code to be released under GPL terms"
+  options:
+    - text: "None — the package is free to use"
+      correct: false
+      why: "Free to obtain is not free of obligations. Copyleft licences impose real constraints."
+    - text: "It can force the client's own code to be released under GPL terms"
+      correct: true
+      why: "AGPL is stricter still, and effectively incompatible with closed-source SaaS."
+    - text: "The client just has to credit the package in a notice file"
+      correct: false
+      why: "That is the obligation of the permissive tier — MIT, BSD, Apache with a notice file."
+
+- q: "A widely-used package on GitHub has no LICENSE file at all. What does that mean?"
+  anchor: "A package with no stated license at all defaults, legally, to \"all rights reserved\""
+  options:
+    - text: "It is effectively public domain — publishing it openly waives the rights"
+      correct: false
+      why: "Publishing source is not a licence grant. Nothing has actually been granted."
+    - text: "It defaults to all rights reserved, so it is not actually free to use commercially"
+      correct: true
+      why: "Whatever its star count suggests."
+    - text: "It inherits whichever licence its own dependencies use"
+      correct: false
+      why: "Licences do not propagate upward from dependencies to fill a missing one."
+
+- q: "Nothing in the SOW mentions the payment processor's transaction fees or the hosting bill. Who owns them?"
+  anchor: "third-party fees, subscriptions, transaction costs, and provider approvals belong to the client unless explicitly included in the price"
+  options:
+    - text: "The freelancer, since they chose the providers"
+      correct: false
+      why: "Choosing a provider is a technical decision. The default worth stating puts the cost with the client unless it was priced in."
+    - text: "The client — unless those costs were explicitly included in the price"
+      correct: true
+      why: "And the freelancer is not responsible for outages, rejected accounts, API deprecations or policy changes from a provider they do not control."
+    - text: "Split, since both sides benefit from the service"
+      correct: false
+      why: "An unstated split is exactly the assumption a dependency table exists to replace with a document both sides can point to."
+```
+
 ## Key Concepts
 - **Dependency ownership table**: for every third-party service, name the account owner, the cost owner, and the risk if it's delayed, rejected, or changes — don't leave any of the three implicit.
 - **Provider limitation clause**: the freelancer isn't responsible for outages, approval delays, pricing changes, or policy changes caused by a third-party provider outside their control.
@@ -52,3 +93,29 @@ service providers.
 - [The Open Source Initiative's license list and comparison guide](https://opensource.org) for understanding license categories.
 - The Software Freedom Law Center's practical guides on open-source license compliance for commercial products.
 - [Snyk documentation](https://docs.snyk.io/) — automated license and dependency scanning in a CI pipeline; FOSSA documents an equivalent workflow
+
+```recall
+- q: "Name the two risk categories hiding inside \"we'll just use a few third-party services\"."
+  must:
+    - "commercial risk — who pays, who owns the account, what happens on a pricing change or an outage"
+    - "licence risk — whether a given open-source package may legally ship inside a client's proprietary product at all"
+
+- q: "State the commercial default worth putting in every SOW."
+  must:
+    - "third-party fees, subscriptions, transaction costs and provider approvals belong to the client unless explicitly included in the price"
+    - "the freelancer is not responsible for outages, rejected accounts, API deprecations or provider policy changes"
+    - "a dependency table — service, purpose, account owner, cost owner, risk notes — turns the assumption into a document"
+
+- q: "Rank the licence tiers by the obligations they impose."
+  must:
+    - "essentially no obligation — MIT, BSD, Apache with a notice file"
+    - "copyleft — GPL can force the client's own code out under GPL terms"
+    - "AGPL, stricter still and effectively incompatible with closed-source SaaS"
+    - "no stated licence at all — legally all rights reserved, so not free to use commercially"
+
+- q: "What is the cheap mechanical step before delivering a client's codebase, and why does it matter to the freelancer specifically?"
+  must:
+    - "run an automated licence audit — tools exist for essentially every major stack"
+    - "it catches the problem before it becomes an IP claim against the client"
+    - "which is exactly the kind of problem that lands back on the freelancer's desk with far higher stakes"
+```

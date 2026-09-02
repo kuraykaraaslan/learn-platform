@@ -7,6 +7,47 @@ Good acceptance criteria are observable, not aesthetic. "The design is modern" c
 
 Every deliverable also needs a feedback window — a stated number of business days for the client to respond with consolidated written feedback — paired with a silence rule: no blocking issue reported inside that window may be treated as acceptance for scheduling and payment purposes. Stating this before the project starts, not after a client goes quiet for three weeks, is what makes it usable. As with every clause in this course, the specific enforceability of a silence-based acceptance clause depends on your jurisdiction and contract type — treat the language here as a starting point for a document your lawyer signs off on, not a finished legal instrument.
 
+```quiz
+- q: "The client will not accept the milestone because a report they never asked for is missing. Blocking or not?"
+  anchor: "a non-blocking issue (a new report not in scope, a preference for a different animation, a request to support a browser that was never listed)"
+  options:
+    - text: "Blocking — the client says they cannot accept it, so it blocks"
+      correct: false
+      why: "Blocking is defined against the written acceptance criteria, not against a client's willingness to sign off."
+    - text: "Non-blocking — out of scope, so it is triaged as a change request or a future-phase item"
+      correct: true
+      why: "A new report that was never in scope is the lesson's own first example of a non-blocking issue."
+    - text: "Blocking, because refusing acceptance stalls the payment milestone"
+      correct: false
+      why: "The consequence does not change the classification. That is precisely why the classification is written down in advance."
+
+- q: "Which of these is a usable acceptance criterion?"
+  anchor: "Good acceptance criteria are observable, not aesthetic"
+  options:
+    - text: "\"The design is modern and professional\""
+      correct: false
+      why: "Nobody can test it, which means \"done\" gets decided by whoever is more persistent in the disagreement."
+    - text: "\"The layout adapts to the desktop and mobile widths defined in scope\""
+      correct: true
+      why: "Observable, specific, and independently checkable by both sides."
+    - text: "\"The admin panel works well\""
+      correct: false
+      why: "The lesson opens on exactly this line: not a deliverable, an opinion waiting to happen."
+
+- q: "A client goes quiet for three weeks after a delivery. What decides whether that silence counts as acceptance?"
+  anchor: "Stating this before the project starts, not after a client goes quiet for three weeks, is what makes it usable"
+  options:
+    - text: "How long the silence lasted — three weeks is clearly long enough"
+      correct: false
+      why: "There is no default duration. What makes a silence rule usable is that the window was stated up front."
+    - text: "Whether a feedback window and silence rule were stated before the project started"
+      correct: true
+      why: "And the lesson flags that enforceability of a silence-based clause depends on jurisdiction — a starting point for a lawyer, not a finished legal instrument."
+    - text: "Whether the deliverable actually met its acceptance criteria"
+      correct: false
+      why: "That decides whether an issue would have been blocking. It says nothing about what silence means."
+```
+
 ## Key Concepts
 - **Deliverable definition**: name, purpose, format, included items, acceptance criteria, review method, and feedback window — all seven, every time.
 - **Observable acceptance criteria**: testable user-visible behavior ("user can create a product and see it in the list") instead of subjective quality claims ("the design is modern," "the site is fast").
@@ -54,3 +95,25 @@ written feedback list.
 - Karl Wiegers, *Software Requirements* — the classic reference on writing testable, verifiable requirements.
 - Mike Cohn, *User Stories Applied* — on writing acceptance criteria that both technical and non-technical stakeholders can verify.
 - Alistair Cockburn's writing on "definition of done" in agile software delivery.
+
+```recall
+- q: "What makes something a deliverable rather than an opinion?"
+  must:
+    - "a concrete output with a name, a format and a purpose"
+    - "criteria specific enough that both sides can independently check whether it is done"
+    - "a staging link, a repository, a document, a demo recording"
+
+- q: "Distinguish a blocking from a non-blocking issue, and say what happens to each."
+  must:
+    - "blocking — prevents the deliverable meeting its written acceptance criteria, e.g. login does not work, checkout cannot complete"
+    - "non-blocking — out of scope, a preference, or a browser that was never listed"
+    - "blocking issues must be fixed before a milestone is accepted"
+    - "non-blocking issues get triaged as revisions, change requests, or future-phase items"
+
+- q: "State the feedback window and silence rule, plus the caveat attached to it."
+  must:
+    - "a stated number of business days for consolidated written feedback"
+    - "no blocking issue reported inside the window is treated as acceptance for scheduling and payment"
+    - "it has to be stated before the project starts, not after the client goes quiet"
+    - "enforceability depends on jurisdiction — a starting point for a document a lawyer signs off on"
+```

@@ -7,6 +7,47 @@ The detection habit is a short internal checklist run against every new request:
 
 The response itself doesn't need to be adversarial to be firm. "This is a reasonable addition, but it wasn't part of the approved scope — I can prepare a change request with the cost and timeline impact, or we can move it to the next phase" costs nothing in tone and protects everything in substance. The replacement option — swapping this new item for something of similar effort already in scope — turns a scope conversation into a prioritization conversation, which is far easier for a client to engage with than a flat "no." What should never happen, regardless of how small the request sounds, is a reflexive "sure, no problem" that skips classification entirely — that's not generosity, it's the mechanism by which a fixed-price project quietly becomes an unpaid, unbounded one.
 
+```quiz
+- q: "\"Just one small thing while you're in there — it should be simple.\" What is the job in that moment?"
+  anchor: "friendly framing and unscoped work are two completely different questions"
+  options:
+    - text: "Judge the size honestly — if it really is small, absorb it"
+      correct: false
+      why: "Size is not the question being answered. Classification comes first, and the request may still be granted afterwards."
+    - text: "Notice that the friendly framing and the unscoped work are separate questions, and answer the second one deliberately"
+      correct: true
+      why: "Most clients genuinely believe the request is minor — the framing is not dishonest, it is just not what is being decided."
+    - text: "Push back on the framing — naming it early stops it repeating"
+      correct: false
+      why: "The lesson says plainly that none of these phrases are dishonest, and that the response does not need to be adversarial to be firm."
+
+- q: "Which response does the lesson say should never happen, however small the request sounds?"
+  anchor: "a reflexive \"sure, no problem\" that skips classification entirely"
+  options:
+    - text: "\"That wasn't in the approved scope — here is a change request with the cost and timeline impact\""
+      correct: false
+      why: "That is the recommended response. It costs nothing in tone and protects everything in substance."
+    - text: "A reflexive \"sure, no problem\" that skips classification entirely"
+      correct: true
+      why: "Not generosity — the mechanism by which a fixed-price project quietly becomes an unpaid, unbounded one."
+    - text: "\"We could swap this for something of similar effort already in scope\""
+      correct: false
+      why: "That is the replacement option, which turns a scope conversation into a prioritization one."
+
+- q: "What does offering the replacement option actually change?"
+  anchor: "turns a scope conversation into a prioritization conversation, which is far easier for a client to engage with"
+  options:
+    - text: "It gets the work done without a change request, saving the admin"
+      correct: false
+      why: "It is a swap of similar effort, offered after the request was classified — not a way around classifying it."
+    - text: "It converts a scope conversation into a prioritization one, which a client engages with far more easily than a flat no"
+      correct: true
+      why: "A trade is a question the client can actually answer."
+    - text: "It moves the decision onto the client so the freelancer is not blamed later"
+      correct: false
+      why: "The point is not where blame lands; it is that the conversation becomes one the client can participate in."
+```
+
 ## Key Concepts
 - **Classification categories**: in-scope bug, included revision, clarification, out-of-scope new feature, out-of-scope rework, third-party/provider issue, or a support/maintenance request — every new message gets sorted into one of these before a reply is sent.
 - **Friendly-language signals**: "just one small thing," "while you're at it," "it should be simple," "we forgot to mention," "can it also support..." — softness of phrasing has no bearing on whether the request is actually in scope.
@@ -52,3 +93,32 @@ it as a phase-two item."
 - Tom DeMarco and Timothy Lister, *Peopleware* — on managing incremental requirement drift without derailing delivery.
 - The PMBOK Guide's treatment of scope validation and control as a formal analog to this freelance-scale practice.
 - Blair Enns, *Pricing Creativity* — on treating every unscoped request as a pricing decision rather than a favor.
+
+```recall
+- q: "Give the phrases scope creep usually arrives in, and why they are not dishonest."
+  must:
+    - "\"can we also add\", \"just one small thing\", \"while you're in there\""
+    - "\"it should be simple\", \"we forgot to mention\""
+    - "most clients genuinely believe the request is minor"
+
+- q: "Run the detection checklist from memory."
+  must:
+    - "was this listed in the SOW"
+    - "was this workflow part of the acceptance criteria"
+    - "does it require new UI, API, database, integration, testing or deployment work"
+    - "does it change something already approved"
+    - "is it a bug against agreed behaviour, or a new expectation nobody stated"
+    - "any yes beyond simple clarification means it gets classified out loud"
+
+- q: "Give the firm-but-not-adversarial response, and the alternative it can offer."
+  must:
+    - "\"a reasonable addition, but it wasn't part of the approved scope\""
+    - "a change request with the cost and timeline impact, or move it to the next phase"
+    - "or the replacement option — swap it for something of similar effort already in scope"
+
+- q: "What is a reflexive \"sure, no problem\" actually doing?"
+  must:
+    - "skipping classification entirely"
+    - "it is not generosity"
+    - "it is the mechanism by which a fixed-price project quietly becomes an unpaid, unbounded one"
+```
