@@ -9,6 +9,47 @@ Client concentration deserves particular attention because it's the risk most li
 
 Capacity risk is the quieter twin of concentration risk: no rest or admin time, every hour sold, support requests interrupting project work, and business development stopping entirely the moment a delivery project ramps up. A safe-growth checklist run before accepting any new opportunity — do I have capacity, is payment protected, is scope clear, is the client fit good, can quality be maintained, does this improve positioning, does this create proof or recurring revenue, what risk am I accepting — catches most of these problems before they're baked into a signed contract.
 
+```quiz
+- q: "One client is now 65% of your trailing revenue. Where does that land?"
+  anchor: "60% or more is a high-risk dependency"
+  options:
+    - text: "Fine — it is still below the 80% critical line"
+      correct: false
+      why: "80% is the critical line, not the first one. The thresholds are cumulative warnings, not a single alarm."
+    - text: "High-risk dependency — past 60%, below the 80% critical threshold"
+      correct: true
+      why: "40% starts monitoring, 60% is a high-risk dependency, and 80% is a critical one that functions like employment without the protections."
+    - text: "Monitoring territory — 40% is the only threshold that really matters"
+      correct: false
+      why: "40% is where monitoring begins. 65% is a further threshold with a stronger prescribed response."
+
+- q: "You cross a concentration threshold. What does the lesson prescribe?"
+  anchor: "to deliberately increase acquisition effort, build retainer relationships elsewhere, and create proof assets that don't depend on that single relationship"
+  options:
+    - text: "Wind the client down until the percentage comes back under the line"
+      correct: false
+      why: "The lesson says the response is not to panic or abandon the client. What changes is the denominator, not the client."
+    - text: "Increase acquisition effort, build retainers elsewhere, and build proof assets independent of that client"
+      correct: true
+      why: "All three grow the rest of the business, which is the only way the ratio moves without destroying revenue."
+    - text: "Raise that client's rate so the relationship at least pays for the risk it carries"
+      correct: false
+      why: "A higher rate makes concentration worse — the same client becomes an even larger share of revenue."
+
+- q: "Which of these is a capacity risk signal as this lesson defines them?"
+  anchor: "business development stopping entirely the moment a delivery project ramps up"
+  options:
+    - text: "Business development stops entirely as soon as a delivery project ramps up"
+      correct: true
+      why: "Along with no rest or admin time, every hour sold, and support requests interrupting project work."
+    - text: "Revenue has been flat across two consecutive quarters"
+      correct: false
+      why: "That is a growth-model question. Capacity risk is about how the hours are committed, not what they earned."
+    - text: "A client pays an invoice two weeks late"
+      correct: false
+      why: "That is cash-flow risk — a separate one of the seven categories checked on every growth decision."
+```
+
 ## Key Concepts
 - **Seven risk categories checked on every growth decision**: delivery, cash flow, scope, reputation, legal/security, capacity, client concentration.
 - **Client concentration thresholds**: 40%+ of revenue from one client → monitor; 60%+ → high risk; 80%+ → critical dependency requiring immediate acquisition and reserve response.
@@ -62,3 +103,37 @@ The checklist didn't reject the project — it surfaced two specific, manageable
 ## Further Reading
 - *The Millionaire Fastlane* is not needed here; better: *Company of One* — Paul Jarvis: makes the direct case for growth that protects quality and capacity rather than chasing scale for its own sake.
 - Revisit the risk-reserve-and-contingency material (Lesson 327) — concentration risk and reserve planning are two halves of the same problem.
+
+```recall
+- q: "Name the seven risk categories checked on every growth decision."
+  must:
+    - "delivery"
+    - "cash flow"
+    - "scope"
+    - "reputation"
+    - "legal/security"
+    - "capacity and client concentration"
+
+- q: "Give the three client-concentration thresholds and what each one means."
+  must:
+    - "40% or more — monitor"
+    - "60% or more — high-risk dependency"
+    - "80% or more — critical dependency"
+    - "at 80% it functions like employment without the protections of being an employee"
+
+- q: "Run the safe-growth checklist from memory."
+  must:
+    - "do I have capacity, and is payment protected"
+    - "is scope clear, and is the client fit good"
+    - "can quality be maintained"
+    - "does this improve positioning"
+    - "does it create proof or recurring revenue"
+    - "what risk am I accepting"
+
+- q: "The checklist was run against the $18,000 MVP opportunity. What did it actually produce?"
+  must:
+    - "it did not reject the project"
+    - "a start date two weeks out instead of immediately, to get back under 100% capacity"
+    - "a concentration flag — the client would cross the 40% line next quarter"
+    - "both trade-offs would otherwise have surfaced only after the fact"
+```

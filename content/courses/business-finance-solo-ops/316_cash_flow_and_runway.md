@@ -9,6 +9,47 @@ The core discipline is separating four numbers that freelancers habitually colla
 
 Runway is the answer to the question "how many months can I survive if no new client pays me starting today?" It's calculated as available business cash divided by average monthly required outflow — where required outflow includes fixed costs, subscriptions, accounting fees, and if the business supports your living costs, a minimum personal draw. Runway is not a pessimistic metric; it's the number that tells you whether you can afford to say no to a bad-fit client, negotiate from a position of strength, or take two weeks to find the right next project instead of the first available one.
 
+```quiz
+- q: "A €4,500 invoice went out last week on net-15 terms, and your accounting tool already counts it as revenue. How much of it is spendable today?"
+  anchor: "Only collected cash is real for planning purposes."
+  options:
+    - text: "All of it — it is invoiced, so it is committed revenue"
+      correct: false
+      why: "Invoiced money is cash expected, not cash collected. Collapsing those two is the first distinction this lesson refuses to make."
+    - text: "None of it — it stays cash expected until it clears the account"
+      correct: true
+      why: "Collected means cleared. Until then the payment can still be late, disputed, or lost to a client that churns before paying."
+    - text: "All of it minus the tax reserve, since the reserve is the only unavailable part"
+      correct: false
+      why: "Reserving tax against money you have not received does not make the remainder real. The payment itself has not happened yet."
+
+- q: "Two offers on the table: €10,000 paid 50/30/20 across milestones, or €12,000 paid 100% on delivery. Which one leaves you in the safer cash position?"
+  anchor: "A €10,000 project paid 50/30/20 across milestones is safer than a €12,000 project paid 100% on delivery"
+  options:
+    - text: "The €12,000 one — a bigger total absorbs more delay"
+      correct: false
+      why: "The total is not what creates the risk; the timing is. A contract paying nothing for eight weeks funds none of those eight weeks, whatever its size."
+    - text: "The €10,000 one — the money arrives while the costs are being incurred"
+      correct: true
+      why: "Requesting money before and during delivery is what converts cash flow from hope-based to funded."
+    - text: "Neither — once the year closes they are just two revenue lines"
+      correct: false
+      why: "That is the mistake the lesson names directly: a strong annual total can hide a business that was insolvent in March."
+
+- q: "Your runway calculation divides available cash by fixed costs and tool subscriptions. What is missing from the denominator?"
+  anchor: "if the business supports your living costs, a minimum personal draw"
+  options:
+    - text: "Nothing — a personal draw is a personal expense, not a business outflow"
+      correct: false
+      why: "If the business funds your living costs, the draw is an outflow you cannot skip. Leaving it out inflates the runway number precisely when you need it to be honest."
+    - text: "Accounting and legal fees, plus a minimum personal draw where the business funds living costs"
+      correct: true
+      why: "Required outflow is all four together: fixed costs, subscriptions, accounting/legal fees, and the draw."
+    - text: "The invoiced-but-unpaid amount, added to available cash"
+      correct: false
+      why: "That changes the numerator in the wrong direction — it is the exact distortion the calc block on this page exists to put side by side with the honest figure."
+```
+
 ## Key Concepts
 - **Cash collected vs. cash expected**: Collected is money that has cleared your account. Expected is invoiced or promised. Only collected cash is real for planning purposes.
 - **Runway formula**: Available business cash ÷ average monthly required outflow = months of runway. Required outflow includes fixed costs, tool subscriptions, accounting/legal fees, and personal draw if applicable.
@@ -83,3 +124,31 @@ expected before anything else.
 ## Further Reading
 - *Profit First* — Mike Michalowicz: a percentage-based cash allocation system built specifically around separating spendable cash from tax and profit reserves.
 - *Financial Intelligence* — Karen Berman and Joe Knight: a plain-language guide to the difference between profit, cash, and the assumptions behind financial statements, written for non-finance managers.
+
+```recall
+- q: "Name the four cash numbers this lesson refuses to collapse into one, and say what each means."
+  must:
+    - "cash collected — money that has actually cleared"
+    - "cash expected — invoiced or agreed but not yet received"
+    - "cash reserved — set aside for taxes and obligations, not available"
+    - "cash spendable — what is genuinely free after the first three"
+
+- q: "State the runway formula and everything that belongs in its denominator."
+  must:
+    - "available business cash ÷ average monthly required outflow"
+    - "fixed costs and tool subscriptions"
+    - "accounting and legal fees"
+    - "a minimum personal draw if the business funds living costs"
+
+- q: "Why does the lesson insist runway is not a pessimistic metric?"
+  must:
+    - "it is what makes turning down a bad-fit client financially possible"
+    - "it is what lets you negotiate from strength"
+    - "it buys time to find the right next project instead of the first available one"
+
+- q: "The forecast showed a €5,800 quarterly tax settlement in June. Why was that a non-event rather than a crisis?"
+  must:
+    - "it was visible two months ahead in the rolling forecast"
+    - "there was time to confirm the reserve account actually held it"
+    - "the gap was not discovered on the due date"
+```

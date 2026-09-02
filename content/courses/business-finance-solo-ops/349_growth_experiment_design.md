@@ -9,6 +9,47 @@ Because a solo operator's traffic and lead volume are inherently small, growth e
 
 Ideas should not live in scattered notes; they belong in a backlog where every entry is written as a hypothesis and scored with a simple ICE framework — Impact, Confidence, and Ease, each rated 1-5, summed into a single priority score. Ease matters more for a solo operator than it would for a larger team: a theoretically high-impact idea that requires 40 hours of setup is often not the right next experiment when a lower-impact, two-hour test is sitting right below it in the backlog. Prioritize experiments that improve qualified lead quality, reduce wasted calls, increase proof and trust, reuse assets that already exist, and can be tested within one to two weeks; deprioritize anything that needs a paid tool before the idea is validated manually, optimizes a vanity metric only, or requires heavy engineering before any real demand has been shown to exist.
 
+```quiz
+- q: "\"Post more\" and \"try ads\" are sitting on your growth list. What is wrong with them?"
+  anchor: "they have no falsifiable claim and no way to know afterward whether they worked"
+  options:
+    - text: "Nothing structural — they are experiments, just broadly scoped"
+      correct: false
+      why: "Scope is not the problem. Neither one can be proven wrong, so neither can produce a result you could act on."
+    - text: "They are initiatives, not experiments — nothing falsifiable, nothing to judge afterward"
+      correct: true
+      why: "An experiment names a change, a metric and a reason. \"Post more\" names none of the three."
+    - text: "They become experiments once you attach a duration to them"
+      correct: false
+      why: "A duration on an unfalsifiable claim only fixes how long you spend not learning anything."
+
+- q: "Of the eight required fields, which one has to be fixed before the experiment starts or the result turns into an argument?"
+  anchor: "the decision rule that says in advance what result leads to continuing, stopping, iterating, or scaling"
+  options:
+    - text: "The success metric — everything else follows from it"
+      correct: false
+      why: "The metric matters, but a metric with no pre-committed threshold still leaves the debate about what the number \"really means\"."
+    - text: "The decision rule — what result leads to continuing, stopping, iterating or scaling"
+      correct: true
+      why: "Fixed in advance, whatever comes back already has a next action attached instead of a discussion."
+    - text: "The duration, since stopping early is the most common failure"
+      correct: false
+      why: "Stopping early is a real mistake, but what holds the duration is the decision rule — it is the thing that says a weak first week is not yet a result."
+
+- q: "Two backlog ideas: A scores Impact 5, Confidence 4, Ease 1; B scores Impact 3, Confidence 4, Ease 5. Which one does a solo operator run next?"
+  anchor: "Ease should be weighted heavily since execution time is the real constraint"
+  options:
+    - text: "A — impact is what actually moves the business"
+      correct: false
+      why: "A 40-hour setup that never gets executed has an impact of zero. At solo scale, execution time is the binding constraint."
+    - text: "B — the higher ICE score (12 against 10), carried mostly by ease"
+      correct: true
+      why: "A lower-impact two-hour test that actually runs beats a high-impact one that sits in the backlog."
+    - text: "Both, in parallel, to save calendar time"
+      correct: false
+      why: "Two changes at once in one low-volume channel is the multi-variable mistake in another costume — neither result stays attributable."
+```
+
 ## Key Concepts
 - **Eight required experiment fields**: hypothesis, variable changed, target audience/channel, success metric, baseline, expected improvement, duration, and decision rule.
 - **Hypothesis format**: "If I [change], then [metric] will improve because [reason]" — a claim specific enough to be proven wrong.
@@ -82,3 +123,34 @@ The decision rule was fixed before the first post went out — so whatever the r
 ## Further Reading
 - *Testing Business Ideas* — David J. Bland and Alexander Osterwalder: a structured catalog of experiment types matched to the strength of evidence they produce.
 - *The Lean Startup* — Eric Ries: the build-measure-learn loop that underlies treating growth tactics as testable hypotheses rather than permanent commitments.
+
+```recall
+- q: "Name the eight things an experiment defines before it starts."
+  must:
+    - "the hypothesis and the single variable being changed"
+    - "the target audience or channel"
+    - "the success metric"
+    - "the baseline"
+    - "the expected improvement and the duration"
+    - "the decision rule"
+
+- q: "Give the hypothesis format and say what makes it a hypothesis rather than an intention."
+  must:
+    - "If I [change], then [metric] will improve because [reason]"
+    - "it is specific enough to be proven wrong"
+
+- q: "At solo volumes a statistically clean A/B test is off the table. What counts as valid early signal instead?"
+  must:
+    - "more qualified replies"
+    - "better discovery call quality"
+    - "a stronger referral response"
+    - "more case-study mentions in conversation"
+    - "fewer low-budget leads"
+    - "the uncertainty is stated honestly rather than treated as conclusive"
+
+- q: "What gets deprioritized in the backlog whatever its ICE score says?"
+  must:
+    - "anything needing a paid tool before the idea is validated manually"
+    - "anything optimizing a vanity metric only"
+    - "anything requiring heavy engineering before real demand has been shown"
+```

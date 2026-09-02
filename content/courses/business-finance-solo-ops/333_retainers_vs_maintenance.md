@@ -9,6 +9,47 @@ Both product types share the same non-negotiable structural requirement: a defin
 
 The right moment to introduce either offer is not "whenever it comes up" — it's structured into the relationship at three points: during the original proposal as an optional post-launch add-on, again just before final handover when anxiety about going live is highest, and again roughly 30 days after delivery if no plan was selected. Capacity discipline matters just as much as the pitch: total retainer and maintenance commitments across all clients should stay in the 30–50% range of available working time, leaving the rest for new project work and growth.
 
+```quiz
+- q: "A delivered client wants dependency updates, hosting checks, backup verification and a monthly health report — nothing new built. Which product is that?"
+  anchor: "Maintenance means keeping a delivered system stable and current"
+  options:
+    - text: "A retainer — it is recurring monthly work"
+      correct: false
+      why: "Recurring is a billing shape, not a product. A retainer buys ongoing development, improvement or advisory capacity; this list is pure upkeep."
+    - text: "Maintenance — upkeep of a delivered system, explicitly excluding new modules"
+      correct: true
+      why: "Updates, minor fixes, hosting checks, backup verification and a health report are exactly the maintenance scope, with new modules, redesigns and major integrations excluded."
+    - text: "Either label works — the distinction is mostly cosmetic"
+      correct: false
+      why: "Conflating them is what produces the scope dispute the first time the client asks for a new reporting page under a maintenance fee."
+
+- q: "When is a maintenance or retainer plan first offered?"
+  anchor: "during the original proposal as an optional post-launch add-on"
+  options:
+    - text: "In the original proposal, as an optional post-launch add-on"
+      correct: true
+      why: "Then again just before final handover when anxiety about going live peaks, and again about 30 days after delivery if nothing was selected."
+    - text: "At handover only — offering earlier reads as upselling before the work is proven"
+      correct: false
+      why: "Handover is the second of three moments. Skipping the proposal means post-launch support was never framed as a normal part of the engagement."
+    - text: "When something breaks, since that is when the value is undeniable"
+      correct: false
+      why: "Never wait until something breaks. By then the conversation is about the failure and your part in it, not about a plan."
+
+- q: "Your recurring commitments across all clients now occupy about 70% of working capacity. What does that mean?"
+  anchor: "total recurring commitments should occupy roughly 30–50% of working capacity"
+  options:
+    - text: "It is healthy — recurring revenue is the most stable kind there is"
+      correct: false
+      why: "Stability is why there is a floor. The ceiling exists because recurring work crowds out the project and growth work that has to fit in the other half."
+    - text: "It is over the ceiling — the guidance leaves the remaining 50-70% for project and growth work"
+      correct: true
+      why: "The range is 30-50% of available working time, and the reason is what the rest of the time is for."
+    - text: "The ceiling applies to retainers only, not to maintenance plans"
+      correct: false
+      why: "It is a ceiling on total recurring commitments across all clients — both product types count against it."
+```
+
 ## Key Concepts
 - **Maintenance vs. retainer distinction**: maintenance keeps a system stable (updates, fixes, monitoring); a retainer buys ongoing development, improvement, or advisory capacity — conflating the two creates scope disputes.
 - **Four retainer types**: maintenance retainer (stability), improvement retainer (continuous small improvements), advisory retainer (decision support without delivery), priority support retainer (guaranteed response window).
@@ -70,3 +111,33 @@ A client asking "can you also add a new reporting page?" under the Hosting & Upt
 
 ## Further Reading
 - *Recurring Revenue* — Roman Stanek and John Warrillow (concepts drawn from *The Automatic Customer*): the broader business case for recurring revenue structures.
+
+```recall
+- q: "State the structural difference between maintenance and a retainer."
+  must:
+    - "maintenance keeps a delivered system stable and current"
+    - "it excludes new modules, redesigns and major integrations"
+    - "a retainer buys ongoing development, improvement or advisory capacity"
+    - "the retainer is scoped and priced as continuing work, not upkeep"
+
+- q: "Name the fields every tier must define, whichever of the two products it is."
+  must:
+    - "purpose and monthly scope"
+    - "response time"
+    - "included and excluded work"
+    - "the unused-capacity rule"
+    - "communication channel and billing terms"
+    - "cancellation terms"
+
+- q: "Name the four retainer types and what each one sells."
+  must:
+    - "maintenance retainer — stability"
+    - "improvement retainer — continuous small improvements"
+    - "advisory retainer — decision support without delivery"
+    - "priority support retainer — a guaranteed response window"
+
+- q: "Why should \"unlimited support\" never appear in either product?"
+  must:
+    - "it converts a bounded offer into an open-ended liability"
+    - "margin erodes the moment a client learns the boundary is not real"
+```

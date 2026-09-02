@@ -9,6 +9,47 @@ A useful mental model for the minimum acceptable price is additive: base effort 
 
 Discounting deserves its own discipline: a discount is only legitimate in exchange for something — reduced scope, faster or upfront payment, real portfolio value, a genuine strategic relationship, timeline flexibility, or the client handling content/design/testing themselves. "The client asked strongly," "I'm afraid to lose the deal," "there's no other work this month," and "it feels like a small task" are not valid reasons — they are pressure, not value exchange, and every unearned discount trains a client to expect more of them.
 
+```quiz
+- q: "A quote is built from the estimated coding hours and nothing else. What is that?"
+  anchor: "The single biggest pricing mistake a solo operator makes is pricing only by estimated coding hours"
+  options:
+    - text: "A lean quote — it wins more deals than a padded one"
+      correct: false
+      why: "It wins deals that then lose money. Analysis, meetings, QA, deployment and support all get delivered whether or not anyone priced them."
+    - text: "The single biggest pricing mistake a solo operator makes"
+      correct: true
+      why: "Coding hours leave out analysis and planning, communication, QA and revisions, deployment and handover, the support buffer, both kinds of risk, opportunity cost, tax impact, tool costs, and the margin."
+    - text: "Acceptable as long as the project is small"
+      correct: false
+      why: "A small project still has a handover, a revision cycle and a support tail. Size removes none of the missing cost lines."
+
+- q: "A client asks for €9,000 on a quote of €11,000. Which response holds the line this lesson draws?"
+  anchor: "a discount is only legitimate in exchange for something"
+  options:
+    - text: "Come down to €9,000 — the pipeline is thin this month"
+      correct: false
+      why: "\"There's no other work this month\" is named as pressure, not value exchange. It is also the wrong question: check first whether the project should be turned down at all."
+    - text: "Offer €9,200 with two user roles instead of three and the audit log moved to phase two"
+      correct: true
+      why: "Scope traded for price. The reduced number still clears the minimum acceptable price for the reduced scope, so the margin survives."
+    - text: "Hold €11,000 and refuse to discuss any change"
+      correct: false
+      why: "The lesson does not forbid discounts, only unearned ones. Reduced scope, upfront payment, timeline flexibility and client-handled content are all real exchanges."
+
+- q: "Which of these actually justifies a risk buffer on the quote?"
+  anchor: "an unknown existing codebase, an unstable third-party API, weak payment terms"
+  options:
+    - text: "The project is large, so a percentage of a bigger number is prudent"
+      correct: false
+      why: "Size is already priced in the base effort cost. The buffer prices uncertainty, not volume."
+    - text: "The work sits on an unknown existing codebase and an unstable third-party API"
+      correct: true
+      why: "Both are named triggers, alongside unclear requirements, many stakeholders, weak payment terms, an aggressive deadline, high compliance expectations, and a revision-heavy client history."
+    - text: "You want a higher number and need a line to put it on"
+      correct: false
+      why: "That is margin, and margin already has its own line. Mislabelling it hides which part of the price is genuinely at risk when the project close is reviewed."
+```
+
 ## Key Concepts
 - **Full cost inputs to any price**: estimated delivery effort, analysis/planning, communication and meetings, QA and revisions, deployment and handover, support buffer, technical risk, client risk, opportunity cost, tax/reserve impact, tool costs, desired profit margin.
 - **Minimum acceptable price formula**: base effort cost + risk buffer + PM/admin cost + QA/deployment/handover cost + support buffer + direct expenses + profit margin — then compared against client value and market positioning.
@@ -80,3 +121,36 @@ not greed; it is everything pricing-by-coding-hours leaves out.
 ## Further Reading
 - *Value-Based Fees* — Alan Weiss: a thorough case for pricing on client value and outcomes rather than time or scope alone.
 - *Pricing Creativity: A Guide to Profit Beyond the Billable Hour* — Blair Enns: short, sharp guidance on holding price and trading scope instead of discounting.
+
+```recall
+- q: "List the cost lines that add up to the minimum acceptable price."
+  must:
+    - "base effort cost"
+    - "risk buffer"
+    - "PM/admin cost"
+    - "QA, deployment and handover cost"
+    - "support buffer plus direct expenses"
+    - "desired profit margin"
+
+- q: "The minimum acceptable price is not the quoted price. What is it compared against, and which number usually wins?"
+  must:
+    - "the value the work creates for the client"
+    - "the market's willingness to pay"
+    - "the two rarely land at the same place"
+    - "the higher number usually wins the negotiation, not the lower"
+
+- q: "Name the reasons for a discount that this lesson treats as invalid."
+  must:
+    - "the client asked strongly"
+    - "fear of losing the deal"
+    - "there is no other work this month"
+    - "it feels like a small task"
+
+- q: "Name the forbidden pricing patterns."
+  must:
+    - "pricing by page count or tech stack alone"
+    - "a fixed price against undefined scope"
+    - "unlimited revisions"
+    - "full payment on completion only"
+    - "lowering price without lowering scope"
+```
