@@ -1,12 +1,12 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
-  "totalTerms": 125,
+  "totalTerms": 126,
   "totalLessons": 412,
   "totals": {
     "neverMatched": 0,
-    "neverLinked": 17,
+    "neverLinked": 18,
     "neverLinkedByCause": {
-      "own-lesson-only": 2,
+      "own-lesson-only": 3,
       "code-only": 12,
       "shadowed": 0,
       "case-mismatch": 2,
@@ -52,6 +52,14 @@
       "alsoAppearsInLessons": [
         122
       ]
+    },
+    {
+      "slug": "domain-sharding",
+      "term": "Domain sharding",
+      "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
     },
     {
       "slug": "git-bisect",
@@ -510,10 +518,9 @@
       "term": "sharding",
       "lessonsLinkedIn": [
         "architecture-design-patterns-testing/142_capacity_planning_estimation.md",
-        "distributed-systems-api-design/11_read_replica_routing.md",
-        "frontend-performance-scaling/22_http2_multiplexing.md"
+        "distributed-systems-api-design/11_read_replica_routing.md"
       ],
-      "rawOccurrences": 110
+      "rawOccurrences": 106
     },
     {
       "slug": "dead-tuples",
@@ -561,6 +568,12 @@
         "product-technical-strategy/393_api_integration_event_driven_decisions.md"
       ],
       "rawOccurrences": 7
+    },
+    {
+      "slug": "domain-sharding",
+      "term": "Domain sharding",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 4
     },
     {
       "slug": "eager-loading",

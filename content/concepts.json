@@ -214,6 +214,11 @@
     "short": "Something meaningful that happened in the domain (OrderShipped), decoupled from how other parts react to it (ties to #131 Message Queues, #14 Outbox Pattern).",
     "lesson": 134
   },
+  "domain-sharding": {
+    "term": "Domain sharding",
+    "short": "HTTP/1.1 trick of spreading assets across multiple domains to win more parallel connections — counterproductive under HTTP/2, where it defeats connection reuse and header compression.",
+    "lesson": 22
+  },
   "eager-loading": {
     "term": "Eager loading",
     "short": "Pre-fetching related data in the initial query (via JOIN or a second bulk query) — Prisma's include.",

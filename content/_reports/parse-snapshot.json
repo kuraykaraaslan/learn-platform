@@ -2732,11 +2732,11 @@
     "frontend-performance-scaling": {
       "22_http2_multiplexing.md": {
         "title": "c9e1d2b4b29468ac",
-        "whatItIs": "b9d40bfe3af6cad7",
-        "keyConcepts": "bebde2578a67aac3",
+        "whatItIs": "c61a21bc10b7238e",
+        "keyConcepts": "2b2e8bfd3936496c",
         "exampleCode": "497e3eca0cf372c5",
         "whenToUse": "7d127b5019294781",
-        "commonMistakes": "5c34b603de29b6c0",
+        "commonMistakes": "4a793064e408f0a2",
         "furtherReading": "8421b18dcc23b8c6"
       },
       "23_react_server_components.md": {
