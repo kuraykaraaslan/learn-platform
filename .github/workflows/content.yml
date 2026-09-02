@@ -80,4 +80,18 @@ jobs:
       # what CI actually sees) that the build succeeds without it. It's only
       # read inside an async function a reader's click triggers at runtime
       # (runtime/webcontainer.client.ts), never during static generation.
+      # Every committed report must equal what its script produces today.
+      # The steps above already RUN most of these generators, but none of them
+      # compares the result against what is in the repo — so a committed report
+      # can drift and quietly mislead whoever reads it, which is exactly what
+      # the phases README's baseline table had done (fec2365). mistakes.json is
+      # the sharpest case: until now nothing in CI produced it at all, so P2's
+      # own acceptance numbers could go stale unnoticed.
+      #
+      # content:concepts-check above still earns its place: it fires earlier and
+      # names the semantic cause ("concept linking changed"), where this one only
+      # reports a diff.
+      - run: npm run content:reports
+      - run: git diff --exit-code -- content/_reports
+
       - run: npm run build

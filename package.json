@@ -15,6 +15,7 @@
     "content:snapshot-diff": "tsx scripts/snapshot-diff.ts",
     "content:concepts": "tsx scripts/build-concepts.ts",
     "content:concepts-check": "tsx scripts/build-concepts.ts --check",
+    "content:reports": "npm run content:snapshot && npm run content:concepts && tsx scripts/mistakes-report.ts && tsx scripts/verify-code.ts && tsx scripts/content-lint",
     "content:search-index": "tsx scripts/build-search-index.ts",
     "content:review-index": "tsx scripts/build-review-index.ts",
     "content:check": "npm run content:lint && npm run content:verify-code && npm run test",
