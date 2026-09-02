@@ -41,6 +41,30 @@ Response offered: reduce to 2 user roles instead of 3 and remove the
 ```
 The client's counteroffer was answered with a scope trade, not a margin cut — the €9,200 price still clears the minimum acceptable price for the reduced scope.
 
+The additive minimum-price model from Key Concepts, made arithmetic. Overhead
+here groups three of the lesson's line items — PM/admin, QA/deployment/handover,
+and the support buffer — because they scale with the same base effort.
+
+```calc
+inputs:
+  - { id: base_hours, label: "Estimated delivery hours",            type: number, default: 40, min: 0 }
+  - { id: rate,       label: "Your hourly cost basis (USD)",        type: number, default: 90, min: 0, step: 5 }
+  - { id: risk,       label: "Risk buffer (%)",                     type: number, default: 15, min: 0 }
+  - { id: overhead,   label: "PM + QA + support overhead (%)",      type: number, default: 30, min: 0 }
+  - { id: expenses,   label: "Direct expenses (USD)",               type: number, default: 200, min: 0 }
+  - { id: margin,     label: "Desired profit margin (%)",           type: number, default: 20, min: 0 }
+outputs:
+  - { label: "Base effort cost", expr: "base_hours * rate", format: usd }
+  - { label: "Cost before margin", expr: "base_hours * rate * (1 + risk / 100 + overhead / 100) + expenses", format: usd }
+  - { label: "Minimum acceptable price", expr: "(base_hours * rate * (1 + risk / 100 + overhead / 100) + expenses) * (1 + margin / 100)", format: usd }
+  - { label: "Implied rate per delivery hour", expr: "(base_hours * rate * (1 + risk / 100 + overhead / 100) + expenses) * (1 + margin / 100) / base_hours", format: usd }
+```
+
+That last figure is the one worth sitting with. It is what an hour of delivery
+has to be worth for the project to clear its own costs — and it is a long way
+above the hourly number most people quote. The lesson's point is that the gap is
+not greed; it is everything pricing-by-coding-hours leaves out.
+
 ## When to Use
 - Before quoting any new project, especially one that doesn't closely resemble recent, well-tracked past work.
 - Whenever a client requests a discount — to structure the scope-trade response instead of a straight price cut.

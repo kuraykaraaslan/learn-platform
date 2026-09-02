@@ -39,6 +39,26 @@ Flag: unplanned support (9%) is above the usual 3-5% baseline —
 ```
 The number that matters isn't the 54% in isolation — it's noticing that "unplanned support" nearly doubled its normal share, which is the kind of drift a gut-feel week review never catches.
 
+The utilization band and the effective-rate idea, run against one real week.
+Track a week honestly — every category, not just delivery — and put the numbers
+in.
+
+```calc
+inputs:
+  - { id: total_hours,    label: "Total hours actually worked this week", type: number, default: 45, min: 1 }
+  - { id: billable_hours, label: "Of those, billable delivery hours",     type: number, default: 25, min: 0 }
+  - { id: revenue,        label: "Revenue earned this week (USD)",        type: number, default: 2250, min: 0 }
+outputs:
+  - { label: "Utilization", expr: "billable_hours / total_hours * 100", format: percent }
+  - { label: "Rate on billable hours — the number you quote", expr: "revenue / billable_hours", format: usd }
+  - { label: "Effective rate across every hour you worked", expr: "revenue / total_hours", format: usd }
+  - { label: "Hours this week that earned nothing", expr: "total_hours - billable_hours", format: number }
+```
+
+Two rates, one week. The second is what you tell clients; the third is what the
+business actually paid you per hour of your life. Tracking only coding time
+hides the difference, which is the trap this lesson opens with.
+
 ## When to Use
 - Every week, as a five-minute rollup — not only when a project feels like it's dragging.
 - Before quoting a new project, to check whether last quarter's estimates were realistic.

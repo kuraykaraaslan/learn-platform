@@ -45,6 +45,28 @@ Opening balance      €6,200    €9,900    €7,300
 ```
 The value isn't the spreadsheet — it's that the quarterly tax settlement in June was visible in April, giving time to make sure the reserve account actually holds €5,800 before it's due, rather than discovering the gap on the due date.
 
+The runway formula in Key Concepts, with your own numbers. Pay attention to the
+third line: it is the same arithmetic done the way most freelance financial
+stress actually happens — counting an invoice that has not cleared as if it had.
+
+```calc
+inputs:
+  - { id: cash,       label: "Cash actually cleared in the business account", type: number, default: 9000, min: 0, step: 500 }
+  - { id: fixed,      label: "Fixed costs per month",           type: number, default: 400, min: 0 }
+  - { id: subs,       label: "Tool subscriptions per month",    type: number, default: 180, min: 0 }
+  - { id: fees,       label: "Accounting / legal per month",    type: number, default: 220, min: 0 }
+  - { id: draw,       label: "Personal draw per month",         type: number, default: 2600, min: 0 }
+  - { id: expected,   label: "Invoiced but not yet received",   type: number, default: 6000, min: 0 }
+outputs:
+  - { label: "Required monthly outflow", expr: "fixed + subs + fees + draw", format: usd }
+  - { label: "Runway, months", expr: "cash / (fixed + subs + fees + draw)", format: number }
+  - { label: "Runway if you counted the unpaid invoice as spendable", expr: "(cash + expected) / (fixed + subs + fees + draw)", format: number }
+```
+
+The gap between those last two lines is how many months of confidence a single
+late payment can invent. It is also why the lesson separates collected from
+expected before anything else.
+
 ## When to Use
 - Every month, as a 15-minute standing review, not only when something feels wrong.
 - Before accepting a new project — model when the money actually arrives, not just the total contract value.
