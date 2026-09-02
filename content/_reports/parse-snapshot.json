@@ -2777,30 +2777,30 @@
       },
       "27_job_queue_bullmq.md": {
         "title": "2c8a60feddabc80c",
-        "whatItIs": "137cb20dd0cda8b1",
+        "whatItIs": "90481b19785a2061",
         "keyConcepts": "900f96931d426505",
         "exampleCode": "e225a49d97ae8bac",
         "whenToUse": "1854f3d45b7c27f5",
         "commonMistakes": "66e30ad364d495db",
-        "furtherReading": "031b7ab611035405"
+        "furtherReading": "4ab9da32bb0023e6"
       },
       "28_horizontal_scaling_stateless_design.md": {
         "title": "1eec62018cc775f2",
-        "whatItIs": "72bb231909a54870",
+        "whatItIs": "20c40001a27bae2e",
         "keyConcepts": "f6ef3adfa18c4b3c",
         "exampleCode": "5a9ebc0fe7e7f918",
         "whenToUse": "234dbed5f9da8c72",
         "commonMistakes": "e2e4fb5545bc555c",
-        "furtherReading": "6086ab89820c4961"
+        "furtherReading": "0d776d2d0ab15ecf"
       },
       "138_frontend_state_management.md": {
         "title": "593b185c6132a274",
-        "whatItIs": "f7c2f4457bae628e",
+        "whatItIs": "4c9e0e2cd2e60a66",
         "keyConcepts": "9791363bf4ad968b",
         "exampleCode": "649439ed1a0db60f",
         "whenToUse": "a4019a675a340b31",
         "commonMistakes": "72394aa2fea1e695",
-        "furtherReading": "537af80c6ab2b223"
+        "furtherReading": "cda878891381afa1"
       }
     },
     "fundamentals-tools": {

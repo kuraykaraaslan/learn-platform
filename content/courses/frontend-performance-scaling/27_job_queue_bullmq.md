@@ -7,6 +7,47 @@ BullMQ's design is built entirely on Redis. Each queue is a set of Redis sorted 
 
 The three concepts you should care about next — priority, concurrency, and backpressure — are what separate a queue that works at 10 jobs/minute from one that works at 10,000. Priority lets you skip low-importance jobs when the queue is loaded. Concurrency sets how many jobs a single worker processes simultaneously. Backpressure is the harder one: it is the practice of deliberately slowing job enqueue when the queue depth exceeds a threshold, rather than letting it grow unboundedly and OOM your Redis instance.
 
+```quiz
+- q: "You want a job to jump the queue. Priority 1, or priority 100?"
+  anchor: "Lower numbers = higher priority; jobs with priority 1 run before priority 100"
+  options:
+    - text: "100 — a higher number means more important"
+      correct: false
+      why: "Inverted. Lower numbers are higher priority, so 1 runs before 100."
+    - text: "1 — lower numbers run first"
+      correct: true
+      why: "Priority 1 runs before priority 100."
+    - text: "Neither — priority applies only to delayed jobs"
+      correct: false
+      why: "It applies to ordinary queued jobs. Delay is a separate mechanism."
+
+- q: "A third-party API allows 100 calls per second. Concurrency, or a limiter?"
+  anchor: "throttles processing rate regardless of queue depth"
+  options:
+    - text: "Concurrency — cap the worker at 100 jobs in parallel"
+      correct: false
+      why: "Concurrency bounds how many run at once, not how many start per second. A hundred fast jobs can finish and restart many times inside one second."
+    - text: "A limiter: `{ max: 100, duration: 1000 }`"
+      correct: true
+      why: "It throttles the processing rate regardless of queue depth, which is what a per-second quota needs."
+    - text: "Backpressure — refuse to enqueue past 100"
+      correct: false
+      why: "Backpressure guards queue depth. It says nothing about the rate at which the queue drains."
+
+- q: "What is backpressure in this design?"
+  anchor: "Checking queue depth before enqueuing and rejecting or delaying when the queue is too deep"
+  options:
+    - text: "The worker slowing down when Redis comes under load"
+      correct: false
+      why: "That is a symptom. Backpressure is a decision the producer makes."
+    - text: "Checking queue depth before enqueuing, and rejecting or delaying when it is too deep"
+      correct: true
+      why: "It acts on the producing side, before the job is ever added."
+    - text: "Retrying failed jobs with an increasing delay"
+      correct: false
+      why: "That is retry backoff, which delayed jobs support separately."
+```
+
 ## Key Concepts
 - **Queue** — A named channel in Redis; producers add jobs, workers consume them
 - **Worker** — A process that calls `new Worker(queueName, processor, options)` and pulls jobs
@@ -112,3 +153,20 @@ export function startEmailWorker(): Worker<EmailJobData> {
 - [BullMQ official docs: Workers and Concurrency](https://docs.bullmq.io/guide/workers)
 - [BullMQ: Rate limiting and backpressure](https://docs.bullmq.io/guide/rate-limiting)
 - [Redis best practices for queues (Upstash)](https://upstash.com/blog/bullmq-redis-best-practices)
+
+```recall
+- q: "What is a queue, and what is a worker?"
+  must:
+    - "a queue is a named channel in Redis — producers add jobs, workers consume them"
+    - "a worker calls `new Worker(queueName, processor, options)` and pulls jobs"
+
+- q: "What does concurrency control, and what should set its value?"
+  must:
+    - "`{ concurrency: N }` lets one worker process N jobs in parallel"
+    - "set it based on whether the jobs are I/O-bound or CPU-bound"
+
+- q: "What are delayed jobs for, and what is a Flow Producer?"
+  must:
+    - "jobs scheduled with a delay in milliseconds — retry cooling, scheduled notifications, trial expiry warnings"
+    - "a Flow Producer is a BullMQ Pro / v3 feature: parent jobs that wait for child jobs to complete before advancing"
+```

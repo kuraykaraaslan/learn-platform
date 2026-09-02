@@ -965,7 +965,7 @@
         "observability-deployment/63_chaos_engineering.md",
         "privacy-compliance-incident-response/361_vulnerability_management_lifecycle_patch_slas.md"
       ],
-      "rawOccurrences": 56
+      "rawOccurrences": 57
     },
     {
       "slug": "rbac",
@@ -1187,7 +1187,7 @@
         "framework-deep-dives/401_express_realtime_sse_and_socketio.md",
         "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md"
       ],
-      "rawOccurrences": 9
+      "rawOccurrences": 10
     },
     {
       "slug": "streaming-replication",

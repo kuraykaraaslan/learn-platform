@@ -7,6 +7,47 @@ The failure mode of stateful services is sticky sessions: load balancers must ro
 
 The nuance your design navigates well is the difference between stateless at the application layer and stateful at the infrastructure layer. Your PostgreSQL and Redis are stateful — that's intentional and correct. What must be stateless is the compute layer (your Next.js API routes and service classes). Any local variable, module-level cache, or in-memory map that persists between requests is a statefulness leak that will cause subtle bugs when you scale out.
 
+```quiz
+- q: "Your rate limiter keeps counters in process memory. You scale to 10 instances. What is the real limit?"
+  anchor: "otherwise each instance has its own counter and your rate limit is effectively multiplied by instance count"
+  options:
+    - text: "Unchanged — the limit is per user, not per instance"
+      correct: false
+      why: "Per user *per instance*. Each of the ten keeps its own counter."
+    - text: "Ten times what you configured"
+      correct: true
+      why: "Which is why the limiter's store has to be Redis, shared across every instance."
+    - text: "Effectively zero — the counters reset on every request"
+      correct: false
+      why: "They persist within an instance. The problem is that there are now ten of them."
+
+- q: "Sticky sessions would solve your session-lookup problem. Should you enable them?"
+  anchor: "Load balancer pin to instance; breaks scaling and makes deploys painful"
+  options:
+    - text: "Yes — it is the standard solution and costs nothing"
+      correct: false
+      why: "It is named an anti-pattern here: it breaks scaling and makes deploys painful."
+    - text: "No — put the session in shared Redis instead"
+      correct: true
+      why: "`session:{userId}:{hashedToken}` in Redis means any instance can serve it, which is the whole point of a stateless compute layer."
+    - text: "Yes, but only during a deploy"
+      correct: false
+      why: "A deploy is when pinning hurts most: the instance a user is pinned to is the one going away."
+
+- q: "During a rolling deploy, some requests come back as connection errors. What is missing?"
+  anchor: "Each instance should finish in-flight requests before exiting; critical for zero-downtime rolling deploys"
+  options:
+    - text: "A longer health check grace period"
+      correct: false
+      why: "That governs when traffic starts arriving, not what happens to requests already in flight when the process exits."
+    - text: "Graceful shutdown — finish in-flight requests before exiting"
+      correct: true
+      why: "Without it, terminating an instance drops whatever it was in the middle of serving."
+    - text: "More instances, so fewer requests land on each"
+      correct: false
+      why: "That reduces how many are dropped per instance and drops them just the same."
+```
+
 ## Key Concepts
 - **Stateless compute layer** — API instances hold zero per-user state; all state lives in DB/Redis
 - **JWT as session carrier** — Token payload carries `userId`, `userSessionId`, `deviceFingerprint`; no server-side session lookup needed for auth, only for cache
@@ -114,3 +155,21 @@ process.on('SIGTERM', async () => {
 - [The Twelve-Factor App: Processes](https://12factor.net/processes)
 - [PgBouncer documentation — connection pooling for PostgreSQL](https://www.pgbouncer.org/usage.html)
 - [ioredis cluster mode for Redis horizontal scaling](https://ioredis.readthedocs.io/en/stable/README/#cluster)
+
+```recall
+- q: "What does a stateless compute layer mean, and where does state go?"
+  must:
+    - "API instances hold zero per-user state"
+    - "all state lives in the database or in Redis"
+
+- q: "What does the JWT carry, and what does that avoid?"
+  must:
+    - "`userId`, `userSessionId`, `deviceFingerprint`"
+    - "no server-side session lookup is needed for auth — only for cache"
+
+- q: "What happens to database connections as instances multiply?"
+  must:
+    - "each instance opens its own DB connections"
+    - "10 instances × 20 connections = 200 connections"
+    - "use PgBouncer or pgpool before hitting PostgreSQL's `max_connections`"
+```
