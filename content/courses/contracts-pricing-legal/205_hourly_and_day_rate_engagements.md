@@ -30,6 +30,25 @@ Hourly is a poor fit when the client wants a guaranteed outcome without a define
 **Approval threshold:** Any week trending over cap requires written client sign-off before continuing
 ```
 
+The two failure modes above are not abstract — they have a number. Put your own
+rate in and see what the unbilled hours actually cost you over a year, and what
+your advertised rate quietly becomes once they are counted.
+
+```calc
+inputs:
+  - { id: rate,           label: "Your hourly rate (USD)",        type: number, default: 90, min: 0, step: 5 }
+  - { id: billable_hours, label: "Billed hours per week",         type: number, default: 25, min: 0 }
+  - { id: unbilled_hours, label: "Unbilled \"quick question\" hours per week", type: number, default: 4, min: 0 }
+  - { id: weeks,          label: "Working weeks per year",        type: number, default: 44, min: 1 }
+outputs:
+  - { label: "Annual revenue, as invoiced",   expr: "rate * billable_hours * weeks", format: usd }
+  - { label: "What you actually earn per hour worked", expr: "rate * billable_hours / (billable_hours + unbilled_hours)", format: usd }
+  - { label: "Annual cost of the unbilled hours", expr: "rate * unbilled_hours * weeks", format: usd }
+```
+
+That third figure is the one worth writing into the agreement as a minimum
+billable block. It is not a rounding error.
+
 ## When to Use
 - Debugging or improving an existing codebase whose condition and complexity aren't yet known.
 - Ongoing technical advisory where the value is judgment, not a fixed deliverable.

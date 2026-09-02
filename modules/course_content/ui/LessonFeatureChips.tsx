@@ -16,6 +16,7 @@ function chips(f: LessonFeatures): Chip[] {
   if (f.quiz) out.push({ label: 'quiz' });
   if (f.tradeoff) out.push({ label: 'trade-off' });
   if (f.recall) out.push({ label: 'recall' });
+  if (f.calc) out.push({ label: 'calculator' });
   if (f.checklist) out.push({ label: 'checklist' });
   if (f.template) out.push({ label: 'fill-in' });
   if (f.mermaid) out.push({ label: 'diagram' });

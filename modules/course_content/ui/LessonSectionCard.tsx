@@ -20,6 +20,7 @@ import { QuizCard } from './QuizCard';
 import { TradeoffCard } from './TradeoffCard';
 import { DiffCard } from './DiffCard';
 import { RecallCard } from './widgets/RecallCard';
+import { CalcCard } from './widgets/CalcCard';
 
 // Tried next/dynamic() here to keep this JS out of the ~324 lesson pages
 // with no widget block — measured worse (8.59 kB vs 7.22 kB gz) and, per
@@ -128,6 +129,13 @@ function BlockView({
         case 'recall':
           return (
             <RecallCard widget={block.widget} blockId={block.id} courseSlug={courseSlug} lessonFile={lessonFile} verified={verified} />
+          );
+        // No `verified` gate, unlike RecallCard/QuizCard: a calc fence makes
+        // no generated claim to be wrong about — it runs the reader's own
+        // numbers through a model the lesson prose states in the open.
+        case 'calc':
+          return (
+            <CalcCard widget={block.widget} blockId={block.id} courseSlug={courseSlug} lessonFile={lessonFile} />
           );
       }
   }

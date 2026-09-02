@@ -155,6 +155,26 @@ FROM compared
 ORDER BY base_month;
 ```
 
+The queries give you the inputs; this turns them into the two ratios the section
+above calls decisive. The 3:1 LTV:CAC floor and the 12-month payback target are
+not opinions you can argue with — put your own numbers in and see which side of
+them you are on.
+
+```calc
+inputs:
+  - { id: arpa,   label: "ARPA — average revenue per account, monthly (USD)", type: number, default: 49, min: 0 }
+  - { id: churn,  label: "Monthly revenue churn (%)",  type: number, default: 3.5, min: 0, step: 0.1 }
+  - { id: margin, label: "Gross margin (%)",           type: number, default: 85, min: 0 }
+  - { id: cac,    label: "CAC — cost to acquire one customer (USD)", type: number, default: 180, min: 0 }
+outputs:
+  - { label: "LTV", expr: "arpa * (margin / 100) / (churn / 100)", format: usd }
+  - { label: "LTV:CAC ratio (want 3 or more)", expr: "arpa * (margin / 100) / (churn / 100) / cac", format: number }
+  - { label: "CAC payback, months (want under 12)", expr: "cac / (arpa * margin / 100)", format: number }
+```
+
+Note what churn does here: it is a divisor, so halving it doubles LTV. No amount
+of acquisition spend moves the ratio the way retention does.
+
 ## When to Use
 - At the end of every month — run MRR, churn, and NRR queries and record the output in a simple spreadsheet; this is your business dashboard
 - When evaluating a new acquisition channel (e.g., LinkedIn content vs. SEO) — track CAC separately per channel and compare to average LTV to find which channel is most efficient

@@ -69,6 +69,9 @@ export type LessonFeatures = {
   /** A runnable SQL cell (PGlite). */
   sql: boolean;
   mermaid: boolean;
+  /** A `calc` fence — the reader's own numbers through the lesson's model
+   *  (docs/phases/11-recall-and-calc.md). */
+  calc: boolean;
 };
 
 export type LessonCard = ManifestItem & {

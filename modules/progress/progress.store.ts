@@ -67,7 +67,10 @@ type PersistedProgress = {
    *  of setMistakeAssessment, never set directly. */
   reviewBox: Record<string, ReviewBoxEntry>;
   expandAll: Record<string, boolean>;
-  /** ui/widgets/TemplateFormCard.tsx field values, keyed by widgetFieldKey(). */
+  /** ui/widgets/TemplateFormCard.tsx and ui/widgets/CalcCard.tsx field
+   *  values, keyed by widgetFieldKey(). Shared rather than split: both are
+   *  string field values under the same key shape, and quota.ts's LRU
+   *  eviction already walks this one map. */
   templateValues: Record<string, string>;
   /** ui/widgets/ChecklistCard.tsx (and a template's own checkbox lines) item
    *  state, keyed by widgetFieldKey(). */
