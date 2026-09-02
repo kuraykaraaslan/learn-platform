@@ -7,6 +7,35 @@ Budget and authority are the two dimensions people flinch from asking about dire
 
 Red flags run on a parallel track to fit-scoring, because a technically well-fitting lead can still carry serious risk. Five categories cover most of what actually goes wrong: payment risk (payment only after launch, no deposit, dodging budget conversation entirely), scope risk ("it's simple" attached to a complex platform, no must-have list, constant feature additions), authority risk (no one who can approve, visible internal disagreement), communication risk (rude tone, disappearing repeatedly, pressuring for an instant estimate), and ethical/legal risk (scraping, phishing-like flows, credential theft, anything illegal). Each category has its own calm scripted response rather than an improvised defense, and the response is diagnostic, not accusatory — it names the risk without shaming the person raising it. Disqualification itself isn't one flat action; it has four levels — soft (not ready now, nurture), commercial (budget/timeline mismatch, suggest smaller scope or decline), process (refuses scope, deposit, or written terms — decline), and ethical (unsafe or illegal request — refuse outright) — and matching the level to the actual situation keeps a budget mismatch from being handled with the same blunt language an ethical refusal deserves.
 
+
+```quiz
+- q: "An enthusiastic prospect wants a call. You know their project type and rough timeline, nothing else. What is the next step?"
+  anchor: "at least three of seven fields are already known"
+  options:
+    - text: "Book the call \u2014 enthusiasm is the scarce thing and momentum matters"
+      correct: false
+      why: "Enthusiasm is explicitly not the filter. Two known fields is below the bar however keen they sound."
+    - text: "Send an intake request, because only two of the seven fields are known"
+      correct: true
+      why: "The rule is at least three of seven before a calendar link; below that the next message is an intake request."
+    - text: "Offer a paid audit instead"
+      correct: false
+      why: "A paid audit is one of the mapped outcomes, but it is the answer to a different reading \u2014 not to simply having too little information yet."
+
+- q: "A prospect refuses to discuss budget at all. What does the lesson say to do?"
+  anchor: "reframe the next step as a scope discussion rather than a price estimate"
+  options:
+    - text: "Push once more, since budget is non-negotiable for a responsible recommendation"
+      correct: false
+      why: "The lesson explicitly says the fallback is not to push harder."
+    - text: "Reframe the next step as a scope discussion rather than a price estimate"
+      correct: true
+      why: "Scope is what a meaningful price depends on anyway, so the conversation can continue without the number."
+    - text: "Disqualify \u2014 no budget signal means no real project"
+      correct: false
+      why: "Refusing to name a number early is common and is not itself disqualifying; it changes the shape of the next step."
+```
+
 ## Key Concepts
 - **Six-dimension qualification model**: Need, Authority, Budget, Timeline, Fit, Risk — each rated strong/medium/weak/unknown, mapped to a specific next action.
 - **The call-booking rule**: book a discovery call only when at least 3 of 7 fields are known (problem, project type, must-have outcome, timeline, budget signal, decision maker, current system); fewer than 3 means send an intake request first.
@@ -63,3 +92,26 @@ Next message:
 - *SPIN Selling* — Neil Rackham: structured need-diagnosis questioning that underlies the "Need" dimension of this model.
 - *Getting to Yes* — Roger Fisher & William Ury: separating the person from the problem, useful when a red-flag conversation risks turning adversarial.
 - *The Trusted Advisor* — David Maister, Charles Green & Robert Galford: earning the standing to say no to a bad-fit client without damaging the relationship.
+
+```recall
+- q: "What are the seven fields, and how many must be known before booking discovery?"
+  must:
+    - "business problem, project type, must-have outcome"
+    - "timeline"
+    - "budget signal"
+    - "decision maker"
+    - "current system"
+    - "at least three of the seven"
+
+- q: "Give the scripted way into the budget question and say why it is framed that way."
+  must:
+    - "budget changes what the responsible recommendation is"
+    - "the same problem can be a lean MVP, a phased build or a full platform"
+    - "without a range you might design the wrong level of solution"
+
+- q: "What do you do when the person on the call cannot approve spending?"
+  must:
+    - "ask to include the person who can"
+    - "or offer a shareable summary for them"
+    - "do not quietly proceed as if authority were not a variable"
+```

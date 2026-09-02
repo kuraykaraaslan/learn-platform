@@ -7,6 +7,35 @@ The output is a bucket, not just a score: P0 Core (the MVP breaks without it), P
 
 The dependency dimension is the one teams most often skip, and it's the one that causes the most rework. Advanced analytics depends on having reliable event or order data first; automated refunds depend on a stable, already-integrated payment provider and an agreed refund policy; multi-tenant permissions depend on a settled role model. Scoring a feature high on value while ignoring that its prerequisite doesn't exist yet produces a roadmap that looks ambitious and is actually unbuildable in the order it's written — the sequencing failure shows up mid-project, at the worst possible time to discover it.
 
+
+```quiz
+- q: "What makes a feature P0 rather than P1?"
+  anchor: "removing it breaks the MVP's core outcome, not because it's popular"
+  options:
+    - text: "It scored highest across the seven dimensions"
+      correct: false
+      why: "A high score can come from user value alone. P0 is a structural claim, not a ranking position."
+    - text: "Removing it breaks the MVP's core outcome"
+      correct: true
+      why: "That is the test the bucket has to survive \u2014 and it is answerable with a why, which is what makes it defensible to whoever lost their feature."
+    - text: "The client asked for it explicitly"
+      correct: false
+      why: "That is the default mechanism prioritization is meant to replace: whoever asked most recently or most loudly."
+
+- q: "Why does the model score across seven dimensions instead of ranking by user value?"
+  anchor: "a repeatable scoring pass across seven dimensions"
+  options:
+    - text: "To make the process feel more rigorous to stakeholders"
+      correct: false
+      why: "Optics are not the reason, and a scoring pass nobody believes in is worse than an honest argument."
+    - text: "Because a high-value feature can still lose to a cheaper one that others depend on"
+      correct: true
+      why: "Effort, dependency and urgency change the order \u2014 value alone cannot express \"everything else needs this first\"."
+    - text: "Because user value is too hard to estimate reliably"
+      correct: false
+      why: "It is estimable. The point is that it is not sufficient on its own, not that it is unmeasurable."
+```
+
 ## Key Concepts
 - **Seven scoring dimensions**: user value, business value, risk reduction, learning value, effort, dependency, urgency
 - **Priority buckets**: P0 Core (breaks MVP without it), P1 Important (strong value, timeline permitting), P2 Later (useful, not required for launch), P3 Backlog (idea only), Out (misaligned or too costly)
@@ -47,3 +76,27 @@ The dependency dimension is the one teams most often skip, and it's the one that
 - Intercom's "How we prioritize" engineering/product blog series (effort vs. impact frameworks in practice)
 - Teresa Torres — "Continuous Discovery Habits," chapter on opportunity solution trees, for connecting prioritization back to the problem it's meant to serve
 - [RICE scoring, as originally described by Intercom](https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/) — the source of the framework, including the reach/confidence definitions most retellings drop
+
+```recall
+- q: "List the seven scoring dimensions."
+  must:
+    - "user value, business value, risk reduction"
+    - "learning value"
+    - "effort"
+    - "dependency"
+    - "urgency"
+
+- q: "Name the buckets and what each one commits you to."
+  must:
+    - "P0 Core \u2014 the MVP breaks without it"
+    - "P1 Important \u2014 include if the timeline allows"
+    - "P2 Later \u2014 useful, not required for launch"
+    - "P3 Backlog \u2014 no near-term commitment"
+    - "Out \u2014 misaligned or too costly for this phase"
+
+- q: "What question does a bucket assignment have to survive?"
+  must:
+    - "why this bucket and not the next one down"
+    - "P0 has to mean removing it breaks the core outcome"
+    - "popularity or who asked is not an answer"
+```
