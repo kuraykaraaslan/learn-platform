@@ -42,6 +42,29 @@ Top action: pipeline for September is thin — confirmed revenue covers
 ```
 Every other number is green — the dashboard's entire value this month is the one red line, which a monthly revenue total alone would never have surfaced this early.
 
+Three of the dashboard's KPIs, computed from one month. The profit line is
+explicitly a management estimate, not an accounting figure — the reserve
+allocation is subtracted because that money is already committed, even though
+it is still sitting in the account.
+
+```calc
+inputs:
+  - { id: collected,     label: "Revenue collected this month (USD)", type: number, default: 14000, min: 0, step: 500 }
+  - { id: expenses,      label: "Monthly expenses (USD)",             type: number, default: 2100, min: 0 }
+  - { id: direct_costs,  label: "Direct project costs (USD)",         type: number, default: 1600, min: 0 }
+  - { id: reserves,      label: "Reserve allocations (USD)",          type: number, default: 3500, min: 0 }
+  - { id: subscriptions, label: "Monthly subscription cost (USD)",    type: number, default: 420, min: 0 }
+outputs:
+  - { label: "Estimated profit", expr: "collected - expenses - direct_costs - reserves", format: usd }
+  - { label: "Profit as a share of collected revenue", expr: "(collected - expenses - direct_costs - reserves) / collected * 100", format: percent }
+  - { label: "Subscription cost ratio", expr: "subscriptions / collected * 100", format: percent }
+```
+
+Watch the third line across several months rather than judging it once. A rising
+subscription ratio is the early signal the lesson names: tool spend growing
+faster than the business paying for it, which is invisible in any single month's
+absolute number.
+
 ## When to Use
 - Weekly or monthly, as a fixed check-in, not only when something already feels wrong.
 - Alongside the monthly financial close, as the compressed one-screen version of it.

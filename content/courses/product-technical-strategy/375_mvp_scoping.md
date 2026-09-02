@@ -7,6 +7,48 @@ The practical tool for scoping an MVP is the must-have vs. nice-to-have split, a
 
 A frequently missed piece is the quality floor: an MVP is smaller, not careless. Even the leanest MVP needs authentication if it touches sensitive data, basic input validation, clear error states, a safe payment flow if payments exist, and some form of logging. Cutting these to "ship faster" isn't scoping — it's introducing a different kind of risk that will surface as a security incident or a support fire instead of a missed deadline. The manual backoffice pattern is the legitimate way to shrink scope without cutting the quality floor: explicitly deciding that refund requests, for instance, will be handled by a human clicking a button in an admin panel during MVP, with the automated refund engine deferred to V2. That's a real scope reduction that preserves the product's ability to actually operate.
 
+
+```quiz
+- q: "The client is enthusiastic about a feature and the team likes building it. It is not needed for the core job. Which bucket?"
+  anchor: "a feature is must-have only if the core job breaks without it"
+  options:
+    - text: "Must-have \u2014 client enthusiasm is a real signal about adoption"
+      correct: false
+      why: "Enthusiasm is explicitly not the filter. The lesson says regardless of enthusiasm."
+    - text: "Later phase \u2014 the core job does not break without it"
+      correct: true
+      why: "The test is structural: remove it and ask whether the core job still completes."
+    - text: "Must-have if it is cheap to build"
+      correct: false
+      why: "Cost affects sequencing inside a phase, not whether something belongs in the MVP boundary."
+
+- q: "You ship something valuable, usable and deliverable, but you cannot tell whether it worked. What do you have?"
+  anchor: "valuable, usable, testable, deliverable"
+  options:
+    - text: "An MVP \u2014 three of four conditions is the practical bar"
+      correct: false
+      why: "Missing any one changes what you built. There is no three-of-four version."
+    - text: "Not an MVP \u2014 without testability it is an unclear bet, not a minimum viable product"
+      correct: true
+      why: "The point of the M and V is learning something; a build you cannot evaluate has not produced that."
+    - text: "A prototype, since prototypes are the untestable category"
+      correct: false
+      why: "A prototype is usually the one that is not deliverable. Untestable lands elsewhere."
+
+- q: "You are cutting scope hard. Which of these can go?"
+  anchor: "non-negotiable even at minimum scope"
+  options:
+    - text: "Input validation, since the pilot users are known and trusted"
+      correct: false
+      why: "The quality floor is non-negotiable at minimum scope, and validation is on it."
+    - text: "Automating an admin workflow \u2014 route it through a human instead, and document the boundary"
+      correct: true
+      why: "That is the manual backoffice pattern: a deliberate, documented choice rather than a gap."
+    - text: "Basic logging, since there is no on-call rotation yet"
+      correct: false
+      why: "Also on the quality floor. Without it the first pilot incident is unexplainable."
+```
+
 ## Key Concepts
 - **Four MVP conditions**: valuable, usable, testable, deliverable — missing any one changes what you've actually built (demo, prototype, unclear bet, or overrun)
 - **Must-have vs. nice-to-have filter**: a feature is must-have only if the core job breaks without it; everything else is a later-phase candidate regardless of enthusiasm
@@ -75,3 +117,30 @@ across a 2-week pilot.
 - Eric Ries — "The Lean Startup" (the original MVP concept, before "smallest version" drifted into "cheapest version" in common usage)
 - Henrik Kniberg — "Making Sense of MVP" (the widely-cited skateboard-not-a-car-wheel illustration of valuable-at-every-stage scoping)
 - Melissa Perri — "Escaping the Build Trap" (on why shipping isn't the same as validating, which is the same distinction the quality-floor and success-metric fields protect)
+
+```recall
+- q: "Name the four MVP conditions and what a build becomes when one is missing."
+  must:
+    - "valuable, usable, testable, deliverable"
+    - "missing one makes it a demo, a prototype, an unclear bet or an overrun"
+    - "the four are a definition, not a checklist to score"
+
+- q: "State the must-have filter, and what does not count as an argument."
+  must:
+    - "must-have only if the core job breaks without it"
+    - "enthusiasm does not qualify a feature"
+    - "cheapness does not qualify a feature either"
+
+- q: "What sits on the quality floor even at minimum scope?"
+  must:
+    - "authentication where sensitive data exists"
+    - "basic authorization and input validation"
+    - "clear error states and a safe payment flow"
+    - "basic logging"
+
+- q: "What is the manual backoffice pattern, and what makes it legitimate rather than a gap?"
+  must:
+    - "deliberately routing a workflow through a human instead of automating"
+    - "the decision and its boundary are explicit"
+    - "both are written down rather than discovered later"
+```

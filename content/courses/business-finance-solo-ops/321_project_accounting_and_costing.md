@@ -42,6 +42,29 @@ sign-off; require written milestone approval before starting the next phase.
 ```
 Same contract value, wildly different real return — the difference is entirely in the hours the invoice never shows.
 
+The effective-hourly-rate formula in Key Concepts, run against one finished
+project. Use a real one you have already closed — the number only stings if the
+hours are honest, and honest means every hour in the list above, not the ones
+you logged against the ticket.
+
+```calc
+inputs:
+  - { id: contract,      label: "Contracted value (USD)",              type: number, default: 12000, min: 0, step: 500 }
+  - { id: direct_costs,  label: "Direct project costs (USD)",          type: number, default: 900, min: 0 }
+  - { id: quoted_hours,  label: "Hours you estimated when quoting",    type: number, default: 80, min: 1 }
+  - { id: actual_hours,  label: "Actual hours, including sales, QA, handover and rework", type: number, default: 118, min: 1 }
+outputs:
+  - { label: "Net project revenue", expr: "contract - direct_costs", format: usd }
+  - { label: "The rate you quoted at", expr: "contract / quoted_hours", format: usd }
+  - { label: "What the project actually paid per hour", expr: "(contract - direct_costs) / actual_hours", format: usd }
+  - { label: "Hours over estimate", expr: "actual_hours - quoted_hours", format: number }
+```
+
+The gap between the second and third lines is the whole reason this lesson asks
+for a profitability review rather than an invoice total. Direct costs and the
+hours nobody billed for both live in that gap, and neither one appears anywhere
+on the contract.
+
 ## When to Use
 - At the close of every project, as a standing step before archiving it — not only for large or troubled ones.
 - Before quoting a repeat client for new work — check their historical effective rate first.

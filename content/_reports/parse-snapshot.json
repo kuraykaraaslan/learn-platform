@@ -509,7 +509,7 @@
         "title": "e6a6f26a1e7d3f12",
         "whatItIs": "2254785aab147d38",
         "keyConcepts": "0524c37dd789ff15",
-        "exampleCode": "a5aa3ffeceac416f",
+        "exampleCode": "3945cfe5401691a7",
         "whenToUse": "b76f754d8ed5f647",
         "commonMistakes": "5388765b365fdcfb",
         "furtherReading": "7423305e5271d8ee"
@@ -545,7 +545,7 @@
         "title": "9db09a7d410b0222",
         "whatItIs": "8aa97fb53ff52faa",
         "keyConcepts": "2e2101db0783f7f5",
-        "exampleCode": "2554668f24ff71ec",
+        "exampleCode": "819ed2f6cba33704",
         "whenToUse": "8f43f7f291a794ec",
         "commonMistakes": "5a9760d47ce22ada",
         "furtherReading": "85ff683462636977"
@@ -3374,12 +3374,12 @@
       },
       "375_mvp_scoping.md": {
         "title": "e44efe07f008de13",
-        "whatItIs": "783d7a1e2b8b2c8b",
+        "whatItIs": "79bf2cb05f73b444",
         "keyConcepts": "3be40340df6fad81",
         "exampleCode": "82e9801d7b83027d",
         "whenToUse": "ab2ef57a29369206",
         "commonMistakes": "a523ebc82ff0cae6",
-        "furtherReading": "09da7ae6bcc80dcc"
+        "furtherReading": "6c5d6cc5a4339e60"
       },
       "376_feature_prioritization.md": {
         "title": "899f31dcc5222c79",
