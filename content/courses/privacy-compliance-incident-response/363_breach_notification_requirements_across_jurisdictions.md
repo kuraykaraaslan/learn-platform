@@ -7,6 +7,35 @@ HIPAA in the US runs on a longer and structurally different timeline: a covered 
 
 The practical discipline this creates is a jurisdiction-routing decision that has to happen fast, immediately after the incident response process confirms personal data is involved: which regulator, which deadline, and which notification content is required, and whether more than one jurisdiction's clock is running simultaneously because the affected users span multiple countries. None of this replaces legal counsel — the final determination of whether a breach is notifiable, and the actual notification content and delivery, should go through legal/privacy counsel — but engineering's job is to have already produced, from the incident response process, the specific facts (what data, how many records, what timeframe, what containment has occurred) that counsel needs to make that call inside a 72-hour or 60-day window instead of starting the investigation from zero.
 
+
+```quiz
+- q: "A breach occurred on 1 March and you discovered it on 20 March. When does the GDPR clock start?"
+  anchor: "72 hours of the organization becoming aware of it"
+  options:
+    - text: "1 March \u2014 the deadline runs from the breach itself"
+      correct: false
+      why: "If it ran from the event, every slow detection would be an automatic breach of the deadline. It runs from awareness."
+    - text: "20 March \u2014 the 72 hours run from becoming aware"
+      correct: true
+      why: "Which is why detection speed decides how much of the window is left to investigate rather than just to report."
+    - text: "Whenever the investigation confirms the scope of the data involved"
+      correct: false
+      why: "Waiting for a complete picture is the common mistake \u2014 the clock does not pause for the investigation."
+
+- q: "You already report to an EU national DPA. A UK customer is affected too. What does that change?"
+  anchor: "routes the notification to a different regulator entirely"
+  options:
+    - text: "Nothing \u2014 UK GDPR keeps the same 72 hours, so the same filing covers it"
+      correct: false
+      why: "The hours matching is a coincidence of drafting; the filing goes to a different regulator on a separate legal track."
+    - text: "A separate notification to the ICO, on its own track, even though the window matches"
+      correct: true
+      why: "Post-Brexit the UK and EU deadlines run independently \u2014 the same number of hours does not make it the same obligation."
+    - text: "Only if UK residents outnumber EU residents in the affected set"
+      correct: false
+      why: "There is no such threshold. The obligation follows the jurisdiction, not the headcount split."
+```
+
 ## Key Concepts
 - **GDPR / KVKK — 72 hours from discovery**: notification to the national DPA / KVKK Kurumu within 72 hours of *becoming aware*, not from when the breach actually occurred
 - **UK GDPR — 72 hours to the ICO**: same window as GDPR but a distinct regulator and legal instrument — EU notification does not substitute for a UK one
@@ -97,3 +126,23 @@ const applicable = routeIncident(["EU", "US_HIPAA"]);
 - [GDPR Article 33 — Notification of a Personal Data Breach to the Supervisory Authority](https://gdpr-info.eu/art-33-gdpr/)
 - [ICO — Personal Data Breaches Guidance](https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/personal-data-breaches/)
 - [HHS — Breach Notification Rule (HIPAA)](https://www.hhs.gov/hipaa/for-professionals/breach-notification/index.html)
+
+```recall
+- q: "When does the 72-hour clock start, and why does that detail matter?"
+  must:
+    - "from becoming aware, not from when the breach happened"
+    - "slow detection eats the window you needed for investigating"
+    - "the clock does not pause while you establish scope"
+
+- q: "Name three regimes and where each notification goes."
+  must:
+    - "GDPR \u2014 the competent national data protection authority"
+    - "UK GDPR \u2014 the ICO, on a separate post-Brexit track"
+    - "KVKK \u2014 the KVKK Kurumu in Turkey, same 72-hour shape"
+
+- q: "Why is 'GDPR's 72 hours is universal' a dangerous assumption?"
+  must:
+    - "the deadline, the regulator and the required content all vary"
+    - "matching hour counts do not mean one filing satisfies both"
+    - "a missed regulator is a separate violation, not a formality"
+```

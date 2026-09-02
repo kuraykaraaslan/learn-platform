@@ -7,6 +7,35 @@ These metrics matter beyond SEO (Google uses them as a ranking signal). They dir
 
 The critical distinction is **field data vs lab data**. Lighthouse is a lab tool — it runs on your machine under controlled conditions. Real users have slower devices, different connection speeds, browser extensions, and concurrent tabs. A Lighthouse score of 95 doesn't mean your users have a fast experience. Real User Monitoring (RUM) using the `web-vitals` library, sent to an analytics endpoint, tells you what your actual 75th percentile user experiences. The Core Web Vitals thresholds use the 75th percentile — 75% of your users must have a "good" experience.
 
+
+```quiz
+- q: "Your lab audit scores 100 but field data shows poor INP. Which is wrong?"
+  anchor: "They're measured in the field"
+  options:
+    - text: "The field data \u2014 real-user metrics are noisy and need more samples"
+      correct: false
+      why: "Noise is real, but Core Web Vitals are defined as field metrics. The field number is the one being measured, not an approximation of the lab."
+    - text: "Neither \u2014 the lab measures a simulated load, and Core Web Vitals are defined on real devices and networks"
+      correct: true
+      why: "A synthetic run on fast hardware cannot produce the interaction delays real users hit; the two are measuring different things."
+    - text: "The lab tool is misconfigured and should be re-run with throttling"
+      correct: false
+      why: "Throttling narrows the gap but does not change which measurement the metric is defined on."
+
+- q: "Which metric replaced First Input Delay, and what does it capture that FID did not?"
+  anchor: "INP replaced FID (First Input Delay) in 2024"
+  options:
+    - text: "CLS, capturing layout instability during interaction"
+      correct: false
+      why: "CLS is visual stability and predates this change; it is unrelated to the FID replacement."
+    - text: "INP, capturing worst-case delay across all interactions rather than only the first"
+      correct: true
+      why: "FID looked at the first input only; INP measures the worst interaction-to-paint delay across the visit."
+    - text: "LCP, since interaction delay is dominated by render time"
+      correct: false
+      why: "LCP is the load-perception metric. It says nothing about responsiveness after the page appears."
+```
+
 ## Key Concepts
 - **LCP (Largest Contentful Paint)**: Time until largest image/text block is visible; target: ≤2.5s; main causes: slow images, render-blocking resources, slow server response
 - **CLS (Cumulative Layout Shift)**: Sum of unexpected layout shifts during the page lifetime; target: ≤0.1; main causes: images/videos without dimensions, late-loading fonts, dynamically injected content
@@ -178,3 +207,23 @@ function GoodButton() {
 - **"Optimize LCP", "Optimize CLS", "Optimize INP" on web.dev** — Each metric has a dedicated optimization guide with specific, actionable techniques; these are the most useful documents for a developer who has identified a specific metric to improve
 - **Chrome User Experience Report (CrUX) documentation** — If your site has enough traffic, Google's CrUX provides free real-user field data in Google Search Console and PageSpeed Insights; understanding how to read CrUX data is the first step before building your own RUM pipeline
 - [web.dev: Core Web Vitals](https://web.dev/articles/vitals) — the current metric definitions and thresholds, which are revised over time
+
+```recall
+- q: "Name the three Core Web Vitals and what each one measures."
+  must:
+    - "LCP \u2014 how long until the largest visible element renders"
+    - "CLS \u2014 how much the layout shifts as the page loads"
+    - "INP \u2014 worst-case delay from an interaction to the next paint"
+
+- q: "Why can a perfect lab score coexist with bad field data?"
+  must:
+    - "the metrics are defined on real devices and networks"
+    - "a lab run simulates one load on fast hardware"
+    - "real users bring slow devices, cold caches and real interactions"
+
+- q: "Name the usual causes of layout shift."
+  must:
+    - "images without width and height"
+    - "late-loading fonts swapping metrics"
+    - "banners or ads injected above existing content"
+```

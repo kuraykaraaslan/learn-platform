@@ -7,6 +7,35 @@ A changelog is a human-readable document that describes what changed in each ver
 
 For a SaaS developer, semver and changelogs apply at multiple levels: your internal API (when you version your API endpoints), your boilerplate (if you share it with clients or plan to open-source it), and any npm packages you publish. Even for internal projects, the discipline of writing a changelog entry forces you to categorize every change as breaking, additive, or a fix — which is useful information independent of publishing.
 
+
+```quiz
+- q: "You rename a public function and keep the old name as a deprecated alias. Which number moves?"
+  anchor: "the MAJOR version increments when you make breaking changes"
+  options:
+    - text: "MAJOR \u2014 renaming public API is a breaking change"
+      correct: false
+      why: "It would be, if the old name were gone. Keeping a working alias means no existing integration breaks on upgrade."
+    - text: "MINOR \u2014 new functionality, and nothing existing breaks"
+      correct: true
+      why: "The new name is added functionality and the old one still works, which is the backwards-compatible case MINOR is for."
+    - text: "PATCH \u2014 no behaviour changed for existing callers"
+      correct: false
+      why: "PATCH is for bug fixes. Adding a new public name is new surface area, even when nothing breaks."
+
+- q: "What coordination problem is semver actually solving?"
+  anchor: "tells every downstream consumer, before they upgrade, whether upgrading is safe"
+  options:
+    - text: "It tells consumers, before upgrading, whether the upgrade needs migration work"
+      correct: true
+      why: "That is the entire contract: the number is a promise a consumer can act on without reading your diff."
+    - text: "It gives maintainers a release cadence to plan around"
+      correct: false
+      why: "Semver says nothing about when you release, only about what a release means."
+    - text: "It lets package managers resolve dependency trees deterministically"
+      correct: false
+      why: "Lockfiles do that. Semver informs the ranges, but the guarantee it makes is to a human deciding whether to upgrade."
+```
+
 ## Key Concepts
 - **MAJOR.MINOR.PATCH**: `1.0.0` → `2.0.0` for breaking changes, `1.1.0` for new features, `1.0.1` for bug fixes
 - **Pre-release identifiers**: `1.0.0-alpha.1`, `1.0.0-beta.2`, `1.0.0-rc.1` — signal that the release is not yet stable; npm installs these only with explicit `@next` or `@alpha` tags
@@ -136,3 +165,23 @@ conventional-changelog -p angular -i CHANGELOG.md -s
 - **semver.org** — The full semver specification; short and worth reading completely; the FAQ section addresses edge cases like "what counts as a public API" for libraries
 - **keepachangelog.com** — The standard for human-readable changelogs; includes the full format, a manifesto for why automated git log changelogs are insufficient, and examples
 - [**Conventional Commits specification](https://conventionalcommits.org)** — The commit message format that enables automated semver calculation and changelog generation; includes examples of all commit types and the BREAKING CHANGE footer syntax
+
+```recall
+- q: "State what each of MAJOR, MINOR and PATCH means to a consumer."
+  must:
+    - "MAJOR \u2014 breaking; existing integrations need migration work"
+    - "MINOR \u2014 new functionality, backwards compatible"
+    - "PATCH \u2014 bug fix, backwards compatible"
+
+- q: "Why does the scheme exist at all?"
+  must:
+    - "it is a coordination signal to downstream consumers"
+    - "it answers 'is upgrading safe' before anyone reads the diff"
+    - "without it every upgrade is an unbounded investigation"
+
+- q: "What belongs in a changelog entry that the version number alone cannot say?"
+  must:
+    - "what actually changed, in the consumer's language"
+    - "what a consumer has to do about it on upgrade"
+    - "a link to the migration path for anything breaking"
+```

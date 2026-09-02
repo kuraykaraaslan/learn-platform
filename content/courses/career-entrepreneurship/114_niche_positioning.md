@@ -7,6 +7,22 @@ A niche is not a limitation. It's a filter. "I build multi-tenant SaaS platforms
 
 The goal is to find the intersection of: what you're unusually good at, what clients pay premium for, and what's defensible (hard to fake with 3 months of tutorials). Your boilerplate already defines your niche. The question is whether you're communicating it.
 
+
+```quiz
+- q: "Why does 'I build web apps for anyone' hurt more than it helps?"
+  anchor: "competing with every other developer on Upwork by price"
+  options:
+    - text: "It undersells the breadth of what you can actually do"
+      correct: false
+      why: "Breadth is not the issue \u2014 it is that breadth gives a buyer nothing to recognise themselves in."
+    - text: "Appealing to everyone leaves price as the only axis you can be compared on"
+      correct: true
+      why: "With no specific fit to point at, the buyer's only remaining comparison is the rate."
+    - text: "Generalists take longer to deliver than specialists"
+      correct: false
+      why: "That is not the claim, and it is not generally true. The argument is about how you get chosen, not how fast you work."
+```
+
 ## Key Concepts
 - **Generalist trap**: Competing on breadth means competing on price. Every client considers you interchangeable with every other "full-stack developer."
 - **Specialist premium**: Clients pay more for someone who has solved their exact problem before. Risk reduction, not just skill.
@@ -80,3 +96,23 @@ multi-currency, multi-language, KVKK-compliant from day one."
 - *The Positioning Manual for Technical Firms* — Philip Morgan: the definitive guide for solo technical consultants
 - *Badass: Making Users Awesome* — Kathy Sierra: outcome-first thinking applied to positioning
 - *Win Without Pitching Manifesto* — Blair Enns: pricing and positioning for creative/technical professionals
+
+```recall
+- q: "What is positioning supposed to produce in a reader's head?"
+  must:
+    - "a specific type of client thinking 'that is exactly what I need'"
+    - "recognition, not admiration"
+    - "enough specificity that they can tell the answer is about them"
+
+- q: "What is the cost of positioning yourself for everyone?"
+  must:
+    - "no buyer sees themselves described"
+    - "price becomes the only comparison left"
+    - "you compete against every generalist on rate"
+
+- q: "How would you test whether a positioning statement is specific enough?"
+  must:
+    - "read it to someone outside your field and ask who it is for"
+    - "if the answer is 'anyone who needs a website', it is not positioning"
+    - "a good one lets the wrong client rule themselves out quickly"
+```

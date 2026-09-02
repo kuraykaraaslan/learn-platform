@@ -9,6 +9,22 @@ Keyword research feeds this intent map but should never lead it. Every candidate
 
 For AEO, this same cluster thinking extends into natural-question form: each cluster should be able to answer "What is it?", "When do you need it?", "What does it include?", "What does it cost depend on?", and "What are the risks?" concisely, because AI answer systems respond to natural questions more than to keyword phrases.
 
+
+```quiz
+- q: "What question does the lesson say to replace \"what keyword should I target?\" with?"
+  anchor: "what problem do I want to be known for solving"
+  options:
+    - text: "Which keywords have the highest volume and lowest difficulty"
+      correct: false
+      why: "That is the same scattered-keyword approach with better tooling \u2014 it still produces unrelated pages."
+    - text: "What problem do I want to be known for solving, and what must someone read before trusting me"
+      correct: true
+      why: "That reframes the unit of work from a keyword to a cluster with an order and a destination."
+    - text: "Which competitors rank for the terms I want"
+      correct: false
+      why: "Useful input, but it describes the current board rather than deciding what you are building toward."
+```
+
 ## Key Concepts
 - **Cluster anatomy**: pillar page + supporting pages + case studies/proof + FAQ/answer pages + internal links + one conversion page.
 - **Intent classification before page type**: informational, commercial, transactional, navigational, local/service, and technical/problem intents each demand a different page structure — never reuse one template for all of them.
@@ -65,3 +81,23 @@ For AEO, this same cluster thinking extends into natural-question form: each clu
 - [HubSpot's "Topic Clusters" guide](https://blog.hubspot.com) — a practical, widely cited explanation of the pillar/cluster model
 - Google Search Central's "Understanding Search Intent" and query-matching documentation — the primary-source view of how intent shapes ranking
 - *They Ask, You Answer* — Marcus Sheridan: a strong case study in building an entire content strategy around the real questions buyers ask before purchasing
+
+```recall
+- q: "Describe the shape of a topic cluster."
+  must:
+    - "a pillar page, usually a service page"
+    - "supporting pages, case studies and answer content around it"
+    - "all internally linked and pointed at one conversion page"
+
+- q: "What is wrong with organising around a keyword list?"
+  must:
+    - "it produces unrelated pages that reinforce nothing"
+    - "it optimises for a term rather than for being trusted"
+    - "it has no order \u2014 nothing tells the reader what to read next"
+
+- q: "What does each piece in a cluster have to do to earn its place?"
+  must:
+    - "pull its own search traffic for a real query"
+    - "reinforce the pillar rather than compete with it"
+    - "link inward toward the single conversion page"
+```
