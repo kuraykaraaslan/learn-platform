@@ -478,6 +478,23 @@ export const RULES: Rule[] = [
     },
   },
   {
+    id: 'drill/widget-on-unverified-lesson',
+    severity: 'warn',
+    description:
+      'A `quiz` or `recall` fence on a lesson that is not `verified`. QuizCard and RecallCard both return null in that case — the stopping rule working — so the fence renders nothing at all and the effort is invisible to every reader. The neighbouring `drill/unverified-lesson` rule does not catch this: it checks a manifest `interactive` field that no lesson in the corpus actually sets, so nothing was watching the fences themselves. Born `warn` per the repo rule, because the corpus is not clean of it: 114 is on stamp-verified.ts\'s T1.7 harm denylist and can only be cleared by the expert pass that list is waiting for, so its drills stay written-but-dark until then. Promote to `error` once that is resolved.',
+    lesson: (file) => {
+      if (file.verified === true) return [];
+      const gated = file.fences.filter((f) => f.lang === 'quiz' || f.lang === 'recall');
+      return gated.map((f) => ({
+        rule: 'drill/widget-on-unverified-lesson',
+        severity: 'warn' as const,
+        target: file.target,
+        line: f.line,
+        message: `\`${f.lang}\` fence on an unverified lesson — it renders nothing`,
+      }));
+    },
+  },
+  {
     id: 'verify/stale-stamp',
     severity: 'error',
     description:

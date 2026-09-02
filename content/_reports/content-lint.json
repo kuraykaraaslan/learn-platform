@@ -2,11 +2,28 @@
   "generatedFrom": "scripts/content-lint",
   "lessons": 412,
   "totals": {
-    "findings": 0,
+    "findings": 2,
     "errors": 0,
-    "warnings": 0,
+    "warnings": 2,
     "waived": 5
   },
-  "byRule": {},
-  "findings": []
+  "byRule": {
+    "drill/widget-on-unverified-lesson": 2
+  },
+  "findings": [
+    {
+      "rule": "drill/widget-on-unverified-lesson",
+      "severity": "warn",
+      "target": "career-entrepreneurship/114_niche_positioning.md",
+      "line": 11,
+      "message": "`quiz` fence on an unverified lesson — it renders nothing"
+    },
+    {
+      "rule": "drill/widget-on-unverified-lesson",
+      "severity": "warn",
+      "target": "career-entrepreneurship/114_niche_positioning.md",
+      "line": 100,
+      "message": "`recall` fence on an unverified lesson — it renders nothing"
+    }
+  ]
 }
