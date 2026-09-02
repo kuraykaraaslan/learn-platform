@@ -7,6 +7,47 @@ Statelessness is the one that trips people up. It's not a limitation to work aro
 
 Headers are underrated. They're the protocol's real API surface for anything that isn't the primary payload: content negotiation, caching directives, auth credentials, tracing IDs. Treating them as an afterthought is how you end up re-inventing what `Cache-Control` or `ETag` already solve.
 
+```quiz
+- q: "Is DELETE safe, idempotent, both, or neither?"
+  anchor: "GET, PUT, DELETE, HEAD — calling twice has the same effect as calling once"
+  options:
+    - text: "Both — it creates nothing"
+      correct: false
+      why: "Safe means it must not change server state, and DELETE plainly does. It is idempotent only."
+    - text: "Idempotent only — deleting twice leaves the same state, but state did change"
+      correct: true
+      why: "Safe is GET, HEAD and OPTIONS; those must not change server state at all."
+    - text: "Neither — the second call returns a different status code"
+      correct: false
+      why: "Idempotence is about the resulting state, not the status code that comes back."
+
+- q: "A malformed JSON body makes your handler throw, and it returns 500. What is wrong with that?"
+  anchor: "4xx client error (you did something wrong), 5xx server error (we did something wrong)"
+  options:
+    - text: "Nothing — an unhandled exception is a server error by definition"
+      correct: false
+      why: "The exception is yours; the cause is the client's body. 4xx is the family that says the caller sent something wrong."
+    - text: "It should be 4xx — the client sent something wrong"
+      correct: true
+      why: "5xx tells the caller to retry and wait for you to fix it, and a malformed body will fail identically forever."
+    - text: "It should be 3xx, redirecting the caller to the API docs"
+      correct: false
+      why: "3xx is a redirect to another representation, not an error channel."
+
+- q: "What does HTTP statelessness mean for a logged-in user?"
+  anchor: "each request is self-contained"
+  options:
+    - text: "The server holds a session object in memory between their requests"
+      correct: false
+      why: "That memory is an illusion: it is rebuilt on each request from a cookie or token plus a database."
+    - text: "Each request is self-contained; the login is reconstructed from a token plus a lookup"
+      correct: true
+      why: "Nothing carries over on its own — the appearance of memory is assembled every single time."
+    - text: "It applies to GET only; a POST may carry session state in its body"
+      correct: false
+      why: "It applies to every method. A body is not a session."
+```
+
 ## Key Concepts
 - **Safe methods**: GET, HEAD, OPTIONS — must not change server state
 - **Idempotent methods**: GET, PUT, DELETE, HEAD — calling twice has the same effect as calling once
@@ -67,3 +108,30 @@ async function fetchWithRetry(url: string, init: RequestInit, attempts = 3): Pro
 - [MDN: HTTP overview](https://developer.mozilla.org/en-US/docs/Web/HTTP) — methods, status codes and headers, with the semantics spelled out
 - [RFC 9110 — HTTP Semantics](https://www.rfc-editor.org/rfc/rfc9110.html) — the current specification, replacing RFC 7231
 - Julia Evans — "HTTP: let's GET it on" zine (approachable, still technically precise)
+
+```recall
+- q: "Which methods are safe, which are idempotent, and which are neither?"
+  must:
+    - "safe: GET, HEAD, OPTIONS — must not change server state"
+    - "idempotent: GET, PUT, DELETE, HEAD — calling twice has the same effect as calling once"
+    - "neither: POST and PATCH, where each call can have a new effect"
+
+- q: "What do the status code families mean?"
+  must:
+    - "2xx success"
+    - "3xx redirect"
+    - "4xx client error — you did something wrong"
+    - "5xx server error — we did something wrong"
+
+- q: "Name the four headers and what each one answers."
+  must:
+    - "`Content-Type` — what the body is"
+    - "`Cache-Control` — how long it is valid"
+    - "`Authorization` — who is asking"
+    - "`ETag` / `If-None-Match` — has it changed"
+
+- q: "What is content negotiation?"
+  must:
+    - "`Accept` and `Accept-Language`"
+    - "one URL can serve multiple representations"
+```

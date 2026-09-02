@@ -456,7 +456,7 @@
       "lessonsLinkedIn": [
         "fundamentals-tools/119_http_fundamentals.md"
       ],
-      "rawOccurrences": 5
+      "rawOccurrences": 6
     },
     {
       "slug": "context-propagation",
@@ -1237,7 +1237,7 @@
       "lessonsLinkedIn": [
         "database-caching-performance/19_connection_pool_tuning.md"
       ],
-      "rawOccurrences": 4
+      "rawOccurrences": 5
     },
     {
       "slug": "tenant-provisioning",
@@ -1368,7 +1368,7 @@
       "slug": "x-forwarded-for",
       "term": "X-Forwarded-For",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 7
+      "rawOccurrences": 8
     },
     {
       "slug": "yagni",

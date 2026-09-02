@@ -2806,21 +2806,21 @@
     "fundamentals-tools": {
       "119_http_fundamentals.md": {
         "title": "e944ade09d45cb63",
-        "whatItIs": "98e9d278f4e9ce80",
+        "whatItIs": "ce9fb93d2110ff89",
         "keyConcepts": "592e27206e373569",
         "exampleCode": "fd68a291533bc548",
         "whenToUse": "9c488a6767fe9e52",
         "commonMistakes": "d2a6f7b784222eb7",
-        "furtherReading": "b02609a31a1f8267"
+        "furtherReading": "f86b495926668521"
       },
       "120_git_fundamentals.md": {
         "title": "e7526fc6fa697b18",
-        "whatItIs": "09aa8c40f5f0efa4",
+        "whatItIs": "372ef731be295b5e",
         "keyConcepts": "0d92ddb23404013a",
         "exampleCode": "d8ed053abdb14872",
         "whenToUse": "c1d0b509709c27d4",
         "commonMistakes": "5e90eead790f9238",
-        "furtherReading": "c3a1d91ab014b8ce"
+        "furtherReading": "7322ae5ecc09f923"
       },
       "121_sql_fundamentals.md": {
         "title": "ac0ac1117407df97",
@@ -2860,12 +2860,12 @@
       },
       "125_rest_api_basics.md": {
         "title": "fe7626e797a40f45",
-        "whatItIs": "799d18676b737d3d",
+        "whatItIs": "df813adef931d2f7",
         "keyConcepts": "dd9aa1f79b56ea5f",
         "exampleCode": "cdaaa1a12679aa3b",
         "whenToUse": "8202f8030e30a29f",
         "commonMistakes": "2af6c89c79d8ea7e",
-        "furtherReading": "895cdf67350e073b"
+        "furtherReading": "6d66fc22d12d97a3"
       },
       "126_cli_dev_environment_basics.md": {
         "title": "bbae16599eb4c9e9",
@@ -2896,12 +2896,12 @@
       },
       "133_networking_fundamentals.md": {
         "title": "17b74b486a0fb6e0",
-        "whatItIs": "7a51d949522c24a1",
+        "whatItIs": "4cbccd3eb70f46ea",
         "keyConcepts": "67ec933af55467e8",
         "exampleCode": "85b82c54b85c0528",
         "whenToUse": "63bccfde15ee4d44",
         "commonMistakes": "19b22633032ce396",
-        "furtherReading": "db4dcd57b0f16893"
+        "furtherReading": "8aa978054c0435e3"
       },
       "139_git_internals_advanced_workflows.md": {
         "title": "e22e0cc07a6442a7",

@@ -7,6 +7,47 @@ The concept most people use daily without understanding is the difference betwee
 
 Conflicts aren't Git failing — they're Git correctly refusing to guess when two changes touch the same lines. The markers (`<<<<<<<`, `=======`, `>>>>>>>`) are just showing you both versions so you can decide.
 
+```quiz
+- q: "You rebased a branch you had already pushed and shared. What did that do to collaborators?"
+  anchor: "replays commits onto a new base, rewrites hashes, produces linear history"
+  options:
+    - text: "Nothing — a rebase only reorders commits locally"
+      correct: false
+      why: "It rewrites hashes, so the commits they already have no longer exist under those ids."
+    - text: "Their history now diverges — the replayed commits carry new hashes"
+      correct: true
+      why: "A merge would have preserved both histories exactly as they happened. A rebase produces new commits."
+    - text: "It fast-forwarded their branch automatically on the next fetch"
+      correct: false
+      why: "A fast-forward needs the target to be a direct ancestor, and a rewritten history is not."
+
+- q: "What is a Git branch?"
+  anchor: "a movable pointer to a commit — cheap to create, that's the whole point"
+  options:
+    - text: "A copy of the working directory at a point in time"
+      correct: false
+      why: "Nothing is copied, which is exactly why creating one costs almost nothing."
+    - text: "A movable pointer to a commit"
+      correct: true
+      why: "Cheap to create, and that is the whole point of the design."
+    - text: "A named sequence of commits, stored separately from main's"
+      correct: false
+      why: "Commits live in one shared object store. The branch only names where its tip currently is."
+
+- q: "You merge `feature` into `main` and no merge commit appears. Why not?"
+  anchor: "when merging requires no new commit because the target is a direct ancestor"
+  options:
+    - text: "Git squashed the commits automatically"
+      correct: false
+      why: "Squashing is a separate and explicit operation."
+    - text: "It was a fast-forward — `main` was a direct ancestor, so the pointer simply moved"
+      correct: true
+      why: "No new commit is needed when there is nothing to reconcile."
+    - text: "The merge failed silently and nothing was applied"
+      correct: false
+      why: "The commits are there. Only the merge commit is absent, and deliberately so."
+```
+
 ## Key Concepts
 - **Commit** = a snapshot + parent pointer(s) + metadata, identified by a SHA-1/SHA-256 hash
 - **Branch** = a movable pointer to a commit — cheap to create, that's the whole point
@@ -76,3 +117,21 @@ same tree, same message, different commit — this is why you never rebase what 
 - Atlassian Git Tutorials — merge vs rebase comparison
 - `git help everyday` — the built-in "everyday git" workflow guide
 - [Pro Git](https://git-scm.com/book/en/v2) — free and complete; chapters 2, 3 and 7 cover everything above properly
+
+```recall
+- q: "What is a commit, physically?"
+  must:
+    - "a snapshot, plus parent pointer or pointers, plus metadata"
+    - "identified by a SHA-1 or SHA-256 hash"
+
+- q: "Contrast merge and rebase."
+  must:
+    - "merge creates a new commit with two parents and preserves both histories exactly as they happened"
+    - "rebase replays commits onto a new base, rewrites hashes, and produces linear history"
+
+- q: "What is the staging area, and what are conflict markers?"
+  must:
+    - "the index is the \"about to commit\" set, separate from the working directory and from the last commit"
+    - "conflict markers are Git showing you both divergent versions"
+    - "resolving means picking or combining, and removing the markers"
+```

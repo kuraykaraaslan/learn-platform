@@ -5,6 +5,47 @@ REST's core idea is modeling your domain as **resources** (nouns — `projects`,
 
 Where it gets real is nesting and filtering. A resource that only makes sense inside another (`/projects/{id}/tasks`) should be nested; a resource that's independently addressable (`/tasks/{id}` also works standalone) usually shouldn't be forced under a parent everywhere. Filtering, sorting, and pagination belong in query parameters (`?status=open&sort=-createdAt&page=2`), not in the path — the path identifies *what* resource, the query string narrows *which* of them.
 
+```quiz
+- q: "Your API exposes `/api/getProjects` and `/api/createProject`. What is the fix?"
+  anchor: "`/api/projects`, not `/api/getProjects` or `/api/createProject`"
+  options:
+    - text: "Rename them `/api/projects/get` and `/api/projects/create`"
+      correct: false
+      why: "The verb only moved. The HTTP method already states which operation this is."
+    - text: "One `/api/projects`, with the method carrying the verb"
+      correct: true
+      why: "Nouns in the path, verbs in the method: `POST /projects` creates, `GET /projects` lists."
+    - text: "Nothing — the names are explicit and self-documenting"
+      correct: false
+      why: "They restate what GET and POST already say, and they multiply endpoints for every new operation."
+
+- q: "Should `/users/{id}/orders` be nested?"
+  anchor: "only when the child is meaningless without the parent"
+  options:
+    - text: "Yes — orders belong to a user, so the hierarchy is accurate"
+      correct: false
+      why: "Accurate hierarchy is not the test. An order is a real thing on its own, reachable at `/orders/{id}`."
+    - text: "Only if an order is meaningless without its user"
+      correct: true
+      why: "`/projects/{id}/tasks` qualifies; a standalone entity that merely has an owner usually does not."
+    - text: "Never — nesting is always replaceable with a query parameter"
+      correct: false
+      why: "A query parameter filters. Nesting says the child cannot exist alone. Both have a place."
+
+- q: "A successful DELETE with nothing to return. Which status code?"
+  anchor: "204 for a successful delete with no body"
+  options:
+    - text: "200, with a `{ \"success\": true }` body"
+      correct: false
+      why: "That body was invented to fill a response that has nothing to say."
+    - text: "204 — success, no body"
+      correct: true
+      why: "201 with a `Location` header is the create case; 422 is the validation case."
+    - text: "202, since the deletion may finish asynchronously"
+      correct: false
+      why: "202 is for genuinely deferred work, not for a delete that already completed."
+```
+
 ## Key Concepts
 - **Nouns, not verbs**: `/api/projects`, not `/api/getProjects` or `/api/createProject`
 - **Collection vs item**: `POST /projects` creates; `GET/PUT/PATCH/DELETE /projects/{id}` acts on one
@@ -58,3 +99,20 @@ export async function DELETE(_req: Request, { params }: { params: { id: string }
 - [Microsoft REST API Guidelines](https://github.com/microsoft/api-guidelines)
 - Roy Fielding's dissertation, chapter 5 (the original source — dense, but worth skimming once)
 - [RFC 9457 — Problem Details for HTTP APIs](https://www.rfc-editor.org/rfc/rfc9457.html) — a standard error body, so every API you write stops inventing its own
+
+```recall
+- q: "What separates a collection route from an item route?"
+  must:
+    - "`POST /projects` creates"
+    - "`GET`, `PUT`, `PATCH` and `DELETE` on `/projects/{id}` act on a single item"
+
+- q: "Where do filtering, sorting and pagination belong?"
+  must:
+    - "in query parameters"
+    - "never encoded into the path"
+
+- q: "What does response envelope consistency require?"
+  must:
+    - "pick one shape — `{ data, meta }` or a bare resource"
+    - "use it everywhere"
+```
