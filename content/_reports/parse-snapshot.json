@@ -1813,12 +1813,12 @@
       },
       "204_fixed_price_projects.md": {
         "title": "79c616a45794e215",
-        "whatItIs": "1df78029ac11f23b",
+        "whatItIs": "efd3e2ed41bb0266",
         "keyConcepts": "25d62602ab613006",
         "exampleCode": "97a37f9c92c4c0e1",
         "whenToUse": "be2b771361e460bc",
         "commonMistakes": "5f0b3cc0db9ee540",
-        "furtherReading": "0dec3708d187a828"
+        "furtherReading": "1dd2c67b87032611"
       },
       "205_hourly_and_day_rate_engagements.md": {
         "title": "c1fdf46e4118f7af",
@@ -2934,12 +2934,12 @@
       },
       "55_slo_sli_sla.md": {
         "title": "d14291cf93d71580",
-        "whatItIs": "4e7f41d0fd5040e0",
+        "whatItIs": "a5b9bcc41100ab49",
         "keyConcepts": "c9cd7f80bf0ab98b",
         "exampleCode": "fb5d6e77355bb6f7",
         "whenToUse": "eae86f42a14b00ba",
         "commonMistakes": "6cefeae5468c51f3",
-        "furtherReading": "9ce93766885cdf0f"
+        "furtherReading": "4ccaa3a6c9a9be07"
       },
       "56_canary_deployment_feature_flags.md": {
         "title": "0a12cbc194279878",
@@ -3255,12 +3255,12 @@
       },
       "79_blameless_post_mortem.md": {
         "title": "0a6d79c1fa05d303",
-        "whatItIs": "d4c4b53ccaca8377",
+        "whatItIs": "566e6ced5e497e88",
         "keyConcepts": "3c05e006f2f45c1c",
         "exampleCode": "96cb209de3a6ba2a",
         "whenToUse": "5a2c6740a886e91c",
         "commonMistakes": "c83aeacb687d28b4",
-        "furtherReading": "0951481558677b8e"
+        "furtherReading": "f208542710a3e37e"
       },
       "80_mentorship.md": {
         "title": "c7656b9c48db0b37",
@@ -3657,12 +3657,12 @@
       },
       "31_mass_assignment_protection_dto_whitelist.md": {
         "title": "9bd3400692171ba5",
-        "whatItIs": "d6f87392846f65d5",
+        "whatItIs": "7540259d890313d6",
         "keyConcepts": "b38225ac6d1761c3",
         "exampleCode": "f9a8faa1151ec5ad",
         "whenToUse": "62a92e17aabb509a",
         "commonMistakes": "a511bcb63bcb7ad4",
-        "furtherReading": "ad7b687a1a0a0e7c"
+        "furtherReading": "019220bbd0146115"
       },
       "32_jwt_security_rs256_hs256_rotation.md": {
         "title": "a8551dcb849ef620",

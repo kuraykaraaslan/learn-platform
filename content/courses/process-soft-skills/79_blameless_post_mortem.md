@@ -7,6 +7,35 @@ The blameless model, popularized by Google's Site Reliability Engineering team a
 
 For a solo developer running a SaaS product, a blameless post-mortem is just a disciplined way of learning from your own mistakes and documenting them for future reference. There is no one to blame but yourself, so the challenge is different: it is about resisting the urge to close the incident ticket with "fixed" and move on without capturing what actually happened and why. The five-minute temptation to skip writing it is paid back in hours when the same issue recurs six months later and you have no notes.
 
+
+```quiz
+- q: "What is the practical, non-moral argument for blamelessness in the lesson?"
+  anchor: "when people fear being blamed, they stop reporting problems early"
+  options:
+    - text: "It keeps morale high, which makes people more productive over time"
+      correct: false
+      why: "Morale is a real effect but not the argument made here. The claim is about information, and it is concrete."
+    - text: "Fear suppresses early reporting and honest uncertainty, which slows response and kills learning"
+      correct: true
+      why: "That is the mechanism: blame changes what people are willing to say during an incident, and the response degrades."
+    - text: "It shields engineers from consequences so they take more risks"
+      correct: false
+      why: "The lesson is explicit that blameless is not about excusing poor work. Nothing here is about removing accountability."
+
+- q: "How does a blameless review frame the person who took the action that triggered an incident?"
+  anchor: "made the best decisions they could with the information available at the time"
+  options:
+    - text: "As having made a mistake that training will prevent next time"
+      correct: false
+      why: "That still locates the fault in the person. The lesson's target is the information and the system around them."
+    - text: "As having acted reasonably on the information they had \u2014 so the fix is the information and the system"
+      correct: true
+      why: "That framing is what redirects the review toward what made the mistake easy to make and hard to catch."
+    - text: "As irrelevant, since only the technical root cause matters"
+      correct: false
+      why: "The human context is exactly what reveals which signals were missing. Dropping it loses the useful part of the review."
+```
+
 ## Key Concepts
 - **Timeline reconstruction**: Precise chronological sequence of events (detection, diagnosis, mitigation, resolution) — the foundation everything else is built on
 - **Contributing factors, not root cause**: Real incidents rarely have a single root cause; "five whys" is a starting point, not a complete method — list all contributing factors
@@ -118,3 +147,25 @@ impact was. Write this so someone can understand the full story in 60 seconds.
 - [**"Site Reliability Engineering" — Google](https://sre.google/sre-book)** — Chapter 15 covers the blameless post-mortem philosophy in depth; freely available online
 - **"Each Failure is a Gift" — John Allspaw (Etsy engineering blog)** — The essay that popularized blameless post-mortems in the product engineering world; still the clearest articulation of why blame is counterproductive
 - [**"Debriefing Facilitation Guide" — Etsy](https://github.com/etsy/DebriefingFacilitationGuide)** — Open-source guide for facilitating post-mortem discussions; useful even if you are running a solo post-mortem as a thinking exercise
+
+```recall
+- q: "What four questions does a post-mortem answer?"
+  must:
+    - "what happened"
+    - "why it happened"
+    - "what the impact was"
+    - "what will prevent it from happening again"
+
+- q: "Make the case for blamelessness without appealing to kindness."
+  must:
+    - "fear stops people reporting problems early"
+    - "it stops them admitting uncertainty during an incident"
+    - "information that could implicate someone goes unshared"
+    - "response gets slower and the organisation learns nothing"
+
+- q: "What separates a useful action item from post-mortem theatre?"
+  must:
+    - "it changes a system, tool or process \u2014 not how carefully someone promises to work"
+    - "it has a named owner and a date"
+    - "someone can verify afterwards that it actually landed"
+```

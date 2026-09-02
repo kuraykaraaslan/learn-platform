@@ -12,6 +12,7 @@ import { parseFenceMeta } from '../../modules/course_content/course_content.fenc
 import { RUNNABLE_LANGS } from '../../modules/course_content/course_content.transpile';
 import { MAX_SEED_BYTES } from '../../modules/course_content/course_content.seeds';
 import { parseQuiz } from '../../modules/course_content/course_content.quiz';
+import { parseRecall } from '../../modules/course_content/course_content.recall';
 import { extractMountFiles } from '../../modules/course_content/course_content.mount';
 import { splitSnippetFiles } from '../../modules/course_content/course_content.snippets';
 
@@ -700,6 +701,31 @@ export const RULES: Rule[] = [
             }
           }
           return findings;
+        }),
+  },
+  {
+    id: 'recall/invalid-payload',
+    severity: 'error',
+    description:
+      'A `recall` fence course_content.recall.ts\'s zod schema rejects — fewer than 3 or more than 5 items, an item with an empty `must[]`, or unparseable YAML. This mirrors quiz/missing-why for the other P11 widget: without it a malformed recall fence surfaces only as a crash inside the corpus parse-snapshot test, which names the assertion rather than the fence. docs/phases/11-recall-and-calc.md sets the 3-5 range — a Close the Tab check, not a full quiz.',
+    lesson: (file) =>
+      file.fences
+        .filter((f) => f.lang === 'recall')
+        .flatMap((f) => {
+          try {
+            parseRecall(f.code);
+            return [];
+          } catch (error) {
+            return [
+              {
+                rule: 'recall/invalid-payload',
+                severity: 'error' as const,
+                target: file.target,
+                line: f.line,
+                message: `recall fence failed validation: ${error instanceof Error ? error.message : String(error)}`,
+              },
+            ];
+          }
         }),
   },
   {

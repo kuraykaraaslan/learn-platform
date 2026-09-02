@@ -7,6 +7,35 @@ The protection is to explicitly declare which fields are accepted for each opera
 
 Your Zod DTOs accomplish this in a particularly clean way. `z.object({ email: z.string(), password: z.string() }).parse(body)` produces an object that provably contains only `email` and `password`, regardless of what was in the original `body`. Zod strips unknown keys by default in `.parse()` (when combined with `.strip()`, which is the default mode). This means even if the attacker sends extra fields, they are silently dropped before the data reaches your service layer.
 
+
+```quiz
+- q: "Why does the lesson insist on a whitelist rather than a blocklist of forbidden fields?"
+  anchor: "Blacklists fail when you add a new sensitive field and forget to add it to the blocklist"
+  options:
+    - text: "A blocklist is slower to evaluate at request time"
+      correct: false
+      why: "Performance is not the argument, and the difference would be immaterial. The concern is what happens to each as the model grows."
+    - text: "A blocklist silently fails open the moment someone adds a new sensitive field and forgets it"
+      correct: true
+      why: "That is the asymmetry: forgetting to block a new field exposes it, while forgetting to allow a new field just breaks a feature loudly."
+    - text: "Blocklists cannot express nested objects"
+      correct: false
+      why: "Both approaches can be written for nested shapes. The difference is in the direction each one fails when it is out of date."
+
+- q: "A registration endpoint does `userRepo.save(req.body)` and the user model has a `userRole` column. What is the actual exposure?"
+  anchor: "has just made themselves an admin"
+  options:
+    - text: "None, as long as the UI form has no role field"
+      correct: false
+      why: "The UI is not the boundary. An attacker posts to the endpoint directly and never loads your form."
+    - text: "An attacker can set any column the model has, including their own role"
+      correct: true
+      why: "Whatever keys the request body carries get assigned. That is the vulnerability, and it has been exploited against real products."
+    - text: "Only fields that are nullable in the database can be reached"
+      correct: false
+      why: "Nullability constrains the schema, not which keys get assigned from the request body."
+```
+
 ## Key Concepts
 - **Mass assignment** — Binding a user-supplied object directly to a database entity without field filtering
 - **DTO (Data Transfer Object)** — A plain object that defines exactly what shape of data is accepted for a given operation
@@ -113,3 +142,23 @@ export const StrictRegisterDto = RegisterDto.strict();
 - [Zod documentation — `.strip()` vs `.strict()` vs `.passthrough()`](https://zod.dev/?id=unknown-keys)
 - [OWASP Mass Assignment Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Mass_Assignment_Cheat_Sheet.html)
 - [GitHub mass assignment vulnerability (2012) postmortem analysis](https://homakov.blogspot.com/2012/03/how-to.html)
+
+```recall
+- q: "Explain mass assignment to someone who has only ever written CRUD endpoints."
+  must:
+    - "the server assigns a user-supplied object straight onto a database model"
+    - "any column the model has can be set by whatever keys the request body carries"
+    - "the classic case is a role or permission field reaching an unprotected save"
+
+- q: "Why is a whitelist safer than a blocklist here?"
+  must:
+    - "a blocklist fails open when a new sensitive field is added and not listed"
+    - "a whitelist fails closed \u2014 a forgotten field breaks a feature visibly"
+    - "the failure mode, not the expressiveness, is what separates them"
+
+- q: "What does the whitelist actually look like on a registration endpoint?"
+  must:
+    - "an explicit DTO listing only email, password and display name"
+    - "role, isAdmin and tenantId are never accepted from the request body"
+    - "privileged fields are set on a separate, authorised path"
+```

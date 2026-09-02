@@ -9,6 +9,35 @@ The most important derived concept is the **error budget**: the allowed amount o
 
 For a solo SaaS builder, you may not have formal SLAs yet, but defining internal SLOs forces you to instrument your system correctly and gives you an honest answer when enterprise customers ask "what is your uptime?"
 
+
+```quiz
+- q: "\"99.5% of API requests must succeed over a rolling 30-day window\" \u2014 which of the three is that?"
+  anchor: "a target for that metric"
+  options:
+    - text: "An SLI, because it is measured from request data"
+      correct: false
+      why: "The SLI is the underlying metric \u2014 request success rate. Attaching a target to it is what makes this sentence something else."
+    - text: "An SLO \u2014 a target set against an SLI"
+      correct: true
+      why: "The metric is the SLI; the 99.5% target over a stated window is the objective."
+    - text: "An SLA, because it commits to a number"
+      correct: false
+      why: "An SLA is the contractual version, carrying penalties. A number alone does not make it a customer commitment."
+
+- q: "Why should an SLA be looser than the SLO behind it?"
+  anchor: "you need headroom to catch breaches before they become customer-visible"
+  options:
+    - text: "So the legal wording stays simple"
+      correct: false
+      why: "The gap is operational, not editorial. It exists to give the team time, not to simplify a contract."
+    - text: "The gap is headroom \u2014 the SLO breaches first, giving you a chance to react before the contract does"
+      correct: true
+      why: "Breaching an internal objective is a signal; breaching the agreement costs credits. The distance between them is response time."
+    - text: "They should actually be identical, so the team and customers share one target"
+      correct: false
+      why: "Identical thresholds mean the first thing that tells you there is a problem is the customer's refund claim."
+```
+
 ## Key Concepts
 - **SLI** — a specific measurable indicator: `successful_requests / total_requests`, `p99_latency_ms`, `checkout_completion_rate`
 - **SLO** — a target threshold for an SLI over a time window: "99.5% availability over 30 days"
@@ -107,3 +136,23 @@ export async function getBudgetStatus(tenantId: string): Promise<BudgetStatus> {
 - Google SRE Book — Chapter 4 (Service Level Objectives): https://sre.google/sre-book/service-level-objectives/
 - Alex Hidalgo — "Implementing Service Level Objectives" (O'Reilly)
 - Alerting on SLOs using burn rates (Google SRE Workbook): https://sre.google/workbook/alerting-on-slos/
+
+```recall
+- q: "Define SLI, SLO and SLA and give an example of each for the same service."
+  must:
+    - "SLI is the measurement itself, such as request success rate"
+    - "SLO is a target for that measurement over a stated window"
+    - "SLA is the contractual promise, with penalties for breach"
+    - "the SLA sits looser than the SLO so the internal target trips first"
+
+- q: "What does an error budget let a team decide that a raw uptime number does not?"
+  must:
+    - "how much unreliability is acceptable before shipping must slow down"
+    - "it turns reliability into a quantity that can be spent deliberately"
+
+- q: "How do you choose the SLO number itself?"
+  must:
+    - "start from what users actually notice, not from a round figure"
+    - "measure current performance before promising anything"
+    - "leave headroom below the SLA so the internal target trips first"
+```

@@ -9,6 +9,35 @@ Even with clear scope, fixed-price proposals need three specific guardrails: a b
 
 This is educational material, not a substitute for legal review — any fixed-price contract language you actually use with a client should be checked by a lawyer familiar with your jurisdiction, especially around cancellation and non-payment consequences.
 
+
+```quiz
+- q: "Why does underestimating hurt more under fixed price than under hourly?"
+  anchor: "every hour of underestimated work comes directly out of your margin"
+  options:
+    - text: "Fixed-price clients tend to request more revisions"
+      correct: false
+      why: "They often do, but that is a scope-control issue. The asymmetry here exists even with a perfectly behaved client."
+    - text: "The extra hours are unbilled, so they come straight out of margin instead of being invoiced"
+      correct: true
+      why: "Under hourly the estimate being wrong shifts the invoice; under fixed price it shifts your profit."
+    - text: "Fixed-price contracts usually carry late-delivery penalties"
+      correct: false
+      why: "They may, but that is a separate clause. The lesson's point holds for a fixed-price contract with no penalty at all."
+
+- q: "A client wants a fixed price for work on an existing codebase you have not been given access to. What does the lesson say?"
+  anchor: "nobody, including a senior developer, can accurately estimate work they can't yet see"
+  options:
+    - text: "Quote fixed price with a large risk buffer to cover the unknown"
+      correct: false
+      why: "A buffer prices uncertainty you still cannot size. It either loses the deal or fails to cover the real range."
+    - text: "Fixed price is the wrong tool here \u2014 the eligibility bar is not met"
+      correct: true
+      why: "An unreviewed existing codebase is on the lesson's own disqualifying list, alongside exploratory work and undocumented integrations."
+    - text: "Quote fixed price but add a clause allowing renegotiation"
+      correct: false
+      why: "That is an hourly arrangement wearing a fixed-price label, and it gives the client the predictability they were promised only until it does not."
+```
+
 ## Key Concepts
 - **Eligibility checklist**: written scope, listed deliverables, exclusions, client responsibilities, acceptance criteria, payment milestones, and a change-request process must all exist before quoting fixed price.
 - **Revision limits**: a stated number of consolidated review rounds per milestone, distinguishing minor adjustment from new work.
@@ -67,3 +96,27 @@ This proposal is valid for 14 calendar days from the date above.
 ## Further Reading
 - Mike Monteiro, *You're My Favorite Client* — practical, opinionated guidance on scoping and pricing fixed-fee client work.
 - Blair Enns, *Pricing Creativity: A Guide to Profit Beyond the Billable Hour*.
+
+```recall
+- q: "List the conditions that must all be true before quoting fixed price."
+  must:
+    - "a written scope"
+    - "listed deliverables and clear exclusions"
+    - "defined client responsibilities"
+    - "testable acceptance criteria"
+    - "payment milestones and a change-request process"
+
+- q: "Name the situations where fixed price is the wrong tool, and say why."
+  must:
+    - "the client refuses a written scope"
+    - "the work is exploratory"
+    - "an existing codebase has not been reviewed"
+    - "integrations are undocumented"
+    - "in each case the work cannot be seen yet, so it cannot be estimated"
+
+- q: "Why is a change-request process part of the eligibility bar, not a nice-to-have?"
+  must:
+    - "fixed price only holds while the scope is actually fixed"
+    - "without a process, every change quietly comes out of margin"
+    - "it is the mechanism that turns a scope change into a price change"
+```
