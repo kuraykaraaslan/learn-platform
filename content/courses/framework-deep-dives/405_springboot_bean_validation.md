@@ -7,6 +7,47 @@ Two annotations do different jobs and are easy to confuse. `@Valid` triggers val
 
 For validation logic that can't be expressed as a static annotation — checking an email against the database for uniqueness, for example — a custom `@Constraint` annotation paired with a `ConstraintValidator` implementation lets that check live at the same declarative boundary as everything else, instead of leaking into the service as a manual `if` check. The validator is a `@Component` so it can be constructor-injected with whatever repository it needs to check against.
 
+```quiz
+- q: "You add `BindingResult` to a controller method so you can shape the validation error yourself. What did that break?"
+  anchor: "adding it as a parameter stops Spring from throwing automatically, forcing manual error handling that bypasses the uniform `@ControllerAdvice` path"
+  options:
+    - text: "Nothing — it is the standard way to read validation results"
+      correct: false
+      why: "Standard in MVC generally, and banned by this ruleset: its mere presence stops Spring throwing."
+    - text: "Spring stops throwing, so `@ControllerAdvice` never sees the failure"
+      correct: true
+      why: "The uniform error shape comes from the advice, and this parameter routes around it."
+    - text: "Validation stops running altogether"
+      correct: false
+      why: "Validation still runs. Only the automatic exception is suppressed."
+
+- q: "`@NotNull` on a path variable does nothing. Why?"
+  anchor: "required to enable method-level validation via Spring AOP"
+  options:
+    - text: "Path variables cannot be validated in Spring"
+      correct: false
+      why: "They can. It needs `@Validated` at class level to enable method-level validation."
+    - text: "The class is missing `@Validated`, which enables method-level validation via Spring AOP"
+      correct: true
+      why: "Without it the bare parameter annotations are inert, and validation groups do not activate either."
+    - text: "`@NotNull` applies only to request bodies"
+      correct: false
+      why: "It applies wherever method-level validation has been switched on."
+
+- q: "Which exception does a failed `@Valid @RequestBody` produce?"
+  anchor: "the former comes from a `@Validated` service/path-variable failure, the latter from a `@RequestBody` failure"
+  options:
+    - text: "`ConstraintViolationException`"
+      correct: false
+      why: "That one comes from a `@Validated` service or path-variable failure."
+    - text: "`MethodArgumentNotValidException`"
+      correct: true
+      why: "Both are caught by `@ControllerAdvice` and produce the same 400 shape — the types differ, the response does not."
+    - text: "`HttpMessageNotReadableException`"
+      correct: false
+      why: "That is malformed JSON which never became a DTO at all — a different failure, earlier in the pipeline."
+```
+
 ## Key Concepts
 - **`@Valid @RequestBody`**: triggers Bean Validation on the whole object graph before the controller method body runs; failure throws `MethodArgumentNotValidException`
 - **Constraint annotations with explicit messages**: `@NotBlank(message = "...")`, `@Email`, `@Size(min, max)`, `@Positive`, `@Pattern` — always with an explicit, user-facing `message`, never the framework default
@@ -113,3 +154,21 @@ public ResponseEntity<ProductResponse> create(@Validated(OnCreate.class) @Reques
 - Jakarta Bean Validation specification: https://jakarta.ee/specifications/bean-validation/3.0/
 - Spring — "Validation, Data Binding, and Type Conversion": https://docs.spring.io/spring-framework/reference/core/validation.html
 - Hibernate Validator (reference implementation) docs: https://hibernate.org/validator/documentation/
+
+```recall
+- q: "What does `@Valid @RequestBody` do, and when?"
+  must:
+    - "it triggers Bean Validation on the whole object graph before the controller method body runs"
+    - "failure throws `MethodArgumentNotValidException`"
+
+- q: "What are validation groups for?"
+  must:
+    - "marker interfaces such as `OnCreate` and `OnUpdate`"
+    - "one request record can serve create and update with different required fields"
+    - "activated via `@Validated(OnCreate.class)`"
+
+- q: "When do you write a custom `@Constraint`, and what does it preserve?"
+  must:
+    - "a `@Component`-annotated `ConstraintValidator`, for checks that need a dependency such as a repository"
+    - "it keeps DB-backed validation at the same declarative boundary as everything else"
+```

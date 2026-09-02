@@ -965,7 +965,7 @@
         "observability-deployment/63_chaos_engineering.md",
         "privacy-compliance-incident-response/361_vulnerability_management_lifecycle_patch_slas.md"
       ],
-      "rawOccurrences": 57
+      "rawOccurrences": 59
     },
     {
       "slug": "rbac",

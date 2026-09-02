@@ -133,10 +133,25 @@ export function loadCorpus(): LessonFile[] {
   return out;
 }
 
-const bullets = (file: LessonFile, heading: string) =>
-  (file.sections.find((s) => s.heading.startsWith(heading))?.lines ?? []).filter((l) =>
-    l.trimStart().startsWith('- ')
-  );
+// Fenced blocks are skipped deliberately. A section's lines run to the next
+// heading, so a `recall` fence appended at the end of a lesson lands inside
+// Further Reading — and its `- q:` / `- "..."` entries are list items by
+// syntax while being nothing of the sort. This was latent across every lesson
+// with a trailing recall fence and only surfaced when one happened to contain
+// `(OnCreate.class)`, which sources/bare-domain read as a citation domain.
+const bullets = (file: LessonFile, heading: string) => {
+  const lines = file.sections.find((s) => s.heading.startsWith(heading))?.lines ?? [];
+  const out: string[] = [];
+  let inFence = false;
+  for (const line of lines) {
+    if (line.trimStart().startsWith('```')) {
+      inFence = !inFence;
+      continue;
+    }
+    if (!inFence && line.trimStart().startsWith('- ')) out.push(line);
+  }
+  return out;
+};
 
 function sha(value: string): string {
   return createHash('sha256').update(value, 'utf8').digest('hex').slice(0, 16);

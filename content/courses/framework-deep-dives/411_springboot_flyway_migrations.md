@@ -7,6 +7,47 @@ The file naming convention is load-bearing, not cosmetic: `V{14-digit-timestamp}
 
 For schema changes on a table with live traffic, a single migration that adds a `NOT NULL` column outright will lock or fail against existing rows. The safe sequence is: add the column nullable with no default, deploy code that writes to it going forward, backfill existing rows in batches (a separate script or migration), then add the `NOT NULL` constraint once every row is filled — and only drop an old column in a later migration, after every code reference to it is gone. This zero-downtime discipline is what separates a migration strategy that works in a side project from one that works against a table nobody can afford to lock.
 
+```quiz
+- q: "You spot a typo in a migration that has already run in staging. Fix it in place?"
+  anchor: "any change to an already-run file causes a startup failure everywhere that file has executed"
+  options:
+    - text: "Yes — it never reached production, so no harm done"
+      correct: false
+      why: "It ran in staging, and staging will now fail to start on the checksum mismatch."
+    - text: "No — write a new migration; the checksum makes an in-place edit fatal"
+      correct: true
+      why: "Flyway checksums applied migrations, and any change fails startup everywhere the file has executed."
+    - text: "Yes, after deleting the `flyway_schema_history` row by hand"
+      correct: false
+      why: "That hides the divergence instead of resolving it, and the environments now differ silently."
+
+- q: "What is Hibernate's role in schema changes here?"
+  anchor: "Hibernate checks the schema matches, Flyway is the only thing that changes it"
+  options:
+    - text: "It applies the entity changes, and Flyway records them"
+      correct: false
+      why: "Inverted. Flyway owns schema changes; Hibernate never makes them."
+    - text: "None — `ddl-auto: validate` means it only checks that the schema matches"
+      correct: true
+      why: "Flyway is the only thing that changes the schema."
+    - text: "It creates tables in test, and Flyway handles production"
+      correct: false
+      why: "Test databases run the same Flyway migrations, through TestContainers."
+
+- q: "You need a new `NOT NULL` column with a backfill. How many migrations, across how many deploys?"
+  anchor: "add nullable (no default) → deploy writer code → backfill in batches → add `NOT NULL` → drop the old column in a later migration"
+  options:
+    - text: "One — add the column with a default and backfill in the same statement"
+      correct: false
+      why: "That is exactly the all-in-one-step case the sequence exists to replace."
+    - text: "Several, across multiple deploys — nullable, writer code, batched backfill, then `NOT NULL`"
+      correct: true
+      why: "And any old column is dropped in a later migration again, never in this one."
+    - text: "Two — add it nullable, then immediately alter it to `NOT NULL`"
+      correct: false
+      why: "The writer deploy and the batched backfill both have to land in between."
+```
+
 ## Key Concepts
 - **Flyway owns schema changes; Hibernate never does**: `spring.jpa.hibernate.ddl-auto: validate` — Hibernate checks the schema matches, Flyway is the only thing that changes it
 - **Migration filename format**: `V{yyyyMMddHHmmss}__{PascalCaseDescription}.sql` — 14-digit timestamp, double underscore, no exceptions
@@ -94,3 +135,21 @@ public class TestDatabaseConfig {
 - Flyway documentation — "Migrations": https://documentation.red-gate.com/fd/migrations-184127470.html
 - Testcontainers — "Database containers": https://testcontainers.com/modules/postgresql/
 - PlanetScale — "Safe database migrations" (zero-downtime patterns, engine-agnostic): https://planetscale.com/blog/safely-making-database-schema-changes
+
+```recall
+- q: "Give the migration filename format."
+  must:
+    - "`V{yyyyMMddHHmmss}__{PascalCaseDescription}.sql`"
+    - "a 14-digit timestamp, a double underscore, and no exceptions"
+
+- q: "What are repeatable migrations for?"
+  must:
+    - "the `R__` prefix"
+    - "views, stored procedures and seed data that should re-run whenever the file's content changes"
+    - "applied after all versioned migrations"
+
+- q: "Why TestContainers rather than H2?"
+  must:
+    - "test databases mirror the production schema exactly by running the same Flyway migrations at test startup"
+    - "H2 in-memory does not support Postgres-specific features and gives false confidence"
+```

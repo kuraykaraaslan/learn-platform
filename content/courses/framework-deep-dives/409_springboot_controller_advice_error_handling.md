@@ -7,6 +7,47 @@ Four exception types cover the whole surface. `AppException` — the same domain
 
 The response envelope matches the shape used across the Express and TypeScript stacks for cross-project consistency: the key is always `message`, a single string for most errors or an array of `{ field, message }` objects for validation failures, and the HTTP status code is what actually marks the response as an error — there is no `{ success: false }` wrapper. Controllers never catch these exceptions inline; the one exception to that rule is genuinely non-critical operations (writing to a cache, sending an audit log) where a caught-and-logged failure is the correct behavior precisely because the operation isn't allowed to fail the whole request.
 
+```quiz
+- q: "A client posts malformed JSON and receives a 500. What is missing?"
+  anchor: "without a handler this falls through to the generic 500 and hides the real (client) cause"
+  options:
+    - text: "A `@Valid` annotation on the request body"
+      correct: false
+      why: "Validation never runs here — the JSON never became a DTO in the first place."
+    - text: "A handler for `HttpMessageNotReadableException` returning 400"
+      correct: true
+      why: "Without it the failure falls through to the catch-all and hides that the fault is the client's."
+    - text: "A try/catch inside the controller method"
+      correct: false
+      why: "Error-to-response translation belongs in one global place, not in each controller."
+
+- q: "\"User not found\" throws an `AppException`. Which log level, and with a stack trace?"
+  anchor: "is an expected negative path"
+  options:
+    - text: "`error`, with a stack trace — an exception was thrown"
+      correct: false
+      why: "It is an expected negative path. `error` with a stack trace is reserved for unexpected failures."
+    - text: "`warn`, and no stack trace"
+      correct: true
+      why: "Only the catch-all handler and genuinely unhandled exceptions get `log.error` with a stack trace."
+    - text: "`info`, since it is a perfectly normal outcome"
+      correct: false
+      why: "Normal enough not to be an `error`, and still a failed request worth surfacing."
+
+- q: "What does the catch-all `Exception.class` handler return to the client?"
+  anchor: "returns a deliberately generic message — never leak internals to the client"
+  options:
+    - text: "The exception message, so the client can report it accurately"
+      correct: false
+      why: "That leaks internals. The full exception goes to the log, never into the response."
+    - text: "A deliberately generic message, with the full exception logged at `error`"
+      correct: true
+      why: "The client gets a 500 and nothing that describes your internals."
+    - text: "A 400, since an unrecognised error is probably bad input"
+      correct: false
+      why: "An unrecognised error is by definition unattributed. Claiming client fault is a guess."
+```
+
 ## Key Concepts
 - **`@RestControllerAdvice`**: one global class, one `@ExceptionHandler` method per exception type — the single place error-to-response translation happens
 - **`AppException` → its own status code**: `@ExceptionHandler(AppException.class)` reads `ex.getStatusCode()` directly; this is the same domain exception concept as the Express/Next.js `AppError`
@@ -113,3 +154,21 @@ public ResponseEntity<?> getUserBroken(@PathVariable UUID userId) {
 - Spring Framework reference — "Exception Handling" (`@ControllerAdvice`): https://docs.spring.io/spring-framework/reference/web/webmvc/mvc-controller/ann-exceptionhandler.html
 - RFC 9457 — "Problem Details for HTTP APIs" (background on structured error responses): https://www.rfc-editor.org/rfc/rfc9457
 - Baeldung — "Error Handling for REST with Spring": https://www.baeldung.com/exception-handling-for-rest-with-spring
+
+```recall
+- q: "What is `@RestControllerAdvice`, and how is it structured?"
+  must:
+    - "one global class, with one `@ExceptionHandler` method per exception type"
+    - "the single place where error-to-response translation happens"
+
+- q: "How does an `AppException` become a response?"
+  must:
+    - "`@ExceptionHandler(AppException.class)` reads `ex.getStatusCode()` directly"
+    - "it is the same domain exception concept as the Express/Next.js `AppError`"
+
+- q: "What is the unified envelope, and how are field errors unpacked?"
+  must:
+    - "the envelope key is `message` — a string for single errors, `FieldError[]` for validation"
+    - "unpack `ex.getBindingResult().getFieldErrors()` into `{ field, message }` records"
+    - "it matches the Express/TypeScript ruleset for cross-stack consistency"
+```

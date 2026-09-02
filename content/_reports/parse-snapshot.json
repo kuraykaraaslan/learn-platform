@@ -2496,12 +2496,12 @@
       },
       "405_springboot_bean_validation.md": {
         "title": "ef05b0dfc14aa1e4",
-        "whatItIs": "b3361dee960a9c1e",
+        "whatItIs": "81b508cd5faa615d",
         "keyConcepts": "458951a162c8f610",
         "exampleCode": "2b7acb66d2b4f9fe",
         "whenToUse": "2c1a889edcac75f5",
         "commonMistakes": "532af8a61dc22968",
-        "furtherReading": "45445247b447da33"
+        "furtherReading": "e8df7ece81a88fd9"
       },
       "406_springboot_service_layer_transactional.md": {
         "title": "35e0d1e16fbd6861",
@@ -2514,12 +2514,12 @@
       },
       "407_springboot_security_filter_chain.md": {
         "title": "14d6cee1282994f3",
-        "whatItIs": "2e4e2098a5e35c55",
+        "whatItIs": "83e63caf11070370",
         "keyConcepts": "1d1c75c121e5784e",
         "exampleCode": "c6a60b28deefa746",
         "whenToUse": "4bc764618efdce28",
         "commonMistakes": "b5ab768a952b1583",
-        "furtherReading": "55c1cd7a8eae8868"
+        "furtherReading": "769d7c0c89ff6b02"
       },
       "408_springboot_jwt_auth_integration.md": {
         "title": "1b4ae7492e3db963",
@@ -2532,12 +2532,12 @@
       },
       "409_springboot_controller_advice_error_handling.md": {
         "title": "e9dcb566c0e0533d",
-        "whatItIs": "c69d5e2f844f5d18",
+        "whatItIs": "f378b58b26023361",
         "keyConcepts": "233e59a1d1de6d18",
         "exampleCode": "1da41a0a21c7619d",
         "whenToUse": "ecb33fd9558e85a4",
         "commonMistakes": "ceeb7a5e8d6ea730",
-        "furtherReading": "220fc612b1947b52"
+        "furtherReading": "3b69d611cc2ef409"
       },
       "410_springboot_jpa_entities_and_n_plus_one.md": {
         "title": "d299183d60c00d6b",
@@ -2550,12 +2550,12 @@
       },
       "411_springboot_flyway_migrations.md": {
         "title": "bb126b626cf2aa6a",
-        "whatItIs": "d63eed8ba76f5dfa",
+        "whatItIs": "c847786abbeb9358",
         "keyConcepts": "82a4a58a663a09d7",
         "exampleCode": "0b811682aad90906",
         "whenToUse": "aaf1ed2e21bab302",
         "commonMistakes": "8bda8e0b3f0430e1",
-        "furtherReading": "ec50b504968bf8f7"
+        "furtherReading": "2b2d25b1abf188ca"
       },
       "412_springboot_testing_mockmvc_testcontainers.md": {
         "title": "b70ed547229c0f8e",

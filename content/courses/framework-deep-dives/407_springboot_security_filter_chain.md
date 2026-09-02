@@ -7,6 +7,47 @@ CSRF protection is deliberately disabled (`.csrf(AbstractHttpConfigurer::disable
 
 CORS configuration follows the same non-negotiable rule as every other framework in this house: the allowed origin comes from an environment variable, never a wildcard (which blocks credentialed requests entirely) and never a hardcoded domain. Rate limiting uses Bucket4j, keyed by client IP, with a stricter bucket for auth endpoints (10 requests/15 minutes) than for the rest of the API (100 requests/15 minutes) — the same numeric policy used in the Express rate limiter, just implemented as a token bucket algorithm instead of a sliding window.
 
+```quiz
+- q: "You set the allowed origin to `*` while debugging, and cookie auth stops working. Why?"
+  anchor: "a wildcard origin silently blocks `allowCredentials(true)`, breaking cookie-based auth"
+  options:
+    - text: "Browsers reject cookies on any cross-origin request"
+      correct: false
+      why: "They do not, given a correctly configured origin. The wildcard is what disqualifies credentials."
+    - text: "A wildcard origin silently blocks `allowCredentials(true)`"
+      correct: true
+      why: "Which is why the origin comes from `@Value(\"${CORS_ORIGIN}\")` rather than being written into the config."
+    - text: "`SessionCreationPolicy.STATELESS` forbids cookies"
+      correct: false
+      why: "It stops Spring creating an `HttpSession`. Cookies as a transport are untouched."
+
+- q: "This configuration disables CSRF. Should you copy that into a session-based app?"
+  anchor: "this is a deliberate, documented exception, not a default to copy blindly"
+  options:
+    - text: "Yes — CSRF protection is legacy once you are on a modern framework"
+      correct: false
+      why: "It is disabled here specifically because there is no server session and cookies carry `SameSite=Strict`."
+    - text: "No — it is a documented exception that depends on being stateless"
+      correct: true
+      why: "A session-based app is exactly the case CSRF protection exists for."
+    - text: "Yes, as long as that app also sets `SameSite=Strict`"
+      correct: false
+      why: "SameSite is one of the two conditions. Statelessness is the other, and a session-based app fails it."
+
+- q: "Where does rate limiting sit in the chain?"
+  anchor: "rate limiting → JWT authentication → `authorizeHttpRequests` → controller"
+  options:
+    - text: "After JWT authentication, so limits can be applied per user"
+      correct: false
+      why: "Then an unauthenticated flood does full JWT verification work before being turned away."
+    - text: "First — ahead of JWT authentication"
+      correct: true
+      why: "Registered via `addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)`, with the bucket keyed by client IP."
+    - text: "In the controller, so limits can differ per endpoint"
+      correct: false
+      why: "Limits do differ per endpoint — 10/15min on auth against 100/15min elsewhere — and the filter still runs first."
+```
+
 ## Key Concepts
 - **`SecurityFilterChain` bean**: the declarative equivalent of Express's middleware chain — order matters just as much, expressed via `.addFilterBefore(...)` and the fluent `HttpSecurity` builder
 - **CSRF disabled for stateless JWT**: safe here specifically because there's no server session and cookies carry `SameSite=Strict` — this is a deliberate, documented exception, not a default to copy blindly
@@ -115,3 +156,24 @@ public class RateLimitFilter extends OncePerRequestFilter {
 - Spring Security reference — "Architecture" (filter chain): https://docs.spring.io/spring-security/reference/servlet/architecture.html
 - Spring Security reference — "CORS": https://docs.spring.io/spring-security/reference/servlet/integrations/cors.html
 - Bucket4j documentation: https://bucket4j.com/
+
+```recall
+- q: "What is the `SecurityFilterChain` bean, and what does `STATELESS` mean?"
+  must:
+    - "the declarative equivalent of Express's middleware chain, where order matters just as much"
+    - "expressed via `.addFilterBefore(...)` and the fluent `HttpSecurity` builder"
+    - "`SessionCreationPolicy.STATELESS` means Spring never creates an `HttpSession`, and all auth state lives in the verified JWT"
+
+- q: "Which security headers does the chain set?"
+  must:
+    - "CSP"
+    - "`X-Frame-Options`, via `frameOptions(FrameOptionsConfig::deny)`"
+    - "referrer policy"
+    - "the Spring Security equivalent of Helmet's defaults"
+
+- q: "Describe the Bucket4j configuration."
+  must:
+    - "token-bucket algorithm, with the bucket keyed by client IP"
+    - "10 per 15 minutes on auth endpoints"
+    - "100 per 15 minutes for the rest of the API"
+```
