@@ -36,7 +36,7 @@ P12 arama + return queue  ← P1'in drill sonuçlarına dayanır
 | P6 | [06-quiz-tradeoff-diff.md](06-quiz-tradeoff-diff.md) | ~4 gün | tamamlandı, daraltılmış — 1 ders/mekanizma |
 | P7 | [07-mermaid.md](07-mermaid.md) | ~1 gün | tamamlandı — 7 diyagram |
 | P8 | [08-live-js-runner.md](08-live-js-runner.md) | ~4-5 gün | tamamlandı — 5 `run` fence |
-| P9 | [09-webcontainer.md](09-webcontainer.md) | ~5-6 gün | uygulandı, gerçek tarayıcıda doğrulanmadı (OAuth akışı) |
+| P9 | [09-webcontainer.md](09-webcontainer.md) | ~5-6 gün | pilot yazıldı (korpusun ilk `run project` fence'i), boot hâlâ tarayıcıda doğrulanmalı |
 | P10 | [10-pglite-sql.md](10-pglite-sql.md) | ~3-4 gün | tamamlandı — 3 pilot ders yeniden yazıldı |
 | P11 | [11-recall-and-calc.md](11-recall-and-calc.md) | ~3 gün | tamamlandı — RecallCard + CalcCard/`expr.ts`, 3 önkoşul dersiyle birlikte |
 | P12 | [12-search-and-review-queue.md](12-search-and-review-queue.md) | ~4 gün | tamamlandı — ⌘K, next/prev, Return Queue, export/import |

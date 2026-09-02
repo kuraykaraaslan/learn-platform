@@ -259,7 +259,7 @@
   "framework-deep-dives/396_express_two_layer_architecture.md": "0a57eab3c10f43fb",
   "framework-deep-dives/397_express_middleware_pipeline_and_security.md": "f601e949b6102727",
   "framework-deep-dives/398_express_curried_auth_middleware.md": "b0012ef9951b5cbf",
-  "framework-deep-dives/399_express_centralized_error_handling.md": "7e6f9e0d8442fb36",
+  "framework-deep-dives/399_express_centralized_error_handling.md": "f572f5e0715eecc2",
   "framework-deep-dives/400_express_validation_and_response_conventions.md": "34428c23ef2ab706",
   "framework-deep-dives/401_express_realtime_sse_and_socketio.md": "be94eb70fc2c13aa",
   "framework-deep-dives/402_express_testing_with_jest_and_supertest.md": "bf4ee99e583c4184",

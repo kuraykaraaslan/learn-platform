@@ -110,6 +110,68 @@ router.post("/login", async (req, res, next) => {
 export default router;
 ```
 
+The version above is the real one, with multer and a path alias. Here is the
+same idea stripped to three files that actually boot — press Run and the
+install, the server start and the requests all happen in your browser. Predict
+the three status codes before you do: a hit, a miss, and an unexpected throw.
+
+```typescript run project entry=server.ts
+// server.ts
+import express from 'express';
+import { AppError } from './libs/app-error.ts';
+import { errorHandler } from './libs/error-middleware.ts';
+
+const app = express();
+
+app.get('/users/:id', (req, res) => {
+  if (req.params.id !== '1') throw new AppError('User not found', 404);
+  res.json({ id: 1, name: 'Ada' });
+});
+
+app.get('/boom', () => {
+  throw new Error('something nobody anticipated');
+});
+
+// Registered LAST, after every route — Express only treats a 4-argument
+// function as an error handler, and it only covers routes declared above it.
+app.use(errorHandler);
+
+app.listen(3000, () => console.log('listening on http://localhost:3000'));
+
+// libs/app-error.ts
+export class AppError extends Error {
+  constructor(
+    message: string,
+    public readonly statusCode: number,
+  ) {
+    super(message);
+    this.name = 'AppError';
+    Object.setPrototypeOf(this, AppError.prototype); // keeps instanceof working after transpilation
+  }
+}
+
+// libs/error-middleware.ts
+import type { Request, Response, NextFunction } from 'express';
+import { AppError } from './app-error.ts';
+
+// The single source of truth for error responses. Routes throw; only this
+// function decides status codes and body shape.
+export function errorHandler(error: unknown, _req: Request, res: Response, _next: NextFunction): void {
+  if (error instanceof AppError) {
+    res.status(error.statusCode).json({ message: error.message });
+    return;
+  }
+  console.error(`[errorHandler] Unhandled: ${String(error)}`);
+  res.status(500).json({ message: 'Internal server error' });
+}
+```
+
+Once it is listening, the preview answers `/users/1` with `200` and the record,
+`/users/2` with `404 {"message":"User not found"}`, and `/boom` with
+`500 {"message":"Internal server error"}` — the thrown `Error` never reaches the
+client, only the log line does.
+
+
 ## When to Use
 - Any route handler in an Express app — the try/catch-then-`next(error)` shape should be the only pattern, with no per-route bespoke error formatting
 - Signaling an expected negative outcome from a service (not found, forbidden, duplicate, invalid credentials) — throw `AppError` with the right status code rather than returning `null`/`false`/`undefined`

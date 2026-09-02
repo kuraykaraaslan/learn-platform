@@ -116,21 +116,55 @@ Boot + `npm install` onlarca MB ve 10-30 sn. Bu yüzden:
 
 - [x] 412 sayfa build'de kırılmadı — `npm run build` bu oturumda tekrar tekrar
       442 statik sayfa üretti (COOP/COEP header'ları Next config'te, bkz. ADR)
-- [ ] **Doğrulanamadı**: 62 dersin pilotu (bir express dersi) uçtan uca
-      install → server → istek/yanıt akışı gerçek bir tarayıcıda hiç açılıp
-      denenmedi bu oturumda — `ProjectRunner.test.ts` birim seviyesinde yeşil
-      ama tam WebContainer boot'u (StackBlitz auth/COEP) manuel tarayıcı testi
-      gerektiriyor, headless ortamda çalıştırılamaz
+- [x] **Pilot artık var** — `framework-deep-dives/399_express_centralized_error_handling.md`
+      korpusun **ilk ve tek** `run project` fence'ini taşıyor: 3 dosya
+      (`server.ts`, `libs/app-error.ts`, `libs/error-middleware.ts`), express,
+      404/500 ayrımını gösteren üç rota.
+
+      Bulgu: bu madde ship edildiğinden beri "tarayıcıda denenmedi" diye
+      duruyordu, ama gerçek sebep başkaydı — **korpusta hiç `run project`
+      fence'i yoktu** (gerçek meta parser'ıyla sayıldı: 536 fence, 14 `run`,
+      **0 `project`**). Denenecek bir şey yoktu. Sebebi de aşağıdaki
+      verify-code hatasıydı.
+
+      Pilot kodu WebContainer'da değil ama **gerçek Node + gerçek express
+      5.2.1'de çalıştırılarak** doğrulandı: `/users/1` → `200` + kayıt,
+      `/users/2` → `404 {"message":"User not found"}`, `/boom` → `500
+      {"message":"Internal server error"}` + sunucu log satırı. Saf-JS
+      bağımlılıklı bir projede WebContainer ile yerel Node arasında fark
+      beklenmiyor; kalan belirsizlik boot'un kendisi
+
+- [ ] **Hâlâ tarayıcı gerektiriyor**: pilotun WebContainer boot'u (StackBlitz
+      auth + COOP/COEP) — `npm run dev`, dersi aç, Run'a bas, install→server
+      akışının önizlemede gerçekten cevap verdiğini gör. Headless ortamda
+      çalıştırılamaz
 - [x] `run/needs-native` reddediyor — `scripts/content-lint/rules.ts:619`,
       prisma/typeorm/electron/bullmq/ioredis/pg/expo/react-native/bcrypt
       hepsi kapsanıyor
 - [x] Tıklamadan önce 0 byte WebContainer JS — `ProjectRunner` da `RunMount`
       ile aynı tıkla-yükle deseninde
-- [ ] **Doğrulanamadı**: iptal düğmesinin çalışan bir install'ı gerçekten
-      kesmesi de gerçek tarayıcı testi gerektiriyor
+- [ ] **Hâlâ tarayıcı gerektiriyor**: iptal düğmesinin çalışan bir install'ı
+      gerçekten kesmesi. Artık test edilebilir — pilot mevcut
 - [x] `docs/adr/0002-client-side-code-execution.md` mevcut ve lisans/COOP-COEP
       kararını kaydediyor
 
-Not: Bu iki madde ("Doğrulanamadı") bu oturumun kapsamı dışında kaldı —
-gerçek bir tarayıcıda StackBlitz WebContainer boot akışını manuel olarak
-açıp denemek gerekiyor, otomatik test ortamında mümkün değil.
+- [x] **`verify-code` P8'in katı katmanını P9'a da uyguluyordu — düzeltildi.**
+      `isRunFence` bir `run` fence'inde `missing-module`'ü ölümcül sayıyor ve bu
+      P8 için doğru: tarayıcı sandbox'ında ağ ve modül yükleyici yok. Ama aynı
+      kural `run project`'e de uygulanıyordu, oysa WebContainer boot'tan önce
+      gerçek `npm install` yapıyor — yani `import express` tam da yapılması
+      gereken şey. Sonuç: **geçerli bir project fence'i yazmak imkânsızdı**,
+      kendi bağımlılığında doğrulamayı patlatıyordu. `isProjectFence` ile
+      katman ayrıldı.
+
+- [x] Ayrılan katmanın açtığı boşluk kapatıldı — `run/unresolved-project-import`
+      (yeni lint kuralı). Project fence'inde eksik modül artık tolere edildiği
+      için, yanlış yazılmış bir **kardeş dosya yolu** da sessizce geçerdi ve
+      okur Run'a basana kadar kimse fark etmezdi. Kural her göreli import'un
+      fence'in kendi `// path.ts` parçalarından birine çözülmesini zorunlu
+      kılıyor. Yolu kasten bozarak ateşlendiği doğrulandı:
+      `imports "./libs/app-errror.ts" … not one of the fence's files`
+
+Not: Kalan iki madde gerçek bir tarayıcıda StackBlitz WebContainer boot akışını
+manuel olarak açıp denemeyi gerektiriyor, otomatik test ortamında mümkün değil.
+Artık denenecek somut bir pilot var.

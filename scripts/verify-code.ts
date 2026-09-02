@@ -246,6 +246,25 @@ function isRunFence(r: Result): boolean {
 }
 
 /**
+ * True for a `run project` fence (P9, WebContainer).
+ *
+ * This is the exception to isRunFence's strict tier, and the distinction is
+ * the whole reason a project fence can exist at all. P8's `run` fence goes to
+ * a browser sandbox with no network and no module loader, so a missing module
+ * there is fatal — the reader would click Run and get nothing. A `run project`
+ * fence goes to WebContainer, which performs a real `npm install` from the
+ * generated package.json before it ever starts the entry file, so importing
+ * express is exactly what it is supposed to do.
+ *
+ * Before this distinction existed, isRunFence's strictness applied to both and
+ * made every project fence fail verification on its own dependencies — which
+ * is why the corpus carried zero of them despite the runner shipping in P9.
+ */
+function isProjectFence(r: Result): boolean {
+  return parseFenceMeta(r.meta).project;
+}
+
+/**
  * `missing-module`/`assumed-context`/`assumed-helper` are tolerated for a
  * plain documentation fence (the reader is reading, not executing — an
  * uninstalled package or an assumed ORM client teaches something even if it
@@ -254,7 +273,7 @@ function isRunFence(r: Result): boolean {
  * fatal, not tolerated — docs/phases/08-live-js-runner.md's stricter tier.
  */
 function realDefects(r: Result): Defect[] {
-  const strict = isRunFence(r);
+  const strict = isRunFence(r) && !isProjectFence(r);
   // Anything whose type flows from a name this snippet does not resolve is
   // downstream noise. Fix the undefined name first and these become real.
   const unresolvable = r.defects.some((d) =>

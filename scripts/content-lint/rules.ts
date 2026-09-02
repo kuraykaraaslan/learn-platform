@@ -12,6 +12,8 @@ import { parseFenceMeta } from '../../modules/course_content/course_content.fenc
 import { RUNNABLE_LANGS } from '../../modules/course_content/course_content.transpile';
 import { MAX_SEED_BYTES } from '../../modules/course_content/course_content.seeds';
 import { parseQuiz } from '../../modules/course_content/course_content.quiz';
+import { extractMountFiles } from '../../modules/course_content/course_content.mount';
+import { splitSnippetFiles } from '../../modules/course_content/course_content.snippets';
 
 export type Severity = 'error' | 'warn';
 
@@ -646,6 +648,59 @@ export const RULES: Rule[] = [
           }))
         );
     },
+  },
+  {
+    id: 'run/unresolved-project-import',
+    severity: 'error',
+    description:
+      'A `run project` fence whose relative import names a file the fence does not declare. This exists because scripts/verify-code.ts deliberately tolerates missing modules in a project fence (WebContainer runs a real `npm install`, so importing express is correct) — and that tolerance would otherwise also swallow a mistyped sibling path, which no tool would catch until a reader clicked Run and got a module-not-found. Every relative import must resolve to one of the fence\'s own `// path.ts` parts.',
+    lesson: (file) =>
+      file.fences
+        .filter((f) => parseFenceMeta(f.meta).project)
+        .flatMap((f) => {
+          let declared: string[];
+          try {
+            declared = extractMountFiles(f.code, parseFenceMeta(f.meta).entry).map((m) => m.path);
+          } catch (err) {
+            return [
+              {
+                rule: 'run/unresolved-project-import',
+                severity: 'error' as const,
+                target: file.target,
+                line: f.line,
+                message: `\`run project\` fence cannot be split into files: ${String(err instanceof Error ? err.message : err)}`,
+              },
+            ];
+          }
+
+          // Compare without extension: the corpus writes `./libs/app-error.ts`
+          // (explicit, as ESM needs) but a fence part could equally be
+          // declared `.js`, and neither spelling should be a lint failure.
+          const stripExt = (p: string) => p.replace(/\.(?:ts|tsx|js|jsx|mts|cts)$/, '');
+          const known = new Set(declared.map(stripExt));
+
+          const findings: Finding[] = [];
+          const IMPORT_SOURCE = /(?:from\s+|require\()\s*['\"]([^'\"]+)['\"]/g;
+          for (const part of splitSnippetFiles(f.code)) {
+            const owner = extractMountFiles(part, parseFenceMeta(f.meta).entry)[0]?.path ?? '';
+            const ownerDir = owner.includes('/') ? owner.slice(0, owner.lastIndexOf('/')) : '';
+            IMPORT_SOURCE.lastIndex = 0;
+            for (let m = IMPORT_SOURCE.exec(part); m; m = IMPORT_SOURCE.exec(part)) {
+              const source = m[1];
+              if (!source.startsWith('.')) continue;
+              const resolved = path.posix.normalize(path.posix.join(ownerDir, source));
+              if (known.has(stripExt(resolved))) continue;
+              findings.push({
+                rule: 'run/unresolved-project-import',
+                severity: 'error' as const,
+                target: file.target,
+                line: f.line,
+                message: `\`run project\` fence imports "${source}" from ${owner || 'its entry file'}, which resolves to "${resolved}" — not one of the fence's files (${declared.join(', ')})`,
+              });
+            }
+          }
+          return findings;
+        }),
   },
   {
     id: 'quiz/missing-why',
