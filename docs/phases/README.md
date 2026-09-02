@@ -92,4 +92,12 @@ git checkout -b feature/<faz-scope>
 # ... şartnamedeki adımlar ...
 npm run content:check
 git diff --stat content/_reports/parse-snapshot.json   # boş olmalı (P4 hariç)
+npm run content:snapshot-diff                          # hareket varsa: hangi tür?
 ```
+
+`content:snapshot-diff`, snapshot hareketini ikiye ayırır: **explained** (o
+bölümün kendi markdown'ı değişti — normal) ve **UNEXPLAINED** (markdown'ı
+byte-byte aynı, render'ı değişti). İkincisi `git diff`'te görünmez ve script 1
+ile çıkar. Bilinen sebebi `remark-concepts`'in ders başına paylaşılan kavram
+linki bütçesidir: erken bir bölüme metin eklemek, sonraki bölümdeki bir
+tooltip'i sessizce düşürebilir.

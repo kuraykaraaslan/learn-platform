@@ -12,6 +12,7 @@
     "content:lint": "tsx scripts/content-lint --strict",
     "content:verify-code": "tsx scripts/verify-code.ts --strict",
     "content:snapshot": "tsx scripts/parse-snapshot.ts",
+    "content:snapshot-diff": "tsx scripts/snapshot-diff.ts",
     "content:concepts": "tsx scripts/build-concepts.ts",
     "content:search-index": "tsx scripts/build-search-index.ts",
     "content:review-index": "tsx scripts/build-review-index.ts",
