@@ -196,6 +196,39 @@ export async function getTotalActiveUsersAllTenants(): Promise<number> {
 // For production analytics dashboards, prefer Option A or B over N queries.
 ```
 
+The failure this lesson is really about, shown rather than described. The query
+below was written to list one tenant's owners; the author filtered by role and
+assumed the tenant scope was handled somewhere else.
+
+```sql run seed=tenant_members
+SELECT tm.id, tm.tenant_id, u.email
+FROM tenant_members tm
+JOIN users u ON u.id = tm.user_id
+WHERE tm.role = 'owner'
+ORDER BY tm.id
+LIMIT 10;
+```
+
+Look at the `tenant_id` column: every row belongs to a different customer. The
+query is valid SQL, returns quickly, and would pass a review that was reading
+for correctness of the join rather than for the missing predicate. Here is the
+same query scoped properly:
+
+```sql run seed=tenant_members
+SELECT tm.id, tm.tenant_id, u.email
+FROM tenant_members tm
+JOIN users u ON u.id = tm.user_id
+WHERE tm.role = 'owner'
+  AND tm.tenant_id = 42
+ORDER BY tm.id
+LIMIT 10;
+```
+
+One extra line. That is why the isolation models in this lesson push the
+predicate somewhere it cannot be forgotten — row-level security, a schema per
+tenant, or a database per tenant — instead of relying on every author
+remembering it on every query.
+
 ## When to Use
 - **Database-per-tenant** (your current model) — Enterprise customers, healthcare data, financial data, any scenario where a tenant demands contractual guarantees of data isolation
 - **Schema-per-tenant** — B2B SaaS with moderate isolation requirements, where operational simplicity matters more than maximum isolation; good middle ground for 10-500 tenants

@@ -153,6 +153,33 @@ const [job] = await dataSource.query(`
 // If multiple workers run this concurrently, each gets a different row
 ```
 
+The seat-limit race from the top of this lesson, against a real Postgres running
+in your browser. Tenant 42 is on a 5-seat plan with 4 seats used, and two
+transactions have both read `version = 1`. Predict what the second UPDATE
+returns before you press Run.
+
+```sql run seed=seat_limits
+-- Transaction A writes first. Its guard matches, so the row moves to version 2.
+UPDATE tenant_plans SET seats_used = seats_used + 1, version = version + 1
+WHERE tenant_id = 42 AND version = 1
+RETURNING tenant_id, seats_used, version;
+
+-- Transaction B read the same version 1 a moment earlier and writes second.
+-- Nothing errors. The guard simply no longer matches anything.
+UPDATE tenant_plans SET seats_used = seats_used + 1, version = version + 1
+WHERE tenant_id = 42 AND version = 1
+RETURNING tenant_id, seats_used, version;
+
+-- The state both transactions were racing for.
+SELECT tenant_id, seat_limit, seats_used, version FROM tenant_plans WHERE tenant_id = 42;
+```
+
+The second statement returns **zero rows**. That empty result is the entire
+conflict-detection mechanism — there is no exception to catch and no lock that
+blocked anything. `seats_used` is 5, not 6, so the limit held. What the
+application still owes the user is the retry: an UPDATE that matched nothing is
+a signal, and code that ignores the row count silently drops B's work.
+
 ## When to Use
 - **Pessimistic locking** — Seat limit enforcement, coupon redemption, plan activation, any operation where you read a numeric constraint and then update it
 - **Optimistic locking** — Updating user profile fields, saving document content, any update where the read and write are on the same row and conflicts are rare

@@ -102,6 +102,38 @@ async function buildAnalyticsSnapshot(rows: AnalyticsRow[]): Promise<void> {
 // it belongs in a scheduled job that writes a pre-computed summary, not inline.
 ```
 
+Both shapes against the same 50,000-row table, with real plans. First the OLTP
+one — the kind your app fires thousands of times a minute:
+
+```sql run seed=tenant_members
+EXPLAIN ANALYZE
+SELECT id, tenant_id, role, status
+FROM tenant_members
+WHERE id = 27384;
+```
+
+Now the analytical question from the top of this lesson — members per tenant,
+broken down by status:
+
+```sql run seed=tenant_members
+EXPLAIN ANALYZE
+SELECT t.name,
+       count(*) AS members,
+       count(*) FILTER (WHERE tm.status = 'suspended') AS suspended
+FROM tenant_members tm
+JOIN tenants t ON t.id = tm.tenant_id
+GROUP BY t.name
+ORDER BY members DESC
+LIMIT 5;
+```
+
+Compare the two plans, not the two durations — this is one WASM process on your
+machine, so the wall-clock numbers mean little, but the **shape** is genuine.
+The first is an index lookup touching one row. The second scans the whole table,
+builds hash buckets and sorts them. Run the second one against a production
+database that is also serving the first, and the contention it creates is the
+argument this lesson makes for moving it somewhere else.
+
 ## When to Use
 1. **Usage dashboards and admin panels** — aggregate queries across all tenants; schedule these as nightly jobs that write to a summary table.
 2. **Billing and revenue reporting** — `SUM(amount) GROUP BY month` across a large transactions table; run against a read replica or warehouse, not primary.
