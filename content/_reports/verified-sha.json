@@ -313,7 +313,7 @@
   "observability-deployment/54_distributed_tracing.md": "f39682b27f1b59c7",
   "observability-deployment/55_slo_sli_sla.md": "c876465cd4a73d61",
   "observability-deployment/56_canary_deployment_feature_flags.md": "450fb6478a5b223f",
-  "observability-deployment/57_blue_green_vs_rolling_deployment.md": "bc714e0bd8858f83",
+  "observability-deployment/57_blue_green_vs_rolling_deployment.md": "a2b6b625949804e3",
   "observability-deployment/58_dockerfile_best_practices.md": "534ca20adc593dd3",
   "observability-deployment/59_kubernetes_fundamentals.md": "60f07e132b0d7a40",
   "observability-deployment/60_github_actions_ci_pipeline.md": "14807b011d0aa9b2",

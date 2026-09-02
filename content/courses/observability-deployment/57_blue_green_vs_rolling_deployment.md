@@ -51,10 +51,12 @@ sides:
 // Example: expand/contract database migration pattern — required for safe rolling deploys
 // Scenario: renaming column `user.name` to `user.full_name`
 
-// ❌ Wrong: do this in one migration — old code crashes because it still reads `name`
+// ── broken ──
+// Do it in one migration — old code crashes, because it still reads `name`
 // ALTER TABLE users RENAME COLUMN name TO full_name;
 
-// ✓ Correct: three-phase expand/contract approach
+// ── fixed ──
+// The three-phase expand/contract approach
 
 // Phase 1 — EXPAND migration (deploy with v1 code still running):
 // Add the new column, copy data, but keep the old column alive

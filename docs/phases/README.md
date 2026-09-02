@@ -94,8 +94,15 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 | — `sql run` | 14 | |
 | — JS/TS `run` | 8 | |
 | — `run project` | 3 | |
+| `diff` | 2 | 2 |
 
 Her kurs en az bir `quiz` ve bir `recall` taşıyor.
+
+`diff` bir fence dili değil — bir kod fence'i içindeki `// ── broken ──` /
+`// ── fixed ──` işaretçi çifti, `looksLikeDiff()` ile sayılır. Neden yalnız
+2 tane olduğu ölçülmek zorundaydı ve [P6'da](06-quiz-tradeoff-diff.md) kayda
+geçti: korpusun bad/good kalıbı çoğunlukla çok çiftli ya da büyük bir fence'e
+gömülü, ve iki yarımlı bir toggle'a uymuyor.
 
 ## Değişmezler — her fazda geçerli
 

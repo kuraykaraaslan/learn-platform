@@ -77,6 +77,30 @@ Korpusun ana öğretim kalıbı zaten bu: yanlış sürüm ve doğru sürüm ayn
 Doğrulayıcının `shows-variants` defekt sınıfı **tam olarak bunu tanıyor** —
 duplicate identifier'lar hata değil, kasıt.
 
+> **Ölçüldü (2026-09-02) — bu önerme kısmen yanlış çıktı.** Şekil korpusta var,
+> ama `DiffCard`'ın modellediği biçimde değil. 731 fence tarandı:
+>
+> | | Fence |
+> |---|---:|
+> | `── broken ──` / `── fixed ──` ile işaretli | 2 |
+> | Kod fence'inde bad/good yorum çifti taşıyan, işaretsiz | 11 |
+> | — bunlardan **tek ikili** olan (widget'a uyan) | 0 |
+>
+> Kalan 11'in hiçbiri iki-yarımlı bir toggle'a uymuyor, iki ayrı sebepten:
+> **çok çiftli** (103 browser-internals 2 çift, 24 bundle-size 3, 25 web-vitals
+> 2, 52 OLTP/OLAP 1 kötü + 2 iyi) ya da **gömülü** (61 alerting, 10
+> compatibility, 68 big-O, 33 SSRF — çift, çok konulu büyük bir fence'in içinde
+> küçük bir bölüm; işaretlemek fence'i yanlış sınırdan ikiye bölerdi).
+>
+> Ayrıca `code-verification.json`'da `defectsByClass` **boş** ve `failing: 0` —
+> yani bugün hiçbir fence `shows-variants`'ı tetiklemiyor. Gerekçenin dayandığı
+> duplicate-identifier sinyali artık mevcut değil.
+>
+> Sonuç: widget dormant, çünkü fence'ler işaretlenmemiş değil — korpusun şekli
+> ikili değil. Zorla işaretlemek yanlış bir ikilik öğretirdi. Bu turda yalnız
+> gerçekten ikili olan tek fence işaretlendi (57 blue-green, expand/contract
+> migration). Yeni aday, ancak yeni içerik gerçekten ikili yazılırsa çıkar.
+
 `DiffCard` iki sürüm arasında geçiş yapan bir kontrol + değişen satırların
 vurgulanması sunar. **Yeni içerik yazmadan** mevcut kalıbı görünür kılar.
 
