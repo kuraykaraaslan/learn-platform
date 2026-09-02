@@ -428,7 +428,10 @@ const byClass = new Map<DefectClass, number>();
 for (const r of results) for (const d of realDefects(r)) byClass.set(d.class, (byClass.get(d.class) ?? 0) + 1);
 
 // Private aliases that cannot resolve for any reader — the first owner's repo.
-const PRIVATE_ALIAS = /from\s+['"]@\/(libs|modules|stores|components)\//g;
+// Deliberately not /g: a global regex carries lastIndex across .test() calls,
+// so filtering a list with one skips every other match. This counter read 23
+// when the real number was higher, for exactly that reason.
+const PRIVATE_ALIAS = /from\s+['"]@\/(libs|modules|stores|components)\//;
 const privateImports = results.filter((r) => PRIVATE_ALIAS.test(r.code));
 
 const byLesson = new Map<string, Result[]>();
@@ -445,7 +448,11 @@ fs.writeFileSync(
       generatedFrom: 'scripts/verify-code.ts',
       defectsByClass: Object.fromEntries(byClass),
       totals: {
-        fences: results.length,
+        // `results` is one entry per snippet FILE — splitSnippetFiles() turns a
+        // multi-file fence into several. 166 TS-ish fences currently yield 294
+        // files. Both numbers are reported so neither gets quoted as the other.
+        snippetFiles: results.length,
+        fences: fences.length,
         clean: clean.length,
         onlyMissingModules: onlyMissingModules.length,
         failing: failing.length,
@@ -478,13 +485,14 @@ const md: string[] = [
   '',
   '| | |',
   '|---|---:|',
-  `| TS/TSX fences | ${results.length} |`,
+  `| TS/TSX fences | ${fences.length} |`,
+  `| Snippet files they split into | ${results.length} |`,
   `| Clean | ${clean.length} |`,
   `| Only uninstalled-module errors (tolerated) | ${onlyMissingModules.length} |`,
   `| **Failing** | **${failing.length}** |`,
   `| Lessons affected | ${byLesson.size} |`,
-  `| Fences importing private \`@/libs\|modules\|stores\` aliases | ${privateImports.length} |`,
-  `| \`run\` fences: ready / blocked | ${runnable.ready} / ${runnable.blocked} |`,
+  `| Snippet files importing private \`@/libs\|modules\|stores\` aliases | ${privateImports.length} |`,
+  `| Snippet files in \`run\` fences: ready / blocked | ${runnable.ready} / ${runnable.blocked} |`,
   '',
   '## Defects by class',
   '',
@@ -509,9 +517,9 @@ fs.writeFileSync(path.join(OUT_DIR, 'code-verification.md'), md.join('\n'));
 
 fs.rmSync(workDir, { recursive: true, force: true });
 
-console.log(`fences: ${results.length}  clean: ${clean.length}  tolerated: ${onlyMissingModules.length}  failing: ${failing.length}`);
+console.log(`fences: ${fences.length}  snippet files: ${results.length}  clean: ${clean.length}  tolerated: ${onlyMissingModules.length}  failing: ${failing.length}`);
 console.log(`lessons affected: ${byLesson.size}   private-alias imports: ${privateImports.length}`);
-console.log(`runnable: ready ${runnable.ready}  blocked ${runnable.blocked}  (of ${runnable.total} \`run\` fences)`);
+console.log(`runnable: ready ${runnable.ready}  blocked ${runnable.blocked}  (of ${runnable.total} snippet files inside \`run\` fences)`);
 console.log(`reports -> content/_reports/code-verification.{json,md}`);
 
 if (process.argv.includes('--strict') && failing.length > 0) process.exit(1);
