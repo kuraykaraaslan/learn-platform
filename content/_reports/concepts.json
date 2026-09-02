@@ -4,9 +4,149 @@
   "totalLessons": 412,
   "totals": {
     "neverMatched": 0,
+    "neverLinked": 17,
+    "neverLinkedByCause": {
+      "own-lesson-only": 3,
+      "unlinked-elsewhere": 14,
+      "never-matched": 0
+    },
     "atCapLessons": 10
   },
   "neverMatched": [],
+  "neverLinked": [
+    {
+      "slug": "correlation-id",
+      "term": "Correlation ID",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        111
+      ]
+    },
+    {
+      "slug": "cve",
+      "term": "CVE",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        361
+      ]
+    },
+    {
+      "slug": "dip",
+      "term": "DIP",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        117,
+        122
+      ]
+    },
+    {
+      "slug": "git-bisect",
+      "term": "git bisect",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        139
+      ]
+    },
+    {
+      "slug": "index-bloat",
+      "term": "Index bloat",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        104
+      ]
+    },
+    {
+      "slug": "index-only-scan",
+      "term": "Index Only Scan",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        17
+      ]
+    },
+    {
+      "slug": "mass-assignment",
+      "term": "Mass assignment",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        38
+      ]
+    },
+    {
+      "slug": "outbox-relay",
+      "term": "Outbox relay",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        15
+      ]
+    },
+    {
+      "slug": "partial-index",
+      "term": "Partial index",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        44
+      ]
+    },
+    {
+      "slug": "pool-exhaustion",
+      "term": "Pool exhaustion",
+      "cause": "own-lesson-only",
+      "alsoAppearsInLessons": []
+    },
+    {
+      "slug": "primary-key",
+      "term": "Primary key",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        12,
+        411
+      ]
+    },
+    {
+      "slug": "principle-of-least-privilege",
+      "term": "Principle of least privilege",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        50
+      ]
+    },
+    {
+      "slug": "readiness-probe",
+      "term": "Readiness probe",
+      "cause": "own-lesson-only",
+      "alsoAppearsInLessons": []
+    },
+    {
+      "slug": "scoped-packages",
+      "term": "Scoped packages",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        95
+      ]
+    },
+    {
+      "slug": "traffic-cutover",
+      "term": "Traffic cutover",
+      "cause": "own-lesson-only",
+      "alsoAppearsInLessons": []
+    },
+    {
+      "slug": "vacuum-freeze",
+      "term": "VACUUM FREEZE",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        41
+      ]
+    },
+    {
+      "slug": "x-forwarded-for",
+      "term": "X-Forwarded-For",
+      "cause": "unlinked-elsewhere",
+      "alsoAppearsInLessons": [
+        33
+      ]
+    }
+  ],
   "atCapLessons": [
     "advanced-deep-dive-topics/103_browser_internals.md",
     "advanced-deep-dive-topics/107_api_design_philosophy.md",
@@ -26,7 +166,7 @@
       "lessonsLinkedIn": [
         "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
       ],
-      "rawOccurrences": 17
+      "rawOccurrences": 19
     },
     {
       "slug": "acid-transaction",
@@ -34,7 +174,7 @@
       "lessonsLinkedIn": [
         "distributed-systems-api-design/14_outbox_pattern.md"
       ],
-      "rawOccurrences": 2
+      "rawOccurrences": 3
     },
     {
       "slug": "alert-fatigue",
@@ -87,7 +227,7 @@
         "security/143_compliance_frameworks.md",
         "security/39_rbac_vs_abac.md"
       ],
-      "rawOccurrences": 70
+      "rawOccurrences": 74
     },
     {
       "slug": "aws-secrets-manager",
@@ -138,7 +278,7 @@
         "security/32_jwt_security_rs256_hs256_rotation.md",
         "security/33_ssrf_server_side_request_forgery.md"
       ],
-      "rawOccurrences": 41
+      "rawOccurrences": 81
     },
     {
       "slug": "billable-utilization",
@@ -157,19 +297,20 @@
         "fundamentals-tools/123_debugging_fundamentals.md",
         "fundamentals-tools/139_git_internals_advanced_workflows.md"
       ],
-      "rawOccurrences": 11
+      "rawOccurrences": 19
     },
     {
       "slug": "blast-radius",
       "term": "Blast radius",
       "lessonsLinkedIn": [
         "advanced-deep-dive-topics/111_production_debugging.md",
+        "database-advanced/50_multi_tenant_data_isolation_models.md",
         "observability-deployment/141_cloud_architecture_well_architected.md",
         "observability-deployment/58_dockerfile_best_practices.md",
         "process-soft-skills/77_technical_debt_prioritization.md",
         "security/40_supply_chain_security_lockfile_integrity.md"
       ],
-      "rawOccurrences": 8
+      "rawOccurrences": 11
     },
     {
       "slug": "bounded-context",
@@ -189,7 +330,7 @@
         "open-source-community/96_semver_changelog_management.md",
         "security/40_supply_chain_security_lockfile_integrity.md"
       ],
-      "rawOccurrences": 25
+      "rawOccurrences": 28
     },
     {
       "slug": "cache-invalidation",
@@ -199,7 +340,7 @@
         "architecture-design-patterns-testing/69_tail_call_memoization_lazy_evaluation.md",
         "framework-deep-dives/416_reactnative_data_fetching_and_offline.md"
       ],
-      "rawOccurrences": 5
+      "rawOccurrences": 7
     },
     {
       "slug": "change-request-process",
@@ -239,20 +380,21 @@
       "lessonsLinkedIn": [
         "architecture-design-patterns-testing/66_dependency_injection_container.md"
       ],
-      "rawOccurrences": 6
+      "rawOccurrences": 11
     },
     {
       "slug": "connection-pooling",
       "term": "connection pooling",
       "lessonsLinkedIn": [
         "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
+        "client-delivery-pm-handover/260_production_incident_client_communication.md",
         "database-advanced/50_multi_tenant_data_isolation_models.md",
         "distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md",
         "distributed-systems-api-design/11_read_replica_routing.md",
         "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md",
         "fundamentals-tools/133_networking_fundamentals.md"
       ],
-      "rawOccurrences": 28
+      "rawOccurrences": 31
     },
     {
       "slug": "constant-time-comparison",
@@ -270,7 +412,7 @@
         "framework-deep-dives/403_springboot_three_layer_architecture.md",
         "framework-deep-dives/406_springboot_service_layer_transactional.md"
       ],
-      "rawOccurrences": 6
+      "rawOccurrences": 8
     },
     {
       "slug": "consumer-groups",
@@ -300,7 +442,7 @@
       "slug": "correlation-id",
       "term": "Correlation ID",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 2
+      "rawOccurrences": 3
     },
     {
       "slug": "cqrs",
@@ -309,7 +451,7 @@
         "database-advanced/51_event_log_rehydration.md",
         "distributed-systems-api-design/13_cqrs_read_model_optimization.md"
       ],
-      "rawOccurrences": 12
+      "rawOccurrences": 13
     },
     {
       "slug": "cve",
@@ -353,7 +495,7 @@
         "distributed-systems-api-design/11_read_replica_routing.md",
         "frontend-performance-scaling/22_http2_multiplexing.md"
       ],
-      "rawOccurrences": 88
+      "rawOccurrences": 110
     },
     {
       "slug": "dead-tuples",
@@ -370,7 +512,7 @@
       "lessonsLinkedIn": [
         "product-technical-strategy/382_roadmap_planning.md"
       ],
-      "rawOccurrences": 4
+      "rawOccurrences": 6
     },
     {
       "slug": "dip",
@@ -384,7 +526,7 @@
       "lessonsLinkedIn": [
         "content-seo-personal-brand/305_deliverability_list_hygiene_reengagement_and_metrics.md"
       ],
-      "rawOccurrences": 20
+      "rawOccurrences": 22
     },
     {
       "slug": "dmarc",
@@ -392,7 +534,7 @@
       "lessonsLinkedIn": [
         "content-seo-personal-brand/305_deliverability_list_hygiene_reengagement_and_metrics.md"
       ],
-      "rawOccurrences": 18
+      "rawOccurrences": 20
     },
     {
       "slug": "domain-event",
@@ -408,7 +550,7 @@
       "lessonsLinkedIn": [
         "framework-deep-dives/410_springboot_jpa_entities_and_n_plus_one.md"
       ],
-      "rawOccurrences": 4
+      "rawOccurrences": 6
     },
     {
       "slug": "effective-hourly-rate",
@@ -426,7 +568,7 @@
       "lessonsLinkedIn": [
         "observability-deployment/61_alerting_design.md"
       ],
-      "rawOccurrences": 11
+      "rawOccurrences": 16
     },
     {
       "slug": "event-store",
@@ -434,7 +576,7 @@
       "lessonsLinkedIn": [
         "database-advanced/51_event_log_rehydration.md"
       ],
-      "rawOccurrences": 4
+      "rawOccurrences": 5
     },
     {
       "slug": "event-stream",
@@ -453,7 +595,7 @@
         "distributed-systems-api-design/02_event_sourcing_cqrs.md",
         "distributed-systems-api-design/135_microservices_vs_monolith.md"
       ],
-      "rawOccurrences": 19
+      "rawOccurrences": 24
     },
     {
       "slug": "exponential-backoff",
@@ -466,7 +608,7 @@
         "distributed-systems-api-design/08_webhook_security_retry.md",
         "frontend-performance-scaling/27_job_queue_bullmq.md"
       ],
-      "rawOccurrences": 16
+      "rawOccurrences": 18
     },
     {
       "slug": "feature-flag",
@@ -480,7 +622,7 @@
         "saas-business-skills/92_analytics_integration.md",
         "saas-business-skills/93_ab_test_infrastructure.md"
       ],
-      "rawOccurrences": 23
+      "rawOccurrences": 26
     },
     {
       "slug": "flame-graph",
@@ -494,7 +636,7 @@
       "slug": "git-bisect",
       "term": "git bisect",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 20
+      "rawOccurrences": 22
     },
     {
       "slug": "graceful-degradation",
@@ -504,7 +646,7 @@
         "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
         "product-technical-strategy/391_nfr_production_readiness_strategy.md"
       ],
-      "rawOccurrences": 8
+      "rawOccurrences": 11
     },
     {
       "slug": "hard-bounce",
@@ -512,7 +654,7 @@
       "lessonsLinkedIn": [
         "client-acquisition-sales/189_followup_cadence_reply_handling_and_campaign_discipline.md"
       ],
-      "rawOccurrences": 6
+      "rawOccurrences": 7
     },
     {
       "slug": "hashicorp-vault",
@@ -538,7 +680,7 @@
         "saas-business-skills/87_payment_integration_depth.md",
         "security/34_timing_attack_constant_time_comparison.md"
       ],
-      "rawOccurrences": 16
+      "rawOccurrences": 23
     },
     {
       "slug": "hmac-sha256",
@@ -547,7 +689,7 @@
         "advanced-deep-dive-topics/105_cryptography_fundamentals.md",
         "security/32_jwt_security_rs256_hs256_rotation.md"
       ],
-      "rawOccurrences": 7
+      "rawOccurrences": 8
     },
     {
       "slug": "idempotency-key",
@@ -559,7 +701,7 @@
         "distributed-systems-api-design/07_idempotency_key_pattern.md",
         "distributed-systems-api-design/131_message_queues_101.md"
       ],
-      "rawOccurrences": 18
+      "rawOccurrences": 19
     },
     {
       "slug": "index-bloat",
@@ -611,7 +753,7 @@
         "privacy-compliance-incident-response/368_client_facing_security_communication_risk_framing.md",
         "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
       ],
-      "rawOccurrences": 38
+      "rawOccurrences": 42
     },
     {
       "slug": "lazy-loading",
@@ -634,7 +776,7 @@
       "slug": "mass-assignment",
       "term": "Mass assignment",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 9
+      "rawOccurrences": 10
     },
     {
       "slug": "materialized-view",
@@ -643,7 +785,7 @@
         "database-advanced/45_time_series_data_timescaledb_partitioning.md",
         "database-advanced/52_oltp_vs_olap.md"
       ],
-      "rawOccurrences": 24
+      "rawOccurrences": 25
     },
     {
       "slug": "modular-monolith",
@@ -653,7 +795,7 @@
         "product-technical-strategy/387_technical_architecture_operating_system.md",
         "product-technical-strategy/389_domain_modeling_module_boundaries_scaling_path.md"
       ],
-      "rawOccurrences": 8
+      "rawOccurrences": 11
     },
     {
       "slug": "mrr",
@@ -674,7 +816,7 @@
         "framework-deep-dives/410_springboot_jpa_entities_and_n_plus_one.md",
         "fundamentals-tools/121_sql_fundamentals.md"
       ],
-      "rawOccurrences": 17
+      "rawOccurrences": 19
     },
     {
       "slug": "nested-loop",
@@ -682,19 +824,19 @@
       "lessonsLinkedIn": [
         "architecture-design-patterns-testing/68_big_o_analysis.md"
       ],
-      "rawOccurrences": 6
+      "rawOccurrences": 4
     },
     {
       "slug": "outbox-relay",
       "term": "Outbox relay",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 7
+      "rawOccurrences": 8
     },
     {
       "slug": "partial-index",
       "term": "Partial index",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 9
+      "rawOccurrences": 6
     },
     {
       "slug": "password-hashing",
@@ -715,7 +857,7 @@
       "slug": "primary-key",
       "term": "Primary key",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 4
+      "rawOccurrences": 5
     },
     {
       "slug": "principle-of-least-privilege",
@@ -738,7 +880,7 @@
         "ai-llm-engineering/159_prompt_injection_defense.md",
         "ai-llm-engineering/164_multi_agent_orchestration_workflow_chaining.md"
       ],
-      "rawOccurrences": 8
+      "rawOccurrences": 9
     },
     {
       "slug": "race-condition",
@@ -788,7 +930,7 @@
         "observability-deployment/63_chaos_engineering.md",
         "privacy-compliance-incident-response/361_vulnerability_management_lifecycle_patch_slas.md"
       ],
-      "rawOccurrences": 50
+      "rawOccurrences": 53
     },
     {
       "slug": "rbac",
@@ -800,7 +942,7 @@
         "product-technical-strategy/388_requirements_to_architecture_translation.md",
         "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
       ],
-      "rawOccurrences": 22
+      "rawOccurrences": 25
     },
     {
       "slug": "read-replica",
@@ -816,7 +958,7 @@
         "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md",
         "product-technical-strategy/389_domain_modeling_module_boundaries_scaling_path.md"
       ],
-      "rawOccurrences": 28
+      "rawOccurrences": 33
     },
     {
       "slug": "readiness-probe",
@@ -878,7 +1020,7 @@
         "product-technical-strategy/393_api_integration_event_driven_decisions.md",
         "security/143_compliance_frameworks.md"
       ],
-      "rawOccurrences": 21
+      "rawOccurrences": 23
     },
     {
       "slug": "rolling-update",
@@ -921,7 +1063,7 @@
         "observability-deployment/58_dockerfile_best_practices.md",
         "observability-deployment/59_kubernetes_fundamentals.md"
       ],
-      "rawOccurrences": 13
+      "rawOccurrences": 14
     },
     {
       "slug": "seq-scan",
@@ -945,7 +1087,7 @@
       "lessonsLinkedIn": [
         "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
       ],
-      "rawOccurrences": 4
+      "rawOccurrences": 5
     },
     {
       "slug": "singleton-scope",
@@ -971,7 +1113,7 @@
         "process-soft-skills/78_code_review_culture.md",
         "process-soft-skills/79_blameless_post_mortem.md"
       ],
-      "rawOccurrences": 49
+      "rawOccurrences": 58
     },
     {
       "slug": "sli",
@@ -981,7 +1123,7 @@
         "observability-deployment/61_alerting_design.md",
         "product-technical-strategy/391_nfr_production_readiness_strategy.md"
       ],
-      "rawOccurrences": 17
+      "rawOccurrences": 23
     },
     {
       "slug": "slo",
@@ -990,7 +1132,7 @@
         "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
         "product-technical-strategy/391_nfr_production_readiness_strategy.md"
       ],
-      "rawOccurrences": 21
+      "rawOccurrences": 37
     },
     {
       "slug": "soft-delete",
@@ -999,7 +1141,7 @@
         "framework-deep-dives/410_springboot_jpa_entities_and_n_plus_one.md",
         "product-technical-strategy/392_data_architecture_ownership_lifecycle.md"
       ],
-      "rawOccurrences": 23
+      "rawOccurrences": 26
     },
     {
       "slug": "sticky-sessions",
@@ -1051,7 +1193,7 @@
         "business-finance-solo-ops/319_tax_and_accounting_readiness.md",
         "business-finance-solo-ops/327_risk_reserve_and_contingency.md"
       ],
-      "rawOccurrences": 8
+      "rawOccurrences": 10
     },
     {
       "slug": "tcp-handshake",
@@ -1086,7 +1228,7 @@
       "lessonsLinkedIn": [
         "distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md"
       ],
-      "rawOccurrences": 7
+      "rawOccurrences": 9
     },
     {
       "slug": "timeline-reconstruction",
@@ -1095,7 +1237,7 @@
         "advanced-deep-dive-topics/111_production_debugging.md",
         "privacy-compliance-incident-response/362_incident_response_process_detection_to_postmortem.md"
       ],
-      "rawOccurrences": 3
+      "rawOccurrences": 4
     },
     {
       "slug": "token-bucket",
@@ -1103,13 +1245,13 @@
       "lessonsLinkedIn": [
         "framework-deep-dives/407_springboot_security_filter_chain.md"
       ],
-      "rawOccurrences": 9
+      "rawOccurrences": 16
     },
     {
       "slug": "traffic-cutover",
       "term": "Traffic cutover",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 2
+      "rawOccurrences": 3
     },
     {
       "slug": "trust-boundary",
@@ -1136,7 +1278,7 @@
         "fundamentals-tools/124_unit_testing_basics.md",
         "process-soft-skills/82_estimation.md"
       ],
-      "rawOccurrences": 32
+      "rawOccurrences": 34
     },
     {
       "slug": "url-versioning",
@@ -1145,7 +1287,7 @@
         "advanced-deep-dive-topics/107_api_design_philosophy.md",
         "open-source-community/96_semver_changelog_management.md"
       ],
-      "rawOccurrences": 7
+      "rawOccurrences": 8
     },
     {
       "slug": "vacuum-freeze",
@@ -1159,7 +1301,7 @@
       "lessonsLinkedIn": [
         "contracts-pricing-legal/202_pricing_models.md"
       ],
-      "rawOccurrences": 4
+      "rawOccurrences": 5
     },
     {
       "slug": "value-object",
