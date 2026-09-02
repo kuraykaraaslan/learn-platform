@@ -13,6 +13,47 @@ The pyramid ratio for a typical SaaS: 70% unit, 20% integration, 10% E2E. Most t
 
 When a codebase has no tests at all, the highest-value first tests are integration tests on whatever gates access — `login` and `register` in a typical auth service — followed by unit tests on schema validation and pure utility functions. The ordering rule generalises: start where a silent failure is unrecoverable, not where testing is easiest.
 
+```quiz
+- q: "You need a dependency to return a fixed value and do not care how it was called. Mock, or stub?"
+  anchor: "replaces a dependency and records what it was called with (verification-oriented)"
+  options:
+    - text: "A mock — the general-purpose test double"
+      correct: false
+      why: "A mock is verification-oriented: it records the calls so you can assert on them. You just said you do not care."
+    - text: "A stub — a fixed return value, state-oriented"
+      correct: true
+      why: "Mock, stub, fake and spy are all test doubles; the stub is the one for a fixed return."
+    - text: "A fake — a simplified working implementation"
+      correct: false
+      why: "A fake earns its cost when you need real behaviour, like an in-memory database. A constant does not."
+
+- q: "What separates an integration test from a unit test here?"
+  anchor: "tests a real component against real infrastructure (test DB, test Redis); slower but higher confidence"
+  options:
+    - text: "It exercises more than one function"
+      correct: false
+      why: "A unit test may call several functions. The line drawn here is about the infrastructure."
+    - text: "It runs against real infrastructure — a test DB, a test Redis — rather than mocks"
+      correct: true
+      why: "Slower, and higher confidence for exactly that reason."
+    - text: "It runs in CI rather than on a developer machine"
+      correct: false
+      why: "Where it runs is a scheduling choice, not a category."
+
+- q: "Your suite passes in file order and fails when shuffled. What is broken?"
+  anchor: "each test should set up and tear down its own state; no shared mutable state between tests"
+  options:
+    - text: "The shuffle — order dependence is normal in an integration suite"
+      correct: false
+      why: "Order dependence is the defect being reported, not a property to design around."
+    - text: "Test isolation — state is leaking between tests"
+      correct: true
+      why: "Each test should set up and tear down its own state, with nothing mutable shared."
+    - text: "The E2E layer, which is brittle by nature"
+      correct: false
+      why: "E2E brittleness is real and separate. A shuffle failure points straight at shared state."
+```
+
 ## Key Concepts
 - **Unit test** — tests one function; all external dependencies are mocked; fast, cheap, high volume
 - **Integration test** — tests a real component against real infrastructure (test DB, test Redis); slower but higher confidence
@@ -182,3 +223,23 @@ describe('AuthService.register (integration)', () => {
 - Vitest documentation: https://vitest.dev/
 - Martin Fowler — Test Pyramid: https://martinfowler.com/articles/practical-test-pyramid.html
 - Testing JavaScript with Kent C. Dodds: https://testingjavascript.com/
+
+```recall
+- q: "Describe the three layers of the pyramid."
+  must:
+    - "unit — tests one function with all external dependencies mocked; fast, cheap, high volume"
+    - "integration — a real component against real infrastructure; slower, higher confidence"
+    - "E2E — drives the full application through a browser or HTTP client; slowest, most brittle, highest confidence for happy paths"
+
+- q: "Name the kinds of test double and what each is for."
+  must:
+    - "test double is the umbrella term for mocks, stubs, fakes and spies"
+    - "a mock records what it was called with — verification-oriented"
+    - "a stub returns a fixed value — state-oriented"
+    - "a fake is a working simplified implementation, such as an in-memory database"
+
+- q: "What is test isolation?"
+  must:
+    - "each test sets up and tears down its own state"
+    - "no shared mutable state between tests"
+```

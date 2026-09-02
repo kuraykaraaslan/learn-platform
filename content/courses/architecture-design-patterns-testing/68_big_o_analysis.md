@@ -9,6 +9,47 @@ In a multi-tenant SaaS, n is rarely just "number of rows." It is "number of tena
 
 The practical skill is: (1) identify every loop, recursive call, and database query in a hot path; (2) estimate the worst-case n for each; (3) multiply nested complexities; (4) decide if the result is acceptable or if a different data structure or a database query should replace the loop.
 
+```quiz
+- q: "An O(n²) loop runs in 3 ms against your seed data. Is it fine?"
+  anchor: "not the test data size, but the realistic worst case per tenant per day"
+  options:
+    - text: "Yes — measured beats theorized"
+      correct: false
+      why: "Measured against the wrong n. The number that matters is the realistic worst case per tenant per day, not the seed fixture."
+    - text: "Unknown until you ask what n actually is in production"
+      correct: true
+      why: "That is the discipline: n in context, never n in the test data."
+    - text: "No — O(n²) has no place in application code"
+      correct: false
+      why: "It is fine where n is genuinely bounded and small. The complexity class alone does not decide it."
+
+- q: "`Array.push` sometimes copies the whole backing store. What is its complexity?"
+  anchor: "`Array.push` is O(1) amortized despite occasional O(n) resizes"
+  options:
+    - text: "O(n), since the worst single call copies everything"
+      correct: false
+      why: "Worst-case-per-call is not the useful measure when the expensive call is rare and pays for all the cheap ones."
+    - text: "O(1) amortized — the occasional O(n) resize averages out"
+      correct: true
+      why: "That is what amortized complexity describes: occasionally expensive, cheap on average."
+    - text: "O(log n), because the array grows geometrically"
+      correct: false
+      why: "Geometric growth is the reason the amortized cost is constant, not logarithmic."
+
+- q: "You load 1M rows and filter them with `Array.filter`. What cost does the filter's Big-O not show?"
+  anchor: "loading 1M rows into memory to filter them in JavaScript is O(n) space"
+  options:
+    - text: "None — `filter` is O(n) time and that is the whole story"
+      correct: false
+      why: "The rows had to be resident first. That is O(n) space, which the time analysis never mentions."
+    - text: "O(n) space — and a `WHERE` clause usually removes it"
+      correct: true
+      why: "The database can filter without anything materialising a million rows on the way."
+    - text: "The network round trip, which dominates either way"
+      correct: false
+      why: "Fetching less is exactly what the WHERE clause achieves, so the round trip is not a fixed cost."
+```
+
 ## Key Concepts
 - **O(1)** — constant time; hash map lookups, array index access; ideal for hot paths
 - **O(log n)** — tree operations, binary search; PostgreSQL B-tree index lookup is effectively O(log n)

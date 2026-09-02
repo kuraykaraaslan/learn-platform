@@ -334,12 +334,12 @@
     "architecture-design-patterns-testing": {
       "64_solid_principles.md": {
         "title": "52839825e69590c5",
-        "whatItIs": "5f4c2fd43e6ad207",
+        "whatItIs": "cf1d62f332797b17",
         "keyConcepts": "d9d6972b2d71eed5",
         "exampleCode": "19123c6b9473553d",
         "whenToUse": "73112894a654b5bc",
         "commonMistakes": "8a93dba6a588befb",
-        "furtherReading": "c19c098ffebc819c"
+        "furtherReading": "e94c88642fee2bbe"
       },
       "65_hexagonal_architecture.md": {
         "title": "6674c1db0943744c",
@@ -370,7 +370,7 @@
       },
       "68_big_o_analysis.md": {
         "title": "61a54f373d9fb602",
-        "whatItIs": "3deedd87fcafcad7",
+        "whatItIs": "d91b47765604a1e7",
         "keyConcepts": "c85fca13debc207c",
         "exampleCode": "a8f41c16aaf21d8b",
         "whenToUse": "0219f5f38487c609",
@@ -397,12 +397,12 @@
       },
       "71_test_pyramid.md": {
         "title": "1ad84a9db7e73941",
-        "whatItIs": "0a092074821e784d",
+        "whatItIs": "615739c6b0a8bd69",
         "keyConcepts": "41fcfa668ec1c21a",
         "exampleCode": "88921a049d5e03fd",
         "whenToUse": "adb3575982f40edb",
         "commonMistakes": "3fc2821bb52191a3",
-        "furtherReading": "8bb9fccfac95f398"
+        "furtherReading": "0adf7a5857240231"
       },
       "72_property_based_testing.md": {
         "title": "056f27aea12f20ca",
@@ -424,12 +424,12 @@
       },
       "74_tdd_cycle.md": {
         "title": "d86a7a022ff56fed",
-        "whatItIs": "7850c8ca3fdc8212",
+        "whatItIs": "272c883f3e216cc0",
         "keyConcepts": "1818b28500ae78ec",
         "exampleCode": "8ff90484be72dbdd",
         "whenToUse": "c153f8974eca64c2",
         "commonMistakes": "d1a0311439b4c07f",
-        "furtherReading": "57947f5d477d2bef"
+        "furtherReading": "a4b439fc5c5c6131"
       },
       "132_load_stress_testing_basics.md": {
         "title": "5e22d1437c34a531",

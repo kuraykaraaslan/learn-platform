@@ -11,6 +11,47 @@ Test-Driven Development is a programming technique — not a testing technique �
 
 The real benefit of TDD is not the tests themselves — it is the design pressure. When a function is hard to test, it is usually hard to test because it has too many dependencies, too many responsibilities, or too much hidden state. TDD surfaces these design problems before they harden into production code. The functions in your codebase that are hardest to test today (because they directly import TypeORM, directly call Redis, etc.) are also the hardest to change without risk — those two things are the same problem.
 
+```quiz
+- q: "`return 42` passes your entire test suite. What does TDD tell you to do?"
+  anchor: "add another test case that forces a more general solution"
+  options:
+    - text: "Write the real implementation — the tests have served their purpose"
+      correct: false
+      why: "Then the code stops being driven by tests, which was the part TDD was doing for you."
+    - text: "Add a test case that `return 42` cannot satisfy"
+      correct: true
+      why: "That is triangulation: forcing generality with another example rather than by intention."
+    - text: "Delete the test — it clearly asserts nothing useful"
+      correct: false
+      why: "It asserts one true case. What is missing is a second one."
+
+- q: "Which describes outside-in, \"London school\" TDD?"
+  anchor: "start with a failing E2E/integration test, then write unit tests to drive the internal design"
+  options:
+    - text: "Start with unit tests on the smallest pieces and compose upward"
+      correct: false
+      why: "That is inside-out — the Chicago/Detroit school."
+    - text: "Start with a failing E2E or integration test, then drive the internals with unit tests"
+      correct: true
+      why: "The outer test states what is wanted before any internal design exists."
+    - text: "Write every test first, then all of the implementation"
+      correct: false
+      why: "Neither school does that. The cycle stays red-green-refactor either way."
+
+- q: "You are in the green phase and can already see the general solution. Do you write it?"
+  anchor: "write the simplest code that makes the test pass; resist the urge to write more"
+  options:
+    - text: "Yes — you know it already, and writing it twice is waste"
+      correct: false
+      why: "Resisting that urge is the instruction. Generality should be forced by the next test, not by foresight."
+    - text: "No — write the simplest code that passes and let the next test force more"
+      correct: true
+      why: "Untested generality is precisely what YAGNI enforcement exists to prevent."
+    - text: "Yes, provided you skip the refactor phase afterwards"
+      correct: false
+      why: "Refactor is where the design improves under passing tests. Skipping it licenses nothing."
+```
+
 ## Key Concepts
 - **Red phase** — write a failing test that describes the desired behavior; the failure must be meaningful
 - **Green phase** — write the simplest code that makes the test pass; resist the urge to write more
@@ -153,3 +194,22 @@ it('allows login again after the lockout window expires', async () => {
 - Kent Beck — "Test-Driven Development: By Example" (the definitive book, uses Java but fully transferable)
 - Ian Cooper — "TDD, Where Did It All Go Wrong?" (YouTube, 2013): the most important talk on applying TDD correctly
 - Vitest documentation (the test runner recommended for this stack): https://vitest.dev/
+
+```recall
+- q: "Name the three phases and what each one requires."
+  must:
+    - "red — write a failing test describing the desired behavior, and the failure must be meaningful"
+    - "green — write the simplest code that makes it pass, resisting the urge to write more"
+    - "refactor — improve the code under passing tests, and all tests must stay green"
+
+- q: "Contrast outside-in and inside-out TDD."
+  must:
+    - "outside-in starts with a failing E2E or integration test, then unit tests drive the internal design — the London school"
+    - "inside-out starts with unit tests on the smallest pieces and composes them upward — the Chicago/Detroit school"
+
+- q: "What is YAGNI enforcement in TDD, and what does test-as-specification mean?"
+  must:
+    - "TDD prevents adding code that has no test coverage — if no test requires it, it should not be there"
+    - "a well-written test reads like a spec"
+    - "`describe('AuthService.login') > it('rejects wrong password')` is executable documentation"
+```

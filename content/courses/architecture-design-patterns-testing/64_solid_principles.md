@@ -13,6 +13,47 @@ SOLID is an acronym for five object-oriented design principles that, when applie
 
 **D — Dependency Inversion**: depend on abstractions, not concretions. Right now, `AuthService.login` calls `UserService.getByEmail` directly — a static import, a concrete dependency. If you want to test `AuthService.login` in isolation, you cannot substitute a mock `UserService`. DI inverts this by injecting dependencies.
 
+```quiz
+- q: "A `ReadOnlyRepository` extends `Repository` and throws on `save()`. Which principle does that break?"
+  anchor: "violated when a subclass throws on a method the parent doesn't throw on"
+  options:
+    - text: "SRP — the class now carries two responsibilities"
+      correct: false
+      why: "It carries one. What broke is that it can no longer stand in for its parent."
+    - text: "LSP — a subclass throwing where the parent does not is the textbook violation"
+      correct: true
+      why: "Implementations are meant to be interchangeable, and every caller holding a `Repository` now breaks."
+    - text: "ISP — the interface is too large for this implementation"
+      correct: false
+      why: "That is a fair diagnosis of the underlying design, and splitting the interface is the fix. The violation as written is still substitutability."
+
+- q: "A fourth payment provider means a fourth branch in the same `if/else`. What does OCP ask for instead?"
+  anchor: "add behavior via new classes/plugins, not via `if/else` chains in existing code"
+  options:
+    - text: "Extract each branch body into a private method on the same class"
+      correct: false
+      why: "The chain is still edited for every new provider. The shape changed; the coupling did not."
+    - text: "A new class or plugin, with the existing code untouched"
+      correct: true
+      why: "Open for extension, closed for modification: the fourth provider should not require editing the code that handles the first three."
+    - text: "A lookup table mapping provider names to booleans"
+      correct: false
+      why: "It replaces branching with data, but the behaviour still lives in the file that has to change."
+
+- q: "Your `OrderService` imports `PostgresOrderRepository` directly. What does DIP say about that?"
+  anchor: "high-level modules should not import low-level modules directly; both should depend on an abstraction (interface)"
+  options:
+    - text: "Nothing — the service has to talk to storage somehow"
+      correct: false
+      why: "It does, but through an abstraction both sides depend on, rather than by importing the concrete class."
+    - text: "Both should depend on an interface; the high-level module must not import the low-level one"
+      correct: true
+      why: "Constructor injection is the idiomatic way to hand over the concrete implementation without importing it."
+    - text: "Invert it — `PostgresOrderRepository` should import `OrderService`"
+      correct: false
+      why: "That is a different arrow, not an inverted dependency. Both are supposed to point at an abstraction, not at each other."
+```
+
 ## Key Concepts
 - **SRP** — one class, one axis of change; use it to decide when to extract a new module
 - **OCP** — add behavior via new classes/plugins, not via `if/else` chains in existing code
@@ -173,3 +214,21 @@ const testAuthService = new AuthService(
 - Robert C. Martin — "Clean Architecture" (the definitive SOLID reference)
 - SOLID principles in TypeScript: https://blog.logrocket.com/solid-principles-typescript/
 - Khalil Stemmler — SOLID in Domain-Driven Design: https://khalilstemmler.com/articles/solid-principles/
+
+```recall
+- q: "State SRP and ISP, and what each one is used to decide."
+  must:
+    - "SRP — one class, one axis of change; it decides when to extract a new module"
+    - "ISP — prefer small, focused interfaces over one large one, so clients depend only on what they use"
+
+- q: "What is constructor injection, and what does the interface buy?"
+  must:
+    - "dependencies are passed in as constructor arguments — the idiomatic DI pattern"
+    - "the interface is the abstraction layer between caller and implementation"
+    - "it enables substitution and testing"
+
+- q: "What is a god class?"
+  must:
+    - "a class that violates SRP badly"
+    - "dozens of methods, and it knows too much about the system"
+```

@@ -440,7 +440,7 @@
         "framework-deep-dives/403_springboot_three_layer_architecture.md",
         "framework-deep-dives/406_springboot_service_layer_transactional.md"
       ],
-      "rawOccurrences": 8
+      "rawOccurrences": 10
     },
     {
       "slug": "consumer-groups",
@@ -545,7 +545,7 @@
       "slug": "dip",
       "term": "DIP",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 5
+      "rawOccurrences": 6
     },
     {
       "slug": "dkim",
@@ -762,7 +762,7 @@
         "fundamentals-tools/124_unit_testing_basics.md",
         "observability-deployment/60_github_actions_ci_pipeline.md"
       ],
-      "rawOccurrences": 25
+      "rawOccurrences": 29
     },
     {
       "slug": "kill-switch",
@@ -1256,7 +1256,7 @@
         "framework-deep-dives/415_reactnative_zustand_mmkv_state_management.md",
         "fundamentals-tools/124_unit_testing_basics.md"
       ],
-      "rawOccurrences": 7
+      "rawOccurrences": 11
     },
     {
       "slug": "thundering-herd",
@@ -1314,7 +1314,7 @@
         "fundamentals-tools/124_unit_testing_basics.md",
         "process-soft-skills/82_estimation.md"
       ],
-      "rawOccurrences": 34
+      "rawOccurrences": 41
     },
     {
       "slug": "url-versioning",
@@ -1376,7 +1376,7 @@
       "lessonsLinkedIn": [
         "architecture-design-patterns-testing/74_tdd_cycle.md"
       ],
-      "rawOccurrences": 2
+      "rawOccurrences": 4
     }
   ]
 }
