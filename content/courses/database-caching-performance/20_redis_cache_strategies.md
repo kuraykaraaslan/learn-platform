@@ -9,6 +9,47 @@ Caching strategies differ in when and how the cache is populated and kept in syn
 
 For a multi-tenant SaaS, a layered strategy makes sense: session data and tenant config use write-through (always fresh in cache, DB is backup), expensive aggregate queries use cache-aside with staggered TTLs (to avoid thundering herd), and ephemeral counters (rate limit counters, online presence) use Redis as the primary store with no DB sync needed.
 
+```quiz
+- q: "Which strategy gives the lowest write latency, and what does it cost?"
+  anchor: "Write to cache immediately, flush to DB asynchronously; lowest write latency; risk of data loss"
+  options:
+    - text: "Write-through — cache and DB are updated together"
+      correct: false
+      why: "Together means synchronously, which is the higher write latency, not the lower."
+    - text: "Write-behind — the DB flush is asynchronous, at the risk of data loss"
+      correct: true
+      why: "Anything not yet flushed when the process dies is simply gone."
+    - text: "Cache-aside — the write path never touches the cache"
+      correct: false
+      why: "Cache-aside is a read-path strategy. It does not make writes faster."
+
+- q: "A popular key expires and 3,000 requests arrive that second. What happens, and what prevents it?"
+  anchor: "Many concurrent requests all miss the cache at the same time and flood the DB"
+  options:
+    - text: "Redis serializes them, so only one reaches the database"
+      correct: false
+      why: "Redis returns a miss to all 3,000. Nothing there serializes the repopulation."
+    - text: "All 3,000 miss and flood the DB — a distributed lock lets one populate while the rest wait"
+      correct: true
+      why: "Staggered TTLs and probabilistic early expiration are the other two preventions named."
+    - text: "The stale value keeps being served until the new one is computed"
+      correct: false
+      why: "That is `stale-while-revalidate` at the HTTP layer, not Redis's default behaviour."
+
+- q: "What does a TTL actually decide?"
+  anchor: "Maximum staleness window; balance between freshness and cache hit rate"
+  options:
+    - text: "How long Redis keeps memory allocated for the key"
+      correct: false
+      why: "Memory follows from it, but the decision it encodes is about correctness."
+    - text: "Your maximum staleness window, traded against hit rate"
+      correct: true
+      why: "A shorter TTL means fresher data and more misses; a longer one is the reverse."
+    - text: "How often the cache gets warmed"
+      correct: false
+      why: "Cache warming is a separate, deliberate pre-population step."
+```
+
 ## Key Concepts
 - **Cache-aside (lazy loading)**: App checks cache first; populates on miss; app manages cache lifecycle
 - **Write-through**: On every write, update both cache and DB synchronously; cache is always current; higher write latency
@@ -159,3 +200,20 @@ async function invalidateTenantCache(tenantId: string, redis: Redis) {
 - [**AWS documentation — "Caching strategies"](https://docs.aws.amazon.com/AmazonElastiCache)** — Clear diagrams and explanations of all four caching patterns; language-agnostic and directly applicable
 - **"Redis Explained" by Thorsten Höger** — A concise e-book covering Redis data structures and caching patterns; free online edition available
 - **"The Thundering Herd Problem" by Facebook Engineering blog** — Facebook's approach to preventing cache stampedes at scale; the probabilistic early expiration technique described is directly applicable to your TTL strategy
+
+```recall
+- q: "Describe cache-aside."
+  must:
+    - "the app checks the cache first and populates it on a miss"
+    - "the app manages the cache lifecycle"
+
+- q: "Contrast write-through and write-behind."
+  must:
+    - "write-through updates cache and DB synchronously on every write — always current, at higher write latency"
+    - "write-behind writes to cache immediately and flushes to the DB asynchronously — lowest write latency, with a risk of data loss"
+
+- q: "What is cache warming for?"
+  must:
+    - "pre-populating the cache at startup or before a deploy"
+    - "to avoid cold-start misses"
+```

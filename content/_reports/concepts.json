@@ -531,7 +531,7 @@
         "database-advanced/41_postgresql_mvcc_vacuum_bloat_isolation.md",
         "database-caching-performance/17_database_index_strategy.md"
       ],
-      "rawOccurrences": 6
+      "rawOccurrences": 7
     },
     {
       "slug": "dependency-rule",
@@ -740,13 +740,13 @@
       "slug": "index-bloat",
       "term": "Index bloat",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 2
+      "rawOccurrences": 3
     },
     {
       "slug": "index-only-scan",
       "term": "Index Only Scan",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 2
+      "rawOccurrences": 4
     },
     {
       "slug": "integration-test",
@@ -857,7 +857,7 @@
       "lessonsLinkedIn": [
         "architecture-design-patterns-testing/68_big_o_analysis.md"
       ],
-      "rawOccurrences": 4
+      "rawOccurrences": 6
     },
     {
       "slug": "outbox-relay",
@@ -869,7 +869,7 @@
       "slug": "partial-index",
       "term": "Partial index",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 6
+      "rawOccurrences": 7
     },
     {
       "slug": "password-hashing",
@@ -886,7 +886,7 @@
       "lessonsLinkedIn": [
         "architecture-design-patterns-testing/132_load_stress_testing_basics.md"
       ],
-      "rawOccurrences": 5
+      "rawOccurrences": 6
     },
     {
       "slug": "primary-key",
@@ -1106,7 +1106,7 @@
       "lessonsLinkedIn": [
         "database-caching-performance/18_query_plan_analysis.md"
       ],
-      "rawOccurrences": 6
+      "rawOccurrences": 7
     },
     {
       "slug": "shallow-size",

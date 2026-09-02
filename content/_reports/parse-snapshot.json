@@ -2204,48 +2204,48 @@
       },
       "17_database_index_strategy.md": {
         "title": "a551e2011d930ae8",
-        "whatItIs": "3c62e92ad6bb18ea",
+        "whatItIs": "4d211ec115e245dc",
         "keyConcepts": "d1de5b130a3f02e1",
         "exampleCode": "00b916a022b78414",
         "whenToUse": "c681da75fa0894ef",
         "commonMistakes": "5e3691d2149ea4c6",
-        "furtherReading": "a45b95be4992f8fc"
+        "furtherReading": "699f0e3445cc93c8"
       },
       "18_query_plan_analysis.md": {
         "title": "4422a6d89ccfe51b",
-        "whatItIs": "c8dbc7fdfd04e1dd",
+        "whatItIs": "66cc1a7c9f6a3c21",
         "keyConcepts": "a112fb9166831b32",
         "exampleCode": "c30e5edd8ae5b90f",
         "whenToUse": "085f93aed425acb2",
         "commonMistakes": "a7c179d851afcaf4",
-        "furtherReading": "019e9546d3251bb2"
+        "furtherReading": "f5c2deef1d7a7de7"
       },
       "19_connection_pool_tuning.md": {
         "title": "1a63810dea4e7cd4",
-        "whatItIs": "1ce3f4e0563b5b2a",
+        "whatItIs": "c41a062fb2167cbf",
         "keyConcepts": "5d9addfb406d57f0",
         "exampleCode": "5a335f1bc3f1fb37",
         "whenToUse": "0f610bc3b3b8300a",
         "commonMistakes": "8b8b994ce7fcd211",
-        "furtherReading": "ef871e68279e3db3"
+        "furtherReading": "338db9594f00bfbe"
       },
       "20_redis_cache_strategies.md": {
         "title": "4816350e2ec1814d",
-        "whatItIs": "1bc9dca0816891af",
+        "whatItIs": "0dc74ce4ac3b15ac",
         "keyConcepts": "7a0d4142b5ce9369",
         "exampleCode": "2a8918643758d79c",
         "whenToUse": "09d5d2ce08a5f24a",
         "commonMistakes": "12a5cde600feeff8",
-        "furtherReading": "f6a5a5d4d8967807"
+        "furtherReading": "0a50ce0888af1f66"
       },
       "21_cdn_cache_strategy.md": {
         "title": "00475f1f942fb875",
-        "whatItIs": "9100f6203aae37eb",
+        "whatItIs": "22c33cf35e58d332",
         "keyConcepts": "ef6950e147d14b8d",
         "exampleCode": "15a224e7f36964d6",
         "whenToUse": "4a6cdbb2d1c8ccce",
         "commonMistakes": "129a70e9e60bd366",
-        "furtherReading": "211af95309fdebe0"
+        "furtherReading": "f29452a0353475de"
       }
     },
     "distributed-systems-api-design": {

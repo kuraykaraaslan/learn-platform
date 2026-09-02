@@ -7,6 +7,47 @@ Prisma has a built-in connection pool (using the Prisma Query Engine). The defau
 
 **pgBouncer** is a connection pooler that sits between your application and PostgreSQL. Application instances connect to pgBouncer (cheap and unlimited), and pgBouncer maintains a small pool of real connections to PostgreSQL. In **transaction mode** (the recommended mode), a real DB connection is borrowed from the pool for the duration of a transaction and then returned. This multiplexes thousands of application connections through a small pool of 10–20 real PostgreSQL connections. The tradeoff in transaction mode is that session-level features (prepared statements, advisory locks, `SET` commands, temporary tables) don't work reliably — they depend on session state that pgBouncer doesn't preserve across transactions.
 
+```quiz
+- q: "You put pgBouncer in session mode to fix connection exhaustion. Did it work?"
+  anchor: "equivalent to direct connections, no restrictions; doesn't solve the connection count problem"
+  options:
+    - text: "Yes — pooling is what pgBouncer is for"
+      correct: false
+      why: "In session mode each client holds one server connection for the whole session, which is equivalent to connecting directly."
+    - text: "No — session mode does not reduce the connection count; transaction mode does"
+      correct: true
+      why: "Transaction mode borrows a server connection per transaction and returns it, at the cost of session-level features."
+    - text: "Yes, but only for read queries"
+      correct: false
+      why: "The mode does not distinguish reads from writes."
+
+- q: "`connection_limit=5` on a serverless function running 50 concurrent instances. How many connections?"
+  anchor: "in serverless, multiply by number of concurrent function instances"
+  options:
+    - text: "5 — the limit applies to the application"
+      correct: false
+      why: "It is per Prisma client instance, and serverless gives each concurrent invocation its own."
+    - text: "Up to 250 — the pool size multiplies by concurrent instances"
+      correct: true
+      why: "Against PostgreSQL's default `max_connections` of 100, that exhausts the server outright."
+    - text: "50 — one connection per instance, whatever the limit says"
+      correct: false
+      why: "Each instance opens its own pool of up to 5, not a single connection."
+
+- q: "Why not simply raise `max_connections` to 5000?"
+  anchor: "each connection uses ~5–10 MB of shared memory"
+  options:
+    - text: "You can — it is just a configuration ceiling"
+      correct: false
+      why: "Each connection costs roughly 5-10 MB of shared memory, so 5000 is tens of gigabytes before a single query runs."
+    - text: "Each connection costs ~5-10 MB, so the ceiling is really a memory budget"
+      correct: true
+      why: "Pooling exists because connections are expensive objects, not because the number was picked arbitrarily."
+    - text: "PostgreSQL caps it at 100 and ignores larger values"
+      correct: false
+      why: "100 is the default, not a hard cap."
+```
+
 ## Key Concepts
 - **Connection limit**: The maximum number of real PostgreSQL connections; PostgreSQL's default is 100; each connection uses ~5–10 MB of shared memory
 - **Connection pool**: A set of pre-established connections shared across requests; reduces connection overhead
@@ -147,3 +188,20 @@ PostgreSQL is what changes the arithmetic.
 - [**pgBouncer documentation](https://pgbouncer.org)** — The official configuration reference; the FAQ section explains transaction mode limitations clearly
 - **Prisma documentation — "Connection management"** — Covers `connection_limit`, `pool_timeout`, serverless deployment recommendations, and the `?pgbouncer=true` flag
 - [**"Why your Prisma app is failing in production" by Lee Robinson](https://leerob.io)** — Next.js + Prisma + serverless connection pool exhaustion; walks through the exact problem and solutions including Prisma Accelerate
+
+```recall
+- q: "What is pool exhaustion, and what does it look like from outside?"
+  must:
+    - "all connections are in use and a new request cannot get one"
+    - "it results in a timeout or a 500 error"
+
+- q: "How does Prisma read its pool settings?"
+  must:
+    - "from the connection string: `?connection_limit=5&pool_timeout=30`"
+
+- q: "What is Prisma Accelerate?"
+  must:
+    - "Prisma's managed connection pooler"
+    - "similar to pgBouncer in transaction mode"
+    - "deployed as an edge proxy"
+```

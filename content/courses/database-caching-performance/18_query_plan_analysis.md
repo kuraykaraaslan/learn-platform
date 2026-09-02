@@ -7,6 +7,47 @@
 
 The key things to look for in a plan are: **Seq Scan on a large table** (means no index is being used, which is usually wrong), **Nested Loop with a high estimated rows count** (can be slow when row estimates are wrong due to stale statistics), **Sort** (means no index is covering the ORDER BY), **high "actual time"** on a specific node (tells you exactly which step is slow), and a large discrepancy between "rows=estimated" and "actual rows" (stale statistics — run `ANALYZE tablename` to update them).
 
+```quiz
+- q: "`EXPLAIN ANALYZE` shows rows=12 estimated against 480,000 actual. What is that telling you?"
+  anchor: "Large discrepancies mean stale statistics; run `ANALYZE` or `VACUUM ANALYZE`"
+  options:
+    - text: "The query is slow and needs an index"
+      correct: false
+      why: "Perhaps, but the planner chose this plan from the 12. Fix the estimate before trusting anything it produced."
+    - text: "The statistics are stale — run `ANALYZE` or `VACUUM ANALYZE`"
+      correct: true
+      why: "A planner working from an estimate four orders of magnitude out will pick the wrong join and the wrong scan."
+    - text: "Estimates are always approximate; the gap can be ignored"
+      correct: false
+      why: "Approximate is one thing. Four orders of magnitude is a broken input."
+
+- q: "The plan shows a nested loop over a 2-million-row outer set. Good or bad?"
+  anchor: "fast when inner set is small and indexed; slow when outer set is large"
+  options:
+    - text: "Good — a nested loop avoids building a hash table"
+      correct: false
+      why: "It does, and pays for it by scanning the inner set two million times."
+    - text: "Bad — it scans the inner set once per outer row"
+      correct: true
+      why: "Nested loops are fast when the outer set is small and the inner one is indexed. This is the opposite case."
+    - text: "Neutral — the planner would not have chosen it if it were bad"
+      correct: false
+      why: "It would, working from a bad row estimate. That is the previous question's failure mode."
+
+- q: "Two runs of the same query, same plan: the first slow, the second fast. What changed?"
+  anchor: "Cache hits (fast) vs disk reads (slow)"
+  options:
+    - text: "The plan was cached, so the second run skipped planning"
+      correct: false
+      why: "The plan is identical, and planning is cheap next to the difference being measured."
+    - text: "Buffers — the first run read from disk, the second hit the cache"
+      correct: true
+      why: "shared hit versus shared read is exactly this distinction, and a high read count means cold data."
+    - text: "Nothing measurable — the difference is noise"
+      correct: false
+      why: "A cold-to-warm cache transition is a real and reproducible effect."
+```
+
 ## Key Concepts
 - **Seq Scan**: Full table scan; PostgreSQL reads every row; acceptable for small tables or queries returning most rows; bad for large tables with selective filters
 - **Index Scan**: Uses an index to find rows; efficient for selective filters; does a heap fetch per matching row
@@ -80,3 +121,20 @@ RED FLAGS to look for in a plan, in any of the three above:
 - [**"Use the Index, Luke" — "Execution Plans" section](https://use-the-index-luke.com/sql/explain-plan)** — The best non-official explanation of how to read query plans; language-agnostic and very clear
 - **PostgreSQL documentation — "Using EXPLAIN"** — The official reference; explains each node type, cost estimates, and the statistics system that feeds the planner
 - [PostgreSQL: using EXPLAIN](https://www.postgresql.org/docs/current/using-explain.html) — how to read the plan, and why `EXPLAIN ANALYZE` differs from `EXPLAIN`
+
+```recall
+- q: "Contrast Index Scan and Index Only Scan."
+  must:
+    - "an index scan uses an index to find rows and does a heap fetch per matching row"
+    - "an index only scan uses a covering index and needs no heap fetch — the fastest for covered queries"
+
+- q: "When does the planner reach for a Bitmap Index Scan?"
+  must:
+    - "when multiple index conditions combine"
+    - "it is efficient for moderate selectivity"
+
+- q: "What is a hash join good for?"
+  must:
+    - "it builds a hash table of the smaller relation"
+    - "efficient for larger joins without indexes"
+```

@@ -7,6 +7,47 @@ A **composite index** is an index on multiple columns in a defined order. The le
 
 A **covering index** includes all columns needed to satisfy a query — both the filter columns and the SELECT columns — allowing PostgreSQL to return results directly from the index without touching the main table (an "index-only scan"). This eliminates the heap fetch step and can dramatically speed up read-heavy queries. A **partial index** indexes only a subset of rows matching a condition (`WHERE status = 'active'`). If 90% of your `user_sessions` rows are expired, a partial index `WHERE expires_at > now()` covers the 10% you actually query, is smaller, and is faster to maintain.
 
+```quiz
+- q: "You have an index on `(tenant_id, created_at)`. Which query can use it?"
+  anchor: "column order matters; leading column rule applies"
+  options:
+    - text: "`WHERE created_at > $1`, since `created_at` is in the index"
+      correct: false
+      why: "The leading column rule: with no predicate on `tenant_id`, the index cannot be traversed from the front."
+    - text: "`WHERE tenant_id = $1`, and also `WHERE tenant_id = $1 AND created_at > $2`"
+      correct: true
+      why: "A composite index serves the leading column and any prefix of its column list."
+    - text: "Both equally — B-tree indexes are order-independent"
+      correct: false
+      why: "Column order is precisely what a composite B-tree encodes."
+
+- q: "99% of `jobs` rows are `status = 'done'`, and every query looks for `status = 'pending'`. What indexes best?"
+  anchor: "Index with a `WHERE` clause; indexes only matching rows; smaller and faster to maintain than a full index"
+  options:
+    - text: "A full B-tree on `status`"
+      correct: false
+      why: "It indexes the 99% nobody queries, paying write overhead and space for rows never looked up."
+    - text: "A partial index with `WHERE status = 'pending'`"
+      correct: true
+      why: "Smaller and faster to maintain, because it indexes only the matching rows."
+    - text: "A covering index on `(status) INCLUDE (id)`"
+      correct: false
+      why: "Covering removes heap fetches. It does nothing about the wasted 99% of entries."
+
+- q: "You index every column that appears in any WHERE clause. What does that cost?"
+  anchor: "Every index adds overhead to INSERT/UPDATE/DELETE; don't index every column"
+  options:
+    - text: "Nothing on writes — indexes only affect the read path"
+      correct: false
+      why: "Every index has to be maintained on INSERT, UPDATE and DELETE."
+    - text: "Every write pays for every index — index on actual query patterns instead"
+      correct: true
+      why: "Which is why the advice is to index by what queries actually run, not by what columns exist."
+    - text: "Only storage, and storage is cheap"
+      correct: false
+      why: "Storage is the smaller half. The write path is where it is felt."
+```
+
 ## Key Concepts
 - **B-tree index**: The default PostgreSQL index type; supports `=`, `<`, `>`, `BETWEEN`, `LIKE 'prefix%'` efficiently
 - **Composite index**: Index on multiple columns; column order matters; leading column rule applies
@@ -70,3 +111,21 @@ Look for `Index Only Scan` and `Heap Fetches: 0` in that last plan — PostgreSQ
 - [**"Use the Index, Luke"](https://use-the-index-luke.com)** — The best free online guide to SQL indexing; vendor-neutral, database-agnostic, and written for application developers rather than DBAs
 - **"Indexing in Postgres: What You Need to Know" by Brandur Leach** — Covers Prisma + PostgreSQL indexing patterns specifically; discusses covering indexes and the cases where Prisma's auto-migration falls short
 - [PostgreSQL: index types](https://www.postgresql.org/docs/current/indexes-types.html) — B-tree, hash, GiST, GIN and BRIN, and what each is actually for
+
+```recall
+- q: "What is a covering index, and what does it enable?"
+  must:
+    - "PostgreSQL 11+ `INCLUDE` syntax adds non-key columns to the index"
+    - "it enables an index-only scan — the query is satisfied entirely from the index without touching the heap"
+
+- q: "When is a seq scan acceptable?"
+  must:
+    - "on small tables, or for low-selectivity filters"
+    - "it is bad on large tables with selective filters"
+
+- q: "What is index bloat, and how is it dealt with?"
+  must:
+    - "dead tuples accumulate in indexes over time"
+    - "`VACUUM` reclaims them"
+    - "`REINDEX CONCURRENTLY` rebuilds without locking"
+```

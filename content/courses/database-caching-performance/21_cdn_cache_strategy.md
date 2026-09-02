@@ -7,6 +7,47 @@ HTTP caching is a first-principles performance and cost optimization. When a bro
 
 For a multi-tenant SaaS, the key rule is: any response that differs per user or tenant must either be `private` (browser cache only, no CDN) or keyed by a tenant/user identifier that is part of the cache key. A CDN that caches a tenant dashboard response under the URL `/dashboard` without knowing about the tenant will serve tenant A's data to tenant B — a critical security vulnerability.
 
+```quiz
+- q: "The CDN should hold a response for an hour and the browser for a minute. What do you send?"
+  anchor: "Like `max-age` but only for shared caches (CDNs); browser still uses `max-age`"
+  options:
+    - text: "`max-age=60`, and configure the hour in the CDN dashboard"
+      correct: false
+      why: "Possible, but the header can state it directly: `s-maxage` is the shared-cache directive."
+    - text: "`max-age=60, s-maxage=3600`"
+      correct: true
+      why: "The browser reads `max-age` and the CDN reads `s-maxage`, which is what lets the two TTLs differ."
+    - text: "`max-age=3600, private`"
+      correct: false
+      why: "`private` forbids the CDN from caching at all, which is the opposite of the goal."
+
+- q: "You add `Vary: Cookie` to a public marketing page. What did that do?"
+  anchor: "every cookie variant is a different cache entry"
+  options:
+    - text: "Made the cache correct for logged-in and logged-out visitors alike"
+      correct: false
+      why: "Correct, and effectively uncached: every distinct cookie value becomes its own entry."
+    - text: "Effectively disabled CDN caching — each cookie variant is a separate entry"
+      correct: true
+      why: "With analytics cookies alone, near enough every visitor ends up with a unique cache key."
+    - text: "Nothing — `Vary` affects browser caches only"
+      correct: false
+      why: "It tells the CDN which request headers to fold into its cache key."
+
+- q: "What does `stale-while-revalidate` buy you?"
+  anchor: "Serve stale content immediately; revalidate in background; eliminates cache miss latency"
+  options:
+    - text: "A longer freshness window before content counts as stale"
+      correct: false
+      why: "That is `max-age`. This directive governs what happens after staleness, not when it begins."
+    - text: "Stale content served immediately while revalidation runs in the background"
+      correct: true
+      why: "The cache-miss latency disappears — the reader never waits on the origin."
+    - text: "Automatic purging of stale entries at the edge"
+      correct: false
+      why: "The opposite: the stale entry is kept, and deliberately served."
+```
+
 ## Key Concepts
 - **`Cache-Control: max-age=N`**: Cache for N seconds; after N seconds, the cached entry is stale
 - **`Cache-Control: s-maxage=N`**: Like `max-age` but only for shared caches (CDNs); browser still uses `max-age`; use this to set different CDN vs browser TTLs
@@ -130,3 +171,21 @@ function addTenantCacheHeaders(response: NextResponse, tenantId: string): NextRe
 - [Caching best practices — Jake Archibald](https://jakearchibald.com/2016/caching-best-practices/) — the clearest treatment of immutable vs. revalidated assets and why the pattern matters
 - **Next.js documentation — "Caching"** — Covers the four caching layers in Next.js 14+ (Request Memoization, Data Cache, Full Route Cache, Router Cache); essential reading for RSC-based apps
 - [RFC 9111 — HTTP Caching](https://www.rfc-editor.org/rfc/rfc9111.html) — the actual semantics of `Cache-Control`, freshness and revalidation, which every CDN implements against
+
+```recall
+- q: "Contrast `private` and `no-store`."
+  must:
+    - "`private` means only the browser may cache and CDNs must not — for authenticated, user-specific responses"
+    - "`no-store` means no caching anywhere and every request reaches the origin — for sensitive data such as banking or PII"
+
+- q: "What is the CDN cache key, and what must it include here?"
+  must:
+    - "what the CDN uses to decide whether a cached response can be served"
+    - "typically the URL plus selected headers"
+    - "it must include tenant identity for tenant-scoped responses"
+
+- q: "What are `Surrogate-Control` and `CDN-Cache-Control` for?"
+  must:
+    - "Cloudflare, Fastly and others support them"
+    - "they override `Cache-Control` at the CDN level without affecting the browser"
+```
