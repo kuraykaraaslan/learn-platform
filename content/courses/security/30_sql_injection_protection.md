@@ -173,3 +173,23 @@ the engine looked for a user whose email is literally that string, and found non
 - [Prisma raw queries and SQL injection](https://www.prisma.io/docs/concepts/components/prisma-client/raw-database-access#sql-injection)
 - [OWASP SQL Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html)
 - [TypeORM QueryBuilder documentation](https://typeorm.io/select-query-builder)
+
+```recall
+- q: "What is a parameterized query, and how does a prepared statement differ?"
+  must:
+    - "a SQL template with `$1`, `?` or `:name` placeholders"
+    - "values passed separately as an array or object, never interpolated"
+    - "a prepared statement is sent to the server for compilation before values are bound"
+    - "it gives both security and performance benefits"
+
+- q: "Give the safe and unsafe form for Prisma and for TypeORM."
+  must:
+    - "Prisma: the tagged template `Prisma.sql` is safe, a plain string with template literals is not"
+    - "TypeORM: `.where('email = :email', { email })` is safe, `.where(`email = '${email}'`)` is not"
+
+- q: "Parameterization does not cover everything. Name what it leaves open."
+  must:
+    - "it protects values, not identifiers — dynamic column or table names need an allowlist"
+    - "`LIKE` injection: `%` and `_` in user input alter pattern behavior, so wildcards must be sanitized"
+    - "second-order injection: data stored safely, then used in a dynamic query without re-parameterization"
+```

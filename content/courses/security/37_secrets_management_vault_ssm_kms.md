@@ -7,6 +7,47 @@ A secrets manager (HashiCorp Vault, AWS Systems Manager Parameter Store, AWS Sec
 
 The operational improvement is most noticeable in three scenarios: (1) secret rotation — update in one place and all running instances pick it up on next request; (2) per-environment isolation — development, staging, and production have separate secret sets under the same naming hierarchy, and a compromise of the dev environment does not expose production secrets; (3) off-boarding — when a developer leaves, revoke their IAM access to the secrets manager and no secrets need to be rotated (assuming they didn't export them, which the audit log would show).
 
+```quiz
+- q: "A small team on AWS needs somewhere to keep a JWT secret and a DB password. Where do they start?"
+  anchor: "simpler than Vault for most cases"
+  options:
+    - text: "HashiCorp Vault — the most feature-rich of the three"
+      correct: false
+      why: "And the heaviest operational overhead. Feature count is not the constraint a small team is under."
+    - text: "SSM Parameter Store — free for standard parameters, IAM-integrated, simpler than Vault"
+      correct: true
+      why: "Secrets Manager is the paid step up, for automatic RDS rotation, first-class versioning or cross-account sharing."
+    - text: "Environment variables in the deploy config, validated by `libs/env.ts`"
+      correct: false
+      why: "Validation is not storage. Nothing there is rotatable or auditable."
+
+- q: "What makes a dynamic secret stronger than a rotated static one?"
+  anchor: "generates a short-lived credential on demand"
+  options:
+    - text: "It is rotated more often, so the exposure window is shorter"
+      correct: false
+      why: "Close, but the mechanism differs: the credential is generated per request and expires, rather than one shared value being replaced on a schedule."
+    - text: "The credential is generated on demand and expires — a DB user good for an hour"
+      correct: true
+      why: "There is no long-lived shared value to leak in the first place."
+    - text: "It never enters the application's memory"
+      correct: false
+      why: "The app receives and uses it like any other credential. What changes is its lifetime."
+
+- q: "What does envelope encryption actually buy you?"
+  anchor: "compromise of the data key alone is insufficient"
+  options:
+    - text: "Two independent ciphertexts, so one decryption failure is recoverable"
+      correct: false
+      why: "It is not a redundancy scheme. The two keys are layered, not parallel."
+    - text: "A data key encrypted under a KMS master key — the data key alone is not enough"
+      correct: true
+      why: "An attacker needs the master key as well, and that one never leaves KMS."
+    - text: "Encryption in transit on top of encryption at rest"
+      correct: false
+      why: "Separate concerns. Envelope encryption is about how the key at rest is itself protected."
+```
+
 ## Key Concepts
 - **Secrets manager** — A dedicated service for storing, rotating, and auditing access to credentials (API keys, DB passwords, JWT secrets)
 - **AWS SSM Parameter Store** — Free for standard parameters; hierarchical naming (`/app/production/JWT_SECRET`); integrates with IAM; simpler than Vault for most cases
@@ -125,3 +166,21 @@ export async function loadSecrets(): Promise<Secrets> {
 - [AWS SSM Parameter Store for storing secrets](https://docs.aws.amazon.com/systems-manager/latest/userguide/systems-manager-parameter-store.html)
 - [HashiCorp Vault: Getting Started](https://developer.hashicorp.com/vault/tutorials/getting-started)
 - [OWASP: Secrets Management Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Secrets_Management_Cheat_Sheet.html)
+
+```recall
+- q: "What is a secrets manager, and what does it hold?"
+  must:
+    - "a dedicated service for storing, rotating and auditing access to credentials"
+    - "API keys, DB passwords, JWT secrets"
+
+- q: "Compare SSM Parameter Store, Secrets Manager and Vault."
+  must:
+    - "SSM Parameter Store — free for standard parameters, hierarchical naming, IAM integration, simpler than Vault"
+    - "Secrets Manager — paid; automatic rotation for RDS passwords, first-class versioning, cross-account sharing"
+    - "Vault — self-hosted or cloud, most feature-rich, dynamic secrets, heavy operational overhead"
+
+- q: "What does the audit log record, and why does it matter?"
+  must:
+    - "every secret read, with timestamp, requester identity and secret name"
+    - "it is critical for compliance — SOC 2, GDPR"
+```

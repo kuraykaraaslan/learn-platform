@@ -7,6 +7,47 @@ The most important directive is `script-src`, which controls JavaScript executio
 
 Getting CSP right is iterative. Start with `Content-Security-Policy-Report-Only` mode: the policy is evaluated but not enforced, and violations are sent to your report endpoint. This lets you discover what your own application depends on before you start blocking things. Third-party scripts (Stripe.js, Google Analytics, Intercom) each require additions to your policy. The goal is to progressively tighten the policy until you can enforce it without breaking the application.
 
+```quiz
+- q: "You need to stop other sites embedding your page in an iframe. Which mechanism?"
+  anchor: "prefer this over the deprecated `X-Frame-Options`"
+  options:
+    - text: "`X-Frame-Options: DENY` — the header built for exactly this"
+      correct: false
+      why: "It is deprecated. The CSP directive that replaces it is preferred."
+    - text: "The CSP `frame-ancestors` directive"
+      correct: true
+      why: "It controls who can embed the page, and it is what X-Frame-Options gave way to."
+    - text: "`connect-src`, since embedding is a cross-origin connection"
+      correct: false
+      why: "`connect-src` governs `fetch()`, XHR and WebSocket. Framing is a different resource type entirely."
+
+- q: "You are about to ship a strict CSP and do not know what it will break. What goes out first?"
+  anchor: "enforces nothing but sends violation reports to your `report-uri`; use this during rollout"
+  options:
+    - text: "The policy with a permissive `default-src`, tightened later"
+      correct: false
+      why: "A permissive fallback hides which directives are actually needed, so the tightening pass starts from no data."
+    - text: "`Content-Security-Policy-Report-Only` — it enforces nothing and reports violations"
+      correct: true
+      why: "That is what the mode is for: violations arrive at your `report-uri` before anything is blocked."
+    - text: "The strict policy, with a rollback ready if support complains"
+      correct: false
+      why: "Report-Only yields the same information without breaking a single session to get it."
+
+- q: "Why does a nonce stop an injected `<script>` when `'unsafe-inline'` does not?"
+  anchor: "A per-request random value added to the header and to"
+  options:
+    - text: "Injected markup cannot carry the nonce, and the value is regenerated per request"
+      correct: true
+      why: "The value goes into the header and into your own script tags on that one response; anything injected afterwards has no matching attribute."
+    - text: "Because a nonce makes the browser ignore `'unsafe-inline'` entirely"
+      correct: false
+      why: "That interaction does exist in the spec, but it is not what stops the injected script — the missing nonce is."
+    - text: "Because the nonce is a hash of the script, so its contents are verified"
+      correct: false
+      why: "Hashes are CSP's other mechanism. A nonce checks an attribute, never the script body."
+```
+
 ## Key Concepts
 - **`default-src`** — Fallback for all resource types not explicitly specified; set to `'self'` as a baseline
 - **`script-src`** — Controls JavaScript execution; most important directive; avoid `'unsafe-inline'` and `'unsafe-eval'`
@@ -128,3 +169,21 @@ export async function POST(req: NextRequest) {
 - [Next.js CSP documentation with nonce support](https://nextjs.org/docs/app/building-your-application/configuring/content-security-policy)
 - [Google CSP Evaluator](https://csp-evaluator.withgoogle.com/)
 - [W3C Content Security Policy Level 3](https://www.w3.org/TR/CSP3/) — the normative source for directive semantics and nonce/hash behaviour
+
+```recall
+- q: "What do `default-src` and `script-src` do, and what must `script-src` avoid?"
+  must:
+    - "`default-src` is the fallback for resource types not explicitly specified — `'self'` as a baseline"
+    - "`script-src` controls JavaScript execution and is the most important directive"
+    - "avoid `'unsafe-inline'` and `'unsafe-eval'`"
+
+- q: "What does `connect-src` cover, and what must it list?"
+  must:
+    - "`fetch()`, XHR and WebSocket"
+    - "your API domain and any third-party APIs the frontend calls"
+
+- q: "What is `strict-dynamic` for?"
+  must:
+    - "a script trusted by its nonce may itself load further scripts"
+    - "it simplifies policies for SPAs with dynamic imports"
+```

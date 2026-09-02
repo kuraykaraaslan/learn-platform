@@ -7,9 +7,9 @@
     "neverLinked": 18,
     "neverLinkedByCause": {
       "own-lesson-only": 3,
-      "code-only": 12,
+      "code-only": 13,
       "shadowed": 0,
-      "case-mismatch": 2,
+      "case-mismatch": 1,
       "cap-starved": 1,
       "never-matched": 0
     },
@@ -38,10 +38,12 @@
     {
       "slug": "cve",
       "term": "CVE",
-      "cause": "case-mismatch",
+      "cause": "code-only",
       "linkableInLessons": [],
       "presentInLessons": [],
-      "alsoAppearsInLessons": []
+      "alsoAppearsInLessons": [
+        40
+      ]
     },
     {
       "slug": "dip",
@@ -273,7 +275,7 @@
         "security/143_compliance_frameworks.md",
         "security/39_rbac_vs_abac.md"
       ],
-      "rawOccurrences": 74
+      "rawOccurrences": 75
     },
     {
       "slug": "aws-secrets-manager",
@@ -483,7 +485,7 @@
       "slug": "cve",
       "term": "CVE",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 3
+      "rawOccurrences": 4
     },
     {
       "slug": "data-minimization",
@@ -693,7 +695,7 @@
       "lessonsLinkedIn": [
         "observability-deployment/59_kubernetes_fundamentals.md"
       ],
-      "rawOccurrences": 5
+      "rawOccurrences": 6
     },
     {
       "slug": "heap-snapshot",
@@ -801,7 +803,7 @@
       "lessonsLinkedIn": [
         "security/40_supply_chain_security_lockfile_integrity.md"
       ],
-      "rawOccurrences": 2
+      "rawOccurrences": 3
     },
     {
       "slug": "mass-assignment",
@@ -1096,7 +1098,7 @@
         "observability-deployment/58_dockerfile_best_practices.md",
         "observability-deployment/59_kubernetes_fundamentals.md"
       ],
-      "rawOccurrences": 14
+      "rawOccurrences": 18
     },
     {
       "slug": "seq-scan",

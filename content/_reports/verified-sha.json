@@ -386,13 +386,13 @@
   "saas-business-skills/92_analytics_integration.md": "414bd915f678965d",
   "saas-business-skills/93_ab_test_infrastructure.md": "88b558f783e04667",
   "security/29_owasp_top_10.md": "bb5387c0c711b244",
-  "security/30_sql_injection_protection.md": "62c2c1e10b040506",
+  "security/30_sql_injection_protection.md": "fc064e396acf347f",
   "security/31_mass_assignment_protection_dto_whitelist.md": "96e9bfd1852c7366",
-  "security/35_content_security_policy_csp_headers.md": "0495986a81ca355d",
+  "security/35_content_security_policy_csp_headers.md": "850d8eeb5a5dac8f",
   "security/36_dependency_audit_automation.md": "32e8fcbe74023aef",
-  "security/37_secrets_management_vault_ssm_kms.md": "a99999e288d02aa5",
+  "security/37_secrets_management_vault_ssm_kms.md": "a583147334a510a9",
   "security/38_penetration_testing_process.md": "704d843cfaba2624",
   "security/39_rbac_vs_abac.md": "65f80b7e82f1a517",
-  "security/40_supply_chain_security_lockfile_integrity.md": "5ef33ce7b1384abf",
+  "security/40_supply_chain_security_lockfile_integrity.md": "35bfd801518b8c41",
   "security/143_compliance_frameworks.md": "594f83dbcc467d14"
 }

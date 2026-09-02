@@ -3653,7 +3653,7 @@
         "exampleCode": "d7a3ac45cfb99959",
         "whenToUse": "91198fe2b9a85319",
         "commonMistakes": "fe94414340f50865",
-        "furtherReading": "d46d3292ae98df3f"
+        "furtherReading": "559795b14ca3b1d0"
       },
       "31_mass_assignment_protection_dto_whitelist.md": {
         "title": "9bd3400692171ba5",
@@ -3693,12 +3693,12 @@
       },
       "35_content_security_policy_csp_headers.md": {
         "title": "be6e04d95428fedb",
-        "whatItIs": "3892bbdc3e94473e",
+        "whatItIs": "e97337b1e3eeb3ab",
         "keyConcepts": "3a78561b9d5e69bd",
         "exampleCode": "d83e7d343aea4735",
         "whenToUse": "d843fb9ec60d4890",
         "commonMistakes": "da621a319ff6c2a7",
-        "furtherReading": "9423243933f89bc6"
+        "furtherReading": "e7cab1d0c07c0024"
       },
       "36_dependency_audit_automation.md": {
         "title": "45c72369954eb1ad",
@@ -3711,12 +3711,12 @@
       },
       "37_secrets_management_vault_ssm_kms.md": {
         "title": "d36a659c61fbc185",
-        "whatItIs": "864d4683dd343f41",
+        "whatItIs": "fd0692e209c39963",
         "keyConcepts": "df9294205212ac7d",
         "exampleCode": "e14b715e78fb649a",
         "whenToUse": "d66a763b1c57e3d8",
         "commonMistakes": "8c525dac3fb927b4",
-        "furtherReading": "f2f687f2825bcf6b"
+        "furtherReading": "9776b01b2b823adf"
       },
       "38_penetration_testing_process.md": {
         "title": "e5eb851997a7794e",
@@ -3738,12 +3738,12 @@
       },
       "40_supply_chain_security_lockfile_integrity.md": {
         "title": "454d484e1c2f7869",
-        "whatItIs": "8a6604ae0638f431",
+        "whatItIs": "712aeee11d6f308e",
         "keyConcepts": "9f4c7c6fe772d76b",
         "exampleCode": "7b8789073544ac4f",
         "whenToUse": "445ddfabb0c904e2",
         "commonMistakes": "3ae5243752d632b9",
-        "furtherReading": "eda4862d2af771b6"
+        "furtherReading": "5363193520f69288"
       },
       "143_compliance_frameworks.md": {
         "title": "f396739580678ce2",

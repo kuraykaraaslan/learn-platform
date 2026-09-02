@@ -7,6 +7,47 @@ For a Node.js application, the primary supply chain concern is the npm ecosystem
 
 The defenses layer together: lockfiles pin exact dependency versions and their content hashes, preventing silent upgrades to compromised versions. `npm ci` enforces the lockfile in CI, refusing to install if `package.json` and `package-lock.json` are out of sync. Package provenance (SLSA) allows verifying that a package was built from a specific Git commit by a specific CI system. Two-factor authentication on your own npm packages prevents account hijacking. Minimal permissions on CI systems limit blast radius if a build tool is compromised.
 
+```quiz
+- q: "Your CI pipeline runs `npm install`. What is wrong with that?"
+  anchor: "use in CI, never `npm install`"
+  options:
+    - text: "Nothing — it produces the same tree as `npm ci`, only slower"
+      correct: false
+      why: "It can quietly update the lockfile instead of failing, which is the whole difference."
+    - text: "It may resolve differently from the lockfile; `npm ci` installs exactly what is locked and fails if the lockfile is out of date"
+      correct: true
+      why: "Clean install also removes `node_modules` first, so nothing survives from a previous run."
+    - text: "It skips integrity verification of the downloaded tarballs"
+      correct: false
+      why: "npm verifies the `integrity` hash either way. What differs is whether the lockfile is authoritative."
+
+- q: "`npm audit` comes back clean. What has it not told you?"
+  anchor: "does not catch newly compromised packages"
+  options:
+    - text: "Nothing — a clean audit means the dependency tree is safe"
+      correct: false
+      why: "It means no *known* CVE. A package compromised yesterday has no advisory yet."
+    - text: "That a freshly compromised package is safe — audit only knows published CVEs"
+      correct: true
+      why: "Which is why lockfile integrity sits alongside audit rather than being replaced by it."
+    - text: "Whether your direct dependencies are up to date"
+      correct: false
+      why: "True, but audit reports vulnerabilities rather than staleness, and staleness is not the gap named here."
+
+- q: "You add `--ignore-scripts` to every install. What has that achieved?"
+  anchor: "reduces but does not eliminate risk"
+  options:
+    - text: "Full protection — none of a malicious package's code runs"
+      correct: false
+      why: "Its code runs the moment you import it. Install scripts are one path in, not the only one."
+    - text: "Less risk, not none — and some legitimate packages need their install scripts"
+      correct: true
+      why: "It blocks `postinstall`, a real attack path, at the cost of breaking packages that genuinely depend on it."
+    - text: "Nothing — npm ignores the flag when a lockfile is present"
+      correct: false
+      why: "The flag works. The question is how much of the attack surface it covers."
+```
+
 ## Key Concepts
 - **`package-lock.json`** — Records exact resolved versions and content hashes for every package in the tree; must be committed to version control
 - **`npm ci`** — "Clean install": removes `node_modules`, installs exactly what is in the lockfile, fails if lockfile is out of date; use in CI, never `npm install`
@@ -142,3 +183,26 @@ auditNewPackage(process.argv[2]);
 - [npm documentation: package-lock.json and `npm ci`](https://docs.npmjs.com/cli/v10/commands/npm-ci)
 - [SLSA — Supply-chain Levels for Software Artifacts](https://slsa.dev/)
 - [Socket.dev — real-time supply chain risk analysis for npm](https://socket.dev/)
+
+```recall
+- q: "What does `package-lock.json` record, and what must you do with it?"
+  must:
+    - "exact resolved versions and content hashes for every package in the tree"
+    - "it must be committed to version control"
+
+- q: "What is the integrity hash, and when is it checked?"
+  must:
+    - "each lockfile entry carries `integrity: sha512-...`"
+    - "npm verifies the downloaded tarball matches that hash before installation"
+
+- q: "What is Subresource Integrity, and where does it apply?"
+  must:
+    - "`<script integrity=\"sha384-...\" src=\"...\">`"
+    - "the browser verifies the file matches the hash before executing it"
+
+- q: "What is typosquatting, and what does SLSA verify?"
+  must:
+    - "malicious packages named similarly to popular ones — `lodahs`, `expres`, `discordd`"
+    - "SLSA verifies that a package was built from a specific source with a specific process"
+    - "npm now supports provenance attestations"
+```
