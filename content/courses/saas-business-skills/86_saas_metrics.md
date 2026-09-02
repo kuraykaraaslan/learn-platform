@@ -19,10 +19,12 @@ The advanced metric that most early-stage operators miss is **Net Revenue Retent
 
 ## Example Code or Template
 
-```sql
--- Assumes tables: tenant_subscription (tenant_id, plan_id, status, started_at,
---   cancelled_at, billing_cycle [monthly|annual], monthly_price)
--- Adjust column names to match your actual schema
+```sql run seed=tenant_subscriptions
+-- Runs for real against tenant_subscription (tenant_id, plan_id, status,
+--   started_at, cancelled_at, billing_cycle [monthly|annual], monthly_price,
+--   annual_price) — 44 subscriptions over 11 months, about a fifth of them
+--   cancelled, so churn and NRR have something to show.
+-- Against your own database, adjust the column names to match your schema.
 
 -- =========================================================
 -- 1. ACTIVE MRR: Current normalized monthly revenue
