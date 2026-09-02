@@ -121,6 +121,34 @@ async function chargeCustomer(customerId: string, amountCents: number) {
 }
 ```
 
+Exponential backoff and jitter, side by side. The first block is what every
+client does without jitter; the second is the same ceiling with the randomness
+that breaks the herd apart.
+
+```typescript run
+const BASE_MS = 100;
+const ATTEMPTS = 6;
+const CLIENTS = 4;
+console.log('Without jitter — every client retries at the same instant:');
+for (let a = 0; a < ATTEMPTS; a++) {
+  const wait = BASE_MS * 2 ** a;
+  console.log(`  attempt ${a + 1}: all ${CLIENTS} clients wait ${wait}ms`);
+}
+console.log('');
+console.log('With full jitter — the same ceiling, spread across clients:');
+for (let a = 0; a < ATTEMPTS; a++) {
+  const ceiling = BASE_MS * 2 ** a;
+  const waits = Array.from({ length: CLIENTS }, () => Math.round(Math.random() * ceiling));
+  console.log(`  attempt ${a + 1}: ceiling ${ceiling}ms -> ${waits.join('ms, ')}ms`);
+}
+console.log('');
+console.log('Re-run this: the jittered rows change every time, which is the point.');
+```
+
+Press Run twice. The top block is identical both times and the bottom one is
+not — that difference is the entire mechanism. Four clients here; picture four
+thousand hitting a service that is trying to come back up.
+
 ## When to Use
 - Every call to an external HTTP API (Stripe, SendGrid, Twilio, OAuth providers) — wrap these at the service boundary
 - When your service calls another internal microservice or a slower downstream API

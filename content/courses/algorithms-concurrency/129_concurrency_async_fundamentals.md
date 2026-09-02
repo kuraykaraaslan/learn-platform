@@ -106,6 +106,22 @@ B: refused (insufficient funds)
 final balance: 40
 ```
 
+The ordering in Key Concepts, running for real. Predict the five numbers before
+you press Run — the two synchronous lines are easy, the interesting question is
+where the timer lands relative to the promise.
+
+```typescript run
+console.log('1 — synchronous, runs immediately');
+setTimeout(() => console.log('5 — macrotask: the timer callback, last'), 0);
+Promise.resolve().then(() => console.log('3 — microtask: promise callback'));
+queueMicrotask(() => console.log('4 — microtask, queued after the promise one'));
+console.log('2 — synchronous, still ahead of every callback');
+```
+
+Nothing here is asynchronous in the sense of "elsewhere" — it is one thread
+draining three queues in a fixed order. Move the `setTimeout` to the top and run
+it again: the output does not change.
+
 ## When to Use
 - Any code with more than one `await` touching shared state (a balance, a counter, an inventory count) — assume interleaving is possible
 - Independent async operations with no shared state — run them with `Promise.all` instead of sequential `await`s to cut latency

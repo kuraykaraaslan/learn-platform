@@ -110,6 +110,46 @@ export async function tokenBucketRateLimit(
 }
 ```
 
+The "2x burst at window edges" claim in Key Concepts, made concrete. Ten
+requests arrive across 80 milliseconds, straddling a window boundary, against a
+limit of five per second. Predict how many get through.
+
+```typescript run
+type Verdict = { t: number; window: number; allowed: boolean };
+
+const LIMIT = 5;
+const WINDOW_MS = 1000;
+
+function fixedWindow(timestamps: number[]): Verdict[] {
+  const counts = new Map<number, number>();
+  return timestamps.map((t): Verdict => {
+    const window = Math.floor(t / WINDOW_MS);
+    const used = counts.get(window) ?? 0;
+    if (used >= LIMIT) return { t, window, allowed: false };
+    counts.set(window, used + 1);
+    return { t, window, allowed: true };
+  });
+}
+
+const burst = [960, 970, 980, 990, 999, 1000, 1010, 1020, 1030, 1040];
+const results = fixedWindow(burst);
+
+console.log(`limit: ${LIMIT} requests per ${WINDOW_MS}ms fixed window`);
+for (const r of results) {
+  console.log(`  t=${String(r.t).padStart(4)}ms  window ${r.window}  ${r.allowed ? 'ALLOWED' : 'blocked'}`);
+}
+
+const allowed = results.filter((r) => r.allowed).length;
+const span = burst[burst.length - 1] - burst[0];
+console.log('');
+console.log(`${allowed} requests allowed inside ${span}ms — ${allowed / LIMIT}x the limit.`);
+console.log('Both windows stayed within their own count. The boundary is the bug.');
+```
+
+Every window honoured its own count correctly — that is what makes this hard to
+spot in a code review. The defect is not in the counting, it is in where the
+boundary falls relative to the traffic.
+
 ## When to Use
 - **Sliding window counter**: Auth endpoints (login, password reset, OTP) where burst-at-boundary attacks are a real concern
 - **Token bucket**: Authenticated API endpoints for paying tenants — allows short legitimate bursts while enforcing overall rate

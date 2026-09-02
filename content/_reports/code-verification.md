@@ -5,13 +5,13 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 | | |
 |---|---:|
-| TS/TSX fences | 287 |
-| Clean | 62 |
+| TS/TSX fences | 290 |
+| Clean | 65 |
 | Only uninstalled-module errors (tolerated) | 225 |
 | **Failing** | **0** |
 | Lessons affected | 0 |
 | Fences importing private `@/libs|modules|stores` aliases | 23 |
-| `run` fences: ready / blocked | 8 / 0 |
+| `run` fences: ready / blocked | 11 / 0 |
 
 ## Defects by class
 
