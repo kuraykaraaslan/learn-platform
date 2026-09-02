@@ -1,0 +1,8 @@
+{
+  "name": "verify-distributed-systems-api-design-8",
+  "private": true,
+  "description": "Runs real HMAC-SHA256 webhook verification — a good signature, a tampered body, a re-serialized body, and a replayed timestamp — using only node:crypto, for lesson 8's proof block. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node webhook.js"
+  }
+}

@@ -182,6 +182,35 @@ async function deliverWebhook(tenantId: string, eventId: string, event: object) 
 }
 ```
 
+Signature verification, replay, and the re-serialization trap, run for real with node:crypto. Note the third case in particular: the object is identical and the bytes are not, which is why the signature has to cover the body a parser has not touched:
+
+```proof sha=da82dea11240f607 at=2026-09-02 commit=cac4924
+$ node webhook.js
+--- the signature the provider actually sends ---
+X-Signature: 7545837c568a327391719bc9ae207fad89f1af27ce5431c04da758272935e493
+
+a genuine delivery
+  signature matches, age 42s within the 300s window
+  -> ACCEPTED
+
+the same event with the amount edited
+  signature does NOT match, age 42s within the 300s window
+  -> REJECTED
+
+--- re-serializing an equal object changes the bytes ---
+raw  : {"id": "evt_1", "type": "payment.succeeded", "amount": 4200}
+again: {"id":"evt_1","type":"payment.succeeded","amount":4200}
+same object: true   same bytes: false
+verified against the re-serialized body
+  signature does NOT match, age 42s within the 300s window
+  -> REJECTED
+
+the same genuine delivery, replayed 5 hours later
+  signature matches, age 18000s beyond the 300s window
+  -> REJECTED
+  the signature is still perfectly valid — only the timestamp window stops it
+```
+
 ## When to Use
 - Every incoming webhook endpoint — no exceptions; unverified webhooks are an unauthenticated write path into your system
 - When your SaaS emits events to tenant-configured endpoints (integrations, automation triggers)

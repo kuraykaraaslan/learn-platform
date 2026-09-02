@@ -1,0 +1,8 @@
+{
+  "name": "verify-database-advanced-44",
+  "private": true,
+  "description": "Runs the soft-delete unique-constraint collision, and its partial-index fix, against a real Postgres engine (pglite, resolved from the repo's own node_modules) — for lesson 44's proof block. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node soft-delete.js"
+  }
+}

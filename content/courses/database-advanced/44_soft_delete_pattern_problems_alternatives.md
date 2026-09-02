@@ -168,6 +168,32 @@ export class UserArchiveService {
 }
 ```
 
+The three problems above, run against a real Postgres engine rather than described. The output below is captured from an actual run — the constraint messages are Postgres's own, not paraphrased:
+
+```proof sha=e2420318ae8a3af5 at=2026-09-02 commit=cac4924
+$ node soft-delete.js
+--- problem 1: a plain unique index still sees the deleted row ---
+alice soft-deleted; her row is still in the table
+re-registration -> duplicate key value violates unique constraint "users_email_key"
+
+--- the fix: a partial unique index, scoped to live rows ---
+  id 1  alice@example.com  live=false
+  id 2  alice@example.com  live=true
+the deleted row and the new one coexist, and a second live alice is still rejected:
+  second live alice -> duplicate key value violates unique constraint "users_email_live"
+
+--- problem 2: forget the filter once and deleted data is exposed ---
+SELECT ... FROM users                          -> 2 rows
+SELECT ... FROM users WHERE deleted_at IS NULL -> 1 rows
+no error, no warning — the first query just quietly includes the deleted account
+
+--- problem 3: soft deleted is not erased ---
+the soft-deleted row still holds: alice@example.com
+after anonymization, the row survives for referential integrity but carries no PII:
+  id 1  [deleted]
+  id 2  alice@example.com
+```
+
 ## When to Use
 - **Soft delete** — Tenant data, documents, projects — anything users might want to recover, or anything that has referential integrity requirements from other tables
 - **Hard delete** — Sessions, temporary records, processed job results — data that has no value after its purpose is served
