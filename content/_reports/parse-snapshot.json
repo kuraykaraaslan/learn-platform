@@ -13,21 +13,21 @@
       },
       "102_edge_computing.md": {
         "title": "e5f463890f1b4c7c",
-        "whatItIs": "5655be886b06629d",
+        "whatItIs": "00b4397fc4b25c04",
         "keyConcepts": "89a5cf52dada00c0",
         "exampleCode": "eb62966f1eff8a9e",
         "whenToUse": "f33842727cdf39be",
         "commonMistakes": "8128414585ffe71f",
-        "furtherReading": "54bc45b5a3de330a"
+        "furtherReading": "cc588ada853e52c1"
       },
       "103_browser_internals.md": {
         "title": "884762376b13eb3e",
-        "whatItIs": "ce08f417a6779ddf",
+        "whatItIs": "91ba0742970571bf",
         "keyConcepts": "f90c411df6cd3c1d",
         "exampleCode": "f47d6ca88a595834",
         "whenToUse": "322bd979f0e8e646",
         "commonMistakes": "08231921ec720012",
-        "furtherReading": "cf568a7acef0dc7c"
+        "furtherReading": "3d4ef1d0a1423838"
       },
       "104_database_internals.md": {
         "title": "805f793697488d3d",
@@ -40,12 +40,12 @@
       },
       "105_cryptography_fundamentals.md": {
         "title": "3642d5e4894a35d2",
-        "whatItIs": "78aec235b49e25f2",
+        "whatItIs": "cb93e12bc31be77c",
         "keyConcepts": "d1d1280656f79240",
         "exampleCode": "383f3830facf677e",
         "whenToUse": "e24beda8def8f2a7",
         "commonMistakes": "9732586f1e49275a",
-        "furtherReading": "6c9cbf75f74fc640"
+        "furtherReading": "3a85316c3edaa3fb"
       },
       "106_event_streaming_kafka_vs_bullmq.md": {
         "title": "ee4021291a9c139a",
@@ -76,12 +76,12 @@
       },
       "109_performance_profiling.md": {
         "title": "d65ffc19f031bc6a",
-        "whatItIs": "04e0edb2a054e47e",
+        "whatItIs": "4f1c88bce8b3d3e5",
         "keyConcepts": "e6610fdfdf371631",
         "exampleCode": "a1e23f1965def303",
         "whenToUse": "2ea2f0d978dc1de2",
         "commonMistakes": "2a25e8a184eb7f86",
-        "furtherReading": "354106db4027608c"
+        "furtherReading": "c9f85a0135cdd26a"
       },
       "110_reading_large_codebases.md": {
         "title": "2dc09ad1cd89e690",

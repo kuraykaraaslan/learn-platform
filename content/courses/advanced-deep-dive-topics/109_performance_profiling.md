@@ -7,6 +7,47 @@ A CPU flame graph shows where your program spends time. The x-axis is time, the 
 
 Memory profiling catches leaks: objects that accumulate over time because something holds a reference to them, preventing garbage collection. In long-running Node.js servers (including Next.js in production), a leak will eventually exhaust memory and crash the process. The symptom is memory that grows monotonically over hours or days.
 
+```quiz
+- q: "A 40 MB object is never collected. Its only reference is a callback registered on a global emitter. What is that?"
+  anchor: "the function is kept alive (e.g., in a global event listener), so the object is never collected"
+  options:
+    - text: "A collector bug — an object that large should be reclaimed"
+      correct: false
+      why: "The object is reachable. The registration keeps the function alive, and the closure keeps the object."
+    - text: "A closure leak — the live listener holds the captured object"
+      correct: true
+      why: "The function captured it, and the function outlives everything else because nothing ever unregisters it."
+    - text: "Fragmentation — the memory is free but not returned to the OS"
+      correct: false
+      why: "That describes memory the collector already reclaimed, not an object it cannot reclaim."
+
+- q: "In a heap snapshot, which column does a leak investigation start from?"
+  anchor: "Memory a node keeps alive (itself + everything reachable only through it). Leak investigation starts here"
+  options:
+    - text: "Shallow size — the object's own footprint"
+      correct: false
+      why: "It is usually small, and it says nothing about what the object is holding open."
+    - text: "Retained size — the object plus everything reachable only through it"
+      correct: true
+      why: "That is the number telling you what freeing this node would actually recover."
+    - text: "Allocation count — how many instances of the type exist"
+      correct: false
+      why: "Useful for spotting growth, but not where the investigation starts."
+
+- q: "A single heap snapshot shows 800 MB live. What can you conclude?"
+  anchor: "Comparing two snapshots shows what was allocated and not collected"
+  options:
+    - text: "There is a leak — 800 MB is well past a healthy heap"
+      correct: false
+      why: "One snapshot has no baseline. Large and growing are different claims."
+    - text: "Very little — a leak shows up in the diff between two snapshots"
+      correct: true
+      why: "The comparison is what reveals which objects were allocated and never collected."
+    - text: "Nothing at all until a heap timeline is also recorded"
+      correct: false
+      why: "The timeline tells you which functions allocate most; the two-snapshot diff answers this question directly."
+```
+
 ## Key Concepts
 - **Flame graph**: Visualization of CPU time per function. Width = time spent. Read top-down for hot paths.
 - **Heap snapshot**: A dump of all live objects in V8's heap at a moment in time. Comparing two snapshots shows what was allocated and not collected.
@@ -105,3 +146,21 @@ export function getMemoryStats() {
 - [clinic.js](https://clinicjs.org) — the fastest path to a Node.js flame graph, zero config
 - [Chrome DevTools: fix memory problems](https://developer.chrome.com/docs/devtools/memory-problems) — the official guide to heap snapshots and allocation timelines
 - *Node.js Design Patterns* — Mario Casciaro: Chapter on performance covers V8 internals, streams, and profiling workflow
+
+```recall
+- q: "What is a GC root, and what follows from being reachable from one?"
+  must:
+    - "objects that are always reachable — global scope, the active call stack"
+    - "anything reachable from a GC root cannot be collected"
+
+- q: "How do you attach a profiler to a running Node process?"
+  must:
+    - "start it with the `--inspect` flag"
+    - "that enables the Chrome DevTools Protocol"
+    - "connect Chrome DevTools to the running process"
+
+- q: "What does a heap timeline show that a snapshot does not?"
+  must:
+    - "a continuous recording of memory allocation"
+    - "it shows which functions allocate the most"
+```

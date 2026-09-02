@@ -7,6 +7,47 @@ The **critical rendering path** is the sequence of steps the browser takes to co
 
 The **event loop** is the scheduler that decides what executes when. It is not a single queue — there is a macrotask queue (setTimeout, setInterval, I/O callbacks, UI events), a microtask queue (Promise resolutions, queueMicrotask), and animation frame callbacks (requestAnimationFrame). Microtasks run to completion before the next macrotask. A chain of resolved Promises that triggers more resolved Promises can starve the macrotask queue — and therefore starve the UI — even with no infinite loop.
 
+```quiz
+- q: "A loop sets a style on each element and then reads its `offsetWidth`. What has that loop done?"
+  anchor: "forces the browser to synchronously flush pending style calculations"
+  options:
+    - text: "Nothing costly — reads are cheap next to writes"
+      correct: false
+      why: "The read is what costs: it forces a synchronous flush of the writes queued before it."
+    - text: "Turned a batched async operation into a synchronous one per iteration"
+      correct: true
+      why: "Reading a layout property right after a DOM write forces the pending style calculation to flush immediately."
+    - text: "Caused a repaint, but not a layout calculation"
+      correct: false
+      why: "It is the layout calculation that is being forced, which is the expensive stage."
+
+- q: "Move an element across the screen with `left`, or with `transform: translateX()`?"
+  anchor: "`transform` and `opacity` can be animated by the compositor thread without triggering Layout or Paint"
+  options:
+    - text: "`left` — it is the property that actually describes position"
+      correct: false
+      why: "It triggers Layout and Paint on every frame. `transform` skips both."
+    - text: "`transform` — the compositor thread handles it without Layout or Paint"
+      correct: true
+      why: "Only `transform` and `opacity` have that property; `width`, `top` and `background-color` all trigger the earlier stages."
+    - text: "Either — the browser optimizes both onto the same path"
+      correct: false
+      why: "That is precisely the assumption the composite-only list exists to correct."
+
+- q: "You want to defer work so the browser can paint first. `queueMicrotask`, or `setTimeout(fn, 0)`?"
+  anchor: "queues a microtask (runs before next macrotask, before any rendering)"
+  options:
+    - text: "`queueMicrotask` — the modern API for deferring"
+      correct: false
+      why: "A microtask runs before the next macrotask and before any rendering, so the paint you wanted still does not happen first."
+    - text: "`setTimeout(fn, 0)` — a macrotask runs after rendering"
+      correct: true
+      why: "`queueMicrotask` is the cheap defer; yielding to the renderer is what the macrotask queue is for."
+    - text: "Neither — both yield to the renderer identically"
+      correct: false
+      why: "That is the exact distinction the two queues exist to draw."
+```
+
 ## Key Concepts
 - **Layout thrashing**: Reading a layout property (`offsetWidth`, `getBoundingClientRect`) immediately after a DOM write forces the browser to synchronously flush pending style calculations — you've turned an async batched operation into a synchronous one per loop iteration.
 - **Composite-only properties**: `transform` and `opacity` can be animated by the compositor thread without triggering Layout or Paint. Animating `width`, `top`, or `background-color` does trigger those stages — always prefer `transform: translateX()` over `left`.
@@ -114,3 +155,30 @@ console.log("good shape:", createGoodUser(true));
 - [Jake Archibald: Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/) — the clearest event loop explainer written
 - [V8: Shapes and Inline Caches](https://v8.dev/blog/shapes-and-inline-caches) — official V8 blog post, directly relevant to how TypeScript objects compile
 - [HTML Standard — parsing](https://html.spec.whatwg.org/multipage/parsing.html) — the normative tokenizer and tree-construction algorithm every browser implements
+
+```recall
+- q: "What are V8 hidden classes, and what breaks them?"
+  must:
+    - "V8 creates a hidden class for each unique object property shape"
+    - "adding properties in different orders creates different hidden classes"
+    - "that prevents inline cache optimization"
+    - "always initialize object shapes consistently"
+
+- q: "What is an inline cache, and what happens when a call site goes megamorphic?"
+  must:
+    - "V8 caches the property lookup path for a given call site"
+    - "a call site that sees objects of different shapes becomes megamorphic"
+    - "the IC degrades and falls back to slower hash-map lookup"
+
+- q: "How do you read a flame graph, and what are you looking for?"
+  must:
+    - "the x-axis is time — wider means more time spent"
+    - "the y-axis is call stack depth — taller means deeper calls"
+    - "the actionable insight is wide, flat bars near the bottom of a hot path"
+
+- q: "What is a Long Task, and how are they surfaced?"
+  must:
+    - "any script execution that exceeds 50 ms"
+    - "it blocks the main thread and is visible as jank"
+    - "the Long Tasks API and PerformanceObserver flag them"
+```

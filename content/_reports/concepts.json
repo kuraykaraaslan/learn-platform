@@ -429,7 +429,7 @@
         "advanced-deep-dive-topics/105_cryptography_fundamentals.md",
         "security/34_timing_attack_constant_time_comparison.md"
       ],
-      "rawOccurrences": 16
+      "rawOccurrences": 17
     },
     {
       "slug": "constructor-injection",
@@ -626,7 +626,7 @@
         "distributed-systems-api-design/02_event_sourcing_cqrs.md",
         "distributed-systems-api-design/135_microservices_vs_monolith.md"
       ],
-      "rawOccurrences": 24
+      "rawOccurrences": 25
     },
     {
       "slug": "exponential-backoff",
@@ -653,7 +653,7 @@
         "saas-business-skills/92_analytics_integration.md",
         "saas-business-skills/93_ab_test_infrastructure.md"
       ],
-      "rawOccurrences": 26
+      "rawOccurrences": 27
     },
     {
       "slug": "flame-graph",
@@ -661,7 +661,7 @@
       "lessonsLinkedIn": [
         "advanced-deep-dive-topics/103_browser_internals.md"
       ],
-      "rawOccurrences": 10
+      "rawOccurrences": 11
     },
     {
       "slug": "git-bisect",
@@ -701,7 +701,7 @@
       "lessonsLinkedIn": [
         "advanced-deep-dive-topics/103_browser_internals.md"
       ],
-      "rawOccurrences": 4
+      "rawOccurrences": 6
     },
     {
       "slug": "hmac",
@@ -711,7 +711,7 @@
         "saas-business-skills/87_payment_integration_depth.md",
         "security/34_timing_attack_constant_time_comparison.md"
       ],
-      "rawOccurrences": 21
+      "rawOccurrences": 24
     },
     {
       "slug": "hmac-sha256",
@@ -963,7 +963,7 @@
         "observability-deployment/63_chaos_engineering.md",
         "privacy-compliance-incident-response/361_vulnerability_management_lifecycle_patch_slas.md"
       ],
-      "rawOccurrences": 53
+      "rawOccurrences": 56
     },
     {
       "slug": "rbac",
@@ -1024,7 +1024,7 @@
       "lessonsLinkedIn": [
         "advanced-deep-dive-topics/103_browser_internals.md"
       ],
-      "rawOccurrences": 5
+      "rawOccurrences": 6
     },
     {
       "slug": "retention-policy",
@@ -1112,7 +1112,7 @@
       "lessonsLinkedIn": [
         "advanced-deep-dive-topics/103_browser_internals.md"
       ],
-      "rawOccurrences": 4
+      "rawOccurrences": 5
     },
     {
       "slug": "shared-schema",
