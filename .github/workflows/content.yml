@@ -40,6 +40,20 @@ jobs:
       # header for why that gap is stated instead of closed with jsdom.
       - run: npm run content:verify-mermaid
 
+      # ESLint, which nothing else here runs. Verified empirically rather than
+      # assumed: with a deliberate `@typescript-eslint/no-explicit-any` error
+      # planted in modules/shared/useMounted.ts, `npm run build` still exited 0
+      # — Next 16 does not lint during build. The same experiment with a type
+      # error (`const x: number = "s"`) DID fail the build with TS2322, which is
+      # why `tsc --noEmit` has no step of its own: the build genuinely covers it.
+      #
+      # Without this the config's own promoted rule is unenforced. eslint.config
+      # .mjs turns `react/no-danger` on as an `error` precisely because the six
+      # deliberate dangerouslySetInnerHTML sites all carry a documented reason —
+      # a seventh, unannotated one is meant to fail the build, and until now
+      # nothing would have.
+      - run: npm run lint
+
       # content:check is vitest + standalone scripts — none of it runs the
       # real Next.js/tsc build pipeline, which has its own type-checking
       # pass over files vitest never touches (route files, layouts) and its
