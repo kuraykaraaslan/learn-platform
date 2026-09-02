@@ -7,6 +7,47 @@ The two validation methods, `safeParse` and `parse`, are chosen deliberately per
 
 On the output side, responses always nest data under an entity-named key — `{ user }`, `{ projects, total, page }` — never a generic `{ data }` or `{ success: true, result }` wrapper. This convention means a client consuming `GET /users/:id` and `GET /projects/:id` doesn't need to unwrap a generic envelope differently each time; the key itself tells you what you got. Pagination metadata is spread alongside the array at the top level rather than nested in a separate `meta` object, so `{ users, total, page, pageSize, pages }` is the complete shape of a paginated list response.
 
+```quiz
+- q: "A request body arrives malformed. Which Zod method belongs on the body schema, and why that one?"
+  anchor: "Body validation always uses `safeParse` because a malformed body is a normal, expected client mistake"
+  options:
+    - text: "`.parse()` — throwing straight into next(error) is less code"
+      correct: false
+      why: "That is the reasoning for route params, where a bad UUID is unambiguously a 400. A body needs the field-level issue list, which safeParse returns without an exception."
+    - text: "`safeParse` — a malformed body is expected, and it should produce a clean 400 with the field-level issues"
+      correct: true
+      why: "An uncaught exception is the wrong response to a mistake the client is expected to make."
+    - text: "Either — the two are interchangeable and it is a style choice"
+      correct: false
+      why: "The choice is made deliberately per input source: safeParse for the body, .parse() for route params."
+
+- q: "A paginated list of users goes out. Which response shape matches the convention?"
+  anchor: "responses always nest data under an entity-named key"
+  options:
+    - text: "`{ success: true, result: { users, meta } }`"
+      correct: false
+      why: "A generic success/result wrapper is exactly what the convention rules out — the key itself should tell you what you got."
+    - text: "`{ users, total, page, pageSize, pages }`"
+      correct: true
+      why: "Entity-named key, with pagination metadata spread alongside the array at the top level rather than nested in a separate meta object."
+    - text: "`{ data: users, meta: { total, page } }`"
+      correct: false
+      why: "`data` says nothing about what was returned, and pagination fields belong at the top level, not inside a meta object."
+
+- q: "A service method takes a `page` argument that the route already validated. How much should the service re-check?"
+  anchor: "Services trust their arguments completely; they perform zero input validation themselves"
+  options:
+    - text: "Re-check it — defence in depth, since the service might be called from somewhere else later"
+      correct: false
+      why: "The single-validation-point rule is the design. Duplicating it puts the same rule in two places to drift apart."
+    - text: "None — validation is fully discharged at the route layer"
+      correct: true
+      why: "That is what makes the route boundary the one place to look when an input rule changes."
+    - text: "Only the type, not the range"
+      correct: false
+      why: "Zero, not a reduced amount. Splitting the responsibility is the thing the rule exists to prevent."
+```
+
 ## Key Concepts
 - **Validate once, at the route**: services receive already-validated, already-typed data and perform no input checking of their own
 - **`safeParse` for bodies**: returns a result object; failure produces an inline `400` with `parsed.error.issues` — the one case where an error response is built without going through `next(error)`
@@ -129,3 +170,30 @@ export default router;
 - Zod documentation — Basic usage and coercion: https://zod.dev/
 - Express — req.query and req.params: https://expressjs.com/en/api.html#req.query
 - REST API pagination patterns (Microsoft REST API guidelines): https://github.com/microsoft/api-guidelines/blob/vNext/azure/Guidelines.md#9-collections
+
+```recall
+- q: "Which Zod method goes with which input source, and what is the reason for each?"
+  must:
+    - "body — safeParse, because a malformed body is a normal client mistake needing a clean 400 with field-level issues"
+    - "route params — .parse(), because a malformed UUID in a URL segment is unambiguously a 400"
+    - "letting params throw into next(error) is less code than repeating the safeParse-then-check dance"
+
+- q: "Why do query schemas need coercion when body schemas do not?"
+  must:
+    - "query params arrive as strings even when they represent numbers or booleans"
+    - "so query schemas lean on z.coerce.number() and similar coercions"
+    - "JSON bodies already carry real types, so body and param schemas can validate types directly"
+
+- q: "State the response envelope convention, including how pagination is carried."
+  must:
+    - "nest data under an entity-named key — { user }, { projects, total, page }"
+    - "never a generic { data } or { success: true, result } wrapper"
+    - "pagination metadata is spread at the top level, not nested in a meta object"
+    - "{ users, total, page, pageSize, pages } is the complete paginated shape"
+
+- q: "Where does input validation live, and what does that mean for the service layer?"
+  must:
+    - "every body, query string and route param is validated with Zod before the service sees it"
+    - "services trust their arguments completely"
+    - "services perform zero input validation themselves"
+```

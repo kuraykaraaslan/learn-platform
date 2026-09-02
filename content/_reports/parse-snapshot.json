@@ -2451,12 +2451,12 @@
       },
       "400_express_validation_and_response_conventions.md": {
         "title": "b4661e24fb19d537",
-        "whatItIs": "3b8788ba2a599751",
+        "whatItIs": "bfe71a072ea4a8f5",
         "keyConcepts": "c5b4d5f0161722a1",
         "exampleCode": "314e5cdba9239856",
         "whenToUse": "8be73535ad0d4550",
         "commonMistakes": "ec05d8e184077964",
-        "furtherReading": "1bce3707b82cc125"
+        "furtherReading": "a8911de60b1a61e3"
       },
       "401_express_realtime_sse_and_socketio.md": {
         "title": "893863892be8dd96",
@@ -2505,12 +2505,12 @@
       },
       "406_springboot_service_layer_transactional.md": {
         "title": "35e0d1e16fbd6861",
-        "whatItIs": "f446bf25f257b69f",
+        "whatItIs": "691d9ba7c34f8190",
         "keyConcepts": "8c62205382bad150",
         "exampleCode": "d53671f8c9308788",
         "whenToUse": "2235303153ff686b",
         "commonMistakes": "1e02b08fea8d15c3",
-        "furtherReading": "dafed98cb555293e"
+        "furtherReading": "a3585fe4be3d1de5"
       },
       "407_springboot_security_filter_chain.md": {
         "title": "14d6cee1282994f3",
@@ -2595,12 +2595,12 @@
       },
       "416_reactnative_data_fetching_and_offline.md": {
         "title": "176e9f110965f3d2",
-        "whatItIs": "f3d3f37359d74a12",
+        "whatItIs": "125f21952856b8f5",
         "keyConcepts": "fec0350ed1db50d6",
         "exampleCode": "b08126eeb2beaf54",
         "whenToUse": "a96dbab8076a98af",
         "commonMistakes": "42c90e995bb04c49",
-        "furtherReading": "b33b832f0a0d1017"
+        "furtherReading": "daa5db091a75dfa7"
       },
       "417_reactnative_expo_config_permissions_and_native_apis.md": {
         "title": "a2c9ad113e5dbdc5",
@@ -2649,12 +2649,12 @@
       },
       "422_electron_preload_and_context_isolation.md": {
         "title": "9c9db065e3199ad3",
-        "whatItIs": "98ad9aec81cc4f57",
+        "whatItIs": "32bd238e011c8da9",
         "keyConcepts": "bde7f232cbc2d3cd",
         "exampleCode": "400cfeca1bbb2fbe",
         "whenToUse": "7ed436d849ab1af3",
         "commonMistakes": "56fb7e02e23b9139",
-        "furtherReading": "f466e0c3bc5f1015"
+        "furtherReading": "8580998dab3f74ed"
       },
       "423_electron_main_process_lifecycle_and_window_management.md": {
         "title": "1bad777298cbe31b",
@@ -2703,12 +2703,12 @@
       },
       "428_electron_error_handling_crash_reporting_and_performance.md": {
         "title": "2602bd18b83640a1",
-        "whatItIs": "7db4bbbd0a5fce33",
+        "whatItIs": "387b4d3cf9ffd332",
         "keyConcepts": "78db7df83ef17d4e",
         "exampleCode": "076e1e0b00a812ee",
         "whenToUse": "511a19eca0820d53",
         "commonMistakes": "0ca23e67e45c0057",
-        "furtherReading": "3af365d5354fda4c"
+        "furtherReading": "874e5e6580d9d8ca"
       },
       "429_electron_window_chrome_and_desktop_layout.md": {
         "title": "cec2ef4bc19fd6fa",

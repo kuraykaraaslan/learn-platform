@@ -7,6 +7,47 @@ Three hook shapes cover almost every screen. A list-fetch hook (`useUsers`) expo
 
 Two mobile-specific concerns have no real web equivalent. Offline detection via `NetInfo.addEventListener` should be wired once, at the root layout, into a single ambient banner — not duplicated per screen, and not blocking the UI, since a desktop-class app expects continued read access to already-loaded data while offline. And error messages are always extracted through one shared `extractErrorMessage(err)` helper that knows how to unwrap an Axios error's `response.data.message`, rather than reaching into `err.response.data` inline at every call site — the same "one error-shaping function" discipline used by the `AppError`/error-handling conventions in the backend lessons.
 
+```quiz
+- q: "Why does `useUser(userId)` need a `cancelled` flag in its useEffect cleanup when `useUsers()` does not?"
+  anchor: "to prevent a `setState` call on an unmounted component if the `userId` prop changes"
+  options:
+    - text: "To abort the in-flight request and save bandwidth"
+      correct: false
+      why: "The flag does not cancel the request. It stops the resolved response from writing state into a component that is already gone."
+    - text: "To stop a setState landing on an unmounted component when userId changes or the screen unmounts mid-request"
+      correct: true
+      why: "Navigation in React Native unmounts screens mid-request far more often than on the web, which is what makes it a real bug rather than a theoretical one."
+    - text: "Because single-item hooks re-render more often than list hooks"
+      correct: false
+      why: "Render frequency is not the issue — the prop dependency and the navigation timing are."
+
+- q: "Where does offline detection belong in this stack?"
+  anchor: "wired once, at the root layout, into a single ambient banner"
+  options:
+    - text: "In each screen's hook, so every screen can react in its own way"
+      correct: false
+      why: "Duplicating it per screen is explicitly what the lesson rules out."
+    - text: "Once at the root layout, as a single ambient banner that does not block the UI"
+      correct: true
+      why: "A desktop-class app is expected to keep read access to already-loaded data while offline."
+    - text: "In a blocking modal, so nobody acts on stale data"
+      correct: false
+      why: "Blocking the UI contradicts the expectation that already-loaded data stays readable while offline."
+
+- q: "Every mutation in `useUserMutations` is paired with two things. Which two?"
+  anchor: "pairs every mutation with both haptic feedback (`expo-haptics`) and a toast (`sonner-native`)"
+  options:
+    - text: "A retry and a timeout, since mobile networks are unreliable"
+      correct: false
+      why: "Reasonable instincts, but not what this stack pairs with a mutation."
+    - text: "Haptic feedback and a toast"
+      correct: true
+      why: "On mobile, a state change with no haptic or visual confirmation reads as \"did that actually work?\""
+    - text: "A loading spinner and a cache invalidation"
+      correct: false
+      why: "There is no cache to invalidate — this stack deliberately does not use React Query or SWR."
+```
+
 ## Key Concepts
 - **No React Query/SWR — a hook owns `data`/`loading`/`error` directly**: `useState` plus a `useCallback` fetcher plus a `useEffect` for the initial load is the whole pattern
 - **Pipeline is always Screen → Hook → `axiosInstance` → API**: screens hold zero async logic; hooks hold zero JSX
@@ -126,3 +167,29 @@ export function useOfflineStatus() {
 - Axios documentation — "Handling Errors": https://axios-http.com/docs/handling_errors
 - React Native — `NetInfo` (`@react-native-community/netinfo`): https://github.com/react-native-netinfo/react-native-netinfo
 - Expo Haptics documentation: https://docs.expo.dev/versions/latest/sdk/haptics/
+
+```recall
+- q: "State the data pipeline and what a screen is allowed to own."
+  must:
+    - "Screen → Hook → axiosInstance → REST API"
+    - "screens own no async logic at all"
+    - "they call a hook and render what it returns"
+
+- q: "Name the three hook shapes and what each exposes or additionally needs."
+  must:
+    - "list fetch (useUsers) — { data, loading, error, refresh }"
+    - "single item (useUser(userId)) — the same, plus a cancelled flag in the useEffect cleanup"
+    - "mutations (useUserMutations) — create/update/delete, each paired with haptics and a toast"
+
+- q: "This stack skips React Query and SWR. State the trade-off in both directions."
+  must:
+    - "given up: automatic background refetching and built-in cache invalidation"
+    - "gained: no library-specific mental model to learn"
+    - "gained: a shape simple enough that every hook in the codebase looks the same"
+
+- q: "Why does error extraction go through one shared helper?"
+  must:
+    - "extractErrorMessage(err) knows how to unwrap an Axios error's response.data.message"
+    - "rather than reaching into err.response.data inline at every call site"
+    - "the same one-error-shaping-function discipline as the backend AppError conventions"
+```

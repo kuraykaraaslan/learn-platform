@@ -9,6 +9,47 @@ Startup performance is treated as a real acceptance gate, not a nice-to-have: th
 
 Testing follows a pyramid shaped by the process model itself: most coverage is Vitest, run against main-process services and Zod schemas as plain functions with no Electron runtime needed, and against renderer components/stores in jsdom with `window.api` stubbed — since components are already fetch-agnostic, mocking the bridge is clean and doesn't require faking IPC itself. A thin layer of Playwright `_electron` E2E tests proves the process boundary actually works end-to-end, launching the real packaged build (not a dev server) so preload wiring, window configuration, and real IPC round-trips are what's under test. Spectron, the older Electron testing tool, is banned outright — deprecated since 2022 and broken on modern Electron versions, with Playwright's `_electron` support as the only supported replacement.
 
+```quiz
+- q: "A validation failure happens inside an IPC handler. Which of Electron's three failure channels is that, and what is the response?"
+  anchor: "an expected, handled error (a validation failure inside an IPC handler) is not a crash and shouldn't be logged or reported like one"
+  options:
+    - text: "A crash — send it through crashReporter"
+      correct: false
+      why: "crashReporter is for a native or V8 crash where the process actually died. A validation failure is neither."
+    - text: "A handled error — caught and returned as a discriminated Result<T> envelope"
+      correct: true
+      why: "Crossing the IPC boundary strips a thrown error of its shape, so a handler never lets a domain error propagate as a throw."
+    - text: "An unhandled exception — let uncaughtException catch it"
+      correct: false
+      why: "That channel means a bug slipped past normal error handling. This error was expected and is being handled."
+
+- q: "Which of these belongs after `ready-to-show` rather than before first paint?"
+  anchor: "deferred until after `ready-to-show` (the auto-updater check, tray/global-shortcut registration, analytics, background sync, DB migrations)"
+  options:
+    - text: "Registering the IPC handlers"
+      correct: false
+      why: "That sits on the before-first-paint side, with acquiring the single-instance lock, creating and showing the window, and loading the packaged renderer."
+    - text: "The auto-updater check and DB migrations"
+      correct: true
+      why: "Both are on the deferred list — blocking app.whenReady() on slow work delays the very first thing the user sees."
+    - text: "Creating the main window"
+      correct: false
+      why: "It is the first thing the user sees. Deferring it defeats the purpose of the budget."
+
+- q: "You need an E2E test proving preload wiring and real IPC round-trips work. What do you reach for?"
+  anchor: "Spectron, the older Electron testing tool, is banned outright"
+  options:
+    - text: "Spectron — it is the purpose-built Electron testing tool"
+      correct: false
+      why: "Banned outright: deprecated since 2022 and broken on modern Electron versions."
+    - text: "Playwright's `_electron`, launching the real packaged build"
+      correct: true
+      why: "Not a dev server — the packaged build is what makes preload wiring, window configuration and real IPC round-trips the thing actually under test."
+    - text: "Vitest with `window.api` stubbed"
+      correct: false
+      why: "That is the wide base of the pyramid, and it deliberately does not exercise the process boundary an E2E test exists to prove."
+```
+
 ## Key Concepts
 - **Three distinct failure channels, never conflated**: expected/handled errors (`AppError` envelope, not a throw), unhandled JS exceptions (`uncaughtException`/`window.onerror`, logged and investigated), native/V8 crashes (`crashReporter` minidumps)
 - **A thrown error loses its shape across IPC** — handlers catch domain errors and return a `Result<T>` envelope; `userMessage` is user-facing and never contains a stack trace or internal path
@@ -129,3 +170,30 @@ test("launches and completes an IPC round-trip", async () => {
 - electron-log documentation: https://github.com/megahertz/electron-log
 - Electron — Performance: https://www.electronjs.org/docs/latest/tutorial/performance
 - Playwright — Electron Testing: https://playwright.dev/docs/api/class-electron
+
+```recall
+- q: "Name Electron's three failure channels and the right response to each."
+  must:
+    - "expected handled error — caught in the IPC handler, returned as a Result<T> envelope, not logged or reported as a crash"
+    - "unhandled JS exception — uncaughtException in main, window.onerror in the renderer, meaning a bug slipped past error handling"
+    - "native or V8 crash — the process actually died, captured as a crashReporter minidump"
+
+- q: "Why do renderer errors need a capture path of their own?"
+  must:
+    - "anything logged only in the renderer's DevTools console is lost the moment the window reloads"
+    - "a React error boundary's componentDidCatch and a window.onerror handler both forward through window.api.log.error(...)"
+    - "so the failure lands in main's persistent log instead of vanishing"
+
+- q: "Why electron-log rather than console.log, and what never goes through either?"
+  must:
+    - "console.log in a production build leaks to DevTools with no rotation and no durable file"
+    - "electron-log writes to the OS-correct per-user log directory with a size cap that prevents unbounded growth"
+    - "secrets, tokens and full PII are never logged by either path"
+
+- q: "Name the recurring sources of memory leaks in a long-running Electron app."
+  must:
+    - "IPC listeners never unsubscribed"
+    - "webContents.send calls to a window that has already been destroyed"
+    - "a tray icon or global shortcut never released on quit"
+    - "each has a specific narrow fix rather than a general watch-for-leaks instruction"
+```

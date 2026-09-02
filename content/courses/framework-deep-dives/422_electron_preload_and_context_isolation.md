@@ -7,6 +7,47 @@ Given `sandbox: true`, a preload script is far more constrained than a normal No
 
 The bridge's shape becomes the renderer's entire contract with the outside world, and that contract should be typed once and reused everywhere rather than re-declared. Exporting `type AppApi = typeof api` from the preload and declaring `declare global { interface Window { api: AppApi } }` in the renderer means `window.api.users.list(1)` is fully type-checked, and removing or renaming a channel surfaces as a compile error in every renderer file that used it — a refactor safety net that a loosely-typed `any` bridge would silently swallow. The last piece of the boundary is navigation: a locked-down preload is moot if the renderer can simply navigate itself (or open a new window) to an arbitrary remote origin, so the window factory denies `will-navigate` to anything outside the packaged app's own origin and routes `setWindowOpenHandler` to the OS browser via `shell.openExternal` rather than ever opening a second in-app window.
 
+```quiz
+- q: "A window sets `contextIsolation: true` and `sandbox: true`, but leaves `nodeIntegration: true`. How is that treated?"
+  anchor: "Any one of these being off is treated as a hard security failure, not a style preference"
+  options:
+    - text: "Acceptable — two of the three walls are still standing"
+      correct: false
+      why: "They are independent walls, and this is the one that puts require, process and Buffer back in the page — the most direct escalation path."
+    - text: "A hard security failure — the three are independent walls, not one combined setting"
+      correct: true
+      why: "A renderer showing hostile or compromised content with nodeIntegration: true is a straight line to remote code execution on the user's machine."
+    - text: "Fine, as long as the app only ever loads its own packaged content"
+      correct: false
+      why: "The navigation lockdown in the window factory exists precisely because \"only our own content\" is an assumption that fails."
+
+- q: "Your preload needs to read a file from disk. Under `sandbox: true`, what is the move?"
+  anchor: "delegates to main over `invoke`/`handle` instead of trying to work around the sandbox restriction"
+  options:
+    - text: "Require `fs` in the preload — preload runs in Node, so it has the access"
+      correct: false
+      why: "Under sandbox: true a preload can require electron and a small polyfilled subset, but not arbitrary Node modules like fs or path."
+    - text: "Delegate to main over invoke/handle"
+      correct: true
+      why: "Anything the preload cannot do under the sandbox goes to main, rather than the restriction being worked around."
+    - text: "Turn sandbox off for that one window"
+      correct: false
+      why: "That is the hard security failure again, traded for a file read that invoke/handle already covers."
+
+- q: "What does exporting `type AppApi = typeof api` from the preload actually buy you?"
+  anchor: "removing or renaming a channel surfaces as a compile error in every renderer file that used it"
+  options:
+    - text: "Runtime validation of every bridge call's arguments"
+      correct: false
+      why: "It is a type and is erased at runtime. The guarantee it provides is a compile-time one."
+    - text: "Renaming or removing a channel becomes a compile error everywhere it was used"
+      correct: true
+      why: "With `declare global { interface Window { api: AppApi } }`, window.api.users.list(1) is fully type-checked — a refactor safety net a loosely-typed any bridge would silently swallow."
+    - text: "Automatic generation of the matching handlers in main"
+      correct: false
+      why: "The type describes the bridge; it does not generate the other side of it."
+```
+
 ## Key Concepts
 - **Three independent walls, all mandatory**: `contextIsolation: true`, `sandbox: true`, `nodeIntegration: false` — losing any one is a security defect, not a style nit
 - **`webSecurity: true` stays on** — it enforces same-origin and CSP; disabling it to work around a loading issue reopens exactly the class of exploit the sandbox exists to prevent
@@ -104,3 +145,26 @@ const users = await window.api.users.list(1);
 - Electron — Context Isolation: https://www.electronjs.org/docs/latest/tutorial/context-isolation
 - Electron — Process Sandboxing: https://www.electronjs.org/docs/latest/tutorial/sandbox
 - Electron — `contextBridge` API: https://www.electronjs.org/docs/latest/api/context-bridge
+
+```recall
+- q: "Name the three webPreferences flags and what each one independently prevents."
+  must:
+    - "contextIsolation: true — page JS and preload in separate global contexts, so a compromised page cannot monkey-patch the bridge"
+    - "sandbox: true — the renderer runs in an OS-level sandbox, so a Chromium RCE bug does not hand over direct OS access"
+    - "nodeIntegration: false — keeps require, process and Buffer out of the page entirely"
+    - "any one of them being off is a hard security failure, not a style preference"
+
+- q: "What is a preload script allowed to be, and what must it never be?"
+  must:
+    - "a minimal, explicit, typed contextBridge.exposeInMainWorld call with named methods"
+    - "never a loop over channel names"
+    - "never a raw primitive"
+    - "never real business logic"
+
+- q: "Describe the navigation lockdown, and why a locked-down preload is moot without it."
+  must:
+    - "will-navigate is denied to anything outside the packaged app's own origin"
+    - "setWindowOpenHandler routes to the OS browser via shell.openExternal"
+    - "a second in-app window is never opened"
+    - "otherwise the renderer could navigate itself to an arbitrary remote origin"
+```
