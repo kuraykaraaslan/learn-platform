@@ -14,6 +14,21 @@ The comparison itself needs **total cost of ownership**, not just sticker price:
 - **Reversibility**: match the depth of the evaluation to how expensive the decision would be to undo later
 - **Vendor evaluation criteria**: SLA terms, pricing model at your projected scale (not just today's), support responsiveness, and portability — evaluated together, not SLA/price alone
 
+```tradeoff
+question: "Build it, or buy it?"
+sides:
+  - name: "Build"
+    wins_when:
+      - signal: "answer core-vs-context first: if this capability is part of what customers are actually paying you for, it is core"
+      - signal: "write the total cost of ownership down, including every hour of maintaining, patching and extending it forever after — not just the build"
+      - signal: "check the vendors' data portability story: if none of them can hand your data back in a usable format, lock-in here costs more than owning it"
+  - name: "Buy"
+    wins_when:
+      - signal: "the capability is context — necessary but generic, the kind every company like yours needs (payments, email deliverability, auth)"
+      - signal: "a vendor specialising in exactly this problem will out-invest what you could justify spending on it"
+      - signal: "score reversibility: a low-commitment trial is cheap to undo, and a cheap-to-undo decision deserves far less analysis than a build others will come to depend on"
+```
+
 ## Example Code
 ```typescript
 // Not code — the deliverable is a short, explicit comparison, the same way an ADR (#75) is.

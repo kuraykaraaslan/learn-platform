@@ -50,7 +50,7 @@
       "106_event_streaming_kafka_vs_bullmq.md": {
         "title": "ee4021291a9c139a",
         "whatItIs": "1eaa69ad2bbbb9e9",
-        "keyConcepts": "effa9eeafe357419",
+        "keyConcepts": "4d186e6251141484",
         "exampleCode": "14f9f6285e7834b1",
         "whenToUse": "a9e35639847d8441",
         "commonMistakes": "ce3a8df735bbf253",
@@ -1162,7 +1162,7 @@
       "244_feedback_triage_bug_vs_change_request.md": {
         "title": "f37011b1c4db85c8",
         "whatItIs": "05d77c25e6c1e947",
-        "keyConcepts": "80ba9c6111fe9f44",
+        "keyConcepts": "ad739d2db60b9e33",
         "exampleCode": "0cdce2c05c5260e3",
         "whenToUse": "ca7e20eec9ad178f",
         "commonMistakes": "37cdc4a0a528e3a9",
@@ -2742,7 +2742,7 @@
       "23_react_server_components.md": {
         "title": "5accfc574e9d8a9c",
         "whatItIs": "24fdd4df18628c83",
-        "keyConcepts": "19bc20571d1f4e61",
+        "keyConcepts": "f5615075fa916762",
         "exampleCode": "4fb0d7dfb471b1dd",
         "whenToUse": "dcd352656c7a702b",
         "commonMistakes": "7760a39ce887b3e1",
@@ -3328,7 +3328,7 @@
       "145_build_vs_buy_vendor_evaluation.md": {
         "title": "84b8a3bc01071a96",
         "whatItIs": "7f68bd30d5c02ff7",
-        "keyConcepts": "264fd7372ec906bf",
+        "keyConcepts": "9f5c41626da78998",
         "exampleCode": "f85045372c772d04",
         "whenToUse": "a4d9281d669989ac",
         "commonMistakes": "339456f6edaf1e9d",
@@ -3730,7 +3730,7 @@
       "39_rbac_vs_abac.md": {
         "title": "052d7f635db06677",
         "whatItIs": "46feea869d59eb01",
-        "keyConcepts": "4fa41570d523fa34",
+        "keyConcepts": "696286a6b74ddaaf",
         "exampleCode": "2305686a7bc38d70",
         "whenToUse": "5bf937a4ebd72f2d",
         "commonMistakes": "32a672e84e1fcbc6",

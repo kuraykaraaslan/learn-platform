@@ -17,6 +17,21 @@ For most solo SaaS products under 100K events/day, BullMQ is the right choice. K
 - **Exactly-once semantics**: Kafka supports it with transactions + idempotent producers. Complex to implement, required for financial operations.
 - **Event replay**: Reprocessing historical events. Impossible in BullMQ, trivial in Kafka (reset consumer group offset).
 
+```tradeoff
+question: "Job queue, or event log?"
+sides:
+  - name: "BullMQ (job queue)"
+    wins_when:
+      - signal: "count the events per day: under roughly 100K, the operational cost of brokers, KRaft and consumer-group management buys nothing"
+      - signal: "write down who consumes each event — if the answer is one worker, then processed-and-gone is the whole requirement"
+      - signal: "you cannot name a replay you have actually needed; a hypothetical replay is not yet a requirement"
+  - name: "Kafka (event log)"
+    wins_when:
+      - signal: "name a concrete replay: reprocessing orders after a bug fix, rebuilding a read model, auditing what happened"
+      - signal: "list the services reading the same stream — more than one independent consumer is what a job queue cannot serve"
+      - signal: "a consumer that does not exist yet has to be able to read events published today, from any point in history"
+```
+
 ## Example Code
 
 ```typescript

@@ -17,6 +17,21 @@ RBAC inside each tenant plus RBAC at the system level is the right level of abst
 - **Principle of least privilege** — Assign the minimum role required; avoid creating "super roles" that span multiple unrelated permissions
 - **Policy enforcement point (PEP)** — Where the authorization check happens; in your codebase, this is your service layer and route wrappers
 
+```tradeoff
+question: "More granular roles, or a policy engine?"
+sides:
+  - name: "Stay on RBAC"
+    wins_when:
+      - signal: "write the requested rule down: if a more granular role or an explicit ownership check satisfies it, you have not reached RBAC's limit yet"
+      - signal: "you can still answer \"what can an ADMIN do?\" by reading the role table — that auditability is the thing being protected"
+      - signal: "count the rounds of ABAC-shaped requests so far: the first two can usually be absorbed without a policy engine"
+  - name: "Move to ABAC"
+    wins_when:
+      - signal: "the rule genuinely needs subject, resource, action and environment together — department match AND business hours AND a confidentiality flag"
+      - signal: "granular roles have already been tried, and the role table is now carrying per-resource exceptions"
+      - signal: "you accept what it costs: policies that are harder to reason about, harder to audit and harder to debug than role assignments"
+```
+
 ## Example Code
 ```typescript
 // Role-based access control — a solid foundation

@@ -17,6 +17,21 @@ The subtlest and most impactful optimization is **client component boundary plac
 - **`"use server"` (Server Actions)**: Functions that run on the server but can be called from Client Components — replaces API routes for form submissions and mutations
 - **Bundle analysis**: Server Components have zero bundle cost; every Client Component import adds to the JS delivered to the browser
 
+```tradeoff
+question: "Server Component, or Client Component?"
+sides:
+  - name: "Server Component"
+    wins_when:
+      - signal: "list what it actually does: reading the database, formatting data, rendering a table — every item is a server concern"
+      - signal: "it needs no useState, no useEffect, no browser API and no event handler"
+      - signal: "it imports a heavy server-only library you would otherwise be shipping into the user's browser"
+  - name: "Client Component"
+    wins_when:
+      - signal: "it responds to user interaction — that is what makes something a client concern"
+      - signal: "draw the boundary at the leaf that needs it, a LikeButton or a FilterDropdown; a \"use client\" at page level converts the entire subtree"
+      - signal: "measure what the boundary costs: everything below it ships to the browser, so where you place it is the number that matters"
+```
+
 ## Example Code
 ```tsx
 // ─── 1. Correct client boundary placement ───

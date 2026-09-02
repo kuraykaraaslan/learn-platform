@@ -45,6 +45,20 @@ Feedback also arrives scattered — a chat message here, a call there, a screens
 - **Small changes still get named**: a free small fix is logged explicitly as "one-time goodwill, not a scope precedent" — otherwise it quietly becomes the expected free service level
 - **Feedback rounds are bounded**: define up front how many structured review rounds a milestone includes, so "just one more thing" has a visible edge
 
+```tradeoff
+question: "Bug, or change request?"
+sides:
+  - name: "Bug"
+    wins_when:
+      - signal: "point at the agreed, delivered scope and read the behaviour it specifies — the export throws an error where the scope says it exports"
+      - signal: "the failure is in something explicitly required, not in something nobody wrote down"
+  - name: "Change request"
+    wins_when:
+      - signal: "the feature works as scoped, and the request modifies or adds a requirement — the export works, in a format that was never agreed"
+      - signal: "you searched the agreed scope for something this fails against and found nothing, whatever the client called it"
+      - signal: "rule out the three near neighbours first: an enhancement improves something already correct, a configuration issue is wrong settings or accounts, a training issue is a user who does not know how"
+```
+
 ## Example Code
 ```template
 ## Feedback Triage — Milestone 2 Review
