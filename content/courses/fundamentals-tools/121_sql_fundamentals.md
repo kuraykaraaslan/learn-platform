@@ -45,7 +45,7 @@ NULL deserves special attention: it means "unknown," not "empty" or "zero," and 
 - **Transactions**: `BEGIN` / `COMMIT` / `ROLLBACK` — a unit of work that's all-or-nothing
 
 ## Example Code
-```sql
+```sql run seed=customers_orders
 -- Customers who placed more than 2 orders in the last 30 days, with their total spend
 SELECT c.id, c.name, COUNT(o.id) AS order_count, SUM(o.total_cents) AS total_spent
 FROM customers c
@@ -55,6 +55,12 @@ GROUP BY c.id, c.name
 HAVING COUNT(o.id) > 2
 ORDER BY total_spent DESC;
 ```
+
+Five of the eight seeded customers come back. The interesting one is the
+customer who does *not*: they have three orders, which clears `HAVING`, but all
+three are older than thirty days, so `WHERE` removes them before the grouping
+ever happens. Drop the `WHERE` line and watch them appear — that is the order
+of operations the two clauses are easy to confuse.
 
 ```typescript
 // The equivalent Prisma query — useful to recognize what SQL it will generate
