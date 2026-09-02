@@ -7,6 +7,47 @@ The core principle is binary search applied to causality: every step you take sh
 
 For a solo operator running a multi-tenant SaaS, production debugging is a single-player game under live pressure. A documented methodology is what separates a 20-minute resolution from a 4-hour panic. You already have the logging infrastructure. This is about using it with discipline.
 
+```quiz
+- q: "You restart the service to see whether the problem clears. Under this lesson's principle, what did you just do?"
+  anchor: "If you take an action that doesn't reduce the hypothesis space, you're not debugging — you're guessing"
+  options:
+    - text: "A reasonable first mitigation while hypotheses are still forming"
+      correct: false
+      why: "It may mitigate, but it eliminates nothing — and the lesson is explicit about what an action that eliminates nothing is."
+    - text: "Guessed — the action eliminated no hypotheses"
+      correct: true
+      why: "Every diagnostic action should eliminate at least half the remaining hypothesis space."
+    - text: "Halved the space, since it rules out state corruption"
+      correct: false
+      why: "It hides state corruption rather than ruling it out. The evidence is destroyed, not gathered."
+
+- q: "What is always the first question in a production incident?"
+  anchor: "\"What changed?\" is always the first question"
+  options:
+    - text: "Who is affected, and how badly?"
+      correct: false
+      why: "Blast radius assessment matters and comes before touching anything, but it is not the first diagnostic question."
+    - text: "What changed?"
+      correct: true
+      why: "The vast majority of incidents come from something that changed — a deploy, a config update, a traffic spike, a third-party change, a certificate expiry, a cron job running for the first time."
+    - text: "Can we reproduce it locally?"
+      correct: false
+      why: "Production debugging starts from the premise that you cannot reproduce the exact state."
+
+- q: "How is a stack trace read?"
+  anchor: "The bottom of a stack trace is where execution started; the top is where it crashed"
+  options:
+    - text: "Top down — the first line names the failing call"
+      correct: false
+      why: "The top is where it crashed, which is frequently inside a library."
+    - text: "Backwards, with the actionable code usually in the middle, just before the framework frames"
+      correct: true
+      why: "Bottom is where execution started; top is where it crashed; your code is between them."
+    - text: "Only the bottom matters — that is your own code"
+      correct: false
+      why: "The bottom is where execution started. The actionable frame is usually between the two ends."
+```
+
 ## Key Concepts
 - **Binary search principle** — Every diagnostic action should eliminate at least half the remaining hypothesis space. Random poking does not count as debugging.
 - **"What changed?" is always the first question** — The vast majority of production incidents are caused by something that changed: a deploy, a config update, a traffic spike, a 3rd-party API change, a certificate expiry, a cron job that ran for the first time.
@@ -104,3 +145,29 @@ Rule: Find the first frame that is YOUR code. That is where to start.
 - *Site Reliability Engineering* — Google (chapters on incident management and postmortems; free online at sre.google/books)
 - *Debugging: The 9 Indispensable Rules for Finding Even the Most Elusive Software and Hardware Problems* — David Agans
 - [Winston](https://github.com/winstonjs/winston) — structured logging and correlation IDs; the transports section is the part that matters in production
+
+```recall
+- q: "State the binary search principle and its corollary."
+  must:
+    - "every diagnostic action should eliminate at least half the remaining hypothesis space"
+    - "an action that does not reduce the hypothesis space is guessing, not debugging"
+
+- q: "Give the diagnostic loop, and name the step people skip."
+  must:
+    - "form a specific, falsifiable hypothesis"
+    - "design a test that would prove it wrong"
+    - "run the test"
+    - "eliminate or confirm — never skip the eliminate step"
+
+- q: "What has to happen before you touch anything in production?"
+  must:
+    - "blast radius assessment — how many tenants or users are affected"
+    - "total outage or partial, getting worse or stable"
+    - "know how to revert your change before you make it"
+
+- q: "What makes a failing request reconstructible from logs?"
+  must:
+    - "a correlation ID carried by every request, flowing through all log entries"
+    - "timeline reconstruction — a chronological sequence built before forming hypotheses"
+    - "pattern recognition only works once you have the full picture"
+```

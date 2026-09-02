@@ -9,6 +9,47 @@ Most codebases already have one of these without naming it. A payment module whe
 
 The payoff is testability and interchangeability: you can run your entire domain logic without a database, without Redis, without a payment processor. Tests become instant and deterministic.
 
+```quiz
+- q: "Your core imports `TypeORMUserRepository` so it can query users. Which rule did that break?"
+  anchor: "dependencies only point inward; the core never imports adapters"
+  options:
+    - text: "None — the repository sits behind an interface anyway"
+      correct: false
+      why: "Importing the concrete adapter is the violation whether or not an interface exists. The direction of the dependency is the rule."
+    - text: "The Dependency Rule — the core never imports adapters"
+      correct: true
+      why: "The core depends on a Driven Port; the secondary adapter implements it and gets wired in elsewhere."
+    - text: "The Composition Root rule — wiring belongs at startup"
+      correct: false
+      why: "Related, but the composition root is where wiring is allowed. The violation here is the core importing outward at all."
+
+- q: "An HTTP route handler, and a `StripeProvider`. Which is which?"
+  anchor: "how the outside world talks to your domain — HTTP handlers, CLI commands, test fixtures"
+  options:
+    - text: "Both are primary adapters — both are external systems"
+      correct: false
+      why: "Being external is not the distinction. The direction of the call is."
+    - text: "The route handler is a primary adapter calling a Driving Port; StripeProvider is a secondary adapter implementing a Driven Port"
+      correct: true
+      why: "Driving is how the outside world talks to your domain; driven is what your domain needs from the outside."
+    - text: "The route handler is a Driving Port and StripeProvider is a Driven Port"
+      correct: false
+      why: "Both are adapters, not ports. A port is the interface; an adapter is the implementation on one side of it."
+
+- q: "Which file is allowed to import both a Port and its concrete Adapter?"
+  anchor: "the one place (app startup) where you wire Ports to Adapters; the only place that imports both"
+  options:
+    - text: "Any file in the infrastructure layer"
+      correct: false
+      why: "The composition root is one place, not a layer."
+    - text: "The composition root, at app startup"
+      correct: true
+      why: "It is defined as the only place that imports both."
+    - text: "The core, since it is what needs the dependency"
+      correct: false
+      why: "The core is precisely the one place that must never import an adapter."
+```
+
 ## Key Concepts
 - **Hexagon / Application Core** — pure domain and use-case logic; zero imports of infrastructure libraries
 - **Driving Port** — interface that the outside world calls into (e.g., `IAuthUseCase` called by an HTTP handler)
@@ -173,3 +214,23 @@ export const authUseCase: IAuthUseCase = new AuthUseCase(userRepo, emailSvc, pas
 - Alistair Cockburn — Hexagonal Architecture (original article): https://alistair.cockburn.us/hexagonal-architecture/
 - Khalil Stemmler — "Clean Architecture in TypeScript": https://khalilstemmler.com/articles/enterprise-typescript-nodejs/clean-nodejs-architecture/
 - Netflix Tech Blog — Hexagonal Architecture at scale: https://netflixtechblog.com/ready-for-changes-with-hexagonal-architecture-b315ec967749
+
+```recall
+- q: "Distinguish Driving from Driven Ports, with examples of each."
+  must:
+    - "Driving — how the outside world talks to your domain: HTTP handlers, CLI commands, test fixtures"
+    - "Driven — what your domain needs from the outside: repositories, payment gateways, email senders"
+    - "each Driven Port has at least one production adapter and one test adapter"
+
+- q: "State the Dependency Rule, and what the core is allowed to know about."
+  must:
+    - "dependencies only point inward"
+    - "the core never imports adapters"
+    - "the core knows nothing about Stripe, PostgreSQL, Redis or Next.js"
+    - "it knows only Ports — abstract interfaces for what it needs and what it produces"
+
+- q: "What is the composition root, and why is it singular?"
+  must:
+    - "the one place, at app startup, where Ports are wired to Adapters"
+    - "the only place that imports both"
+```

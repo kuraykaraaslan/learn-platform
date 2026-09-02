@@ -7,6 +7,47 @@ The problems emerge at scale and across features. First: unique constraints. If 
 
 The alternatives are not "don't soft delete" but "use soft delete deliberately with its implications understood." For compliance, implement a real deletion pipeline that anonymizes or hard-deletes records after a retention period. For unique constraints, use partial indexes. For query reliability, enforce the `deleted_at IS NULL` filter at the ORM model layer, not at the individual query level.
 
+```quiz
+- q: "A user deletes their account, then re-registers with the same email. The insert fails. Why?"
+  anchor: "your unique index on `(email)` will conflict with the soft-deleted row"
+  options:
+    - text: "The application is still holding the old session"
+      correct: false
+      why: "The conflict is at the database level — the soft-deleted row is still a row."
+    - text: "The unique index on email still sees the soft-deleted row"
+      correct: true
+      why: "The fix is a partial unique index: UNIQUE (email) WHERE deleted_at IS NULL."
+    - text: "The ORM's global query scope is filtering the insert"
+      correct: false
+      why: "The global scope filters reads. It is the constraint that rejects this write."
+
+- q: "A user exercises their right to erasure and you soft-delete the record. Is that compliant?"
+  anchor: "\"Soft deleted\" is not \"erased.\""
+  options:
+    - text: "Yes — the record is no longer visible to the application"
+      correct: false
+      why: "Visibility is not erasure. The soft-deleted row still holds their PII."
+    - text: "No — the row still contains their PII, and soft deleted is not erased"
+      correct: true
+      why: "Anonymization is the pattern that reconciles the two: replace PII with placeholders so the row survives for referential integrity while carrying no personal data."
+    - text: "Yes, as long as the row is excluded from backups"
+      correct: false
+      why: "The live row's contents are the problem, not only the backups."
+
+- q: "What does soft delete conflate, and what does that cost?"
+  anchor: "conflating two distinct states — \"this record exists\" and \"this record has been logically removed\" — in a single table"
+  options:
+    - text: "Read and write paths, which is why it needs a global query scope"
+      correct: false
+      why: "The global scope is a consequence of the conflation, not the conflation itself."
+    - text: "\"This record exists\" and \"this record has been logically removed\", in one table"
+      correct: true
+      why: "Which is why every query for active records needs WHERE deleted_at IS NULL — and you will forget it somewhere eventually."
+    - text: "Current and historical data, which is what the archive table fixes"
+      correct: false
+      why: "An archive table is one alternative, but the conflation named here is between two states, not two time periods."
+```
+
 ## Key Concepts
 - **Soft delete** — `deletedAt TIMESTAMP NULL` column; `NULL` = active, non-null = deleted; queries filter on `WHERE deletedAt IS NULL`
 - **Partial unique index** — `CREATE UNIQUE INDEX ON users (email) WHERE deleted_at IS NULL` — allows the same email on a soft-deleted row and an active row simultaneously
@@ -143,3 +184,28 @@ export class UserArchiveService {
 - [TypeORM Soft Delete documentation](https://typeorm.io/soft-delete)
 - [Partial indexes in PostgreSQL for soft deletes](https://www.postgresql.org/docs/current/indexes-partial.html)
 - [GDPR and the right to erasure in a soft-delete world](https://gdpr.eu/right-to-be-forgotten/)
+
+```recall
+- q: "Name the three problems soft delete creates at scale."
+  must:
+    - "unique constraints — a soft-deleted row still conflicts, so you need a partial unique index"
+    - "query correctness — every active-record query needs WHERE deleted_at IS NULL, and you will forget it somewhere"
+    - "GDPR/KVKK — soft-deleted records still contain PII, and soft deleted is not erased"
+
+- q: "Give the partial unique index, and say what it buys."
+  must:
+    - "CREATE UNIQUE INDEX ON users (email) WHERE deleted_at IS NULL"
+    - "it lets the same email exist on a soft-deleted row and an active row at once"
+
+- q: "Name two alternatives to plain soft delete."
+  must:
+    - "hard delete with an archive table — DELETE from the main table, INSERT into archive_users"
+    - "the main table stays lean while history is preserved separately"
+    - "anonymization — replace PII fields with [deleted] placeholders"
+    - "the row survives for referential integrity but holds no personal data"
+
+- q: "What has to be decided explicitly about cascade behaviour?"
+  must:
+    - "whether a soft-deleted user's sessions, audit logs and tenant memberships are also soft-deleted"
+    - "the answer has to be defined and enforced, not left implicit"
+```

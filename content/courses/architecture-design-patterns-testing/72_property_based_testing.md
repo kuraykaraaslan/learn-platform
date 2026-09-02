@@ -9,6 +9,47 @@ The canonical example: instead of testing `sort([3,1,2]) === [1,2,3]`, you test 
 
 In a typical TypeScript backend, property-based testing earns its keep in three places: schema validation (does the schema accept exactly what it should and reject everything else?), password hashing (does `verify(hash(x), x)` hold for all `x`?), and tenant isolation (can a query scoped to tenant A ever return a row belonging to tenant B?). The common thread is that each has an invariant you can state in one sentence but could never enumerate as examples.
 
+```quiz
+- q: "What weakness of example-based testing does property-based testing address?"
+  anchor: "you only test the cases you think of"
+  options:
+    - text: "It is slower to write than generated tests"
+      correct: false
+      why: "Authoring speed is not the argument anywhere in this lesson."
+    - text: "You only test the cases you think of — an empty string, null, a very large number, a surrogate pair go untested"
+      correct: true
+      why: "Properties are stated over all valid inputs instead, and the framework generates them."
+    - text: "Assertions on specific outputs get brittle when the implementation changes"
+      correct: false
+      why: "A real concern in general, but not the one raised here."
+
+- q: "fast-check finds a failing 10-word string. What does it hand back?"
+  anchor: "the framework automatically reduces it to the smallest input that still fails"
+  options:
+    - text: "The 10-word string, plus the seed to reproduce it"
+      correct: false
+      why: "You do get a reproduction, but shrinking goes further than that."
+    - text: "The minimal failing example — shrunk to the exact 2-character sequence that causes the bug"
+      correct: true
+      why: "That reduction is what makes a random failure actionable."
+    - text: "A count of how many generated inputs failed"
+      correct: false
+      why: "A count does not tell you where the bug is."
+
+- q: "You reach for `fc.pre` to filter out inputs that fail a precondition. What is the caution?"
+  anchor: "use sparingly as it reduces effective sample size"
+  options:
+    - text: "It slows the run in proportion to how much gets filtered"
+      correct: false
+      why: "The cost named here is statistical, not temporal."
+    - text: "It reduces the effective sample size, so use it sparingly"
+      correct: true
+      why: "Filtered-out inputs consume generation budget without exercising the property."
+    - text: "It disables shrinking on the property it guards"
+      correct: false
+      why: "Shrinking is unaffected — what changes is how many inputs actually test anything."
+```
+
 ## Key Concepts
 - **Property** — an invariant that must hold for all valid inputs; expressed as a function that returns `true` or throws
 - **Arbitrary** — fast-check's term for a generator that produces random values of a specific type
@@ -155,3 +196,23 @@ describe('base64 encoding round-trip', () => {
 - fast-check documentation: https://fast-check.dev/
 - fast-check — model-based testing guide: https://fast-check.dev/docs/advanced/model-based-testing/
 - "Property-Based Testing with PropEr, Erlang, and Elixir" — Fred Hebert (the canonical deep dive, language-agnostic concepts)
+
+```recall
+- q: "Contrast example-based with property-based testing."
+  must:
+    - "example-based: you pick specific inputs, compute the expected output, write the assertion"
+    - "its weakness is that you only test the cases you think of"
+    - "property-based: describe invariants that must hold for all valid inputs"
+    - "the framework generates hundreds or thousands of random inputs automatically"
+
+- q: "Define property, arbitrary, and shrinking."
+  must:
+    - "property — an invariant holding for all valid inputs, written as a function that returns true or throws"
+    - "arbitrary — a generator producing random values of a specific type"
+    - "shrinking — reducing a failing input to the smallest one that still fails"
+
+- q: "Name the two styles that go beyond a single-call property."
+  must:
+    - "stateful property testing — generate random sequences of operations and verify invariants after each step"
+    - "model-based testing — run the same operations against the real implementation and a simple reference, and verify they agree"
+```

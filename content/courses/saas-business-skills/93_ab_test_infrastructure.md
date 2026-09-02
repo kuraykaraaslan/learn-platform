@@ -7,6 +7,47 @@ The statistical foundation of A/B testing is hypothesis testing. You define a nu
 
 The most common mistake in A/B testing is declaring a winner before sufficient sample size is reached — a practice called "peeking." If you run a test and check results daily, the p-value fluctuates randomly and will cross 0.05 by chance even when there is no real effect. The solution is to calculate the required sample size before starting the test (based on expected baseline conversion rate, minimum detectable effect, and desired power), and commit to running the test until that sample size is reached, regardless of intermediate results.
 
+```quiz
+- q: "Your test crosses p < 0.05 on day 3, well short of the target sample size. Can you call it?"
+  anchor: "Checking results before the target sample size is reached inflates false-positive rates"
+  options:
+    - text: "Yes — the threshold is the threshold"
+      correct: false
+      why: "The threshold assumes a stopping rule fixed in advance. Peeking inflates exactly the error rate that threshold was chosen to control."
+    - text: "No — that is the peeking problem, and the stopping rule had to be committed to before the test started"
+      correct: true
+      why: "The rule exists precisely because an early crossing is the tempting case."
+    - text: "Yes, provided the effect is also practically significant"
+      correct: false
+      why: "Practical significance is a separate question, and it does not repair a p-value obtained by peeking."
+
+- q: "A result comes back statistically significant. What has that established?"
+  anchor: "does not mean \"large enough to matter\" — it means \"unlikely to be due to random variation"
+  options:
+    - text: "The improvement is big enough to justify shipping"
+      correct: false
+      why: "That is practical significance — a separate evaluation of whether the improvement is worth the implementation cost."
+    - text: "The difference is unlikely to be due to random variation"
+      correct: true
+      why: "Nothing more, and in particular nothing about the size of the effect."
+    - text: "The variant will perform the same way for all future users"
+      correct: false
+      why: "Significance is a statement about the evidence in this sample, not a forecast guarantee."
+
+- q: "You are testing a subscription upgrade flow in a multi-tenant product. What is the randomization unit?"
+  anchor: "for subscription upgrades, randomize by tenant (not by user within a tenant)"
+  options:
+    - text: "Users — they are the ones who click"
+      correct: false
+      why: "Users inside one tenant share the decision, so randomizing below the conversion event's level contaminates both arms."
+    - text: "Tenants — the unit that matches the conversion event"
+      correct: true
+      why: "The rule is to choose the unit that matches the conversion event."
+    - text: "Sessions, so returning users give a fresh sample each visit"
+      correct: false
+      why: "Assignment has to be stable — a user stays in their group for the duration of the test."
+```
+
 ## Key Concepts
 - **Control and variant**: The control is the current version (A); the variant is the new version (B); users are randomly assigned to one group and stay in that group for the duration of the test
 - **Randomization unit**: Users, tenants, or sessions — choose the unit that matches the conversion event; for subscription upgrades, randomize by tenant (not by user within a tenant)
@@ -170,3 +211,31 @@ const results = calculateSignificance({
 - **"Trustworthy Online Controlled Experiments" — Kohavi, Tang, Xu** — The definitive textbook on A/B testing at scale, written by Microsoft and Google experimentation teams; the chapters on the peeking problem and sample ratio mismatch are essential
 - [**"Statistical Significance and the Peeking Problem" — Evan Miller](https://evanmiller.org)** — The most readable explanation of why peeking inflates false-positive rates; includes an interactive visualization; free to read online
 - [**PostHog Experiments Documentation](https://posthog.com/docs/experiments)** — End-to-end guide to running A/B tests with PostHog; covers feature flag setup, result analysis, and the statistical method PostHog uses internally
+
+```recall
+- q: "Define MDE and statistical power, and say what each one controls."
+  must:
+    - "MDE — the smallest improvement you care about detecting, set from business value"
+    - "a 0.5% improvement needs thousands of samples; a 5% improvement far fewer"
+    - "power — the probability the test detects an effect if one exists, standard target 80%"
+    - "lower power means a high false-negative rate, missing real improvements"
+
+- q: "What is a p-value, and what does significance not tell you?"
+  must:
+    - "the probability the observed difference occurred by chance under the null hypothesis"
+    - "p < 0.05 is the standard threshold"
+    - "significance does not mean large enough to matter — only unlikely to be random"
+    - "practical significance is evaluated separately, against implementation cost"
+
+- q: "State the peeking problem and its remedy."
+  must:
+    - "checking results before the target sample size is reached inflates false-positive rates"
+    - "commit to a stopping rule before the test starts"
+
+- q: "How is randomization set up?"
+  must:
+    - "control is the current version, variant is the new one"
+    - "users are randomly assigned and stay in their group for the duration of the test"
+    - "choose the randomization unit to match the conversion event — tenant for a subscription upgrade"
+    - "run experiments through feature flag infrastructure rather than ad-hoc if/else checks"
+```

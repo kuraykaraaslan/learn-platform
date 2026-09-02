@@ -94,12 +94,12 @@
       },
       "111_production_debugging.md": {
         "title": "0757a7590e858458",
-        "whatItIs": "c7265286147ebf4b",
+        "whatItIs": "60ccf7a2d0993520",
         "keyConcepts": "112584d99a4f7a64",
         "exampleCode": "a25b208c614a4de0",
         "whenToUse": "82e77a95d10fc979",
         "commonMistakes": "238bb0ee291f315d",
-        "furtherReading": "030153010973f96e"
+        "furtherReading": "b71b512ebfd66af8"
       },
       "112_technical_writing.md": {
         "title": "6342a8255b04d011",
@@ -343,12 +343,12 @@
       },
       "65_hexagonal_architecture.md": {
         "title": "6674c1db0943744c",
-        "whatItIs": "c6995695969e2334",
+        "whatItIs": "6f405108a4cd1499",
         "keyConcepts": "2840abe2f1ff965a",
         "exampleCode": "0b03e37ad5f8934b",
         "whenToUse": "6d78f2377cd7871e",
         "commonMistakes": "2aa88dceeefa20f2",
-        "furtherReading": "948074a3f573a769"
+        "furtherReading": "cb2a7a4ea343f29d"
       },
       "66_dependency_injection_container.md": {
         "title": "6ccbba8202cdfa0c",
@@ -406,12 +406,12 @@
       },
       "72_property_based_testing.md": {
         "title": "056f27aea12f20ca",
-        "whatItIs": "7d11222c01bfa144",
+        "whatItIs": "f9c1ab2513a23146",
         "keyConcepts": "16543b3d4582b4e5",
         "exampleCode": "138fbd7cff85f4ca",
         "whenToUse": "43a6e18e96d8a67b",
         "commonMistakes": "081db722d164948a",
-        "furtherReading": "5f13f7588d73d4ed"
+        "furtherReading": "228db211052bb511"
       },
       "73_contract_testing_pact.md": {
         "title": "a781cdde6630fcfc",
@@ -2112,12 +2112,12 @@
       },
       "44_soft_delete_pattern_problems_alternatives.md": {
         "title": "368eed3f6493dd39",
-        "whatItIs": "c27b7cc278e3886d",
+        "whatItIs": "df1b3baf915dbf6c",
         "keyConcepts": "00345e7702ac887e",
         "exampleCode": "a5b4bddcf468a394",
         "whenToUse": "d38d697dd3e11a73",
         "commonMistakes": "270e8ff983671252",
-        "furtherReading": "5fed0c96a7d04eea"
+        "furtherReading": "c526c7ae7f497697"
       },
       "45_time_series_data_timescaledb_partitioning.md": {
         "title": "f0a50b67c51883fc",
@@ -3628,12 +3628,12 @@
       },
       "93_ab_test_infrastructure.md": {
         "title": "8941a6d9009f7510",
-        "whatItIs": "7a929134c9ad0f54",
+        "whatItIs": "03ea91418db57a4d",
         "keyConcepts": "a282b3d3b8c29436",
         "exampleCode": "533f150faf82e074",
         "whenToUse": "92f2b227407dccad",
         "commonMistakes": "86a5aeb91bbd553b",
-        "furtherReading": "f904eaf33ab753da"
+        "furtherReading": "05449a9eabf987e4"
       }
     },
     "security": {
