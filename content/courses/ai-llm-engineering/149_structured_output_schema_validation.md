@@ -7,6 +7,47 @@ Zod is the natural fit here because it gives you both a runtime validator and a 
 
 The failure mode that separates production-grade structured output handling from a demo is what happens when validation fails. A demo just crashes or shows an error. Production code retries once with an explicit correction ("your previous response was not valid JSON, output ONLY the JSON object"), because models are good at self-correcting when told exactly what went wrong, and only falls back to a hard failure after that retry also fails. This buys real reliability without resorting to something heavier like full tool-use machinery for cases where a simple structured-JSON contract is all that's needed.
 
+```quiz
+- q: "Zod validation fails on the model's output. What does production code do that a demo does not?"
+  anchor: "retries once with an explicit correction"
+  options:
+    - text: "Falls back immediately — the contract was broken, so stop trusting it"
+      correct: false
+      why: "That is the demo behaviour under a nicer name. The fallback comes only after the retry has also failed."
+    - text: "Retries once with an explicit correction, and falls back only if that also fails"
+      correct: true
+      why: "Models are good at self-correcting when told exactly what went wrong."
+    - text: "Retries at a higher temperature until the JSON parses"
+      correct: false
+      why: "The retry is bounded to one and its correction has to name what was wrong — not repeated attempts hoping for a different roll."
+
+- q: "Why Zod specifically, rather than a hand-written shape check?"
+  anchor: "it gives you both a runtime validator and a static TypeScript type from the same definition"
+  options:
+    - text: "It validates faster than manual property checks"
+      correct: false
+      why: "Speed is not the argument anywhere in this lesson."
+    - text: "One definition yields both the runtime validator and the static type, so the shape you ask for and the shape you consume are provably the same"
+      correct: true
+      why: "That equivalence is the whole reason it is the natural fit here."
+    - text: "It can repair malformed JSON automatically"
+      correct: false
+      why: "It validates; it does not repair. Repair is what the correction retry is for."
+
+- q: "The model wraps its JSON in a markdown fence despite being told not to. Where is that handled?"
+  anchor: "`JSON.parse` on model output can throw if the model wrapped the JSON in prose despite instructions"
+  options:
+    - text: "Nowhere — the system prompt forbids fences, so it will not happen"
+      correct: false
+      why: "Never trust that the model followed the instruction. That is the second of the two disciplines."
+    - text: "In a defensive tryParseJSON before safeParse, because JSON.parse can throw"
+      correct: true
+      why: "Instructing precisely and validating defensively only work as a pair."
+    - text: "In the Zod schema, by allowing a fenced variant of the object"
+      correct: false
+      why: "Widening the schema to accept malformed output weakens the contract rather than making parsing safer."
+```
+
 ## Key Concepts
 - **Instruct + validate, always both**: telling the model the schema is necessary but never sufficient; every response must be parsed and validated before use
 - **Zod as the single source of truth**: define the schema once, get both a runtime validator and a static TypeScript type from it
@@ -86,3 +127,24 @@ export async function classifyTicket(text: string): Promise<Classification> {
 - Anthropic — "Increase output consistency with JSON output" (prompt engineering docs)
 - [Tool use overview](https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview) — for when structured output should become an actual function call instead
 - [Structured outputs](https://platform.claude.com/docs/en/build-with-claude/structured-outputs) — constraining the response format at the API level rather than validating after the fact
+
+```recall
+- q: "Name the two disciplines that have to work together, and what each involves."
+  must:
+    - "instructing precisely — give the exact schema in the system prompt"
+    - "explicitly forbid markdown fences or explanatory preamble around the JSON"
+    - "validating defensively — never trust that the model followed the instruction"
+    - "parse the output and run it through a schema validator before your code touches it"
+
+- q: "What is the standard parsing shape, and why is it two steps?"
+  must:
+    - "a defensive tryParseJSON first, because JSON.parse can throw on prose-wrapped output"
+    - "then a Zod safeParse on the result"
+
+- q: "Describe the validation-failure path in full."
+  must:
+    - "retry once with an explicit correction naming what went wrong"
+    - "\"your previous response was not valid JSON, output ONLY the JSON object\""
+    - "hard failure only after that retry also fails"
+    - "no need for heavier tool-use machinery when a structured-JSON contract is all that is needed"
+```

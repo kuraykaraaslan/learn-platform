@@ -7,6 +7,47 @@ The SDK already implements exponential backoff retry for the genuinely transient
 
 A good fallback degrades usefully rather than failing outright: a summary feature that can't reach the API can return a truncated version of the original text with a `source: 'fallback'` flag, letting the UI show something useful while being honest that it isn't AI-generated. This same discipline extends to output validation failures — when the model returns malformed JSON, the correct response isn't an immediate hard failure, it's one retry with an explicit correction message, and only a fallback after that retry also fails (see the Structured Output lesson for the retry pattern in detail). Throughout all of this, raw SDK error messages must never reach the end user — they can leak implementation details and are rarely actionable for a non-technical audience — so every failure path routes through a small set of standard, user-facing messages.
 
+```quiz
+- q: "Which of these should never be retried?"
+  anchor: "content-filtered refusals should surface a specific message and never be retried"
+  options:
+    - text: "A 429 rate limit"
+      correct: false
+      why: "Retry after the specified delay — that is exactly what a 429 tells you to do."
+    - text: "A content-filtered refusal"
+      correct: true
+      why: "Retrying does not change whether the model considers the request policy-violating."
+    - text: "A 529 overload"
+      correct: false
+      why: "Transient, and already retried with backoff by the SDK."
+
+- q: "You wrapped `anthropic.messages.create` in your own retry-with-backoff loop. What have you actually built?"
+  anchor: "not just redundant, it actively causes double-retrying during an outage"
+  options:
+    - text: "A safety net, in case the SDK's own retries are not enough"
+      correct: false
+      why: "The SDK already retries 429, 529 and 5xx when maxRetries is set at client construction."
+    - text: "Double-retrying that compounds load exactly when the upstream is already struggling"
+      correct: true
+      why: "The work that adds value is what the SDK does not do: mapping status codes to application errors, and defining fallbacks."
+    - text: "The standard production pattern for AI calls"
+      correct: false
+      why: "The standard pattern is to configure maxRetries once and spend the effort on error mapping and fallback behaviour."
+
+- q: "The summariser cannot reach the API. What does a good fallback return?"
+  anchor: "a truncated version of the original text with a `source: 'fallback'` flag"
+  options:
+    - text: "An error explaining that the AI service is unavailable"
+      correct: false
+      why: "That fails outright rather than degrading usefully — and raw error detail should never reach the end user in any case."
+    - text: "A truncated version of the original text, flagged as a fallback"
+      correct: true
+      why: "The UI can show something useful while being honest that it is not AI-generated."
+    - text: "A cached summary of the most similar document"
+      correct: false
+      why: "Useful-looking and wrong. Being honest about what the output is is the entire point of the flag."
+```
+
 ## Key Concepts
 - **Failure taxonomy drives response**: transient (retry via SDK) vs rate-limited (retry after delay) vs invalid input (fail immediately, never retry) vs content-filtered (surface once, never retry)
 - **SDK retries are sufficient for transient errors**: `maxRetries` at client construction already backs off on 429/529/5xx — a manual retry wrapper on top double-retries
@@ -79,3 +120,25 @@ export async function getSummaryWithFallback(
 - [Claude API errors](https://platform.claude.com/docs/en/api/errors) — HTTP status codes, which are retryable, and the typed SDK exception classes that map to them
 - Google SRE Book — "Handling Overload" chapter, for the general principles behind graceful degradation
 - [Claude API rate limits](https://platform.claude.com/docs/en/api/rate-limits) — limits by tier, and the `retry-after` header semantics
+
+```recall
+- q: "Map each failure type to its correct response."
+  must:
+    - "transient errors (overloaded, 5xx) — retry with backoff"
+    - "rate limits (429) — retry after the specified delay"
+    - "input validation failures such as a too-long prompt — fail immediately, since retrying an invalid request wastes time"
+    - "content-filtered refusals — surface a specific message, never retry"
+
+- q: "What does the SDK already handle, and what is left for you to build?"
+  must:
+    - "the SDK retries 429, 529 and 5xx with exponential backoff when maxRetries is set at client construction"
+    - "yours: catching Anthropic.APIError and mapping status codes to application-level errors"
+    - "yours: an explicit fallback behaviour for every AI feature, documented in the spec"
+
+- q: "What must a fallback do, and what must never reach the end user?"
+  must:
+    - "degrade usefully rather than failing outright"
+    - "e.g. truncated original text with a source: 'fallback' flag, honest that it is not AI-generated"
+    - "raw SDK error messages must never reach the end user"
+    - "they leak implementation details and are rarely actionable for a non-technical audience"
+```

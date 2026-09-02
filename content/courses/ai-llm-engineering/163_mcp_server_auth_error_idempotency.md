@@ -7,6 +7,47 @@ Errors need the same rigor, because the consumer reading your error response is 
 
 Idempotency is the last piece, and it follows directly from the verb taxonomy established in tool naming: reads — `list`, `get`, `search`, `analyze`, `validate` — are naturally idempotent and need no special handling, while `create` and `upload` are not, because calling them twice with the same input produces two resources, not one. For these, the AI client supplies an idempotency key, and the server stores the result of the first call against that key, returning the cached result for any repeat call with the same key rather than creating a duplicate — this matters more with an AI client than a human one, because a model retrying after what looks like a timeout has no way to know whether the first call actually succeeded server-side. That idempotency store has to be Redis or an equivalent shared, persistent store; an in-memory `Map` loses every key on a restart and can't deduplicate across multiple server instances behind a load balancer, which defeats the entire purpose the moment you scale past one process.
 
+```quiz
+- q: "Where does auth validation live in an MCP server?"
+  anchor: "Auth validation belongs entirely in middleware, checked once per request, never re-implemented inside individual tool handlers"
+  options:
+    - text: "In every tool handler, so each tool is independently safe"
+      correct: false
+      why: "Repetitive, and exactly the kind of thing missed on the one handler added under deadline pressure."
+    - text: "Entirely in middleware, checked once per request"
+      correct: true
+      why: "One place to get right, and one place to audit."
+    - text: "In middleware, plus a redundant check in handlers touching sensitive data"
+      correct: false
+      why: "Never re-implemented inside handlers — an exception is precisely where the gap opens."
+
+- q: "An in-memory `Map` is holding your idempotency keys. What breaks?"
+  anchor: "an in-memory `Map` loses every key on a restart and can't deduplicate across multiple server instances behind a load balancer"
+  options:
+    - text: "Nothing, until traffic grows enough to need eviction"
+      correct: false
+      why: "It breaks on the first restart, and on the first request that lands on a second instance."
+    - text: "Keys vanish on restart, and cannot deduplicate across instances behind a load balancer"
+      correct: true
+      why: "Which defeats the entire purpose the moment you scale past one process — the store has to be Redis or an equivalent shared, persistent one."
+    - text: "Keys collide between tools, because the Map is not namespaced"
+      correct: false
+      why: "Namespacing is a detail. Persistence and sharing are the structural failures."
+
+- q: "Which of these tool verbs needs an idempotency key?"
+  anchor: "reads — `list`, `get`, `search`, `analyze`, `validate` — are naturally idempotent and need no special handling"
+  options:
+    - text: "`search`"
+      correct: false
+      why: "A read, naturally idempotent — along with list, get, analyze and validate."
+    - text: "`create`"
+      correct: true
+      why: "Calling it twice with the same input produces two resources rather than one; the same goes for upload."
+    - text: "`validate`"
+      correct: false
+      why: "Also a read verb, and also naturally idempotent."
+```
+
 ## Key Concepts
 - **Auth in middleware, once per request**: never re-implement token validation inside individual tool handlers — it's the one place a missed check under deadline pressure becomes a real vulnerability
 - **Bearer token via `Authorization` header only**: never query parameters (logged, browser history), never request body fields, never returned in a tool's own response
@@ -86,3 +127,32 @@ server.tool(
 - [Model Context Protocol specification](https://modelcontextprotocol.io/specification) — read the authentication and error-handling sections
 - [OWASP API Security Top 10](https://owasp.org/API-Security/editions/2023/en/0x11-t10/) — broken authentication and improper asset management are the two that apply most directly here
 - Stripe API documentation — "Idempotent Requests," the reference implementation the idempotency-key pattern here is modeled on
+
+```recall
+- q: "State the rules for how a token travels and where it is stored."
+  must:
+    - "exclusively as a Bearer value in the Authorization header"
+    - "never a query parameter — it lands in server logs and browser history"
+    - "never a request body field — that conflates auth with business payload"
+    - "never returned in a tool response — tools return data, not credentials"
+    - "stored in environment variables or a secrets manager, never a plaintext column, client-side code, or a log line"
+
+- q: "Give the fixed error envelope every tool must return."
+  must:
+    - "a machine-readable code"
+    - "a human-readable message with no stack trace in it"
+    - "an optional details object"
+    - "a retryable boolean"
+    - "never a raw exception escaping the handler"
+
+- q: "What work is the retryable flag doing, and what does getting it wrong cost in each direction?"
+  must:
+    - "RATE_LIMITED is retryable after a delay; VALIDATION_ERROR is not, since the same malformed input fails identically"
+    - "marking a permanent failure retryable causes wasted retries"
+    - "marking a transient one non-retryable makes an agent give up on something that would have succeeded a second later"
+
+- q: "How are partial batch results reported, and why does idempotency matter more with an AI client?"
+  must:
+    - "an explicit partial: true flag with a breakdown, never returned as if it were a complete success"
+    - "a model retrying after what looks like a timeout has no way to know whether the first call actually succeeded server-side"
+```

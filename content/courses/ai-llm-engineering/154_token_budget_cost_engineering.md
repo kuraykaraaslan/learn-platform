@@ -7,6 +7,47 @@ The cost math itself is simple and worth internalizing well enough to do in your
 
 Controlling input volume is the other half of the budget, and it has three concrete levers: truncating user input to a sane character limit before it ever reaches the prompt, stripping whitespace and boilerplate that add tokens without adding meaning, and — the highest-leverage one on any prompt that's been in production a while — periodically auditing the system prompt itself, since every 100 tokens sitting in a system prompt gets paid for on every single call, not just once. None of this replaces logging: token usage per feature has to be attributed and aggregated so a cost spike is caught within days, not discovered at the next billing cycle after a prompt regression has been running unnoticed for weeks.
 
+```quiz
+- q: "A summary feature needs about 150 words of output. Why not set max_tokens to 2,000 just in case?"
+  anchor: "that ceiling doesn't just bound worst-case cost, it's also the first thing to check when `stop_reason === 'max_tokens'` shows up"
+  options:
+    - text: "Because the model will always fill whatever ceiling it is given"
+      correct: false
+      why: "It will not — but the ceiling is doing two jobs, and an unexamined one hides the second."
+    - text: "The ceiling bounds worst-case cost, and it is also the first thing to check when a max_tokens truncation shows up in production logs"
+      correct: true
+      why: "Output tokens are typically priced several times higher than input, so the ceiling deserves as much scrutiny as the prompt."
+    - text: "Because max_tokens is billed whether or not it is used"
+      correct: false
+      why: "Billing follows tokens actually generated. The ceiling is a bound, not a charge."
+
+- q: "Which input-volume lever is the highest-leverage on a prompt that has been in production a while?"
+  anchor: "the highest-leverage one on any prompt that's been in production a while — periodically auditing the system prompt itself"
+  options:
+    - text: "Truncating user input to a sane character limit"
+      correct: false
+      why: "A real lever, but it bounds one variable input rather than a fixed cost paid on every call."
+    - text: "Periodically auditing the system prompt itself"
+      correct: true
+      why: "Every 100 tokens sitting in a system prompt gets paid for on every single call, not just once."
+    - text: "Stripping whitespace and boilerplate from the prompt"
+      correct: false
+      why: "Also a lever, and also smaller than the one that is paid forever on every call."
+
+- q: "What stops a prompt regression being discovered at the next billing cycle?"
+  anchor: "token usage per feature has to be attributed and aggregated so a cost spike is caught within days"
+  options:
+    - text: "A monthly budget alert on the provider account"
+      correct: false
+      why: "That is the billing cycle finding it, which is the outcome this is meant to avoid."
+    - text: "Per-feature token usage attributed and aggregated in your own logs"
+      correct: true
+      why: "So a spike surfaces within days instead of after weeks of running unnoticed."
+    - text: "A lower max_tokens ceiling across every feature"
+      correct: false
+      why: "That bounds the damage; it does not tell you the regression happened."
+```
+
 ## Key Concepts
 - **Cost formula**: `cost_per_call = (input_tokens × input_price) + (output_tokens × output_price)`; `monthly_cost = cost_per_call × daily_calls × 30`
 - **Every AI feature needs a documented budget before shipping** — not as a formality, but as the number that gets checked when cost actually deviates
@@ -82,3 +123,29 @@ export async function generateSummaryWithBudget(text: string): Promise<string> {
 - [Anthropic pricing page](https://anthropic.com/pricing) — always verify current rates before writing a cost spec, prices change
 - Anthropic — "Reduce costs" section of the prompt engineering documentation
 - [Prompt caching](https://platform.claude.com/docs/en/build-with-claude/prompt-caching) — for cutting the cost of a repeated system prompt; note that caching is a prefix match, so one changed byte invalidates the rest
+
+```recall
+- q: "Give the cost math, in the form worth being able to do during a feature review."
+  must:
+    - "cost per call = input tokens × input price + output tokens × output price"
+    - "monthly cost = that figure × daily call volume × thirty"
+
+- q: "Why does the max_tokens ceiling deserve as much scrutiny as the prompt?"
+  must:
+    - "output tokens are typically priced several times higher than input tokens across model tiers"
+    - "the ceiling bounds worst-case cost"
+    - "and it is the first thing to check when stop_reason === 'max_tokens' appears as a truncation bug"
+
+- q: "Name the three levers on input volume, and what makes the third the biggest."
+  must:
+    - "truncate user input to a sane character limit before it reaches the prompt"
+    - "strip whitespace and boilerplate that add tokens without adding meaning"
+    - "periodically audit the system prompt itself"
+    - "every 100 tokens in a system prompt is paid on every single call, not just once"
+
+- q: "Why is logging not optional here?"
+  must:
+    - "token usage per feature has to be attributed and aggregated"
+    - "so a cost spike is caught within days"
+    - "rather than discovered at the next billing cycle after weeks of an unnoticed prompt regression"
+```

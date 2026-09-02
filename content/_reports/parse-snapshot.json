@@ -159,12 +159,12 @@
       },
       "149_structured_output_schema_validation.md": {
         "title": "493b14593dfce762",
-        "whatItIs": "98f0ecb924a66fd4",
+        "whatItIs": "3f5147fec4d8f4f0",
         "keyConcepts": "cc23164983a5f15a",
         "exampleCode": "7835d5a45bc58ca4",
         "whenToUse": "2a238bc5c9861e24",
         "commonMistakes": "080578ab68682ead",
-        "furtherReading": "8e3adaeabc524550"
+        "furtherReading": "aa429c55cecab863"
       },
       "150_context_window_conversation_management.md": {
         "title": "f1556fde6bcf68c6",
@@ -204,12 +204,12 @@
       },
       "154_token_budget_cost_engineering.md": {
         "title": "8eae8a104690fb77",
-        "whatItIs": "53c1d15a3d08f2da",
+        "whatItIs": "6e3d615657ebe009",
         "keyConcepts": "535bc9038f48cbf5",
         "exampleCode": "7035b5cccd5bd539",
         "whenToUse": "67870864714f9f99",
         "commonMistakes": "27040e2d05e039eb",
-        "furtherReading": "f959c82540f3e64c"
+        "furtherReading": "55003d0020dae0a8"
       },
       "155_streaming_ai_responses_production.md": {
         "title": "3448a9a90624f62e",
@@ -222,12 +222,12 @@
       },
       "156_fallback_graceful_degradation.md": {
         "title": "3a8c68fbfaf13b13",
-        "whatItIs": "f0f150448d904367",
+        "whatItIs": "019de982aba74068",
         "keyConcepts": "0bcb8fb011d8076d",
         "exampleCode": "c15a9648b969a599",
         "whenToUse": "1d886d63875a6916",
         "commonMistakes": "a3bd06561ee1a2e6",
-        "furtherReading": "04a4a9527f9eec75"
+        "furtherReading": "e704f015ed351d10"
       },
       "157_building_eval_pipeline.md": {
         "title": "f5055b66bd25fc95",
@@ -249,12 +249,12 @@
       },
       "159_prompt_injection_defense.md": {
         "title": "19dde995de495792",
-        "whatItIs": "225bb2c382e980d2",
+        "whatItIs": "6f2f6a0197817fe3",
         "keyConcepts": "7458c29286d963e0",
         "exampleCode": "ad604d505d7b4aa9",
         "whenToUse": "efd4a122c6b4bf81",
         "commonMistakes": "f9f095ab0dedc61b",
-        "furtherReading": "cf29d26f3dd1a0c0"
+        "furtherReading": "84420e99f7aff781"
       },
       "160_ai_data_privacy_regulatory_compliance.md": {
         "title": "58ec7fe433dabc40",
@@ -285,12 +285,12 @@
       },
       "163_mcp_server_auth_error_idempotency.md": {
         "title": "8330d819acfdf55d",
-        "whatItIs": "6866aaeba41e9168",
+        "whatItIs": "5f1debf7f5549dd2",
         "keyConcepts": "a8ebd9e1ecbc7491",
         "exampleCode": "4d087ae5a4486c56",
         "whenToUse": "a93c61c82b752e64",
         "commonMistakes": "6c684c714eee9318",
-        "furtherReading": "89b49cf38a8e63df"
+        "furtherReading": "a6b48a678a6fe6f3"
       },
       "164_multi_agent_orchestration_workflow_chaining.md": {
         "title": "807032ad0dd5681a",
