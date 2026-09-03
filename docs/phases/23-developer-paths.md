@@ -160,3 +160,20 @@ olduğu bilme yanılsamasını üretir.
 | Path'ler her şeyi listeleyip kürasyon olmaktan çıkar | 8-16 adım sınırı testle; her şeyi isteyen okuyucu zaten kurs sayfasına gidiyor |
 | Adım sırası bir modele üretilir ve uydurma bağımlılık kurar | Sıra elle yazılır; `prereqs` grafiği bilinçli olarak kullanılmıyor (T2.5'in uyarısı) |
 | Ders silinince/yeniden numaralanınca path sessizce bozulur | Çözülmeyen id build'i kırıyor — `listCourses()`'un sınıflandırılmamış slug duruşuyla aynı |
+
+## Eklenebilecekler
+
+Bu fazın kapsamı dışında bırakılan, ama doğal devamı olan adaylar. Her satır
+**neden şimdi olmadığını** söylüyor. Üç sebep var ve karıştırılmamalı:
+*kapsam* (sonra yapılabilir), *bağımlılık* (önce başka bir şey gerekiyor),
+*doktrin* — sonuncusu ertelenmiş değil **reddedilmiş**tir ve `yasak` diye
+işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
+
+| Aday | Ne getirir | Neden şimdi değil |
+|---|---|---|
+| Path içi ilerleme / yüzde / tik | — | `yasak` — değişmez #4; bu fazın kabul kriteri `progress.store.ts`'in hiç değişmemesini şart koşuyor |
+| Path içi next/prev | Path sırasını izleyen gezinme | doktrin/kapsam — ikinci bir 'sonraki' okuyucuya iki doğru cevap verir; ayrıca 'hangi path'ten geldi' state gerektirir |
+| Okuyucu tanımlı path | Kendi okuma listesini kurma (localStorage) | kapsam — kürasyonun değeri **yazarın** seçmesinde; kişisel liste ayrı bir ürün kararı |
+| Path başına tahmini süre | Adımların `estimateMinutes` toplamı | kapsam — ucuz ve zararsız, ama sayaç/ilerleme algısına en yakın kalem; bilinçli olarak sonraya |
+| Path'ten path'e öneri | Bitirenin sıradaki path'i | kapsam — 'bitirdi' bilgisi yok ve olmayacak (değişmez #4); öneri statik olarak yazılabilir |
+| Path'e capstone bağlama | Path'in sonunda bir teslimat | bağımlılık — P22'nin capstone adayına bağlı |

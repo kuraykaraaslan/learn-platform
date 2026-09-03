@@ -112,3 +112,20 @@ bildirdiği doğruluk alanını okuyup yorumlamasını sağlar.
 | Mevcut idempotency dersinin tekrarı | `(#7)` ile bağlanır; bu kurs **kuyruğun günlerce dolduğu** hâli anlatır |
 | Çakışma çözümü teoriye kaçar | 496 aynı düzenleme dizisini iki stratejiyle koşturur; fark çıktı olarak görünür |
 | İç mekân konumlandırma abartılı doğruluk vaat eder | 498 hatanın **biriktiğini** `ts run` ile gösterir; mutlak doğruluk rakamı vermez |
+
+## Eklenebilecekler
+
+Bu fazın kapsamı dışında bırakılan, ama doğal devamı olan adaylar. Her satır
+**neden şimdi olmadığını** söylüyor. Üç sebep var ve karıştırılmamalı:
+*kapsam* (sonra yapılabilir), *bağımlılık* (önce başka bir şey gerekiyor),
+*doktrin* — sonuncusu ertelenmiş değil **reddedilmiş**tir ve `yasak` diye
+işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
+
+| Aday | Ne getirir | Neden şimdi değil |
+|---|---|---|
+| Barkod / QR / RFID varlık tanıma | Sahada doğru varlığa yazma; okuma hataları ve kontrol basamağı | kapsam — P20/`#506` kimliği kuruyor; sahadaki **okuma** tarafı doğal eşi, en güçlü aday |
+| Çevrimdışı harita paketleri | Şebekesiz sahada harita — P15/`#452`'nin MBTiles'ı ile birebir bağ | bağımlılık — P15 merge edildikten sonra tek ders olarak yazılabilir |
+| Ses ve video kanıt | Fotoğrafın ötesinde kanıt tipleri | kapsam — `#500` hash/dedupe/güvenilmez metaveri fikrini kuruyor; diğer medya aynı kuralı izliyor |
+| Elektronik imza ve onay akışı | Saha kaydının onaylanması | uzman pasosu — hukuki geçerlilik iddiası; yazılırsa `HARM_DENYLIST`'e girer |
+| Permit-to-work / saha güvenliği | İş izni akışının veri modeli | uzman pasosu — güvenlik/uygunluk iddiası; denylist |
+| Saha ekibi rota optimizasyonu | Günlük ziyaret sırası | kapsam — rotalama P15'in eklenebilirler listesinde; ikisi birlikte gelmeli |

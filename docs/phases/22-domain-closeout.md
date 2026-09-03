@@ -128,3 +128,18 @@ Bu fazda değerlendirilir:
 | Arama indeksi bütçeyi aşar ve build kırılır | Bu fazda ölçülür; aşılırsa sınır **ölçümle** yükseltilir, tahminle değil |
 | Çapraz bağlar "mavi çorba" üretir | `(#N)` bağı yalnız gerçekten dayanılan derse; kavram linki bütçesi (4/ders) zaten sert sınır |
 | Ship edilmeyenler kayıtsız kalır, altı ay sonra yeniden tartışılır | `## Ship etmediklerimiz` tablosu gerekçeleriyle bu dosyada |
+
+## Eklenebilecekler
+
+Bu fazın kapsamı dışında bırakılan, ama doğal devamı olan adaylar. Her satır
+**neden şimdi olmadığını** söylüyor. Üç sebep var ve karıştırılmamalı:
+*kapsam* (sonra yapılabilir), *bağımlılık* (önce başka bir şey gerekiyor),
+*doktrin* — sonuncusu ertelenmiş değil **reddedilmiş**tir ve `yasak` diye
+işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
+
+| Aday | Ne getirir | Neden şimdi değil |
+|---|---|---|
+| Alan capstone'u | Sekiz kursun tek bir uçtan uca teslimatta birleşmesi — T2.4'ün usulüyle: brief, deliverable, rubric, mühürlü referans çözüm | kapsam — T2.4 capstone'u 5 kurs için tasarlandı ve hiç uygulanmadı; alan capstone'u o karardan sonra |
+| Alan cheat sheet / yazdırma paketi | Kurs başına iki statik route + `@media print` | kapsam — Tier 3 kalemi, korpusun tamamı için düşünülmüştü; alan için ayrı yapılmaz |
+| `code/unverified-language`'ın `error`'a terfisi | C#/java fence'lerinin sıfırlanması | bağımlılık — korpusta 10 `java` + P16'nın ≤10 C# fence'i duruyor; kural yaratmadığı backlog'a takılamaz |
+| Türkçe ders katmanı | — | `yasak` — yol haritasının açık maddesi: 412→824 sayfa, `sourceHash` drift, ve bayat bir çeviri çevirisizlikten kötü |

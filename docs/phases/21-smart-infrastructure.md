@@ -129,3 +129,21 @@ ile; yol haritasının business dersleri için koyduğu kuralın aynısı.
 | Vendor vaka çalışması "kanıt" gibi anılır | Yalnız kamuya açık birincil belge; vendor vakası anılmaz |
 | Kurs, önceki dörtünü tekrar eder | Her ders bağımlılığına `(#N)` ile bağlanır; bu kurs **kesişimi** anlatır, parçaları değil |
 | En sona kaldığı için sıkıştırılır | Bağımlılığı gerçek: P15/P17/P18/P20 merge edilmeden dersleri yazılamaz. Sıkışırsa ölçek düşer, kalite değil |
+
+## Eklenebilecekler
+
+Bu fazın kapsamı dışında bırakılan, ama doğal devamı olan adaylar. Her satır
+**neden şimdi olmadığını** söylüyor. Üç sebep var ve karıştırılmamalı:
+*kapsam* (sonra yapılabilir), *bağımlılık* (önce başka bir şey gerekiyor),
+*doktrin* — sonuncusu ertelenmiş değil **reddedilmiş**tir ve `yasak` diye
+işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
+
+| Aday | Ne getirir | Neden şimdi değil |
+|---|---|---|
+| CityGML / 3DCityDB derinlemesine | Şehir ölçeğinde model şeması | kapsam — `#513` standart manzarasını kuruyor; şema derinliği ayrı ders |
+| NGSI-LD / FIWARE | Bağlam broker mimarisi | kapsam — aynı sebep; biri doğru ilan edilmiyor |
+| GTFS ve hareketlilik verisi | Toplu taşımanın açık veri formatı | kapsam — iyi bir `sql run` adayı; kursun ekseni entegrasyon, ulaşım alan-özel |
+| Enerji şebekesi CIM (IEC 61970) | Şebeke varlıklarının standart modeli | kaynak — IEC ücretli; `#517` ağ topolojisini zaten genel olarak kuruyor |
+| Su şebekesi hidroliği (EPANET) | Ağ modelinin simülasyonu | kapsam — simülasyon P18/`#491`'in sınırında; alan-özel |
+| Şehir ölçeği twin federasyonu | Birden çok ikizin şehir düzeyinde birleşmesi | bağımlılık — P18'in eklenebilirler listesindeki federasyonla aynı kalem |
+| Kamu veri portalı yayımlama | Veriyi lisanslı ve sürümlü yayımlama | bağımlılık — `#521` **denylist'te** (hukuki); uzman pasosundan sonra |

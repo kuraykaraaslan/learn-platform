@@ -169,3 +169,19 @@ Mekanizma bu fazda, ilk kullanıcısı sonraki fazda.
 | `as const` tüketicilerde beklenmedik daralma yaratır | Tüketici sayıldı: 4 yapısal iterasyon + 2 tip import; ikisi de readonly diziyle çalışıyor. `tsc --noEmit` kapısı |
 | Refaktör davranış değiştirir | Snapshot ve stats-check ikisi de kımıldamamalı — bu fazın kabul kriteri "hiçbir şey olmadı" |
 | Dal başına asgari 3 kurs kuralı ileride meşru bir dalı engeller | Kural bir testte, gerekçesiyle; gerçekten 2 kursluk bir dal gerekirse test gerekçeyle değiştirilir — sessizce aşılamaz |
+
+## Eklenebilecekler
+
+Bu fazın kapsamı dışında bırakılan, ama doğal devamı olan adaylar. Her satır
+**neden şimdi olmadığını** söylüyor. Üç sebep var ve karıştırılmamalı:
+*kapsam* (sonra yapılabilir), *bağımlılık* (önce başka bir şey gerekiyor),
+*doktrin* — sonuncusu ertelenmiş değil **reddedilmiş**tir ve `yasak` diye
+işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
+
+| Aday | Ne getirir | Neden şimdi değil |
+|---|---|---|
+| Dal sayfası `/branches/<id>` | Bir dalın tüm kursları tek sayfada, uzun blurb ile | kapsam — ana sayfa zaten gösteriyor; ikinci liste yeni bilgi vermiyor |
+| `CourseSectionDef`'e `icon`/`accent` | Dallar arası görsel ayrım | kapsam — kapaklar zaten görsel sistem; ikincisi erken |
+| Okuyucuya göre dal sıralaması | İlgi alanına göre öne çıkan dal | kapsam — `ExperiencePicker` zaten bir tercih ekseni; ikincisi kararı zorlaştırır |
+| 4. dal (Data & ML, Mobile, …) | Korpusun büyümesi | bağımlılık — kurslar yok; boş dal testi zaten engelliyor |
+| Dal başına ilerleme göstergesi | — | `yasak` — değişmez #4 (tamamlanma yüzdesi yok) |

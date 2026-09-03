@@ -16,6 +16,12 @@ sebebi ölçütünün farklı olması: mevcut dersleri dönüştürmek değil, k
 ölçülmüş olarak **hiç bulunmayan** bir alanı açmak (`BIM`, `GIS`, `IFC`,
 `Autodesk`, `MQTT`, `PostGIS` terimlerinin 412 derste eşleşmesi: sıfır).
 
+P13-P23'ün her şartnamesi bir **`## Eklenebilecekler`** tablosu taşıyor: o fazın
+kapsamı dışında bırakılan adaylar ve her birinin neden şimdi olmadığı (*kapsam*,
+*bağımlılık*, *doktrin*). Doktrine takılanlar `yasak` işaretli — ertelenmiş
+değil reddedilmiş. Bir aday kapsama alınınca tablodan çıkar, ders listesine
+girer. Amaç, altı ay sonra aynı kararın sıfırdan tartışılmaması.
+
 ## Sıra ve bağımlılıklar
 
 ```

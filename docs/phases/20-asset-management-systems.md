@@ -118,3 +118,20 @@ gelir ama **onlar örnek olduğunu söyler**.
 | Kritiklik/MTBF rakamları uydurulur | Rakam yazılmaz; okuyucunun kendi verisinden hesaplama yolu ve `calc` verilir |
 | 512 ürün listesine dönüşür ve eskir | Ürün adı geçmez; kriterler veri modeli üzerinden |
 | `sql run` ağırlığı kursu tekdüzeleştirir | Dört ders SQL, ikisi `ts run`, biri `calc`, biri `spatial`, ikisi runtime'sız — artefakt çeşitliliği bilinçli |
+
+## Eklenebilecekler
+
+Bu fazın kapsamı dışında bırakılan, ama doğal devamı olan adaylar. Her satır
+**neden şimdi olmadığını** söylüyor. Üç sebep var ve karıştırılmamalı:
+*kapsam* (sonra yapılabilir), *bağımlılık* (önce başka bir şey gerekiyor),
+*doktrin* — sonuncusu ertelenmiş değil **reddedilmiş**tir ve `yasak` diye
+işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
+
+| Aday | Ne getirir | Neden şimdi değil |
+|---|---|---|
+| FMEA ve kritiklik analizi | Arıza modlarının veri modeli | kapsam — `#507` kritiklik skorunu okuyucunun kendi ağırlıklarıyla kuruyor; FMEA tablosu ayrı |
+| Yedek parça ve envanter | Kritik parça, tedarik süresi, stok politikası | kapsam — kütük ve iş emri önce oturmalı |
+| Kestirimci bakım için özellik mühendisliği | Telemetriden bakım sinyali çıkarma | bağımlılık — P17'nin zaman serisi ve P18'in downsampling dersleri ön koşul; sonra tek ders |
+| Amortisman ve muhasebe bağı | Varlık kaydının mali tabloya bağlanması | uzman pasosu — mali müşavir; korpusun mevcut finans kursuyla da çelişmemeli |
+| Enerji / karbon raporlama | Varlık başına tüketim ve raporlama | kaynak — düzenleme ülkeye bağlı ve hızlı değişiyor; yayıncı+ay kuralıyla yazılabilir |
+| ISO 55001 uygunluk denetim izi | Denetime hazır kayıt | uzman pasosu + kaynak — standart ücretli; `#506`'nın kuralı gereği madde metni alıntılanamaz |

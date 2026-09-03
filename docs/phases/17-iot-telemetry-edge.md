@@ -164,3 +164,21 @@ kurmanın maliyeti. P20'nin "al/yap" dersiyle (`#512`) aynı usul: karar
 | ThingsBoard dersi ürün turuna döner ve eskir | Veri modeli öğretilir, ekran değil; sürüm damgalı; `#512` ile bağlı |
 | Donanım rakamları uydurulur (menzil, pil) | Rakam yazılmaz; hesap verilir |
 | Mevcut idempotency/retry derslerinin tekrarı olur | `(#N)` ile bağlanır; bu kurs kısıtın değiştiği yeri anlatır |
+
+## Eklenebilecekler
+
+Bu fazın kapsamı dışında bırakılan, ama doğal devamı olan adaylar. Her satır
+**neden şimdi olmadığını** söylüyor. Üç sebep var ve karıştırılmamalı:
+*kapsam* (sonra yapılabilir), *bağımlılık* (önce başka bir şey gerekiyor),
+*doktrin* — sonuncusu ertelenmiş değil **reddedilmiş**tir ve `yasak` diye
+işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
+
+| Aday | Ne getirir | Neden şimdi değil |
+|---|---|---|
+| NB-IoT / LTE-M / Sigfox | LoRaWAN'ın alternatifleri; kapsama, maliyet, güç ödünleşimi | kapsam — `#472` LPWAN kısıtını bir kez kuruyor; karşılaştırma `tradeoff` olarak eklenebilir |
+| Zigbee / BLE mesh / Matter | Bina içi kısa menzil yığını | kapsam — `#469`'un yolu bunları da kapsıyor ama protokol detayı ayrı |
+| OPC UA | Endüstriyel yığının fiilî standardı | bağımlılık — P21/`#514` OT sınırını kuruyor ve **denylist'te**; OPC UA dersi o pasodan sonra |
+| MQTT ↔ Kafka köprüsü | Cihaz yığınının olay akışına bağlanması | kapsam — korpusta Kafka dersi (`#106`) var; köprü ikisini `(#N)` ile bağlayan tek ders olabilir |
+| Sensör füzyonu ve Kalman filtresi | Birden çok sensörden tek tahmin | kapsam — matematik ağır; `ts run` ile gösterilebilir, ama kursun ekseni taşıma ve depolama |
+| İstatistiksel anomali tespiti | `#482`'nin eşik tabanlı hâlinin ötesi | kapsam — `#482` histerezis/ölü bandı kuruyor; istatistiksel yöntem ayrı ders |
+| Pil ve enerji bütçesi modellemesi | Cihazın sahada ne kadar yaşayacağı | kaynak — donanıma bağlı rakam yazılmaz; `calc` ile okuyucunun kendi rakamlarıyla yapılabilir |

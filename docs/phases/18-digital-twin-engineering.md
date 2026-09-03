@@ -136,3 +136,21 @@ sebeple: değişmez #5.
 | İç mekân navigasyonu bir harita/3B gösterisine döner | Graf **veri** olarak öğretilir; render yok, değişmez #5 |
 | Vendor tasarruf/ROI iddiası korpusa girer | Kaynağı pazarlama olan sayı hiç anılmaz |
 | P14/P15/P17 merge edilmeden yazılmaya başlanır | Dersleri `(#N)` ile onlara dayanıyor; dead-ref lint'i yakalar |
+
+## Eklenebilecekler
+
+Bu fazın kapsamı dışında bırakılan, ama doğal devamı olan adaylar. Her satır
+**neden şimdi olmadığını** söylüyor. Üç sebep var ve karıştırılmamalı:
+*kapsam* (sonra yapılabilir), *bağımlılık* (önce başka bir şey gerekiyor),
+*doktrin* — sonuncusu ertelenmiş değil **reddedilmiş**tir ve `yasak` diye
+işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
+
+| Aday | Ne getirir | Neden şimdi değil |
+|---|---|---|
+| 3B akış (streaming) ve LOD bölümleme | Büyük modelin tarayıcıya parça parça gelmesi | doktrin — render yok (değişmez #5); veri tarafı (bölümleme stratejisi) yazılabilir, görüntüleme yazılamaz |
+| DTDL / Asset Administration Shell derinlemesine | Ontolojinin tam veri modeli | kapsam — `#483` üçünü de anıyor ve birini doğru ilan etmiyor; derinleşmek o tarafsızlığı bozar |
+| What-if simülasyon entegrasyonu | İkizin tahmin tarafı | kapsam — `#491` simülasyon/gözlem ayrımını kuruyor; entegrasyon ayrı ve alan-özel |
+| Graf veritabanı ile twin sorgulama | Varlık grafiğinin Neo4j/Cypher ile gezilmesi | runtime — PGlite Postgres; graf DB için çalıştırılabilir fence yok, özyinelemeli CTE zaten `#489`'da |
+| İç mekân: erişilebilirlik ve çok katlı yönlendirme | Asansör/rampa kısıtları, kat değişimi | kapsam — `#489` grafın kendisini kuruyor; kısıtlı rotalama doğal ikinci ders |
+| Point cloud / scan-to-BIM | Gerçekliğin modele geri beslenmesi | kapsam — ayrı bir veri tipi ve ayrı araç zinciri |
+| Twin federasyonu | Birden çok ikizin tek sorguda birleşmesi | bağımlılık — P21/`#515` kimlik çözümlemeyi kuruyor; federasyon onun üstüne gelir |

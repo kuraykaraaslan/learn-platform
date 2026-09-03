@@ -173,3 +173,21 @@ koşmayan ama **tipli** TS olarak yazılır ve `verify-code --strict`'ten geçer
 | Revit API sürüm farkları sessizce eskir | Her sınıf/metot adı sürümle yazılır (`Revit 2025 API`) |
 | Kota/limit rakamı olgu olarak yazılır ve yanlışlanır | Rakam yazılmaz; mekanizma ve ölçme yolu yazılır |
 | Kurs Revit'i olmayan okuyucu için ölü kalır | 455 + APS yarısı (461-468) Revit kurulumu istemiyor; Revit gerektiren 5 ders bunu başında söylüyor |
+
+## Eklenebilecekler
+
+Bu fazın kapsamı dışında bırakılan, ama doğal devamı olan adaylar. Her satır
+**neden şimdi olmadığını** söylüyor. Üç sebep var ve karıştırılmamalı:
+*kapsam* (sonra yapılabilir), *bağımlılık* (önce başka bir şey gerekiyor),
+*doktrin* — sonuncusu ertelenmiş değil **reddedilmiş**tir ve `yasak` diye
+işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
+
+| Aday | Ne getirir | Neden şimdi değil |
+|---|---|---|
+| Navisworks ve clash otomasyonu | Koordinasyonun otomatikleştirilmesi | kapsam — ayrı bir ürün ve ayrı bir API; Revit yüzeyi önce oturmalı |
+| AutoCAD .NET / Civil 3D API | Altyapı tarafının masaüstü API'si | kapsam — üçüncü bir masaüstü API, C# fence bütçesini (≤10) tek başına doldurur |
+| Dynamo | Görsel programlama ile Revit otomasyonu | kitle — hedef okuyucu kod yazıyor; Dynamo'nun asıl kitlesi başka |
+| ACC Issues / Submittals API | Şantiye iş akışlarının veri modeli | kapsam — `#468` vendor çürümesini kuruyor; ACC yüzeyi hızlı değişiyor, oynaklık kaydını şişirir |
+| Design Automation AppBundle paketleme | `#460`'ın operasyonel yarısı: paketleme, sürümleme, dağıtım | kapsam — `#460` mekanizmayı kuruyor; paketleme adım adım kılavuz olur ve hızlı eskir |
+| Viewer extension yazımı | Viewer'ı genişletmek | doktrin — `#465`'in tezi Viewer'ın **istemci** olduğu; extension dersi o tezi zayıflatır ve çalıştırılamaz |
+| Revit → IFC dışa aktarım eşlemeleri | `#459`'un devamı: paylaşılan parametre IFC'de nereye düşüyor | bağımlılık — P14 ve `#459` birlikte okunduktan sonra anlamlı; en güçlü aday |

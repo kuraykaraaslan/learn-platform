@@ -183,3 +183,22 @@ tek satırlık notla ertelenir. Çalışmayan bir Run düğmesi ship edilmez.
 | Koordinat örnekleri uydurma yer adlarına bağlanır | Örnek koordinatlar ya hesaplanır (`ts run`) ya da kaynağı verilen açık veriden alınır; "yaklaşık İstanbul" gibi doğrulanamaz iddia yazılmaz |
 | P9'a bağımlılık gizlice programa girer | Sert kural yukarıda; koşullu fence merge edilmezse P22'de tek satırlık not |
 | Datum/EPSG parametreleri sürümle değişir | Sürüm + kayıt sayfası yazılır; hesaplanan her sayı `proof` ile üretilir, elle yazılmaz |
+
+## Eklenebilecekler
+
+Bu fazın kapsamı dışında bırakılan, ama doğal devamı olan adaylar. Her satır
+**neden şimdi olmadığını** söylüyor. Üç sebep var ve karıştırılmamalı:
+*kapsam* (sonra yapılabilir), *bağımlılık* (önce başka bir şey gerekiyor),
+*doktrin* — sonuncusu ertelenmiş değil **reddedilmiş**tir ve `yasak` diye
+işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
+
+| Aday | Ne getirir | Neden şimdi değil |
+|---|---|---|
+| H3 / S2 hücre sistemleri | Geohash'in modern alternatifi; eşit alanlı hücreler, komşuluk | kapsam — `#447` geohash/quadkey ile indeksleme fikrini kuruyor; H3 aynı fikrin başka kodlaması |
+| Geocoding ve reverse geocoding | Adres ↔ koordinat; doğruluk sınıfları ve **lisans** kısıtları | kapsam — sağlayıcıya bağlı ve lisans tarafı hukuki; P21/`#521` ile birlikte ele alınmalı |
+| Rotalama ve isochrone | OSRM/Valhalla; erişilebilirlik analizi | kapsam — P18/`#489` iç mekân rotasını zaten kuruyor; dış mekân rotalama ayrı bir kurs büyüklüğünde |
+| OGC API - Features / WFS / WMS | Mekânsal veriyi servis olarak yayımlama | kapsam — P21/`#519` kamuya açık besleme kapılarını anlatıyor; protokol detayı ayrı |
+| Topoloji doğrulama (sliver, gap, self-intersection) | Geçerli görünen ama bozuk geometrinin bulunması | kapsam — `#445` halka geçerliliğini kapsıyor; parsel/ağ topolojisi ayrı bir ders |
+| COG (Cloud Optimized GeoTIFF) | Rasterin aralıklı HTTP ile okunması | bağımlılık — `#454` raster örneklemeyi kuruyor; COG onun üstüne gelir |
+| GDAL/OGR komut satırı iş akışı | Alanın fiilî İsviçre çakısı | doğrulama — `bash` fence'i hiçbir runtime'da koşmuyor; `proof` ile CI'da GDAL kurmak kök bağımlılık demek |
+| `proj4` kök bağımlılığı | Yetkili EPSG parametreleriyle dönüşüm | doktrin/kapsam — `#443`'ün matematiği ~40 satır ve dersin konusu; bağımlılık ancak yetkili parametre gerekirse gerekçelendirilir |
