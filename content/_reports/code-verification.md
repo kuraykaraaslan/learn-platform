@@ -5,14 +5,14 @@ extracted and typechecked. Generated file: do not edit by hand.
 
 | | |
 |---|---:|
-| TS/TSX fences | 196 |
-| Snippet files they split into | 324 |
-| Clean | 97 |
+| TS/TSX fences | 206 |
+| Snippet files they split into | 334 |
+| Clean | 107 |
 | Only uninstalled-module errors (tolerated) | 227 |
 | **Failing** | **0** |
 | Lessons affected | 0 |
 | Snippet files importing private `@/libs|modules|stores` aliases | 31 |
-| Snippet files in `run` fences: ready / blocked | 30 / 0 |
+| Snippet files in `run` fences: ready / blocked | 35 / 0 |
 
 ## Defects by class
 

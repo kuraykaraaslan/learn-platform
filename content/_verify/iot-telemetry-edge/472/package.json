@@ -1,0 +1,8 @@
+{
+  "name": "verify-iot-telemetry-edge-472",
+  "private": true,
+  "description": "Computes LoRa time-on-air per spreading factor and turns a duty-cycle percentage into a daily message ceiling, for lesson 472's proof block. Zero dependencies and no network: it is arithmetic from published radio parameters, and the reader will quote these numbers in a design argument, so they have to be the run's numbers rather than the author's. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node airtime.js"
+  }
+}

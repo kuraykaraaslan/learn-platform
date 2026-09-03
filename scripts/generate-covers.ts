@@ -57,6 +57,7 @@ const SUBJECTS: Record<string, string> = {
   'bim-ifc-data-models': 'a wireframe building section unfolding into a nested tree of labelled data nodes',
   'gis-spatial-data': 'a graticule of meridians peeling off a globe and flattening into a grid of map tiles',
   'autodesk-developer-platform': 'a desktop drafting window, a headless job crate, and a cloud endpoint linked by one pipeline',
+  'iot-telemetry-edge': 'a small sensor node emitting concentric signal arcs toward a gateway and a stack of stored readings',
 };
 
 type Quality = 'low' | 'medium' | 'high';

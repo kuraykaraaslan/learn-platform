@@ -135,24 +135,52 @@ kurmanın maliyeti. P20'nin "al/yap" dersiyle (`#512`) aynı usul: karar
 
 ## Kabul kriterleri
 
-- [ ] 14 ders + manifest; `shape/*` sıfır bulgu
-- [ ] **13 ders damgalı, 478 damgasız** (`HARM_DENYLIST`);
-      `verified-sha.json`'da 478 yok
-- [ ] 478'de **hiçbir `quiz`/`recall` fence'i yok**;
-      `drill/widget-on-unverified-lesson` sıfır bulgu
-- [ ] 479, firmware imzalamayı 478'e devrettiğini nesirde açıkça söylüyor
-- [ ] `parseMistakes` bu 14 derste **0 `single`** madde raporluyor
-- [ ] `sensor_readings.sql` ≤50 KB; 475/477/480'in `sql run` fence'leri
-      PGlite'ta gerçekten koşuyor
-- [ ] 472 ve 475'in `proof` blokları damgalı, sıfır bağımlılık,
-      `stamp-verify --check` yeşil ve iki koşuda byte-aynı
-- [ ] **472'deki her bölgesel sınır bölge adıyla yazılı**; bölgesiz rakam yok
-- [ ] 480'de ThingsBoard ekran/özellik turu yok; ders veri modeli üzerinden
-      ilerliyor ve `#512`'ye `(#N)` ile bağlı
-- [ ] 475/476/477 mevcut korpusa `(#N)` ile bağlı; `links/dead-lesson-ref` temiz
-- [ ] Üç sabit korpus sayısı 450 → **464**
-- [ ] `content:stats-check` "0 disagree"; snapshot +14 ders, %100 EXPLAINED
-- [ ] `git diff --exit-code -- content/_reports` temiz; `content:check` yeşil
+- [x] 14 ders + manifest; `shape/*` sıfır bulgu
+- [x] **13 ders damgalı, 478 damgasız.** `HARM_DENYLIST`'e eklendi
+      (`stamp-verified.ts`), `verified-sha.json`'da girişi yok, manifest'inde
+      `verified` anahtarı hiç yok. Denylist 16 → 17
+- [x] 478'de **hiçbir `quiz`/`recall` fence'i yok** (ölçüldü: 0);
+      `drill/widget-on-unverified-lesson` yine yalnız önceden var olan
+      `114`'ü bildiriyor — 2 bulgu, ikisi de bu fazın dışından
+- [x] 479 firmware imzalamayı 478'e devrettiğini **üç yerde** açıkça söylüyor:
+      açılış paragrafı, Key Concepts, ve Common Mistakes'in son maddesi
+- [x] `parseMistakes` bu 14 derste **0 `single`** madde raporluyor
+- [x] `sensor_readings.sql` **3.866 bayt** (sınır 50 KB); 612 varış, 480 ayrı
+      ölçüm, çoğaltmalar **sebebe göre** enjekte edildi (kayıp ack 72, ikinci
+      gateway 48, store-and-forward 12). 475/477/480'in sekiz `sql run`
+      fence'i de PGlite'ta gerçekten koşuldu
+- [x] 472 ve 475'in `proof` blokları damgalı, sıfır bağımlılık, iki koşuda
+      byte-aynı (sha karşılaştırıldı); `stamp-verify --check` 18/18 yeşil
+- [x] **472'deki her duty cycle rakamı bölge adıyla yazılı.** Tek istisna,
+      kuralın kendisini söyleyen cümle ("bölgesiz bir duty cycle hiçbir şey
+      hakkında bir olgu değildir"). Hava süresi tablosunun tamamı — SF7'de
+      62 ms, SF12'de 1.483 ms, ve %1'de SF12'nin 147 saniyelik zorunlu
+      sessizliği — **proof tarafından hesaplandı**, yazılmadı
+- [x] 480'de ThingsBoard ekran/özellik turu yok; ders üç ayrım üzerinden
+      ilerliyor (device/asset, telemetry/attribute, rule engine'in devri) ve
+      eşdeğerini düz Postgres'te kuruyor
+- [x] 469/475/476/481 mevcut korpusa `(#4)`, `(#5)`, `(#7)`, `(#45)`, `(#56)`
+      ile bağlı; `links/dead-lesson-ref` temiz
+- [x] Üç sabit korpus sayısı 450 → **464**
+- [x] `content:stats-check` "32 rows checked · 0 disagree"; snapshot +14 ders,
+      0 unexplained
+- [x] `git diff --exit-code -- content/_reports` temiz; `content:check`,
+      `lint`, `concepts-check`, `verify-mermaid`, `build` (497 statik sayfa)
+      yeşil
+
+**Bir kabul kriteri karşılanamadı ve ertelendi.** Şartname 480'in `#512`'ye
+`(#N)` ile bağlanmasını istiyor; ders 512 henüz yok (P20 üretecek) ve `(#512)`
+yazmak `links/dead-lesson-ref`'in **error** olarak reddettiği şeydir. Bu, P16'da
+`#511` ile aynı durum ve aynı şekilde çözüldü: 480 al/yap kararını "ürün
+karşılaştırması değil, model kriterleri" diye nesirde kuruyor, sayısal ileri
+referans yok, ve geri bağlantıyı P20 kendi tarafından ekler. Sessizce
+işaretlemek yerine buraya yazıldı.
+
+**Ölçülen bir yan etki.** Bu fazdan sonra `code/unverified-language` hâlâ 19
+bulgu veriyor (10 `java` + 9 C#) — P17 hiç eklemedi. Kursun gerçek araçları
+Python (`paho-mqtt`) olmasına rağmen **sıfır Python fence'i** yazıldı: her
+mekanizma TS'e çevrilebildi, ve çevrilemeyen üç ders (471, 476, 481) runtime
+yerine karar tipleri taşıyor. Kural amacına uygun çalıştı.
 
 ## Risk
 

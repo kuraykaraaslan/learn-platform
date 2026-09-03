@@ -432,5 +432,18 @@
   "autodesk-developer-platform/465_the_viewer_is_a_client.md": "29dc23b28251d88c",
   "autodesk-developer-platform/466_webhooks.md": "e65e81efb1e4b0e0",
   "autodesk-developer-platform/467_rate_limits_and_quotas.md": "77f0fde183fea9e1",
-  "autodesk-developer-platform/468_designing_for_vendor_churn.md": "4a0a4857e84fbe5e"
+  "autodesk-developer-platform/468_designing_for_vendor_churn.md": "4a0a4857e84fbe5e",
+  "iot-telemetry-edge/469_the_device_to_database_path.md": "073fd00fc2c4c87d",
+  "iot-telemetry-edge/470_mqtt_topics_and_wildcards.md": "823bdc6fabb717d1",
+  "iot-telemetry-edge/471_qos_and_retained_messages.md": "fdb970d2c49634f3",
+  "iot-telemetry-edge/472_lorawan_duty_cycle.md": "07ffcfa843d2dc78",
+  "iot-telemetry-edge/473_designing_a_payload.md": "e93012ad304970e5",
+  "iot-telemetry-edge/474_three_clocks.md": "a0b11ab424aae1c7",
+  "iot-telemetry-edge/475_idempotent_ingest.md": "b7089d5270d0e154",
+  "iot-telemetry-edge/476_store_and_forward.md": "774b2f9c3e5d0e0e",
+  "iot-telemetry-edge/477_time_series_schema.md": "6b4c2fbdd2a181c0",
+  "iot-telemetry-edge/479_device_fleet_management.md": "7effbee079a97a81",
+  "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md": "b182da0e8a0a12ac",
+  "iot-telemetry-edge/481_edge_processing.md": "f938aec4e02c1eee",
+  "iot-telemetry-edge/482_alerting_without_crying_wolf.md": "f1de8a88a62f85d3"
 }

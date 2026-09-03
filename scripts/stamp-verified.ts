@@ -50,6 +50,11 @@ const HARM_DENYLIST = new Set([
   'open-source-community/100_creating_reference_resource.md',
   'career-entrepreneurship/114_niche_positioning.md',
   'process-soft-skills/85_technical_blog_conference_talk.md',
+  // P17: device identity, provisioning, rotation and revocation are security
+  // mitigations. docs/phases/17-iot-telemetry-edge.md puts this lesson here
+  // by design rather than by triage — it carries no quiz and no recall, and
+  // the denylist is what mechanically keeps it that way.
+  'iot-telemetry-edge/478_device_identity_and_provisioning.md',
 ]);
 
 function sha(value: string): string {

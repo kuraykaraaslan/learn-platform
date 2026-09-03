@@ -1,5 +1,5 @@
 {
-  "lessonCount": 450,
+  "lessonCount": 464,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -3259,6 +3259,134 @@
         "whenToUse": "93c8d03a43e33ccd",
         "commonMistakes": "ddb0fcf1a42375f9",
         "furtherReading": "78b92c904dfeae77"
+      }
+    },
+    "iot-telemetry-edge": {
+      "469_the_device_to_database_path.md": {
+        "title": "fdf8f08234184b9a",
+        "whatItIs": "9c74c252916fd7f8",
+        "keyConcepts": "4d5e213b1e665fb3",
+        "exampleCode": "8996a060526480e1",
+        "whenToUse": "fc8757954645fdaf",
+        "commonMistakes": "4ce154989ba52fde",
+        "furtherReading": "87f32a109655eb25"
+      },
+      "470_mqtt_topics_and_wildcards.md": {
+        "title": "de89c78c7d2179bf",
+        "whatItIs": "81ff19e5c897be1a",
+        "keyConcepts": "581a8d0132a691eb",
+        "exampleCode": "7b8e856fb082d096",
+        "whenToUse": "b2ead264e1cc0df6",
+        "commonMistakes": "18e47c2614e892bb",
+        "furtherReading": "32543533c0614cbf"
+      },
+      "471_qos_and_retained_messages.md": {
+        "title": "79e77a1d85e5c567",
+        "whatItIs": "942634127157ef51",
+        "keyConcepts": "916d0bb5127f41a5",
+        "exampleCode": "b397624942806a32",
+        "whenToUse": "8fec90afe50055bb",
+        "commonMistakes": "e9f9a94beef7f8a2",
+        "furtherReading": "a0b4a032b368e78c"
+      },
+      "472_lorawan_duty_cycle.md": {
+        "title": "9ab18202f3ad0969",
+        "whatItIs": "36beea979928dd7e",
+        "keyConcepts": "6a382234d84d1c2e",
+        "exampleCode": "dc55cb84ed32fd8f",
+        "whenToUse": "b342478c0612e84a",
+        "commonMistakes": "018a13937db3281a",
+        "furtherReading": "8713bf1d53e2af02"
+      },
+      "473_designing_a_payload.md": {
+        "title": "c4f81e9e76019e9a",
+        "whatItIs": "1a762f2449ca2f5b",
+        "keyConcepts": "c933878a813d7428",
+        "exampleCode": "acabab65134d590b",
+        "whenToUse": "7a74b8b3b2383376",
+        "commonMistakes": "489e6bb929f45758",
+        "furtherReading": "e024f8a12952454b"
+      },
+      "474_three_clocks.md": {
+        "title": "70935ec087bd3262",
+        "whatItIs": "4d09c33a40cf7bc4",
+        "keyConcepts": "a94582f5b0f4524c",
+        "exampleCode": "ee3f88c52311329c",
+        "whenToUse": "4eed104f2c35d80c",
+        "commonMistakes": "78fd9248d5b3d876",
+        "furtherReading": "6ac141ddbd20c90c"
+      },
+      "475_idempotent_ingest.md": {
+        "title": "48f0d4f42614a302",
+        "whatItIs": "b9770298f7789c68",
+        "keyConcepts": "4ed9ad9fb6222ad9",
+        "exampleCode": "8624a91feea99569",
+        "whenToUse": "1a6ec411ebf63656",
+        "commonMistakes": "66b78645af1a91eb",
+        "furtherReading": "4212a7f123c428f9"
+      },
+      "476_store_and_forward.md": {
+        "title": "6e973bf9badd426a",
+        "whatItIs": "eed2c8f4faea7cc9",
+        "keyConcepts": "1fca24a58af7584b",
+        "exampleCode": "e0ee3bda1ca32f19",
+        "whenToUse": "9cfc2b296febc2b3",
+        "commonMistakes": "9c3d6fe0ed7c6c6d",
+        "furtherReading": "2813149c449089dc"
+      },
+      "477_time_series_schema.md": {
+        "title": "b4099dd92318460e",
+        "whatItIs": "63fb517f623ca767",
+        "keyConcepts": "3fcc3046eb7b9bce",
+        "exampleCode": "01a1df3135326ba0",
+        "whenToUse": "9b14ae0daabe1ecd",
+        "commonMistakes": "ae394c47ec3909e0",
+        "furtherReading": "0161761523d61847"
+      },
+      "478_device_identity_and_provisioning.md": {
+        "title": "f652ba61c29d27c0",
+        "whatItIs": "5fc5b6196d6f5077",
+        "keyConcepts": "adedbcf0001b4ee2",
+        "exampleCode": "c2a96c4daa83e036",
+        "whenToUse": "a6c3ea96e5153108",
+        "commonMistakes": "2efec3d67c8f15af",
+        "furtherReading": "8688e15223ab4339"
+      },
+      "479_device_fleet_management.md": {
+        "title": "7ecf8d8ba8239162",
+        "whatItIs": "105361a45cdfcf29",
+        "keyConcepts": "61ba0c4b57aeba9f",
+        "exampleCode": "90cc87f0fe905ea8",
+        "whenToUse": "9a7113e7fea0d9ec",
+        "commonMistakes": "6f9d2fb5dd19a0c9",
+        "furtherReading": "7eb513a6e65c4da7"
+      },
+      "480_thingsboard_and_the_platform_question.md": {
+        "title": "09aad3baf060fe40",
+        "whatItIs": "292745175714705c",
+        "keyConcepts": "7b2a3fcdb6a7c37e",
+        "exampleCode": "166e729349bfe731",
+        "whenToUse": "f9371b098ddbb4ae",
+        "commonMistakes": "94397b60b7561e9b",
+        "furtherReading": "8da873ad242982e3"
+      },
+      "481_edge_processing.md": {
+        "title": "52d2aa5e827ee2bd",
+        "whatItIs": "4a9773a930987869",
+        "keyConcepts": "fb78466e03db60c4",
+        "exampleCode": "3b8214b925006e37",
+        "whenToUse": "6fe85aae1128d4f8",
+        "commonMistakes": "2e7b3ea5e104f927",
+        "furtherReading": "251a6dcda9e65a0b"
+      },
+      "482_alerting_without_crying_wolf.md": {
+        "title": "17bab8fe92b581f3",
+        "whatItIs": "7f8170736f60d30f",
+        "keyConcepts": "1055f4b08e1e0d77",
+        "exampleCode": "13c300ee253e2f61",
+        "whenToUse": "ca887c0adab7538a",
+        "commonMistakes": "91f96dd0d1fe9493",
+        "furtherReading": "8e4106cfe06cb590"
       }
     },
     "observability-deployment": {

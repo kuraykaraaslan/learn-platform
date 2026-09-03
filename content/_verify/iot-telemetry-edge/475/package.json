@@ -1,0 +1,8 @@
+{
+  "name": "verify-iot-telemetry-edge-475",
+  "private": true,
+  "description": "Replays a device's uplink queue through a naive ingest and then through an idempotent one, showing the duplicate count each produces, for lesson 475's proof block. Zero dependencies, pure Node, no network. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node replay.js"
+  }
+}
