@@ -5,6 +5,15 @@
  * kui-react's own `./styles/index.css` export ships the raw --primary etc.
  * variables but NOT the @theme inline bridge — that bridge only exists in
  * kui-react's own app/globals.css, so it's reproduced here by hand.
+ *
+ * FORK: the surface/border ramp diverges from upstream on purpose (marked
+ * `forked` below). Upstream's dark --surface-sunken equals its
+ * --surface-raised, and its light --border equals its --surface-sunken.
+ * Both collapse this app's card-in-card composition: a lesson section is a
+ * `raised` card, and every widget inside it is a `sunken` card, so upstream
+ * gives light-mode an invisible border and dark-mode an invisible fill —
+ * neither theme gets both an edge and a fill. Per PROVENANCE.md, a
+ * divergence has to say so; re-copying these four lines would regress it.
  */
 @import "tailwindcss";
 
@@ -21,18 +30,23 @@
   --secondary-subtle: #f5f3ff;
   --secondary-fg:     #ffffff;
 
+  /* The four surfaces are a one-way ladder away from the page:
+   * base (the page) → raised (a card on it) → sunken (a block inside that
+   * card) → overlay (a control or pane inside that block). Each rung is
+   * ≥1.12 contrast against the one before it, so nesting reads without a
+   * border; the border then adds the edge on top. forked, see file header. */
   --surface-base:    #ffffff;
-  --surface-raised:  #f9fafb;
-  --surface-overlay: #f3f4f6;
-  --surface-sunken:  #e5e7eb;
+  --surface-raised:  #f6f8fb;  /* forked, was #f9fafb */
+  --surface-sunken:  #e7ebf2;  /* forked, was #e5e7eb — no longer == --border */
+  --surface-overlay: #d7dee9;  /* forked, was #f3f4f6 — moved below sunken to finish the ladder */
 
   --text-primary:    #111827;
-  --text-secondary:  #6b7280;
+  --text-secondary:  #4b5563;  /* forked, was #6b7280 — 4.04:1 on the new sunken, now 6.32:1 */
   --text-disabled:   #9ca3af;
   --text-inverse:    #ffffff;
 
-  --border:          #e5e7eb;
-  --border-strong:   #d1d5db;
+  --border:          #bfc8d6;  /* forked, was #e5e7eb — the light-mode fix */
+  --border-strong:   #8994a8;  /* forked, was #d1d5db — 3.06:1 on base, WCAG 1.4.11 */
   --border-focus:    #3b82f6;
 
   --success:         #22c55e;
@@ -69,15 +83,15 @@
 
   --surface-base:    #0f172a;
   --surface-raised:  #1e293b;
-  --surface-overlay: #334155;
-  --surface-sunken:  #1e293b;
+  --surface-sunken:  #2b3a52;  /* forked, was #1e293b — the dark-mode fix */
+  --surface-overlay: #3a4b66;  /* forked, was #334155 — keeps the step above sunken */
 
   --text-primary:    #f1f5f9;
-  --text-secondary:  #94a3b8;
+  --text-secondary:  #a0aec4;  /* forked, was #94a3b8 — 4.48:1 on the new sunken, now 5.11:1 */
   --text-disabled:   #475569;
 
-  --border:          #334155;
-  --border-strong:   #475569;
+  --border:          #48597a;  /* forked, was #334155 — lighter than every surface it borders */
+  --border-strong:   #64789b;  /* forked, was #475569 */
   --border-focus:    #60a5fa;
 
   --success:         #4ade80;
