@@ -74,7 +74,7 @@ P23 developer path'leri  ← P14..P21 (kurslar arası okuma sırası)
 | P20 | [20-asset-management-systems.md](20-asset-management-systems.md) | ~4-5 gün | tamamlandı — 9 ders (504-512), `asset_register` seed, `510` proof, anti-join + birleştirme hunisi |
 | P21 | [21-smart-infrastructure.md](21-smart-infrastructure.md) | ~5 gün | tamamlandı — 10 ders (513-522); 8 damgalı, 514 + 521 denylist'te, `crosswalk` seed, `518` proof |
 | P22 | [22-domain-closeout.md](22-domain-closeout.md) | ~2 gün | tamamlandı — 6 forward `(#N)` bağı, arama indeksi 77.393 B gz (sınır 98.304), `cap-starved` 2, `shadowed` 0 |
-| P23 | [23-developer-paths.md](23-developer-paths.md) | ~3 gün | planlandı — 4 path, kurslar arası okuma sırası |
+| P23 | [23-developer-paths.md](23-developer-paths.md) | ~3 gün | tamamlandı — 4 path (`bim-developer` 14, `gis-developer` 12, `iot-engineer` 13, `digital-twin` 16), `/paths` + 4 statik sayfa, ders rozeti sunucu bileşeni |
 
 ## Ölçülen zemin
 

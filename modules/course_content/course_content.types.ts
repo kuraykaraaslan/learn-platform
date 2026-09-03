@@ -51,6 +51,41 @@ export type CourseSection = {
   courses: CourseSummary[];
 };
 
+/** One step of a developer path — a lesson, resolved to everything the path
+ *  page and the lesson-page badge need to link and label it. */
+export type DeveloperPathStep = {
+  id: number;
+  title: string;
+  bracket: Bracket;
+  courseSlug: string;
+  courseTitle: string;
+  lessonSlug: string;
+  href: string;
+};
+
+/** A path's steps regrouped by course, keeping the path's step order. */
+export type DeveloperPathCourseGroup = {
+  courseSlug: string;
+  courseTitle: string;
+  steps: DeveloperPathStep[];
+};
+
+/** Card-level view of a path (home page, badge link target list). */
+export type DeveloperPathSummary = {
+  id: string;
+  title: string;
+  blurb: string;
+  stepCount: number;
+  /** How many distinct courses the path draws from. */
+  courseCount: number;
+};
+
+/** A fully-resolved path for its own page. */
+export type DeveloperPath = DeveloperPathSummary & {
+  steps: DeveloperPathStep[];
+  byCourse: DeveloperPathCourseGroup[];
+};
+
 /** Which interactive mechanisms a lesson actually contains — surfaced as chips
  *  on the course-overview list so a reader can see a lesson isn't just prose. */
 export type LessonFeatures = {

@@ -127,28 +127,32 @@ olduğu bilme yanılsamasını üretir.
 
 ## Kabul kriterleri
 
-- [ ] `DEVELOPER_PATHS` dört path taşıyor; `DeveloperPathId` veriden türüyor,
-      elle yazılmış union yok
-- [ ] Her path'in adım sayısı **8-16** arasında
-- [ ] **Her path en az iki kurstan ders topluyor** — testle doğrulanıyor; tek
-      kursluk bir path kürasyon değil, kurs listesinin kopyasıdır
-- [ ] Her adım id'si gerçek bir derse çözülüyor; çözülmeyen id build'i kırıyor
-- [ ] Bir path içinde tekrarlayan id yok; path id'leri tekil ve kebab-case
-- [ ] `pathsForLesson` bir dersin içinde bulunduğu **tüm** path'leri döndürüyor;
-      hiçbir path'te olmayan ders için boş dizi (kusur değil)
-- [ ] `/paths` ve dört `/paths/<slug>` sayfası `generateStaticParams` ile
-      statik üretiliyor; `npm run build` yeşil
-- [ ] Ders sayfasındaki rozet **sunucu bileşeni** — path için eklenen client JS
-      **0 byte**
-- [ ] **İlerleme yüzdesi, sayaç, tik yok**; `progress.store.ts` ve
-      `progress.store.test.ts` bu fazda **hiç değişmedi** (`git diff` boş)
-- [ ] Path içi next/prev **eklenmedi**; ders sayfasında tek bir "sonraki" var
-      ve o P12'nin manifest sıralı olanı
-- [ ] `prereqs` manifest alanı hâlâ **hiçbir madde tarafından kullanılmıyor**
-- [ ] `parse-snapshot.json` **kımıldamadı** — bu faz hiçbir markdown'a
-      dokunmuyor
-- [ ] `content:stats-check` "0 disagree"; `npm run content:check` ve
-      `npm run lint` yeşil
+- [x] `DEVELOPER_PATHS` dört path taşıyor (`course_content.paths.ts`);
+      `DeveloperPathId` veriden türüyor, elle yazılmış union yok — P13'ün
+      `CourseSectionId` usulünün birebir kopyası
+- [x] Adım sayıları **14 / 12 / 13 / 16** — hepsi 8-16 arasında, testle
+- [x] **Her path ≥2 kurstan** ders topluyor: `bim-developer` 3, `gis-developer`
+      4, `iot-engineer` 3, `digital-twin` 6 kurs — testle (`getPath().courseCount`)
+- [x] Her adım id'si `resolvePathSteps`'te gerçek derse çözülüyor; çözülmeyen id
+      **fırlatıyor** (build'i kırar) — `listCourses()`'un sınıflandırılmamış
+      slug duruşuyla aynı
+- [x] Path içinde tekrarlayan id yok, path id'leri tekil + kebab-case — testle
+- [x] `pathsForLesson(id)` bir dersin **tüm** path'lerini döndürüyor; hiçbir
+      path'te olmayan ders için `[]` (korpusun her dersi için test ediliyor)
+- [x] `/paths` + dört `/paths/<slug>` `generateStaticParams` ile statik
+      (`dynamicParams = false`); `npm run build` yeşil, 552 statik sayfa (547 + 5)
+- [x] Ders rozeti (`PathBadge.tsx`), `PathsRail.tsx`, `PathPage.tsx` — üçü de
+      **sunucu bileşeni**, `'use client'` yok; path için 0 byte yeni client JS
+- [x] İlerleme yüzdesi / sayaç / tik **yok**; `progress.store.ts` ve
+      `progress.store.test.ts` **hiç değişmedi** (`git diff modules/progress/` boş)
+- [x] Path içi next/prev **eklenmedi**; ders sayfasında tek "sonraki" P12'nin
+      manifest sıralı olanı. `PathPage` sadece sıralı listeyi gösteriyor
+- [x] `prereqs` manifest alanı hâlâ **hiçbir yerde kullanılmıyor**
+      (`grep -rn '\.prereqs' modules/ app/ scripts/` boş)
+- [x] `parse-snapshot.json` **kımıldamadı** — bu faz hiçbir markdown'a dokunmadı
+      (`git diff content/` boş)
+- [x] `content:stats-check` "0 disagree"; `content:check` (309 test, +11),
+      `lint`, `concepts-check` yeşil
 
 ## Risk
 

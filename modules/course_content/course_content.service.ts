@@ -11,6 +11,7 @@ import { parseMistakes } from './course_content.mistakes';
 import { loadConcepts, type ConceptSummary } from './course_content.concepts';
 import { lessonIndex } from './course_content.index';
 import { COURSE_SECTIONS, sectionForCourse } from './course_content.sections';
+import { DEVELOPER_PATHS, type DeveloperPathDef } from './course_content.paths';
 import type { LessonBlock } from './course_content.blocks';
 import {
   BRACKET_ORDER,
@@ -18,6 +19,10 @@ import {
   type CatalogStats,
   type CourseSection,
   type CourseSummary,
+  type DeveloperPath,
+  type DeveloperPathCourseGroup,
+  type DeveloperPathStep,
+  type DeveloperPathSummary,
   type Lesson,
   type LessonCard,
   type LessonFeatures,
@@ -139,6 +144,84 @@ export class CourseContentService {
         return course ? [course] : [];
       }),
     }));
+  }
+
+  /** Resolves a path's step ids to full lesson steps, in the declared reading
+   *  order. Throws on an id that no longer exists — the same "a dangling
+   *  reference is a build failure" stance listCourses() takes for an
+   *  unclassified slug (docs/phases/23-developer-paths.md). */
+  private static resolvePathSteps(def: DeveloperPathDef): DeveloperPathStep[] {
+    return def.steps.map((id) => {
+      // Rebuilt per call rather than cached: this only runs at build time, for
+      // four static pages, over a few dozen ids total.
+      for (const courseSlug of listCourseSlugs()) {
+        const manifest = readCourseManifest(courseSlug);
+        const item = manifest.items.find((i) => i.id === id);
+        if (!item) continue;
+        return {
+          id,
+          title: item.title,
+          bracket: item.bracket,
+          courseSlug,
+          courseTitle: manifest.title,
+          lessonSlug: fileToLessonSlug(item.file),
+          href: `/courses/${courseSlug}/${fileToLessonSlug(item.file)}`,
+        };
+      }
+      throw new Error(
+        `Developer path "${def.id}" lists step ${id}, which does not resolve to any lesson`
+      );
+    });
+  }
+
+  private static summarizePath(def: DeveloperPathDef): DeveloperPathSummary {
+    const steps = CourseContentService.resolvePathSteps(def);
+    return {
+      id: def.id,
+      title: def.title,
+      blurb: def.blurb,
+      stepCount: steps.length,
+      courseCount: new Set(steps.map((s) => s.courseSlug)).size,
+    };
+  }
+
+  /** Home-page path cards: the four curated cross-course reading orders. */
+  static listPaths(): DeveloperPathSummary[] {
+    return DEVELOPER_PATHS.map((def) => CourseContentService.summarizePath(def));
+  }
+
+  /** One path, fully resolved: its steps in reading order, and the same steps
+   *  regrouped by course (keeping step order) for the sectioned page layout. */
+  static getPath(pathId: string): DeveloperPath | null {
+    const def = DEVELOPER_PATHS.find((p) => p.id === pathId);
+    if (!def) return null;
+
+    const steps = CourseContentService.resolvePathSteps(def);
+
+    const byCourse: DeveloperPathCourseGroup[] = [];
+    for (const step of steps) {
+      let group = byCourse.find((g) => g.courseSlug === step.courseSlug);
+      if (!group) {
+        group = { courseSlug: step.courseSlug, courseTitle: step.courseTitle, steps: [] };
+        byCourse.push(group);
+      }
+      group.steps.push(step);
+    }
+
+    return {
+      ...CourseContentService.summarizePath(def),
+      steps,
+      byCourse,
+    };
+  }
+
+  /** Every path a lesson appears in — for the "Part of:" row on the lesson
+   *  page. Empty when the lesson is in no path, which is expected. */
+  static pathsForLesson(lessonId: number): DeveloperPathSummary[] {
+    // .some() not .includes() — literal-tuple `steps` rejects a plain number arg.
+    return DEVELOPER_PATHS.filter((p) => p.steps.some((s) => s === lessonId)).map((def) =>
+      CourseContentService.summarizePath(def)
+    );
   }
 
   /** Corpus-wide numbers for the hero — read from the measured reports, never

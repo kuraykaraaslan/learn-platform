@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { Badge } from '@kui/ui/Badge';
-import { BRACKET_LABELS, type Lesson } from '../course_content.types';
+import { BRACKET_LABELS, type DeveloperPathSummary, type Lesson } from '../course_content.types';
 import { LessonSectionCard } from './LessonSectionCard';
 import { FailureDrillCard } from './FailureDrillCard';
 import { ConceptTooltipProvider } from './ConceptTooltip';
+import { PathBadge } from './PathBadge';
 
 type LessonNeighbor = { title: string; href: string };
 
@@ -11,10 +12,12 @@ export function LessonPage({
   lesson,
   courseTitle,
   neighbors,
+  paths = [],
 }: {
   lesson: Lesson;
   courseTitle: string;
   neighbors?: { prev: LessonNeighbor | null; next: LessonNeighbor | null };
+  paths?: DeveloperPathSummary[];
 }) {
   return (
     <div className="max-w-3xl mx-auto">
@@ -44,6 +47,8 @@ export function LessonPage({
         <FailureDrillCard lesson={lesson} blocks={lesson.blocks.commonMistakes} />
         <LessonSectionCard title="Further Reading" blocks={lesson.blocks.furtherReading} courseSlug={lesson.courseSlug} lessonFile={lesson.file} verified={lesson.verified === true} />
       </ConceptTooltipProvider>
+
+      <PathBadge paths={paths} />
 
       {/* P12 (docs/phases/12): prev/next only — no tick, streak, or
           completion percentage anywhere here. That's the roadmap's explicit

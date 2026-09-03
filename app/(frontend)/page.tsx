@@ -2,11 +2,13 @@
 import Link from 'next/link';
 import { CourseContentService } from '@/modules/course_content/course_content.service';
 import { CourseCatalog } from '@/modules/course_content/ui/CourseCatalog';
+import { PathsRail } from '@/modules/course_content/ui/PathsRail';
 import { SearchLauncher } from '@/modules/course_content/ui/SearchLauncher';
 
 export default function HomePage() {
   const sections = CourseContentService.listCourseSections();
   const stats = CourseContentService.catalogStats();
+  const paths = CourseContentService.listPaths();
 
   const firstCourse = sections[0]?.courses[0];
 
@@ -42,6 +44,10 @@ export default function HomePage() {
           <Stat value={stats.conceptTerms} label="glossary terms" />
         </dl>
       </section>
+
+      <div className="border-b border-border py-10">
+        <PathsRail paths={paths} />
+      </div>
 
       <div className="pt-10">
         <CourseCatalog sections={sections} />

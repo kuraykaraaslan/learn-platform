@@ -24,6 +24,9 @@ export default async function LessonRoute({
   if (!summary || !lesson) notFound();
 
   const neighbors = CourseContentService.getLessonNeighbors(courseSlug, lessonSlug);
+  const paths = CourseContentService.pathsForLesson(lesson.id);
 
-  return <LessonPage lesson={lesson} courseTitle={summary.title} neighbors={neighbors} />;
+  return (
+    <LessonPage lesson={lesson} courseTitle={summary.title} neighbors={neighbors} paths={paths} />
+  );
 }
