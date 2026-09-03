@@ -1,6 +1,6 @@
 {
   "generatedFrom": "scripts/content-lint",
-  "lessons": 422,
+  "lessons": 436,
   "totals": {
     "findings": 12,
     "errors": 0,

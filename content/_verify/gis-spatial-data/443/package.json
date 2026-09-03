@@ -1,0 +1,8 @@
+{
+  "name": "verify-gis-spatial-data-443",
+  "private": true,
+  "description": "Runs a real 7-parameter Helmert datum transformation with the published EPSG:1314 parameters, for lesson 443's proof block. Zero dependencies on purpose: the ~40 lines of arithmetic ARE the lesson, and proj4 as a root dependency of a static site that never calls it would be paid for by every npm ci. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node shift.js"
+  }
+}

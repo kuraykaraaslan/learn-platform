@@ -404,5 +404,19 @@
   "bim-ifc-data-models/437_units_precision_local_placement.md": "185c7c7e7894ced3",
   "bim-ifc-data-models/438_georeferencing_a_model.md": "96e04d245c816aa4",
   "bim-ifc-data-models/439_ifc_in_a_relational_database.md": "be82c429d5a265b1",
-  "bim-ifc-data-models/440_model_diffing.md": "5d5e6054d0590d23"
+  "bim-ifc-data-models/440_model_diffing.md": "5d5e6054d0590d23",
+  "gis-spatial-data/441_coordinates_are_not_numbers.md": "9d1bbf31bdf7e392",
+  "gis-spatial-data/442_axis_order.md": "4c49c64fd5106bec",
+  "gis-spatial-data/443_epsg_codes_and_datums.md": "c01090806d43a56d",
+  "gis-spatial-data/444_web_mercator.md": "dc6e996cea739354",
+  "gis-spatial-data/445_geojson_ring_validity.md": "b7b2327c459a1419",
+  "gis-spatial-data/446_distance_and_area.md": "84f1a8b66202077f",
+  "gis-spatial-data/447_spatial_indexing_without_an_extension.md": "6e9f5ca3c8448b8c",
+  "gis-spatial-data/448_postgis_the_extension.md": "35976d7773f240cc",
+  "gis-spatial-data/449_spatial_sql.md": "230872c8299bdd08",
+  "gis-spatial-data/450_tile_addressing.md": "6f334cb0bd317ad0",
+  "gis-spatial-data/451_vector_tiles.md": "80f8f5a1e7e9a08d",
+  "gis-spatial-data/452_mbtiles_and_pmtiles.md": "fddb0c0b1bdb8e11",
+  "gis-spatial-data/453_maplibre_style_spec.md": "832f9697a617b6e3",
+  "gis-spatial-data/454_rasters_and_dems.md": "b746deb90c7a49a7"
 }

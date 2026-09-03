@@ -55,6 +55,7 @@ const SUBJECTS: Record<string, string> = {
   'content-seo-personal-brand': 'a magnet drawing readers toward a rising article and a search bar',
   'open-source-community': 'a network of contributors around a shared repository star',
   'bim-ifc-data-models': 'a wireframe building section unfolding into a nested tree of labelled data nodes',
+  'gis-spatial-data': 'a graticule of meridians peeling off a globe and flattening into a grid of map tiles',
 };
 
 type Quality = 'low' | 'medium' | 'high';

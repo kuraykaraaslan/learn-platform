@@ -2,7 +2,7 @@
 
 `npx tsx scripts/content-lint` — generated file, do not edit by hand.
 
-422 lessons · 12 findings · 6 waived
+436 lessons · 12 findings · 6 waived
 
 | Rule | Findings | Severity | What it means |
 |---|---:|---|---|

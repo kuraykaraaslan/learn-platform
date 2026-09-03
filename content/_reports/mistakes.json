@@ -1,11 +1,11 @@
 {
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
-    "lessons": 422,
+    "lessons": 436,
     "single": 141,
     "lessonsWithZeroDrillable": 10,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 390
+    "lessonsWithTwoPlusDrillable": 404
   },
   "lessons": [
     {
@@ -4955,6 +4955,216 @@
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 1,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "441_coordinates_are_not_numbers.md",
+      "verified": true,
+      "total": 5,
+      "single": 0,
+      "drillable": 5,
+      "formCounts": {
+        "bold-dash": 5,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "442_axis_order.md",
+      "verified": true,
+      "total": 5,
+      "single": 0,
+      "drillable": 5,
+      "formCounts": {
+        "bold-dash": 5,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "443_epsg_codes_and_datums.md",
+      "verified": true,
+      "total": 5,
+      "single": 0,
+      "drillable": 5,
+      "formCounts": {
+        "bold-dash": 5,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "444_web_mercator.md",
+      "verified": true,
+      "total": 5,
+      "single": 0,
+      "drillable": 5,
+      "formCounts": {
+        "bold-dash": 5,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "445_geojson_ring_validity.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "446_distance_and_area.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "447_spatial_indexing_without_an_extension.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "448_postgis_the_extension.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "449_spatial_sql.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "450_tile_addressing.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "451_vector_tiles.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "452_mbtiles_and_pmtiles.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "453_maplibre_style_spec.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "gis-spatial-data",
+      "file": "454_rasters_and_dems.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
         "single": 0
       }
     },

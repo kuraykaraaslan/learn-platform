@@ -153,26 +153,51 @@ tek satırlık notla ertelenir. Çalışmayan bir Run düğmesi ship edilmez.
 
 ## Kabul kriterleri
 
-- [ ] 14 ders + manifest; `shape/*` sıfır bulgu; 14'ü de `stamp-verified.ts`
+- [x] 14 ders + manifest; `shape/*` sıfır bulgu; 14'ü de `stamp-verified.ts`
       ile damgalı
-- [ ] `parseMistakes` bu 14 derste **0 `single`** madde raporluyor
-- [ ] `asset_points.sql` ≤50 KB; 447'nin `sql run` fence'leri PGlite'ta gerçekten
-      koşuyor ve `EXPLAIN ANALYZE` çıktısı üretiyor
-- [ ] **448 ve 449'da hiçbir `run` işareti yok** ve nesirleri PostGIS'in bu
-      runtime'da bulunmadığını açıkça söylüyor
-- [ ] **452'de `sql run` yok** — MBTiles SQLite; şema düz `sql` fence'i
-- [ ] **453'te harita render eden bir fence yok**; öğretilen şey style spec'in
-      veri modeli
-- [ ] 450'nin `proof` bloğu damgalı, sıfır bağımlılık, iki koşuda byte-aynı
-- [ ] 443'ün `proof` bloğu damgalı, workspace **sıfır bağımlılık**,
-      `stamp-verify.ts --check` yeşil
-- [ ] `run project` fence'i **ya P9 doğrulandığı için merge edildi ya da hiç
-      merge edilmedi** — gri düğme yok
-- [ ] Üç sabit korpus sayısı 422 → **436**
-- [ ] `content:stats-check` "0 disagree" (`## Alan bloğu` dahil)
-- [ ] `parse-snapshot.json` +14 ders; `content:snapshot-diff` %100 EXPLAINED
-- [ ] `git diff --exit-code -- content/_reports` temiz
-- [ ] `npm run content:check` + `lint` + `build` yeşil
+- [x] `parseMistakes` bu 14 derste **0 `single`** madde raporluyor — 138
+      maddenin 138'i drill'lenebilir
+- [x] `asset_points.sql` **3.914 bayt** (sınır 50 KB); 447'nin üç `sql run`
+      fence'i de PGlite'ta gerçekten koşuyor. Tohum `random()` kullanmıyor:
+      pozisyonlar satır numarasından sabit aritmetikle türüyor, `geohash`
+      sütunu tohumun kendi plpgsql kodlayıcısıyla hesaplanıyor
+- [x] Plan şekli iddiaları koşuldu, yazılmadı: bbox sorgusu `asset_points_lon`
+      üzerinde **Index Scan + lat `Filter`** veriyor (iki tek sütunlu btree bir
+      mekânsal indeks değil), önek sorgusu `text_pattern_ops` sayesinde
+      `~>=~ '9prcq'` / `~<~ '9prcr'` **Index Cond**'u ile Bitmap Index Scan
+      veriyor
+- [x] Hücre kenarı ve antimeridyen hataları **sayı olarak** gösteriliyor:
+      100 noktalık bir küme 5 karakterlik hücrede 57'ye düşüyor; antimeridyen
+      kümesinde naif kutu 70 yerine 52 buluyor
+- [x] **448 ve 449'da hiçbir `run` işareti yok**; ikisi de PGlite'ın PostGIS
+      taşımadığını kendi nesirlerinde blockquote ile söylüyor
+- [x] **452'de `sql run` yok** — MBTiles SQLite; şema düz `sql` fence'i,
+      çalıştırılabilir kısım (adres aritmetiği + Hilbert sırası) `ts run`
+- [x] **453'te harita render eden bir fence yok**; `ts run` style spec grafiğini
+      gezip zoom başına aktif katman sayısını çıkarıyor, MapLibre import
+      edilmiyor
+- [x] 450'nin `proof` bloğu damgalı, sıfır bağımlılık; y-flip'siz kutuyu
+      (-51,51 .. -51,45) ve zoom 0'da iki şemanın neden aynı göründüğünü basıyor
+- [x] 443'ün `proof` bloğu damgalı, workspace **sıfır bağımlılık**; her sabit
+      yayımlanmış bir EPSG değeri (Airy 1830 = EPSG:7001, WGS 84 = EPSG:7030,
+      dönüşüm = EPSG:1314, beyan edilen doğruluk 2,0 m) ve kayma **hesaplanıyor**
+      (~90-108 m). `stamp-verify.ts --check` 15/15 yeşil
+- [x] **`run project` fence'i merge edilmedi.** P9 hâlâ doğrulanmadı (boot
+      tarayıcı gerektiriyor, headless ortamda koşturulamıyor), ve fazın sert
+      kuralı gereği gri düğme ship edilmedi. `#445`'in turf adayı **P22'ye
+      ertelendi** — aşağıdaki `Eklenebilecekler` tablosuna girdi
+- [x] Üç sabit korpus sayısı 422 → **436**
+- [x] `content:stats-check` **"32 rows checked · 0 disagree"** (`## Alan bloğu`
+      dahil: 24 ders / 2 kurs, 87 fence, 138 madde)
+- [x] `parse-snapshot.json` +14 ders; `content:snapshot-diff` 0 unexplained
+- [x] `git diff --exit-code -- content/_reports` temiz
+- [x] `npm run content:check` + `lint` + `concepts-check` + `verify-mermaid`
+      + `build` (467 statik sayfa) yeşil
+
+**Kaynaklar.** 14 dersin Further Reading madde sayısı 3-5 arasında gerçekten
+değişiyor (3×4, 4×9, 5×1). Her URL merge öncesi kontrol edildi; EPSG
+parametreleri EPSG kayıt sayfalarından **okundu**, hatırlanmadı, ve PostGIS
+linkleri `manual-3.4` altına sabitlendi.
 
 ## Risk
 
@@ -202,3 +227,4 @@ işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
 | COG (Cloud Optimized GeoTIFF) | Rasterin aralıklı HTTP ile okunması | bağımlılık — `#454` raster örneklemeyi kuruyor; COG onun üstüne gelir |
 | GDAL/OGR komut satırı iş akışı | Alanın fiilî İsviçre çakısı | doğrulama — `bash` fence'i hiçbir runtime'da koşmuyor; `proof` ile CI'da GDAL kurmak kök bağımlılık demek |
 | `proj4` kök bağımlılığı | Yetkili EPSG parametreleriyle dönüşüm | doktrin/kapsam — `#443`'ün matematiği ~40 satır ve dersin konusu; bağımlılık ancak yetkili parametre gerekirse gerekçelendirilir |
+| `#445` için turf `run project` fence'i | Gerçek bir kütüphaneyle poligon geçerliliği ve sarım denetimi | bağımlılık — P9'un WebContainer boot'u hâlâ tarayıcıda doğrulanmadı; fazın sert kuralı gereği merge edilmedi, P22'de yeniden bakılacak |

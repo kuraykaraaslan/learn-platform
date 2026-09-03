@@ -27,7 +27,7 @@ describe('remarkLessonRefs', () => {
 
   it('resolves every id in the corpus index to a real course route', () => {
     const index = lessonIndex();
-    expect(index.size).toBe(422);
+    expect(index.size).toBe(436);
     for (const ref of index.values()) {
       expect(ref.href).toMatch(/^\/courses\/[a-z0-9-]+\/[a-z0-9-]+$/);
     }

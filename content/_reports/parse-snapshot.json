@@ -1,5 +1,5 @@
 {
-  "lessonCount": 422,
+  "lessonCount": 436,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -3003,6 +3003,134 @@
         "whenToUse": "121ce0afd02d8168",
         "commonMistakes": "78e2a19b0a1663d9",
         "furtherReading": "25bc8a99e84e68fc"
+      }
+    },
+    "gis-spatial-data": {
+      "441_coordinates_are_not_numbers.md": {
+        "title": "3e7b70865ecf41e2",
+        "whatItIs": "e2edff2a3bc2dedb",
+        "keyConcepts": "3687d97796f87472",
+        "exampleCode": "b18c4892b27b6fca",
+        "whenToUse": "a1d1826f1dbcc9eb",
+        "commonMistakes": "c00844da1f39b385",
+        "furtherReading": "e6df3c3b4e37e4e4"
+      },
+      "442_axis_order.md": {
+        "title": "bc0297e5e2fa3103",
+        "whatItIs": "9ebb7fb2870a42cf",
+        "keyConcepts": "c20f75960e8af99a",
+        "exampleCode": "69e9ea4649dfdd1d",
+        "whenToUse": "711944cdd59348ee",
+        "commonMistakes": "16bfd8834745a79b",
+        "furtherReading": "ff6635a9c20e3303"
+      },
+      "443_epsg_codes_and_datums.md": {
+        "title": "098b543e4142fe3b",
+        "whatItIs": "0b1ff349309bdaa4",
+        "keyConcepts": "efe478773c66b486",
+        "exampleCode": "44cc81c370a23695",
+        "whenToUse": "b92795363dacfab1",
+        "commonMistakes": "6e10dcaed6b3a808",
+        "furtherReading": "25dc3aff35078f65"
+      },
+      "444_web_mercator.md": {
+        "title": "a35bfab2803e6169",
+        "whatItIs": "1132ff9169b3c3d0",
+        "keyConcepts": "a4ed8ce193873e1e",
+        "exampleCode": "f1d56d1ce1e54342",
+        "whenToUse": "8b00a63d4c4f5e6d",
+        "commonMistakes": "ced137fefdaa78c6",
+        "furtherReading": "1461a3226c6e90c3"
+      },
+      "445_geojson_ring_validity.md": {
+        "title": "39bc8d5a4d99a51d",
+        "whatItIs": "684ac569e7b309a0",
+        "keyConcepts": "3b081f1a82ea1bd6",
+        "exampleCode": "8d8760ed9856fb87",
+        "whenToUse": "dec0a265ecc99f80",
+        "commonMistakes": "4e20fd00051ace5a",
+        "furtherReading": "9c1fd3bea7347b64"
+      },
+      "446_distance_and_area.md": {
+        "title": "2d33f9aa290d7087",
+        "whatItIs": "84735b5598c6cbf0",
+        "keyConcepts": "d84a23c5a05a8d94",
+        "exampleCode": "2bdf0c8699cdc7a8",
+        "whenToUse": "3491758760cab82b",
+        "commonMistakes": "7f7d9ccaee37ed08",
+        "furtherReading": "af0386b400d562dd"
+      },
+      "447_spatial_indexing_without_an_extension.md": {
+        "title": "3c86f370c424e5c4",
+        "whatItIs": "a4df47a496c35c32",
+        "keyConcepts": "6cc3faf5bae2c2cb",
+        "exampleCode": "675acdf5fb081e7a",
+        "whenToUse": "ebac24a65eb61d34",
+        "commonMistakes": "c6dcd736de9a68ba",
+        "furtherReading": "8c6336150deb5067"
+      },
+      "448_postgis_the_extension.md": {
+        "title": "b814fa5beb1c3eac",
+        "whatItIs": "0df30b69afdce34d",
+        "keyConcepts": "a5058cae1e0b7d36",
+        "exampleCode": "d1e8d7a94e72f58b",
+        "whenToUse": "a218ad4664c55b3f",
+        "commonMistakes": "3c08fdecf0046a0b",
+        "furtherReading": "0105b7e3f6cef60e"
+      },
+      "449_spatial_sql.md": {
+        "title": "830c9c473627a286",
+        "whatItIs": "5f0e507b3bee0b1c",
+        "keyConcepts": "2f7b9daa39cc4f3c",
+        "exampleCode": "b3e603fdb201300f",
+        "whenToUse": "b9737a571cf51586",
+        "commonMistakes": "1666f17a94628b15",
+        "furtherReading": "57e3af1c80e4b2a0"
+      },
+      "450_tile_addressing.md": {
+        "title": "32a515a8538bfa24",
+        "whatItIs": "53c87ac74ce8ccb3",
+        "keyConcepts": "aca4b5a145d2afcc",
+        "exampleCode": "5fa5baff332a189a",
+        "whenToUse": "84d82a8e47787542",
+        "commonMistakes": "828b23ffca3cdd81",
+        "furtherReading": "d0545a1959a3acdc"
+      },
+      "451_vector_tiles.md": {
+        "title": "4dfcffc2aa2ab478",
+        "whatItIs": "5b2db9f6d61b3f56",
+        "keyConcepts": "3af63a7adbb030d5",
+        "exampleCode": "0b1e0a054b4621b2",
+        "whenToUse": "d75bbd6cb73e6b6e",
+        "commonMistakes": "d92c74c9df1c05d3",
+        "furtherReading": "a3787f1c8b2499ac"
+      },
+      "452_mbtiles_and_pmtiles.md": {
+        "title": "9c5f4956c1ab4ae1",
+        "whatItIs": "0e14b88f6af8607d",
+        "keyConcepts": "8d20288a03a674da",
+        "exampleCode": "3dc503e9653a9dbd",
+        "whenToUse": "ff3b2e91b8706173",
+        "commonMistakes": "05c3e84991d98578",
+        "furtherReading": "2fb7dd0098b0345d"
+      },
+      "453_maplibre_style_spec.md": {
+        "title": "f1b4ab6a55b376c8",
+        "whatItIs": "9e79c3780ab150df",
+        "keyConcepts": "541030346f4b2b54",
+        "exampleCode": "11c0a391e672e08e",
+        "whenToUse": "aa9b197589a921c4",
+        "commonMistakes": "a8f929e2022b14e9",
+        "furtherReading": "0cadd1e6238234dd"
+      },
+      "454_rasters_and_dems.md": {
+        "title": "06cf0f266ad4ad9b",
+        "whatItIs": "8dcdefcf5c502142",
+        "keyConcepts": "bc5a12fd9dcecad3",
+        "exampleCode": "dc42b192245e2756",
+        "whenToUse": "93c8d03a43e33ccd",
+        "commonMistakes": "ddb0fcf1a42375f9",
+        "furtherReading": "78b92c904dfeae77"
       }
     },
     "observability-deployment": {

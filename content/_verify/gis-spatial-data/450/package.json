@@ -1,0 +1,8 @@
+{
+  "name": "verify-gis-spatial-data-450",
+  "private": true,
+  "description": "Prints the same tile's XYZ, TMS and quadkey addresses side by side, then the box you actually get when the y-flip is skipped, for lesson 450's proof block. Zero dependencies: the whole lesson is twenty lines of integer arithmetic. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node tiles.js"
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "slug": "gis-spatial-data",
+  "title": "GIS & Spatial Data",
+  "description": "Coordinates, projections, spatial SQL and tiles for developers: what a lon/lat pair does not tell you, and the bugs that survive every schema check.",
+  "items": [
+    {
+      "id": 441,
+      "file": "441_coordinates_are_not_numbers.md",
+      "title": "Coordinates Are Not Numbers: Geographic vs Projected",
+      "bracket": "1-3",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 442,
+      "file": "442_axis_order.md",
+      "title": "Axis Order: The lon/lat Swap That Passes Every Schema Check",
+      "bracket": "1-3",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 443,
+      "file": "443_epsg_codes_and_datums.md",
+      "title": "EPSG Codes and Datums: What \"WGS 84\" Does Not Tell You",
+      "bracket": "3-7",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 444,
+      "file": "444_web_mercator.md",
+      "title": "Web Mercator: The Projection Your Map Library Already Assumed",
+      "bracket": "3-7",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 445,
+      "file": "445_geojson_ring_validity.md",
+      "title": "GeoJSON: Ring Winding, Closed Rings, and Invalid Geometry",
+      "bracket": "3-7",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 446,
+      "file": "446_distance_and_area.md",
+      "title": "Distance and Area on a Sphere: Haversine, Planar Error, and When Each Lies",
+      "bracket": "3-7",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 447,
+      "file": "447_spatial_indexing_without_an_extension.md",
+      "title": "Spatial Indexing Without a Spatial Extension: Bounding Boxes, Geohash, Quadkeys",
+      "bracket": "3-7",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 448,
+      "file": "448_postgis_the_extension.md",
+      "title": "PostGIS: The Geometry Type, the Index, and What the Extension Costs",
+      "bracket": "3-7",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 449,
+      "file": "449_spatial_sql.md",
+      "title": "Spatial SQL: Predicates, Joins, and the Query That Scans Everything",
+      "bracket": "3-7",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 450,
+      "file": "450_tile_addressing.md",
+      "title": "Tile Addressing: z/x/y, the TMS y-Flip, and the Map That Comes Out Mirrored",
+      "bracket": "3-7",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 451,
+      "file": "451_vector_tiles.md",
+      "title": "Vector Tiles: Zoom-Dependent Simplification and the Feature That Disappears",
+      "bracket": "7-10",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 452,
+      "file": "452_mbtiles_and_pmtiles.md",
+      "title": "MBTiles and PMTiles: Packaging a Tileset as One File",
+      "bracket": "3-7",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 453,
+      "file": "453_maplibre_style_spec.md",
+      "title": "MapLibre: Style Spec, Sources, and the Client-Side Budget",
+      "bracket": "3-7",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    },
+    {
+      "id": 454,
+      "file": "454_rasters_and_dems.md",
+      "title": "Rasters and DEMs: Sampling an Elevation Correctly",
+      "bracket": "7-10",
+      "category": "GIS & Spatial Data",
+      "verified": true
+    }
+  ]
+}

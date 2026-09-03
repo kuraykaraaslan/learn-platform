@@ -66,7 +66,7 @@ P23 developer path'leri  ← P14..P21 (kurslar arası okuma sırası)
 | P12 | [12-search-and-review-queue.md](12-search-and-review-queue.md) | ~4 gün | tamamlandı — ⌘K, next/prev, Return Queue, export/import |
 | P13 | [13-course-branches.md](13-course-branches.md) | ~1 gün | tamamlandı — `CourseSectionId` veriden türüyor; 6 yeni dal iddiası, test 268 → 274 |
 | P14 | [14-bim-ifc-data-models.md](14-bim-ifc-data-models.md) | ~6-7 gün | tamamlandı — 10 ders (431-440), `built-environment` dalı, `spatial` widget (3 tüketici) |
-| P15 | [15-gis-spatial-data.md](15-gis-spatial-data.md) | ~6 gün | planlandı — 14 ders (441-454) |
+| P15 | [15-gis-spatial-data.md](15-gis-spatial-data.md) | ~6 gün | tamamlandı — 14 ders (441-454), `asset_points` seed, 2 proof; `run project` merge edilmedi (P9) |
 | P16 | [16-autodesk-developer-platform.md](16-autodesk-developer-platform.md) | ~7 gün | planlandı — 14 ders (455-468), Revit API + APS |
 | P17 | [17-iot-telemetry-edge.md](17-iot-telemetry-edge.md) | ~7 gün | planlandı — 14 ders (469-482), MQTT + LoRaWAN |
 | P18 | [18-digital-twin-engineering.md](18-digital-twin-engineering.md) | ~6 gün | planlandı — 11 ders (483-493), BIM+GIS + iç mekân |
@@ -86,22 +86,22 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 
 | Ölçüm | P0 zemini | Bugün |
 |---|---:|---:|
-| Ders / kurs / bölüm | 412 / 23 / 2473 | 422 / 24 / **2532** |
-| Fence | 505 | 942 |
+| Ders / kurs / bölüm | 412 / 23 / 2473 | 436 / 25 / **2616** |
+| Fence | 505 | 994 |
 | Yalnız kod fence'i olan ders | 179 | 68 |
 | Yalnız şablon fence'i olan ders | 211 | 137 |
 | Hiç fence'i olmayan ders | 0 | 0 |
-| TS/TSX/JS fence | 161 | 173 |
-| Common Mistakes maddesi | 1746 | 1830 |
-| — drill'lenebilir | 705 (%40,4) | **1689 (%92,3)** |
+| TS/TSX/JS fence | 161 | 185 |
+| Common Mistakes maddesi | 1746 | 1910 |
+| — drill'lenebilir | 705 (%40,4) | **1769 (%92,6)** |
 | — tek cümlelik (P2'nin işi) | 1041 | **141** |
-| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **412** (sıfır: 10) |
+| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **426** (sıfır: 10) |
 | Form fence / dosya | 91 / 88 | 91 / 88 |
 | Checklist fence / madde | 35 / 293 | 36 / 295 |
-| `sql` fence | 9 | 24 |
+| `sql` fence | 9 | 32 |
 | `java` fence | 10 | 10 |
-| Blockquote kullanan ders | 45 | 88 |
-| Mermaid kullanan ders | 0 | 18 |
+| Blockquote kullanan ders | 45 | 90 |
+| Mermaid kullanan ders | 0 | 19 |
 
 Bölüm sayısındaki fark bir ölçüm hatasıdır, korpus değişimi değil: 412 ders × 6
 bölüm = **2472**, ve hiçbir bölüm boş değil. P0'ın 2473'ü bir fazla saymış.
@@ -122,10 +122,10 @@ kaynak `course_content.sections.ts` olarak kalır.
 
 | Alan ölçüsü | P13 zemini | Bugün |
 |---|---:|---:|
-| Alan dersi / alan kursu | 0 / 0 | 10 / 1 |
-| Alan fence'i | 0 | 35 |
-| Alan Common Mistakes maddesi | 0 | 58 |
-| Alan — drill'lenebilir | 0 | 58 |
+| Alan dersi / alan kursu | 0 / 0 | 24 / 2 |
+| Alan fence'i | 0 | 87 |
+| Alan Common Mistakes maddesi | 0 | 138 |
+| Alan — drill'lenebilir | 0 | 138 |
 
 P8/P9'un tek seferlik fence analizleri (hiç import etmeyen 44, yalnız
 tarayıcı-güvenli import 10, WebContainer'da çalışabilen 62, yerel eklenti
@@ -140,16 +140,16 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 
 | Widget | Fence | Ders |
 |---|---:|---:|
-| `quiz` | 174 | 174 |
-| `recall` | 174 | 174 |
-| `mermaid` | 18 | 18 |
+| `quiz` | 188 | 188 |
+| `recall` | 188 | 188 |
+| `mermaid` | 19 | 19 |
 | `tradeoff` | 15 | 15 |
 | `calc` | 13 | 13 |
 | `spatial` | 3 | 3 |
-| `proof` | 13 | 13 |
-| `run` (toplam) | 32 | 24 |
-| — `sql run` | 18 | |
-| — JS/TS `run` | 11 | |
+| `proof` | 15 | 15 |
+| `run` (toplam) | 43 | 32 |
+| — `sql run` | 21 | |
+| — JS/TS `run` | 19 | |
 | — `run project` | 3 | |
 | `diff` | 2 | 2 |
 

@@ -1,7 +1,7 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
   "totalTerms": 130,
-  "totalLessons": 422,
+  "totalLessons": 436,
   "totals": {
     "neverMatched": 0,
     "neverLinked": 18,
@@ -140,7 +140,8 @@
       "alsoAppearsInLessons": [
         439,
         12,
-        411
+        411,
+        448
       ]
     },
     {
@@ -887,7 +888,7 @@
       "lessonsLinkedIn": [
         "architecture-design-patterns-testing/68_big_o_analysis.md"
       ],
-      "rawOccurrences": 6
+      "rawOccurrences": 7
     },
     {
       "slug": "outbox-relay",
@@ -922,7 +923,7 @@
       "slug": "primary-key",
       "term": "Primary key",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 12
+      "rawOccurrences": 14
     },
     {
       "slug": "principle-of-least-privilege",
