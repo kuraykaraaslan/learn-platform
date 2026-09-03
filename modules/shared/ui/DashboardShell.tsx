@@ -48,7 +48,9 @@ export function DashboardShell({
       navGroups={navGroups}
       activeId={activeId}
       topbar={
-        <AppTopBar>
+        // Below `lg` the sidebar — and with it the brand lockup — is behind the
+        // hamburger, so the topbar carries the logo there and only there.
+        <AppTopBar logo={logo && <span className="lg:hidden">{logo}</span>}>
           <div className="flex-1" />
           <div className="flex items-center gap-1">
             {topbarExtra}

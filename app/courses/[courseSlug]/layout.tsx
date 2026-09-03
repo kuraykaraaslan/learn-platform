@@ -3,6 +3,7 @@
 // build a `sidebar` nav data structure, hand it to DashboardShell, render
 // children inside it.
 import Link from 'next/link';
+import { Logo } from '@/modules/shared/ui/Logo';
 import { DashboardShell } from '@/modules/shared/ui/DashboardShell';
 import { CourseContentService } from '@/modules/course_content/course_content.service';
 import { SearchLauncher } from '@/modules/course_content/ui/SearchLauncher';
@@ -19,16 +20,8 @@ export default async function CourseLayout({
 
   return (
     <DashboardShell
-      logo={
-        <Link href="/" className="text-sm font-bold text-primary hover:text-primary-hover transition-colors">
-          learn.kuray.dev
-        </Link>
-      }
-      compactLogo={
-        <Link href="/" className="text-xs font-bold text-primary hover:text-primary-hover transition-colors">
-          U
-        </Link>
-      }
+      logo={<Logo />}
+      compactLogo={<Logo compact />}
       mobileSidebarTitle="Course Content"
       navGroups={navGroups}
       topbarExtra={
