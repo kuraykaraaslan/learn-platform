@@ -3,7 +3,12 @@ import nextTypescript from 'eslint-config-next/typescript';
 
 const eslintConfig = [
   {
-    ignores: ['content/**', '.next/**', 'out/**', 'build/**', 'next-env.d.ts'],
+    // `.junk/**` is this repo's gitignored scratch area, and `git worktree add`
+    // puts a full second copy of the tree there. Without this line `eslint .`
+    // walks that copy and reports every pre-existing finding in it a second
+    // time, from a path nobody is editing — which made `npm run lint` red for
+    // a reason unrelated to any change.
+    ignores: ['content/**', '.next/**', 'out/**', 'build/**', '.junk/**', 'next-env.d.ts'],
   },
   ...nextCoreWebVitals,
   ...nextTypescript,

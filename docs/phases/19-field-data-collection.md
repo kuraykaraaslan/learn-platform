@@ -91,17 +91,40 @@ bildirdiği doğruluk alanını okuyup yorumlamasını sağlar.
 
 ## Kabul kriterleri
 
-- [ ] 10 ders + manifest; `shape/*` sıfır bulgu; 10'u da damgalı
-- [ ] `parseMistakes` bu 10 derste **0 `single`** madde raporluyor
-- [ ] `field_submissions.sql` ≤50 KB; `sql run` fence'leri PGlite'ta koşuyor
-- [ ] 495'in `proof` bloğu damgalı, sıfır bağımlılık, iki koşuda byte-aynı
-- [ ] 497'de cihaza özgü doğruluk rakamı **yok**; okuma/ölçme yolu var
-- [ ] 498, iç mekânda GPS'in çalışmadığını nesirde açıkça söylüyor ve
-      `#489`'a `(#N)` ile bağlı
-- [ ] 495/498/499/503 `(#N)` ile bağlı; `links/dead-lesson-ref` temiz
-- [ ] Üç sabit korpus sayısı 475 → **485**
-- [ ] `content:stats-check` "0 disagree"; snapshot +10 ders, %100 EXPLAINED
-- [ ] `git diff --exit-code -- content/_reports` temiz; `content:check` yeşil
+- [x] 10 ders + manifest; `shape/*` sıfır bulgu; 10'u da damgalı
+- [x] `parseMistakes` bu 10 derste **0 `single`** madde raporluyor
+- [x] `field_submissions.sql` **5.144 bayt** (sınır 50 KB); 495/502/503'ün
+      `sql run` fence'leri PGlite'ta koşuldu. Tohum üç tabloyu birlikte
+      taşıyor — ham yükleme günlüğü, hedef tablo, ve doğrulanacak varlık
+      kütüğü — çünkü dersin konusu üçünün arasındaki ilişki
+- [x] 495'in `proof` bloğu damgalı, sıfır bağımlılık, iki koşuda byte-aynı.
+      12 denemenin 8 kayda düşmesi ve AT-0163'ün naif tabloda **iki yerine
+      dört** bulgu göstermesi koşunun çıktısı
+- [x] **497'de cihaza özgü doğruluk rakamı yok** (ölçüldü: 0 eşleşme).
+      Bunun yerine alanın ne anlama geldiği yazılı — %95 güven yarıçapı, yani
+      yirmi ölçümün biri dışarıda — ve alanın karesiyle büyüyen alan, ve
+      yüzlerce/binlerce metrelik bir değerin **uydu değil ağ kaynaklı** bir
+      konum olduğu
+- [x] 498, GPS'in iç mekânda çalışmadığını ilk paragrafında söylüyor ve
+      `Lesson 489`'a bağlı. Ölü hesabın hatası `ts run` ile **biriktiği**
+      gösteriliyor; mutlak doğruluk rakamı verilmiyor, ve "düzeltme aralığı
+      doğruluğun kendisidir" sonucu çıkarılıyor — yani bir kurulum sorusu
+- [x] 500 teknik sınırda tutuldu: hash / dedupe / güvenilmez metaveri.
+      Delil hukuku iddiası yok, ve ders bunu açılışında söylüyor
+- [x] Çapraz bağlar: 495 → `(#7)`, 499 → `Lesson 442`, 498 → `Lesson 489`,
+      503 → `Lesson 435`, artı kurs içi 12 bağ. `links/dead-lesson-ref` temiz
+- [x] Üç sabit korpus sayısı 475 → **485**
+- [x] `content:stats-check` "32 rows checked · 0 disagree"; snapshot +10 ders,
+      0 unexplained
+- [x] `git diff --exit-code -- content/_reports` temiz; `content:check`,
+      `lint`, `concepts-check`, `verify-mermaid`, `build` (525 statik sayfa)
+      yeşil
+
+**Şartnamede bir yazım hatası düzeltildi.** Kaynak kuralı bölümünde
+"fotoğraf/kanıt zinciri … 487 **teknik** bir ders" yazıyor; kastedilen 500.
+Ders 487 bu kursta değil (P18'in zaman serisi dersi). 500 tam olarak
+tarif edildiği gibi yazıldı: hash, dedupe, güvenilmez metaveri, ve hukuki
+sonuç çıkarmama.
 
 ## Risk
 

@@ -456,5 +456,15 @@
   "digital-twin-engineering/490_twin_identity.md": "9d63154a309840b5",
   "digital-twin-engineering/491_simulation_vs_observation.md": "d0af6c2f859dd37c",
   "digital-twin-engineering/492_twin_sync.md": "5748e6337da0e447",
-  "digital-twin-engineering/493_what_a_twin_cannot_do.md": "ce6a9784f8d073fd"
+  "digital-twin-engineering/493_what_a_twin_cannot_do.md": "ce6a9784f8d073fd",
+  "field-data-collection/494_offline_first_capture.md": "ffc0c959a9aa3617",
+  "field-data-collection/495_client_generated_ids.md": "a06a31f77c7bb482",
+  "field-data-collection/496_conflict_resolution.md": "765f14b45baf84bc",
+  "field-data-collection/497_gps_accuracy.md": "4f96500ac9f02f15",
+  "field-data-collection/498_indoor_positioning.md": "7811041877bd6b7d",
+  "field-data-collection/499_coordinates_from_a_phone.md": "2ef67479b25ceab3",
+  "field-data-collection/500_photo_evidence.md": "6fd313088bd3ab2f",
+  "field-data-collection/501_form_schemas_that_survive.md": "9d99e77569749551",
+  "field-data-collection/502_sync_windows.md": "7aaf165cc6db53d6",
+  "field-data-collection/503_validating_field_data.md": "57de1a040d11d898"
 }

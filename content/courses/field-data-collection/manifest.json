@@ -1,0 +1,87 @@
+{
+  "slug": "field-data-collection",
+  "title": "Field Data Collection",
+  "description": "Capturing data where there is no network: offline queues, client-generated ids, GPS you cannot trust, and sync that does not duplicate.",
+  "items": [
+    {
+      "id": 494,
+      "file": "494_offline_first_capture.md",
+      "title": "Offline-First Capture: The Queue Is the Product",
+      "bracket": "1-3",
+      "category": "Field Data Collection",
+      "verified": true
+    },
+    {
+      "id": 495,
+      "file": "495_client_generated_ids.md",
+      "title": "Client-Generated Ids and Idempotent Submission",
+      "bracket": "3-7",
+      "category": "Field Data Collection",
+      "verified": true
+    },
+    {
+      "id": 496,
+      "file": "496_conflict_resolution.md",
+      "title": "Conflict Resolution for Field Edits: LWW, Version Vectors, Manual Merge",
+      "bracket": "7-10",
+      "category": "Field Data Collection",
+      "verified": true
+    },
+    {
+      "id": 497,
+      "file": "497_gps_accuracy.md",
+      "title": "GPS Accuracy: Horizontal Error, Fix Quality, and When to Reject a Point",
+      "bracket": "3-7",
+      "category": "Field Data Collection",
+      "verified": true
+    },
+    {
+      "id": 498,
+      "file": "498_indoor_positioning.md",
+      "title": "Indoor Positioning: What to Do When GPS Stops Working",
+      "bracket": "3-7",
+      "category": "Field Data Collection",
+      "verified": true
+    },
+    {
+      "id": 499,
+      "file": "499_coordinates_from_a_phone.md",
+      "title": "Coordinates From a Phone: DMS, Decimal Degrees, and EXIF GPS",
+      "bracket": "1-3",
+      "category": "Field Data Collection",
+      "verified": true
+    },
+    {
+      "id": 500,
+      "file": "500_photo_evidence.md",
+      "title": "Photo Evidence: Hashing, Deduplication, and Metadata You Must Not Trust",
+      "bracket": "3-7",
+      "category": "Field Data Collection",
+      "verified": true
+    },
+    {
+      "id": 501,
+      "file": "501_form_schemas_that_survive.md",
+      "title": "Form Schemas That Survive a Version Change in the Field",
+      "bracket": "3-7",
+      "category": "Field Data Collection",
+      "verified": true
+    },
+    {
+      "id": 502,
+      "file": "502_sync_windows.md",
+      "title": "Sync Windows, Partial Uploads, and Resumable Transfer",
+      "bracket": "3-7",
+      "category": "Field Data Collection",
+      "verified": true
+    },
+    {
+      "id": 503,
+      "file": "503_validating_field_data.md",
+      "title": "Validating Field Data Against the Model It Describes",
+      "bracket": "7-10",
+      "category": "Field Data Collection",
+      "verified": true
+    }
+  ]
+}

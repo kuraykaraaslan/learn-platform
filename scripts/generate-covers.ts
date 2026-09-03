@@ -59,6 +59,7 @@ const SUBJECTS: Record<string, string> = {
   'autodesk-developer-platform': 'a desktop drafting window, a headless job crate, and a cloud endpoint linked by one pipeline',
   'iot-telemetry-edge': 'a small sensor node emitting concentric signal arcs toward a gateway and a stack of stored readings',
   'digital-twin-engineering': 'a solid building form beside its wireframe counterpart, joined by a live signal line and a time-series ribbon',
+  'field-data-collection': 'a rugged handheld device with a stack of queued record cards behind it and one dashed line reaching a distant server',
 };
 
 type Quality = 'low' | 'medium' | 'high';

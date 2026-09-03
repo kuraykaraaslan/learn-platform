@@ -1,5 +1,5 @@
 {
-  "lessonCount": 475,
+  "lessonCount": 485,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -2731,6 +2731,98 @@
         "whenToUse": "16e17da39688be65",
         "commonMistakes": "abf3048852812121",
         "furtherReading": "31bce6640650f119"
+      }
+    },
+    "field-data-collection": {
+      "494_offline_first_capture.md": {
+        "title": "ddd366b1a5a960fc",
+        "whatItIs": "84d3de4cdc7c6eb4",
+        "keyConcepts": "78185a5ececa2b9c",
+        "exampleCode": "4afbebdf25113c2c",
+        "whenToUse": "b4015be862716012",
+        "commonMistakes": "a75ad2c8a4cbb746",
+        "furtherReading": "bd1a7fa1c1a5c194"
+      },
+      "495_client_generated_ids.md": {
+        "title": "26a13025b3b203a5",
+        "whatItIs": "f8c7aa2442dd9454",
+        "keyConcepts": "a9ba0691962e469d",
+        "exampleCode": "d09d84cf8f488aee",
+        "whenToUse": "40111c4688c00af2",
+        "commonMistakes": "03ae33636ddafa51",
+        "furtherReading": "bb849c962900b459"
+      },
+      "496_conflict_resolution.md": {
+        "title": "8a1b46c551956ef7",
+        "whatItIs": "db8d436c1ab6c94e",
+        "keyConcepts": "42d2233aecf5d16c",
+        "exampleCode": "7db411390f4dce57",
+        "whenToUse": "11c7322f1022ae27",
+        "commonMistakes": "905731dc29bcdefa",
+        "furtherReading": "253f2e408f5e125e"
+      },
+      "497_gps_accuracy.md": {
+        "title": "6ba4427080c7a712",
+        "whatItIs": "cca45da3637e3181",
+        "keyConcepts": "31f855c27a230444",
+        "exampleCode": "f7780daf706ae2d9",
+        "whenToUse": "c6ef0a470aa2141f",
+        "commonMistakes": "562d07ec9c07ded6",
+        "furtherReading": "cb7f85f528f894c2"
+      },
+      "498_indoor_positioning.md": {
+        "title": "c8af54c5e4314073",
+        "whatItIs": "7a122d339f267723",
+        "keyConcepts": "f53f10fb4ec9289b",
+        "exampleCode": "ba22af6741ecbd39",
+        "whenToUse": "d21ad8645479483a",
+        "commonMistakes": "7bcb31557ea13493",
+        "furtherReading": "e4638d1cdc7076ac"
+      },
+      "499_coordinates_from_a_phone.md": {
+        "title": "69bcf5db0d788e27",
+        "whatItIs": "5e842b94426799c5",
+        "keyConcepts": "95a89b9140f57c52",
+        "exampleCode": "79e421896419a33d",
+        "whenToUse": "be11fc309890c474",
+        "commonMistakes": "79375aa6ccab86eb",
+        "furtherReading": "852641b5530ce674"
+      },
+      "500_photo_evidence.md": {
+        "title": "bad0c671510315b6",
+        "whatItIs": "162e9150d0ea37d3",
+        "keyConcepts": "9d8c168b0e481eee",
+        "exampleCode": "1b830c2dfedde0d9",
+        "whenToUse": "9cc3a57748ec46aa",
+        "commonMistakes": "515b393f3f9246f9",
+        "furtherReading": "84a79c80b6721295"
+      },
+      "501_form_schemas_that_survive.md": {
+        "title": "58b95ceb36c3f893",
+        "whatItIs": "524a51e36679937b",
+        "keyConcepts": "38a3ce0986a2d4aa",
+        "exampleCode": "bca4070ab0cdc40b",
+        "whenToUse": "6971d4d7d4e9582e",
+        "commonMistakes": "0026f6d0c39cf4a7",
+        "furtherReading": "396d18837bfcf36e"
+      },
+      "502_sync_windows.md": {
+        "title": "0b9d608d9bfe5821",
+        "whatItIs": "da12aa94c686039e",
+        "keyConcepts": "24b7a107354accc7",
+        "exampleCode": "06f62dc76fb0df35",
+        "whenToUse": "b8304d8d6fd07729",
+        "commonMistakes": "d3cce8556a088f12",
+        "furtherReading": "a5d2362c3f4fca42"
+      },
+      "503_validating_field_data.md": {
+        "title": "33f94e93e6e27c2c",
+        "whatItIs": "9b89518c482a47c9",
+        "keyConcepts": "62bf16859cfbde6e",
+        "exampleCode": "e53211df35e60964",
+        "whenToUse": "86b79e785d6b5458",
+        "commonMistakes": "12470858ea27a6bc",
+        "furtherReading": "4a9bd86eed1e0425"
       }
     },
     "framework-deep-dives": {

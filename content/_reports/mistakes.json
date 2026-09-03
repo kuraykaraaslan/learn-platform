@@ -1,11 +1,11 @@
 {
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
-    "lessons": 475,
+    "lessons": 485,
     "single": 141,
     "lessonsWithZeroDrillable": 10,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 443
+    "lessonsWithTwoPlusDrillable": 453
   },
   "lessons": [
     {
@@ -4506,6 +4506,156 @@
         "bold-space": 0,
         "plain-dash": 0,
         "single": 4
+      }
+    },
+    {
+      "courseSlug": "field-data-collection",
+      "file": "494_offline_first_capture.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "field-data-collection",
+      "file": "495_client_generated_ids.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "field-data-collection",
+      "file": "496_conflict_resolution.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "field-data-collection",
+      "file": "497_gps_accuracy.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "field-data-collection",
+      "file": "498_indoor_positioning.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "field-data-collection",
+      "file": "499_coordinates_from_a_phone.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "field-data-collection",
+      "file": "500_photo_evidence.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "field-data-collection",
+      "file": "501_form_schemas_that_survive.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "field-data-collection",
+      "file": "502_sync_windows.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "field-data-collection",
+      "file": "503_validating_field_data.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
       }
     },
     {

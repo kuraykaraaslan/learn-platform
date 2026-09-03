@@ -1,15 +1,15 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
   "totalTerms": 130,
-  "totalLessons": 475,
+  "totalLessons": 485,
   "totals": {
     "neverMatched": 0,
     "neverLinked": 17,
     "neverLinkedByCause": {
       "own-lesson-only": 3,
-      "code-only": 12,
+      "code-only": 13,
       "shadowed": 0,
-      "case-mismatch": 1,
+      "case-mismatch": 0,
       "cap-starved": 1,
       "never-matched": 0
     },
@@ -20,10 +20,12 @@
     {
       "slug": "base",
       "term": "BASE",
-      "cause": "case-mismatch",
+      "cause": "code-only",
       "linkableInLessons": [],
       "presentInLessons": [],
-      "alsoAppearsInLessons": []
+      "alsoAppearsInLessons": [
+        496
+      ]
     },
     {
       "slug": "correlation-id",
@@ -298,7 +300,7 @@
       "slug": "base",
       "term": "BASE",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 5
+      "rawOccurrences": 12
     },
     {
       "slug": "billable-utilization",
@@ -445,9 +447,10 @@
       "slug": "content-negotiation",
       "term": "Content negotiation",
       "lessonsLinkedIn": [
+        "field-data-collection/501_form_schemas_that_survive.md",
         "fundamentals-tools/119_http_fundamentals.md"
       ],
-      "rawOccurrences": 6
+      "rawOccurrences": 7
     },
     {
       "slug": "context-propagation",
@@ -735,9 +738,10 @@
         "distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md",
         "distributed-systems-api-design/07_idempotency_key_pattern.md",
         "distributed-systems-api-design/131_message_queues_101.md",
+        "field-data-collection/495_client_generated_ids.md",
         "iot-telemetry-edge/475_idempotent_ingest.md"
       ],
-      "rawOccurrences": 23
+      "rawOccurrences": 25
     },
     {
       "slug": "ifc",
@@ -758,9 +762,10 @@
         "digital-twin-engineering/484_georeferencing_bim_into_gis.md",
         "digital-twin-engineering/489_indoor_navigation.md",
         "digital-twin-engineering/490_twin_identity.md",
+        "field-data-collection/503_validating_field_data.md",
         "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md"
       ],
-      "rawOccurrences": 105
+      "rawOccurrences": 108
     },
     {
       "slug": "index-bloat",
@@ -919,9 +924,10 @@
       "term": "Primary key",
       "lessonsLinkedIn": [
         "digital-twin-engineering/491_simulation_vs_observation.md",
+        "field-data-collection/495_client_generated_ids.md",
         "iot-telemetry-edge/475_idempotent_ingest.md"
       ],
-      "rawOccurrences": 23
+      "rawOccurrences": 25
     },
     {
       "slug": "principle-of-least-privilege",

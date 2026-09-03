@@ -1,0 +1,8 @@
+{
+  "name": "verify-field-data-collection-495",
+  "private": true,
+  "description": "Replays an offline capture queue through a naive submitter and through one using client-generated ids, and reports what each produced, for lesson 495's proof block. Zero dependencies, pure Node, no network. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node replay.js"
+  }
+}

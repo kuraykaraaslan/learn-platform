@@ -65,7 +65,7 @@ export const COURSE_SECTIONS = [
     title: 'The built environment',
     blurb:
       "Software for physical assets: model formats, coordinates, telemetry, and keeping an asset's data true after handover.",
-    slugs: ['bim-ifc-data-models', 'gis-spatial-data', 'autodesk-developer-platform', 'iot-telemetry-edge', 'digital-twin-engineering'],
+    slugs: ['bim-ifc-data-models', 'gis-spatial-data', 'autodesk-developer-platform', 'iot-telemetry-edge', 'digital-twin-engineering', 'field-data-collection'],
   },
 ] as const satisfies readonly CourseSectionDef[];
 
