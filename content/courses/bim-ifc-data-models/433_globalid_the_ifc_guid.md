@@ -116,6 +116,7 @@ The two extremes are the proof: all-ones compresses to a string starting `3`, al
 - [IfcRoot](https://ifc43-docs.standards.buildingsmart.org/IFC/RELEASE/IFC4x3/HTML/lexical/IfcRoot.htm) — where the attribute lives and the uniqueness rule attached to it
 - [Universally unique identifier](https://en.wikipedia.org/wiki/Universally_unique_identifier) — the 128-bit value underneath, and what its variants guarantee
 - [IfcOpenShell](https://github.com/IfcOpenShell/IfcOpenShell) — a reference implementation of the same compression, worth diffing your own against
+- [Lesson 490](/courses/digital-twin-engineering/twin-identity) — where a downstream system keyed on the `GlobalId` builds an identity strategy around exactly the instability this lesson describes
 
 ```recall
 - q: "Describe the compression from a UUID to a GlobalId."

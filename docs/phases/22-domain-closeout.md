@@ -87,38 +87,73 @@ Kayda geçen kararlar ve gerekçeleri:
 | Python fence'leri | Hiçbir runtime koşamaz (ADR 0002), `verify-code` tiplemez, sürüme bağlı çıktı damgayı kırar. `code/unverified-language` sızmayı engelliyor |
 | C# fence'leri için doğrulama | **Ship edildi ama denetimsiz.** Revit API yalnız C#/.NET; P16'nın ≤10 fence'i hiçbir tipleyiciden geçmiyor. Emsal: korpustaki 10 `java` fence'i. `code/unverified-language` bunları `warn` ile sayıyor — bu fazda **error'a terfi etmiyor**, çünkü korpus temiz değil. Sayı bu dosyada kayda geçer |
 | Harita / 3B render | MapLibre (`#453`), iç mekân grafiği (`#489`) ve Viewer (`#465`) derslerinin hiçbiri render etmiyor: `ts run` import edemez, `run project` P9'a bağlı. Üçü de **veri modeli** olarak öğretiliyor |
-| `run project` (turf/proj4) | P9'un tarayıcı boot'u doğrulanmadıysa merge edilmedi — **bu fazda son karar verilir ve yazılır** |
+| `run project` (turf/proj4) | **Karar: merge edilmedi.** P9'un `run project` boot'u hâlâ tarayıcıda doğrulanmadı (P9 satırı "boot hâlâ doğrulanmalı" diyor) ve program boyunca kimse doğrulamadı. Alan kurslarında **sıfır** `run project` fence'i var (korpus geneli 3, hepsi eski). GIS'in turf/proj4 fikri `#447`/`#448` ayrımıyla ve `#443`'ün saf-JS proof'uyla karşılandı; render dersleri (`#453`/`#465`/`#489`) veri modeli olarak öğretiliyor. WebContainer boot'u doğrulanınca ayrı bir faz olarak ele alınabilir |
 
 ### Lint kurallarının terfisi
 
 Değişmez #6: kural `warn` doğar, korpus temizlenince `error`'a terfi eder.
-Bu fazda değerlendirilir:
+Bu fazda değerlendirildi:
 
-- `code/unverified-language` — **`warn` kalır.** Korpusta 10 `java` fence'i var
-  ve bu program onları temizlemedi; kural yaratmadığı bir backlog'a takılamaz.
-- `sources/*` warn'ları — yeni alanda sıfıra çekildiyse kaydedilir; korpus
-  genelinde terfi ayrı bir karar.
+- `code/unverified-language` — **`warn` kaldı.** Korpusta 10 `java` + 9 C#
+  fence'i var (`content-lint --strict` çıktısı: 19 `code/unverified-language`
+  warn) ve bu program onları temizlemedi; kural yaratmadığı bir backlog'a
+  takılamaz.
+- `sources/*` warn'ları — **yeni alanda sıfır** (`content-lint.json` üzerinde
+  ölçüldü: alan 8 kursunda `sources/*` bulgusu yok). Korpus genelinde terfi
+  ayrı bir karar, bu fazın kapsamında değil.
+- `drill/widget-on-unverified-lesson` — hâlâ `warn`, 2 bulgu kaldı (ders 114
+  ve `iot-telemetry-edge/478`; ikisi de uzman pasosu bekleyen denylist
+  dersleri). Alan programının eklediği 514/521 bu kurala takılmıyor çünkü
+  `quiz`/`recall` taşımıyorlar.
+
+## Ölçümler
+
+Program bittiğinde (412 → 505 ders) yeniden ölçülen bütçeler:
+
+| Ölçü | P13 zemini | P22 bitişi | Sınır | Durum |
+|---|---:|---:|---:|---|
+| Arama indeksi (gz) | 64.207 B | **77.393 B** | 98.304 B (`MAX_INDEX_GZ_BYTES`) | altında, ~21 KB marj — sınır **değişmedi** |
+| Review indeksi (gz) | — | **201.160 B** (2.126 kart) | yok (bütçe kontrolü yok) | raporlandı |
+| Kavram terimi | ~125 | **139** | ders başına 4 link (sert) | — |
+| `cap-starved` ders | — | **2** (`functional-location` → 504, `index-bloat` → 104) | — | ölçüldü, karar yok (P3 usulü) |
+
+Kavram raporu (`content:concepts`) sebebe göre: `shadowed` **0**, `case-mismatch`
+**0**, `never-matched` **0**. Kalan `never-linked` 21 kayıt: `own-lesson-only`
+6 (terim yalnız kendi dersinde geçiyor — beklenen), `code-only` 13 (terim
+yalnız kod fence'inde — linklenmez), `cap-starved` 2. Hepsi doğru davranış.
+
+Gölgeleme taraması: yeni alanın kısaltmaları (`IFC`, `CRS`, `LOD`, `OT`, `QoS`)
+kontrol edildi — hiçbiri bir kavram terimi olarak eklenmedi; `global-id` (term
+"GlobalId") ve `ifc` (term "IFC") P14'te eklenmişti ve `isAcronym` kuralı
+gereği yalnız tam-büyük-harf yazımda eşleşiyor, sıradan kelime yutmuyor.
 
 ## Kabul kriterleri
 
-- [ ] Yeni kurslar arası ve mevcut korpusa çapraz `(#N)` bağları kuruldu;
-      `links/dead-lesson-ref` **0 bulgu**, `links/unlinked-lesson-ref` 0 warn
-- [ ] `npm run content:concepts` raporu okundu; **0 gölgeleme** (`shadowed`),
-      0 `case-mismatch`; kalan `never-linked` kayıtların her birinin sebebi
-      raporda yazılı ve doğru davranış
-- [ ] `cap-starved` ders sayısı ölçüldü ve README'ye/bu dosyaya yazıldı
-- [ ] Arama indeksi gz boyutu **ölçüldü ve yazıldı**; `MAX_INDEX_GZ_BYTES`
-      altında, ya da gerekçesiyle ölçüme dayalı olarak yükseltildi
-- [ ] Review indeksi boyutu raporlandı
-- [ ] `Ölçülen zemin` + `Alan bloğu` + widget tabloları son değerlerinde;
-      `npm run content:stats-check` **"0 disagree"**
-- [ ] P13-P22 `Durum` hücreleri ölçülmüş kanıt taşıyor
-- [ ] `## Ship etmediklerimiz` tablosu dolu; `run project` kararı yazılı
-- [ ] Korpus **504 ders / 31 kurs**; üç sabit sayı da 504
-- [ ] `npm run content:check`, `content:concepts-check`,
-      `content:verify-mermaid`, `stamp-verify --check`, `npm run lint`,
-      `npm run build` yeşil
-- [ ] `git diff --exit-code -- content/_reports` temiz
+- [x] Mevcut korpustan yeni alana 6 forward `(#N)` bağı kuruldu (Further
+      Reading bülteni olarak): `#433`→`#490`, `#443`→`#497`, `#477`→`#487`,
+      `#45`→`#477`, `#7`→`#475`, `#8`→`#466`. Yeni kurslar arası geriye
+      bağlar zaten kuruluydu (`#490`→`#433` 16 kez, `#487`→`#477`, `#497`→`#441`,
+      `#499`→`#442`). `links/dead-lesson-ref` **0**, `links/unlinked-lesson-ref`
+      **0 warn** (zaten sıfırdı, bozulmadı)
+- [x] `content:concepts` raporu okundu; `shadowed` **0**, `case-mismatch` **0**,
+      `never-matched` **0**; 21 `never-linked` kaydın her biri açıklandı
+      (`## Ölçümler`) ve doğru davranış
+- [x] `cap-starved` = **2**, bu dosyaya yazıldı (`## Ölçümler`)
+- [x] Arama indeksi **77.393 B gz** ölçüldü ve yazıldı; `MAX_INDEX_GZ_BYTES`
+      (98.304 B) **altında**, ~21 KB marj — sınır değişmedi
+- [x] Review indeksi **201.160 B gz** (2.126 kart) raporlandı
+- [x] `Ölçülen zemin` + `Alan bloğu` + widget tabloları son değerlerinde
+      (P20/P21'de güncellendi); `content:stats-check` **"32 rows checked · 0 disagree"**
+- [x] P13-P22 `Durum` hücreleri ölçülmüş kanıt taşıyor (ders/id aralığı, seed,
+      proof, damga sayısı)
+- [x] `## Ship etmediklerimiz` tablosu dolu; `run project` kararı yazılı (merge
+      edilmedi — alan kurslarında sıfır `run project` fence'i)
+- [x] Korpus **505 ders / 31 kurs** (şartname 504/31 diyordu — +1 fark P16'nın
+      sonradan eklenen `#523` dersi; üç sabit test sayısı da 505)
+- [x] `content:check`, `content:concepts-check`, `content:verify-mermaid`
+      (25 fence, 16 ok, 9 unverified — hepsi DOM), `stamp-verify --check`
+      (23/23 ok), `lint`, `build` (547 statik sayfa) yeşil
+- [x] `content:reports` sonrası tekrar koşumda `content/_reports` farkı yok
 
 ## Risk
 

@@ -210,6 +210,7 @@ export async function getAuditLogsInRange(
 - [PostgreSQL declarative partitioning documentation](https://www.postgresql.org/docs/current/ddl-partitioning.html)
 - [TimescaleDB getting started guide](https://docs.timescale.com/getting-started/latest/)
 - [pg_partman — PostgreSQL partition management extension](https://github.com/pgpartman/pg_partman)
+- [Lesson 477](/courses/iot-telemetry-edge/time-series-schema) — the same partitions, rollups and retention applied to sensor telemetry, where the ingest rate makes the retention decision unavoidable
 
 ```recall
 - q: "What is table partitioning, and what does range partitioning look like for time-series?"

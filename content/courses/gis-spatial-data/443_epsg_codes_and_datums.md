@@ -120,6 +120,7 @@ export function transformed(from: Position, toEpsg: number, transformAccuracy: n
 - [EPSG:4277 — OSGB36](https://epsg.io/4277) — the datum and the Airy 1830 ellipsoid it is built on
 - [EPSG registry](https://epsg.org/home.html) — the authority, where a code resolves to a definition with a version
 - [PROJ: Helmert transform](https://proj.org/en/9.4/operations/transformations/helmert.html) — the same seven parameters as a library operation, with both rotation conventions spelled out
+- [Lesson 497](/courses/field-data-collection/gps-accuracy) — the datum question from the other end: a phone reports WGS 84, and what its accuracy field does and does not mean
 
 ```recall
 - q: "What does a datum add on top of an ellipsoid, and why does it matter?"

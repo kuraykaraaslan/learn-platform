@@ -226,6 +226,7 @@ the same genuine delivery, replayed 5 hours later
 - [**Stripe Webhook documentation](https://stripe.com/docs/webhooks)** — The best-written webhook security reference in the industry; their signature verification approach is worth treating as the standard
 - [**"Webhook Security" by ngrok blog](https://ngrok.com/blog)** — Covers signature verification, replay prevention, and delivery guarantees across multiple providers
 - **Standard Webhooks specification (standard-webhooks.com)** — An emerging open standard for webhook signatures and payloads; worth following as an interoperability baseline for your outgoing webhooks
+- [Lesson 466](/courses/autodesk-developer-platform/webhooks) — the same receive-side rules applied to a concrete vendor (Autodesk APS): scope, verification, and reconciliation as the backstop
 
 ```recall
 - q: "What is the security problem webhooks have, and what does ignoring it cost?"

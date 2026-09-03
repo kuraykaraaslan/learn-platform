@@ -73,7 +73,7 @@ P23 developer path'leri  ← P14..P21 (kurslar arası okuma sırası)
 | P19 | [19-field-data-collection.md](19-field-data-collection.md) | ~5 gün | tamamlandı — 10 ders (494-503), offline kuyruk + istemci id |
 | P20 | [20-asset-management-systems.md](20-asset-management-systems.md) | ~4-5 gün | tamamlandı — 9 ders (504-512), `asset_register` seed, `510` proof, anti-join + birleştirme hunisi |
 | P21 | [21-smart-infrastructure.md](21-smart-infrastructure.md) | ~5 gün | tamamlandı — 10 ders (513-522); 8 damgalı, 514 + 521 denylist'te, `crosswalk` seed, `518` proof |
-| P22 | [22-domain-closeout.md](22-domain-closeout.md) | ~2 gün | planlandı — çapraz bağlar, bütçe yeniden ölçümü |
+| P22 | [22-domain-closeout.md](22-domain-closeout.md) | ~2 gün | tamamlandı — 6 forward `(#N)` bağı, arama indeksi 77.393 B gz (sınır 98.304), `cap-starved` 2, `shadowed` 0 |
 | P23 | [23-developer-paths.md](23-developer-paths.md) | ~3 gün | planlandı — 4 path, kurslar arası okuma sırası |
 
 ## Ölçülen zemin
@@ -133,6 +133,13 @@ isteyen 42, var olmayan `@/` alias'ı 45) ve P0'ın `<pre>` yerleşim sayımı
 (505/505) burada **yeniden ölçülmedi** — ilkleri o fazların kendi
 şartnamelerinde duruyor, sonuncusu `course_content.blocks.test.ts` tarafından
 sürekli korunuyor.
+
+**İki indeks bütçesi (P22'de yeniden ölçüldü).** Arama indeksi P13 zemininde
+64.207 B gz idi; 412 → 505 derste **77.393 B gz** — `MAX_INDEX_GZ_BYTES`
+(98.304 B, `build-search-index.ts:33`) altında, ~21 KB marj, sınır değişmedi.
+Review indeksinin bütçe kontrolü yok; 2.126 kartla **201.160 B gz**. Kavram
+sözlüğü 139 terim; `cap-starved` (4-link sınırına dayanan) ders sayısı 2,
+`shadowed` 0.
 
 ## Widget kapsamı
 

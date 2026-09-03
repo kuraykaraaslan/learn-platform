@@ -705,7 +705,7 @@
         "exampleCode": "da41ab39a5316ff2",
         "whenToUse": "a2d355daa661e3e9",
         "commonMistakes": "828a707902a10f6e",
-        "furtherReading": "3bdd1aaa1b1a8f82"
+        "furtherReading": "399248d3b7862909"
       },
       "434_the_spatial_hierarchy.md": {
         "title": "f13680fc61d114ff",
@@ -2438,7 +2438,7 @@
         "exampleCode": "d09e57c082c6fd21",
         "whenToUse": "e3c9c9062696b944",
         "commonMistakes": "2b1a696424d9d17d",
-        "furtherReading": "ef4253d576679f6d"
+        "furtherReading": "fc9c52ebb94a95e0"
       },
       "46_full_text_search_postgres_tsvector_elasticsearch.md": {
         "title": "012a518ae5669da5",
@@ -2723,7 +2723,7 @@
         "exampleCode": "70dcd76dec69fa15",
         "whenToUse": "863b8fc5e3a2031c",
         "commonMistakes": "f3d7d487d527b71e",
-        "furtherReading": "1da530ebce386937"
+        "furtherReading": "c9ec570754d51c20"
       },
       "08_webhook_security_retry.md": {
         "title": "82af9bb32ada51f9",
@@ -2732,7 +2732,7 @@
         "exampleCode": "bbb4e0ac600f7d01",
         "whenToUse": "e783a5f7637c4b08",
         "commonMistakes": "82f58b73b783ddc2",
-        "furtherReading": "5be1d39454cf7f06"
+        "furtherReading": "3489828190b886d1"
       },
       "09_api_versioning_strategies.md": {
         "title": "0fbe604bfd4b9124",
@@ -3444,7 +3444,7 @@
         "exampleCode": "44cc81c370a23695",
         "whenToUse": "b92795363dacfab1",
         "commonMistakes": "6e10dcaed6b3a808",
-        "furtherReading": "25dc3aff35078f65"
+        "furtherReading": "07f893011e5f9179"
       },
       "444_web_mercator.md": {
         "title": "a35bfab2803e6169",
@@ -3626,7 +3626,7 @@
         "exampleCode": "01a1df3135326ba0",
         "whenToUse": "9b14ae0daabe1ecd",
         "commonMistakes": "ae394c47ec3909e0",
-        "furtherReading": "0161761523d61847"
+        "furtherReading": "d7015826ba91ded1"
       },
       "478_device_identity_and_provisioning.md": {
         "title": "f652ba61c29d27c0",

@@ -173,6 +173,7 @@ Note the last result: January's raw readings are gone and January's hourly bucke
 - [PostgreSQL table partitioning](https://www.postgresql.org/docs/current/ddl-partitioning.html) — declarative partitioning, pruning, and the attach/detach operations retention uses
 - [PostgreSQL window functions](https://www.postgresql.org/docs/current/functions-window.html) — for the gap-filling and last-value-per-bucket queries a rollup usually needs alongside it
 - [TimescaleDB documentation](https://docs.timescale.com/) — the extension that automates hypertables, continuous aggregates and retention policies, which are these three structures by other names
+- [Lesson 487](/courses/digital-twin-engineering/time-series-storage-for-twin-state) — the same narrow-table and last-value-query decisions, made again for a digital twin's state store
 
 ```recall
 - q: "Why is partitioning by time the structural decision for telemetry?"
