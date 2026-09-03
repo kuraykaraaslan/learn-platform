@@ -86,6 +86,28 @@ describe('remarkConcepts', () => {
     expect(html).not.toContain('data-concept');
   });
 
+  it('never links inside a blockquote', () => {
+    const html = markdownToHtml('> Note: send an idempotency key with every retry.', ctx());
+    expect(html).not.toContain('data-concept');
+  });
+
+  it('spends no budget on a blockquote, so prose after it still links', () => {
+    // The real case this exists for: a disclaimer blockquote repeated across a
+    // whole course used to take a link slot AND the per-section first-mention,
+    // so the sentence that actually taught the term rendered plain.
+    const c = ctx({ conceptLinkBudget: { remaining: 1 } });
+    const html = markdownToHtml(
+      '> General education only: an idempotency key is not legal advice.\n\nAn idempotency key makes a retry a no-op.',
+      c
+    );
+    expect(html).toContain('data-concept="idempotency-key"');
+    // Linked once, in the prose — not in the quote.
+    expect(html.match(/data-concept/g)).toHaveLength(1);
+    expect(html).toMatch(/<blockquote>[\s\S]*?<\/blockquote>/);
+    expect(html.split('</blockquote>')[0]).not.toContain('data-concept');
+    expect(c.conceptLinkBudget.remaining).toBe(0);
+  });
+
   it('does nothing when no context is passed (existing byte-identical callers unaffected)', () => {
     const html = markdownToHtml('An idempotency key, unlinked.');
     expect(html).not.toContain('data-concept');

@@ -9,6 +9,47 @@ The discipline that fixes this is treating every recurring cost as something wit
 
 The other half is a purchase-decision habit for one-time expenses: before buying, ask whether it improves revenue, delivery quality, speed, or risk reduction — and whether a cheaper option already covers the need. This isn't about frugality for its own sake; a course that closes a genuine skill gap for an active project is a good expense. A course bought because it looked interesting during a slow week is not, and buying it anyway is the same impulse that leads to accumulating unused subscriptions.
 
+```quiz
+- q: "A tool offers 20% off for annual billing. You adopted it last month. Take it?"
+  anchor: "a discount on a tool you might cancel in three months is not a saving"
+  options:
+    - text: "Yes — 20% is 20%"
+      correct: false
+      why: "A discount on a tool you might cancel in three months is not a saving."
+    - text: "No — commit annually only once usage is proven"
+      correct: true
+      why: "Healthy cash flow and the tool being genuinely core are the other two conditions."
+    - text: "Yes, if the annual cost fits this month's budget"
+      correct: false
+      why: "Affordability is not the test. Proven usage is."
+
+- q: "Your subscription register is complete and margin is still leaking. Where?"
+  anchor: "are costs that don't show up as a clean line item"
+  options:
+    - text: "Nowhere — a complete register accounts for tool spend"
+      correct: false
+      why: "It accounts for what arrives as a clean line item, and several real costs never do."
+    - text: "Transaction fees, currency conversion spread, usage overages, auto-renewals"
+      correct: true
+      why: "They erode margin exactly like a subscription while never appearing as one."
+    - text: "In unbilled support hours"
+      correct: false
+      why: "Real, and it belongs to project accounting rather than to expense control."
+
+- q: "Cash is comfortable this quarter. Skip the subscription review?"
+  anchor: "waiting until it hurts means months of accumulated waste"
+  options:
+    - text: "Yes — the review exists to find savings, and none are needed"
+      correct: false
+      why: "Waiting until it hurts means months of accumulated waste already spent."
+    - text: "No — the review runs on a fixed monthly schedule"
+      correct: true
+      why: "The whole point is that it does not depend on how cash feels."
+    - text: "Review only the tools that renewed this month"
+      correct: false
+      why: "A partial review leaves the quietly renewing ones exactly where they were."
+```
+
 ## Key Concepts
 - **Purpose note requirement**: Every expense gets a one-line purpose ("used for client X's production hosting") — an expense with no purpose note is a candidate for the next review.
 - **Subscription register**: Every recurring tool tracked with cost, billing cycle, renewal date, purpose, and a keep/cancel/downgrade/review decision — never left to renew silently.
@@ -61,3 +102,26 @@ Decision: approve
 ## Further Reading
 - *Profit First* — Mike Michalowicz: frames every business cost as competing for a share of a deliberately scarce operating account, which naturally forces the keep/cancel discipline described here.
 - [Ramit Sethi's writing on "conscious spending"](https://iwillteachyoutoberich.com) — though aimed at personal finance, the framework of cutting ruthlessly on things you don't value to spend freely on things you do maps directly onto subscription triage.
+
+```recall
+- q: "What is the purpose note requirement?"
+  must:
+    - "every expense gets a one-line purpose, such as \"used for client X's production hosting\""
+    - "an expense with no purpose note is a candidate for the next review"
+
+- q: "What does the subscription register track?"
+  must:
+    - "cost, billing cycle, renewal date, purpose"
+    - "and a keep, cancel, downgrade or review decision"
+    - "never left to renew silently"
+
+- q: "Give the keep versus cancel test."
+  must:
+    - "keep if used weekly, required for active delivery, protecting security or backups, or a client pays for it directly"
+    - "cancel or downgrade if unused in 30-60 days, duplicated by another tool, or adopted only experimentally"
+
+- q: "What must be decided about every tool's cost?"
+  must:
+    - "whether it is absorbed internally, billed to a specific client, or reimbursed"
+    - "ambiguity here quietly erodes project margin"
+```

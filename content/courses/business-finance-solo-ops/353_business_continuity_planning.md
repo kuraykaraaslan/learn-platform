@@ -9,6 +9,47 @@ The response always starts with the same question: is any client SLA at risk wit
 
 None of this works without backup access built in advance, not improvised during the emergency. Every critical system — production servers, cloud provider accounts, DNS, client repositories, payment accounts, email — needs at least two independent access paths, so that losing one doesn't lock you out entirely. A single trusted developer backup contact, bound by an NDA or equivalent, briefed on at least one active project's architecture annually, and given a pre-configured way to get emergency repo access, covers the scenario a solo operator genuinely cannot cover alone: an illness or emergency that lasts longer than a few days. All of this — trusted backup contact, emergency credentials, cloud dev environment, client contact list — should be reviewed and refreshed every January, not left to age silently until the year it's actually needed and doesn't work.
 
+```quiz
+- q: "Your laptop dies mid-project. What is the first check, before any response?"
+  anchor: "check whether an SLA breach is likely within 24 hours"
+  options:
+    - text: "Which threat-taxonomy scenario applies, then run its runbook"
+      correct: false
+      why: "That comes second. The first check is whether an SLA breach is likely within 24 hours."
+    - text: "Whether an SLA breach is likely within 24 hours"
+      correct: true
+      why: "If yes, the SLA breach protocol runs first; if no, the relevant incident-runbook scenario runs."
+    - text: "Whether the cloud dev environment still works"
+      correct: false
+      why: "Part of the laptop scenario's response, and the decision rule comes before the scenario."
+
+- q: "Your DNS registrar is reachable only through one email address, which you have also lost. Which rule broke?"
+  anchor: "needs at least two independent access paths, so no single failure locks you out entirely"
+  options:
+    - text: "The annual review — those credentials should have been rotated"
+      correct: false
+      why: "Rotation is a January task. What broke is how many ways in existed at all."
+    - text: "Dual-path access — every critical system needs two independent paths"
+      correct: true
+      why: "Production servers, cloud accounts, DNS, repos, payment accounts and email are all named."
+    - text: "The trusted developer backup should have held those credentials"
+      correct: false
+      why: "The backup contact has emergency repo access, which is not the same as being your second path everywhere."
+
+- q: "You are a solo operator. What does continuity planning actually aim at?"
+  anchor: "the mitigation goal is no single point of failure without a documented fallback"
+  options:
+    - text: "Eliminating the bus factor of one"
+      correct: false
+      why: "It is accepted as a constraint. The goal is what you build around it."
+    - text: "No single point of failure without a documented fallback, a 48-72 hour degraded mode, and proactive client communication"
+      correct: true
+      why: "The bus factor of one stays; the mitigation is what changes."
+    - text: "A co-founder or first hire, as soon as revenue allows"
+      correct: false
+      why: "A business decision, not the continuity plan this lesson describes."
+```
+
 ## Key Concepts
 - **Bus factor of one, accepted as a constraint**: the mitigation goal is no single point of failure without a documented fallback, a 48-72 hour degraded mode for every critical path, and proactive client communication before any breach.
 - **Threat taxonomy**: short illness (1-3 days, async buffer + templates), long illness (>3 days, trusted developer backup + client notification), laptop stolen/failed (cloud dev environment + 24h recovery target), internet outage (mobile hotspot + coworking fallback), power outage (<4h, laptop battery covers it), mental health day (async-first communication), and force majeure (advance client notice + contract clause).
@@ -70,3 +111,24 @@ The SLA was never at risk of an undisclosed breach — the client was told proac
 ## Further Reading
 - *The E-Myth Revisited* — Michael Gerber: on building systems and documented processes into a small business so it doesn't depend entirely on improvisation by its owner.
 - *Antifragile* — Nassim Nicholas Taleb: a broader framework for building systems that don't just survive disorder but are structured to handle it by design.
+
+```recall
+- q: "Give the threat taxonomy."
+  must:
+    - "short illness 1-3 days — async buffer and templates; long illness over 3 days — trusted developer backup and client notification"
+    - "laptop stolen or failed — cloud dev environment, 24h recovery target; internet outage — mobile hotspot and coworking fallback"
+    - "power outage under 4h — laptop battery covers it; mental health day — async-first communication"
+    - "force majeure — advance client notice and a contract clause"
+
+- q: "Describe the trusted developer backup."
+  must:
+    - "exactly one backup contact, under an NDA or equivalent"
+    - "briefed annually on at least one active project's architecture"
+    - "pre-configured emergency repo access that does not require your direct involvement to activate"
+
+- q: "What happens in the annual review, and when?"
+  must:
+    - "every January"
+    - "update the trusted backup contact, and rotate emergency credentials"
+    - "verify the cloud dev environment still works, confirm the client emergency contact list, and update the coworking fallback list"
+```

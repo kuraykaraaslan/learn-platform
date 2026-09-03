@@ -9,6 +9,47 @@ The safest entry point is task delegation — a small, clearly defined piece of 
 
 Every contractor engagement needs the same brief regardless of scale: role, scope, deliverable, quality standard, communication process, review process, confidentiality terms, client visibility, and payment terms. And every deliverable needs an actual review pass before it reaches the client — checking scope match, quality, security, performance, consistency, edge cases, documentation, and whether it meets what the client was told to expect. Pricing the engagement must leave real margin after accounting for your own management time, review time, client communication, a rework buffer, and profit — subcontracting at break-even removes the reason to delegate at all.
 
+```quiz
+- q: "A contractor's module ships with a security flaw. Whose responsibility is it?"
+  anchor: "you remain responsible for final quality unless the client has directly contracted the person themselves"
+  options:
+    - text: "The contractor's — they wrote it, and they were briefed"
+      correct: false
+      why: "Delegation does not transfer responsibility by default. The brief is how you delegate work, not liability."
+    - text: "Yours — unless the client contracted that person directly"
+      correct: true
+      why: "Which is why every contractor deliverable gets a mandatory review pass before it reaches the client."
+    - text: "Shared, in proportion to who reviewed what"
+      correct: false
+      why: "Proportional blame is not the rule stated; the accountability sits with you as a default."
+
+- q: "You need a security-critical module built and have no time to review it. Delegate?"
+  anchor: "security-critical work without review, large undefined scope, or anything you can't personally evaluate on return"
+  options:
+    - text: "Yes — pick a senior contractor and trust their judgment"
+      correct: false
+      why: "Security-critical work without review is a named poor delegation candidate, whatever the contractor's level."
+    - text: "No — anything you cannot personally evaluate on return is a poor candidate"
+      correct: true
+      why: "Unclear architecture, unstable core logic and large undefined scope join it on that list."
+    - text: "Yes, at the task-delegation level only"
+      correct: false
+      why: "The delegation level governs scope, not whether the work can be evaluated when it comes back."
+
+- q: "A contractor quotes exactly what the client is paying for that module. Take the job?"
+  anchor: "never subcontract at break-even"
+  options:
+    - text: "Yes — it is margin-neutral, and it buys capacity"
+      correct: false
+      why: "It is not margin-neutral. Your management time, review time, client communication and rework buffer are all unpaid in that arrangement."
+    - text: "No — contractor cost must leave room for management, review, communication, rework and profit"
+      correct: true
+      why: "Never subcontract at break-even: break-even on paper is a loss once your own hours are counted."
+    - text: "Yes, if the contractor absorbs any rework for free"
+      correct: false
+      why: "Free rework does not pay for your review pass, which happens whether or not rework follows."
+```
+
 ## Key Concepts
 - **Accountability rule**: you remain responsible for final quality unless the client has directly contracted the person themselves — delegation doesn't transfer that responsibility by default.
 - **Delegation levels by risk**: task delegation (low risk, start here), module delegation (medium), function delegation (high), client-facing delegation (high) — escalate only as trust is proven.
@@ -63,3 +104,30 @@ The brief is deliberately narrow — three components against a documented inter
 ## Further Reading
 - *The E-Myth Revisited* — Michael E. Gerber: on building systems and delegation structures rather than staying the sole bottleneck indefinitely.
 - *Traction* (EOS) — Gino Wickman: process and accountability structures that scale down well to a solo-plus-contractors model.
+
+```recall
+- q: "Name the delegation levels, in order of risk."
+  must:
+    - "task delegation — low risk, start here"
+    - "module delegation — medium"
+    - "function delegation — high"
+    - "client-facing delegation — high"
+    - "escalate only as trust is proven"
+
+- q: "What does a contractor brief contain?"
+  must:
+    - "project, task, context, inputs provided"
+    - "expected output, acceptance criteria, constraints, deadline"
+    - "communication channel, review process, confidentiality notes"
+
+- q: "What does the mandatory review pass check?"
+  must:
+    - "scope match, quality, security, performance"
+    - "consistency, edge cases, documentation, and client expectation"
+    - "before the deliverable reaches the client"
+
+- q: "What must be decided about client transparency?"
+  must:
+    - "explicitly decide whether the contractor is an invisible subcontractor, a named specialist, or a co-delivery partner"
+    - "never misrepresent the team structure if the client expects only you personally"
+```

@@ -9,6 +9,47 @@ The fix is treating every invoice as a tracked object with a lifecycle, the same
 
 The other half of the discipline is the follow-up cadence. A polite check-in two days before the due date, a payment confirmation request the day after, a formal reminder at day seven, and a real consequence (pausing non-critical work) at day fourteen — decided in advance, not improvised in the moment when you're already annoyed. Deciding the cadence ahead of time also removes the emotional friction of chasing a client for money, because you're just following the process rather than making an awkward judgment call every time.
 
+```quiz
+- q: "The client emails \"payment sent this morning.\" Do you mark the invoice paid?"
+  anchor: "is a claim; a cleared transaction in your account is a confirmation"
+  options:
+    - text: "Yes — you have it in writing from the client"
+      correct: false
+      why: "In writing is still a claim. Only a cleared transaction in your account is a confirmation."
+    - text: "No — only a cleared transaction moves the status to paid"
+      correct: true
+      why: "The claim may be true, and it may also be a transfer that never left, or one that bounces back three days later."
+    - text: "Yes, and revert it if the money never arrives"
+      correct: false
+      why: "Then the status field records what you were told rather than what happened."
+
+- q: "A friendly long-standing client asks for the credentials a week before final payment. What is the default?"
+  anchor: "not before, regardless of how the relationship feels"
+  options:
+    - text: "Hand them over — the relationship has earned it"
+      correct: false
+      why: "The default holds regardless of how the relationship feels, which is precisely when people waive it."
+    - text: "After final payment clears — the default stands, feelings aside"
+      correct: true
+      why: "Source code, credentials and production ownership all sit behind the same gate."
+    - text: "Hand over credentials but withhold the source code"
+      correct: false
+      why: "Credentials to production are ownership in practice."
+
+- q: "What does a pre-decided follow-up schedule actually buy you?"
+  anchor: "removes the need to decide, in the moment, how hard to push"
+  options:
+    - text: "Faster payment, because clients respond to pressure"
+      correct: false
+      why: "It may, and the stated benefit is about you rather than about them."
+    - text: "You never have to decide in the moment how hard to push"
+      correct: true
+      why: "Due date minus 2 days, plus 1, plus 7, plus 14 — decided once, at a time when you are not annoyed."
+    - text: "A written record for a future dispute"
+      correct: false
+      why: "A useful side effect. The reason given is the decision it removes."
+```
+
 ## Key Concepts
 - **Invoice status lifecycle**: draft → issued → sent → partially_paid / paid / overdue / cancelled / credited. Every invoice should have exactly one current status at all times.
 - **Milestone-to-invoice mapping**: Every payment milestone in a contract (deposit, mid-project, final, retainer period) should map to exactly one invoice — never bundle multiple milestones into one ambiguous invoice unless intentionally agreed.
@@ -59,3 +100,26 @@ If it reaches day +14 with no resolution, the pre-agreed consequence fires autom
 ## Further Reading
 - [Stripe Invoicing documentation](https://docs.stripe.com/invoicing) — payment terms, reminders and reconciliation as an actual product implements them
 - *Company of One* — Paul Jarvis: makes the case for tight, boring, repeatable financial administration as a competitive advantage for solo businesses, not a chore to minimize.
+
+```recall
+- q: "Give the invoice status lifecycle."
+  must:
+    - "draft → issued → sent → partially_paid / paid / overdue / cancelled / credited"
+    - "every invoice has exactly one current status at all times"
+
+- q: "State the milestone-to-invoice rule."
+  must:
+    - "every payment milestone — deposit, mid-project, final, retainer period — maps to exactly one invoice"
+    - "never bundle multiple milestones into one ambiguous invoice unless that was intentionally agreed"
+
+- q: "Which fields does an invoice record carry?"
+  must:
+    - "invoice number, client, project"
+    - "issue date, due date, amount, currency"
+    - "payment method, related milestone, status, and payment-received date"
+
+- q: "What tone do overdue reminders take, and why?"
+  must:
+    - "professional and factual"
+    - "it escalates faster and preserves the relationship better than passive-aggressive or over-apologetic language"
+```
