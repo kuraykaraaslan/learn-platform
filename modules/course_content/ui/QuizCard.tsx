@@ -8,10 +8,20 @@
 import { useState } from 'react';
 import { cn } from '@/libs/utils/cn';
 import type { QuizQuestion, QuizWidget } from '../course_content.blocks';
+import { WidgetShell } from './WidgetShell';
+import { CHOICE_BASE, CHOICE_IDLE } from './widget-ui';
 
-function QuestionCard({ question, index }: { question: QuizQuestion; index: number }) {
-  const [selected, setSelected] = useState<number | null>(null);
-
+function QuestionCard({
+  question,
+  index,
+  selected,
+  onSelect,
+}: {
+  question: QuizQuestion;
+  index: number;
+  selected: number | null;
+  onSelect: (option: number) => void;
+}) {
   return (
     <div className={cn(index > 0 && 'mt-4 border-t border-border pt-4')}>
       <p className="mb-2 text-sm font-medium text-text-primary">{question.q}</p>
@@ -23,14 +33,14 @@ function QuestionCard({ question, index }: { question: QuizQuestion; index: numb
             <div key={i}>
               <button
                 type="button"
-                onClick={() => setSelected(i)}
+                onClick={() => onSelect(i)}
                 disabled={showResult}
                 className={cn(
-                  'w-full rounded-md border px-3 py-2 text-left text-sm transition-colors disabled:cursor-default',
+                  CHOICE_BASE,
                   showResult && option.correct && 'border-success bg-success-subtle text-success-fg',
                   showResult && isSelected && !option.correct && 'border-error bg-error-subtle text-error-fg',
                   showResult && !isSelected && !option.correct && 'border-border text-text-secondary',
-                  !showResult && 'border-border text-text-primary hover:border-primary'
+                  !showResult && CHOICE_IDLE
                 )}
               >
                 {option.text}
@@ -66,13 +76,26 @@ function QuestionCard({ question, index }: { question: QuizQuestion; index: numb
 }
 
 export function QuizCard({ widget, verified }: { widget: QuizWidget; verified: boolean }) {
+  // Lifted out of QuestionCard so the header strip can count answers. Plain
+  // useState, so SSR and the hydrating render both produce 0 — nothing here
+  // reads persisted state, and nothing about a quiz is persisted at all.
+  const [selected, setSelected] = useState<(number | null)[]>(() => widget.questions.map(() => null));
+
   if (!verified) return null;
 
+  const answered = selected.filter((s) => s !== null).length;
+
   return (
-    <div className="mt-2 rounded-md border border-border bg-surface-sunken p-3">
+    <WidgetShell kind="quiz" status={`${answered}/${widget.questions.length} answered`}>
       {widget.questions.map((q, i) => (
-        <QuestionCard key={i} question={q} index={i} />
+        <QuestionCard
+          key={i}
+          question={q}
+          index={i}
+          selected={selected[i] ?? null}
+          onSelect={(option) => setSelected((prev) => prev.map((v, j) => (j === i ? option : v)))}
+        />
       ))}
-    </div>
+    </WidgetShell>
   );
 }

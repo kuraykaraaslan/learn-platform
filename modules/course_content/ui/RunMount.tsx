@@ -6,8 +6,11 @@
 
 import dynamic from 'next/dynamic';
 import { useState } from 'react';
+import { cn } from '@/libs/utils/cn';
 import { useProgressStore, editorKey } from '@/modules/progress/progress.store';
 import type { LessonBlock } from '../course_content.blocks';
+import { WidgetShell } from './WidgetShell';
+import { BTN_PRIMARY, FIELD_CODE } from './widget-ui';
 
 const CodeRunner = dynamic(() => import('./CodeRunner').then((m) => m.CodeRunner), { ssr: false });
 
@@ -36,13 +39,13 @@ export function RunMount({
   const source = savedSource ?? block.source;
 
   return (
-    <div className="mt-2">
+    <WidgetShell kind="run" status="sandboxed">
       <textarea
         value={source}
         onChange={(e) => setEditorValue(key, e.target.value)}
         spellCheck={false}
         rows={Math.min(20, Math.max(3, source.split('\n').length))}
-        className="w-full resize-y rounded-md border border-border bg-surface-sunken p-3 font-mono text-xs text-text-primary outline-none focus-visible:border-primary"
+        className={FIELD_CODE}
       />
       <button
         type="button"
@@ -50,13 +53,13 @@ export function RunMount({
           setHasRun(true);
           setRunCount((c) => c + 1);
         }}
-        className="mt-2 rounded-md border border-primary bg-primary/10 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/20"
+        className={cn(BTN_PRIMARY, 'mt-2')}
       >
         Run
       </button>
       {/* key={runCount} remounts on every click — a fresh sandbox and a
           fresh watchdog per run, using whatever the textarea holds right now. */}
       {hasRun && <CodeRunner key={runCount} source={source} lang={block.lang} />}
-    </div>
+    </WidgetShell>
   );
 }

@@ -12,6 +12,8 @@
 import { useState } from 'react';
 import { useProgressStore, widgetFieldKey } from '@/modules/progress/progress.store';
 import { useHydrated } from '@/modules/progress/useHydrated';
+import { WidgetShell } from '../WidgetShell';
+import { BTN_SECONDARY, FIELD } from '../widget-ui';
 import { evaluate } from '../../course_content.expr';
 import { formatCalcValue } from '../../course_content.calc-format';
 // Type-only, and it must stay that way: course_content.calc.ts pulls in yaml +
@@ -63,7 +65,10 @@ export function CalcCard({
   }
 
   return (
-    <div className="rounded-lg border border-border bg-surface-sunken p-4">
+    // No status slot: the only countable thing here would be a completion
+    // metric, which docs/phases/README.md invariant #4 rules out — and a calc
+    // has no right answer to be finished with anyway.
+    <WidgetShell kind="calc" bodyClassName="p-4">
       <div className="grid gap-3 sm:grid-cols-2">
         {widget.inputs.map((input) => (
           <label key={input.id} className="flex flex-col gap-1">
@@ -75,7 +80,7 @@ export function CalcCard({
               min={input.min}
               step={input.step}
               onChange={(e) => setTemplateValue(storageKey(input.id), e.target.value)}
-              className="w-full rounded-md border border-border bg-surface-overlay px-2 py-1 text-sm text-text-primary outline-none focus-visible:border-primary"
+              className={FIELD}
             />
           </label>
         ))}
@@ -103,19 +108,10 @@ export function CalcCard({
       </dl>
 
       <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
-        <button
-          type="button"
-          onClick={handleReset}
-          className="rounded-md border border-border px-2 py-1 text-text-secondary hover:bg-surface-overlay hover:text-text-primary"
-        >
+        <button type="button" onClick={handleReset} className={BTN_SECONDARY}>
           Reset to defaults
         </button>
-        <button
-          type="button"
-          onClick={() => setShowModel((v) => !v)}
-          aria-expanded={showModel}
-          className="rounded-md border border-border px-2 py-1 text-text-secondary hover:bg-surface-overlay hover:text-text-primary"
-        >
+        <button type="button" onClick={() => setShowModel((v) => !v)} aria-expanded={showModel} className={BTN_SECONDARY}>
           {showModel ? 'Hide the arithmetic' : 'Show the arithmetic'}
         </button>
         <span className="text-text-secondary">Your numbers stay in this browser.</span>
@@ -130,6 +126,6 @@ export function CalcCard({
           ))}
         </ul>
       )}
-    </div>
+    </WidgetShell>
   );
 }

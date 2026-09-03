@@ -14,6 +14,8 @@ import { useRef, useState } from 'react';
 import { cn } from '@/libs/utils/cn';
 import { runProject, type RunProjectHandle } from '../runtime/webcontainer.client';
 import type { LessonBlock } from '../course_content.blocks';
+import { WidgetShell } from './WidgetShell';
+import { BTN_DESTRUCTIVE, BTN_PRIMARY, NOTE_ERROR, PANE } from './widget-ui';
 
 type Status = 'idle' | 'running' | 'server-ready' | 'done' | 'error';
 
@@ -71,53 +73,41 @@ export function ProjectRunner({ block }: { block: Extract<LessonBlock, { kind: '
   }
 
   return (
-    <div className="mt-2 rounded-md border border-border bg-surface-sunken p-3 text-xs">
+    // statusText moves into the strip's status slot — it was competing with
+    // the buttons for the same row, and the strip is where every other
+    // widget's "where am I" line now lives.
+    <WidgetShell kind="project" status={statusText || undefined} bodyClassName="p-3 text-xs">
       <div className="mb-2 flex flex-wrap items-center gap-2">
-        <button
-          type="button"
-          onClick={start}
-          disabled={status === 'running'}
-          className="rounded-md border border-primary bg-primary/10 px-3 py-1 font-medium text-primary hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
-        >
+        <button type="button" onClick={start} disabled={status === 'running'} className={BTN_PRIMARY}>
           Run Project
         </button>
         {status === 'running' && (
-          <button
-            type="button"
-            onClick={cancel}
-            className="rounded-md border border-error px-3 py-1 font-medium text-error hover:bg-error-subtle"
-          >
+          <button type="button" onClick={cancel} className={BTN_DESTRUCTIVE}>
             Cancel
           </button>
         )}
-        {statusText && <span className="text-text-secondary">{statusText}</span>}
       </div>
 
       {output && (
-        <pre
-          ref={outputRef}
-          className="max-h-64 overflow-y-auto whitespace-pre-wrap rounded bg-surface-overlay p-2 font-mono text-text-primary"
-        >
+        <pre ref={outputRef} className={cn(PANE, 'max-h-64 overflow-y-auto')}>
           {output}
         </pre>
       )}
 
-      {errorMessage && (
-        <pre className={cn('mt-2 whitespace-pre-wrap rounded p-2 font-mono text-error', output ? '' : 'bg-surface-overlay')}>
-          {errorMessage}
-        </pre>
-      )}
+      {errorMessage && <pre className={cn(NOTE_ERROR, 'mt-2 whitespace-pre-wrap font-mono')}>{errorMessage}</pre>}
 
       {previewUrl && (
         <div className="mt-2">
           <p className="mb-1 text-text-secondary">Live preview:</p>
           <iframe
             src={previewUrl}
-            className="h-96 w-full rounded border border-border bg-white"
+            // bg-white, not a token: this frame renders a third-party page
+            // that assumes a white canvas, so theming it would be a bug.
+            className="h-96 w-full rounded-md border border-border bg-white"
             title={`Preview for ${block.id}`}
           />
         </div>
       )}
-    </div>
+    </WidgetShell>
   );
 }

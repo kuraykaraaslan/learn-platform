@@ -9,7 +9,10 @@
 import { useState } from 'react';
 import { cn } from '@/libs/utils/cn';
 import { useProgressStore, mistakeKey, widgetFieldKey, type MistakeAssessment } from '@/modules/progress/progress.store';
+import { useHydrated } from '@/modules/progress/useHydrated';
 import type { RecallItem, RecallWidget } from '../../course_content.recall';
+import { WidgetShell } from '../WidgetShell';
+import { BTN_PRIMARY, CHECKBOX, CHIP_BASE, CHIP_IDLE, CHIP_ON, FIELD } from '../widget-ui';
 
 const MIN_ANSWER_LENGTH = 15;
 
@@ -26,16 +29,20 @@ function RecallItemView({
   blockId,
   courseSlug,
   lessonFile,
+  revealed,
+  onReveal,
 }: {
   item: RecallItem;
   index: number;
   blockId: string;
   courseSlug: string;
   lessonFile: string;
+  revealed: boolean;
+  onReveal: () => void;
 }) {
   const [answer, setAnswer] = useState('');
-  const [revealed, setRevealed] = useState(false);
   const canReveal = answer.trim().length >= MIN_ANSWER_LENGTH;
+  const hydrated = useHydrated();
 
   const checked = useProgressStore((s) => s.checklistChecked);
   const setChecklistChecked = useProgressStore((s) => s.setChecklistChecked);
@@ -54,14 +61,9 @@ function RecallItemView({
             onChange={(e) => setAnswer(e.target.value)}
             rows={3}
             placeholder="Write what you remember before revealing the checklist…"
-            className="w-full resize-y rounded-md border border-border bg-surface-overlay p-2 text-sm text-text-primary outline-none focus-visible:border-primary"
+            className={cn(FIELD, 'resize-y p-2')}
           />
-          <button
-            type="button"
-            onClick={() => setRevealed(true)}
-            disabled={!canReveal}
-            className="mt-2 rounded-md border border-primary bg-primary/10 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
-          >
+          <button type="button" onClick={onReveal} disabled={!canReveal} className={cn(BTN_PRIMARY, 'mt-2')}>
             Show
           </button>
           {!canReveal && answer.length > 0 && (
@@ -73,7 +75,9 @@ function RecallItemView({
       {revealed && (
         <div>
           <p className="mb-1 text-xs text-text-secondary">Your answer:</p>
-          <p className="mb-3 whitespace-pre-wrap rounded-md bg-surface-overlay p-2 text-sm text-text-primary">{answer}</p>
+          <p className="mb-3 whitespace-pre-wrap rounded-md border border-border bg-surface-overlay p-2 text-sm text-text-primary">
+            {answer}
+          </p>
 
           <p className="mb-1 text-xs text-text-secondary">Did your answer cover:</p>
           <ul className="mb-3 space-y-1.5">
@@ -84,11 +88,13 @@ function RecallItemView({
                   <label className="flex items-start gap-2 text-sm">
                     <input
                       type="checkbox"
-                      className="mt-0.5"
-                      checked={checked[key] ?? false}
+                      className={CHECKBOX}
+                      checked={(hydrated && checked[key]) ?? false}
                       onChange={(e) => setChecklistChecked(key, e.target.checked)}
                     />
-                    <span className={checked[key] ? 'text-text-secondary line-through' : 'text-text-primary'}>{m}</span>
+                    <span className={hydrated && checked[key] ? 'text-text-secondary line-through' : 'text-text-primary'}>
+                      {m}
+                    </span>
                   </label>
                 </li>
               );
@@ -101,12 +107,7 @@ function RecallItemView({
                 key={value}
                 type="button"
                 onClick={() => setAssessment(assessKey, value)}
-                className={cn(
-                  'rounded-md border px-2 py-1 text-xs transition-colors',
-                  assessment === value
-                    ? 'border-primary bg-primary/10 text-primary'
-                    : 'border-border text-text-secondary hover:text-text-primary'
-                )}
+                className={cn(CHIP_BASE, hydrated && assessment === value ? CHIP_ON : CHIP_IDLE)}
               >
                 {ASSESSMENT_LABEL[value]}
               </button>
@@ -131,10 +132,14 @@ export function RecallCard({
   lessonFile: string;
   verified: boolean;
 }) {
+  // Lifted out of RecallItemView so the strip can count reveals. Plain
+  // useState (nothing about a reveal is persisted), so SSR renders 0.
+  const [revealed, setRevealed] = useState<boolean[]>(() => widget.items.map(() => false));
+
   if (!verified) return null;
 
   return (
-    <div className="mt-2 rounded-md border border-border bg-surface-sunken p-3">
+    <WidgetShell kind="recall" status={`${revealed.filter(Boolean).length}/${widget.items.length} revealed`}>
       {widget.items.map((item, i) => (
         <RecallItemView
           key={i}
@@ -143,8 +148,10 @@ export function RecallCard({
           blockId={blockId}
           courseSlug={courseSlug}
           lessonFile={lessonFile}
+          revealed={revealed[i] ?? false}
+          onReveal={() => setRevealed((prev) => prev.map((v, j) => (j === i ? true : v)))}
         />
       ))}
-    </div>
+    </WidgetShell>
   );
 }

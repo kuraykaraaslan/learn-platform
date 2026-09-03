@@ -1,12 +1,11 @@
 // Renders one parsed lesson section as a titled card. A section is a sequence
 // of blocks (course_content.blocks.ts): 'html' runs go through the same
 // remark/rehype pipeline output as before (dangerouslySetInnerHTML), 'code'
-// blocks get their own <CodeBlock> with a copy button. The prose styling here
-// follows the same "Tailwind arbitrary-variant selectors instead of
-// @tailwindcss/typography" approach as kui-react's PostContent component
-// (modules/domains/blog/post/PostContent.tsx) — not copied verbatim since the
-// section set differs, but the same technique.
+// blocks get their own <CodeBlock> with a copy button. The markdown styling
+// itself lives in ui/prose.ts (MD_CLASSES) and is applied per pipeline-HTML
+// run, not to this container — see that file for why.
 import { cn } from '@/libs/utils/cn';
+import { MD_CLASSES } from './prose';
 import type { LessonBlock } from '../course_content.blocks';
 import { CodeBlock } from './CodeBlock';
 import { TemplateFormCard } from './widgets/TemplateFormCard';
@@ -29,38 +28,24 @@ import { CalcCard } from './widgets/CalcCard';
 // route template, so the bundler had nothing per-param to split against. A
 // plain import is both simpler and smaller here.
 
+/** Section-level card chrome, shared with FailureDrillCard — which builds its
+ *  own <section> in drill mode and had been carrying a byte-identical copy of
+ *  both strings that was already drifting (its <h2> had a different margin).
+ *  ReviewQueue uses it too, which is why `scroll-mt-20` is NOT in here: that
+ *  offset belongs to being an anchor target, not to being a card. */
+export const SECTION_SHELL = 'rounded-lg border border-border bg-surface-raised p-5';
+export const SECTION_TITLE = 'text-sm font-semibold uppercase tracking-wide text-text-primary';
+
+// Only the inherited type scale and the margin-regression guard live here now;
+// every descendant rule moved to ui/prose.ts's MD_CLASSES, which is applied to
+// each pipeline-HTML run instead of to this container. text-sm/leading-relaxed
+// reach widgets by *inheritance*, which is what we want — the descendant
+// variants reached them by specificity, which is what we didn't.
+//
 // Exported for course_content.blocks.test.ts's margin-regression guard.
 export const PROSE_CLASSES = cn(
   'text-text-primary leading-relaxed text-sm',
-  '[&_p]:mb-3 [&>:last-child>:last-child]:mb-0',
-  '[&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-3 [&_ul]:space-y-1',
-  '[&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-3 [&_ol]:space-y-1',
-  '[&_strong]:font-semibold [&_strong]:text-text-primary',
-  '[&_a]:text-primary [&_a]:underline [&_a]:underline-offset-2 hover:[&_a]:text-primary-hover',
-  '[&_code]:bg-surface-sunken [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded [&_code]:text-xs [&_code]:font-mono',
-  '[&_pre]:bg-surface-sunken [&_pre]:p-4 [&_pre]:rounded-lg [&_pre]:overflow-x-auto [&_pre]:mb-3 [&_pre]:text-xs',
-  '[&_pre_code]:bg-transparent [&_pre_code]:p-0',
-  '[&_table]:w-full [&_table]:text-xs [&_table]:mb-3 [&_table]:border-collapse',
-  '[&_th]:border [&_th]:border-border [&_th]:px-2 [&_th]:py-1 [&_th]:bg-surface-overlay [&_th]:text-left',
-  '[&_td]:border [&_td]:border-border [&_td]:px-2 [&_td]:py-1',
-  '[&_blockquote]:border-l-2 [&_blockquote]:border-border-strong [&_blockquote]:pl-3 [&_blockquote]:text-text-secondary',
-  // Callouts (remark-callouts.ts): a blockquote starting with `[!KIND]`
-  // becomes `<aside data-callout="kind">`. Zero client JS — theme tokens
-  // carry light/dark automatically. note/tip lean informational, warning is
-  // its own token, caution and pitfall (this corpus's inline Common Mistakes
-  // equivalent) both read as "this will actually break something".
-  '[&_aside]:rounded-lg [&_aside]:border-l-4 [&_aside]:px-4 [&_aside]:py-3 [&_aside]:mb-3 [&_aside>:last-child]:mb-0',
-  '[&_aside[data-callout="note"]]:bg-info-subtle [&_aside[data-callout="note"]]:border-info [&_aside[data-callout="note"]]:text-info-fg',
-  '[&_aside[data-callout="tip"]]:bg-success-subtle [&_aside[data-callout="tip"]]:border-success [&_aside[data-callout="tip"]]:text-success-fg',
-  '[&_aside[data-callout="warning"]]:bg-warning-subtle [&_aside[data-callout="warning"]]:border-warning [&_aside[data-callout="warning"]]:text-warning-fg',
-  '[&_aside[data-callout="caution"]]:bg-error-subtle [&_aside[data-callout="caution"]]:border-error [&_aside[data-callout="caution"]]:text-error-fg',
-  '[&_aside[data-callout="pitfall"]]:bg-error-subtle [&_aside[data-callout="pitfall"]]:border-error [&_aside[data-callout="pitfall"]]:text-error-fg',
-  // Concept terms (remark-concepts.ts): a real <button>, reset off its
-  // default browser chrome so it reads as inline text with a dotted
-  // underline, not a form control. ui/ConceptTooltip.tsx wires up the click.
-  '[&_button.concept-term]:appearance-none [&_button.concept-term]:border-0 [&_button.concept-term]:bg-transparent [&_button.concept-term]:p-0 [&_button.concept-term]:m-0 [&_button.concept-term]:font-inherit [&_button.concept-term]:text-inherit',
-  '[&_button.concept-term]:underline [&_button.concept-term]:decoration-dotted [&_button.concept-term]:decoration-text-secondary [&_button.concept-term]:underline-offset-2 [&_button.concept-term]:cursor-pointer',
-  'hover:[&_button.concept-term]:text-primary'
+  '[&>:last-child>:last-child]:mb-0'
 );
 
 function BlockView({
@@ -77,7 +62,7 @@ function BlockView({
   switch (block.kind) {
     case 'html':
       // eslint-disable-next-line react/no-danger -- block.html is our own build-time markdown pipeline output, not user input
-      return <div dangerouslySetInnerHTML={{ __html: block.html }} />;
+      return <div className={MD_CLASSES} dangerouslySetInnerHTML={{ __html: block.html }} />;
     case 'code':
       // The mermaid library itself is loaded only inside MermaidBlock, only
       // once it's actually visible — MermaidBlock's own module has no static
@@ -174,13 +159,17 @@ export function LessonSectionCard({
   if (blocks.length === 0) return null;
 
   return (
-    <section id={sectionAnchorId(title)} className={cn('scroll-mt-20 rounded-lg border border-border bg-surface-raised p-5', className)}>
-      <h2 className="text-sm font-semibold text-text-primary uppercase tracking-wide mb-3">
-        {title}
-      </h2>
+    <section id={sectionAnchorId(title)} className={cn(SECTION_SHELL, 'scroll-mt-20', className)}>
+      <h2 className={cn(SECTION_TITLE, 'mb-3')}>{title}</h2>
       <div className={PROSE_CLASSES}>
+        {/* The one place vertical rhythm between blocks is declared. It used
+            to be each widget's own `mt-2` (or, for three of them, nothing at
+            all), which is why two consecutive widgets collapsed to 8px while
+            a paragraph followed by a widget got 20px. */}
         {blocks.map((block) => (
-          <BlockView key={block.id} block={block} courseSlug={courseSlug} lessonFile={lessonFile} verified={verified} />
+          <div key={block.id} className="mb-4 last:mb-0">
+            <BlockView block={block} courseSlug={courseSlug} lessonFile={lessonFile} verified={verified} />
+          </div>
         ))}
       </div>
     </section>

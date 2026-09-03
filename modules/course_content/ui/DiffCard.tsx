@@ -10,6 +10,8 @@
 import { useState } from 'react';
 import { cn } from '@/libs/utils/cn';
 import type { DiffWidget } from '../course_content.blocks';
+import { WidgetShell } from './WidgetShell';
+import { CHIP_BASE, CHIP_IDLE } from './widget-ui';
 
 function diffLines(a: string[], b: string[]): boolean[] {
   const len = Math.max(a.length, b.length);
@@ -25,7 +27,7 @@ export function DiffCard({ widget }: { widget: DiffWidget }) {
   const lines = showing === 'broken' ? brokenLines : fixedLines;
 
   return (
-    <div className="mt-2 rounded-md border border-border bg-surface-sunken p-3 font-mono text-xs">
+    <WidgetShell kind="diff" bodyClassName="p-3 font-mono text-xs">
       <div className="mb-2 flex gap-1 font-sans">
         {(['broken', 'fixed'] as const).map((mode) => (
           <button
@@ -33,12 +35,13 @@ export function DiffCard({ widget }: { widget: DiffWidget }) {
             type="button"
             onClick={() => setShowing(mode)}
             className={cn(
-              'rounded-md border px-3 py-1 text-xs font-medium capitalize transition-colors',
+              CHIP_BASE,
+              'px-3 capitalize',
               showing === mode
                 ? mode === 'broken'
                   ? 'border-error bg-error-subtle text-error-fg'
                   : 'border-success bg-success-subtle text-success-fg'
-                : 'border-border text-text-secondary hover:text-text-primary'
+                : CHIP_IDLE
             )}
           >
             {mode}
@@ -52,6 +55,6 @@ export function DiffCard({ widget }: { widget: DiffWidget }) {
           </div>
         ))}
       </pre>
-    </div>
+    </WidgetShell>
   );
 }

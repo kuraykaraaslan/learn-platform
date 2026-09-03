@@ -11,6 +11,8 @@ import { cn } from '@/libs/utils/cn';
 import { runSql, type SqlStatementResult } from '../runtime/pglite.client';
 import { useProgressStore, editorKey, lessonKey } from '@/modules/progress/progress.store';
 import type { LessonBlock } from '../course_content.blocks';
+import { WidgetShell } from './WidgetShell';
+import { BTN_PRIMARY, FIELD_CODE, NOTE_ERROR, NOTE_WARNING, PANE } from './widget-ui';
 
 type Status = 'idle' | 'running' | 'done' | 'error';
 
@@ -23,7 +25,7 @@ type Status = 'idle' | 'running' | 'done' | 'error';
 // negotiable per the spec: rendered above every result, not just once.
 function HonestyBanner() {
   return (
-    <p className="mb-2 rounded border border-warning bg-warning-subtle px-2 py-1.5 text-warning-fg">
+    <p className={cn(NOTE_WARNING, 'mb-2')}>
       Real Postgres query planner — plan shape (scan type, join order, row estimates) is genuine. This runs
       single-process in your browser: timings and buffer counts do not represent a real server.
     </p>
@@ -37,9 +39,7 @@ function isPlanResult(result: SqlStatementResult): boolean {
 function ResultView({ result }: { result: SqlStatementResult }) {
   if (isPlanResult(result)) {
     return (
-      <pre className="whitespace-pre-wrap rounded bg-surface-overlay p-2 font-mono text-text-primary">
-        {result.rows.map((row) => String(Object.values(row)[0])).join('\n')}
-      </pre>
+      <pre className={PANE}>{result.rows.map((row) => String(Object.values(row)[0])).join('\n')}</pre>
     );
   }
 
@@ -54,7 +54,11 @@ function ResultView({ result }: { result: SqlStatementResult }) {
 
   return (
     <div className="overflow-x-auto">
-      <table className="w-full text-left">
+      {/* border-collapse is declared here now. It used to arrive from
+          PROSE_CLASSES' [&_table] rule reaching in from the section
+          container — the same values this component also set locally, a
+          duplicated source of truth that would have drifted. */}
+      <table className="w-full border-collapse text-left">
         <thead>
           <tr>
             {result.columns.map((col) => (
@@ -126,35 +130,33 @@ export function SqlRunner({
   }
 
   return (
-    <div className="mt-2">
+    // One fence, one card: the editor and its output used to be a bare div
+    // and a separate sunken card, so a single `sql run` block looked like two
+    // unrelated things stacked on each other.
+    <WidgetShell kind="sql">
       <textarea
         value={source}
         onChange={(e) => setEditorValue(key, e.target.value)}
         spellCheck={false}
         rows={Math.min(20, Math.max(3, source.split('\n').length))}
-        className="w-full resize-y rounded-md border border-border bg-surface-sunken p-3 font-mono text-xs text-text-primary outline-none focus-visible:border-primary"
+        className={FIELD_CODE}
       />
-      <button
-        type="button"
-        onClick={run}
-        disabled={status === 'running'}
-        className="mt-2 rounded-md border border-primary bg-primary/10 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
-      >
+      <button type="button" onClick={run} disabled={status === 'running'} className={cn(BTN_PRIMARY, 'mt-2')}>
         Run
       </button>
 
       {status !== 'idle' && (
-        <div className="mt-2 rounded-md border border-border bg-surface-sunken p-3 font-mono text-xs">
+        <div className="mt-3 border-t border-border pt-3 font-mono text-xs">
           <HonestyBanner />
           {status === 'running' && <p className="text-text-secondary">{statusText || 'Running…'}</p>}
           {results.map((result, i) => (
-            <div key={i} className={cn(i > 0 && 'mt-3 border-t border-border pt-2')}>
+            <div key={i} className={cn(i > 0 && 'mt-4 border-t border-border pt-4')}>
               <ResultView result={result} />
             </div>
           ))}
-          {errorMessage && <pre className="whitespace-pre-wrap text-error">{errorMessage}</pre>}
+          {errorMessage && <pre className={cn(NOTE_ERROR, 'whitespace-pre-wrap')}>{errorMessage}</pre>}
         </div>
       )}
-    </div>
+    </WidgetShell>
   );
 }

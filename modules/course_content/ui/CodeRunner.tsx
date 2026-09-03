@@ -5,6 +5,7 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { cn } from '@/libs/utils/cn';
+import { NOTE_ERROR } from './widget-ui';
 import { transpileForSandbox } from '../course_content.transpile';
 import { buildSandboxHtml } from '../course_content.sandbox';
 
@@ -103,7 +104,9 @@ export function CodeRunner({ source, lang }: { source: string; lang: string }) {
   }, [transpiled]);
 
   return (
-    <div className="mt-2 rounded-md border border-border bg-surface-sunken p-3 font-mono text-xs">
+    // No card of its own: this renders *inside* RunMount's shell, as that
+    // fence's output. It used to be a second sunken card nested in nothing.
+    <div className="mt-3 font-mono text-xs">
       <div ref={containerRef} />
       {status === 'running' && <p className="text-text-secondary">Running…</p>}
       {logs.map((entry, i) => (
@@ -111,7 +114,10 @@ export function CodeRunner({ source, lang }: { source: string; lang: string }) {
           key={i}
           className={cn(
             'whitespace-pre-wrap',
-            entry.level === 'error' ? 'text-error' : entry.level === 'warn' ? 'text-warning' : 'text-text-primary'
+            // The -fg tokens, not --error/--warning themselves: those are
+            // border hues, and light-mode --warning (#f59e0b) as body text
+            // is 1.76:1 against this surface. --warning-fg is 7.45:1.
+            entry.level === 'error' ? 'text-error-fg' : entry.level === 'warn' ? 'text-warning-fg' : 'text-text-primary'
           )}
         >
           {entry.parts.join(' ')}
@@ -119,7 +125,7 @@ export function CodeRunner({ source, lang }: { source: string; lang: string }) {
       ))}
       {status === 'done' && logs.length === 0 && <p className="text-text-secondary">(no output)</p>}
       {error && (
-        <pre className="whitespace-pre-wrap text-error">
+        <pre className={cn(NOTE_ERROR, 'mt-2 whitespace-pre-wrap')}>
           {error.message}
           {error.stack ? `\n${error.stack}` : ''}
         </pre>

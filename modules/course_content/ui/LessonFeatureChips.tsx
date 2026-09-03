@@ -3,23 +3,26 @@
 // "4 drills · fill-in · checklist", not just a title.
 import { Badge } from '@kui/ui/Badge';
 import type { LessonFeatures } from '../course_content.types';
+import { WIDGET_LABEL } from './WidgetShell';
 
 type Chip = { label: string; strong?: boolean };
 
+// Every label here comes from WIDGET_LABEL, so a chip on this page and the
+// header strip on the card it advertises always say the same word.
 function chips(f: LessonFeatures): Chip[] {
   const out: Chip[] = [];
   if (f.drills > 0) out.push({ label: `${f.drills} ${f.drills === 1 ? 'drill' : 'drills'}`, strong: true });
-  if (f.runnableCode) out.push({ label: 'live code', strong: true });
-  if (f.project) out.push({ label: 'run project', strong: true });
-  if (f.sql) out.push({ label: 'live SQL', strong: true });
-  if (f.diff) out.push({ label: 'broken → fixed' });
-  if (f.quiz) out.push({ label: 'quiz' });
-  if (f.tradeoff) out.push({ label: 'trade-off' });
-  if (f.recall) out.push({ label: 'recall' });
-  if (f.calc) out.push({ label: 'calculator' });
-  if (f.checklist) out.push({ label: 'checklist' });
-  if (f.template) out.push({ label: 'fill-in' });
-  if (f.mermaid) out.push({ label: 'diagram' });
+  if (f.runnableCode) out.push({ label: WIDGET_LABEL.run, strong: true });
+  if (f.project) out.push({ label: WIDGET_LABEL.project, strong: true });
+  if (f.sql) out.push({ label: WIDGET_LABEL.sql, strong: true });
+  if (f.diff) out.push({ label: WIDGET_LABEL.diff });
+  if (f.quiz) out.push({ label: WIDGET_LABEL.quiz });
+  if (f.tradeoff) out.push({ label: WIDGET_LABEL.tradeoff });
+  if (f.recall) out.push({ label: WIDGET_LABEL.recall });
+  if (f.calc) out.push({ label: WIDGET_LABEL.calc });
+  if (f.checklist) out.push({ label: WIDGET_LABEL.checklist });
+  if (f.template) out.push({ label: WIDGET_LABEL.template });
+  if (f.mermaid) out.push({ label: WIDGET_LABEL.mermaid });
   return out;
 }
 

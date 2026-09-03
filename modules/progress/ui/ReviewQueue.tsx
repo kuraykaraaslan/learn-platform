@@ -14,6 +14,9 @@ import { cn } from '@/libs/utils/cn';
 import { useProgressStore, type MistakeAssessment } from '../progress.store';
 import { useHydrated } from '../useHydrated';
 import type { ReviewCard } from '../review-card';
+import { SECTION_SHELL } from '@/modules/course_content/ui/LessonSectionCard';
+import { MD_CLASSES } from '@/modules/course_content/ui/prose';
+import { BTN_PRIMARY, CHIP_BASE, CHIP_IDLE } from '@/modules/course_content/ui/widget-ui';
 
 const DAILY_CAP = 10;
 
@@ -42,7 +45,7 @@ function CardView({ card, onDone }: { card: ReviewCard; onDone: () => void }) {
   const setAssessment = useProgressStore((s) => s.setMistakeAssessment);
 
   return (
-    <div className="rounded-lg border border-border bg-surface-raised p-5">
+    <div className={SECTION_SHELL}>
       <p className="mb-1 text-xs text-text-secondary">{card.lessonTitle}</p>
       <p className="mb-3 text-sm font-medium text-text-primary">{card.lead}</p>
 
@@ -50,7 +53,7 @@ function CardView({ card, onDone }: { card: ReviewCard; onDone: () => void }) {
         <button
           type="button"
           onClick={() => setRevealed(true)}
-          className="rounded-md border border-primary bg-primary/10 px-3 py-1 text-xs font-medium text-primary hover:bg-primary/20"
+          className={BTN_PRIMARY}
         >
           Show
         </button>
@@ -58,7 +61,7 @@ function CardView({ card, onDone }: { card: ReviewCard; onDone: () => void }) {
         <div>
           {/* eslint-disable react/no-danger -- card.bodyHtml comes from the same build-time markdown pipeline as every other lesson body, not user input */}
           <div
-            className="mb-3 text-sm text-text-secondary [&_p]:mb-2 [&_code]:rounded [&_code]:bg-surface-sunken [&_code]:px-1 [&_code]:font-mono [&_code]:text-xs"
+            className={cn(MD_CLASSES, 'mb-3 text-sm text-text-secondary')}
             dangerouslySetInnerHTML={{ __html: card.bodyHtml }}
           />
           {/* eslint-enable react/no-danger */}
@@ -71,10 +74,7 @@ function CardView({ card, onDone }: { card: ReviewCard; onDone: () => void }) {
                   setAssessment(card.key, value);
                   onDone();
                 }}
-                className={cn(
-                  'rounded-md border px-2 py-1 text-xs transition-colors',
-                  'border-border text-text-secondary hover:text-text-primary hover:border-primary'
-                )}
+                className={cn(CHIP_BASE, CHIP_IDLE)}
               >
                 {ASSESSMENT_LABEL[value]}
               </button>

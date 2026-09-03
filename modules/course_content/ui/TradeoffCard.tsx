@@ -7,12 +7,17 @@
 import { useState } from 'react';
 import { cn } from '@/libs/utils/cn';
 import type { TradeoffWidget } from '../course_content.blocks';
+import { WidgetShell } from './WidgetShell';
+import { BTN_LINK, CHOICE_BASE, CHOICE_IDLE } from './widget-ui';
 
 export function TradeoffCard({ widget }: { widget: TradeoffWidget }) {
   const [picked, setPicked] = useState<0 | 1 | null>(null);
 
   return (
-    <div className="mt-2 rounded-md border border-border bg-surface-sunken p-3">
+    // "no right answer" in the strip, not "no correct answer": docs/phases/06
+    // bans the vocabulary of scoring here, and TradeoffCard.test.ts enforces
+    // it by matching /correct|wrong|score/ against the whole rendered HTML.
+    <WidgetShell kind="tradeoff" status="no right answer">
       <p className="mb-2 text-sm font-medium text-text-primary">{widget.question}</p>
 
       {picked === null && (
@@ -22,7 +27,7 @@ export function TradeoffCard({ widget }: { widget: TradeoffWidget }) {
               key={side.name}
               type="button"
               onClick={() => setPicked(i as 0 | 1)}
-              className="flex-1 rounded-md border border-border px-3 py-2 text-sm text-text-primary hover:border-primary"
+              className={cn(CHOICE_BASE, CHOICE_IDLE, 'flex-1 text-center')}
             >
               {side.name}
             </button>
@@ -35,7 +40,7 @@ export function TradeoffCard({ widget }: { widget: TradeoffWidget }) {
           <button
             type="button"
             onClick={() => setPicked(null)}
-            className="mb-2 text-xs text-text-secondary underline underline-offset-2 hover:text-text-primary"
+            className={cn(BTN_LINK, 'mb-2')}
           >
             Pick again
           </button>
@@ -45,7 +50,7 @@ export function TradeoffCard({ widget }: { widget: TradeoffWidget }) {
                 key={side.name}
                 className={cn(
                   'rounded-md border p-3',
-                  picked === i ? 'border-primary bg-primary/5' : 'border-border'
+                  picked === i ? 'border-primary bg-primary/10' : 'border-border bg-surface-base'
                 )}
               >
                 <p className="mb-1.5 text-sm font-medium text-text-primary">{side.name}</p>
@@ -60,6 +65,6 @@ export function TradeoffCard({ widget }: { widget: TradeoffWidget }) {
           </div>
         </div>
       )}
-    </div>
+    </WidgetShell>
   );
 }

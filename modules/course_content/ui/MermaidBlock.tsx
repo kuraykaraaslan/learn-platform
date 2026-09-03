@@ -10,6 +10,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTheme } from 'next-themes';
 import { useMounted } from '@/modules/shared/useMounted';
+import { WidgetShell } from './WidgetShell';
+import { MD_CLASSES } from './prose';
+import { NOTE_ERROR } from './widget-ui';
 
 type RenderState =
   | { status: 'pending' }
@@ -78,23 +81,24 @@ export function MermaidBlock({ source, html }: { source: string; html: string })
   }, [visible, resolvedTheme, source]);
 
   return (
-    <div ref={containerRef} className="mb-3">
-      {state.status === 'error' && (
-        <p className="mb-2 rounded-md border border-error bg-error-subtle px-3 py-2 text-xs text-error-fg">
-          Diagram failed to render: {state.message}
-        </p>
-      )}
-      {state.status === 'rendered' ? (
-        // eslint-disable-next-line react/no-danger -- svg from our own mermaid.render() call, not user input
-        <div className="overflow-x-auto" dangerouslySetInnerHTML={{ __html: state.svg }} />
-      ) : (
-        // Source stays visible as literal text until (or unless) mermaid
-        // loads and renders successfully — a reader with JS off, or mid
-        // page-load, or hitting a parse error still gets the diagram's
-        // definition, not a silent blank.
-        // eslint-disable-next-line react/no-danger -- block.html is our own build-time markdown pipeline output, not user input
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      )}
-    </div>
+    // The shell's mark is a CSS shape, not an inline <svg> — MermaidBlock's
+    // own test asserts the SSR fallback contains no '<svg', which is exactly
+    // what distinguishes "the diagram rendered" from "it didn't yet".
+    <WidgetShell kind="mermaid">
+      <div ref={containerRef}>
+        {state.status === 'error' && <p className={`mb-2 ${NOTE_ERROR}`}>Diagram failed to render: {state.message}</p>}
+        {state.status === 'rendered' ? (
+          // eslint-disable-next-line react/no-danger -- svg from our own mermaid.render() call, not user input
+          <div className="overflow-x-auto" dangerouslySetInnerHTML={{ __html: state.svg }} />
+        ) : (
+          // Source stays visible as literal text until (or unless) mermaid
+          // loads and renders successfully — a reader with JS off, or mid
+          // page-load, or hitting a parse error still gets the diagram's
+          // definition, not a silent blank.
+          // eslint-disable-next-line react/no-danger -- block.html is our own build-time markdown pipeline output, not user input
+          <div className={MD_CLASSES} dangerouslySetInnerHTML={{ __html: html }} />
+        )}
+      </div>
+    </WidgetShell>
   );
 }

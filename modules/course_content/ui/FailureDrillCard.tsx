@@ -19,7 +19,9 @@ import { useHydrated } from '@/modules/progress/useHydrated';
 import type { Lesson } from '../course_content.types';
 import type { LessonMistake } from '../course_content.mistakes';
 import type { LessonBlock } from '../course_content.blocks';
-import { LessonSectionCard, sectionAnchorId } from './LessonSectionCard';
+import { LessonSectionCard, sectionAnchorId, SECTION_SHELL, SECTION_TITLE } from './LessonSectionCard';
+import { MD_CLASSES } from './prose';
+import { BTN_LINK, CHIP_BASE, CHIP_IDLE, CHIP_ON, FOCUS_RING } from './widget-ui';
 
 const ASSESSMENT_LABEL: Record<MistakeAssessment, string> = {
   knew: 'I knew it',
@@ -49,7 +51,11 @@ function MistakeRow({
         type="button"
         aria-expanded={isOpen}
         onClick={() => setOpen((o) => !o)}
-        className="flex w-full items-start justify-between gap-3 text-left text-sm font-medium text-text-primary"
+        className={cn(
+          'flex w-full items-start justify-between gap-3 rounded-sm text-left text-sm font-medium text-text-primary',
+          'transition-colors hover:text-primary',
+          FOCUS_RING
+        )}
       >
         <span>{mistake.lead}</span>
         <span aria-hidden="true" className="shrink-0 text-text-secondary">
@@ -69,7 +75,7 @@ function MistakeRow({
         <div role="region" aria-label={mistake.lead} className="mt-2">
           {/* eslint-disable react/no-danger -- mistake.bodyHtml is our own build-time markdown pipeline output, not user input */}
           <div
-            className="text-sm text-text-secondary [&_p]:mb-2 [&_code]:rounded [&_code]:bg-surface-sunken [&_code]:px-1 [&_code]:font-mono [&_code]:text-xs"
+            className={cn(MD_CLASSES, 'text-sm text-text-secondary')}
             dangerouslySetInnerHTML={{ __html: mistake.bodyHtml }}
           />
           {/* eslint-enable react/no-danger */}
@@ -79,12 +85,7 @@ function MistakeRow({
                 key={value}
                 type="button"
                 onClick={() => setAssessment(storageKey, value)}
-                className={cn(
-                  'rounded-md border px-2 py-1 text-xs transition-colors',
-                  assessment === value
-                    ? 'border-primary bg-primary/10 text-primary'
-                    : 'border-border text-text-secondary hover:text-text-primary'
-                )}
+                className={cn(CHIP_BASE, hydrated && assessment === value ? CHIP_ON : CHIP_IDLE)}
               >
                 {ASSESSMENT_LABEL[value]}
               </button>
@@ -117,14 +118,10 @@ export function FailureDrillCard({ lesson, blocks }: { lesson: Lesson; blocks: L
     );
 
   return (
-    <section id={sectionAnchorId('Common Mistakes')} className="scroll-mt-20 rounded-lg border border-border bg-surface-raised p-5">
+    <section id={sectionAnchorId('Common Mistakes')} className={cn(SECTION_SHELL, 'scroll-mt-20')}>
       <div className="mb-1 flex items-center justify-between">
-        <h2 className="text-sm font-semibold text-text-primary uppercase tracking-wide">Common Mistakes</h2>
-        <button
-          type="button"
-          onClick={() => setExpandAll(key, !expandAll)}
-          className="text-xs text-text-secondary underline underline-offset-2 hover:text-text-primary"
-        >
+        <h2 className={SECTION_TITLE}>Common Mistakes</h2>
+        <button type="button" onClick={() => setExpandAll(key, !expandAll)} className={BTN_LINK}>
           {expandAll ? 'Collapse all' : 'Expand all'}
         </button>
       </div>

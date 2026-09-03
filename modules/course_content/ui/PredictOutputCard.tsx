@@ -13,6 +13,8 @@ import { cn } from '@/libs/utils/cn';
 import { useProgressStore, mistakeKey, type MistakeAssessment } from '@/modules/progress/progress.store';
 import { useHydrated } from '@/modules/progress/useHydrated';
 import type { LessonBlock } from '../course_content.blocks';
+import { WidgetShell } from './WidgetShell';
+import { BTN_PRIMARY, CHIP_BASE, CHIP_IDLE, CHIP_ON, FIELD, PANE } from './widget-ui';
 
 const MIN_PREDICTION_LENGTH = 15;
 
@@ -53,7 +55,10 @@ export function PredictOutputCard({
   const canReveal = prediction.trim().length >= MIN_PREDICTION_LENGTH;
 
   return (
-    <div className="mt-2 rounded-md border border-border bg-surface-sunken p-3 font-mono text-xs">
+    // 'predict output' and 'hidden'/'revealed' are deliberately free of a
+    // capital-R "Run": docs/phases/05 bans a Run button here (nothing on this
+    // card executes anything) and the test matches />\s*Run\s*</ to prove it.
+    <WidgetShell kind="proof" status={revealed ? 'revealed' : 'hidden'} bodyClassName="p-3 font-mono text-xs">
       <pre className="whitespace-pre-wrap text-text-primary">{command}</pre>
 
       {!revealed && (
@@ -66,18 +71,15 @@ export function PredictOutputCard({
             value={prediction}
             onChange={(e) => setPrediction(e.target.value)}
             rows={3}
-            className="w-full resize-y rounded-md border border-border bg-surface-overlay p-2 text-text-primary outline-none focus-visible:border-primary"
+            className={cn(FIELD, 'resize-y p-2 text-xs')}
           />
-          <button
-            type="button"
-            onClick={() => setRevealed(true)}
-            disabled={!canReveal}
-            className="mt-2 rounded-md border border-primary bg-primary/10 px-3 py-1 font-medium text-primary hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50"
-          >
+          <button type="button" onClick={() => setRevealed(true)} disabled={!canReveal} className={cn(BTN_PRIMARY, 'mt-2')}>
             Show real output
           </button>
           {!canReveal && prediction.length > 0 && (
-            <p className="mt-1 text-text-secondary">{MIN_PREDICTION_LENGTH - prediction.trim().length} more characters</p>
+            <p className="mt-1 text-xs text-text-secondary">
+              {MIN_PREDICTION_LENGTH - prediction.trim().length} more characters
+            </p>
           )}
         </div>
       )}
@@ -86,17 +88,13 @@ export function PredictOutputCard({
         <div className="mt-3 space-y-3 font-sans">
           <div>
             <p className="mb-1 text-text-secondary">Your prediction:</p>
-            <pre className="whitespace-pre-wrap rounded bg-surface-overlay p-2 font-mono text-xs text-text-primary">
-              {prediction}
-            </pre>
+            <pre className={PANE}>{prediction}</pre>
           </div>
           <div>
             <p className="mb-1 text-text-secondary">
               Real output — produced by CI{at ? ` on ${at}` : ''}{commit ? `, commit ${commit}` : ''}.
             </p>
-            <pre className="whitespace-pre-wrap rounded bg-surface-overlay p-2 font-mono text-xs text-text-primary">
-              {output}
-            </pre>
+            <pre className={PANE}>{output}</pre>
           </div>
 
           <div className="flex gap-2">
@@ -105,12 +103,7 @@ export function PredictOutputCard({
                 key={value}
                 type="button"
                 onClick={() => setAssessment(key, value)}
-                className={cn(
-                  'rounded-md border px-2 py-1 text-xs transition-colors',
-                  hydrated && assessment === value
-                    ? 'border-primary bg-primary/10 text-primary'
-                    : 'border-border text-text-secondary hover:text-text-primary'
-                )}
+                className={cn(CHIP_BASE, hydrated && assessment === value ? CHIP_ON : CHIP_IDLE)}
               >
                 {ASSESSMENT_LABEL[value]}
               </button>
@@ -118,6 +111,6 @@ export function PredictOutputCard({
           </div>
         </div>
       )}
-    </div>
+    </WidgetShell>
   );
 }

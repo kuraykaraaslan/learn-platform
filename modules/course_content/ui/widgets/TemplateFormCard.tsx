@@ -12,6 +12,9 @@ import {
   widgetFieldKey,
 } from '@/modules/progress/progress.store';
 import type { TemplateWidget } from '../../course_content.templates';
+import { useHydrated } from '@/modules/progress/useHydrated';
+import { WidgetShell } from '../WidgetShell';
+import { BTN_SECONDARY, CHECKBOX, FIELD_INLINE, PANE } from '../widget-ui';
 import { composeFilledText, countEmptyFields } from '../../course_content.templates';
 
 function fieldWidth(placeholder: string): number {
@@ -36,12 +39,18 @@ export function TemplateFormCard({
   const allChecked = useProgressStore((s) => s.checklistChecked);
   const setTemplateValue = useProgressStore((s) => s.setTemplateValue);
   const setChecklistChecked = useProgressStore((s) => s.setChecklistChecked);
+  // persist() reads localStorage synchronously, so an ungated store read
+  // during render can disagree with the SSR HTML. Both maps stay empty until
+  // hydration, which is exactly what the server rendered.
+  const hydrated = useHydrated();
 
   const prefix = `${courseSlug}/${lessonFile}#${blockId}:`;
   const values: Record<string, string> = {};
   const checked: Record<string, boolean> = {};
-  for (const [key, value] of Object.entries(allValues)) if (key.startsWith(prefix)) values[key.slice(prefix.length)] = value;
-  for (const [key, value] of Object.entries(allChecked)) if (key.startsWith(prefix)) checked[key.slice(prefix.length)] = value;
+  if (hydrated) {
+    for (const [key, value] of Object.entries(allValues)) if (key.startsWith(prefix)) values[key.slice(prefix.length)] = value;
+    for (const [key, value] of Object.entries(allChecked)) if (key.startsWith(prefix)) checked[key.slice(prefix.length)] = value;
+  }
 
   const emptyCount = countEmptyFields(widget, values);
   const storageKey = (fieldId: string) => widgetFieldKey(courseSlug, lessonFile, blockId, fieldId);
@@ -73,33 +82,30 @@ export function TemplateFormCard({
   }
 
   return (
-    <div className="rounded-lg border border-border bg-surface-sunken p-4">
-      <div className="mb-3 flex flex-wrap items-center gap-2 text-xs">
-        <button type="button" onClick={handleCopy} className="rounded-md border border-border px-2 py-1 hover:bg-surface-overlay">
+    <WidgetShell
+      kind="template"
+      status={emptyCount > 0 ? `${emptyCount} field${emptyCount === 1 ? '' : 's'} empty` : 'complete'}
+      bodyClassName="p-4"
+    >
+      {/* Four buttons stay in the body rather than the strip — that's more
+          than a header row can hold without becoming the loudest thing here. */}
+      <div className="mb-3 flex flex-wrap items-center gap-2">
+        <button type="button" onClick={handleCopy} className={BTN_SECONDARY}>
           {copied ? 'Copied' : 'Copy filled document'}
         </button>
-        <button type="button" onClick={handleDownload} className="rounded-md border border-border px-2 py-1 hover:bg-surface-overlay">
+        <button type="button" onClick={handleDownload} className={BTN_SECONDARY}>
           Download .md
         </button>
-        <button type="button" onClick={handleReset} className="rounded-md border border-border px-2 py-1 hover:bg-surface-overlay">
+        <button type="button" onClick={handleReset} className={BTN_SECONDARY}>
           Reset
         </button>
-        <button
-          type="button"
-          onClick={() => setShowOriginal((v) => !v)}
-          className="rounded-md border border-border px-2 py-1 hover:bg-surface-overlay"
-        >
+        <button type="button" onClick={() => setShowOriginal((v) => !v)} className={BTN_SECONDARY}>
           {showOriginal ? 'Show filled' : 'Show original'}
         </button>
-        {emptyCount > 0 && (
-          <span className="text-text-secondary">
-            {emptyCount} field{emptyCount === 1 ? '' : 's'} still empty
-          </span>
-        )}
       </div>
 
       {showOriginal ? (
-        <pre className="whitespace-pre-wrap font-mono text-xs text-text-secondary">{widget.raw}</pre>
+        <pre className={cn(PANE, 'text-text-secondary')}>{widget.raw}</pre>
       ) : (
         <div className="whitespace-pre-wrap font-mono text-xs leading-relaxed text-text-primary">
           {widget.lines.map((line, lineIndex) => (
@@ -126,7 +132,7 @@ export function TemplateFormCard({
                           onChange={(e) => setTemplateValue(storageKey(token.id), e.target.value)}
                           placeholder={token.placeholder}
                           rows={2}
-                          className="mx-0.5 w-full max-w-full resize-y rounded border-b border-border-strong bg-transparent align-bottom font-mono text-xs text-text-primary outline-none focus-visible:border-primary"
+                          className={cn(FIELD_INLINE, 'block w-full max-w-full resize-y align-bottom')}
                         />
                       ) : (
                         <input
@@ -136,10 +142,7 @@ export function TemplateFormCard({
                           onChange={(e) => setTemplateValue(storageKey(token.id), e.target.value)}
                           placeholder={token.placeholder}
                           style={{ width: `${fieldWidth(token.placeholder)}ch` }}
-                          className={cn(
-                            'mx-0.5 inline border-b border-border-strong bg-transparent font-mono text-xs text-text-primary outline-none',
-                            'focus-visible:border-primary'
-                          )}
+                          className={FIELD_INLINE}
                         />
                       );
                     case 'checkbox':
@@ -147,6 +150,7 @@ export function TemplateFormCard({
                         <label key={key} className="mr-1 inline-flex items-center gap-1 align-middle">
                           <input
                             type="checkbox"
+                            className={cn(CHECKBOX, 'mt-0')}
                             checked={checked[token.id] ?? token.checked}
                             onChange={(e) => setChecklistChecked(storageKey(token.id), e.target.checked)}
                           />
@@ -160,6 +164,6 @@ export function TemplateFormCard({
           ))}
         </div>
       )}
-    </div>
+    </WidgetShell>
   );
 }
