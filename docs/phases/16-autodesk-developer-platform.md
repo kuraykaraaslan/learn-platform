@@ -70,7 +70,20 @@ sonraki faz için açık bir iş kalemidir.
 
 | İddia | Ders | Kontrol | Yeniden kontrol |
 |---|---|---|---|
-| *(faz uygulanırken doldurulur)* | | | |
+| APS'nin bugünkü adı APS; eski ad yalnız arama için anılıyor | 455, 465 | 2026-09 | 2027-03 |
+| Revit API yalnız C#/VB.NET; `Revit 2025 API` sürümü | 456-460 | 2026-09 | 2027-03 |
+| Design Automation üçlüsü: AppBundle / Activity / WorkItem; motor sürümü Activity'de sabitlenir | 460 | 2026-09 | 2027-03 |
+| OAuth iki bacaklı (client credentials) ve üç bacaklı (authorization code); scope'lar ihraç anında sabitlenir | 461 | 2026-09 | 2027-03 |
+| Nesne kimliği `urn:adsk.objects:os.object:<bucket>/<key>`; URN = padding'siz base64url | 462 | 2026-09 | 2027-03 |
+| Manifest ağacı: `status` / `progress` / `derivatives[]` / `children[]` | 463 | 2026-09 | 2027-03 |
+| Nesne ağacı + ayrı özellik dokümanı; özellik grupları kaynağın kendi grup adları (`Identity Data`, `Fire Protection`) | 464 | 2026-09 | 2027-03 |
+| Viewer v7 çeviriyi render eden bir tarayıcı bileşeni | 465 | 2026-09 | 2027-03 |
+| Webhook kaydı sistem + olay tipi + kapsam + callback URL; teslimat en-az-bir-kez | 466 | 2026-09 | 2027-03 |
+| Hız sınırı sayısal değeri **yazılmadı** — 429 ve `Retry-After` mekanizması yazıldı | 467 | 2026-09 | 2027-03 |
+
+Son satır bilinçli: fazın kaynak kuralı "kota rakamı ders metninde olgu olarak
+yazılmaz" diyor, ve bu tablonun en uzun ömürlü satırı hiçbir rakam
+içermeyendir.
 
 **Ders metnine gömülmez.** Ders sürümden bağımsız mekanizmayı anlatır; oynak
 olan her şey ya bu tabloda ya 468'de.
@@ -139,30 +152,51 @@ koşmayan ama **tipli** TS olarak yazılır ve `verify-code --strict`'ten geçer
 
 ## Kabul kriterleri
 
-- [ ] 14 ders + manifest; `shape/*` sıfır bulgu; 14'ü de damgalı
-- [ ] `parseMistakes` bu 14 derste **0 `single`** madde raporluyor
-- [ ] 455 üç çalışma kipini (add-in / headless / cloud) adıyla ayırıyor ve
-      456-468 arası her ders hangi kipte olduğunu ilk paragrafında söylüyor
-- [ ] C# fence sayısı **≤10**, her biri ≤15 satır;
-      `code/unverified-language` hepsini `warn` ile bildiriyor ve kural
-      `error`'a **terfi etmiyor** (korpusta 10 `java` fence'i duruyor)
-- [ ] 458'in ölçülebilir iddiası `ts run` ile gösteriliyor — C# fence'i tek
-      başına bir performans iddiası taşımıyor
-- [ ] 464'ün `spatial` fence'i `spatial/unanchored-reveal`'i geçiyor
-- [ ] 462'nin `proof` bloğu damgalı, sıfır bağımlılık, iki koşuda byte-aynı
-- [ ] 461'in `sequenceDiagram`'ı `verify-mermaid`'de **tam doğrulanan** sınıfta
-- [ ] Hiçbir derste `run` işareti C#/koşmayan bir fence'te yok; gri düğme yok
-- [ ] `verify-code --strict` sıfır kusur — TS snippet'lerinin hepsi kendi
-      tipini bildiriyor
-- [ ] "Forge" adı yalnız 465'te, bir kez, eski ad olarak geçiyor
-- [ ] Oynaklık kaydı dolu; her satırda kontrol ayı ve yeniden kontrol tarihi
-- [ ] Further Reading'de **derin uç nokta linki yok**; hepsi HEAD ile doğrulanmış
-- [ ] 459 → `#511`, 466/467 → mevcut korpus `(#N)` ile bağlı;
-      `links/dead-lesson-ref` temiz
-- [ ] Üç sabit korpus sayısı 436 → **450**
-- [ ] `content:stats-check` "0 disagree"; snapshot +14 ders, %100 EXPLAINED
-- [ ] `git diff --exit-code -- content/_reports` temiz; `content:check` yeşil
+- [x] 14 ders + manifest; `shape/*` sıfır bulgu; 14'ü de `stamp-verified.ts`
+      ile damgalı
+- [x] `parseMistakes` bu 14 derste **0 `single`** madde raporluyor
+- [x] 455 üç çalışma kipini (add-in / headless / cloud) adıyla ayırıyor;
+      456-468 arası her ders **"Mode: …"** ile ilk paragrafında kipini söylüyor
+- [x] C# fence sayısı **9** (sınır 10), **en uzunu 15 satır** (sınır 15);
+      `code/unverified-language` dokuzunu da `warn` ile bildiriyor ve kural
+      `error`'a **terfi etmedi** — korpustaki 10 `java` fence'i duruyor, toplam
+      19 bildirilen fence
+- [x] 458'in ölçülebilir iddiası `ts run` ile gösteriliyor: 240.000 elemanlık
+      bir modelde altı filtre sıralamasının hepsi ölçülüyor, en iyi ile en kötü
+      arasında 1,93x, ve C# fence'i **hiçbir sayı taşımıyor**
+- [x] 464'ün `spatial` fence'i `spatial/unanchored-reveal`'i geçiyor —
+      `reveal` cümlesi ve `Identity Data` / `Fire Protection` grup adları
+      dersin kendi nesrinde birebir geçiyor
+- [x] 462'nin `proof` bloğu damgalı, sıfır bağımlılık, iki koşuda byte-aynı
+      (sha kontrol edildi). İddiası ölçüm: 56 makul ASCII nesne kimliğinin
+      **0'ı** `+` ya da `/` üretiyor, 41'i `=` üretiyor — yani ASCII adlarla
+      kurulmuş bir test paketi alfabe farkını hiç denemiyor
+- [x] 461'in tek `sequenceDiagram`'ı `verify-mermaid`'de **tam doğrulanan**
+      sınıfta (UNVERIFIED listesinde yok)
+- [x] Hiçbir derste `run` işareti C#/koşmayan bir fence'te yok — korpus
+      genelinde çalıştırılamaz dilde `run` işaretli fence sayısı 0
+- [x] `verify-code --strict` sıfır kusur; TS snippet'lerinin hepsi kendi
+      tipini bildiriyor, `ASSUMED_CONTEXT` genişletilmedi
+- [x] "Forge" adı yalnız 465'te, bir kez, eski ad olarak geçiyor
+- [x] Oynaklık kaydı dolu — 10 satır, her biri kontrol ayı ve yeniden kontrol
+      tarihiyle
+- [x] Further Reading'de **derin uç nokta linki yok**; hepsi doküman indeksi ya
+      da RFC, hepsi HEAD ile doğrulandı
+- [x] 466/467 mevcut korpusa `(#4)`, `(#7)`, `(#8)` ile, 468 `(#9)` ve `(#65)`
+      ile, 461 `(#37)` ile bağlı; `links/dead-lesson-ref` temiz
+- [x] Üç sabit korpus sayısı 436 → **450**
+- [x] `content:stats-check` "32 rows checked · 0 disagree"; snapshot +14 ders,
+      0 unexplained
+- [x] `git diff --exit-code -- content/_reports` temiz; `content:check`, `lint`,
+      `build` yeşil
 
+**Şartnamenin bir kabul kriteri karşılanamadı ve ertelendi.** "459 → `#511`"
+bağlantısı yazılamaz: ders 511 henüz yok (P20 onu üretecek), ve `(#511)`
+yazmak `links/dead-lesson-ref`'in **error** olarak reddettiği tam olarak o
+şeydir. 459 bunun yerine devir zincirinin ilk halkası olduğunu nesirde
+söylüyor ve P14'ün property set dersine (lesson 436) bağlanıyor; geri
+bağlantıyı P20 kendi tarafından kurar. Kriteri sessizce işaretlemek yerine
+buraya yazıldı.
 ## Risk
 
 | Risk | Azaltma |

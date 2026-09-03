@@ -44,7 +44,7 @@ The schema is looser than practice. Levels may be skipped — a project may aggr
 - **`IfcBuildingStorey`**: a level, with an `Elevation` relative to the building — the unit almost every downstream report groups by
 - **`IfcSpace`**: a bounded volume inside a storey — a room, a shaft, a zone
 - **Spatial structure**: the whole chain above, and the one tree a viewer, a take-off and a room schedule all read
-- **Decomposition vs placement**: spatial levels decompose into each other; physical elements are placed into a level — different relationships, covered in lesson 435
+- **Decomposition vs placement**: spatial levels decompose into each other; physical elements are placed into a level — different relationships, covered in Lesson 435
 - **A skipped level parses**: the schema permits it, but every consumer assumes the full chain
 
 ## Example Code
@@ -105,7 +105,7 @@ graph LR
 - **Assuming an element's storey is an attribute of the element** — it is held by a separate relationship instance, so the lookup is a reverse index rather than a field read
 - **Accepting a model with skipped levels because it parses** — the schema permits `IfcProject` straight to `IfcBuilding`, and every consumer that groups by storey returns nothing for it
 - **Treating `IfcSpace` as optional detail** — the room schedule, the area take-off and most facility handovers are built from spaces, so a model without them is a geometry file rather than a data model
-- **Reading `IfcBuildingStorey.Elevation` as an absolute height** — it is relative to the building, which is itself placed relative to the site, so the absolute value comes from the placement chain in lesson 437
+- **Reading `IfcBuildingStorey.Elevation` as an absolute height** — it is relative to the building, which is itself placed relative to the site, so the absolute value comes from the placement chain in Lesson 437
 - **Expecting one project per building** — there is one project per file, and several buildings can sit beneath it through their sites
 
 ## Further Reading

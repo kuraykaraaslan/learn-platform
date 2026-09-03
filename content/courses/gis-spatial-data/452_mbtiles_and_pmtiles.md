@@ -3,7 +3,7 @@
 ## What It Is
 A tileset is millions of small files, and millions of small files is the worst shape almost every storage system has. Copying is slow, listing is slow, object stores charge per request, and a directory tree of that size is awkward to move between machines at all. Both formats in this lesson solve the same problem: put the pyramid in **one file**, and give it an index.
 
-**MBTiles** is a SQLite database with an agreed schema. The `tiles` table has `zoom_level`, `tile_column`, `tile_row` and `tile_data`, plus a `metadata` key/value table carrying the format, the bounds and the zoom range. That is the whole specification, which is why it is everywhere: any tool that can open SQLite can serve tiles. The single thing to remember is that **`tile_row` is TMS** — counted up from the south edge, per lesson 450 — while the request arriving at your server is almost certainly XYZ. The flip is one subtraction, applied in exactly one place.
+**MBTiles** is a SQLite database with an agreed schema. The `tiles` table has `zoom_level`, `tile_column`, `tile_row` and `tile_data`, plus a `metadata` key/value table carrying the format, the bounds and the zoom range. That is the whole specification, which is why it is everywhere: any tool that can open SQLite can serve tiles. The single thing to remember is that **`tile_row` is TMS** — counted up from the south edge, per Lesson 450 — while the request arriving at your server is almost certainly XYZ. The flip is one subtraction, applied in exactly one place.
 
 **PMTiles** solves the same problem for a different deployment. It is a single flat file with a directory at the front, designed so a client can fetch tiles with HTTP range requests — no server process, no database, just an object store and a `Range` header. To make that efficient it orders tiles along a **Hilbert curve**, so tiles that are near each other on the map are usually near each other in the file, and one range request can cover several. Usually, not always: at a fold in the curve two adjacent tiles land far apart, which makes a range request an optimisation with a worst case rather than a guarantee.
 
@@ -18,7 +18,7 @@ Neither format is queried the way this site's SQL runtime works — MBTiles is S
       why: "It is TMS — counted up from the south edge. Serving it straight to an XYZ client mirrors the map."
     - text: "The TMS row, counted up from the south, so it needs the flip before serving to an XYZ client"
       correct: true
-      why: "One subtraction, applied in one place, per lesson 450."
+      why: "One subtraction, applied in one place, per Lesson 450."
     - text: "An arbitrary row id — the metadata table says which convention"
       correct: false
       why: "The specification fixes it. There is nothing to look up."
@@ -164,7 +164,7 @@ console.log('is the thing to know before sizing one.');
 - When storage costs are per request, where a million objects is a pricing problem before it is a performance one
 
 ## Common Mistakes
-- **Serving `tile_row` straight to an XYZ client** — the map comes out mirrored, exactly as lesson 450's proof shows, and it renders fine so nothing complains
+- **Serving `tile_row` straight to an XYZ client** — the map comes out mirrored, exactly as Lesson 450's proof shows, and it renders fine so nothing complains
 - **Flipping the row in two places** — twice is not at all, and it works until one of the two is refactored away
 - **Ignoring the `metadata` table** — format, bounds and zoom range are the tileset's contract, and a server that does not read them serves 404s it could have answered properly
 - **Assuming PMTiles range requests are always contiguous** — the Hilbert curve makes locality likely, not certain, and a request plan should have a fallback for the fold

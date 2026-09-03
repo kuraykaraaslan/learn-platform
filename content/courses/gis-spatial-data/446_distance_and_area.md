@@ -145,8 +145,8 @@ console.log('geodesic on the ellipsoid — Vincenty or Karney — not a bigger s
 - **`Math.hypot(lat2 - lat1, lon2 - lon1)`** — the canonical form of the bug; exact at the equator, 39% too long at 80 north for a diagonal span, and it never errors
 - **Picking a sphere radius without saying which** — the equatorial and polar radii differ by 0.34% of the mean, so the radius is part of the answer
 - **Using haversine for area** — it is a distance formula; area on a sphere is a different computation and usually the wrong one anyway
-- **Computing area in Web Mercator** — the projection that drew the map is the one that must not measure it, per lesson 444
-- **Treating a proximity query as exact** — the index (lesson 447) is a filter, and the exact distance is computed afterwards on the survivors
+- **Computing area in Web Mercator** — the projection that drew the map is the one that must not measure it, per Lesson 444
+- **Treating a proximity query as exact** — the index (Lesson 447) is a filter, and the exact distance is computed afterwards on the survivors
 - **Reporting more precision than the model supports** — a haversine result to the metre over a thousand kilometres implies an accuracy the sphere assumption does not have
 
 ## Further Reading

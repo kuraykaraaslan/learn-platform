@@ -5,9 +5,9 @@ PostGIS turns PostgreSQL into a spatial database, and it does it by adding three
 
 The type is `geometry`, and it carries an SRID — an EPSG code stored with every value. That single detail is the difference between this and a pair of `double precision` columns: the reference system travels with the data, so the database can refuse to compare two geometries in different systems instead of silently returning a wrong number. There is a second type, `geography`, which stores the same shapes but computes on the ellipsoid rather than on a plane; it is slower and it is right about distances, and choosing between them is a real decision rather than a preference.
 
-The index is a **GiST index over the bounding box** of each geometry. That is the same two-stage query as lesson 447 — the index narrows to candidates by box, and the exact predicate runs on the survivors. PostGIS does not make the two-stage shape go away; it makes the first stage a real multi-dimensional index instead of one btree plus a filter, and it makes the second stage a correct geometric test instead of your own arithmetic.
+The index is a **GiST index over the bounding box** of each geometry. That is the same two-stage query as Lesson 447 — the index narrows to candidates by box, and the exact predicate runs on the survivors. PostGIS does not make the two-stage shape go away; it makes the first stage a real multi-dimensional index instead of one btree plus a filter, and it makes the second stage a correct geometric test instead of your own arithmetic.
 
-The cost is not the disk space. It is that PostGIS is a C extension with its own dependency chain — GEOS, PROJ, GDAL — pinned to a PostgreSQL major version. That constrains where the database can run, how upgrades are scheduled, and which managed services are available to you. It is a good trade for a system whose core is spatial and a poor one for a system with a single proximity search in it, which is the trade lesson 447 exists to price.
+The cost is not the disk space. It is that PostGIS is a C extension with its own dependency chain — GEOS, PROJ, GDAL — pinned to a PostgreSQL major version. That constrains where the database can run, how upgrades are scheduled, and which managed services are available to you. It is a good trade for a system whose core is spatial and a poor one for a system with a single proximity search in it, which is the trade Lesson 447 exists to price.
 
 > **No Run button in this lesson, and that is the point.** The SQL runtime this
 > site uses is PGlite — real PostgreSQL compiled to WebAssembly — and it does
@@ -24,7 +24,7 @@ The cost is not the disk space. It is that PostGIS is a C extension with its own
       why: "It stores the same floating-point numbers. What it adds is the system they are in."
     - text: "An SRID, so the reference system travels with the value and mismatches can be refused"
       correct: true
-      why: "That is the difference lesson 441 spent its whole length on, made into a column."
+      why: "That is the difference Lesson 441 spent its whole length on, made into a column."
     - text: "An index, since the type is indexed by definition"
       correct: false
       why: "The index is a separate thing you create — a GiST index over the bounding box."
@@ -34,7 +34,7 @@ The cost is not the disk space. It is that PostGIS is a C extension with its own
 - **`geometry`**: planar type carrying an SRID, so the reference system is stored with each value
 - **`geography`**: the same shapes computed on the ellipsoid — correct distances, slower, fewer functions
 - **SRID**: the EPSG code, checked by the database rather than remembered by the application
-- **GiST index over the bounding box**: the first stage of the same two-stage query lesson 447 builds by hand
+- **GiST index over the bounding box**: the first stage of the same two-stage query Lesson 447 builds by hand
 - **Index-aware operators**: `&&` is the bounding-box overlap that the index answers; `ST_Intersects` is the exact test
 - **`ST_DWithin` is the one to reach for**: it is written so the index can serve the box stage, which a hand-written distance comparison is not
 - **The real cost is operational**: a C extension with GEOS, PROJ and GDAL behind it, pinned to a PostgreSQL major version
@@ -57,7 +57,7 @@ CREATE TABLE asset (
 );
 
 -- The index. GiST, over the bounding box of each geometry — which is exactly
--- the pre-filter stage lesson 447 assembles from two btrees.
+-- the pre-filter stage Lesson 447 assembles from two btrees.
 CREATE INDEX asset_location ON asset USING gist (location);
 ```
 

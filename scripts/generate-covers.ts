@@ -56,6 +56,7 @@ const SUBJECTS: Record<string, string> = {
   'open-source-community': 'a network of contributors around a shared repository star',
   'bim-ifc-data-models': 'a wireframe building section unfolding into a nested tree of labelled data nodes',
   'gis-spatial-data': 'a graticule of meridians peeling off a globe and flattening into a grid of map tiles',
+  'autodesk-developer-platform': 'a desktop drafting window, a headless job crate, and a cloud endpoint linked by one pipeline',
 };
 
 type Quality = 'low' | 'medium' | 'high';

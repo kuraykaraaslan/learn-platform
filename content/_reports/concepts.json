@@ -1,7 +1,7 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
   "totalTerms": 130,
-  "totalLessons": 436,
+  "totalLessons": 450,
   "totals": {
     "neverMatched": 0,
     "neverLinked": 18,
@@ -248,7 +248,7 @@
         "content-seo-personal-brand/290_content_operations_at_scale_programmatic_seo_refresh_and_search_console_review.md",
         "contracts-pricing-legal/212_assumptions_and_dependencies.md"
       ],
-      "rawOccurrences": 12
+      "rawOccurrences": 16
     },
     {
       "slug": "append-only",
@@ -395,7 +395,7 @@
         "observability-deployment/63_chaos_engineering.md",
         "process-soft-skills/79_blameless_post_mortem.md"
       ],
-      "rawOccurrences": 14
+      "rawOccurrences": 15
     },
     {
       "slug": "code-generation",
@@ -643,11 +643,12 @@
         "advanced-deep-dive-topics/101_realtime_systems.md",
         "ai-llm-engineering/147_anthropic_api_client_architecture.md",
         "ai-llm-engineering/156_fallback_graceful_degradation.md",
+        "autodesk-developer-platform/467_rate_limits_and_quotas.md",
         "database-advanced/42_optimistic_vs_pessimistic_locking.md",
         "distributed-systems-api-design/08_webhook_security_retry.md",
         "frontend-performance-scaling/27_job_queue_bullmq.md"
       ],
-      "rawOccurrences": 18
+      "rawOccurrences": 20
     },
     {
       "slug": "feature-flag",
@@ -750,12 +751,15 @@
         "distributed-systems-api-design/07_idempotency_key_pattern.md",
         "distributed-systems-api-design/131_message_queues_101.md"
       ],
-      "rawOccurrences": 20
+      "rawOccurrences": 22
     },
     {
       "slug": "ifc",
       "term": "IFC",
       "lessonsLinkedIn": [
+        "autodesk-developer-platform/456_revits_object_model.md",
+        "autodesk-developer-platform/459_revit_parameters.md",
+        "autodesk-developer-platform/464_reading_the_object_tree.md",
         "bim-ifc-data-models/432_parsing_ifc_without_a_library.md",
         "bim-ifc-data-models/433_globalid_the_ifc_guid.md",
         "bim-ifc-data-models/434_the_spatial_hierarchy.md",
@@ -765,7 +769,7 @@
         "bim-ifc-data-models/438_georeferencing_a_model.md",
         "bim-ifc-data-models/440_model_diffing.md"
       ],
-      "rawOccurrences": 75
+      "rawOccurrences": 85
     },
     {
       "slug": "index-bloat",
@@ -952,10 +956,11 @@
       "slug": "property-set",
       "term": "property set",
       "lessonsLinkedIn": [
+        "autodesk-developer-platform/456_revits_object_model.md",
         "bim-ifc-data-models/439_ifc_in_a_relational_database.md",
         "bim-ifc-data-models/440_model_diffing.md"
       ],
-      "rawOccurrences": 21
+      "rawOccurrences": 24
     },
     {
       "slug": "race-condition",
@@ -991,6 +996,9 @@
         "ai-llm-engineering/159_prompt_injection_defense.md",
         "architecture-design-patterns-testing/67_design_patterns.md",
         "architecture-design-patterns-testing/72_property_based_testing.md",
+        "autodesk-developer-platform/466_webhooks.md",
+        "autodesk-developer-platform/467_rate_limits_and_quotas.md",
+        "autodesk-developer-platform/468_designing_for_vendor_churn.md",
         "database-caching-performance/20_redis_cache_strategies.md",
         "distributed-systems-api-design/08_webhook_security_retry.md",
         "distributed-systems-api-design/131_message_queues_101.md",
@@ -1005,7 +1013,7 @@
         "observability-deployment/63_chaos_engineering.md",
         "privacy-compliance-incident-response/361_vulnerability_management_lifecycle_patch_slas.md"
       ],
-      "rawOccurrences": 59
+      "rawOccurrences": 69
     },
     {
       "slug": "rbac",
@@ -1072,9 +1080,10 @@
       "slug": "retention-policy",
       "term": "Retention policy",
       "lessonsLinkedIn": [
-        "advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md"
+        "advanced-deep-dive-topics/106_event_streaming_kafka_vs_bullmq.md",
+        "autodesk-developer-platform/462_buckets_and_the_urn.md"
       ],
-      "rawOccurrences": 4
+      "rawOccurrences": 6
     },
     {
       "slug": "retry-policy",
@@ -1082,7 +1091,7 @@
       "lessonsLinkedIn": [
         "distributed-systems-api-design/07_idempotency_key_pattern.md"
       ],
-      "rawOccurrences": 2
+      "rawOccurrences": 3
     },
     {
       "slug": "risk-register",
@@ -1330,7 +1339,7 @@
       "lessonsLinkedIn": [
         "framework-deep-dives/407_springboot_security_filter_chain.md"
       ],
-      "rawOccurrences": 16
+      "rawOccurrences": 17
     },
     {
       "slug": "traffic-cutover",

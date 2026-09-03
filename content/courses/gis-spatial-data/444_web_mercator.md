@@ -45,7 +45,7 @@ The practical rule is short: Web Mercator is a display system. Compute in it and
 - **Clipped at ±85.05112878**: the latitude that makes the projected world square, so a quadtree of square tiles fits it
 - **Spherical formula on ellipsoidal latitudes**: Web Mercator's own quirk, and the reason it has a separate code from ellipsoidal Mercator
 - **Display, not measurement**: compute distances and areas elsewhere and project the result for drawing
-- **Origin at the top-left of the square**: which is where the tile y-axis of lesson 450 comes from
+- **Origin at the top-left of the square**: which is where the tile y-axis of Lesson 450 comes from
 
 ## Example Code
 Forward, inverse, and the cost of measuring in it:
@@ -115,7 +115,7 @@ The half-width and the half-height come out equal, which is not a coincidence �
 ## Further Reading
 - [EPSG:3857](https://epsg.io/3857) — the definition, including the note about spherical formulae on ellipsoidal coordinates
 - [PROJ: Mercator projection](https://proj.org/en/9.4/operations/projections/merc.html) — the forward and inverse equations, with the parameters that distinguish the variants
-- [Slippy map tilenames](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames) — the same arithmetic as it appears in the tile scheme lesson 450 covers
+- [Slippy map tilenames](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames) — the same arithmetic as it appears in the tile scheme Lesson 450 covers
 - [EPSG registry](https://epsg.org/home.html) — for checking the version of a definition rather than trusting a cached copy
 
 ```recall

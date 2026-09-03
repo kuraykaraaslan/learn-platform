@@ -78,7 +78,7 @@ root:
 The file parses. The wall renders. It is simply absent from every per-storey number the model produces, because the storey it should have been grouped under does not know about it.
 
 ```typescript
-// The reverse index lesson 432 built, asked the two questions that matter.
+// The reverse index Lesson 432 built, asked the two questions that matter.
 type Rel = { type: 'contained' | 'aggregates'; whole: string; parts: string[] };
 
 const RELATIONS: Rel[] = [

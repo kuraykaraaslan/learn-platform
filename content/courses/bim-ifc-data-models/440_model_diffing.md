@@ -5,7 +5,7 @@ Two exports of the same model arrive a fortnight apart and somebody asks what ch
 
 Text diffing is out immediately. Instance numbers are positions inside one file, so a re-export can renumber every line without a single element changing; exporters reorder, reformat floats, and rewrite the header on every run. A `git diff` between two `.ifc` files routinely reports the whole file as modified, and the signal-to-noise ratio does not improve with effort.
 
-That leaves comparison at the object level, and the first decision is the join key. **The GlobalId is the only identity IFC gives you**, so an id-keyed set difference — present in old, present in new, present in both — is the cheap and obvious approach. It is also completely dependent on the exporter preserving ids, which lesson 433 established is a promise rather than a guarantee. When ids churn, an id-keyed diff reports every element as deleted and re-created, and the report is not merely wrong but confidently wrong.
+That leaves comparison at the object level, and the first decision is the join key. **The GlobalId is the only identity IFC gives you**, so an id-keyed set difference — present in old, present in new, present in both — is the cheap and obvious approach. It is also completely dependent on the exporter preserving ids, which Lesson 433 established is a promise rather than a guarantee. When ids churn, an id-keyed diff reports every element as deleted and re-created, and the report is not merely wrong but confidently wrong.
 
 The second decision is what counts as a change for an element present in both. Attribute values, property set values, placement, geometry and type are five independent axes, and each has its own noise floor. A placement that moved by less than the model's declared precision did not move. A property whose value went from `2.5` to `2.50` did not change. Deciding this deliberately, and writing it down, is most of the work — a diff tool that reports every axis at full sensitivity produces a change list nobody reads, which is the same outcome as producing nothing.
 
@@ -81,7 +81,7 @@ type ElementSnapshot = {
 export type Change = { globalId: string; axis: 'type' | 'placement' | 'property'; detail: string };
 
 /** `precision` is the model's own declared tolerance, in the model's own
- *  length unit — never a constant, for the reason lesson 437 gives. */
+ *  length unit — never a constant, for the reason Lesson 437 gives. */
 function moved(a: Vec3, b: Vec3, precision: number): boolean {
   return a.some((value, i) => Math.abs(value - b[i]) > precision);
 }

@@ -424,6 +424,10 @@ under-construction list` testi, dal üçe ulaştığı anda istisna hâlâ orada
 kırılır. `it.todo` seçilmedi çünkü o, kuralı diğer iki dal için de kapatırdı.
 P13'ün risk satırının istediği bu: "sessizce aşılamaz".
 
+*Sonradan not:* mekanizma çalıştı. P16 dalı üçüncü kursa çıkardı, bekçi testi
+o fazın doğrulama koşusunda kırıldı, ve istisna ile bekçisi birlikte silindi.
+Gevşetme iki faz sürdü ve süresini kendisi bildirdi.
+
 ## Risk
 
 | Risk | Azaltma |

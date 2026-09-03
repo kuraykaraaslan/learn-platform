@@ -1,0 +1,119 @@
+{
+  "slug": "autodesk-developer-platform",
+  "title": "Autodesk Developer Platform: Revit API & APS",
+  "description": "Three ways to write Autodesk code — in Revit, without Revit, and about Revit — and the API churn you design against.",
+  "items": [
+    {
+      "id": 455,
+      "file": "455_the_autodesk_developer_surface.md",
+      "title": "The Autodesk Developer Surface: Add-in, Headless, and Cloud",
+      "bracket": "1-3",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 456,
+      "file": "456_revits_object_model.md",
+      "title": "Revit's Object Model: Documents, Elements, Parameters, Transactions",
+      "bracket": "3-7",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 457,
+      "file": "457_revit_addins_and_the_manifest.md",
+      "title": "Revit Add-ins: Commands, Applications, and the Add-in Manifest",
+      "bracket": "3-7",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 458,
+      "file": "458_filteredelementcollector.md",
+      "title": "FilteredElementCollector: Querying a Model Without Freezing Revit",
+      "bracket": "3-7",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 459,
+      "file": "459_revit_parameters.md",
+      "title": "Revit Parameters: Built-in, Shared, Project — and Which One Survives Export",
+      "bracket": "3-7",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 460,
+      "file": "460_design_automation.md",
+      "title": "Design Automation: The Revit API Without Revit on Your Desktop",
+      "bracket": "7-10",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 461,
+      "file": "461_aps_oauth.md",
+      "title": "APS OAuth: Two-Legged vs Three-Legged, Scopes, Token Lifetime",
+      "bracket": "3-7",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 462,
+      "file": "462_buckets_and_the_urn.md",
+      "title": "Buckets and the URN: Encoding an Object Id Correctly",
+      "bracket": "3-7",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 463,
+      "file": "463_model_derivative.md",
+      "title": "Model Derivative: Translation Jobs, Polling, and the Manifest",
+      "bracket": "3-7",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 464,
+      "file": "464_reading_the_object_tree.md",
+      "title": "Reading the Object Tree and Properties Out of a Derivative",
+      "bracket": "3-7",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 465,
+      "file": "465_the_viewer_is_a_client.md",
+      "title": "The Viewer Is a Client of Your Data, Not the Source of Truth",
+      "bracket": "3-7",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 466,
+      "file": "466_webhooks.md",
+      "title": "Webhooks: Delivery, Retries, and Verifying What Arrived",
+      "bracket": "3-7",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 467,
+      "file": "467_rate_limits_and_quotas.md",
+      "title": "Rate Limits and Quotas: Backoff Against Someone Else's API",
+      "bracket": "3-7",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    },
+    {
+      "id": 468,
+      "file": "468_designing_for_vendor_churn.md",
+      "title": "Designing for Vendor API Churn: Pinning, Versions, Anti-Corruption Layer",
+      "bracket": "7-10",
+      "category": "Autodesk Developer Platform",
+      "verified": true
+    }
+  ]
+}

@@ -189,7 +189,7 @@ WHERE lat BETWEEN -60.005 AND -59.995;
 - [PostgreSQL index types](https://www.postgresql.org/docs/current/indexes-types.html) — what a btree can and cannot answer, which is the constraint this whole lesson works inside
 - [PostgreSQL operator classes](https://www.postgresql.org/docs/current/indexes-opclass.html) — `text_pattern_ops` and why a prefix search needs it
 - [Geohash](https://en.wikipedia.org/wiki/Geohash) — the encoding, its cell sizes per character, and the neighbour problem stated in general
-- [Slippy map tilenames](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames) — the quadkey's other life as a tile address, which lesson 450 picks up
+- [Slippy map tilenames](https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames) — the quadkey's other life as a tile address, which Lesson 450 picks up
 
 ```recall
 - q: "Describe the two-stage shape of a spatial query and the asymmetry the first stage must obey."

@@ -1,14 +1,14 @@
 {
   "generatedFrom": "scripts/content-lint",
-  "lessons": 436,
+  "lessons": 450,
   "totals": {
-    "findings": 12,
+    "findings": 21,
     "errors": 0,
-    "warnings": 12,
+    "warnings": 21,
     "waived": 6
   },
   "byRule": {
-    "code/unverified-language": 10,
+    "code/unverified-language": 19,
     "drill/widget-on-unverified-lesson": 2
   },
   "findings": [
@@ -25,6 +25,69 @@
       "target": "career-entrepreneurship/114_niche_positioning.md",
       "line": 100,
       "message": "`recall` fence on an unverified lesson — it renders nothing"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "autodesk-developer-platform/455_the_autodesk_developer_surface.md",
+      "line": 57,
+      "message": "`csharp` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "autodesk-developer-platform/456_revits_object_model.md",
+      "line": 55,
+      "message": "`csharp` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "autodesk-developer-platform/456_revits_object_model.md",
+      "line": 63,
+      "message": "`csharp` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "autodesk-developer-platform/457_revit_addins_and_the_manifest.md",
+      "line": 70,
+      "message": "`csharp` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "autodesk-developer-platform/457_revit_addins_and_the_manifest.md",
+      "line": 89,
+      "message": "`csharp` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "autodesk-developer-platform/458_filteredelementcollector.md",
+      "line": 140,
+      "message": "`csharp` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "autodesk-developer-platform/459_revit_parameters.md",
+      "line": 55,
+      "message": "`csharp` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "autodesk-developer-platform/459_revit_parameters.md",
+      "line": 66,
+      "message": "`csharp` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "autodesk-developer-platform/460_design_automation.md",
+      "line": 55,
+      "message": "`csharp` fence — no typechecker and no runtime covers this language"
     },
     {
       "rule": "code/unverified-language",

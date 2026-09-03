@@ -7,7 +7,7 @@ A polygon is an array of linear rings. The first is the exterior ring; the rest 
 
 Winding matters because it is the only thing distinguishing an outline from a hole when both trace the same corners. A renderer that follows the spec will draw a clockwise exterior ring as a hole in nothing; a renderer that ignores winding draws it fine, which is worse, because the file passes through your system looking correct and fails in someone else's. The check is the shoelace formula: sum the cross products of consecutive positions and look at the sign. Twenty lines, no dependency.
 
-Two more things the spec is explicit about and toolchains routinely get wrong: positions are `[longitude, latitude]` (lesson 442), and the coordinate reference system is **always** WGS 84 geographic — RFC 7946 removed the `crs` member that earlier drafts had. A GeoJSON file with projected coordinates in it is not GeoJSON, whatever the extension says.
+Two more things the spec is explicit about and toolchains routinely get wrong: positions are `[longitude, latitude]` (Lesson 442), and the coordinate reference system is **always** WGS 84 geographic — RFC 7946 removed the `crs` member that earlier drafts had. A GeoJSON file with projected coordinates in it is not GeoJSON, whatever the extension says.
 
 ```quiz
 - q: "A triangle in GeoJSON has how many positions in its ring?"

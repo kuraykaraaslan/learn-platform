@@ -1,0 +1,8 @@
+{
+  "name": "verify-autodesk-developer-platform-462",
+  "private": true,
+  "description": "Encodes object ids into the base64url URN form and measures how often the standard-base64 alphabet actually differs, for lesson 462's proof block. Zero dependencies and no network: the encoding is deterministic, and it is the whole subject of the lesson. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node urn.js"
+  }
+}

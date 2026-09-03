@@ -1,5 +1,5 @@
 {
-  "lessonCount": 436,
+  "lessonCount": 450,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -459,6 +459,134 @@
         "furtherReading": "3a7beacf946b32d6"
       }
     },
+    "autodesk-developer-platform": {
+      "455_the_autodesk_developer_surface.md": {
+        "title": "196a456876e7046f",
+        "whatItIs": "c0380025cf88bf0b",
+        "keyConcepts": "48973f19db2744e6",
+        "exampleCode": "5db5ab0dd92d8ea5",
+        "whenToUse": "014503090a2cc8cd",
+        "commonMistakes": "a3c412d3a1363615",
+        "furtherReading": "0fae62adc5d0ec4f"
+      },
+      "456_revits_object_model.md": {
+        "title": "1f10b5a4cde152f8",
+        "whatItIs": "1b084fc24b82b6bc",
+        "keyConcepts": "fd51f58ede878f2f",
+        "exampleCode": "487c11a14089eb6a",
+        "whenToUse": "47cf7562ba85d94a",
+        "commonMistakes": "09b1a7f64254e759",
+        "furtherReading": "77a49a15f1707aa8"
+      },
+      "457_revit_addins_and_the_manifest.md": {
+        "title": "0cfe3c54ec80c637",
+        "whatItIs": "2db32ee409b56d77",
+        "keyConcepts": "666b40beb0866ab9",
+        "exampleCode": "d3785f7b2bf6e1c8",
+        "whenToUse": "ff2b53588b776a10",
+        "commonMistakes": "c0228d765e8fdf58",
+        "furtherReading": "48210c18ad1a61d1"
+      },
+      "458_filteredelementcollector.md": {
+        "title": "7b833c75df3008b7",
+        "whatItIs": "45d45c282b22ccde",
+        "keyConcepts": "a8157887e84e4320",
+        "exampleCode": "e2581f2a13d8e54e",
+        "whenToUse": "a17de8cec9ca2ae4",
+        "commonMistakes": "15796d8f0411c39e",
+        "furtherReading": "7de968078e50879e"
+      },
+      "459_revit_parameters.md": {
+        "title": "7a1ed81bc95b788c",
+        "whatItIs": "4ed5b2b5b69bd98b",
+        "keyConcepts": "cda6a3fc17eec93d",
+        "exampleCode": "78deec64f4ae110c",
+        "whenToUse": "35316da53e0a775b",
+        "commonMistakes": "29448b87bfd652cb",
+        "furtherReading": "36c666afc5852180"
+      },
+      "460_design_automation.md": {
+        "title": "72b632d9dec7007d",
+        "whatItIs": "3627376969eec9cd",
+        "keyConcepts": "af4b289852741157",
+        "exampleCode": "8f03fa9a974c9049",
+        "whenToUse": "8c0ae7739e64806c",
+        "commonMistakes": "677ac3fae18b83b9",
+        "furtherReading": "fa36af00eaa79ae5"
+      },
+      "461_aps_oauth.md": {
+        "title": "99726144b5a0fb77",
+        "whatItIs": "c3b31a535a162b96",
+        "keyConcepts": "e7c61e7831575f47",
+        "exampleCode": "aad385b4d77a9731",
+        "whenToUse": "be56e29c0e0e80ad",
+        "commonMistakes": "1c4995f585026d51",
+        "furtherReading": "b31734b763b3b14f"
+      },
+      "462_buckets_and_the_urn.md": {
+        "title": "772c72edc6b5f6b4",
+        "whatItIs": "69393306519791ed",
+        "keyConcepts": "133d4db062e0eeeb",
+        "exampleCode": "898192a7d59aebdc",
+        "whenToUse": "169fa75cf7f5ceef",
+        "commonMistakes": "f53e7a6ae0d13a66",
+        "furtherReading": "e58c8f7a7445cd1a"
+      },
+      "463_model_derivative.md": {
+        "title": "7284568fbe7d49a0",
+        "whatItIs": "9f14fadfa045ea59",
+        "keyConcepts": "d6e59272e79e52f2",
+        "exampleCode": "de1df1a5f98cb75c",
+        "whenToUse": "dee83a297de2f633",
+        "commonMistakes": "70633e46b57241fa",
+        "furtherReading": "e0c6b7b791bee7ac"
+      },
+      "464_reading_the_object_tree.md": {
+        "title": "95ee479f49ff05a9",
+        "whatItIs": "4cb22a9891968f33",
+        "keyConcepts": "29906683d3378d63",
+        "exampleCode": "2f37d08a878ba582",
+        "whenToUse": "306fb1e3c285aab2",
+        "commonMistakes": "398f50acc66c51fc",
+        "furtherReading": "ff23c6b49f33f7bd"
+      },
+      "465_the_viewer_is_a_client.md": {
+        "title": "cc275353ba6949b3",
+        "whatItIs": "dda707aedd20bddd",
+        "keyConcepts": "3477203e2d8ad302",
+        "exampleCode": "c16029495b966ef7",
+        "whenToUse": "6ca9d2e48cd7ae4b",
+        "commonMistakes": "ded4ed6553def067",
+        "furtherReading": "3bc69c6f3bbdedef"
+      },
+      "466_webhooks.md": {
+        "title": "8d4a3cd8e5cf6420",
+        "whatItIs": "6641d1c1b1fba8fc",
+        "keyConcepts": "e6d4a2417bb20538",
+        "exampleCode": "e27b22ce6cca8b7a",
+        "whenToUse": "4cf431610882e19a",
+        "commonMistakes": "537e2745138e2964",
+        "furtherReading": "b7d920203aca4d98"
+      },
+      "467_rate_limits_and_quotas.md": {
+        "title": "b2d958fbf2109837",
+        "whatItIs": "a33ddec2966b24f5",
+        "keyConcepts": "411983fd662527c5",
+        "exampleCode": "f9752c4aa51f489d",
+        "whenToUse": "13db9f7968a40e79",
+        "commonMistakes": "756c3d1d20b7211e",
+        "furtherReading": "a7395dbd2c4b2784"
+      },
+      "468_designing_for_vendor_churn.md": {
+        "title": "84af77f0c186cefd",
+        "whatItIs": "452c16ffe0f05701",
+        "keyConcepts": "0813de8833d40236",
+        "exampleCode": "3efeefbaa40d608e",
+        "whenToUse": "4335879578728b8d",
+        "commonMistakes": "fd1c7c52fcb0044d",
+        "furtherReading": "87b538d928e722b2"
+      }
+    },
     "bim-ifc-data-models": {
       "431_ifc_as_a_file_format.md": {
         "title": "e9b6f77ba615f3e7",
@@ -490,17 +618,17 @@
       "434_the_spatial_hierarchy.md": {
         "title": "f13680fc61d114ff",
         "whatItIs": "f0388a0be81c2b5c",
-        "keyConcepts": "726b53706c29b898",
+        "keyConcepts": "8597f21e2ed85cce",
         "exampleCode": "16148f8237a6e547",
         "whenToUse": "887da65ac2cebe94",
-        "commonMistakes": "0a4d83ce9b19f693",
+        "commonMistakes": "b2312489c201b60c",
         "furtherReading": "856e244defd9fd64"
       },
       "435_containment_aggregation_voiding.md": {
         "title": "fa5e8a9efad553a2",
         "whatItIs": "b09941a67685b86b",
         "keyConcepts": "9b5c6e4a920d5a4a",
-        "exampleCode": "6e817ac2fca68935",
+        "exampleCode": "e77cecdd403840ca",
         "whenToUse": "5a5d35a0015e5b45",
         "commonMistakes": "792bef84895d513a",
         "furtherReading": "287f381fbfe05e36"
@@ -543,9 +671,9 @@
       },
       "440_model_diffing.md": {
         "title": "0a0311d492ead3a6",
-        "whatItIs": "565d16a19c86967b",
+        "whatItIs": "bc2e268a6aca77f9",
         "keyConcepts": "8c8ac549b89e9517",
-        "exampleCode": "d3d05a7dcce4e981",
+        "exampleCode": "bdc4be2d8c5744a2",
         "whenToUse": "7988f6cbea15674f",
         "commonMistakes": "862ac09136fb6ab8",
         "furtherReading": "a42bae2fff99c094"
@@ -3009,10 +3137,10 @@
       "441_coordinates_are_not_numbers.md": {
         "title": "3e7b70865ecf41e2",
         "whatItIs": "e2edff2a3bc2dedb",
-        "keyConcepts": "3687d97796f87472",
+        "keyConcepts": "91b921cfcd7b81fa",
         "exampleCode": "b18c4892b27b6fca",
         "whenToUse": "a1d1826f1dbcc9eb",
-        "commonMistakes": "c00844da1f39b385",
+        "commonMistakes": "5e8a84ebd2c6c16d",
         "furtherReading": "e6df3c3b4e37e4e4"
       },
       "442_axis_order.md": {
@@ -3036,15 +3164,15 @@
       "444_web_mercator.md": {
         "title": "a35bfab2803e6169",
         "whatItIs": "1132ff9169b3c3d0",
-        "keyConcepts": "a4ed8ce193873e1e",
+        "keyConcepts": "c797dffd82535ecd",
         "exampleCode": "f1d56d1ce1e54342",
         "whenToUse": "8b00a63d4c4f5e6d",
         "commonMistakes": "ced137fefdaa78c6",
-        "furtherReading": "1461a3226c6e90c3"
+        "furtherReading": "2a229baf148caaf8"
       },
       "445_geojson_ring_validity.md": {
         "title": "39bc8d5a4d99a51d",
-        "whatItIs": "684ac569e7b309a0",
+        "whatItIs": "4c725cbe934f7c69",
         "keyConcepts": "3b081f1a82ea1bd6",
         "exampleCode": "8d8760ed9856fb87",
         "whenToUse": "dec0a265ecc99f80",
@@ -3057,7 +3185,7 @@
         "keyConcepts": "d84a23c5a05a8d94",
         "exampleCode": "2bdf0c8699cdc7a8",
         "whenToUse": "3491758760cab82b",
-        "commonMistakes": "7f7d9ccaee37ed08",
+        "commonMistakes": "d054470b5386068d",
         "furtherReading": "af0386b400d562dd"
       },
       "447_spatial_indexing_without_an_extension.md": {
@@ -3067,13 +3195,13 @@
         "exampleCode": "675acdf5fb081e7a",
         "whenToUse": "ebac24a65eb61d34",
         "commonMistakes": "c6dcd736de9a68ba",
-        "furtherReading": "8c6336150deb5067"
+        "furtherReading": "c3153e16cfafb515"
       },
       "448_postgis_the_extension.md": {
         "title": "b814fa5beb1c3eac",
-        "whatItIs": "0df30b69afdce34d",
-        "keyConcepts": "a5058cae1e0b7d36",
-        "exampleCode": "d1e8d7a94e72f58b",
+        "whatItIs": "88edbc3524f43858",
+        "keyConcepts": "7f7b16ad5281da49",
+        "exampleCode": "f7b3d77e977ab99f",
         "whenToUse": "a218ad4664c55b3f",
         "commonMistakes": "3c08fdecf0046a0b",
         "furtherReading": "0105b7e3f6cef60e"
@@ -3089,10 +3217,10 @@
       },
       "450_tile_addressing.md": {
         "title": "32a515a8538bfa24",
-        "whatItIs": "53c87ac74ce8ccb3",
-        "keyConcepts": "aca4b5a145d2afcc",
+        "whatItIs": "6f5b7458a911e741",
+        "keyConcepts": "dbe17d37c045350d",
         "exampleCode": "5fa5baff332a189a",
-        "whenToUse": "84d82a8e47787542",
+        "whenToUse": "10105d8ce5521b7f",
         "commonMistakes": "828b23ffca3cdd81",
         "furtherReading": "d0545a1959a3acdc"
       },
@@ -3107,25 +3235,25 @@
       },
       "452_mbtiles_and_pmtiles.md": {
         "title": "9c5f4956c1ab4ae1",
-        "whatItIs": "0e14b88f6af8607d",
+        "whatItIs": "ff561c731e5586a4",
         "keyConcepts": "8d20288a03a674da",
         "exampleCode": "3dc503e9653a9dbd",
         "whenToUse": "ff3b2e91b8706173",
-        "commonMistakes": "05c3e84991d98578",
+        "commonMistakes": "a6601745d3b250a4",
         "furtherReading": "2fb7dd0098b0345d"
       },
       "453_maplibre_style_spec.md": {
         "title": "f1b4ab6a55b376c8",
         "whatItIs": "9e79c3780ab150df",
-        "keyConcepts": "541030346f4b2b54",
+        "keyConcepts": "f57d22ce4b5c6b58",
         "exampleCode": "11c0a391e672e08e",
-        "whenToUse": "aa9b197589a921c4",
+        "whenToUse": "4075417d58e4b091",
         "commonMistakes": "a8f929e2022b14e9",
         "furtherReading": "0cadd1e6238234dd"
       },
       "454_rasters_and_dems.md": {
         "title": "06cf0f266ad4ad9b",
-        "whatItIs": "8dcdefcf5c502142",
+        "whatItIs": "3b75f52de5e85cdf",
         "keyConcepts": "bc5a12fd9dcecad3",
         "exampleCode": "dc42b192245e2756",
         "whenToUse": "93c8d03a43e33ccd",

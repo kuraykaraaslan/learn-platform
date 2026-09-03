@@ -3,9 +3,9 @@
 ## What It Is
 A web map is a pyramid of square images or vector blobs, addressed by three integers: a zoom level, a column and a row. At zoom `z` there are `2^z` columns and `2^z` rows covering the whole Web Mercator square, so zoom 0 is one tile of the world and each level quarters every tile of the one above.
 
-The columns are uncontroversial: `x` counts east from the antimeridian, everywhere. The rows are not. **The XYZ scheme counts `y` down from the north edge; the TMS scheme counts it up from the south edge.** They are related by one subtraction, `2^z - 1 - y`, and both schemes are widely deployed: XYZ is what a `{z}/{x}/{y}.png` URL template usually means, and TMS is what an OGC-era tile server, an MBTiles file (lesson 452) and a good deal of GDAL tooling means.
+The columns are uncontroversial: `x` counts east from the antimeridian, everywhere. The rows are not. **The XYZ scheme counts `y` down from the north edge; the TMS scheme counts it up from the south edge.** They are related by one subtraction, `2^z - 1 - y`, and both schemes are widely deployed: XYZ is what a `{z}/{x}/{y}.png` URL template usually means, and TMS is what an OGC-era tile server, an MBTiles file (Lesson 452) and a good deal of GDAL tooling means.
 
-A third addressing form, the **quadkey**, encodes the same tile as a single base-4 string, one digit per zoom level, by interleaving the bits of `x` and `y`. It is the same idea as the geohash from lesson 447 — a prefix is a bounding box — and it makes a tile address sortable and hierarchical in one value.
+A third addressing form, the **quadkey**, encodes the same tile as a single base-4 string, one digit per zoom level, by interleaving the bits of `x` and `y`. It is the same idea as the geohash from Lesson 447 — a prefix is a bounding box — and it makes a tile address sortable and hierarchical in one value.
 
 The failure this lesson is named for is what happens when the two row conventions meet. Passing a TMS row to an XYZ server, or the reverse, returns a **valid tile**: right zoom, right column, mirrored latitude. Nothing errors, nothing is missing, and the map is upside down. The proof below runs the arithmetic and shows the box you actually get.
 
@@ -38,7 +38,7 @@ The failure this lesson is named for is what happens when the two row convention
 ```
 
 ## Key Concepts
-- **`2^z` by `2^z` grid**: at every zoom, covering the whole Web Mercator square from lesson 444
+- **`2^z` by `2^z` grid**: at every zoom, covering the whole Web Mercator square from Lesson 444
 - **`x` counts east** from the antimeridian, in every scheme
 - **XYZ**: `y` counts down from the north edge — the usual meaning of a `{z}/{x}/{y}` URL template
 - **TMS**: `y` counts up from the south edge — OGC-era servers, MBTiles, much GDAL tooling
@@ -147,7 +147,7 @@ at zoom 0: XYZ y = 0, TMS y = 0 — identical, so a smoke test at zoom 0 passes
 
 ## When to Use
 - When integrating any tile source whose documentation says "TMS" or shows an OGC-era URL, which is where the flip lives
-- When serving tiles out of an MBTiles file, where the stored row is TMS and the request is usually XYZ (lesson 452)
+- When serving tiles out of an MBTiles file, where the stored row is TMS and the request is usually XYZ (Lesson 452)
 - When building a cache key or a storage path for tiles, where a quadkey is one sortable value instead of three
 - When a map looks right at low zoom and wrong once you zoom in — the exact signature of a row-convention mismatch
 

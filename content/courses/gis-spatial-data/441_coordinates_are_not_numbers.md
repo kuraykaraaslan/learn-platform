@@ -41,7 +41,7 @@ A reference system is not one choice but several stacked: an ellipsoid (the shap
 - **Geographic coordinates**: angles — latitude and longitude on an ellipsoid, in degrees
 - **Projected coordinates**: positions on a plane, in linear units, produced by a projection
 - **Ellipsoid**: the mathematical shape standing in for the Earth, defined by a semi-major axis and a flattening
-- **Datum**: where that ellipsoid is anchored relative to the real Earth — the part lesson 443 is about
+- **Datum**: where that ellipsoid is anchored relative to the real Earth — the part Lesson 443 is about
 - **Coordinate reference system (CRS)**: the whole stack, named as one thing and usually identified by an EPSG code
 - **Units are not the same as system**: two projected systems both in metres can still be tens of metres apart
 - **Angles do not subtract into distances**: the value of a degree changes with latitude, which is why the same code is right near the equator and wrong at 60 north
@@ -88,8 +88,8 @@ export function planarDistanceMetres(a: Projected, b: Projected): number {
 - **Storing coordinates without their reference system** — the numbers survive every hop and the system does not, so the receiver guesses, and the guess is usually WGS 84 and occasionally wrong by tens of metres
 - **Computing distance from a difference of degrees** — that is a difference of angles; it is right at the equator and increasingly wrong towards the poles, which is why it passes local testing
 - **Assuming two systems in metres are interchangeable** — the unit says nothing about the origin, the projection or the datum, and two metre-based systems can put the same place tens of metres apart
-- **Treating "WGS 84" as a complete answer** — it names a datum, and lesson 443 is about what that still leaves open
-- **Reprojecting for display and then measuring on the result** — the projection that makes a map look right is the one that makes a distance wrong, which lesson 444 makes concrete
+- **Treating "WGS 84" as a complete answer** — it names a datum, and Lesson 443 is about what that still leaves open
+- **Reprojecting for display and then measuring on the result** — the projection that makes a map look right is the one that makes a distance wrong, which Lesson 444 makes concrete
 
 ## Further Reading
 - [EPSG:4326](https://epsg.io/4326) — the geographic system nearly everything defaults to, with its ellipsoid, datum and axis order

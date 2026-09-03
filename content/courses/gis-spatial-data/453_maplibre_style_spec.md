@@ -45,7 +45,7 @@ There is no map rendered in this lesson. MapLibre is a browser library with WebG
 - **Active layer count**: the layers whose zoom range includes the current zoom — the number that costs
 - **Casing and fill**: two layers over one source layer, drawing the same geometry twice on purpose
 - **Structural defects are readable**: a layer with a missing source, a source nothing draws, a `source-layer` that is not in the tileset
-- **The style does not carry the data**: what a layer can draw is decided by the tileset (lesson 451), not by the style
+- **The style does not carry the data**: what a layer can draw is decided by the tileset (Lesson 451), not by the style
 
 ## Example Code
 Walking the graph and counting the budget — no map, no browser, no library:
@@ -139,7 +139,7 @@ console.log('and never drawn — are all answerable by reading it.');
 ## When to Use
 - When a map is slow and you need to know what is actually being drawn at the zoom where it is slow
 - When reviewing a style, where the graph questions are mechanical and the visual ones are not
-- When a layer does not appear and you need to distinguish "not in the tile" (lesson 451) from "not in the style" from "outside its zoom range"
+- When a layer does not appear and you need to distinguish "not in the tile" (Lesson 451) from "not in the style" from "outside its zoom range"
 - When generating styles programmatically, where a structural check belongs in the build rather than in someone's eye
 
 ## Common Mistakes
