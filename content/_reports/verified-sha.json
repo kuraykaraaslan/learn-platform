@@ -467,5 +467,14 @@
   "field-data-collection/501_form_schemas_that_survive.md": "9d99e77569749551",
   "field-data-collection/502_sync_windows.md": "7aaf165cc6db53d6",
   "field-data-collection/503_validating_field_data.md": "57de1a040d11d898",
-  "autodesk-developer-platform/523_shipping_a_design_automation_bundle.md": "a09fb76119415737"
+  "autodesk-developer-platform/523_shipping_a_design_automation_bundle.md": "a09fb76119415737",
+  "asset-management-systems/504_the_asset_register.md": "af7d2fc9b7eca479",
+  "asset-management-systems/505_asset_hierarchies.md": "af8f6628096681ef",
+  "asset-management-systems/506_asset_identity.md": "3d0000335f42dd6b",
+  "asset-management-systems/507_condition_and_criticality.md": "1e74c67416e77c3c",
+  "asset-management-systems/508_work_orders_and_maintenance_history.md": "af003d53559bc0eb",
+  "asset-management-systems/509_whole_life_cost.md": "a96b81c91d46f45d",
+  "asset-management-systems/510_merging_two_registers.md": "2d0d1b00b5344135",
+  "asset-management-systems/511_handover_data.md": "f894918c42f9d4f9",
+  "asset-management-systems/512_buying_vs_building_eam.md": "fa59fd9f78ff4c13"
 }

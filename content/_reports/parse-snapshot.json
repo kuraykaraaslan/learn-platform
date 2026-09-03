@@ -1,5 +1,5 @@
 {
-  "lessonCount": 486,
+  "lessonCount": 495,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -457,6 +457,89 @@
         "whenToUse": "2df9bee85d6eb31b",
         "commonMistakes": "6d7437a5dfb9533a",
         "furtherReading": "3a7beacf946b32d6"
+      }
+    },
+    "asset-management-systems": {
+      "504_the_asset_register.md": {
+        "title": "66fd967f977ea6ec",
+        "whatItIs": "df0e6d18b874d4e7",
+        "keyConcepts": "8b95f32fda77a70f",
+        "exampleCode": "e353b77cda7b7415",
+        "whenToUse": "51ea4e2fc2442643",
+        "commonMistakes": "5b976c24cf5df873",
+        "furtherReading": "4cde22fca1e92d3f"
+      },
+      "505_asset_hierarchies.md": {
+        "title": "8aca370a22affa36",
+        "whatItIs": "028fda2ed89b9457",
+        "keyConcepts": "b85c726bf7e60c5e",
+        "exampleCode": "f31dc15d1c0a902b",
+        "whenToUse": "e535b8c61d4c8dea",
+        "commonMistakes": "b64929e836ff71a4",
+        "furtherReading": "923b55991b267153"
+      },
+      "506_asset_identity.md": {
+        "title": "a0ead504c9f74653",
+        "whatItIs": "26f5ce6379ff5d71",
+        "keyConcepts": "2450bf45fae613c3",
+        "exampleCode": "0b250fbcdf7c8c7f",
+        "whenToUse": "15b9e6c981d40406",
+        "commonMistakes": "bcb031576f253235",
+        "furtherReading": "e299a9ed41acc099"
+      },
+      "507_condition_and_criticality.md": {
+        "title": "574252e3f9e18fba",
+        "whatItIs": "db8384dc36ec309b",
+        "keyConcepts": "a917db4d86792bd3",
+        "exampleCode": "12582b30093c301e",
+        "whenToUse": "fd6058b2923edc78",
+        "commonMistakes": "e5cd67e652a03dfd",
+        "furtherReading": "821d7ce58703d082"
+      },
+      "508_work_orders_and_maintenance_history.md": {
+        "title": "a7f4f81920d9dd5c",
+        "whatItIs": "3a42b1f8518d22a1",
+        "keyConcepts": "52085eadc1afda59",
+        "exampleCode": "b8315fb6a24c4993",
+        "whenToUse": "be1ebe312f9759da",
+        "commonMistakes": "e0bda0e044989967",
+        "furtherReading": "ae17f029b7894c23"
+      },
+      "509_whole_life_cost.md": {
+        "title": "f9366e9c1401e078",
+        "whatItIs": "16f9a2cb7e230356",
+        "keyConcepts": "fd9757fb5c59b91d",
+        "exampleCode": "2e96282c6bced368",
+        "whenToUse": "f4cebc14fb0c3cde",
+        "commonMistakes": "d9360bb5add15573",
+        "furtherReading": "cedfef9aecc770ad"
+      },
+      "510_merging_two_registers.md": {
+        "title": "bbfa2231909b932c",
+        "whatItIs": "c777d59f383f04e4",
+        "keyConcepts": "f61b04551fbbb920",
+        "exampleCode": "ff5832431b82b7ed",
+        "whenToUse": "a9739468bc2176b4",
+        "commonMistakes": "e9d71b18eec4d06d",
+        "furtherReading": "4b3a1380b992f4bf"
+      },
+      "511_handover_data.md": {
+        "title": "d02b0612b413cfb2",
+        "whatItIs": "e1814f77cb090da7",
+        "keyConcepts": "f8f11ddae683528f",
+        "exampleCode": "a297b2ec27730402",
+        "whenToUse": "2521ee10406f8d57",
+        "commonMistakes": "b3cdfe6421767a71",
+        "furtherReading": "c4b6f1b5328f7164"
+      },
+      "512_buying_vs_building_eam.md": {
+        "title": "734e5ef412f4d437",
+        "whatItIs": "3143e19dedbe451b",
+        "keyConcepts": "fd27962f31b545ae",
+        "exampleCode": "bc444e78010864f8",
+        "whenToUse": "d262d3ff9c40011d",
+        "commonMistakes": "b194abf09cbb109e",
+        "furtherReading": "79d9f1ea72d67ec9"
       }
     },
     "autodesk-developer-platform": {

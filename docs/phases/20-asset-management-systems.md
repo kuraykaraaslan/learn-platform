@@ -93,22 +93,45 @@ gelir ama **onlar örnek olduğunu söyler**.
 
 ## Kabul kriterleri
 
-- [ ] 9 ders + manifest; `shape/*` sıfır bulgu; 9'u da damgalı
-- [ ] `parseMistakes` bu 9 derste **0 `single`** madde raporluyor
-- [ ] `asset_register.sql` ≤50 KB; 504/505/508/510'nin `sql run` fence'leri
-      PGlite'ta gerçekten koşuyor; 508'in anti-join'i tohumdaki ihmal edilmiş
-      varlıkları **gerçekten** buluyor
-- [ ] 505'nin `spatial` fence'i `spatial/unanchored-reveal`'i geçiyor
-- [ ] 510'nin `proof` bloğu damgalı, sıfır bağımlılık, iki koşuda byte-aynı
-- [ ] 509'nın `calc` fence'i okuyucunun kendi rakamlarını alıyor; varsayılanların
-      örnek olduğu nesirde yazılı
-- [ ] **ISO 55000'den tek satır alıntı yok**; kaynak yalnız numara + katalog
-      sayfası
-- [ ] 512'da ürün adı geçmiyor; karar veri modeli kriterleriyle veriliyor
-- [ ] 511, P14'ün `#433`'üne `(#N)` ile bağlı
-- [ ] Üç sabit korpus sayısı 485 → **494**
-- [ ] `content:stats-check` "0 disagree"; snapshot +9 ders, %100 EXPLAINED
-- [ ] `git diff --exit-code -- content/_reports` temiz; `content:check` yeşil
+- [x] 9 ders (504-512) + manifest; `shape/*` sıfır bulgu; 9'u da `stamp-verified.ts` ile damgalı
+- [x] `parseMistakes` bu 9 derste **0 `single`** madde raporluyor (korpus geneli `single` 141'de sabit kaldı)
+- [x] `asset_register.sql` **10.379 bayt** (sınır 50 KB); dört tabloyu birlikte
+      taşıyor (kütük ağacı, iş emri, durum kaydı, ikinci kütük). 504/505/508/510'nin
+      `sql run` fence'leri PGlite'ta koşuldu; 508'in filtrelenmiş anti-join'i
+      tohumdaki iki kritiklik-5 varlığı (`PMP-1001A`, `FP-TANK-01`) — ikisi de
+      hiç iş emri almamış — **gerçekten** buluyor
+- [x] 505'nin `spatial` fence'i `spatial/unanchored-reveal`'i geçiyor (`reveal`
+      "each row also stores `ST-NORTH/SYS-WATER/PMP-SET-01/PMP-1001A` as a string"
+      nesirde birebir var; `AMS_AssetTag` set adı da öyle)
+- [x] 510'nin `proof` bloğu `stamp-verify.ts` ile damgalı, sıfır bağımlılık,
+      `--check` iki koşuda byte-aynı. 8 gelen kayıttan 6 otomatik eşleşme, 1
+      inceleme kuyruğu (`FAN-B2-1`), 1 eşleşmeyen (`CHW-CHILLER-01`) koşunun çıktısı
+- [x] 509'nın `calc` fence'i altı girdiyi okuyucudan alıyor; "The defaults are
+      an example of the shape, not a recommendation" nesirde yazılı
+- [x] **ISO 55000/15686-5/16952-10'dan tek satır alıntı yok**; kaynak yalnız
+      numara + ISO katalog sayfası; uygunluk iddiası kurulmadı
+- [x] 512'da ürün adı geçmiyor; `tradeoff` ve due-diligence `template`'i veri
+      modeli kriterleriyle kurulu (export, stabil anahtar, ekli dosyalar, sahiplik)
+- [x] 511, P14'ün `#433`'üne `(#433)` + `Lesson 433` linkiyle bağlı; `links/dead-lesson-ref` temiz
+- [x] Üç sabit korpus sayısı **486 → 495** (şartname 485→494 yazıyordu; aradaki
+      fark P16'nın sonradan eklenen `#523` dersidir — spec 485 zemininde yazılmıştı)
+- [x] `content:stats-check` "32 rows checked · 0 disagree"; `content:snapshot-diff`
+      **0 explained · 0 unexplained** (yalnız `lessonCount` kımıldadı, hiçbir
+      mevcut bölüm sha'sı değişmedi), snapshot +9 ders
+- [x] `content:reports` sonrası tekrar koşumda fark yok; `content:check`, `lint`,
+      `content:concepts-check`, `content:verify-mermaid` (24 fence, 15 ok, 9
+      unverified — hepsi DOM gerektiren `graph`), `build` (536 statik sayfa) yeşil
+
+**Şartnamede istenen kavram terimleri.** `concepts.json`'a `criticality`
+(→507), `work-order` (→508), `anti-join` (→508), `functional-location` (→506),
+`whole-life-cost` (→509) eklendi. Şartnamenin adını verdiği `asset-register`
+terimi **eklenmedi** ve `work-order`'a çoğul (`work orders`) alias konmadı:
+"asset register" ve "work orders" ifadeleri korpusta zaten var (dersler 433,
+439, 465) ve bir cam terim olarak eklendiklerinde o dersleri geriye dönük
+linkliyor — yani alan programının istikrarlı **0 unexplained** snapshot kuralını
+bozuyorlardı. Kurs kendi konusunu zaten nesirde tanımladığı için `asset-register`
+tooltip'i kurs içinde bir şey kazandırmıyor; asıl değeri tam da çakıştığı
+yerlerde olurdu.
 
 ## Risk
 

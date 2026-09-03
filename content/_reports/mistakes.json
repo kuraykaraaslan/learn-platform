@@ -1,11 +1,11 @@
 {
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
-    "lessons": 486,
+    "lessons": 495,
     "single": 141,
     "lessonsWithZeroDrillable": 10,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 454
+    "lessonsWithTwoPlusDrillable": 463
   },
   "lessons": [
     {
@@ -756,6 +756,141 @@
         "bold-space": 0,
         "plain-dash": 2,
         "single": 2
+      }
+    },
+    {
+      "courseSlug": "asset-management-systems",
+      "file": "504_the_asset_register.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "asset-management-systems",
+      "file": "505_asset_hierarchies.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "asset-management-systems",
+      "file": "506_asset_identity.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 5,
+        "bold-colon": 0,
+        "bold-space": 1,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "asset-management-systems",
+      "file": "507_condition_and_criticality.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "asset-management-systems",
+      "file": "508_work_orders_and_maintenance_history.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "asset-management-systems",
+      "file": "509_whole_life_cost.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "asset-management-systems",
+      "file": "510_merging_two_registers.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "asset-management-systems",
+      "file": "511_handover_data.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "asset-management-systems",
+      "file": "512_buying_vs_building_eam.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
       }
     },
     {

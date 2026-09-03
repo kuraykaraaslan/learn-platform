@@ -1,16 +1,16 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
-  "totalTerms": 130,
-  "totalLessons": 486,
+  "totalTerms": 135,
+  "totalLessons": 495,
   "totals": {
     "neverMatched": 0,
-    "neverLinked": 17,
+    "neverLinked": 19,
     "neverLinkedByCause": {
-      "own-lesson-only": 3,
+      "own-lesson-only": 4,
       "code-only": 13,
       "shadowed": 0,
       "case-mismatch": 0,
-      "cap-starved": 1,
+      "cap-starved": 2,
       "never-matched": 0
     },
     "atCapLessons": 10
@@ -64,6 +64,20 @@
       "linkableInLessons": [],
       "presentInLessons": [],
       "alsoAppearsInLessons": []
+    },
+    {
+      "slug": "functional-location",
+      "term": "functional location",
+      "cause": "cap-starved",
+      "linkableInLessons": [
+        504
+      ],
+      "presentInLessons": [
+        504
+      ],
+      "alsoAppearsInLessons": [
+        504
+      ]
     },
     {
       "slug": "git-bisect",
@@ -176,6 +190,14 @@
       ]
     },
     {
+      "slug": "whole-life-cost",
+      "term": "whole-life cost",
+      "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
+    },
+    {
       "slug": "x-forwarded-for",
       "term": "X-Forwarded-For",
       "cause": "code-only",
@@ -222,6 +244,14 @@
         "observability-deployment/55_slo_sli_sla.md"
       ],
       "rawOccurrences": 4
+    },
+    {
+      "slug": "anti-join",
+      "term": "anti-join",
+      "lessonsLinkedIn": [
+        "asset-management-systems/504_the_asset_register.md"
+      ],
+      "rawOccurrences": 16
     },
     {
       "slug": "api-documentation",
@@ -476,6 +506,17 @@
       "rawOccurrences": 13
     },
     {
+      "slug": "criticality",
+      "term": "criticality",
+      "lessonsLinkedIn": [
+        "asset-management-systems/504_the_asset_register.md",
+        "asset-management-systems/505_asset_hierarchies.md",
+        "asset-management-systems/508_work_orders_and_maintenance_history.md",
+        "asset-management-systems/512_buying_vs_building_eam.md"
+      ],
+      "rawOccurrences": 69
+    },
+    {
       "slug": "cve",
       "term": "CVE",
       "lessonsLinkedIn": [],
@@ -661,6 +702,12 @@
       "rawOccurrences": 11
     },
     {
+      "slug": "functional-location",
+      "term": "functional location",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 3
+    },
+    {
       "slug": "git-bisect",
       "term": "git bisect",
       "lessonsLinkedIn": [],
@@ -670,11 +717,12 @@
       "slug": "global-id",
       "term": "GlobalId",
       "lessonsLinkedIn": [
+        "asset-management-systems/511_handover_data.md",
         "bim-ifc-data-models/432_parsing_ifc_without_a_library.md",
         "bim-ifc-data-models/439_ifc_in_a_relational_database.md",
         "bim-ifc-data-models/440_model_diffing.md"
       ],
-      "rawOccurrences": 68
+      "rawOccurrences": 84
     },
     {
       "slug": "graceful-degradation",
@@ -747,6 +795,7 @@
       "slug": "ifc",
       "term": "IFC",
       "lessonsLinkedIn": [
+        "asset-management-systems/511_handover_data.md",
         "autodesk-developer-platform/456_revits_object_model.md",
         "autodesk-developer-platform/459_revit_parameters.md",
         "autodesk-developer-platform/464_reading_the_object_tree.md",
@@ -765,7 +814,7 @@
         "field-data-collection/503_validating_field_data.md",
         "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md"
       ],
-      "rawOccurrences": 108
+      "rawOccurrences": 113
     },
     {
       "slug": "index-bloat",
@@ -956,6 +1005,7 @@
       "slug": "property-set",
       "term": "property set",
       "lessonsLinkedIn": [
+        "asset-management-systems/505_asset_hierarchies.md",
         "autodesk-developer-platform/456_revits_object_model.md",
         "bim-ifc-data-models/439_ifc_in_a_relational_database.md",
         "bim-ifc-data-models/440_model_diffing.md",
@@ -963,7 +1013,7 @@
         "digital-twin-engineering/485_binding_a_model_element.md",
         "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md"
       ],
-      "rawOccurrences": 29
+      "rawOccurrences": 30
     },
     {
       "slug": "race-condition",
@@ -1203,7 +1253,7 @@
         "process-soft-skills/78_code_review_culture.md",
         "process-soft-skills/79_blameless_post_mortem.md"
       ],
-      "rawOccurrences": 62
+      "rawOccurrences": 63
     },
     {
       "slug": "sli",
@@ -1429,6 +1479,21 @@
         "framework-deep-dives/398_express_curried_auth_middleware.md"
       ],
       "rawOccurrences": 2
+    },
+    {
+      "slug": "whole-life-cost",
+      "term": "whole-life cost",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 2
+    },
+    {
+      "slug": "work-order",
+      "term": "work order",
+      "lessonsLinkedIn": [
+        "asset-management-systems/504_the_asset_register.md",
+        "asset-management-systems/510_merging_two_registers.md"
+      ],
+      "rawOccurrences": 10
     },
     {
       "slug": "x-forwarded-for",

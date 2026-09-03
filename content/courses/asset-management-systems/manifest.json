@@ -1,0 +1,79 @@
+{
+  "slug": "asset-management-systems",
+  "title": "Asset Management Systems",
+  "description": "The asset register as a data model: hierarchies, identity that survives replacement, condition history, and the queries that find neglect.",
+  "items": [
+    {
+      "id": 504,
+      "file": "504_the_asset_register.md",
+      "title": "The Asset Register: What One Asset Row Must Carry",
+      "bracket": "1-3",
+      "category": "Asset Management Systems",
+      "verified": true
+    },
+    {
+      "id": 505,
+      "file": "505_asset_hierarchies.md",
+      "title": "Asset Hierarchies: Recursive Trees, Materialised Paths, and the Weekly Query",
+      "bracket": "3-7",
+      "category": "Asset Management Systems",
+      "verified": true
+    },
+    {
+      "id": 506,
+      "file": "506_asset_identity.md",
+      "title": "Asset Identity: Tags, Serials, and Surviving a Replacement",
+      "bracket": "3-7",
+      "category": "Asset Management Systems",
+      "verified": true
+    },
+    {
+      "id": 507,
+      "file": "507_condition_and_criticality.md",
+      "title": "Condition and Criticality: Modelling a Score You Did Not Invent",
+      "bracket": "3-7",
+      "category": "Asset Management Systems",
+      "verified": true
+    },
+    {
+      "id": 508,
+      "file": "508_work_orders_and_maintenance_history.md",
+      "title": "Work Orders and Maintenance History: The Anti-Join That Finds Neglect",
+      "bracket": "3-7",
+      "category": "Asset Management Systems",
+      "verified": true
+    },
+    {
+      "id": 509,
+      "file": "509_whole_life_cost.md",
+      "title": "Whole-Life Cost: Repair vs Replace, With Your Own Numbers",
+      "bracket": "3-7",
+      "category": "Asset Management Systems",
+      "verified": true
+    },
+    {
+      "id": 510,
+      "file": "510_merging_two_registers.md",
+      "title": "Merging Two Asset Registers: Fuzzy Matching and the Review Queue It Needs",
+      "bracket": "7-10",
+      "category": "Asset Management Systems",
+      "verified": true
+    },
+    {
+      "id": 511,
+      "file": "511_handover_data.md",
+      "title": "Handover Data: Turning a Model Into a Register Without Losing the Link",
+      "bracket": "7-10",
+      "category": "Asset Management Systems",
+      "verified": true
+    },
+    {
+      "id": 512,
+      "file": "512_buying_vs_building_eam.md",
+      "title": "Buying vs Building an EAM/CMMS: What the Data Model Decides",
+      "bracket": "3-7",
+      "category": "Asset Management Systems",
+      "verified": true
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "name": "verify-asset-management-systems-510",
+  "private": true,
+  "description": "Runs a fixed fuzzy match between two small asset registers for lesson 510's proof block: normalise tags, score every cross pair by Levenshtein distance and serial equality, then split the results into auto-accepted, rejected, and a human review queue. Zero dependencies, pure Node, no network, deterministic. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node match.js"
+  }
+}

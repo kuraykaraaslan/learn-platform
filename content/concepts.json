@@ -14,6 +14,11 @@
     "short": "When so many alerts fire that on-call engineers start ignoring all of them, including critical ones.",
     "lesson": 61
   },
+  "anti-join": {
+    "term": "anti-join",
+    "short": "A LEFT JOIN kept only where the right side is NULL — the rows with no match. How you find what is missing (a neglected asset), which a query starting from the present side can never see.",
+    "lesson": 508
+  },
   "api-documentation": {
     "term": "API documentation",
     "short": "Describes endpoints, request/response schemas, auth requirements, error codes, and rate limits. OpenAPI/Swagger is the standard format.",
@@ -151,6 +156,11 @@
     "short": "Separates the command model (write) from the query model (read); each is optimized independently.",
     "lesson": 2
   },
+  "criticality": {
+    "term": "criticality",
+    "short": "How much an asset's failure matters — consequence times likelihood against the organisation's own tolerance. A property of the role, roughly constant over life; not condition, and never a vendor number.",
+    "lesson": 507
+  },
   "cve": {
     "term": "CVE",
     "short": "Common Vulnerabilities and Exposures; a numbered, publicly documented security vulnerability in a specific software version.",
@@ -268,6 +278,11 @@
     "term": "Flame graph",
     "short": "Visualization of CPU time per function. Width = time spent. Read top-down for hot paths.",
     "lesson": 109
+  },
+  "functional-location": {
+    "term": "functional location",
+    "short": "An identifier for a position in the plant — \"the booster pump on set 01\" — as opposed to the serial number, which identifies the unit currently installed there. The register keys on this; a replacement changes the serial and not the location.",
+    "lesson": 506
   },
   "git-bisect": {
     "term": "git bisect",
@@ -702,6 +717,19 @@
     "term": "WebSocket handshake",
     "short": "Starts as HTTP Upgrade request (101 Switching Protocols), then becomes raw TCP frame exchange — no HTTP overhead per message.",
     "lesson": 101
+  },
+  "whole-life-cost": {
+    "term": "whole-life cost",
+    "aliases": [
+      "whole life cost"
+    ],
+    "short": "The repair-vs-replace comparison done on cost per year of service each option buys — repair over the years it adds, capital over the new unit's life — rather than one quote against another.",
+    "lesson": 509
+  },
+  "work-order": {
+    "term": "work order",
+    "short": "One record of one maintenance intervention: which asset, planned or corrective, raised and completed dates. Accumulated, the work-order table is the maintenance history the anti-join reads.",
+    "lesson": 508
   },
   "x-forwarded-for": {
     "term": "X-Forwarded-For",

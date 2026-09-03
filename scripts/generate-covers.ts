@@ -60,6 +60,7 @@ const SUBJECTS: Record<string, string> = {
   'iot-telemetry-edge': 'a small sensor node emitting concentric signal arcs toward a gateway and a stack of stored readings',
   'digital-twin-engineering': 'a solid building form beside its wireframe counterpart, joined by a live signal line and a time-series ribbon',
   'field-data-collection': 'a rugged handheld device with a stack of queued record cards behind it and one dashed line reaching a distant server',
+  'asset-management-systems': 'a branching register of labelled equipment cards over a maintenance timeline, with one card flagged as having no history',
 };
 
 type Quality = 'low' | 'medium' | 'high';
