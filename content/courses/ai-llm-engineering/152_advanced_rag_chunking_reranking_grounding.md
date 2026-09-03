@@ -7,6 +7,47 @@ The second lever is retrieval precision, and pure vector similarity search is of
 
 The third and most underused lever is grounding verification: an explicit check, after generation, that the model's answer is actually supported by the retrieved context, rather than trusting that "we gave it good context" is sufficient. For high-stakes domains — legal, medical, financial — a second, cheap model call (Haiku is the right tier here) that answers only "GROUNDED" or "NOT GROUNDED" against the retrieved text catches hallucination that survives good retrieval. RAG narrows what the model *can* draw from; it does not guarantee what it *actually did* draw from, and treating retrieval quality as a substitute for output validation is the single most common RAG production bug.
 
+```quiz
+- q: "Answers are missing detail. Raise top-k from 5 to 20?"
+  anchor: "more chunks add cost and dilute what the model attends to, they don't improve answer quality"
+  options:
+    - text: "Yes — more context can only help"
+      correct: false
+      why: "More chunks add cost and dilute what the model attends to. They do not improve answer quality."
+    - text: "No — 3-5 is typically sufficient; look at retrieval quality instead"
+      correct: true
+      why: "A similarity threshold that discards weak chunks does more than raising k ever will."
+    - text: "Yes, and lower the similarity threshold to fill the extra slots"
+      correct: false
+      why: "That fills the context with exactly the chunks the threshold existed to exclude."
+
+- q: "A better embedding model ships. Use it for new documents only?"
+  anchor: "never mix vectors from different embedding models in one index — changing embedding models requires re-embedding the entire corpus"
+  options:
+    - text: "Yes — new documents get better vectors, and the old ones still work"
+      correct: false
+      why: "Never mix vectors from different embedding models in one index. The distances are not comparable."
+    - text: "No — changing the model means re-embedding the whole corpus"
+      correct: true
+      why: "Otherwise similarity across the two halves of the index means nothing."
+    - text: "Yes, keeping both models' vectors in separate fields"
+      correct: false
+      why: "That is two indexes, which is a different design from the one being asked about."
+
+- q: "Where do retrieved chunks go in the request?"
+  anchor: "retrieved chunks go in the user message (with source tags for citation), not the system prompt, so they don't pollute prompt caching"
+  options:
+    - text: "The system prompt, so they carry the most weight"
+      correct: false
+      why: "That pollutes prompt caching: the cached prefix would change on every query."
+    - text: "The user message, with source tags for citation"
+      correct: true
+      why: "It keeps the system prompt stable, and therefore cacheable."
+    - text: "Split across both, for redundancy"
+      correct: false
+      why: "Duplicating context pays for it twice and still breaks the cache."
+```
+
 ## Key Concepts
 - **Chunk at semantic boundaries, not fixed character counts**: split at headers/paragraphs where possible; use overlap (~10% of chunk size) to avoid losing context at boundaries
 - **Hybrid search**: combine dense vector similarity with keyword/BM25 search to catch exact-term queries embeddings miss
@@ -93,3 +134,20 @@ export async function answerWithGroundingCheck(question: string): Promise<{ answ
 - Pinecone — "Chunking Strategies for LLM Applications" (learn.pinecone.io)
 - Anthropic — "Contextual Retrieval" cookbook/blog post on improving RAG chunk relevance
 - [Voyage AI documentation](https://docs.voyageai.com/) — embedding models and reranking
+
+```recall
+- q: "How do you chunk, and why the overlap?"
+  must:
+    - "split at semantic boundaries — headers and paragraphs — rather than fixed character counts"
+    - "use overlap of roughly 10% of chunk size, to avoid losing context at boundaries"
+
+- q: "What is hybrid search, and what is reranking?"
+  must:
+    - "hybrid search combines dense vector similarity with keyword or BM25 search, to catch exact-term queries embeddings miss"
+    - "reranking is a cross-encoder pass over the top candidates after initial retrieval, trading latency for precision"
+
+- q: "What is grounding verification?"
+  must:
+    - "a second, cheaper model call"
+    - "it checks whether the generated answer is actually supported by the retrieved context"
+```

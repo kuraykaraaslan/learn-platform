@@ -7,6 +7,47 @@ Beyond file organization, a well-structured system prompt follows a consistent i
 
 Two parameters deserve explicit, deliberate values every time rather than being left at whatever the SDK defaults to: `temperature` and `max_tokens`. Temperature controls how deterministic versus creative the output is — 0.0-0.2 for code generation and classification where you want the same answer every time, up to 0.7-1.0 for creative or marketing copy. `max_tokens` should be sized to what the task actually needs, not to the model's maximum; a three-sentence summary needs perhaps 150 tokens, and setting a needlessly high ceiling doesn't make the response longer, it just makes a truncation bug more silent when something eventually goes wrong.
 
+```quiz
+- q: "Your handler sees `stop_reason === 'max_tokens'`. What is that?"
+  anchor: "it means output was truncated — log it and raise the limit deliberately, never silently accept truncated output"
+  options:
+    - text: "Normal — the model finished within its budget"
+      correct: false
+      why: "The opposite. It hit the ceiling, and the output is truncated."
+    - text: "A bug signal — the output was cut off"
+      correct: true
+      why: "Log it and raise the limit deliberately. Never silently accept truncated output."
+    - text: "A cost signal — the prompt has grown too expensive"
+      correct: false
+      why: "It says nothing about the prompt. It says the response was cut off."
+
+- q: "A classification endpoint. What temperature?"
+  anchor: "0.0-0.2 for code/classification, 0.2-0.4 for summarization/extraction, 0.3-0.5 for document Q&A, 0.7-1.0 for creative writing"
+  options:
+    - text: "0.7 — a little variety keeps the model from getting stuck"
+      correct: false
+      why: "0.7-1.0 is the creative-writing band. Variety in a classifier is called inconsistency."
+    - text: "0.0-0.2 — the code and classification band"
+      correct: true
+      why: "0.3 is the default absent a reason to deviate, and classification is such a reason."
+    - text: "0.3 — the stated default covers it"
+      correct: false
+      why: "The default applies when you have no reason to deviate. Classification is exactly that reason."
+
+- q: "A six-line prompt sits inline in a route handler. Acceptable?"
+  anchor: "more than 2-3 lines of prompt text does not belong inline in a service or route"
+  options:
+    - text: "Yes — it is used in exactly one place"
+      correct: false
+      why: "Locality is not the test. Past 2-3 lines it moves to `libs/ai/prompts/*.prompt.ts`."
+    - text: "No — beyond 2-3 lines it belongs in a prompt file"
+      correct: true
+      why: "And the `..._CONFIG` object travels with it, so model, max_tokens and temperature change together."
+    - text: "Yes, as long as it is a template literal constant"
+      correct: false
+      why: "Making it a constant does not make it reviewable as a versioned artifact."
+```
+
 ## Key Concepts
 - **Prompts are code**: version them, review them in PRs, and treat any prompt edit as a feature change requiring the same scrutiny as logic changes
 - **Extraction threshold**: more than 2-3 lines of prompt text does not belong inline in a service or route — move it to `libs/ai/prompts/*.prompt.ts`
@@ -76,3 +117,21 @@ export async function generateSummary(text: string): Promise<string> {
 - Anthropic — "Prompt engineering overview" and "Use XML tags to structure prompts" (official docs)
 - Anthropic — "Building effective agents" (writing precise, minimal system prompts)
 - Chip Huyen, "Designing Machine Learning Systems" — treating prompts as a first-class, versioned artifact
+
+```recall
+- q: "Why are prompts treated as code?"
+  must:
+    - "version them, and review them in PRs"
+    - "treat any prompt edit as a feature change requiring the same scrutiny as logic changes"
+
+- q: "Give the canonical prompt structure."
+  must:
+    - "role → task → constraints → output format → examples"
+    - "examples only if the output format is non-obvious"
+
+- q: "What is `max_tokens`, and what travels alongside the prompt?"
+  must:
+    - "a budget, not a ceiling to max out — size it to the task's actual expected output length"
+    - "export a `..._CONFIG` object with model, max_tokens and temperature alongside the prompt string"
+    - "both change together, and both are overridable in tests"
+```

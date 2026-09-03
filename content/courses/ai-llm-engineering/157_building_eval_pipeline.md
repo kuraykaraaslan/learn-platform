@@ -7,6 +7,47 @@ A golden dataset is the backbone of level 2: a small, versioned, representative 
 
 The discipline that actually prevents silent regressions is prompt regression testing: before merging any prompt change, run the eval suite against both the old and new prompt, and the new prompt does not ship unless it meets or exceeds the old pass rate. Without this gate, "does this new prompt feel better" is a vibe, not a measurement, and a well-intentioned tweak that improves one case while quietly breaking three others will ship straight to production. For features that parse structured output, evals should run the *full* pipeline — real model call through to the parsed, validated result — because a mocked response in a unit test cannot catch the model drifting away from the expected schema.
 
+```quiz
+- q: "Your golden dataset asserts exact expected strings. What breaks?"
+  anchor: "never exact string equality against non-deterministic output"
+  options:
+    - text: "Nothing, at temperature 0"
+      correct: false
+      why: "Even there the assertion is equality against non-deterministic output. The golden set checks properties instead."
+    - text: "It asserts equality against non-deterministic output — check properties instead"
+      correct: true
+      why: "`mustContain`, `mustNotContain`, `maxLength`."
+    - text: "Only the cases with long outputs"
+      correct: false
+      why: "Length is one property among several. The problem is the equality itself."
+
+- q: "A reworded prompt reads much better. Merge it?"
+  anchor: "a new prompt must meet or exceed the old pass rate on the same golden set before merging"
+  options:
+    - text: "Yes — prompt quality is a judgment call by nature"
+      correct: false
+      why: "\"Feels better\" is exactly what the regression gate replaces."
+    - text: "Only if it meets or exceeds the old pass rate on the same golden set"
+      correct: true
+      why: "The *same* golden set is what makes the two numbers comparable at all."
+    - text: "Yes, and watch the eval trend afterwards"
+      correct: false
+      why: "Then the regression ships and is found later, which is what the gate exists to prevent."
+
+- q: "Your eval passes at 70% and the team proposes a 70% threshold. What does that indicate?"
+  anchor: "a pass-rate threshold set below ~85% usually means the golden set needs fixing, not that the bar should be lowered"
+  options:
+    - text: "A realistic bar — 70% reflects the model's actual ceiling"
+      correct: false
+      why: "A threshold set below roughly 85% usually means the golden set needs fixing."
+    - text: "The golden set probably needs fixing, rather than the bar lowering"
+      correct: true
+      why: "The floor is a dataset-quality signal, not a target to negotiate."
+    - text: "The model should be upgraded before any threshold is set"
+      correct: false
+      why: "Possibly worth doing, and the stated reading of a sub-85% threshold is about the dataset."
+```
+
 ## Key Concepts
 - **Three levels, three purposes**: unit tests (code correctness, mocked model) → evals (output quality, real model, golden dataset) → human review (rubric-scored sample of production output)
 - **Golden dataset checks properties, not exact text**: `mustContain`, `mustNotContain`, `maxLength` — never exact string equality against non-deterministic output
@@ -88,3 +129,27 @@ jobs:
 - [Chip Huyen — "Designing Machine Learning Systems" and her AI Engineering writing on eval-driven development](https://huyenchip.com)
 - Anthropic — "Building evals" and "Empirical approach to prompt engineering" (official documentation)
 - [OpenAI Evals framework](https://github.com/openai/evals) — a widely referenced open-source pattern for structuring golden datasets, model-agnostic in approach
+
+```recall
+- q: "Name the three levels and their purposes."
+  must:
+    - "unit tests — code correctness, with the model mocked"
+    - "evals — output quality, real model, golden dataset"
+    - "human review — a rubric-scored sample of production output"
+
+- q: "When do evals run, and why not per commit?"
+  must:
+    - "cost and latency make per-commit eval runs impractical"
+    - "nightly or weekly CI, or pre-merge on a prompt change, is the standard cadence"
+
+- q: "Describe the human review process and what triggers action."
+  must:
+    - "sample around 20 production outputs per feature per sprint against a simple rubric — accurate, concise, on-topic, safe, correctly formatted"
+    - "track the score trend over time"
+    - "a sustained drop of more than 10% triggers a prompt review, not a one-off bad sample"
+
+- q: "Why full-pipeline evals for structured output?"
+  must:
+    - "test real model output through the actual Zod parse, not a mocked response"
+    - "the model's schema adherence is exactly what you are checking"
+```

@@ -150,12 +150,12 @@
       },
       "148_prompts_as_versioned_code.md": {
         "title": "3df96537602c8e11",
-        "whatItIs": "7121d811d587ce19",
+        "whatItIs": "9614121b350ed8ee",
         "keyConcepts": "4cda087ee9ffcc22",
         "exampleCode": "7b7994d8e8ea59a4",
         "whenToUse": "28a8acc0dc25b895",
         "commonMistakes": "8857ce188fe2ce6f",
-        "furtherReading": "53aaf5065c491cdc"
+        "furtherReading": "99613f48e4337619"
       },
       "149_structured_output_schema_validation.md": {
         "title": "493b14593dfce762",
@@ -177,21 +177,21 @@
       },
       "151_tool_use_agentic_loops.md": {
         "title": "04ccd2ac3debb243",
-        "whatItIs": "edbb04ee0e1a0065",
+        "whatItIs": "3639a9e366f6aaee",
         "keyConcepts": "1d107e7e471c4128",
         "exampleCode": "d5ceb3a28cf53180",
         "whenToUse": "feb47cc0419fe74d",
         "commonMistakes": "d0d4707ce17820fb",
-        "furtherReading": "c50106971a678229"
+        "furtherReading": "65c7c5d6df71ed65"
       },
       "152_advanced_rag_chunking_reranking_grounding.md": {
         "title": "5a3b59e35e3f00a4",
-        "whatItIs": "c75b5b0677d28439",
+        "whatItIs": "12ac963b48f8c007",
         "keyConcepts": "9ab5aed67c89063c",
         "exampleCode": "e0eef1fe40743659",
         "whenToUse": "08394a8382ffebb8",
         "commonMistakes": "5ec06fea48d6c17c",
-        "furtherReading": "0fc657d875b198af"
+        "furtherReading": "440696a37db5c7e1"
       },
       "153_model_selection_strategy.md": {
         "title": "b2a3cde24da6d6e7",
@@ -231,12 +231,12 @@
       },
       "157_building_eval_pipeline.md": {
         "title": "f5055b66bd25fc95",
-        "whatItIs": "80acea6bafd5ceff",
+        "whatItIs": "1a0b7b6b7f2f27c1",
         "keyConcepts": "2afffa2947dd8d82",
         "exampleCode": "d1e2fbe9c6f8beca",
         "whenToUse": "ee2e84a01b6daf9a",
         "commonMistakes": "e34c5fd0cbc36dae",
-        "furtherReading": "441553f1812605bb"
+        "furtherReading": "e0562660a9d9ffed"
       },
       "158_observability_logging_ai_features.md": {
         "title": "4b93ccbec3db45c6",

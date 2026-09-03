@@ -7,6 +7,47 @@ This immediately implies a loop, not a single call: the model may call a tool, r
 
 The security model here matters as much as the mechanics: everything the model produces — including tool call inputs — is untrusted input, exactly like a value from a web form. A model can hallucinate an argument, pass a malformed value, or (in an adversarial context) be manipulated by injected content into calling a tool with attacker-chosen parameters. Every tool input must be validated with a schema (Zod, matching the same discipline as request-body validation) before it touches your service layer, and any tool that performs an irreversible action — sending an email, charging a card, deleting data — needs an explicit human confirmation step in the UI before the loop is allowed to execute it, not just a description telling the model to "ask first."
 
+```quiz
+- q: "The model returns `stop_reason: 'tool_use'`. What happens next?"
+  anchor: "if `tool_use`, execute and feed results back as a new message"
+  options:
+    - text: "Return the tool call to the user for approval"
+      correct: false
+      why: "Only for irreversible actions. The loop's default is to execute and feed the result back."
+    - text: "Execute the tool, feed the result back as a new message, and repeat"
+      correct: true
+      why: "Until `end_turn`, or until the step cap is hit."
+    - text: "Retry the request with that tool removed"
+      correct: false
+      why: "The model asked for it because it needs it. Removing it does not answer the question."
+
+- q: "Your agentic loop has no step cap. How bad is that?"
+  anchor: "an uncapped loop is a cost and reliability risk, not just a theoretical edge case"
+  options:
+    - text: "Theoretical — models terminate on their own in practice"
+      correct: false
+      why: "Named explicitly as not just a theoretical edge case."
+    - text: "A real cost and reliability risk — the cap is mandatory"
+      correct: true
+      why: "Every iteration is a paid call, and nothing outside the loop bounds it."
+    - text: "Fine, since `end_turn` arrives eventually"
+      correct: false
+      why: "That is precisely the assumption the mandatory cap exists so you do not rely on."
+
+- q: "A tool receives its arguments from the model. Do you validate them?"
+  anchor: "treat model-generated arguments as untrusted, exactly like user input from a form"
+  options:
+    - text: "No — the model generated them from your own schema"
+      correct: false
+      why: "Treat model-generated arguments as untrusted, exactly like user input from a form."
+    - text: "Yes — Zod on every tool input, same as form input"
+      correct: true
+      why: "The schema tells the model what to produce; it does not guarantee what arrives."
+    - text: "Only for tools that write something"
+      correct: false
+      why: "A read tool with an unvalidated argument is still a route to data nobody intended to expose."
+```
+
 ## Key Concepts
 - **Tool schema**: `name`, `description`, and `input_schema` — the model uses the description to decide *when* to call the tool, so vague descriptions cause both missed calls and wrong calls
 - **The agentic loop**: call the model → check `stop_reason` → if `tool_use`, execute and feed results back as a new message → repeat → until `end_turn` or the step cap is hit
@@ -100,3 +141,21 @@ export async function runAgentLoop(userMessage: string): Promise<string> {
 - Anthropic — "Tool use with Claude" (official documentation, including parallel and sequential tool calling)
 - Anthropic — "Building effective agents" (the agentic loop pattern and when to reach for it)
 - [OWASP Top 10 for LLM Applications](https://owasp.org/www-project-top-10-for-large-language-model-applications/) — LLM06 Excessive Agency is the entry that maps directly onto unbounded or unconfirmed tool use
+
+```recall
+- q: "What is in a tool schema, and why does the description matter so much?"
+  must:
+    - "`name`, `description` and `input_schema`"
+    - "the model uses the description to decide *when* to call the tool"
+    - "vague descriptions cause both missed calls and wrong calls"
+
+- q: "How are tools dispatched, and what needs a confirmation gate?"
+  must:
+    - "one centralized `dispatchTool(name, input)` switch, never scattered `if (toolName === ...)` checks across the codebase"
+    - "tools that send, charge or delete must pause for explicit user approval before the loop executes them"
+
+- q: "Who reads a tool description, and what follows from that?"
+  must:
+    - "it is visible to the model, not to end users"
+    - "never leak internal schema details, IDs, or anything sensitive into a description string"
+```
