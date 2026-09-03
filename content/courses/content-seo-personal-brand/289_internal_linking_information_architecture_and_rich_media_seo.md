@@ -7,6 +7,47 @@ Rich media — images, screenshots, diagrams, and video — does more for a tech
 
 Architecture diagrams are worth a specific caution: they should show system components, data flow, external services, and security/deployment boundaries with a short accompanying explanation — a diagram with no explanatory text is decoration, not proof, and a decorative diagram with no explanatory value should simply be cut.
 
+```quiz
+- q: "Your best article sits in the sitemap with no internal links pointing at it. How does it do?"
+  anchor: "is invisible in practice regardless of its own content quality"
+  options:
+    - text: "Fine — the sitemap guarantees discovery"
+      correct: false
+      why: "Discovery is not visibility. An orphan page is invisible in practice whatever its quality."
+    - text: "Poorly — that is an orphan page"
+      correct: true
+      why: "No internal links means nothing on the site signals that the page matters."
+    - text: "Fine, as long as it has external backlinks"
+      correct: false
+      why: "Reachable only externally is one of the two orphan cases named."
+
+- q: "Should every internal link to your service page use identical anchor text?"
+  anchor: "natural variation is fine, unnatural exact-match repetition is not"
+  options:
+    - text: "Yes — consistency reinforces the keyword"
+      correct: false
+      why: "Unnatural exact-match repetition is the case explicitly ruled out."
+    - text: "No — descriptive, with natural variation"
+      correct: true
+      why: "\"SaaS MVP development service\" beats \"click here\"; repeating one string verbatim everywhere is the opposite extreme."
+    - text: "It does not matter — anchor text is no longer a ranking input"
+      correct: false
+      why: "It serves both crawler understanding and reader clarity."
+
+- q: "A screenshot from a client project, used as a proof asset. What is required?"
+  anchor: "they need to show a real workflow while stripping private data, credentials, and internal URLs"
+  options:
+    - text: "Blur the whole interface so nothing identifiable survives"
+      correct: false
+      why: "Then it proves nothing. It still has to show a real workflow."
+    - text: "Show the real workflow, and strip private data, credentials and internal URLs"
+      correct: true
+      why: "The same discipline as an anonymized case study."
+    - text: "Written client permission is the only requirement"
+      correct: false
+      why: "Permission is not a substitute for stripping credentials out of the image."
+```
+
 ## Key Concepts
 - **Hub-and-spoke model**: pillar/service page as hub, blogs/guides as educational spokes, case studies as proof spokes, FAQ/checklists as answer spokes, one CTA page as the conversion endpoint.
 - **Descriptive anchor text**: "SaaS MVP development service" beats "click here" for both crawler understanding and reader clarity — natural variation is fine, unnatural exact-match repetition is not.
@@ -63,3 +104,21 @@ CTA (post-video): If your team handles approvals manually, start by
 - [Google Search Central's "Site Structure" and "Internal Linking" guidance](https://developers.google.com/search) — the primary source on how crawlers use internal links
 - Nielsen Norman Group's research on information architecture and navigation — practical, evidence-based guidance on structuring a site for real users
 - [web.dev's image and video optimization guides](https://web.dev) — current, framework-agnostic detail on formats, compression, and accessible media
+
+```recall
+- q: "Describe the hub-and-spoke model."
+  must:
+    - "the pillar or service page is the hub"
+    - "blogs and guides are educational spokes, case studies are proof spokes, FAQ and checklists are answer spokes"
+    - "one CTA page is the conversion endpoint"
+
+- q: "State the click-depth rule, and say where breadcrumbs go."
+  must:
+    - "important pages should be reachable within three to four clicks of the homepage, not buried in a footer link"
+    - "breadcrumbs on blog posts, case studies and service subpages, with BreadcrumbList schema where appropriate"
+
+- q: "Why do video and diagrams need text context?"
+  must:
+    - "transcripts, summaries and explanatory captions"
+    - "answer engines and many crawlers still rely on the surrounding text, not the media itself"
+```

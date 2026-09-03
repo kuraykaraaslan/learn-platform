@@ -7,6 +7,47 @@ Each of the four signals has a distinct, concrete shape. Experience shows up as 
 
 Two concrete assets carry most of this weight on a small site: the author box and the About page. An author box template like "Written by \<Name\>, a software engineer focused on \<specialty\>. He builds \<service types\> using \<stack/method\>. This article is based on practical experience with \<project type\>" packs identity, specialty, and experience into two sentences, and should appear consistently across content. The About page should go further — who you help, what problems you solve, technical stack, project types, work process, proof links, values/boundaries, a contact CTA, and `sameAs` links connecting to social profiles for schema purposes. None of this works if it's fabricated: inventing certifications, partnerships, or expertise, or publishing confident technical advice with no underlying experience, is the fastest way to erode both machine and human trust once discovered.
 
+```quiz
+- q: "How does the Experience signal actually read on a page?"
+  anchor: "concrete, project-textured language beats confident-sounding generic claims every time"
+  options:
+    - text: "Through stated years of experience and job titles"
+      correct: false
+      why: "Those are claims. Experience reads through specificity — concrete, project-textured language."
+    - text: "Through concrete, project-textured detail rather than confident generic claims"
+      correct: true
+      why: "Generic confidence is exactly what a page with no experience behind it produces."
+    - text: "Through the number of articles published on the topic"
+      correct: false
+      why: "Volume is not first-hand proof of anything."
+
+- q: "What kind of problem is Authoritativeness?"
+  anchor: "Authoritativeness is a consistency problem"
+  options:
+    - text: "A volume problem — more content on the topic"
+      correct: false
+      why: "It is a consistency problem: same name, same domain, matching profiles, credible external mentions."
+    - text: "A consistency problem, across the whole web"
+      correct: true
+      why: "Those signals reinforce one another, and a mismatch between them undoes the reinforcement."
+    - text: "A backlink problem, solved by outreach"
+      correct: false
+      why: "Credible external mentions are one of the four inputs, not the entire signal."
+
+- q: "Which E-E-A-T signal is skipped most often while being weighted heavily?"
+  anchor: "Trustworthiness is the boring stuff"
+  options:
+    - text: "Expertise — naming trade-offs takes real work"
+      correct: false
+      why: "It does, and it is also the one people are keenest to demonstrate."
+    - text: "Trustworthiness — contact info, privacy policy, service boundaries, visible corrections"
+      correct: true
+      why: "The boring stuff: frequently skipped, and heavily weighted."
+    - text: "Experience — first-hand proof is the hardest to produce"
+      correct: false
+      why: "Hard to fake, and not the item described as routinely skipped."
+```
+
 ## Key Concepts
 - **The four E-E-A-T signals**: Experience (first-hand proof), Expertise (depth and trade-offs), Authoritativeness (cross-web consistency), Trustworthiness (contact info, boundaries, honesty).
 - **Experience reads through specificity**: concrete, project-textured language beats confident-sounding generic claims every time.
@@ -66,3 +107,22 @@ Discovery → scope → architecture → build → test → deploy → handover.
 - [Google's "Creating Helpful, Reliable, People-First Content" and E-E-A-T documentation](https://developers.google.com/search) — the primary source defining these signals
 - Google's Search Quality Rater Guidelines (public PDF) — the document search quality raters actually use, useful for seeing E-E-A-T evaluated in practice
 - *Trust Me, I'm Lying* — Ryan Holiday: a useful (if cynical) look at how authority and credibility signals get manufactured online, worth reading precisely to avoid doing it
+
+```recall
+- q: "Name the four E-E-A-T signals and what each one is."
+  must:
+    - "Experience — first-hand proof"
+    - "Expertise — depth and trade-offs"
+    - "Authoritativeness — cross-web consistency"
+    - "Trustworthiness — contact info, boundaries, honesty"
+
+- q: "What goes in the author box, and what goes on the About page?"
+  must:
+    - "author box: name, specialty, service types, method, and a one-line experience claim, repeated consistently"
+    - "About page: who you help, problems solved, stack, process, proof links, values, CTA, and sameAs social links"
+
+- q: "What is the fabrication risk?"
+  must:
+    - "fake certifications, invented partnerships, or advice given with no underlying experience"
+    - "the fastest way to destroy exactly the trust this whole system is built to earn"
+```

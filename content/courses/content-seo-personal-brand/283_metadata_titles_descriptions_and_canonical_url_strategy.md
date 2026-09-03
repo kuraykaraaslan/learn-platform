@@ -7,6 +7,47 @@ Canonicalization solves a different but related problem: telling search systems 
 
 For a multilingual site, canonical URLs should point to the same-language version of a page, not silently default to one language, with `hreflang` used to connect the language variants. And if content gets syndicated or cross-posted (to Medium, to a partner blog, to LinkedIn articles), the freelancer's own domain should generally publish the canonical, original version first — publishing elsewhere first and your own site second undermines your own site's authority for content you actually wrote.
 
+```quiz
+- q: "A duplicate page: canonical to the original, noindex, or both?"
+  anchor: "canonical consolidates duplicate signals; noindex removes a page from search entirely"
+  options:
+    - text: "Both — belt and braces"
+      correct: false
+      why: "They are different tools, and using both casually on one page sends contradictory instructions."
+    - text: "Canonical, if the point is to consolidate the signals onto the original"
+      correct: true
+      why: "noindex removes the page from search entirely; canonical merges its signals into the target."
+    - text: "noindex, since a duplicate should never be indexed"
+      correct: false
+      why: "That discards the page's signals instead of passing them to the original."
+
+- q: "Which pages need a canonical tag?"
+  anchor: "every unique indexable page should canonicalize to itself unless there's a deliberate reason to point elsewhere"
+  options:
+    - text: "Only pages that actually have duplicates"
+      correct: false
+      why: "Every unique indexable page canonicalizes to itself by default."
+    - text: "Every unique indexable page, pointing at itself by default"
+      correct: true
+      why: "Pointing anywhere else is the exception, and needs a deliberate reason."
+    - text: "None — search engines infer the canonical from the sitemap"
+      correct: false
+      why: "The sitemap is a discovery aid, not a canonical declaration."
+
+- q: "Your site is in English and Turkish. Where does the Turkish page's canonical point?"
+  anchor: "canonical should point to the same-language version, with hreflang connecting language variants"
+  options:
+    - text: "To the English version, as the master language"
+      correct: false
+      why: "Never default to a single master language — that removes the Turkish page from search on its own terms."
+    - text: "To itself, the same-language version, with hreflang connecting the variants"
+      correct: true
+      why: "hreflang is what tells search engines the two pages are language variants of one another."
+    - text: "Nowhere — translations should be noindexed to avoid duplicate content"
+      correct: false
+      why: "A translation is not duplicate content. It is a different page for a different audience."
+```
+
 ## Key Concepts
 - **Title formula and uniqueness**: `<Service/Topic> for <Audience> | <Brand>` patterns that stay unique per page and match the intent driving the search.
 - **Title-to-H1 alignment**: the H1 must confirm, not contradict or dilute, the promise the title made — mismatches erode trust and confuse intent signals.
@@ -60,3 +101,26 @@ Known duplicate variants to redirect or canonicalize:
 - Google Search Central's "Canonicalization" and "Title Links" documentation — the primary source on how canonical signals and title rewriting actually work
 - Moz's Beginner's Guide to SEO, metadata chapter — a practical, widely used reference for writing titles and descriptions
 - [The Open Graph protocol documentation](https://ogp.me) — the spec behind how social platforms read shared-link previews
+
+```recall
+- q: "What is the title formula, and what must the H1 do?"
+  must:
+    - "`<Service/Topic> for <Audience> | <Brand>`, unique per page and matched to the intent driving the search"
+    - "the H1 must confirm, not contradict or dilute, the promise the title made"
+    - "mismatches erode trust and confuse intent signals"
+
+- q: "What is the meta description actually for?"
+  must:
+    - "accurate, benefit-stated, non-clickbait summaries"
+    - "it earns the right visitor, not merely any visitor"
+
+- q: "Which Open Graph tags matter, and for what?"
+  must:
+    - "og:title, og:description, og:image, og:url and og:type"
+    - "how the page looks when shared on LinkedIn or other social platforms"
+
+- q: "State the internal link consistency rule."
+  must:
+    - "always link internally to the canonical URL directly"
+    - "never to a parameterized or non-canonical variant"
+```

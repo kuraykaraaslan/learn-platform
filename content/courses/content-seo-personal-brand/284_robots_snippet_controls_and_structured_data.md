@@ -7,6 +7,47 @@ There are three distinct robots-family tools, and mixing them up is the single m
 
 Structured data (JSON-LD is the preferred format) adds explicit, machine-readable labels to content that's already visible on the page — Organization, Person, WebSite, WebPage, BreadcrumbList, Article/BlogPosting, Service, and (only when genuinely eligible) LocalBusiness or FAQPage. The one non-negotiable rule governing all of it: structured data must accurately describe what a user can actually see. Marking up services not actually offered, adding fake ratings, or using FAQPage schema for content hidden from the visible page are all violations that can trigger manual penalties, and none of them produce the AI-citation benefit people hope for — there is no such thing as "AI Overview schema," and structured data is a clarity layer, not a ranking trick. For a personal/freelance site, a reasonable baseline is Organization or Person plus WebSite at the site level, WebPage and Article/BlogPosting at the content level, and BreadcrumbList for navigational hierarchy — validated with Google's Rich Results Test and the Schema.org validator before launch.
 
+```quiz
+- q: "You disallow `/admin` in robots.txt. Is it private now?"
+  anchor: "it's a crawl-politeness request, not an access control; truly private pages need authentication, not just a disallow rule"
+  options:
+    - text: "Yes — compliant crawlers will not fetch it"
+      correct: false
+      why: "*Compliant* ones. It is a crawl-politeness request rather than access control, and the file itself is public."
+    - text: "No — a private page needs authentication, not a disallow rule"
+      correct: true
+      why: "The disallow list also advertises the paths you would rather nobody visited."
+    - text: "Yes, once the page also carries meta robots noindex"
+      correct: false
+      why: "noindex keeps it out of results and still does nothing to stop anyone fetching it."
+
+- q: "You need a PDF kept out of the index. Which tool?"
+  anchor: "X-Robots-Tag (HTTP-header equivalent for non-HTML files)"
+  options:
+    - text: "meta robots on the PDF"
+      correct: false
+      why: "A PDF has no HTML head to carry a meta tag."
+    - text: "`X-Robots-Tag` — the HTTP-header equivalent for non-HTML files"
+      correct: true
+      why: "The three tools are not interchangeable, and this is exactly what the header exists for."
+    - text: "A robots.txt disallow"
+      correct: false
+      why: "That blocks crawling, and a page blocked from crawling can still be indexed from external links."
+
+- q: "You add `nosnippet` to keep your copy out of search result previews. What else did that do?"
+  anchor: "blocking snippets also blocks the summaries and quotes that AI answer engines rely on"
+  options:
+    - text: "Nothing — snippets and AI answers are separate systems"
+      correct: false
+      why: "AI answer engines rely on the same summaries and quotes."
+    - text: "Removed you from AI answer engines as well"
+      correct: true
+      why: "Use it only for a specific privacy, legal or business reason."
+    - text: "Improved click-through, since a reader now has to visit"
+      correct: false
+      why: "A result with no snippet gives a reader less reason to click, not more."
+```
+
 ## Key Concepts
 - **Three distinct robots tools**: robots.txt (crawl access), meta robots (page-level index/snippet control), X-Robots-Tag (HTTP-header equivalent for non-HTML files) — never treat them as interchangeable.
 - **Default behavior needs no declaration**: pages are `index, follow` by default; only declare directives when deviating from that.
@@ -58,3 +99,25 @@ Structured data (JSON-LD is the preferred format) adds explicit, machine-readabl
 - Google Search Central's "Robots Meta Tags" and "Structured Data" documentation — the definitive reference for both topics
 - [Schema.org's own documentation and type hierarchy](https://schema.org) — for checking a type's exact required/recommended properties
 - [Google's Rich Results Test tool](https://search.google.com/test/rich-results) — for validating markup before it ships
+
+```recall
+- q: "What is the default robots behaviour, and when do you declare a directive?"
+  must:
+    - "pages are `index, follow` by default"
+    - "only declare directives when deviating from that"
+
+- q: "State the rule on structured data matching content."
+  must:
+    - "schema describing something a user cannot actually see on the page is a policy violation, not a growth hack"
+
+- q: "Name the baseline schema set, and say why JSON-LD."
+  must:
+    - "Organization or Person, plus WebSite, site-wide"
+    - "WebPage, Article/BlogPosting and BreadcrumbList at page level"
+    - "JSON-LD is cleanly separable from the HTML markup and the most thoroughly documented format"
+
+- q: "What does structured data not guarantee?"
+  must:
+    - "there is no guaranteed schema-to-ranking or schema-to-citation link"
+    - "it improves understanding and rich-result eligibility, and guarantees neither rankings nor AI citations"
+```
