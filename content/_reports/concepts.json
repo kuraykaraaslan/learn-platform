@@ -1,7 +1,7 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
   "totalTerms": 130,
-  "totalLessons": 485,
+  "totalLessons": 486,
   "totals": {
     "neverMatched": 0,
     "neverLinked": 17,

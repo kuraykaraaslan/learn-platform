@@ -1,5 +1,5 @@
 {
-  "lessonCount": 485,
+  "lessonCount": 486,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -585,6 +585,15 @@
         "whenToUse": "4335879578728b8d",
         "commonMistakes": "fd1c7c52fcb0044d",
         "furtherReading": "87b538d928e722b2"
+      },
+      "523_shipping_a_design_automation_bundle.md": {
+        "title": "1af49f5f853f9b04",
+        "whatItIs": "ea5cf7bff8bae4ba",
+        "keyConcepts": "8b4d07a2ddda08cb",
+        "exampleCode": "88dbd799f0007b02",
+        "whenToUse": "acc5a40bf1261518",
+        "commonMistakes": "3c90d08980dec05b",
+        "furtherReading": "ab46e58a664ce796"
       }
     },
     "bim-ifc-data-models": {

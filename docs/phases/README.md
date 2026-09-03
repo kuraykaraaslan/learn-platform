@@ -86,16 +86,16 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 
 | Ölçüm | P0 zemini | Bugün |
 |---|---:|---:|
-| Ders / kurs / bölüm | 412 / 23 / 2473 | 485 / 29 / **2910** |
-| Fence | 505 | 1175 |
+| Ders / kurs / bölüm | 412 / 23 / 2473 | 486 / 29 / **2916** |
+| Fence | 505 | 1179 |
 | Yalnız kod fence'i olan ders | 179 | 68 |
 | Yalnız şablon fence'i olan ders | 211 | 138 |
 | Hiç fence'i olmayan ders | 0 | 0 |
-| TS/TSX/JS fence | 161 | 225 |
-| Common Mistakes maddesi | 1746 | 2218 |
-| — drill'lenebilir | 705 (%40,4) | **2077 (%93,6)** |
+| TS/TSX/JS fence | 161 | 226 |
+| Common Mistakes maddesi | 1746 | 2225 |
+| — drill'lenebilir | 705 (%40,4) | **2084 (%93,7)** |
 | — tek cümlelik (P2'nin işi) | 1041 | **141** |
-| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **475** (sıfır: 10) |
+| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **476** (sıfır: 10) |
 | Form fence / dosya | 91 / 88 | 91 / 88 |
 | Checklist fence / madde | 35 / 293 | 36 / 295 |
 | `sql` fence | 9 | 51 |
@@ -122,10 +122,10 @@ kaynak `course_content.sections.ts` olarak kalır.
 
 | Alan ölçüsü | P13 zemini | Bugün |
 |---|---:|---:|
-| Alan dersi / alan kursu | 0 / 0 | 73 / 6 |
-| Alan fence'i | 0 | 268 |
-| Alan Common Mistakes maddesi | 0 | 446 |
-| Alan — drill'lenebilir | 0 | 446 |
+| Alan dersi / alan kursu | 0 / 0 | 74 / 6 |
+| Alan fence'i | 0 | 272 |
+| Alan Common Mistakes maddesi | 0 | 453 |
+| Alan — drill'lenebilir | 0 | 453 |
 
 P8/P9'un tek seferlik fence analizleri (hiç import etmeyen 44, yalnız
 tarayıcı-güvenli import 10, WebContainer'da çalışabilen 62, yerel eklenti
@@ -140,16 +140,16 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 
 | Widget | Fence | Ders |
 |---|---:|---:|
-| `quiz` | 236 | 236 |
-| `recall` | 236 | 236 |
+| `quiz` | 237 | 237 |
+| `recall` | 237 | 237 |
 | `mermaid` | 23 | 23 |
 | `tradeoff` | 15 | 15 |
 | `calc` | 13 | 13 |
 | `spatial` | 5 | 5 |
 | `proof` | 21 | 21 |
-| `run` (toplam) | 79 | 57 |
+| `run` (toplam) | 80 | 58 |
 | — `sql run` | 38 | |
-| — JS/TS `run` | 38 | |
+| — JS/TS `run` | 39 | |
 | — `run project` | 3 | |
 | `diff` | 2 | 2 |
 

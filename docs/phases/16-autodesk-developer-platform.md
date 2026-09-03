@@ -25,7 +25,7 @@ taşır.
 ## Kapsam
 
 **Kurs:** `autodesk-developer-platform` — "Autodesk Developer Platform: Revit API & APS"
-**Ders:** 14 · **id:** 455-468 · **bracket:** `1-3` ×1, `3-7` ×11, `7-10` ×2
+**Ders:** 15 (14 + sonradan `#523`) · **id:** 455-468, 523 · **bracket:** `1-3` ×1, `3-7` ×11, `7-10` ×3
 
 > *Description:* "Three ways to write Autodesk code — in Revit, without Revit,
 > and about Revit — and the API churn you design against."
@@ -46,6 +46,7 @@ taşır.
 | 466 | Webhooks: Delivery, Retries, and Verifying What Arrived | 3-7 |
 | 467 | Rate Limits and Quotas: Backoff Against Someone Else's API | 3-7 |
 | 468 | Designing for Vendor API Churn: Pinning, Versions, Anti-Corruption Layer | 7-10 |
+| 523 | Shipping a Design Automation Bundle: Versions, Aliases, and Rollback | 7-10 |
 
 459 doğrudan P14'e bağlanır: Revit'in paylaşılan parametresi IFC'ye
 `Pset_` olarak çıkıyor mu, çıkmıyorsa nerede kayboluyor — devir zincirinin
@@ -80,6 +81,9 @@ sonraki faz için açık bir iş kalemidir.
 | Viewer v7 çeviriyi render eden bir tarayıcı bileşeni | 465 | 2026-09 | 2027-03 |
 | Webhook kaydı sistem + olay tipi + kapsam + callback URL; teslimat en-az-bir-kez | 466 | 2026-09 | 2027-03 |
 | Hız sınırı sayısal değeri **yazılmadı** — 429 ve `Retry-After` mekanizması yazıldı | 467 | 2026-09 | 2027-03 |
+| AppBundle zip'i tek bir `.bundle` klasörü; `PackageContents.xml` kökte, `.addin` ve assembly'ler `Contents/` altında | 523 | 2026-09 | 2027-03 |
+| Nitelikli kimlik `owner.Name+alias`; alias tek bir sürüme işaret eder, Activity bundle'ı alias ile adlandırır | 523 | 2026-09 | 2027-03 |
+| Nickname global tekil ve bir kez alınır; değiştirmek hesabın bütün bundle ve activity'lerini silmeyi gerektirir | 523 | 2026-09 | 2027-03 |
 
 Son satır bilinçli: fazın kaynak kuralı "kota rakamı ders metninde olgu olarak
 yazılmaz" diyor, ve bu tablonun en uzun ömürlü satırı hiçbir rakam
@@ -126,6 +130,7 @@ Bunun karşılığında iki telafi zorunlu:
 | 462 | `ts run` + **`proof`** | URN base64url kodla/çöz; proof yanlış varyantı görünür kılar |
 | 463 | `ts run` | Satır içi bir JSON manifest yanıtı üzerinde gezinme |
 | 467 | `ts run` | Token bucket simülasyonu |
+| 523 | `ts run` | Yayın ile dağıtımın aynı şey olmadığı, aynı yayın geçmişi üzerinde sayılarak |
 | 464 | **`spatial`** | Model Derivative nesne ağacı — widget'ın ikinci kursu |
 | 461 | `mermaid` `sequenceDiagram` (1) | `verify-mermaid` bu tipi **tam** doğruluyor |
 | 456, 457, 459, 460 | **runtime yok** (C# fence'li) | Revit süreci gerekiyor |
@@ -222,6 +227,34 @@ işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
 | AutoCAD .NET / Civil 3D API | Altyapı tarafının masaüstü API'si | kapsam — üçüncü bir masaüstü API, C# fence bütçesini (≤10) tek başına doldurur |
 | Dynamo | Görsel programlama ile Revit otomasyonu | kitle — hedef okuyucu kod yazıyor; Dynamo'nun asıl kitlesi başka |
 | ACC Issues / Submittals API | Şantiye iş akışlarının veri modeli | kapsam — `#468` vendor çürümesini kuruyor; ACC yüzeyi hızlı değişiyor, oynaklık kaydını şişirir |
-| Design Automation AppBundle paketleme | `#460`'ın operasyonel yarısı: paketleme, sürümleme, dağıtım | kapsam — `#460` mekanizmayı kuruyor; paketleme adım adım kılavuz olur ve hızlı eskir |
 | Viewer extension yazımı | Viewer'ı genişletmek | doktrin — `#465`'in tezi Viewer'ın **istemci** olduğu; extension dersi o tezi zayıflatır ve çalıştırılamaz |
 | Revit → IFC dışa aktarım eşlemeleri | `#459`'un devamı: paylaşılan parametre IFC'de nereye düşüyor | bağımlılık — P14 ve `#459` birlikte okunduktan sonra anlamlı; en güçlü aday |
+
+## Ek — `#523`, bu tablodan çıkan ilk aday (2026-09)
+
+"Design Automation AppBundle paketleme" kapsama alındı, `Eklenebilecekler`'den
+kaldırıldı ve ders listesine girdi. Ertelenme gerekçesi *"paketleme adım adım
+kılavuz olur ve hızlı eskir"* idi; ders doğrudan o gerekçeye karşı yazıldı.
+İçinde tek bir uç nokta yolu, istek gövdesi ya da tıklama sırası yok. Anlattığı
+şey **dolaylılık**: sürüm ile alias iki ayrı işaretçi katmanı, `owner.Name+alias`
+niteliğinde buluşuyorlar, ve dağıtım ile geri alma aynı hareketin iki yönü.
+Bu yapı vendor'un uç nokta listesinden bağımsız — `#468`'in pinning argümanının
+kursun kendi dağıtım hikâyesine uygulanmış hâli.
+
+Kayda değer dört nokta:
+
+- **Runtime `ts run`.** İddia sayılıyor, iddia edilmiyor: aynı üç yayınlık
+  geçmişte, alias ayrı bir karar olarak taşındığında yayın kaynaklı üretim
+  değişikliği **0**; alias yüklemeye bağlandığında **3**, hiçbiri ayrıca
+  verilmiş bir karar değil. Geri alma maliyeti de aynı yerde ölçülüyor: alias'ı
+  adlandıran activity'ler için 1 hareket, sürümü adlandıranlar için activity
+  başına bir yeniden yazım.
+- **C# fence bütçesi kımıldamadı (9/10).** Dersin gösterdiği dosya
+  `PackageContents.xml`; korpusun tek `xml` fence'i olan `#457`'nin `.addin`
+  manifestiyle aynı paketin iki parçası, ve ikisi de aynı kurgusal eklentiyi
+  (`DepotTools`) anlatıyor.
+- **id 523, bloğun bitişiği değil.** 469-522 aralığı P17-P21 şartnamelerinde
+  rezerve; manifest sırası, `security`'nin 143'ünde olduğu gibi, sonradan
+  yazılan dersi kursun sonuna koyar.
+- **Korpus 485 → 486.** `docs/phases/README.md`'nin ölçülen tabloları yeniden
+  ölçüldü (14 satır), `corpus-stats --check` yeşil.

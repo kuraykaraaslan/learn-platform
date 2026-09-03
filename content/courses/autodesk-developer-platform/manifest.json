@@ -114,6 +114,14 @@
       "bracket": "7-10",
       "category": "Autodesk Developer Platform",
       "verified": true
+    },
+    {
+      "id": 523,
+      "file": "523_shipping_a_design_automation_bundle.md",
+      "title": "Shipping a Design Automation Bundle: Versions, Aliases, and Rollback",
+      "bracket": "7-10",
+      "category": "Autodesk Developer Platform",
+      "verified": true
     }
   ]
 }

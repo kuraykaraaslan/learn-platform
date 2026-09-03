@@ -43,7 +43,7 @@ describe('lesson ordering', () => {
         seen.set(item.id, slug);
       }
     }
-    expect(seen.size).toBe(485);
+    expect(seen.size).toBe(486);
   });
 });
 

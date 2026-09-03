@@ -1,11 +1,11 @@
 {
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
-    "lessons": 485,
+    "lessons": 486,
     "single": 141,
     "lessonsWithZeroDrillable": 10,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 453
+    "lessonsWithTwoPlusDrillable": 454
   },
   "lessons": [
     {
@@ -962,6 +962,21 @@
       "drillable": 6,
       "formCounts": {
         "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "autodesk-developer-platform",
+      "file": "523_shipping_a_design_automation_bundle.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
         "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
