@@ -1,6 +1,8 @@
 # 205. Hourly and Day-Rate Engagements
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 Hourly and day-rate billing get a bad reputation in pricing-strategy circles, but they are the correct tool for a specific, common category of work: debugging an unfamiliar codebase, providing ongoing technical advisory, rescuing a stalled project, or covering agency overflow where the exact task list can't be known in advance. The mistake isn't using time-based billing — it's using it without any of the structure that keeps it from becoming an unbounded, low-trust arrangement for both sides.
 
 A safe hourly engagement defines a rate, a minimum billable block, a weekly cap or approval threshold above which the client must explicitly sign off on more hours, a reporting cadence, and a clear list of what's included versus excluded. Day-rate work follows the same logic at a coarser grain: a daily rate, a number of reserved days, a stated focus area, and a limit on how many meetings can eat into billable time before they start displacing the work itself. Without these boundaries, hourly work drifts into two failure modes — either the freelancer under-reports out of guilt over slow days, or the client starts treating every message as a free five-minute favor that never quite reaches the invoice.

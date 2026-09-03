@@ -507,7 +507,7 @@
       },
       "321_project_accounting_and_costing.md": {
         "title": "e6a6f26a1e7d3f12",
-        "whatItIs": "2254785aab147d38",
+        "whatItIs": "0f68b09c248739a5",
         "keyConcepts": "0524c37dd789ff15",
         "exampleCode": "3945cfe5401691a7",
         "whenToUse": "b76f754d8ed5f647",
@@ -795,7 +795,7 @@
       },
       "353_business_continuity_planning.md": {
         "title": "157627873a100818",
-        "whatItIs": "8e860aff38e1f06e",
+        "whatItIs": "de3121780282a140",
         "keyConcepts": "7fa7bf53d40b60d7",
         "exampleCode": "a5a36c21c76432f9",
         "whenToUse": "bcb5d5ee5c22398d",
@@ -1786,7 +1786,7 @@
     "contracts-pricing-legal": {
       "201_proposal_readiness.md": {
         "title": "b21739cd932abc9d",
-        "whatItIs": "a4dd98c6fa996f14",
+        "whatItIs": "e03deac539e10b19",
         "keyConcepts": "4f16ab733b9e09b8",
         "exampleCode": "b42d8f1aa3b40cac",
         "whenToUse": "fa7e4df16178f2b3",
@@ -1804,7 +1804,7 @@
       },
       "203_scope_to_price_mapping.md": {
         "title": "fcbc503f9bacedd6",
-        "whatItIs": "703fa54bd89fc749",
+        "whatItIs": "6c600b0817698035",
         "keyConcepts": "65846d98599a20bd",
         "exampleCode": "5e46234612d29ad3",
         "whenToUse": "7ac1975e32331487",
@@ -1813,7 +1813,7 @@
       },
       "204_fixed_price_projects.md": {
         "title": "79c616a45794e215",
-        "whatItIs": "efd3e2ed41bb0266",
+        "whatItIs": "dd87a9bf4769653c",
         "keyConcepts": "25d62602ab613006",
         "exampleCode": "97a37f9c92c4c0e1",
         "whenToUse": "be2b771361e460bc",
@@ -1822,7 +1822,7 @@
       },
       "205_hourly_and_day_rate_engagements.md": {
         "title": "c1fdf46e4118f7af",
-        "whatItIs": "4dc6f5dbae741540",
+        "whatItIs": "c617cd5c05aa0036",
         "keyConcepts": "deea3ca84577fda3",
         "exampleCode": "67b1f867fb83995d",
         "whenToUse": "8d11a373e87ecb72",
@@ -1831,7 +1831,7 @@
       },
       "206_pricing_positioning.md": {
         "title": "cf951ecb86e0212f",
-        "whatItIs": "84583e9c53df67b5",
+        "whatItIs": "d255ebd9bb41704c",
         "keyConcepts": "d47294017ae0b161",
         "exampleCode": "79c895300cab5f63",
         "whenToUse": "e7b43adb4e1c81d4",
@@ -1840,7 +1840,7 @@
       },
       "207_pricing_psychology.md": {
         "title": "b1c9578609b87f07",
-        "whatItIs": "313964c2d665c28a",
+        "whatItIs": "4130b72d1daaa83e",
         "keyConcepts": "718640ef853d0b2f",
         "exampleCode": "ee0d86e51c616a2e",
         "whenToUse": "ce7bffbef8f20c10",
@@ -1849,7 +1849,7 @@
       },
       "208_negotiating_price_pressure.md": {
         "title": "0756630e68e11f01",
-        "whatItIs": "a4119d2a4243b085",
+        "whatItIs": "862f71506ce52fb7",
         "keyConcepts": "53ee118c16767f5a",
         "exampleCode": "8988103b0dc211d0",
         "whenToUse": "8b1f0163ed9d1377",
@@ -1858,7 +1858,7 @@
       },
       "209_proposal_structure_and_follow_up.md": {
         "title": "8f764858d5df839a",
-        "whatItIs": "3243af1c8194a4b1",
+        "whatItIs": "4987fefbecf5a599",
         "keyConcepts": "9a91a71303ea00b0",
         "exampleCode": "53a0229579141368",
         "whenToUse": "a9d416719bf26cbd",
@@ -1867,7 +1867,7 @@
       },
       "210_scope_definition_and_boundaries.md": {
         "title": "734d5f3729751a55",
-        "whatItIs": "fe3620b99d8adf24",
+        "whatItIs": "ef60544470bc624c",
         "keyConcepts": "74e09879a96db4ac",
         "exampleCode": "92edf3d7f94c84cb",
         "whenToUse": "99fa6b89c3ad78c4",
@@ -1876,7 +1876,7 @@
       },
       "211_statement_of_work_structure.md": {
         "title": "6834a798761aa86c",
-        "whatItIs": "5ea722fc2a707488",
+        "whatItIs": "da7485082b775f8c",
         "keyConcepts": "e9fb2654b5aba4ad",
         "exampleCode": "4d8991e86f107eec",
         "whenToUse": "528b6dd1b0d79f02",
@@ -1885,7 +1885,7 @@
       },
       "212_assumptions_and_dependencies.md": {
         "title": "7d3f090d23e86c70",
-        "whatItIs": "07ef962a62cb98bb",
+        "whatItIs": "9a990ff1d2f29455",
         "keyConcepts": "9a2b0414a653ffe5",
         "exampleCode": "2134c081a059d8e0",
         "whenToUse": "7797de38171a9bad",
@@ -1894,7 +1894,7 @@
       },
       "213_deliverables_and_acceptance_criteria.md": {
         "title": "1abb302aa0b9e140",
-        "whatItIs": "2e8aa3e1fceb583f",
+        "whatItIs": "9d50a54efe601e04",
         "keyConcepts": "159094608c6eb2be",
         "exampleCode": "a7a80ea22d97e143",
         "whenToUse": "7cd0cc95f5f0eef0",
@@ -1903,7 +1903,7 @@
       },
       "214_change_request_control.md": {
         "title": "3c4400bd3910ddd6",
-        "whatItIs": "f063cbf055e6497e",
+        "whatItIs": "4d962c735896a630",
         "keyConcepts": "dca15af1e1dd6e16",
         "exampleCode": "0ee2b6a21a04a335",
         "whenToUse": "e0ca740cc4f2af3b",
@@ -1912,7 +1912,7 @@
       },
       "215_revision_policy.md": {
         "title": "15a078097cde4c71",
-        "whatItIs": "25c3c4f6f85c32c6",
+        "whatItIs": "95f48dc78f56a6b5",
         "keyConcepts": "679d7d4264c73e87",
         "exampleCode": "5d94cb5f6b4dac9b",
         "whenToUse": "7086e5871313bde9",
@@ -1921,7 +1921,7 @@
       },
       "216_payment_gates_and_milestone_enforcement.md": {
         "title": "c078e1c418d36fd2",
-        "whatItIs": "8a70e7a0c231525c",
+        "whatItIs": "31a95de4228d884a",
         "keyConcepts": "52f0bf83995ab977",
         "exampleCode": "3fdf95346081af2b",
         "whenToUse": "1495ab3b040758c9",
@@ -1930,7 +1930,7 @@
       },
       "217_ip_assignment_and_source_code_ownership.md": {
         "title": "a6833440b74ee439",
-        "whatItIs": "a8646d22c559c670",
+        "whatItIs": "00539a8543103b20",
         "keyConcepts": "332c534e099170ac",
         "exampleCode": "f83a3e00a3d25065",
         "whenToUse": "a08ab493fae788fd",
@@ -1939,7 +1939,7 @@
       },
       "218_confidentiality_and_client_data_handling.md": {
         "title": "06174f43161d5156",
-        "whatItIs": "cabd4cbc6cd5ac76",
+        "whatItIs": "ab400f37c4082ea3",
         "keyConcepts": "95c2ad3395fb26f8",
         "exampleCode": "cef9b6dbcca0a583",
         "whenToUse": "8fcd8fe829ff3ea5",
@@ -1957,7 +1957,7 @@
       },
       "220_third_party_services_and_license_risk.md": {
         "title": "f5bdad3b1f027e3f",
-        "whatItIs": "ed1d983fedc90d0b",
+        "whatItIs": "4fca12fc24682dd6",
         "keyConcepts": "11f68be7ce4d3097",
         "exampleCode": "77eabce4cedd432b",
         "whenToUse": "a0099828d564cf81",
@@ -1966,7 +1966,7 @@
       },
       "221_client_responsibilities_and_decision_maker_rule.md": {
         "title": "2b2d7ee7ac5634ed",
-        "whatItIs": "c03a2efcd62d9668",
+        "whatItIs": "1fde36feafafbeb9",
         "keyConcepts": "2570e60d3b7090e0",
         "exampleCode": "db537eba8f8491a3",
         "whenToUse": "6310ffc3a7b8cff3",
@@ -1975,7 +1975,7 @@
       },
       "222_communication_and_approval_protocols.md": {
         "title": "7634b21cc31d5c9a",
-        "whatItIs": "5d95fad872e825ed",
+        "whatItIs": "53f85b5139b385bb",
         "keyConcepts": "3e9680f389d971c0",
         "exampleCode": "94bfc689b5f5a334",
         "whenToUse": "dd623ddb66a247e8",
@@ -1984,7 +1984,7 @@
       },
       "223_timeline_commitments_and_delay_management.md": {
         "title": "94db411a338fbe45",
-        "whatItIs": "2eafa5bbeb247c6d",
+        "whatItIs": "5a7e86336195be9b",
         "keyConcepts": "a555f709ddbfe497",
         "exampleCode": "9f55fd41bbb8fcd5",
         "whenToUse": "c4c91754cd53f9df",
@@ -2002,7 +2002,7 @@
       },
       "225_cancellation_and_termination_clauses.md": {
         "title": "54ef77685e448d62",
-        "whatItIs": "32196f4ce2113438",
+        "whatItIs": "6768a1c85ff503ad",
         "keyConcepts": "93c69faebf9dbc63",
         "exampleCode": "429b972db01c4f69",
         "whenToUse": "6a504175c69f2bf0",
@@ -2011,7 +2011,7 @@
       },
       "226_detecting_and_responding_to_scope_creep.md": {
         "title": "329a200d699b0c8d",
-        "whatItIs": "1c0b7c16ae14d3b5",
+        "whatItIs": "0e74baa40f57cf8d",
         "keyConcepts": "8731274edefce4cf",
         "exampleCode": "6f98658d8964084d",
         "whenToUse": "d6c592de78a1e616",
@@ -2020,7 +2020,7 @@
       },
       "227_contract_risk_red_flags.md": {
         "title": "2cea64ca2036b36f",
-        "whatItIs": "54be2ae22075f45f",
+        "whatItIs": "c151f7bc47d8ecb0",
         "keyConcepts": "6b751e4b614a6be9",
         "exampleCode": "264122af771b9bce",
         "whenToUse": "b24ad2881b276780",
@@ -2029,7 +2029,7 @@
       },
       "228_handoff_from_scope_to_execution.md": {
         "title": "dda3fe3de4d266bb",
-        "whatItIs": "1aedb47f6831ec9b",
+        "whatItIs": "5ec7f75fc28e15b8",
         "keyConcepts": "81003eb50ca75825",
         "exampleCode": "ad38665f336b5f38",
         "whenToUse": "79aa7966230cec8f",
@@ -2038,7 +2038,7 @@
       },
       "229_contractor_agreements.md": {
         "title": "8be472a815ce707c",
-        "whatItIs": "3472b52d1870dc45",
+        "whatItIs": "1168db14b5cb88c6",
         "keyConcepts": "0457150de2ea6d7b",
         "exampleCode": "62de9d6c95781f2e",
         "whenToUse": "bf1b14f60bc0d048",
@@ -2047,7 +2047,7 @@
       },
       "230_contractor_classification.md": {
         "title": "cbd601764ade6ec4",
-        "whatItIs": "407a3a41f2274274",
+        "whatItIs": "a73af880e48fefb8",
         "keyConcepts": "e43179160883dc29",
         "exampleCode": "54970c92890004c6",
         "whenToUse": "dc0e7ad0d3510d31",
@@ -2056,7 +2056,7 @@
       },
       "231_paying_contractors.md": {
         "title": "f69e77bf026f080a",
-        "whatItIs": "38a6ea7b5f1d4839",
+        "whatItIs": "d97d24154f927ef9",
         "keyConcepts": "7ee1a13e9f4c6de8",
         "exampleCode": "141cad650f07d3cd",
         "whenToUse": "24e01ad450c2a615",
@@ -2065,7 +2065,7 @@
       },
       "232_contractor_performance_and_offboarding.md": {
         "title": "37a235f6cb5ae994",
-        "whatItIs": "f2a4f686098d42a2",
+        "whatItIs": "8995ef1553f272f8",
         "keyConcepts": "59f22f4d66af1f75",
         "exampleCode": "dcec893e3d298442",
         "whenToUse": "0e8c5ccd271cc7c5",
@@ -2074,7 +2074,7 @@
       },
       "233_responding_to_client_disputes_and_legal_threats.md": {
         "title": "9fe6bfb2362bebb6",
-        "whatItIs": "c81ee6899840c0ef",
+        "whatItIs": "0eb2e2011c784d3a",
         "keyConcepts": "e61f498ea30d991b",
         "exampleCode": "a25c73ce6dd89d7d",
         "whenToUse": "fbcffd0f62be1a3e",
@@ -3100,7 +3100,7 @@
     "privacy-compliance-incident-response": {
       "356_risk_based_security_scoping_threat_model_lite.md": {
         "title": "233ed7277cd5fa3f",
-        "whatItIs": "4b965f7c8c42c4ee",
+        "whatItIs": "74727f9f5cf0721c",
         "keyConcepts": "ac0b937282c6eab6",
         "exampleCode": "45ed3ed06b11f6aa",
         "whenToUse": "2267c805972ded9e",
@@ -3109,7 +3109,7 @@
       },
       "357_government_regulated_sector_security_baselines.md": {
         "title": "9a39ec7532ecfa4d",
-        "whatItIs": "fdf56732a5899d27",
+        "whatItIs": "b599571174718737",
         "keyConcepts": "6e233e802ea2d0f6",
         "exampleCode": "0521ded470000fee",
         "whenToUse": "f48d89815951469e",
@@ -3118,7 +3118,7 @@
       },
       "358_data_classification_storage_residency_tiers.md": {
         "title": "e5b8d246aa903400",
-        "whatItIs": "f087d47009b9e51a",
+        "whatItIs": "2019a78bb120fd85",
         "keyConcepts": "700a386aceb11b6a",
         "exampleCode": "d011403558f0bf53",
         "whenToUse": "7284199c2bde9e49",
@@ -3127,7 +3127,7 @@
       },
       "359_privacy_by_design_process_multi_jurisdiction_basis.md": {
         "title": "3b6c8eeb3e9a8b91",
-        "whatItIs": "dc52c1ef0d8a8856",
+        "whatItIs": "aa188a0254b91dfc",
         "keyConcepts": "d0db94d7f4b8656c",
         "exampleCode": "3c3f3bd5acbc38e7",
         "whenToUse": "b6c106a712f64524",
@@ -3136,7 +3136,7 @@
       },
       "360_cookie_consent_tracking_governance.md": {
         "title": "dc11465057a67a1e",
-        "whatItIs": "934e45d15b45c3cc",
+        "whatItIs": "57bdec104ae124f3",
         "keyConcepts": "70cc67aae35cc810",
         "exampleCode": "83f2f307e59997ef",
         "whenToUse": "bf94f081f1688f09",
@@ -3145,7 +3145,7 @@
       },
       "361_vulnerability_management_lifecycle_patch_slas.md": {
         "title": "5eebe761dab33301",
-        "whatItIs": "ba5914a43be0620b",
+        "whatItIs": "25c54569c00b4013",
         "keyConcepts": "23b8a7c12b1dd0c0",
         "exampleCode": "95086687c4e3cebf",
         "whenToUse": "d06cccdc77c9411d",
@@ -3154,7 +3154,7 @@
       },
       "362_incident_response_process_detection_to_postmortem.md": {
         "title": "a6e8315ccc9c22ca",
-        "whatItIs": "6bcf3c3698556a91",
+        "whatItIs": "28ebc5dfe807309e",
         "keyConcepts": "ba0d2b5156efaca4",
         "exampleCode": "9a35f8270dd02586",
         "whenToUse": "47321757b26226d8",
@@ -3163,7 +3163,7 @@
       },
       "363_breach_notification_requirements_across_jurisdictions.md": {
         "title": "b67ef49e3ffc6271",
-        "whatItIs": "2d486a76e5fbb8d7",
+        "whatItIs": "0e4bfe36cc86f4df",
         "keyConcepts": "5e2de791ade2eff4",
         "exampleCode": "c4ae82feda02d5e1",
         "whenToUse": "ec7eee78b1150454",
@@ -3172,7 +3172,7 @@
       },
       "364_third_party_vendor_risk_data_processing_agreements.md": {
         "title": "d2a320e4807bc9ca",
-        "whatItIs": "b50cf7d66005defc",
+        "whatItIs": "d75067a597929df2",
         "keyConcepts": "0bef08124fa27663",
         "exampleCode": "3661eb1dd5671c82",
         "whenToUse": "92d8f34f38611e52",
@@ -3181,7 +3181,7 @@
       },
       "365_childrens_data_compliance_age_verification_parental_consent.md": {
         "title": "76efb372cfe877e3",
-        "whatItIs": "44edd11dffaf168f",
+        "whatItIs": "7428be9018725456",
         "keyConcepts": "34b9b2ec43395318",
         "exampleCode": "0d79dae3736ed31e",
         "whenToUse": "2cfccdb28f8ca403",
@@ -3190,7 +3190,7 @@
       },
       "366_health_data_compliance_hipaa_nhs_kvkk_saglik.md": {
         "title": "7c2c4720d530a15d",
-        "whatItIs": "90206c79b2281e50",
+        "whatItIs": "5dcfdcfe3ead296b",
         "keyConcepts": "508fa80f92e2add1",
         "exampleCode": "d50e6a838bf3fc44",
         "whenToUse": "7d186d386c495455",
@@ -3199,7 +3199,7 @@
       },
       "367_security_handover_access_transition_checklist.md": {
         "title": "7c392a1ef042f70a",
-        "whatItIs": "c76b02442300a040",
+        "whatItIs": "8650018ed73b9c94",
         "keyConcepts": "08af7491195e40bd",
         "exampleCode": "2feb9b0aeebd54a0",
         "whenToUse": "9f41035b3239fc0c",
@@ -3208,7 +3208,7 @@
       },
       "368_client_facing_security_communication_risk_framing.md": {
         "title": "ae605ab29e22e6f5",
-        "whatItIs": "29ccc0f0272e8d5a",
+        "whatItIs": "479969bfad13b895",
         "keyConcepts": "203aec73333d7c95",
         "exampleCode": "79f1b25bfaa4f484",
         "whenToUse": "1e6b499dcea50e24",

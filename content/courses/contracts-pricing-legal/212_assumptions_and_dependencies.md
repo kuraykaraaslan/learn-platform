@@ -1,6 +1,8 @@
 # 212. Assumptions and Dependencies in Contracts and Estimates
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 Every estimate is a bet on conditions the freelancer doesn't fully control: that the client will provide content on time, that a third-party API behaves as documented, that an existing codebase isn't a mess underneath the surface. Assumptions and dependencies are the mechanism for making that bet explicit instead of silent. An unstated assumption doesn't protect anyone — when it turns out to be wrong, the client experiences it as the freelancer's failure to estimate correctly, even though the real cause was a condition nobody wrote down.
 
 The fix is a habit of language: "this estimate assumes that...," "the timeline depends on...," "the client is responsible for...," "third-party delays may affect...." Applied consistently, these phrases turn every estimate into a conditional statement rather than a guarantee. Assumptions cluster into four predictable categories worth checking every time: client input (content, assets, feedback, approvals), access (domain, hosting, repository, payment provider credentials), technical (existing API documentation, codebase condition, third-party feature availability), and scope (that only the listed modules are included, that new roles or reports are not).

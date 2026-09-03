@@ -1,6 +1,8 @@
 # 201. Proposal Readiness — Knowing When You're Ready to Quote
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 The single most common cause of underpriced, over-scoped, resentment-generating projects is writing a proposal before you actually understand what you're proposing. A prospect says "I need an app like Uber but for dog walking" and a nervous freelancer, afraid of losing the lead, sends back a number within a day. That number is fiction — not because the freelancer is bad at estimating, but because there is nothing yet to estimate. Proposal readiness is the discipline of refusing to write a binding commercial document until a specific, minimum set of facts is known.
 
 The readiness bar isn't "perfect clarity." It's a short checklist: the business problem, the desired outcome, the must-have workflows for a first version, who the users are, what already exists, a timeline expectation, a budget signal, and who actually has authority to say yes. If those are missing, the correct move is not to guess — it's to redirect the conversation toward discovery, a paid audit, or a short scoping call, and to say so plainly rather than quietly padding the number to cover the uncertainty.

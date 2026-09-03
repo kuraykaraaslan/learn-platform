@@ -1,6 +1,8 @@
 # 222. Communication and Approval Protocols
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 Uncontrolled communication is a quieter risk than a missing contract clause, but it produces the same disputes: decisions scattered across WhatsApp, email, a call, and a voice note, with no single record of what was actually agreed. A workable communication protocol names, before the project starts, a primary written channel for official decisions, an optional secondary channel for discussion, a meeting cadence, and — critically — a definition of what actually counts as approval.
 
 The rule worth internalizing is that calls and chats are fine for discussion but not for binding decisions: anything that affects scope, timeline, or implementation gets summarized in writing before it takes effect, even if it was first agreed verbally. This protects both sides — the client gets a record of what they approved, and the freelancer gets protection against "I never said that" later. Feedback deserves the same structure: a request without a screen name, a clear issue description, a priority, and — for anything visual — a screenshot, isn't actionable feedback, it's a starting point for a clarifying question that costs both sides time.

@@ -1,6 +1,8 @@
 # 214. Change Request Control
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 Clients change their minds. That's not a red flag — it's what happens when real users, real data, and real business pressure start touching a project that used to be theoretical. The mistake isn't the change; it's treating every change as either a fight to refuse or a favor to grant for free. Change request control is the professional middle path: any request outside the approved SOW becomes one of four decisions — accept within existing scope, replace an existing scoped item, defer to a future phase, or price as a paid change request — and, occasionally, reject outright as unsuitable.
 
 The trigger list is broader than most freelancers expect: a new feature or screen is obviously a change, but so is a new role or permission, a new report or export, a new integration, a design direction change after approval, rework of an already-accepted milestone, or a compliance requirement that wasn't part of the original scope. The soft, friendly words that precede these requests — "just one small thing," "while you're in there," "it should be simple" — are exactly why a written trigger list matters: they're designed, usually without any bad intent, to make a new request feel too small to formalize.

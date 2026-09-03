@@ -1,6 +1,8 @@
 # 232. Contractor Performance Issues and Offboarding
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 Performance problems with a subcontractor rarely start as crises — they start as one missed check-in or one deliverable that's a bit below the agreed quality bar. How that first signal gets handled determines whether it stays small or becomes a legal and financial mess. The right first move is a direct, specific, written message about the actual issue and a request for a timeline update — not an immediate escalation, and not a phone call or voice message that leaves no record. One missed check-in is information, not a crisis; treating it as a crisis burns trust that might be needed for the rest of the relationship.
 
 If the problem persists, the next step is a formal written warning — not an angry one, a documented one — that states what was agreed, what was actually delivered, the gap between them, a clear deadline to resolve it, and the consequence if it isn't resolved. This email is doing double duty: it's a genuine attempt to fix the problem, and it's the paper trail that makes a later termination for cause defensible if the problem doesn't resolve. Skipping straight to termination without this documented step weakens the hiring party's position if the subcontractor later disputes being let go or disputes withheld payment.

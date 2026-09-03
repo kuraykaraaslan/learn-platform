@@ -1,6 +1,8 @@
 # 220. Third-Party Services, Licenses, and Dependency Risk
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 Almost no modern software project is built from scratch — it's assembled from hosting providers, payment processors, email services, open-source packages, and paid plugins, each with its own costs, limits, approval delays, and legal terms. Two separate risk categories hide inside "we'll just use a few third-party services": commercial risk (who pays, who owns the account, what happens when a provider changes pricing or has an outage) and license risk (whether the freelancer is legally allowed to ship a given open-source package inside a client's proprietary product at all).
 
 On the commercial side, the default that protects a freelancer is simple and worth stating in every SOW: third-party fees, subscriptions, transaction costs, and provider approvals belong to the client unless explicitly included in the price, and the freelancer isn't responsible for outages, rejected accounts, API deprecations, or policy changes caused by a provider they don't control. A dependency table — service, purpose, account owner, cost owner, and risk notes — turns this from an assumption into a document both sides can point to later.

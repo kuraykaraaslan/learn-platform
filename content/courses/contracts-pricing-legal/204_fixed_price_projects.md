@@ -1,6 +1,8 @@
 # 204. Fixed-Price Projects — Eligibility and Guardrails
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 Fixed price is the pricing model clients like best, because it converts an uncertain purchase into a single predictable number. It is also the model that punishes the freelancer hardest when scope isn't actually fixed, because every hour of underestimated work comes directly out of your margin instead of being billed. Fixed price is only a safe model when a specific set of conditions is true — not a default you reach for because it feels more professional than hourly.
 
 The eligibility bar is concrete: written scope, listed deliverables, clear exclusions, defined client responsibilities, testable acceptance criteria, payment milestones, and a change-request process must all exist before you commit to a number. If the client refuses a written scope, if the work is exploratory, if an existing codebase hasn't been reviewed, or if integrations are undocumented, fixed price is the wrong tool — not because the client is being difficult, but because nobody, including a senior developer, can accurately estimate work they can't yet see.

@@ -1,6 +1,8 @@
 # 223. Timeline Commitments and Delay Management
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 A timeline written as an unconditional promise is a timeline that will eventually be broken by something outside the freelancer's control — a client feedback delay, a payment processor's approval process, a slow response on brand assets — and then blamed on the freelancer anyway, because the document never said otherwise. A realistic timeline is conditional by construction: it names a start condition, states what it depends on, and says plainly what happens to the schedule when a dependency slips.
 
 The start condition is worth stating explicitly rather than assuming: the clock starts after deposit payment, written SOW approval, and receipt of the access or content needed for the first phase — not from the date the proposal was signed. From there, a simple table (phase, estimated duration, start condition, client dependency, output) does more to manage expectations than paragraphs of caveats, because it makes the conditional nature of each phase visible rather than buried in fine print. The delay clause underneath the table says the same thing in words: client delays in providing content, access, feedback, or payment may shift the timeline, and so may third-party provider delays entirely outside the freelancer's control.

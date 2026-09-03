@@ -1,6 +1,8 @@
 # 210. Scope Definition and Boundaries
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 Almost every freelance project dispute traces back to the same root cause: the client and the developer used the same words to imagine two different products. "Admin panel," "full integration," and "modern design" all sound like agreements in a sales conversation, but none of them describe anything a court, a client, or a future you could actually verify. Scope definition is the discipline of converting those phrases into a list of modules, workflows, screens, and exclusions specific enough that anyone reading it would build the same thing.
 
 Scope has two halves, and both are mandatory. The included half lists exactly what workflows, screens, roles, integrations, and environments are being built, with a stated business purpose for each module. The excluded half is just as important — it names, explicitly, the things a reasonable client might assume are included but are not: native mobile apps, advanced analytics, multi-language content, data migration from an unreviewed source. Exclusions should never read as apologetic; a professional scope document states them as plainly as the inclusions.

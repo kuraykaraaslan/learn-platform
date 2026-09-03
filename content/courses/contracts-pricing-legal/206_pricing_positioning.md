@@ -1,6 +1,8 @@
 # 206. Pricing Positioning — Selling Value, Not Hours
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 The way you talk about your price shapes how it's received almost as much as the number itself. A freelancer who frames their fee as "10 days times my rate" invites the client to mentally negotiate against cheaper labor doing the same arithmetic. A freelancer who frames the same fee as covering requirement clarification, architecture decisions, testing, deployment, documentation, and risk ownership invites the client to evaluate it against the cost of the outcome instead. Pricing positioning is the discipline of consistently choosing the second frame.
 
 Concretely, this means naming the non-coding work explicitly — discovery, UX decisions, error handling, deployment, project management, risk ownership — because clients who've never built software genuinely don't know it's part of the job unless you tell them. It also means never apologizing for a professional price. "Sorry, I know this is expensive, I can lower it" signals that the number was arbitrary in the first place; "if the budget doesn't fit the full version, we can define a smaller MVP — I don't recommend cutting testing or deployment quality" holds the line on quality while still giving the client a real path forward.

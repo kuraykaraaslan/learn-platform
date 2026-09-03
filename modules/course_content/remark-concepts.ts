@@ -46,6 +46,14 @@ export function remarkConcepts() {
     function visit(node: { children?: unknown[]; type: string }) {
       if (!Array.isArray(node.children)) return;
       if (node.type === 'link' || node.type === 'linkReference' || node.type === 'conceptTerm') return;
+      // Blockquotes are asides, not lesson prose. In this corpus they are
+      // overwhelmingly disclaimers repeated verbatim across a whole course, and
+      // a tooltip there spends one of the lesson's 4 concept-link slots on
+      // boilerplate — silently dropping a link that was doing real work further
+      // down the page. Measured before adding this: of the 15 concept links
+      // sitting inside a blockquote anywhere in the corpus, all 15 were inside
+      // a disclaimer. None was teaching content, so nothing is lost.
+      if (node.type === 'blockquote') return;
 
       const next: PhrasingContent[] = [];
       let changed = false;

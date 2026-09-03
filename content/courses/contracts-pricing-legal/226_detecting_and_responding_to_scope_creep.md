@@ -1,6 +1,8 @@
 # 226. Detecting and Responding to Scope Creep
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 Scope creep almost never announces itself as a demand. It arrives dressed as friendliness: "can we also add," "just one small thing," "while you're in there," "it should be simple," "we forgot to mention." None of these phrases are dishonest — most clients genuinely believe the request is minor — but the freelancer's job is to notice that friendly framing and unscoped work are two completely different questions, and to answer the second one deliberately instead of being talked past it by the first.
 
 The detection habit is a short internal checklist run against every new request: was this listed in the SOW, was this workflow part of the acceptance criteria, does it require new UI, API, database, integration, testing, or deployment work, does it change something already approved, and is this actually a bug against agreed behavior or just a new expectation nobody stated before. Any "yes" beyond simple clarification means the request isn't a quick favor — it needs to be classified out loud, not absorbed silently.

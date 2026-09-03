@@ -65,7 +65,7 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 | Checklist fence / madde | 35 / 293 | 36 / 295 |
 | `sql` fence | 9 | 23 |
 | `java` fence | 10 | 10 |
-| Blockquote kullanan ders | 45 | 45 |
+| Blockquote kullanan ders | 45 | 88 |
 | Mermaid kullanan ders | 0 | 17 |
 
 Bölüm sayısındaki fark bir ölçüm hatasıdır, korpus değişimi değil: 412 ders × 6
@@ -134,3 +134,10 @@ byte-byte aynı, render'ı değişti). İkincisi `git diff`'te görünmez ve scr
 ile çıkar. Bilinen sebebi `remark-concepts`'in ders başına paylaşılan kavram
 linki bütçesidir: erken bir bölüme metin eklemek, sonraki bölümdeki bir
 tooltip'i sessizce düşürebilir.
+
+Bu yüzden **blockquote'lar kavram linki almaz**. Korpusta blockquote içinde
+duran 15 kavram linkinin 15'i de bir uyarı metninin içindeydi — hiçbiri
+öğretici içerik değildi, ama ders bütçesinden slot yiyor ve bölüm başına
+ilk-geçiş kuralını tüketiyorlardı. Ders 321 bunun somut örneğiydi:
+`effective hourly rate` tooltip'i uyarıdaki geçişe takılıyor, terimin
+gerçekten tanımlandığı cümle linksiz kalıyordu.

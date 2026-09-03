@@ -1,6 +1,8 @@
 # 203. Scope-to-Price Mapping — Turning Requirements into a Priced Breakdown
 
 ## What It Is
+> This lesson is general education, not legal advice. The intent is practical judgment — knowing what a clause is for and where the risk sits, not carrying responsibility for drafting or judging one. What actually holds differs by jurisdiction: TR, US, UK, UAE, EU and JP do not treat IP transfer, contractor classification, consumer protection or liability limits the same way, so have anything you sign reviewed where you and your client actually operate.
+
 A price that isn't traceable back to specific scope is just a number the client has to take on faith — and numbers taken on faith get argued about the moment reality diverges from expectation. Scope-to-price mapping is the practice of breaking a project into discrete modules (discovery, UI, frontend, backend, database, auth, admin, integrations, notifications, reporting, testing, deployment, documentation, training) and explicitly marking each one as included, excluded, optional, future-phase, or a client responsibility before a single total is presented.
 
 This does two things at once. First, it makes the price defensible: if a client asks "why does this cost what it does," you can point at the module table instead of restating a vague sense of effort. Second, it makes scope negotiation concrete — when budget is tight, the conversation becomes "which modules do we cut or defer" instead of "can you just do it cheaper," which is a completely different and much healthier negotiation.
