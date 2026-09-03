@@ -7,6 +7,47 @@ Each red flag has a calm, professional, non-adversarial response that corrects t
 
 A severity framework helps prioritize which flags are non-negotiable and which are manageable with an added clause: no deposit, unlimited revisions, vague scope, and payment-only-after-launch sit at the critical tier and generally warrant declining if the client won't correct them; no decision maker, refusal of exclusions, and demands for a legal compliance guarantee sit at high severity and need a firm response before proceeding; an unclear third-party dependency is a medium-severity item that can usually be handled by adding an explicit assumption clause rather than walking away. This lesson is about recognizing commercial risk before it becomes a legal or financial problem — it isn't a substitute for a lawyer's review of any contract you're actually about to sign, particularly one where a client has proposed unusual or aggressive terms.
 
+```quiz
+- q: "A prospect will not name a single decision maker. Which tier, and what does that tier require?"
+  anchor: "critical (require correction or decline), high (require a firm response before proceeding), and medium (usually resolved with an added assumption or dependency clause rather than walking away)"
+  options:
+    - text: "Medium — add an assumption clause and proceed"
+      correct: false
+      why: "No single decision maker is on the critical list, and critical requires correction or decline."
+    - text: "Critical — correct it, or decline"
+      correct: true
+      why: "High requires a firm response before proceeding; medium is the tier resolved with an added assumption or dependency clause."
+    - text: "High — respond firmly, then proceed either way"
+      correct: false
+      why: "\"Either way\" is exactly what the critical tier rules out."
+
+- q: "\"We'll figure out the scope as we go — just give us a number.\" What is the scripted response?"
+  anchor: "redirecting to a paid discovery phase or a smaller, clearly defined MVP rather than quoting a fixed number against an undefined idea"
+  options:
+    - text: "Quote high, so the uncertainty is priced in"
+      correct: false
+      why: "You cannot price what has not been defined. A high number against an undefined idea is still a guess."
+    - text: "Redirect to a paid discovery phase, or a smaller clearly defined MVP"
+      correct: true
+      why: "Either one converts the undefined idea into something a fixed number can attach to."
+    - text: "Quote time-and-materials, so scope stops mattering"
+      correct: false
+      why: "Sometimes workable, and not the response scripted for the vague-scope flag."
+
+- q: "Two critical red flags will not be corrected. What is the outcome?"
+  anchor: "recognizing that early costs far less than discovering it mid-project"
+  options:
+    - text: "Accept, with the risks documented in the SOW"
+      correct: false
+      why: "Documenting an unresolved critical risk does not resolve it."
+    - text: "Decline — a valid outcome, and cheapest when recognized early"
+      correct: true
+      why: "Discovering it mid-project costs far more than turning it down at the start."
+    - text: "Accept, with a larger deposit to offset the risk"
+      correct: false
+      why: "A deposit covers non-payment. It does nothing about undefined scope or a missing decision maker."
+```
+
 ## Key Concepts
 - **Critical red flags**: no deposit, payment only after full launch, unlimited revisions, scope to be decided during development, no written agreement, no single decision maker, source code before final payment, and a large unclear scope paired with an urgent deadline.
 - **Severity tiers**: critical (require correction or decline), high (require a firm response before proceeding), and medium (usually resolved with an added assumption or dependency clause rather than walking away).
@@ -60,3 +101,23 @@ step is a paid discovery phase or a smaller, clearly defined first version."
 - Mike Monteiro, *You're My Favorite Client* — on recognizing and responding to problematic client behavior before signing.
 - Steve Chandler and Sam Beckford, *100 Ways to Motivate Yourself* / freelance business communities' shared "client red flag" lists as informal but widely corroborated pattern libraries.
 - The Freelancers Union's guides on identifying risky client engagements before committing.
+
+```recall
+- q: "Name the critical red flags."
+  must:
+    - "no deposit, and payment only after full launch"
+    - "unlimited revisions, and scope to be decided during development"
+    - "no written agreement, and no single decision maker"
+    - "source code before final payment"
+    - "a large unclear scope paired with an urgent deadline"
+
+- q: "What are protective response scripts for?"
+  must:
+    - "pre-written, calm, non-adversarial language for each common red flag"
+    - "so the moment of pushback does not have to be improvised under pressure"
+
+- q: "State the decline-as-a-valid-outcome principle."
+  must:
+    - "some opportunities should be turned down rather than accepted with unresolved critical risk"
+    - "recognizing that early costs far less than discovering it mid-project"
+```

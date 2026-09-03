@@ -1885,12 +1885,12 @@
       },
       "212_assumptions_and_dependencies.md": {
         "title": "7d3f090d23e86c70",
-        "whatItIs": "2d868e3c932185ac",
+        "whatItIs": "07ef962a62cb98bb",
         "keyConcepts": "9a2b0414a653ffe5",
         "exampleCode": "2134c081a059d8e0",
         "whenToUse": "7797de38171a9bad",
         "commonMistakes": "8142a24f5f1c9518",
-        "furtherReading": "634c2f134b767e23"
+        "furtherReading": "749f43bcb278e6ca"
       },
       "213_deliverables_and_acceptance_criteria.md": {
         "title": "1abb302aa0b9e140",
@@ -1912,12 +1912,12 @@
       },
       "215_revision_policy.md": {
         "title": "15a078097cde4c71",
-        "whatItIs": "b1309a8b2958b307",
+        "whatItIs": "25c3c4f6f85c32c6",
         "keyConcepts": "679d7d4264c73e87",
         "exampleCode": "5d94cb5f6b4dac9b",
         "whenToUse": "7086e5871313bde9",
         "commonMistakes": "aeaf80ce395f058e",
-        "furtherReading": "2554289dfcefeee4"
+        "furtherReading": "a3de861bd4bad1b1"
       },
       "216_payment_gates_and_milestone_enforcement.md": {
         "title": "c078e1c418d36fd2",
@@ -2002,12 +2002,12 @@
       },
       "225_cancellation_and_termination_clauses.md": {
         "title": "54ef77685e448d62",
-        "whatItIs": "520b678c061619d8",
+        "whatItIs": "32196f4ce2113438",
         "keyConcepts": "93c69faebf9dbc63",
         "exampleCode": "429b972db01c4f69",
         "whenToUse": "6a504175c69f2bf0",
         "commonMistakes": "ab218dc1fc5d2e32",
-        "furtherReading": "2df3c5ab6f5cad32"
+        "furtherReading": "8e6b832d8256be78"
       },
       "226_detecting_and_responding_to_scope_creep.md": {
         "title": "329a200d699b0c8d",
@@ -2020,12 +2020,12 @@
       },
       "227_contract_risk_red_flags.md": {
         "title": "2cea64ca2036b36f",
-        "whatItIs": "a8c00a430321821a",
+        "whatItIs": "54be2ae22075f45f",
         "keyConcepts": "6b751e4b614a6be9",
         "exampleCode": "264122af771b9bce",
         "whenToUse": "b24ad2881b276780",
         "commonMistakes": "af06dad2fc98d7db",
-        "furtherReading": "fc20d44dc57d5e78"
+        "furtherReading": "9308a8c4dddb7264"
       },
       "228_handoff_from_scope_to_execution.md": {
         "title": "dda3fe3de4d266bb",

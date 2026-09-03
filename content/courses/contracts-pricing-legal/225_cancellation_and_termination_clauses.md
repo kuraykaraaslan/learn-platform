@@ -7,6 +7,47 @@ A complete termination section separates several scenarios that feel similar in 
 
 The same structure applies in reverse when a freelancer is the one hiring — a subcontractor relationship needs the same clarity, split into mutual agreement, termination for convenience (either side ends it without needing a reason, paying only for accepted work, with access revoked same-day), and termination for cause (a material breach, documented in writing, that can justify immediate termination and withholding payment for undelivered work). None of the specific consequences described here — what's refundable, what "for cause" actually permits, how enforceable a reactivation fee is — are guaranteed to hold up in every jurisdiction or every court; this is the shape a termination clause should have, and the actual wording deserves a lawyer's review, especially for higher-value engagements.
 
+```quiz
+- q: "A project pauses six weeks because approvals never arrived. On resumption, what happens to the delivery date?"
+  anchor: "with the timeline resetting rather than staying fixed upon resumption"
+  options:
+    - text: "It holds — the original date was committed"
+      correct: false
+      why: "The timeline resets on resumption rather than staying fixed."
+    - text: "It resets — a pause moves the timeline"
+      correct: true
+      why: "And a pause beyond a stated period may need re-planning, an updated timeline, or a reactivation fee."
+    - text: "It slips by exactly six weeks"
+      correct: false
+      why: "Resuming is not the reverse of pausing: re-planning may be needed, and your own calendar has moved on."
+
+- q: "A client ends the engagement and gives no reason. Which termination type, and what is payable?"
+  anchor: "for convenience (either side ends without needing a reason, pays for accepted work only)"
+  options:
+    - text: "For cause — ending without a reason is itself a breach"
+      correct: false
+      why: "For cause requires a documented material breach. Giving no reason is not one."
+    - text: "For convenience — accepted work only is payable"
+      correct: true
+      why: "Mutual agreement is the cleanest type; for cause needs a documented material breach."
+    - text: "Mutual agreement, since neither side is disputing it"
+      correct: false
+      why: "Mutual agreement means both sides agreed to end it, not that one side did not object."
+
+- q: "An invoice is overdue. What does the clause allow, and what has to come first?"
+  anchor: "overdue payment after written notice can justify suspending or terminating work and withholding delivery, production release, or source transfer"
+  options:
+    - text: "Immediate suspension — overdue is overdue"
+      correct: false
+      why: "Written notice comes first. The clause turns on payment overdue *after* that notice."
+    - text: "After written notice: suspend or terminate, and withhold delivery, production release or source transfer"
+      correct: true
+      why: "The notice is what makes withholding defensible rather than retaliatory."
+    - text: "Withholding source code only, since delivery already happened"
+      correct: false
+      why: "Delivery, production release and source transfer are all listed."
+```
+
 ## Key Concepts
 - **Cancellation clause**: work completed, reserved time, and approved milestones remain payable if a client cancels after work starts; deposits are typically non-refundable unless otherwise agreed.
 - **Pause clause**: missing client inputs, approvals, access, or payments justify pausing work, with the timeline resetting rather than staying fixed upon resumption.
@@ -53,3 +94,19 @@ updated timeline, and a reactivation fee before work resumes.
 - Mike Monteiro, *You're My Favorite Client* — on ending client relationships professionally when they aren't working.
 - The American Bar Association's public guides on contract termination clauses as a general orientation.
 - The Freelancers Union's resources on cancellation policies and non-payment recourse for independent contractors.
+
+```recall
+- q: "What stays payable if a client cancels after work starts?"
+  must:
+    - "work completed, reserved time, and approved milestones"
+    - "deposits are typically non-refundable unless otherwise agreed"
+
+- q: "What justifies pausing work?"
+  must:
+    - "missing client inputs, approvals, access, or payments"
+
+- q: "State the reactivation rule."
+  must:
+    - "a project paused beyond a stated period may require re-planning, an updated timeline, or a reactivation fee"
+    - "rather than resuming automatically on the old terms"
+```

@@ -7,6 +7,47 @@ The fix is a habit of language: "this estimate assumes that...," "the timeline d
 
 Dependencies deserve their own table, not just prose, because a table forces you to assign an owner and a consequence to each one — a dependency with no owner is really just a hope. Equally important is the discipline of naming known unknowns instead of quietly absorbing them: "existing database quality has not been reviewed, so data migration is excluded until source data is inspected" protects the freelancer far better than saying nothing and discovering the mess mid-project. None of this replaces having your contract's liability and dependency language reviewed by a lawyer — it's the habit of surfacing risk in plain language before you ever get to the point of needing one.
 
+```quiz
+- q: "An assumption you stated in the SOW turns out to be false. What was already agreed?"
+  anchor: "if a stated assumption turns out to be false, scope, timeline, or cost may change — stated upfront, not negotiated for the first time mid-dispute"
+  options:
+    - text: "Nothing — an assumption is not a commitment either way"
+      correct: false
+      why: "The assumption-change rule is itself an agreed term: a false assumption may change scope, timeline or cost."
+    - text: "That scope, timeline or cost may change — agreed upfront, not mid-dispute"
+      correct: true
+      why: "Stating it early is what stops this conversation happening for the first time under pressure."
+    - text: "That you absorb the difference, since you wrote the assumption"
+      correct: false
+      why: "Writing it down is what protects you. Absorbing it would make the whole exercise pointless."
+
+- q: "You have not seen the client's data quality and it could go either way. What do you do?"
+  anchor: "rather than pricing them in silently or ignoring them"
+  options:
+    - text: "Price in a quiet buffer — the client does not need that detail"
+      correct: false
+      why: "Pricing them in silently is one of the two handling failures this rules out."
+    - text: "Name it as a known unknown in the document"
+      correct: true
+      why: "The alternatives are pricing it in silently or ignoring it, and both defer the conversation to a worse moment."
+    - text: "Leave it out until you have actually inspected it"
+      correct: false
+      why: "That is the ignoring option, and the inspection may not happen before you are committed."
+
+- q: "What does each dependency row carry?"
+  anchor: "dependency, owner, needed-by date, and impact-if-delayed, in one visible table inside the SOW"
+  options:
+    - text: "Dependency, owner, and current status"
+      correct: false
+      why: "Status is a tracking field. The row needs a needed-by date and the impact if it slips."
+    - text: "Dependency, owner, needed-by date, and impact-if-delayed"
+      correct: true
+      why: "In one visible table inside the SOW, rather than scattered through the narrative."
+    - text: "Dependency and its mitigation plan"
+      correct: false
+      why: "Mitigation belongs to a risk log. A dependency states who owes what, by when."
+```
+
 ## Key Concepts
 - **Conditional estimate language**: every estimate/timeline states what it assumes and what it depends on, rather than reading as an unconditional promise.
 - **Four assumption categories**: client input, access, technical, and scope assumptions — each has a default set of statements worth including by default.
@@ -54,3 +95,23 @@ This estimate assumes that:
 - Steve McConnell, *Software Estimation: Demystifying the Black Art* — on the relationship between estimate accuracy and stated assumptions.
 - Tom DeMarco, *Waltzing with Bears: Managing Risk on Software Projects* — on treating unstated risk as a business decision, not an accident.
 - PMI's *Practice Standard for Project Risk Management* — a formal framework for dependency and assumption tracking.
+
+```recall
+- q: "What does conditional estimate language do?"
+  must:
+    - "every estimate or timeline states what it assumes and what it depends on"
+    - "rather than reading as an unconditional promise"
+
+- q: "Name the four assumption categories."
+  must:
+    - "client input"
+    - "access"
+    - "technical"
+    - "scope assumptions"
+    - "each has a default set of statements worth including by default"
+
+- q: "What are known unknowns, and what are the two wrong ways to handle them?"
+  must:
+    - "explicitly naming what has not been inspected yet — data quality, API rate limits, third-party approval timelines"
+    - "rather than pricing them in silently, or ignoring them"
+```
