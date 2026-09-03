@@ -1,5 +1,5 @@
 {
-  "lessonCount": 464,
+  "lessonCount": 475,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -2466,6 +2466,107 @@
         "whenToUse": "4a6cdbb2d1c8ccce",
         "commonMistakes": "129a70e9e60bd366",
         "furtherReading": "f29452a0353475de"
+      }
+    },
+    "digital-twin-engineering": {
+      "483_what_a_digital_twin_is.md": {
+        "title": "8a0d3c5c9830a353",
+        "whatItIs": "49a0b3d99fbc2cd3",
+        "keyConcepts": "73effa51ff6a962e",
+        "exampleCode": "ab828231159d3a3e",
+        "whenToUse": "2a0e2ef5dcc96080",
+        "commonMistakes": "8a6736aef15e0056",
+        "furtherReading": "68123912c1f1a52f"
+      },
+      "484_georeferencing_bim_into_gis.md": {
+        "title": "7cdad29650a963a6",
+        "whatItIs": "8b0762bc1173ba9a",
+        "keyConcepts": "d6b0ea34f1d4c86d",
+        "exampleCode": "a2d9e09bd2950a13",
+        "whenToUse": "c8665c91e0449515",
+        "commonMistakes": "5f7f9d971bb8d5cd",
+        "furtherReading": "ebbefb6cf4cc2775"
+      },
+      "485_binding_a_model_element.md": {
+        "title": "0572896207bbbc6c",
+        "whatItIs": "3be2b3f04e6fa137",
+        "keyConcepts": "bebcbf58587c65af",
+        "exampleCode": "49698205da1ab6fc",
+        "whenToUse": "c1bb270c11f25231",
+        "commonMistakes": "92c79ca9d30fee20",
+        "furtherReading": "ad7956e46fb06adc"
+      },
+      "486_desired_vs_reported.md": {
+        "title": "acdc3ba543b7503a",
+        "whatItIs": "3a870053f30382be",
+        "keyConcepts": "8d97dfe6c12a20d0",
+        "exampleCode": "c35f5a65ee1ec7e5",
+        "whenToUse": "1a5edd4d0b30b0c8",
+        "commonMistakes": "d98c3ba466b1a9b2",
+        "furtherReading": "b50d89252aca3c38"
+      },
+      "487_time_series_storage_for_twin_state.md": {
+        "title": "c6dda496f9da4219",
+        "whatItIs": "dfb8f1dced819dfc",
+        "keyConcepts": "bab309cd30813597",
+        "exampleCode": "e3c17857b274b8fb",
+        "whenToUse": "4e9d420977acf43d",
+        "commonMistakes": "3a88103fb170e110",
+        "furtherReading": "925332eb1af7e45a"
+      },
+      "488_downsampling_without_lying.md": {
+        "title": "d75cf67c96d71610",
+        "whatItIs": "34008578e3a7c1b5",
+        "keyConcepts": "28022f3104fb3c83",
+        "exampleCode": "416894139cb39073",
+        "whenToUse": "e3585cbd5ff9bba4",
+        "commonMistakes": "a5a52b42824b781b",
+        "furtherReading": "43a482d14e70b4c2"
+      },
+      "489_indoor_navigation.md": {
+        "title": "6c0f2df0ec0e4b9a",
+        "whatItIs": "4c9245150bd04b78",
+        "keyConcepts": "2466a3b813bacfc7",
+        "exampleCode": "b04685151c2c92d5",
+        "whenToUse": "622a00c7c0362e52",
+        "commonMistakes": "e6013abfe93324af",
+        "furtherReading": "ff00c70dee01b106"
+      },
+      "490_twin_identity.md": {
+        "title": "7c6da932f361b3b8",
+        "whatItIs": "1194b84292c60619",
+        "keyConcepts": "ee82dda9ab04ade7",
+        "exampleCode": "58bc4e29251155b5",
+        "whenToUse": "37fc4bbb29c0e824",
+        "commonMistakes": "4f87946c38cf3ba1",
+        "furtherReading": "1fdf914bd4f80975"
+      },
+      "491_simulation_vs_observation.md": {
+        "title": "f211224bcdd721c6",
+        "whatItIs": "97ec859e47da0b56",
+        "keyConcepts": "ecf7fff338d4c44f",
+        "exampleCode": "e9c496ed5ee00116",
+        "whenToUse": "b62e0eafb21b6089",
+        "commonMistakes": "924a98f33657c45e",
+        "furtherReading": "b0d8bb52f9c3207a"
+      },
+      "492_twin_sync.md": {
+        "title": "526448fb1653d737",
+        "whatItIs": "390f71dd70c661d7",
+        "keyConcepts": "52eac3377163c7f4",
+        "exampleCode": "b35c96b87a58c132",
+        "whenToUse": "e3f38e95ea817dff",
+        "commonMistakes": "f003f5622fca8cd8",
+        "furtherReading": "59edf31c3df729e4"
+      },
+      "493_what_a_twin_cannot_do.md": {
+        "title": "b70b4d94051e9abd",
+        "whatItIs": "fc02e6a90b6bd64b",
+        "keyConcepts": "91f140681b81d2c5",
+        "exampleCode": "27ac8c2f5ae34b4c",
+        "whenToUse": "bc7709b78c77db8f",
+        "commonMistakes": "4597c6d6038b71d9",
+        "furtherReading": "07f604c4a41c55c6"
       }
     },
     "distributed-systems-api-design": {

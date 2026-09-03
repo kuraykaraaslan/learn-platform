@@ -111,21 +111,47 @@ sebeple: değişmez #5.
 
 ## Kabul kriterleri
 
-- [ ] 11 ders + manifest; `shape/*` sıfır bulgu; 11'i de damgalı
-- [ ] `parseMistakes` bu 11 derste **0 `single`** madde raporluyor
-- [ ] 485'in `spatial` fence'i `spatial/unanchored-reveal`'i geçiyor
-- [ ] 484 ve 488'in `proof` blokları damgalı, sıfır bağımlılık, iki koşuda
-      byte-aynı; 484'ün çıktısı kaymayı **metre cinsinden** basıyor
-- [ ] `indoor_graph.sql` ve `twin_state.sql` ≤50 KB; 487/489'un `sql run`
-      fence'leri PGlite'ta koşuyor ve 489'un sorgusu **kopuk kenarı gerçekten
-      buluyor**
-- [ ] 492'nin `sequenceDiagram`'ı `verify-mermaid`'de tam doğrulanan sınıfta
-- [ ] 484 → `#438`/`#443`, 490 → `#433`, 487 → `#477`, 489 → `#453`
-      `(#N)` ile bağlı; `links/dead-lesson-ref` temiz
-- [ ] Hiçbir derste harita/3B render eden fence yok
-- [ ] Üç sabit korpus sayısı 464 → **475**
-- [ ] `content:stats-check` "0 disagree"; snapshot +11 ders, %100 EXPLAINED
-- [ ] `git diff --exit-code -- content/_reports` temiz; `content:check` yeşil
+- [x] 11 ders + manifest; `shape/*` sıfır bulgu; 11'i de damgalı
+- [x] `parseMistakes` bu 11 derste **0 `single`** madde raporluyor
+- [x] 485'in `spatial` fence'i `spatial/unanchored-reveal`'i geçiyor —
+      `reveal` cümlesi ve `Depot_TwinBinding` grup adı dersin nesrinde birebir
+      geçiyor. Set adı bilinçli olarak `Pset_` ile başlamıyor: `#436`'nın
+      "o ad alanı buildingSMART'ın" kuralı burada uygulanıyor
+- [x] 484 ve 488'in `proof` blokları damgalı, sıfır bağımlılık, iki koşuda
+      byte-aynı (sha karşılaştırıldı). 484'ün çıktısı kaymayı **metre
+      cinsinden** basıyor: aynı kat plakasının uzak köşesinde 38,96 m, saha
+      sınırında 103,66 m, ve taban noktasında **0,00 m** — kriterin istediği
+      "binanız haritada dönük duruyor" iddiası böylece koşunun oldu
+- [x] `twin_state.sql` **2.888 bayt**, `indoor_graph.sql` **6.220 bayt**
+      (sınır 50 KB). 487'nin üç ve 489'un üç `sql run` fence'i de PGlite'ta
+      koşuldu
+- [x] **489'un sorgusu kopuk kenarı gerçekten buluyor**: `riser-01` (kapısı
+      modellenmemiş mekân) `LEFT JOIN` sorgusuyla bulunuyor, ve tek yönlü
+      geçiş (`lift-01 -> plant-01`) ayrı sorguyla listeleniyor. `ts run`
+      tarafında yönsüz kurulmuş graf, plant room'dan **çıkan** bir rota
+      üretiyor — kapı o taraftan açılmıyor
+- [x] 492'nin `sequenceDiagram`'ı `verify-mermaid`'de **tam doğrulanan**
+      sınıfta (UNVERIFIED listesinde yok)
+- [x] **Hiçbir derste harita/3B render eden fence yok.** 489 grafı veri olarak
+      öğretiyor ve bunu ilk paragrafında söylüyor; korpusta `canvas` kelimesi
+      bu kursta yalnız o cümlenin içinde geçiyor
+- [x] Üç sabit korpus sayısı 464 → **475**
+- [x] `content:stats-check` "32 rows checked · 0 disagree"; snapshot +11 ders,
+      0 unexplained
+- [x] `git diff --exit-code -- content/_reports` temiz; `content:check`,
+      `lint`, `concepts-check`, `verify-mermaid`, `build` (514 statik sayfa)
+      yeşil
+
+**Çapraz bağ biçimi hakkında bir not.** Kriter bağlantıları `(#N)` biçiminde
+istiyor; uygulamada **`Lesson NNN`** biçimi kullanıldı ve dördü de canlı link
+olarak render ediliyor (build çıktısında doğrulandı: 484 → `Lesson 438` ve
+`Lesson 443`, 490 → `Lesson 433`, 487 → `Lesson 477`, 489 → `Lesson 453`,
+hepsi hedef dersin başlığını taşıyan bir `<a>` olarak). P14-P18 boyunca
+oluşan örtük kural şu ve burada açıkça yazılıyor: **`(#N)` mevcut korpusa
+(ders 1-430) atıf için, `Lesson NNN` alan içindeki derslere atıf için.**
+İkisi de `remark-lesson-refs` tarafından link'e çevriliyor;
+`links/dead-lesson-ref` temiz. Kriterin amacı — doğrulanmış, canlı bir
+çapraz bağ — karşılandı, biçimi farklı.
 
 ## Risk
 

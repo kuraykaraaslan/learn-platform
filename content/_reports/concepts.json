@@ -1,7 +1,7 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
   "totalTerms": 130,
-  "totalLessons": 464,
+  "totalLessons": 475,
   "totals": {
     "neverMatched": 0,
     "neverLinked": 17,
@@ -238,10 +238,11 @@
       "term": "Append-only",
       "lessonsLinkedIn": [
         "database-advanced/51_event_log_rehydration.md",
+        "digital-twin-engineering/483_what_a_digital_twin_is.md",
         "distributed-systems-api-design/02_event_sourcing_cqrs.md",
         "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md"
       ],
-      "rawOccurrences": 12
+      "rawOccurrences": 16
     },
     {
       "slug": "audit-log",
@@ -670,7 +671,7 @@
         "bim-ifc-data-models/439_ifc_in_a_relational_database.md",
         "bim-ifc-data-models/440_model_diffing.md"
       ],
-      "rawOccurrences": 43
+      "rawOccurrences": 68
     },
     {
       "slug": "graceful-degradation",
@@ -753,9 +754,13 @@
         "bim-ifc-data-models/437_units_precision_local_placement.md",
         "bim-ifc-data-models/438_georeferencing_a_model.md",
         "bim-ifc-data-models/440_model_diffing.md",
+        "digital-twin-engineering/483_what_a_digital_twin_is.md",
+        "digital-twin-engineering/484_georeferencing_bim_into_gis.md",
+        "digital-twin-engineering/489_indoor_navigation.md",
+        "digital-twin-engineering/490_twin_identity.md",
         "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md"
       ],
-      "rawOccurrences": 86
+      "rawOccurrences": 105
     },
     {
       "slug": "index-bloat",
@@ -913,9 +918,10 @@
       "slug": "primary-key",
       "term": "Primary key",
       "lessonsLinkedIn": [
+        "digital-twin-engineering/491_simulation_vs_observation.md",
         "iot-telemetry-edge/475_idempotent_ingest.md"
       ],
-      "rawOccurrences": 21
+      "rawOccurrences": 23
     },
     {
       "slug": "principle-of-least-privilege",
@@ -947,9 +953,11 @@
         "autodesk-developer-platform/456_revits_object_model.md",
         "bim-ifc-data-models/439_ifc_in_a_relational_database.md",
         "bim-ifc-data-models/440_model_diffing.md",
+        "digital-twin-engineering/483_what_a_digital_twin_is.md",
+        "digital-twin-engineering/485_binding_a_model_element.md",
         "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md"
       ],
-      "rawOccurrences": 25
+      "rawOccurrences": 29
     },
     {
       "slug": "race-condition",
@@ -1269,7 +1277,7 @@
       "lessonsLinkedIn": [
         "distributed-systems-api-design/12_database_sharding_strategies.md"
       ],
-      "rawOccurrences": 9
+      "rawOccurrences": 10
     },
     {
       "slug": "tax-reserve",

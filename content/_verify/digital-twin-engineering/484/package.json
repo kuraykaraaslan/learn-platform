@@ -1,0 +1,8 @@
+{
+  "name": "verify-digital-twin-engineering-484",
+  "private": true,
+  "description": "Transforms local model coordinates into a projected CRS using a base point and a true-north rotation, then measures the drift in metres when the rotation is skipped, for lesson 484's proof block. Zero dependencies, pure arithmetic, no network. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node georef.js"
+  }
+}

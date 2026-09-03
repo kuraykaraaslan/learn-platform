@@ -1,11 +1,11 @@
 {
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
-    "lessons": 464,
+    "lessons": 475,
     "single": 141,
     "lessonsWithZeroDrillable": 10,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 432
+    "lessonsWithTwoPlusDrillable": 443
   },
   "lessons": [
     {
@@ -4068,6 +4068,171 @@
       "formCounts": {
         "bold-dash": 0,
         "bold-colon": 4,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "digital-twin-engineering",
+      "file": "483_what_a_digital_twin_is.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "digital-twin-engineering",
+      "file": "484_georeferencing_bim_into_gis.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "digital-twin-engineering",
+      "file": "485_binding_a_model_element.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "digital-twin-engineering",
+      "file": "486_desired_vs_reported.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "digital-twin-engineering",
+      "file": "487_time_series_storage_for_twin_state.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "digital-twin-engineering",
+      "file": "488_downsampling_without_lying.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "digital-twin-engineering",
+      "file": "489_indoor_navigation.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "digital-twin-engineering",
+      "file": "490_twin_identity.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "digital-twin-engineering",
+      "file": "491_simulation_vs_observation.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "digital-twin-engineering",
+      "file": "492_twin_sync.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "digital-twin-engineering",
+      "file": "493_what_a_twin_cannot_do.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
         "bold-space": 0,
         "plain-dash": 0,
         "single": 0

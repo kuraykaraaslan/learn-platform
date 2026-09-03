@@ -1,0 +1,8 @@
+{
+  "name": "verify-digital-twin-engineering-488",
+  "private": true,
+  "description": "Downsamples one fixed 500-point series with LTTB and with bucket averaging, and reports what each preserved and destroyed, for lesson 488's proof block. Zero dependencies, pure arithmetic, no network. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "node downsample.js"
+  }
+}

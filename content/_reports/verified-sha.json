@@ -445,5 +445,16 @@
   "iot-telemetry-edge/479_device_fleet_management.md": "7effbee079a97a81",
   "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md": "b182da0e8a0a12ac",
   "iot-telemetry-edge/481_edge_processing.md": "f938aec4e02c1eee",
-  "iot-telemetry-edge/482_alerting_without_crying_wolf.md": "f1de8a88a62f85d3"
+  "iot-telemetry-edge/482_alerting_without_crying_wolf.md": "f1de8a88a62f85d3",
+  "digital-twin-engineering/483_what_a_digital_twin_is.md": "2893e9fc8dbfdd70",
+  "digital-twin-engineering/484_georeferencing_bim_into_gis.md": "58872a484b684a1c",
+  "digital-twin-engineering/485_binding_a_model_element.md": "4e0616dd7651e44c",
+  "digital-twin-engineering/486_desired_vs_reported.md": "9175cab30cb980c1",
+  "digital-twin-engineering/487_time_series_storage_for_twin_state.md": "8da8e5792c7823f9",
+  "digital-twin-engineering/488_downsampling_without_lying.md": "b26f083fe8f47508",
+  "digital-twin-engineering/489_indoor_navigation.md": "85d465c4f2401a3d",
+  "digital-twin-engineering/490_twin_identity.md": "9d63154a309840b5",
+  "digital-twin-engineering/491_simulation_vs_observation.md": "d0af6c2f859dd37c",
+  "digital-twin-engineering/492_twin_sync.md": "5748e6337da0e447",
+  "digital-twin-engineering/493_what_a_twin_cannot_do.md": "ce6a9784f8d073fd"
 }

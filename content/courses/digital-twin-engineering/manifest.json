@@ -1,0 +1,95 @@
+{
+  "slug": "digital-twin-engineering",
+  "title": "Digital Twin Engineering",
+  "description": "A twin in data terms: a model, a state, a history, and the reconciliation that keeps the three from disagreeing — plus the coordinate chain that binds a building to a map.",
+  "items": [
+    {
+      "id": 483,
+      "file": "483_what_a_digital_twin_is.md",
+      "title": "What a Digital Twin Is, in Data Terms: Model, State, History",
+      "bracket": "1-3",
+      "category": "Digital Twin Engineering",
+      "verified": true
+    },
+    {
+      "id": 484,
+      "file": "484_georeferencing_bim_into_gis.md",
+      "title": "Georeferencing BIM into GIS: One Model, Two Coordinate Worlds",
+      "bracket": "3-7",
+      "category": "Digital Twin Engineering",
+      "verified": true
+    },
+    {
+      "id": 485,
+      "file": "485_binding_a_model_element.md",
+      "title": "Binding a Model Element to a Live Data Point",
+      "bracket": "3-7",
+      "category": "Digital Twin Engineering",
+      "verified": true
+    },
+    {
+      "id": 486,
+      "file": "486_desired_vs_reported.md",
+      "title": "Desired vs Reported State: Reconciliation and the Staleness Window",
+      "bracket": "3-7",
+      "category": "Digital Twin Engineering",
+      "verified": true
+    },
+    {
+      "id": 487,
+      "file": "487_time_series_storage_for_twin_state.md",
+      "title": "Time-Series Storage for Twin State: Narrow Tables and Last-Value Queries",
+      "bracket": "3-7",
+      "category": "Digital Twin Engineering",
+      "verified": true
+    },
+    {
+      "id": 488,
+      "file": "488_downsampling_without_lying.md",
+      "title": "Downsampling Without Lying: LTTB, Averaging, and What Each Destroys",
+      "bracket": "3-7",
+      "category": "Digital Twin Engineering",
+      "verified": true
+    },
+    {
+      "id": 489,
+      "file": "489_indoor_navigation.md",
+      "title": "Indoor Navigation: A Routing Graph from IFC Spaces and Doors",
+      "bracket": "7-10",
+      "category": "Digital Twin Engineering",
+      "verified": true
+    },
+    {
+      "id": 490,
+      "file": "490_twin_identity.md",
+      "title": "Twin Identity: Stable Ids Across a Model That Gets Re-Exported",
+      "bracket": "7-10",
+      "category": "Digital Twin Engineering",
+      "verified": true
+    },
+    {
+      "id": 491,
+      "file": "491_simulation_vs_observation.md",
+      "title": "Simulation Output vs Observation: Keeping Them Apart in One Schema",
+      "bracket": "7-10",
+      "category": "Digital Twin Engineering",
+      "verified": true
+    },
+    {
+      "id": 492,
+      "file": "492_twin_sync.md",
+      "title": "Twin Sync: Push, Pull, and Change Feeds",
+      "bracket": "3-7",
+      "category": "Digital Twin Engineering",
+      "verified": true
+    },
+    {
+      "id": 493,
+      "file": "493_what_a_twin_cannot_do.md",
+      "title": "What a Twin Cannot Do: Naming the Boundary Before a Client Does",
+      "bracket": "7-10",
+      "category": "Digital Twin Engineering",
+      "verified": true
+    }
+  ]
+}

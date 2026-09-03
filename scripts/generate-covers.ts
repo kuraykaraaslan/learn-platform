@@ -58,6 +58,7 @@ const SUBJECTS: Record<string, string> = {
   'gis-spatial-data': 'a graticule of meridians peeling off a globe and flattening into a grid of map tiles',
   'autodesk-developer-platform': 'a desktop drafting window, a headless job crate, and a cloud endpoint linked by one pipeline',
   'iot-telemetry-edge': 'a small sensor node emitting concentric signal arcs toward a gateway and a stack of stored readings',
+  'digital-twin-engineering': 'a solid building form beside its wireframe counterpart, joined by a live signal line and a time-series ribbon',
 };
 
 type Quality = 'low' | 'medium' | 'high';
