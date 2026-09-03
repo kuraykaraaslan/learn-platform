@@ -16,7 +16,7 @@ sebebi ölçütünün farklı olması: mevcut dersleri dönüştürmek değil, k
 ölçülmüş olarak **hiç bulunmayan** bir alanı açmak (`BIM`, `GIS`, `IFC`,
 `Autodesk`, `MQTT`, `PostGIS` terimlerinin 412 derste eşleşmesi: sıfır).
 
-P13-P23'ün her şartnamesi bir **`## Eklenebilecekler`** tablosu taşıyor: o fazın
+P13-P24'ün her şartnamesi bir **`## Eklenebilecekler`** tablosu taşıyor: o fazın
 kapsamı dışında bırakılan adaylar ve her birinin neden şimdi olmadığı (*kapsam*,
 *bağımlılık*, *doktrin*). Doktrine takılanlar `yasak` işaretli — ertelenmiş
 değil reddedilmiş. Bir aday kapsama alınınca tablodan çıkar, ders listesine
@@ -47,6 +47,7 @@ P13 dal mekanizması (kod, içerik yok)
 P21 akıllı altyapı  ← P15, P17, P18, P20 (kesişim dersleri)
 P22 kapanış         ← P14..P21 (çapraz bağlar, yeniden ölçüm)
 P23 developer path'leri  ← P14..P21 (kurslar arası okuma sırası)
+P24 IoT donanım temelleri ← P17 (dalın giriş kapısı; okuma sırasında #469'un önüne girer)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -75,6 +76,7 @@ P23 developer path'leri  ← P14..P21 (kurslar arası okuma sırası)
 | P21 | [21-smart-infrastructure.md](21-smart-infrastructure.md) | ~5 gün | tamamlandı — 10 ders (513-522); 8 damgalı, 514 + 521 denylist'te, `crosswalk` seed, `518` proof |
 | P22 | [22-domain-closeout.md](22-domain-closeout.md) | ~2 gün | tamamlandı — 6 forward `(#N)` bağı, arama indeksi 77.393 B gz (sınır 98.304), `cap-starved` 2, `shadowed` 0 |
 | P23 | [23-developer-paths.md](23-developer-paths.md) | ~3 gün | tamamlandı — 4 path (`bim-developer` 14, `gis-developer` 12, `iot-engineer` 13, `digital-twin` 16), `/paths` + 4 statik sayfa, ders rozeti sunucu bileşeni |
+| P24 | [24-iot-hardware-basics.md](24-iot-hardware-basics.md) | ~9-10 gün | tamamlandı — 18 ders (524-541), 17 damgalı, 541 denylist'te, `device_calibration` seed, `532` + `537` proof, `diff` 2 → 3 |
 
 ## Ölçülen zemin
 
@@ -86,25 +88,29 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 
 | Ölçüm | P0 zemini | Bugün |
 |---|---:|---:|
-| Ders / kurs / bölüm | 412 / 23 / 2473 | 505 / 31 / **3030** |
-| Fence | 505 | 1265 |
+| Ders / kurs / bölüm | 412 / 23 / 2473 | 523 / 32 / **3138** |
+| Fence | 505 | 1322 |
 | Yalnız kod fence'i olan ders | 179 | 70 |
 | Yalnız şablon fence'i olan ders | 211 | 138 |
-| Hiç fence'i olmayan ders | 0 | 0 |
-| TS/TSX/JS fence | 161 | 242 |
-| Common Mistakes maddesi | 1746 | 2339 |
-| — drill'lenebilir | 705 (%40,4) | **2198 (%94,0)** |
+| Hiç fence'i olmayan ders | 0 | 1 |
+| TS/TSX/JS fence | 161 | 249 |
+| Common Mistakes maddesi | 1746 | 2446 |
+| — drill'lenebilir | 705 (%40,4) | **2305 (%94,2)** |
 | — tek cümlelik (P2'nin işi) | 1041 | **141** |
-| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **495** (sıfır: 10) |
+| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **513** (sıfır: 10) |
 | Form fence / dosya | 91 / 88 | 94 / 90 |
-| Checklist fence / madde | 35 / 293 | 37 / 303 |
-| `sql` fence | 9 | 76 |
+| Checklist fence / madde | 35 / 293 | 38 / 318 |
+| `sql` fence | 9 | 79 |
 | `java` fence | 10 | 10 |
 | Blockquote kullanan ders | 45 | 91 |
-| Mermaid kullanan ders | 0 | 25 |
+| Mermaid kullanan ders | 0 | 26 |
 
 Bölüm sayısındaki fark bir ölçüm hatasıdır, korpus değişimi değil: 412 ders × 6
 bölüm = **2472**, ve hiçbir bölüm boş değil. P0'ın 2473'ü bir fazla saymış.
+
+"Hiç fence'i olmayan ders" 0 → 1: P24'ün `#541` (şebeke / lityum / sertifikasyon)
+bir sınır dersidir — `quiz`/`recall` yok (denylist), runtime yok, kod yok. Nesir
+ve bir yönlendirme tablosu. Korpusta bilinçli olarak fence'siz tek ders.
 
 Bir uyarı, çünkü iki sütunun anlamı P13'ten sonra ayrıştı: `P0 zemini` 412
 dersin ölçüsüdür, `Bugün` ise alan dersleri dahil bütün korpusu ölçer. İkinci
@@ -122,10 +128,10 @@ kaynak `course_content.sections.ts` olarak kalır.
 
 | Alan ölçüsü | P13 zemini | Bugün |
 |---|---:|---:|
-| Alan dersi / alan kursu | 0 / 0 | 93 / 8 |
-| Alan fence'i | 0 | 358 |
-| Alan Common Mistakes maddesi | 0 | 567 |
-| Alan — drill'lenebilir | 0 | 567 |
+| Alan dersi / alan kursu | 0 / 0 | 111 / 9 |
+| Alan fence'i | 0 | 415 |
+| Alan Common Mistakes maddesi | 0 | 674 |
+| Alan — drill'lenebilir | 0 | 674 |
 
 P8/P9'un tek seferlik fence analizleri (hiç import etmeyen 44, yalnız
 tarayıcı-güvenli import 10, WebContainer'da çalışabilen 62, yerel eklenti
@@ -147,18 +153,18 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 
 | Widget | Fence | Ders |
 |---|---:|---:|
-| `quiz` | 254 | 254 |
-| `recall` | 254 | 254 |
-| `mermaid` | 25 | 25 |
-| `tradeoff` | 17 | 17 |
-| `calc` | 14 | 14 |
+| `quiz` | 271 | 271 |
+| `recall` | 271 | 271 |
+| `mermaid` | 26 | 26 |
+| `tradeoff` | 20 | 20 |
+| `calc` | 17 | 17 |
 | `spatial` | 6 | 6 |
-| `proof` | 23 | 23 |
-| `run` (toplam) | 111 | 70 |
-| — `sql run` | 63 | |
-| — JS/TS `run` | 45 | |
+| `proof` | 25 | 25 |
+| `run` (toplam) | 121 | 78 |
+| — `sql run` | 66 | |
+| — JS/TS `run` | 52 | |
 | — `run project` | 3 | |
-| `diff` | 2 | 2 |
+| `diff` | 3 | 3 |
 
 Her kurs en az bir `quiz` ve bir `recall` taşıyor.
 

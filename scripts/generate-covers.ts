@@ -62,6 +62,7 @@ const SUBJECTS: Record<string, string> = {
   'field-data-collection': 'a rugged handheld device with a stack of queued record cards behind it and one dashed line reaching a distant server',
   'asset-management-systems': 'a branching register of labelled equipment cards over a maintenance timeline, with one card flagged as having no history',
   'smart-infrastructure': 'five differently-shaped system icons linked by connecting lines to one central node, over a faint city-network grid',
+  'iot-hardware-basics': 'a breadboard cross-section with a sensor, a resistor divider and a microcontroller pin, one probe measuring a voltage between them',
 };
 
 type Quality = 'low' | 'medium' | 'high';

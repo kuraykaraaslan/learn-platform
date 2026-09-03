@@ -1,5 +1,5 @@
 {
-  "lessonCount": 505,
+  "lessonCount": 523,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -3544,6 +3544,170 @@
         "whenToUse": "93c8d03a43e33ccd",
         "commonMistakes": "ddb0fcf1a42375f9",
         "furtherReading": "78b92c904dfeae77"
+      }
+    },
+    "iot-hardware-basics": {
+      "524_the_signal_chain.md": {
+        "title": "f5fc29d0035a3c00",
+        "whatItIs": "94cd0e04ae0a9764",
+        "keyConcepts": "709c3b2d73d1e987",
+        "exampleCode": "55051b1cd91f4715",
+        "whenToUse": "1c297aa90ad8e759",
+        "commonMistakes": "7d1889279dd25a8b",
+        "furtherReading": "216e300b6657bbba"
+      },
+      "525_volts_amps_ohms_watts.md": {
+        "title": "9a0c53751425767c",
+        "whatItIs": "e184166c0bdf5d5c",
+        "keyConcepts": "0233e426ef835b6f",
+        "exampleCode": "ce43fca54f1be8b7",
+        "whenToUse": "2871278453955789",
+        "commonMistakes": "819e2191764b813d",
+        "furtherReading": "a3459c50c0f6d0df"
+      },
+      "526_reading_a_datasheet.md": {
+        "title": "529a3b547194fa8f",
+        "whatItIs": "231fd0cac711735f",
+        "keyConcepts": "0283785133ca9270",
+        "exampleCode": "92e8844f56814277",
+        "whenToUse": "4ed275da70362e3a",
+        "commonMistakes": "40c2181ff6de55ba",
+        "furtherReading": "acee75602f7266ee"
+      },
+      "527_pins.md": {
+        "title": "c4b06eb5531363cc",
+        "whatItIs": "bb668bc1b9ebed8b",
+        "keyConcepts": "013e04e26fde5969",
+        "exampleCode": "29583407fe3a4b48",
+        "whenToUse": "da18320165632aa8",
+        "commonMistakes": "4ef0bbc0d0015bb7",
+        "furtherReading": "35ef7fbe9f75bf2c"
+      },
+      "528_floating_inputs_pullups_pulldowns_open_drain.md": {
+        "title": "b80eaec2f1808958",
+        "whatItIs": "5b0ee9c723dfd75f",
+        "keyConcepts": "9c739c6edd666c2a",
+        "exampleCode": "90382c2295d19314",
+        "whenToUse": "088b169f24e7b728",
+        "commonMistakes": "456d8c30f74331c1",
+        "furtherReading": "e4a46dfc79f4c9dc"
+      },
+      "529_tx_to_rx.md": {
+        "title": "b4e6ca1d0bd8996f",
+        "whatItIs": "15386c490c90e453",
+        "keyConcepts": "70ce2e8f06f00c20",
+        "exampleCode": "3c05899e2a459c40",
+        "whenToUse": "8500a0d43c872c12",
+        "commonMistakes": "33340eff80d49dab",
+        "furtherReading": "08d0b12045e6fcc7"
+      },
+      "530_i2c_and_spi.md": {
+        "title": "b3c53fedd319ebca",
+        "whatItIs": "351f6fbc83775954",
+        "keyConcepts": "9228ae0534f15972",
+        "exampleCode": "121b25247c8d8380",
+        "whenToUse": "cbe1c13b68d2e879",
+        "commonMistakes": "6222cfa27d0d5d29",
+        "furtherReading": "fe4d603c3827f9d5"
+      },
+      "531_3v3_meets_5v.md": {
+        "title": "3bbec6175a60dd93",
+        "whatItIs": "b5631189d5c7b96f",
+        "keyConcepts": "112252d8f88ff7b6",
+        "exampleCode": "ae29dd97ff37bd5d",
+        "whenToUse": "7ab6c98efa24c4ac",
+        "commonMistakes": "c50eda6188e8aef3",
+        "furtherReading": "8a928b5b91d45664"
+      },
+      "532_voltage_dividers_and_tolerance.md": {
+        "title": "e6d9fa154b2a02c2",
+        "whatItIs": "cbc6ae9c63aeedae",
+        "keyConcepts": "399301236e6d87e3",
+        "exampleCode": "204669a266aed2dc",
+        "whenToUse": "d676fbe2a65d69d0",
+        "commonMistakes": "0f8c51649ad6f0a2",
+        "furtherReading": "64c72d115309cf2c"
+      },
+      "533_from_counts_to_degrees.md": {
+        "title": "c3708e2869b6cb6d",
+        "whatItIs": "e15f8a93275dcc59",
+        "keyConcepts": "d9698fb73823506c",
+        "exampleCode": "e8cb29fb613d3428",
+        "whenToUse": "168f207e6c7f0f2b",
+        "commonMistakes": "27df5c588d33a40d",
+        "furtherReading": "db7e62e84669342e"
+      },
+      "534_sensor_error_offset_gain_drift.md": {
+        "title": "470eb6c56b673a88",
+        "whatItIs": "90aa0f7775c10bdc",
+        "keyConcepts": "6e275e453c0a7d01",
+        "exampleCode": "a5686bdab0af960b",
+        "whenToUse": "e63b205579b13d60",
+        "commonMistakes": "03812e05413f1e34",
+        "furtherReading": "5603e5af79e0c2b8"
+      },
+      "535_ground_noise_and_the_cable_that_became_an_antenna.md": {
+        "title": "b0e27f5139488e97",
+        "whatItIs": "5f86f4edab20290c",
+        "keyConcepts": "77b1c51867d8d1cd",
+        "exampleCode": "0cc9eeb3e9b277c5",
+        "whenToUse": "31b579ffe4fc3b08",
+        "commonMistakes": "8924c72dbf3c4652",
+        "furtherReading": "b76022e58fc7ae4a"
+      },
+      "536_distance_voltage_drop_4_20ma.md": {
+        "title": "e6f863d908f2f39e",
+        "whatItIs": "0173ce3e584f2597",
+        "keyConcepts": "2b4cbbfd5622b5da",
+        "exampleCode": "8dc2bbf8f50cb394",
+        "whenToUse": "20449990e68458df",
+        "commonMistakes": "c7cbdf29ae42c183",
+        "furtherReading": "187531a81004a85b"
+      },
+      "537_energy_budgets.md": {
+        "title": "ec07f176c8a02d33",
+        "whatItIs": "ae9c63db0885374a",
+        "keyConcepts": "801f3ff826a3986b",
+        "exampleCode": "438ba8e6c3f4fd33",
+        "whenToUse": "f364899ba4ba6358",
+        "commonMistakes": "5e6a685d9793f8af",
+        "furtherReading": "031cacff253208e1"
+      },
+      "538_the_enclosure_is_part_of_the_product.md": {
+        "title": "bc4ce2be1e4171c2",
+        "whatItIs": "aa6893f2475e4732",
+        "keyConcepts": "b4b36fdecde9e4fd",
+        "exampleCode": "42f61e31a78a8ba3",
+        "whenToUse": "ac786d3e674803ea",
+        "commonMistakes": "b148ac4103b45a1a",
+        "furtherReading": "dba70f77b137f59b"
+      },
+      "539_a_dev_kit_is_not_a_product.md": {
+        "title": "b85c1a8d15945253",
+        "whatItIs": "c7e490e4dcfc4f9e",
+        "keyConcepts": "82542273ba0ef350",
+        "exampleCode": "f61e4c78a8b2f2a2",
+        "whenToUse": "00b6530b8016ed18",
+        "commonMistakes": "4bf43b183aa1a577",
+        "furtherReading": "bda1ce5887cc3e0b"
+      },
+      "540_bring_up_and_fault_isolation.md": {
+        "title": "a278c4f380ccf650",
+        "whatItIs": "83e3f0dfe0d148a3",
+        "keyConcepts": "2f557b49542397c9",
+        "exampleCode": "0b384d5116e62013",
+        "whenToUse": "eb9202cae41ab488",
+        "commonMistakes": "ccfee8db43602ff2",
+        "furtherReading": "3cf4079d664f3033"
+      },
+      "541_mains_lithium_and_certification.md": {
+        "title": "1e1267d21b9e65ad",
+        "whatItIs": "f9cac2a5636b683a",
+        "keyConcepts": "cf1d84c4aae07455",
+        "exampleCode": "fd78e5b609d8c0a0",
+        "whenToUse": "f65f2b2af89aa6d1",
+        "commonMistakes": "67c41257bce4a11b",
+        "furtherReading": "666d6ec362fdd2c3"
       }
     },
     "iot-telemetry-edge": {

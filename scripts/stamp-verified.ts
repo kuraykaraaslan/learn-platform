@@ -66,6 +66,11 @@ const HARM_DENYLIST = new Set([
   // Both carry no quiz and no recall; an expert pass can remove them later.
   'smart-infrastructure/514_ot_and_it_protocol_boundaries.md',
   'smart-infrastructure/521_sharing_data_without_losing_control.md',
+  // P24: mains voltage, lithium cells and certification. Wrong here is not a
+  // bug, it is an injury. docs/phases/24-iot-hardware-basics.md makes 541 a
+  // boundary lesson — where an engineer stops — not a how-to, and the
+  // denylist keeps any exercise off it. No quiz, no recall, by design.
+  'iot-hardware-basics/541_mains_lithium_and_certification.md',
 ]);
 
 function sha(value: string): string {

@@ -1,0 +1,8 @@
+{
+  "name": "verify-iot-hardware-basics-537",
+  "private": true,
+  "description": "Turns one day of a sensor node's state schedule into a charge budget in mAh, keeps the regulator's quiescent current on its own line, and prints a one-parameter sensitivity sweep, for lesson 537's proof. Currents are cited datasheet figures; the arithmetic is the lesson. Zero dependencies, pure Node, no clock, no random.",
+  "scripts": {
+    "verify": "node budget.js"
+  }
+}

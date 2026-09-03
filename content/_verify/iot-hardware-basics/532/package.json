@@ -1,0 +1,8 @@
+{
+  "name": "verify-iot-hardware-basics-532",
+  "private": true,
+  "description": "Computes the worst-case measurement error of a resistor-divider front end by enumerating every tolerance corner of its two resistors and the ADC reference, for lesson 532's proof. The title's 'three percent' is this run's output, not an author's estimate. Zero dependencies, pure Node, no clock, no random.",
+  "scripts": {
+    "verify": "node divider.js"
+  }
+}

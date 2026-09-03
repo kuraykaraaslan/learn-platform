@@ -48,8 +48,8 @@ export const DEVELOPER_PATHS = [
     id: 'iot-engineer',
     title: 'IoT Engineer Path',
     blurb:
-      'The device-to-database path and everywhere a reading is lost on it: three clocks, idempotent ingest, store-and-forward, a time-series schema, downsampling that does not lie, and ordering events across systems that do not share a clock.',
-    steps: [469, 470, 471, 474, 475, 476, 477, 481, 482, 487, 488, 518, 519],
+      'Start before the first byte exists — the signal chain, the four electrical numbers, and reading a datasheet — then the device-to-database path and everywhere a reading is lost on it: three clocks, idempotent ingest, store-and-forward, a time-series schema, downsampling that does not lie, and ordering events across systems that do not share a clock.',
+    steps: [524, 525, 533, 537, 469, 470, 471, 474, 475, 476, 477, 482, 487, 488, 518, 519],
   },
   {
     id: 'digital-twin',

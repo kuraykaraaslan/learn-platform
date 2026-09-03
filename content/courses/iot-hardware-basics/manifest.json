@@ -1,0 +1,151 @@
+{
+  "slug": "iot-hardware-basics",
+  "title": "IoT Hardware Basics",
+  "description": "The physical half of a sensor node: pins, levels, wiring, noise and power — everything a developer has to measure before the first byte exists.",
+  "items": [
+    {
+      "id": 524,
+      "file": "524_the_signal_chain.md",
+      "title": "The Signal Chain: Everything That Happens Before the First Byte",
+      "bracket": "0-1",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 525,
+      "file": "525_volts_amps_ohms_watts.md",
+      "title": "Volts, Amps, Ohms, Watts: The Four Numbers Behind Most Field Failures",
+      "bracket": "0-1",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 526,
+      "file": "526_reading_a_datasheet.md",
+      "title": "Reading a Datasheet: Absolute Maximum Is Not a Specification",
+      "bracket": "0-1",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 527,
+      "file": "527_pins.md",
+      "title": "Pins: Input or Output, Digital or Analog — and What PWM Actually Is",
+      "bracket": "0-1",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 528,
+      "file": "528_floating_inputs_pullups_pulldowns_open_drain.md",
+      "title": "Floating Inputs, Pull-ups, Pull-downs, and Open Drain",
+      "bracket": "1-3",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 529,
+      "file": "529_tx_to_rx.md",
+      "title": "TX to RX: Wiring a Serial Link, and the Four Things That Must Match",
+      "bracket": "1-3",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 530,
+      "file": "530_i2c_and_spi.md",
+      "title": "I²C and SPI: Addresses, Chip Selects, and Why the Bus Dies at Three Metres",
+      "bracket": "1-3",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 531,
+      "file": "531_3v3_meets_5v.md",
+      "title": "3.3 V Meets 5 V: Logic Thresholds and the Board You Killed",
+      "bracket": "1-3",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 532,
+      "file": "532_voltage_dividers_and_tolerance.md",
+      "title": "Voltage Dividers and Tolerance: Where Your Three Percent Error Came From",
+      "bracket": "3-7",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 533,
+      "file": "533_from_counts_to_degrees.md",
+      "title": "From Counts to Degrees: The ADC and Two Lossy Conversions",
+      "bracket": "3-7",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 534,
+      "file": "534_sensor_error_offset_gain_drift.md",
+      "title": "Sensor Error: Offset, Gain, Drift, and Per-Device Calibration",
+      "bracket": "3-7",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 535,
+      "file": "535_ground_noise_and_the_cable_that_became_an_antenna.md",
+      "title": "Ground, Noise, and the Cable That Became an Antenna",
+      "bracket": "3-7",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 536,
+      "file": "536_distance_voltage_drop_4_20ma.md",
+      "title": "Distance: Voltage Drop, 4–20 mA, and Differential Pairs",
+      "bracket": "3-7",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 537,
+      "file": "537_energy_budgets.md",
+      "title": "Energy Budgets: Compute the Battery Life, Never Quote It",
+      "bracket": "3-7",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 538,
+      "file": "538_the_enclosure_is_part_of_the_product.md",
+      "title": "The Enclosure Is Part of the Product: IP Codes, Glands, Condensation",
+      "bracket": "3-7",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 539,
+      "file": "539_a_dev_kit_is_not_a_product.md",
+      "title": "A Dev Kit Is Not a Product: Module, Board, and What Changes at Five Hundred Units",
+      "bracket": "3-7",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 540,
+      "file": "540_bring_up_and_fault_isolation.md",
+      "title": "Bring-Up and Fault Isolation: Power, Then Signal, Then Software",
+      "bracket": "1-3",
+      "category": "IoT Hardware Basics",
+      "verified": true
+    },
+    {
+      "id": 541,
+      "file": "541_mains_lithium_and_certification.md",
+      "title": "Mains, Lithium, and Certification: Where an Engineer Stops",
+      "bracket": "7-10",
+      "category": "IoT Hardware Basics",
+      "verified": false
+    }
+  ]
+}

@@ -1,12 +1,12 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
   "totalTerms": 139,
-  "totalLessons": 505,
+  "totalLessons": 523,
   "totals": {
     "neverMatched": 0,
-    "neverLinked": 21,
+    "neverLinked": 20,
     "neverLinkedByCause": {
-      "own-lesson-only": 6,
+      "own-lesson-only": 5,
       "code-only": 13,
       "shadowed": 0,
       "case-mismatch": 0,
@@ -46,14 +46,6 @@
       "alsoAppearsInLessons": [
         40
       ]
-    },
-    {
-      "slug": "dangling-edge",
-      "term": "dangling edge",
-      "cause": "own-lesson-only",
-      "linkableInLessons": [],
-      "presentInLessons": [],
-      "alsoAppearsInLessons": []
     },
     {
       "slug": "dip",
@@ -552,8 +544,10 @@
     {
       "slug": "dangling-edge",
       "term": "dangling edge",
-      "lessonsLinkedIn": [],
-      "rawOccurrences": 6
+      "lessonsLinkedIn": [
+        "iot-hardware-basics/534_sensor_error_offset_gain_drift.md"
+      ],
+      "rawOccurrences": 7
     },
     {
       "slug": "data-minimization",
@@ -667,9 +661,10 @@
       "slug": "error-budget",
       "term": "Error budget",
       "lessonsLinkedIn": [
+        "iot-hardware-basics/532_voltage_dividers_and_tolerance.md",
         "observability-deployment/61_alerting_design.md"
       ],
-      "rawOccurrences": 17
+      "rawOccurrences": 18
     },
     {
       "slug": "event-store",

@@ -484,5 +484,22 @@
   "smart-infrastructure/518_event_ordering_without_a_shared_clock.md": "6827f59d504c5bdf",
   "smart-infrastructure/519_data_quality_gates_for_a_public_feed.md": "2adfa5c3ced2690f",
   "smart-infrastructure/520_historical_replay.md": "c550d46b333d1cb6",
-  "smart-infrastructure/522_the_integration_contract.md": "a5ed84562ff57d6a"
+  "smart-infrastructure/522_the_integration_contract.md": "a5ed84562ff57d6a",
+  "iot-hardware-basics/524_the_signal_chain.md": "6c8c9632b5a9b21c",
+  "iot-hardware-basics/525_volts_amps_ohms_watts.md": "6755e21ebda5c180",
+  "iot-hardware-basics/526_reading_a_datasheet.md": "ff83f97ddc44428f",
+  "iot-hardware-basics/527_pins.md": "8760cf6a5855a81c",
+  "iot-hardware-basics/528_floating_inputs_pullups_pulldowns_open_drain.md": "a679136e70248f08",
+  "iot-hardware-basics/529_tx_to_rx.md": "4cb03480b311c505",
+  "iot-hardware-basics/530_i2c_and_spi.md": "2d00e3dc8ff9825f",
+  "iot-hardware-basics/531_3v3_meets_5v.md": "c47c2df54bbc0499",
+  "iot-hardware-basics/532_voltage_dividers_and_tolerance.md": "ff0a09cff6491c8d",
+  "iot-hardware-basics/533_from_counts_to_degrees.md": "78f5e5b26234a554",
+  "iot-hardware-basics/534_sensor_error_offset_gain_drift.md": "7a2d2b9f898ca95d",
+  "iot-hardware-basics/535_ground_noise_and_the_cable_that_became_an_antenna.md": "02a09cee0b85dd2f",
+  "iot-hardware-basics/536_distance_voltage_drop_4_20ma.md": "716e9ae2711755e0",
+  "iot-hardware-basics/537_energy_budgets.md": "e096f562e83ab360",
+  "iot-hardware-basics/538_the_enclosure_is_part_of_the_product.md": "5633758f4162c24e",
+  "iot-hardware-basics/539_a_dev_kit_is_not_a_product.md": "a71604a36b3a6252",
+  "iot-hardware-basics/540_bring_up_and_fault_isolation.md": "e026c2e3b791ee17"
 }
