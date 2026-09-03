@@ -9,6 +9,13 @@ yasaklar), [`../adr/0001-no-backend-markdown-content.md`](../adr/0001-no-backend
 (backend yok), [`../adr/0002-client-side-code-execution.md`](../adr/0002-client-side-code-execution.md)
 (çalıştırma kararı).
 
+**İkinci program (P13-P22).** P0-P12 mevcut korpusu zenginleştirdi. P13-P22
+korpusa **yeni bir alan** ekliyor: yapılı çevre ve mekânsal veri — 8 kurs,
+92 ders (id 431-522), aynı yazılımcı kitlesine. Ayrı bir program sayılmasının
+sebebi ölçütünün farklı olması: mevcut dersleri dönüştürmek değil, korpusta
+ölçülmüş olarak **hiç bulunmayan** bir alanı açmak (`BIM`, `GIS`, `IFC`,
+`Autodesk`, `MQTT`, `PostGIS` terimlerinin 412 derste eşleşmesi: sıfır).
+
 ## Sıra ve bağımlılıklar
 
 ```
@@ -23,6 +30,17 @@ P0 blok refaktörü ────┬─→ P1 callout + drill ──→ P2 bold-l
 P5 CI + proof ────────→ P6 quiz/tradeoff/diff
   (P1'in verified kapısına dayanır)
 P12 arama + return queue  ← P1'in drill sonuçlarına dayanır
+
+── ikinci program: yapılı çevre ─────────────────────────────────────
+P13 dal mekanizması (kod, içerik yok)
+  └─→ P14 BIM/IFC + `spatial` widget   (dal burada açılır, arketip donar)
+        ├─→ P15 GIS ──→ P19 saha verisi
+        ├─→ P16 Revit API + APS
+        ├─→ P17 IoT + LoRaWAN ──→ P18 dijital ikiz (BIM+GIS)
+        └─→ P20 varlık yönetimi
+P21 akıllı altyapı  ← P15, P17, P18, P20 (kesişim dersleri)
+P22 kapanış         ← P14..P21 (çapraz bağlar, yeniden ölçüm)
+P23 developer path'leri  ← P14..P21 (kurslar arası okuma sırası)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -40,6 +58,17 @@ P12 arama + return queue  ← P1'in drill sonuçlarına dayanır
 | P10 | [10-pglite-sql.md](10-pglite-sql.md) | ~3-4 gün | tamamlandı — 3 pilot ders, sonra 14 `sql run` fence |
 | P11 | [11-recall-and-calc.md](11-recall-and-calc.md) | ~3 gün | tamamlandı — RecallCard + CalcCard/`expr.ts`; recall 76, calc 13 derse yayıldı |
 | P12 | [12-search-and-review-queue.md](12-search-and-review-queue.md) | ~4 gün | tamamlandı — ⌘K, next/prev, Return Queue, export/import |
+| P13 | [13-course-branches.md](13-course-branches.md) | ~1 gün | tamamlandı — `CourseSectionId` veriden türüyor; 6 yeni dal iddiası, test 268 → 274 |
+| P14 | [14-bim-ifc-data-models.md](14-bim-ifc-data-models.md) | ~6-7 gün | planlandı — 10 ders (431-440) + `spatial` widget + dal |
+| P15 | [15-gis-spatial-data.md](15-gis-spatial-data.md) | ~6 gün | planlandı — 14 ders (441-454) |
+| P16 | [16-autodesk-developer-platform.md](16-autodesk-developer-platform.md) | ~7 gün | planlandı — 14 ders (455-468), Revit API + APS |
+| P17 | [17-iot-telemetry-edge.md](17-iot-telemetry-edge.md) | ~7 gün | planlandı — 14 ders (469-482), MQTT + LoRaWAN |
+| P18 | [18-digital-twin-engineering.md](18-digital-twin-engineering.md) | ~6 gün | planlandı — 11 ders (483-493), BIM+GIS + iç mekân |
+| P19 | [19-field-data-collection.md](19-field-data-collection.md) | ~5 gün | planlandı — 10 ders (494-503) |
+| P20 | [20-asset-management-systems.md](20-asset-management-systems.md) | ~4-5 gün | planlandı — 9 ders (504-512) |
+| P21 | [21-smart-infrastructure.md](21-smart-infrastructure.md) | ~5 gün | planlandı — 10 ders (513-522) |
+| P22 | [22-domain-closeout.md](22-domain-closeout.md) | ~2 gün | planlandı — çapraz bağlar, bütçe yeniden ölçümü |
+| P23 | [23-developer-paths.md](23-developer-paths.md) | ~3 gün | planlandı — 4 path, kurslar arası okuma sırası |
 
 ## Ölçülen zemin
 

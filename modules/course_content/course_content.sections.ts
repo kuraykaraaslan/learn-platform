@@ -1,25 +1,28 @@
-// The catalog's two-track split for the home page (app/(frontend)/page.tsx).
+// The catalog's branch split for the home page (app/(frontend)/page.tsx).
 //
 // There is no `section` key in the course manifests — the split lives here, in
-// one reviewable file, rather than spread across 23 manifest.json files. The
-// order inside each track is a *reading* order (fundamentals first), the same
-// spirit as the authored-id order the sidebar uses within a course.
+// one reviewable file, rather than spread across the course manifest.json
+// files. The order inside each branch is a *reading* order (fundamentals
+// first), the same spirit as the authored-id order the sidebar uses within a
+// course.
 //
 // course_content.sections.test.ts asserts every course under content/courses/
-// appears in exactly one track — so adding a 24th course fails the build until
-// it is classified here, instead of silently vanishing from the home page.
-
-export type CourseSectionId = 'engineering' | 'business';
+// appears in exactly one branch — so adding a course fails the build until it
+// is classified here, instead of silently vanishing from the home page.
+//
+// How many branches there are is not this file's claim to make: COURSE_SECTIONS
+// below is the single source of truth and CourseSectionId is derived from it.
+// Adding a branch is one object literal.
 
 export type CourseSectionDef = {
-  id: CourseSectionId;
-  title: string;
-  blurb: string;
-  /** Course slugs, in the order they should appear under this track. */
-  slugs: string[];
+  readonly id: string;
+  readonly title: string;
+  readonly blurb: string;
+  /** Course slugs, in the order they should appear under this branch. */
+  readonly slugs: readonly string[];
 };
 
-export const COURSE_SECTIONS: CourseSectionDef[] = [
+export const COURSE_SECTIONS = [
   {
     id: 'engineering',
     title: 'Engineering craft',
@@ -57,12 +60,23 @@ export const COURSE_SECTIONS: CourseSectionDef[] = [
       'open-source-community',
     ],
   },
-];
+] as const satisfies readonly CourseSectionDef[];
 
-/** slug -> which track it belongs to (or null if unclassified). */
+/** Derived from the data, not maintained beside it. Adding a branch is one
+ *  object literal above — this union follows on its own. */
+export type CourseSectionId = (typeof COURSE_SECTIONS)[number]['id'];
+
+export const COURSE_SECTION_IDS: readonly CourseSectionId[] = COURSE_SECTIONS.map((s) => s.id);
+
+/** slug -> which branch it belongs to (or null if unclassified). */
 export function sectionForCourse(slug: string): CourseSectionId | null {
   for (const section of COURSE_SECTIONS) {
-    if (section.slugs.includes(slug)) return section.id;
+    // .some(), not .includes(): under `as const` each `slugs` is a literal
+    // tuple, and a literal tuple's `includes` narrows its own parameter to the
+    // union of its members — it rejects a plain `string` (TS2345). The
+    // alternative was a cast, which would defeat the point of deriving the
+    // type from the data at all.
+    if (section.slugs.some((s) => s === slug)) return section.id;
   }
   return null;
 }

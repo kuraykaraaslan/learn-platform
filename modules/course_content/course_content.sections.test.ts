@@ -1,15 +1,19 @@
 import { describe, expect, it } from 'vitest';
 import { listCourseSlugs } from './course_content.manifest';
-import { COURSE_SECTIONS, sectionForCourse } from './course_content.sections';
+import {
+  COURSE_SECTION_IDS,
+  COURSE_SECTIONS,
+  sectionForCourse,
+} from './course_content.sections';
 import { CourseContentService } from './course_content.service';
 
-describe('course sections (home-page tracks)', () => {
-  it('assigns every course on disk to exactly one track', () => {
+describe('course sections (home-page branches)', () => {
+  it('assigns every course on disk to exactly one branch', () => {
     const classified = COURSE_SECTIONS.flatMap((s) => s.slugs).sort();
     expect(classified).toEqual([...listCourseSlugs()].sort());
   });
 
-  it('never lists the same course in two tracks', () => {
+  it('never lists the same course in two branches', () => {
     const all = COURSE_SECTIONS.flatMap((s) => s.slugs);
     expect(all.length).toBe(new Set(all).size);
   });
@@ -30,6 +34,47 @@ describe('course sections (home-page tracks)', () => {
       }
     }
     expect(sectionForCourse('not-a-course')).toBeNull();
+  });
+
+  it('gives every branch a unique id', () => {
+    const ids = COURSE_SECTIONS.map((s) => s.id);
+    expect(ids.length).toBe(new Set(ids).size);
+  });
+
+  it('gives every branch a kebab-case id', () => {
+    for (const section of COURSE_SECTIONS) {
+      expect(section.id).toMatch(/^[a-z][a-z0-9-]*$/);
+    }
+  });
+
+  it('gives every branch a non-empty title and blurb', () => {
+    for (const section of COURSE_SECTIONS) {
+      expect(section.title.trim().length).toBeGreaterThan(0);
+      expect(section.blurb.trim().length).toBeGreaterThan(0);
+    }
+  });
+
+  it('never declares an empty branch', () => {
+    for (const section of COURSE_SECTIONS) {
+      expect(section.slugs.length).toBeGreaterThan(0);
+    }
+  });
+
+  it('never declares a branch smaller than three courses', () => {
+    // A judgement made mechanical, the same way P11 keeps RecallCard's
+    // MIN_ANSWER_LENGTH in a test: a two-course "branch" is a topic tag
+    // wearing a branch's clothes, and it renders as a near-empty home-page
+    // section.
+    for (const section of COURSE_SECTIONS) {
+      expect(section.slugs.length).toBeGreaterThanOrEqual(3);
+    }
+  });
+
+  it("keeps the home page CTA pointed at the first branch's first course", () => {
+    // app/(frontend)/page.tsx builds the site's primary call to action from
+    // sections[0].courses[0]. Appending a branch is safe; prepending one
+    // silently changes where "start here" goes, and nothing else would notice.
+    expect(CourseContentService.listCourseSections()[0].id).toBe('engineering');
   });
 
   it('listCourseSections keeps the declared order and covers every course', () => {
@@ -57,10 +102,10 @@ describe('catalogStats', () => {
   });
 });
 
-describe('listCourses track metadata', () => {
+describe('listCourses branch metadata', () => {
   it('gives every course a section, a dominant bracket, and a cover path', () => {
     for (const course of CourseContentService.listCourses()) {
-      expect(course.section).toMatch(/^(engineering|business)$/);
+      expect(COURSE_SECTION_IDS).toContain(course.section);
       expect(course.bracketCounts[course.dominantBracket]).toBeGreaterThan(0);
       // dominantBracket really is the max
       for (const [, n] of Object.entries(course.bracketCounts)) {
