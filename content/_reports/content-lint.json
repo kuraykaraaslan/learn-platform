@@ -1,13 +1,14 @@
 {
   "generatedFrom": "scripts/content-lint",
-  "lessons": 412,
+  "lessons": 422,
   "totals": {
-    "findings": 2,
+    "findings": 12,
     "errors": 0,
-    "warnings": 2,
+    "warnings": 12,
     "waived": 6
   },
   "byRule": {
+    "code/unverified-language": 10,
     "drill/widget-on-unverified-lesson": 2
   },
   "findings": [
@@ -24,6 +25,76 @@
       "target": "career-entrepreneurship/114_niche_positioning.md",
       "line": 100,
       "message": "`recall` fence on an unverified lesson — it renders nothing"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "framework-deep-dives/403_springboot_three_layer_architecture.md",
+      "line": 21,
+      "message": "`java` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "framework-deep-dives/404_springboot_response_entity_and_records.md",
+      "line": 21,
+      "message": "`java` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "framework-deep-dives/405_springboot_bean_validation.md",
+      "line": 62,
+      "message": "`java` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "framework-deep-dives/406_springboot_service_layer_transactional.md",
+      "line": 62,
+      "message": "`java` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "framework-deep-dives/407_springboot_security_filter_chain.md",
+      "line": 62,
+      "message": "`java` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "framework-deep-dives/408_springboot_jwt_auth_integration.md",
+      "line": 21,
+      "message": "`java` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "framework-deep-dives/409_springboot_controller_advice_error_handling.md",
+      "line": 62,
+      "message": "`java` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "framework-deep-dives/410_springboot_jpa_entities_and_n_plus_one.md",
+      "line": 21,
+      "message": "`java` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "framework-deep-dives/411_springboot_flyway_migrations.md",
+      "line": 109,
+      "message": "`java` fence — no typechecker and no runtime covers this language"
+    },
+    {
+      "rule": "code/unverified-language",
+      "severity": "warn",
+      "target": "framework-deep-dives/412_springboot_testing_mockmvc_testcontainers.md",
+      "line": 21,
+      "message": "`java` fence — no typechecker and no runtime covers this language"
     }
   ]
 }

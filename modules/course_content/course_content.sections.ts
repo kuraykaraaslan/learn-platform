@@ -60,6 +60,13 @@ export const COURSE_SECTIONS = [
       'open-source-community',
     ],
   },
+  {
+    id: 'built-environment',
+    title: 'The built environment',
+    blurb:
+      "Software for physical assets: model formats, coordinates, telemetry, and keeping an asset's data true after handover.",
+    slugs: ['bim-ifc-data-models'],
+  },
 ] as const satisfies readonly CourseSectionDef[];
 
 /** Derived from the data, not maintained beside it. Adding a branch is one

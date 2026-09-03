@@ -20,6 +20,7 @@ function chips(f: LessonFeatures): Chip[] {
   if (f.tradeoff) out.push({ label: WIDGET_LABEL.tradeoff });
   if (f.recall) out.push({ label: WIDGET_LABEL.recall });
   if (f.calc) out.push({ label: WIDGET_LABEL.calc });
+  if (f.spatial) out.push({ label: WIDGET_LABEL.spatial });
   if (f.checklist) out.push({ label: WIDGET_LABEL.checklist });
   if (f.template) out.push({ label: WIDGET_LABEL.template });
   if (f.mermaid) out.push({ label: WIDGET_LABEL.mermaid });

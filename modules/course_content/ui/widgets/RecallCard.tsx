@@ -12,9 +12,8 @@ import { useProgressStore, mistakeKey, widgetFieldKey, type MistakeAssessment } 
 import { useHydrated } from '@/modules/progress/useHydrated';
 import type { RecallItem, RecallWidget } from '../../course_content.recall';
 import { WidgetShell } from '../WidgetShell';
+import { canReveal, charsRemaining } from '../reveal-gate';
 import { BTN_PRIMARY, CHECKBOX, CHIP_BASE, CHIP_IDLE, CHIP_ON, FIELD } from '../widget-ui';
-
-const MIN_ANSWER_LENGTH = 15;
 
 const ASSESSMENT_LABEL: Record<MistakeAssessment, string> = {
   knew: 'I knew it',
@@ -41,7 +40,7 @@ function RecallItemView({
   onReveal: () => void;
 }) {
   const [answer, setAnswer] = useState('');
-  const canReveal = answer.trim().length >= MIN_ANSWER_LENGTH;
+  const unlocked = canReveal(answer);
   const hydrated = useHydrated();
 
   const checked = useProgressStore((s) => s.checklistChecked);
@@ -63,11 +62,11 @@ function RecallItemView({
             placeholder="Write what you remember before revealing the checklist…"
             className={cn(FIELD, 'resize-y p-2')}
           />
-          <button type="button" onClick={onReveal} disabled={!canReveal} className={cn(BTN_PRIMARY, 'mt-2')}>
+          <button type="button" onClick={onReveal} disabled={!unlocked} className={cn(BTN_PRIMARY, 'mt-2')}>
             Show
           </button>
-          {!canReveal && answer.length > 0 && (
-            <p className="mt-1 text-xs text-text-secondary">{MIN_ANSWER_LENGTH - answer.trim().length} more characters</p>
+          {!unlocked && answer.length > 0 && (
+            <p className="mt-1 text-xs text-text-secondary">{charsRemaining(answer)} more characters</p>
           )}
         </div>
       )}

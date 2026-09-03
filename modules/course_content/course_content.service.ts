@@ -71,6 +71,7 @@ function deriveFeatures(
     sql: false,
     mermaid: false,
     calc: false,
+    spatial: false,
   };
   for (const list of Object.values(blocks)) {
     for (const block of list) {
@@ -81,6 +82,7 @@ function deriveFeatures(
         else if (block.widget.type === 'tradeoff') f.tradeoff = true;
         else if (block.widget.type === 'recall') f.recall = true;
         else if (block.widget.type === 'calc') f.calc = true;
+        else if (block.widget.type === 'spatial') f.spatial = true;
         else if (block.widget.type === 'diff') f.diff = true;
       } else if (block.kind === 'code') {
         if (block.lang === 'mermaid') f.mermaid = true;

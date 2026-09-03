@@ -1,0 +1,8 @@
+{
+  "name": "verify-bim-ifc-data-models-432",
+  "private": true,
+  "description": "Parses a hand-written IFC-SPF file with a zero-dependency Node reader, for lesson 432's proof block. No npm install is possible here (scripts/stamp-verify.ts only runs the command), and none is wanted: web-ifc would be a root dependency of a static site that never uses it in the browser, and its output would move with its own minor releases. Never installed as a dependency of the main app.",
+  "scripts": {
+    "verify": "bash run.sh"
+  }
+}

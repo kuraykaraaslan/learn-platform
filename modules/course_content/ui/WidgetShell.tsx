@@ -21,6 +21,7 @@ export type WidgetKind =
   | 'tradeoff'
   | 'recall'
   | 'calc'
+  | 'spatial'
   | 'checklist'
   | 'template'
   | 'diff'
@@ -39,6 +40,7 @@ export const WIDGET_LABEL: Record<WidgetKind, string> = {
   tradeoff: 'trade-off',
   recall: 'recall',
   calc: 'calculator',
+  spatial: 'model tree',
   checklist: 'checklist',
   template: 'fill-in',
   diff: 'broken → fixed',
@@ -68,6 +70,7 @@ const FAMILY: Record<WidgetKind, Family> = {
   project: 'run',
   proof: 'reveal',
   diff: 'reveal',
+  spatial: 'reveal',
   code: 'read',
   mermaid: 'read',
 };

@@ -1,16 +1,16 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
-  "totalTerms": 126,
-  "totalLessons": 412,
+  "totalTerms": 130,
+  "totalLessons": 422,
   "totals": {
     "neverMatched": 0,
     "neverLinked": 18,
     "neverLinkedByCause": {
       "own-lesson-only": 3,
-      "code-only": 13,
+      "code-only": 12,
       "shadowed": 0,
       "case-mismatch": 1,
-      "cap-starved": 1,
+      "cap-starved": 2,
       "never-matched": 0
     },
     "atCapLessons": 10
@@ -130,10 +130,15 @@
     {
       "slug": "primary-key",
       "term": "Primary key",
-      "cause": "code-only",
-      "linkableInLessons": [],
-      "presentInLessons": [],
+      "cause": "cap-starved",
+      "linkableInLessons": [
+        439
+      ],
+      "presentInLessons": [
+        439
+      ],
       "alsoAppearsInLessons": [
+        439,
         12,
         411
       ]
@@ -672,6 +677,16 @@
       "rawOccurrences": 22
     },
     {
+      "slug": "global-id",
+      "term": "GlobalId",
+      "lessonsLinkedIn": [
+        "bim-ifc-data-models/432_parsing_ifc_without_a_library.md",
+        "bim-ifc-data-models/439_ifc_in_a_relational_database.md",
+        "bim-ifc-data-models/440_model_diffing.md"
+      ],
+      "rawOccurrences": 43
+    },
+    {
       "slug": "graceful-degradation",
       "term": "Graceful degradation",
       "lessonsLinkedIn": [
@@ -735,6 +750,21 @@
         "distributed-systems-api-design/131_message_queues_101.md"
       ],
       "rawOccurrences": 20
+    },
+    {
+      "slug": "ifc",
+      "term": "IFC",
+      "lessonsLinkedIn": [
+        "bim-ifc-data-models/432_parsing_ifc_without_a_library.md",
+        "bim-ifc-data-models/433_globalid_the_ifc_guid.md",
+        "bim-ifc-data-models/434_the_spatial_hierarchy.md",
+        "bim-ifc-data-models/435_containment_aggregation_voiding.md",
+        "bim-ifc-data-models/436_property_sets_and_quantity_sets.md",
+        "bim-ifc-data-models/437_units_precision_local_placement.md",
+        "bim-ifc-data-models/438_georeferencing_a_model.md",
+        "bim-ifc-data-models/440_model_diffing.md"
+      ],
+      "rawOccurrences": 75
     },
     {
       "slug": "index-bloat",
@@ -892,7 +922,7 @@
       "slug": "primary-key",
       "term": "Primary key",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 5
+      "rawOccurrences": 12
     },
     {
       "slug": "principle-of-least-privilege",
@@ -916,6 +946,15 @@
         "ai-llm-engineering/164_multi_agent_orchestration_workflow_chaining.md"
       ],
       "rawOccurrences": 9
+    },
+    {
+      "slug": "property-set",
+      "term": "property set",
+      "lessonsLinkedIn": [
+        "bim-ifc-data-models/439_ifc_in_a_relational_database.md",
+        "bim-ifc-data-models/440_model_diffing.md"
+      ],
+      "rawOccurrences": 21
     },
     {
       "slug": "race-condition",
@@ -1178,6 +1217,15 @@
         "product-technical-strategy/392_data_architecture_ownership_lifecycle.md"
       ],
       "rawOccurrences": 26
+    },
+    {
+      "slug": "spatial-containment",
+      "term": "spatial containment",
+      "lessonsLinkedIn": [
+        "bim-ifc-data-models/434_the_spatial_hierarchy.md",
+        "bim-ifc-data-models/439_ifc_in_a_relational_database.md"
+      ],
+      "rawOccurrences": 4
     },
     {
       "slug": "sticky-sessions",

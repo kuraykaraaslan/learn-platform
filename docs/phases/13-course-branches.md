@@ -161,6 +161,14 @@ Mekanizma bu fazda, ilk kullanıcısı sonraki fazda.
       etmedi
 - [x] `npm run build` yeşil; ana sayfa iki dalı bugünkü sırayla, bugünkü
       görünümle render ediyor
+- [x] **P14 eki — "asgari 3 kurs" kuralının istisnası yazılı.** P14'ün
+      `built-environment` dalı tek kursla açılıyor ve P16'ya kadar üçe
+      ulaşmıyor. Kural kaldırılmadı ve `it.todo` da yapılmadı: testte adı konmuş
+      tek bir istisna listesi var (`UNDER_CONSTRUCTION`), ve yanındaki
+      `keeps no finished branch on the under-construction list` testi istisnayı
+      **kendi kendine iptal ettiriyor** — dal üçe ulaştığı anda giriş hâlâ
+      oradaysa kırılıyor. Bu fazın risk satırının şartı ("gerekçeyle
+      değiştirilir — sessizce aşılamaz") böyle karşılanıyor.
 
 ## Risk
 

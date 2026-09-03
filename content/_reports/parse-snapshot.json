@@ -1,5 +1,5 @@
 {
-  "lessonCount": 412,
+  "lessonCount": 422,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -457,6 +457,98 @@
         "whenToUse": "2df9bee85d6eb31b",
         "commonMistakes": "6d7437a5dfb9533a",
         "furtherReading": "3a7beacf946b32d6"
+      }
+    },
+    "bim-ifc-data-models": {
+      "431_ifc_as_a_file_format.md": {
+        "title": "e9b6f77ba615f3e7",
+        "whatItIs": "53d112388afcab45",
+        "keyConcepts": "682e72f7091d94d5",
+        "exampleCode": "3910615673088d17",
+        "whenToUse": "3a7af7e01c5246d2",
+        "commonMistakes": "0481f4151ffa5e8c",
+        "furtherReading": "ad6c5a69d7453678"
+      },
+      "432_parsing_ifc_without_a_library.md": {
+        "title": "452e2845ee0055e2",
+        "whatItIs": "4c9ce8013c749386",
+        "keyConcepts": "3e97697a3ed5032f",
+        "exampleCode": "20684724510be939",
+        "whenToUse": "0e1d2ffd0b32ded0",
+        "commonMistakes": "c727632f2b7621af",
+        "furtherReading": "d0933115d2933a75"
+      },
+      "433_globalid_the_ifc_guid.md": {
+        "title": "985fe64fbf7d7b3d",
+        "whatItIs": "81fde087f15ec7f9",
+        "keyConcepts": "e615ad7b023c417f",
+        "exampleCode": "da41ab39a5316ff2",
+        "whenToUse": "a2d355daa661e3e9",
+        "commonMistakes": "828a707902a10f6e",
+        "furtherReading": "3bdd1aaa1b1a8f82"
+      },
+      "434_the_spatial_hierarchy.md": {
+        "title": "f13680fc61d114ff",
+        "whatItIs": "f0388a0be81c2b5c",
+        "keyConcepts": "726b53706c29b898",
+        "exampleCode": "16148f8237a6e547",
+        "whenToUse": "887da65ac2cebe94",
+        "commonMistakes": "0a4d83ce9b19f693",
+        "furtherReading": "856e244defd9fd64"
+      },
+      "435_containment_aggregation_voiding.md": {
+        "title": "fa5e8a9efad553a2",
+        "whatItIs": "b09941a67685b86b",
+        "keyConcepts": "9b5c6e4a920d5a4a",
+        "exampleCode": "6e817ac2fca68935",
+        "whenToUse": "5a5d35a0015e5b45",
+        "commonMistakes": "792bef84895d513a",
+        "furtherReading": "287f381fbfe05e36"
+      },
+      "436_property_sets_and_quantity_sets.md": {
+        "title": "4753931ebfa0e562",
+        "whatItIs": "38436b452abeff25",
+        "keyConcepts": "70a45f3a1ebbaa64",
+        "exampleCode": "fc9ff1c2bbf86417",
+        "whenToUse": "3972ae2e28edba34",
+        "commonMistakes": "988deeefd796ed19",
+        "furtherReading": "9acc0ef7f7d5d4f0"
+      },
+      "437_units_precision_local_placement.md": {
+        "title": "fa252ba0d5ec0f29",
+        "whatItIs": "619fb1e036499146",
+        "keyConcepts": "3ebae313ebdb9ebb",
+        "exampleCode": "99e3647ff4ed3f95",
+        "whenToUse": "aa441f33ee673150",
+        "commonMistakes": "cd6ec62972e6326d",
+        "furtherReading": "11b3c126f3b99b17"
+      },
+      "438_georeferencing_a_model.md": {
+        "title": "19e9757cc435c652",
+        "whatItIs": "976e84fe2dff4888",
+        "keyConcepts": "f3bdd78c8c539872",
+        "exampleCode": "5583e64da85a85e5",
+        "whenToUse": "df8c4b67a63ff592",
+        "commonMistakes": "6c6f921201365a22",
+        "furtherReading": "63c8f551695fc2bc"
+      },
+      "439_ifc_in_a_relational_database.md": {
+        "title": "d775cd2dbff8f735",
+        "whatItIs": "1ec101262caa3b2d",
+        "keyConcepts": "ca852eac6b8608e3",
+        "exampleCode": "6ef370dc6969b023",
+        "whenToUse": "454fc56924ac68f9",
+        "commonMistakes": "e39b9cb950799aa3",
+        "furtherReading": "54505012bad84a63"
+      },
+      "440_model_diffing.md": {
+        "title": "0a0311d492ead3a6",
+        "whatItIs": "565d16a19c86967b",
+        "keyConcepts": "8c8ac549b89e9517",
+        "exampleCode": "d3d05a7dcce4e981",
+        "whenToUse": "7988f6cbea15674f",
+        "commonMistakes": "862ac09136fb6ab8",
+        "furtherReading": "a42bae2fff99c094"
       }
     },
     "business-finance-solo-ops": {

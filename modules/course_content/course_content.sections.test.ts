@@ -60,13 +60,29 @@ describe('course sections (home-page branches)', () => {
     }
   });
 
+  // One named exception, not a silent relaxation — P13's own risk row says a
+  // genuinely smaller branch changes this test WITH a reason. P14-P21 open
+  // 'built-environment' one course at a time, so it lives below three until
+  // P16 lands. The exception expires on its own: the test below fails the
+  // moment the branch reaches three and the entry is still here.
+  const UNDER_CONSTRUCTION = new Set(['built-environment']);
+
   it('never declares a branch smaller than three courses', () => {
     // A judgement made mechanical, the same way P11 keeps RecallCard's
     // MIN_ANSWER_LENGTH in a test: a two-course "branch" is a topic tag
     // wearing a branch's clothes, and it renders as a near-empty home-page
     // section.
     for (const section of COURSE_SECTIONS) {
+      if (UNDER_CONSTRUCTION.has(section.id)) continue;
       expect(section.slugs.length).toBeGreaterThanOrEqual(3);
+    }
+  });
+
+  it('keeps no finished branch on the under-construction list', () => {
+    for (const id of UNDER_CONSTRUCTION) {
+      const section = COURSE_SECTIONS.find((s) => s.id === id);
+      expect(section ? id : `${id} (no such branch)`).toBe(id);
+      expect(section!.slugs.length).toBeLessThan(3);
     }
   });
 
@@ -94,7 +110,7 @@ describe('course sections (home-page branches)', () => {
 describe('catalogStats', () => {
   it('reports the measured corpus size, not a hardcoded guess', () => {
     const stats = CourseContentService.catalogStats();
-    expect(stats.lessons).toBe(412);
+    expect(stats.lessons).toBe(422);
     expect(stats.courses).toBe(listCourseSlugs().length);
     expect(stats.drillableLessons).toBeGreaterThan(0);
     expect(stats.drillableLessons).toBeLessThanOrEqual(stats.lessons);

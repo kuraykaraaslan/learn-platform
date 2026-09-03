@@ -13,6 +13,7 @@ import { RUNNABLE_LANGS } from '../../modules/course_content/course_content.tran
 import { MAX_SEED_BYTES } from '../../modules/course_content/course_content.seeds';
 import { parseQuiz } from '../../modules/course_content/course_content.quiz';
 import { parseRecall } from '../../modules/course_content/course_content.recall';
+import { flattenSpatial, parseSpatial } from '../../modules/course_content/course_content.spatial';
 import { extractMountFiles } from '../../modules/course_content/course_content.mount';
 import { splitSnippetFiles } from '../../modules/course_content/course_content.snippets';
 
@@ -79,6 +80,14 @@ export function walkLines(lines: string[]): { line: string; index: number; inFen
   });
   return out;
 }
+
+/** Languages no gate in this repo covers: scripts/verify-code.ts compiles
+ *  TS/JS only, and the three runtimes (P8 sandbox, P9 WebContainer, P10
+ *  PGlite) execute TS/JS, a Node project and SQL. A fence in any of these
+ *  ships on the author's word alone. See `code/unverified-language`. */
+const UNVERIFIED_LANGS = new Set([
+  'java', 'python', 'py', 'ruby', 'go', 'csharp', 'cs', 'php', 'rust', 'kotlin', 'swift', 'cpp', 'c',
+]);
 
 const RECOGNIZED = [
   'What It Is',
@@ -496,16 +505,29 @@ export const RULES: Rule[] = [
     id: 'drill/widget-on-unverified-lesson',
     severity: 'warn',
     description:
-      'A `quiz` or `recall` fence on a lesson that is not `verified`. QuizCard and RecallCard both return null in that case — the stopping rule working — so the fence renders nothing at all and the effort is invisible to every reader. The neighbouring `drill/unverified-lesson` rule does not catch this: it checks a manifest `interactive` field that no lesson in the corpus actually sets, so nothing was watching the fences themselves. Born `warn` per the repo rule, because the corpus is not clean of it: 114 is on stamp-verified.ts\'s T1.7 harm denylist and can only be cleared by the expert pass that list is waiting for, so its drills stay written-but-dark until then. Promote to `error` once that is resolved.',
+      'A `quiz` or `recall` fence, or a `spatial` fence declaring an `ask`, on a lesson that is not `verified`. QuizCard and RecallCard both return null in that case — the stopping rule working — so the fence renders nothing at all and the effort is invisible to every reader. SpatialCard is the one partial case: its tree still renders (a tree is a reference, not an exercise) but its `ask` half stays shut, so the question and its reveal are the invisible part. The neighbouring `drill/unverified-lesson` rule does not catch any of this: it checks a manifest `interactive` field that no lesson in the corpus actually sets, so nothing was watching the fences themselves. Born `warn` per the repo rule, because the corpus is not clean of it: 114 is on stamp-verified.ts\'s T1.7 harm denylist and can only be cleared by the expert pass that list is waiting for, so its drills stay written-but-dark until then. Promote to `error` once that is resolved.',
     lesson: (file) => {
       if (file.verified === true) return [];
-      const gated = file.fences.filter((f) => f.lang === 'quiz' || f.lang === 'recall');
+      const gated = file.fences.filter((f) => {
+        if (f.lang === 'quiz' || f.lang === 'recall') return true;
+        if (f.lang !== 'spatial') return false;
+        // A gateless spatial fence renders in full on an unverified lesson,
+        // so there is nothing dark to report; only the `ask` is withheld.
+        try {
+          return parseSpatial(f.code).ask !== undefined;
+        } catch {
+          return false; // spatial/invalid-payload already reports this fence
+        }
+      });
       return gated.map((f) => ({
         rule: 'drill/widget-on-unverified-lesson',
         severity: 'warn' as const,
         target: file.target,
         line: f.line,
-        message: `\`${f.lang}\` fence on an unverified lesson — it renders nothing`,
+        message:
+          f.lang === 'spatial'
+            ? '`spatial` fence declares an `ask` on an unverified lesson — the question and its reveal never open'
+            : `\`${f.lang}\` fence on an unverified lesson — it renders nothing`,
       }));
     },
   },
@@ -840,5 +862,96 @@ export const RULES: Rule[] = [
         },
       ];
     },
+  },
+  {
+    id: 'spatial/invalid-payload',
+    // Born `error`, not the usual `warn` (docs/phases/README.md invariant #6),
+    // for the reason code/prose-fence-should-be-template recorded: the corpus
+    // had zero `spatial` fences when this rule was written, so it cannot be
+    // blocked by a backlog it did not create.
+    severity: 'error',
+    description:
+      'A `spatial` fence course_content.spatial.ts rejects — unparseable YAML, an unknown key, a numeric property value, a tree outside the 3-40 node range or deeper than 6, a duplicate node id, a `rel` on the root or missing on a child, half a gate (`ask` without `reveal` or the reverse), or more than one `flag: focus`. The same "bad payload is a build failure" stance quiz/tradeoff/recall already take, reported here against the fence instead of as a stack trace inside the corpus parse-snapshot test.',
+    lesson: (file) =>
+      file.fences
+        .filter((f) => f.lang === 'spatial')
+        .flatMap((f) => {
+          try {
+            parseSpatial(f.code);
+            return [];
+          } catch (error) {
+            return [
+              {
+                rule: 'spatial/invalid-payload',
+                severity: 'error' as const,
+                target: file.target,
+                line: f.line,
+                message: `spatial fence failed validation: ${error instanceof Error ? error.message : String(error)}`,
+              },
+            ];
+          }
+        }),
+  },
+  {
+    id: 'spatial/unanchored-reveal',
+    severity: 'error',
+    description:
+      "A `spatial` fence's `reveal` sentence, or one of its `props[].set` names, does not appear verbatim in the lesson's own prose (outside `spatial` fence bodies themselves — a self-referential match doesn't count). This is quiz/unanchored-answer applied to the other widget that can state a fact, and it is the rule that stops this one from producing plausible IFC: a tree the lesson never taught cannot be its own answer, and a Pset name the lesson never mentions cannot appear on a node. It also makes version-dependent Pset names findable — when a schema release renames one, the exact list to change is whatever this rule points at.",
+    lesson: (file) => {
+      const fences = file.fences.filter((f) => f.lang === 'spatial');
+      if (fences.length === 0) return [];
+      const proseWithoutTrees = fences.reduce((text, f) => text.split(f.code).join(''), file.raw);
+
+      return fences.flatMap((f) => {
+        let widget;
+        try {
+          widget = parseSpatial(f.code);
+        } catch {
+          return []; // spatial/invalid-payload already reports this fence
+        }
+
+        const out: Finding[] = [];
+        if (widget.reveal && !proseWithoutTrees.includes(widget.reveal)) {
+          out.push({
+            rule: 'spatial/unanchored-reveal',
+            severity: 'error',
+            target: file.target,
+            line: f.line,
+            message: `reveal "${widget.reveal.slice(0, 70)}" does not appear in this lesson's own prose`,
+          });
+        }
+        const sets = new Set(flattenSpatial(widget.root).flatMap((n) => (n.props ?? []).map((p) => p.set)));
+        for (const set of sets) {
+          if (proseWithoutTrees.includes(set)) continue;
+          out.push({
+            rule: 'spatial/unanchored-reveal',
+            severity: 'error',
+            target: file.target,
+            line: f.line,
+            message: `property set "${set}" appears on a node but nowhere in this lesson's own prose`,
+          });
+        }
+        return out;
+      });
+    },
+  },
+  {
+    id: 'code/unverified-language',
+    // Born `warn` (invariant #6): the corpus is not clean of it — the 10
+    // pre-existing `java` fences are exactly the gap this rule exists to make
+    // visible rather than to pretend away.
+    severity: 'warn',
+    description:
+      'A code fence in a language nothing checks: scripts/verify-code.ts typechecks TS/JS only, and the three runtimes cover TS/JS (P8), a Node project (P9) and SQL (P10). Everything else ships unverified. This is a COUNTER, not a ban — docs/phases/16-autodesk-developer-platform.md deliberately brings C# fences in, because the Revit API has no other language, and caps them in its own acceptance criteria. What the rule buys is that the unchecked fence count stays visible and bounded, instead of Python quietly arriving with the built-environment courses whose real tools (ifcopenshell, pyproj) are Python.',
+    lesson: (file) =>
+      file.fences
+        .filter((f) => UNVERIFIED_LANGS.has(f.lang.toLowerCase()))
+        .map((f) => ({
+          rule: 'code/unverified-language',
+          severity: 'warn' as const,
+          target: file.target,
+          line: f.line,
+          message: `\`${f.lang}\` fence — no typechecker and no runtime covers this language`,
+        })),
   },
 ];

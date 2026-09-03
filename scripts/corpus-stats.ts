@@ -23,6 +23,7 @@ import { splitLessonSections } from '../modules/course_content/course_content.pa
 import { parseMistakes } from '../modules/course_content/course_content.mistakes';
 import { parseFenceMeta } from '../modules/course_content/course_content.fence-meta';
 import { looksLikeDiff } from '../modules/course_content/course_content.diff';
+import { COURSE_SECTIONS } from '../modules/course_content/course_content.sections';
 
 const README = path.join(process.cwd(), 'docs', 'phases', 'README.md');
 const checkMode = process.argv.includes('--check');
@@ -102,7 +103,7 @@ const lessonsBy = (p: (f: (typeof fences)[number]) => boolean) =>
   new Set(fences.filter(p).map((f) => `${f.courseSlug}/${f.file}`)).size;
 
 const widgets: Record<string, [string, string]> = {};
-for (const w of ['quiz', 'recall', 'mermaid', 'tradeoff', 'calc', 'proof'])
+for (const w of ['quiz', 'recall', 'mermaid', 'tradeoff', 'calc', 'proof', 'spatial'])
   widgets[`\`${w}\``] = [String(lang(w)), String(lessonsWith(w))];
 widgets['`run` (toplam)'] = [String(countBy(isRun)), String(lessonsBy(isRun))];
 widgets['— `sql run`'] = [String(countBy((f) => isRun(f) && f.lang === 'sql')), ''];
@@ -113,17 +114,65 @@ widgets['— JS/TS `run`'] = [
 widgets['— `run project`'] = [String(countBy((f) => isRun(f) && parseFenceMeta(f.meta).project)), ''];
 widgets['`diff`'] = [String(countBy((f) => looksLikeDiff(f.code))), String(lessonsBy((f) => looksLikeDiff(f.code)))];
 
+// The third measurement map, and the reason it is a table of its own rather
+// than a column. `P0 zemini` measures 412 lessons; after P21 `Bugün` measures
+// 491, and the gap between the two columns stops meaning "what the phases did
+// to the existing corpus". A fourth cell cannot be added: a 4-column row
+// splits into 6 cells, `cells.length !== 5` skips it, and every label in that
+// table then reports MISSING. So the domain gets its own 3-column table, whose
+// labels appear nowhere else in the file, with a `P13 zemini` column of zeroes
+// that never moves.
+//
+// The slug set is DERIVED from the built-environment branch, never listed
+// here — course_content.sections.ts stays the single source of truth for what
+// the domain contains.
+// Set<string>, not the inferred Set of the literal tuple's members — under
+// `as const` a branch's `slugs` is a literal tuple, and the narrowed Set's
+// `has` rejects a plain string. Same reason sectionForCourse() uses `.some()`.
+const domainSlugs: Set<string> = new Set(
+  COURSE_SECTIONS.find((section) => section.id === 'built-environment')?.slugs ?? []
+);
+const domainLessons = lessons.filter((l) => domainSlugs.has(l.slug));
+const domainFences = fences.filter((f) => domainSlugs.has(f.courseSlug));
+
+let domainMistakes = 0;
+let domainDrillable = 0;
+for (const l of domainLessons) {
+  const s_ = splitLessonSections(l.raw).sections as Record<string, string>;
+  const m = parseMistakes(s_.commonMistakes ?? '');
+  domainMistakes += m.length;
+  domainDrillable += m.filter((x) => x.form !== 'single').length;
+}
+
+const domain: Record<string, string> = {
+  'Alan dersi / alan kursu': `${domainLessons.length} / ${domainSlugs.size}`,
+  "Alan fence'i": String(domainFences.length),
+  'Alan Common Mistakes maddesi': String(domainMistakes),
+  "Alan — drill'lenebilir": String(domainDrillable),
+};
+
 const documented = new Map<string, string>();
 const documentedWidgets = new Map<string, [string, string]>();
 for (const line of fs.readFileSync(README, 'utf-8').split('\n')) {
   const cells = line.split('|').map((c) => c.trim());
   if (cells.length !== 5) continue; // "", label, baseline, today, ""
+  // A table's separator row (`|---|---:|---|`) is shaped like a data row and
+  // is not a label — it recurs once per table by construction.
+  if (/^:?-{3,}:?$/.test(cells[1])) continue;
+  // Last-writer-wins was invisible while every label happened to be unique.
+  // The domain table makes it reachable: a new row whose label collides with
+  // an existing one would silently shadow the checked value, and the check
+  // would then pass against the wrong number.
+  if (documented.has(cells[1]))
+    throw new Error(
+      `docs/phases/README.md has two rows labelled "${cells[1]}" — the later one shadows the checked value`
+    );
   documented.set(cells[1], cells[3]);
   documentedWidgets.set(cells[1], [cells[2], cells[3]]);
 }
 
 let bad = 0;
-for (const [label, value] of Object.entries(measured)) {
+for (const [label, value] of Object.entries({ ...measured, ...domain })) {
   const doc = documented.get(label);
   if (doc === undefined) { console.error(`MISSING  "${label}" — no such row in the table`); bad++; continue; }
   if (doc !== value) { console.error(`STALE    "${label}"  documented ${doc}  ·  measured ${value}`); bad++; continue; }
@@ -141,7 +190,7 @@ for (const [label, [fenceCount, lessonCount]] of Object.entries(widgets)) {
   if (!checkMode) console.log(`ok       ${label.padEnd(38)} ${fenceCount}${lessonCount ? ' / ' + lessonCount : ''}`);
 }
 
-console.log(`\n${Object.keys(measured).length + Object.keys(widgets).length} rows checked · ${bad} disagree`);
+console.log(`\n${Object.keys(measured).length + Object.keys(domain).length + Object.keys(widgets).length} rows checked · ${bad} disagree`);
 if (bad > 0) {
   console.error("docs/phases/README.md's Bugün column no longer matches the corpus. Update it — the P0 zemini column must not move.");
   process.exit(1);

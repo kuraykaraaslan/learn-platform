@@ -1,0 +1,87 @@
+{
+  "slug": "bim-ifc-data-models",
+  "title": "BIM & IFC Data Models",
+  "description": "The IFC data model as a developer meets it: a text file, a schema, a hierarchy, and the relationships that decide where an element lives.",
+  "items": [
+    {
+      "id": 431,
+      "file": "431_ifc_as_a_file_format.md",
+      "title": "IFC as a File Format — STEP Physical File and the EXPRESS Schema",
+      "bracket": "1-3",
+      "category": "BIM & IFC Data Models",
+      "verified": true
+    },
+    {
+      "id": 432,
+      "file": "432_parsing_ifc_without_a_library.md",
+      "title": "Parsing IFC Without a Library: Entity Lines, References, Forward Declarations",
+      "bracket": "3-7",
+      "category": "BIM & IFC Data Models",
+      "verified": true
+    },
+    {
+      "id": 433,
+      "file": "433_globalid_the_ifc_guid.md",
+      "title": "GlobalId — IFC's 22-Character GUID, and What Breaks It",
+      "bracket": "3-7",
+      "category": "BIM & IFC Data Models",
+      "verified": true
+    },
+    {
+      "id": 434,
+      "file": "434_the_spatial_hierarchy.md",
+      "title": "The Spatial Hierarchy: Project → Site → Building → Storey → Space",
+      "bracket": "1-3",
+      "category": "BIM & IFC Data Models",
+      "verified": true
+    },
+    {
+      "id": 435,
+      "file": "435_containment_aggregation_voiding.md",
+      "title": "Containment, Aggregation, Voiding: The Relationship That Puts an Element Somewhere",
+      "bracket": "3-7",
+      "category": "BIM & IFC Data Models",
+      "verified": true
+    },
+    {
+      "id": 436,
+      "file": "436_property_sets_and_quantity_sets.md",
+      "title": "Property Sets and Quantity Sets: Where a Value Actually Lives",
+      "bracket": "3-7",
+      "category": "BIM & IFC Data Models",
+      "verified": true
+    },
+    {
+      "id": 437,
+      "file": "437_units_precision_local_placement.md",
+      "title": "Units, Precision, and the Local Placement Chain",
+      "bracket": "3-7",
+      "category": "BIM & IFC Data Models",
+      "verified": true
+    },
+    {
+      "id": 438,
+      "file": "438_georeferencing_a_model.md",
+      "title": "Project Base Point, Survey Point, True North: Georeferencing a Model",
+      "bracket": "3-7",
+      "category": "BIM & IFC Data Models",
+      "verified": true
+    },
+    {
+      "id": 439,
+      "file": "439_ifc_in_a_relational_database.md",
+      "title": "IFC in a Relational Database: Entities, Psets, and the Join You Will Regret",
+      "bracket": "3-7",
+      "category": "BIM & IFC Data Models",
+      "verified": true
+    },
+    {
+      "id": 440,
+      "file": "440_model_diffing.md",
+      "title": "Model Diffing: Deciding What Actually Changed Between Two Exports",
+      "bracket": "7-10",
+      "category": "BIM & IFC Data Models",
+      "verified": true
+    }
+  ]
+}

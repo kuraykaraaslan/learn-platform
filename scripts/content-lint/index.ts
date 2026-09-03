@@ -1,5 +1,6 @@
 /**
- * Runs the content rule pack over all 412 lessons and 23 manifests.
+ * Runs the content rule pack over every lesson and manifest under
+ * content/courses/ (the count is printed, never assumed).
  *
  *   npx tsx scripts/content-lint            # report, always exit 0
  *   npx tsx scripts/content-lint --strict   # exit 1 on any `error`-severity finding

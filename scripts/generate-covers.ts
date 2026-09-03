@@ -54,6 +54,7 @@ const SUBJECTS: Record<string, string> = {
   'saas-business-skills': 'a recurring-revenue staircase with a subscription cycle arrow',
   'content-seo-personal-brand': 'a magnet drawing readers toward a rising article and a search bar',
   'open-source-community': 'a network of contributors around a shared repository star',
+  'bim-ifc-data-models': 'a wireframe building section unfolding into a nested tree of labelled data nodes',
 };
 
 type Quality = 'low' | 'medium' | 'high';

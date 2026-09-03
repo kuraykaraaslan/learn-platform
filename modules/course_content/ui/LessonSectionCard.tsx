@@ -20,6 +20,7 @@ import { TradeoffCard } from './TradeoffCard';
 import { DiffCard } from './DiffCard';
 import { RecallCard } from './widgets/RecallCard';
 import { CalcCard } from './widgets/CalcCard';
+import { SpatialCard } from './widgets/SpatialCard';
 
 // Tried next/dynamic() here to keep this JS out of the ~324 lesson pages
 // with no widget block — measured worse (8.59 kB vs 7.22 kB gz) and, per
@@ -122,6 +123,11 @@ function BlockView({
           return (
             <CalcCard widget={block.widget} blockId={block.id} courseSlug={courseSlug} lessonFile={lessonFile} />
           );
+        // `verified` is passed but does NOT gate the whole card: a spatial
+        // tree is a reference, not an exercise, so it renders on any lesson.
+        // Only its `ask` half obeys the stopping rule (SpatialCard.tsx).
+        case 'spatial':
+          return <SpatialCard widget={block.widget} verified={verified} />;
       }
   }
 }

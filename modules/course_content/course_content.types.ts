@@ -72,6 +72,9 @@ export type LessonFeatures = {
   /** A `calc` fence — the reader's own numbers through the lesson's model
    *  (docs/phases/11-recall-and-calc.md). */
   calc: boolean;
+  /** A `spatial` fence — a walkable IFC-style model tree
+   *  (docs/phases/14-bim-ifc-data-models.md). */
+  spatial: boolean;
 };
 
 export type LessonCard = ManifestItem & {

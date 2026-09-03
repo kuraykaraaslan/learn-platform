@@ -65,7 +65,7 @@ P23 developer path'leri  ← P14..P21 (kurslar arası okuma sırası)
 | P11 | [11-recall-and-calc.md](11-recall-and-calc.md) | ~3 gün | tamamlandı — RecallCard + CalcCard/`expr.ts`; recall 76, calc 13 derse yayıldı |
 | P12 | [12-search-and-review-queue.md](12-search-and-review-queue.md) | ~4 gün | tamamlandı — ⌘K, next/prev, Return Queue, export/import |
 | P13 | [13-course-branches.md](13-course-branches.md) | ~1 gün | tamamlandı — `CourseSectionId` veriden türüyor; 6 yeni dal iddiası, test 268 → 274 |
-| P14 | [14-bim-ifc-data-models.md](14-bim-ifc-data-models.md) | ~6-7 gün | planlandı — 10 ders (431-440) + `spatial` widget + dal |
+| P14 | [14-bim-ifc-data-models.md](14-bim-ifc-data-models.md) | ~6-7 gün | tamamlandı — 10 ders (431-440), `built-environment` dalı, `spatial` widget (3 tüketici) |
 | P15 | [15-gis-spatial-data.md](15-gis-spatial-data.md) | ~6 gün | planlandı — 14 ders (441-454) |
 | P16 | [16-autodesk-developer-platform.md](16-autodesk-developer-platform.md) | ~7 gün | planlandı — 14 ders (455-468), Revit API + APS |
 | P17 | [17-iot-telemetry-edge.md](17-iot-telemetry-edge.md) | ~7 gün | planlandı — 14 ders (469-482), MQTT + LoRaWAN |
@@ -86,25 +86,46 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 
 | Ölçüm | P0 zemini | Bugün |
 |---|---:|---:|
-| Ders / kurs / bölüm | 412 / 23 / 2473 | 412 / 23 / **2472** |
-| Fence | 505 | 907 |
+| Ders / kurs / bölüm | 412 / 23 / 2473 | 422 / 24 / **2532** |
+| Fence | 505 | 942 |
 | Yalnız kod fence'i olan ders | 179 | 68 |
 | Yalnız şablon fence'i olan ders | 211 | 137 |
 | Hiç fence'i olmayan ders | 0 | 0 |
-| TS/TSX/JS fence | 161 | 166 |
-| Common Mistakes maddesi | 1746 | 1772 |
-| — drill'lenebilir | 705 (%40,4) | **1631 (%92,0)** |
+| TS/TSX/JS fence | 161 | 173 |
+| Common Mistakes maddesi | 1746 | 1830 |
+| — drill'lenebilir | 705 (%40,4) | **1689 (%92,3)** |
 | — tek cümlelik (P2'nin işi) | 1041 | **141** |
-| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **402** (sıfır: 10) |
+| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **412** (sıfır: 10) |
 | Form fence / dosya | 91 / 88 | 91 / 88 |
 | Checklist fence / madde | 35 / 293 | 36 / 295 |
-| `sql` fence | 9 | 23 |
+| `sql` fence | 9 | 24 |
 | `java` fence | 10 | 10 |
 | Blockquote kullanan ders | 45 | 88 |
-| Mermaid kullanan ders | 0 | 17 |
+| Mermaid kullanan ders | 0 | 18 |
 
 Bölüm sayısındaki fark bir ölçüm hatasıdır, korpus değişimi değil: 412 ders × 6
 bölüm = **2472**, ve hiçbir bölüm boş değil. P0'ın 2473'ü bir fazla saymış.
+
+Bir uyarı, çünkü iki sütunun anlamı P13'ten sonra ayrıştı: `P0 zemini` 412
+dersin ölçüsüdür, `Bugün` ise alan dersleri dahil bütün korpusu ölçer. İkinci
+program ilerledikçe aradaki fark artık "fazların **mevcut** derslere yaptığı"
+demek değil — büyümenin bir kısmı yeni bir alanın eklenmesinden geliyor. O
+kısım aşağıda ayrı ölçülüyor.
+
+## Alan bloğu
+
+İkinci programın (P13-P22) kendi ölçüsü. Sol sütun P13 zeminidir — korpusta
+yapılı çevre alanı **hiç yoktu**, yani hepsi sıfır — ve o sütun da hiç
+kımıldamaz. Kurs kümesi elle yazılmaz: `corpus-stats.ts` bunu
+`COURSE_SECTIONS`'ın `built-environment` dalından türetir, yani tek gerçek
+kaynak `course_content.sections.ts` olarak kalır.
+
+| Alan ölçüsü | P13 zemini | Bugün |
+|---|---:|---:|
+| Alan dersi / alan kursu | 0 / 0 | 10 / 1 |
+| Alan fence'i | 0 | 35 |
+| Alan Common Mistakes maddesi | 0 | 58 |
+| Alan — drill'lenebilir | 0 | 58 |
 
 P8/P9'un tek seferlik fence analizleri (hiç import etmeyen 44, yalnız
 tarayıcı-güvenli import 10, WebContainer'da çalışabilen 62, yerel eklenti
@@ -119,15 +140,16 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 
 | Widget | Fence | Ders |
 |---|---:|---:|
-| `quiz` | 164 | 164 |
-| `recall` | 164 | 164 |
-| `mermaid` | 17 | 17 |
-| `tradeoff` | 13 | 13 |
+| `quiz` | 174 | 174 |
+| `recall` | 174 | 174 |
+| `mermaid` | 18 | 18 |
+| `tradeoff` | 15 | 15 |
 | `calc` | 13 | 13 |
-| `proof` | 12 | 12 |
-| `run` (toplam) | 28 | 20 |
-| — `sql run` | 17 | |
-| — JS/TS `run` | 8 | |
+| `spatial` | 3 | 3 |
+| `proof` | 13 | 13 |
+| `run` (toplam) | 32 | 24 |
+| — `sql run` | 18 | |
+| — JS/TS `run` | 11 | |
 | — `run project` | 3 | |
 | `diff` | 2 | 2 |
 

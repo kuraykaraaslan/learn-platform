@@ -7,6 +7,7 @@ import { parseTradeoff, type TradeoffWidget } from './course_content.tradeoff';
 import { looksLikeDiff, parseDiff, type DiffWidget } from './course_content.diff';
 import { parseRecall, type RecallWidget } from './course_content.recall';
 import { parseCalc, type CalcWidget } from './course_content.calc';
+import { parseSpatial, type SpatialWidget } from './course_content.spatial';
 import { parseFenceMeta, type FenceMeta } from './course_content.fence-meta';
 import { loadSeed } from './course_content.seeds';
 
@@ -17,6 +18,9 @@ export type { TradeoffWidget } from './course_content.tradeoff';
 export type { DiffWidget } from './course_content.diff';
 export type { RecallWidget, RecallItem } from './course_content.recall';
 export type { CalcWidget, CalcInput, CalcOutput } from './course_content.calc';
+// P11's record: a missing type re-export compiles under vitest and only blows
+// up in `next build`'s tsc pass, so every widget's type leaves through here.
+export type { SpatialWidget, SpatialNode, SpatialProp, SpatialRel } from './course_content.spatial';
 
 export type LessonWidget =
   | TemplateWidget
@@ -25,7 +29,8 @@ export type LessonWidget =
   | TradeoffWidget
   | DiffWidget
   | RecallWidget
-  | CalcWidget;
+  | CalcWidget
+  | SpatialWidget;
 
 declare module 'hast' {
   interface Data {
@@ -115,6 +120,7 @@ export function splitBlocks(root: HastRoot, sectionKey: keyof LessonSections): L
     else if (lang === 'tradeoff') widget = parseTradeoff(source);
     else if (lang === 'recall') widget = parseRecall(source);
     else if (lang === 'calc') widget = parseCalc(source);
+    else if (lang === 'spatial') widget = parseSpatial(source);
     else if (looksLikeDiff(source)) widget = parseDiff(source);
 
     // Read here, not in the UI layer: loadSeed() touches node:fs, and this

@@ -349,45 +349,80 @@ zaten karşılıyor.
 
 ## Kabul kriterleri
 
-- [ ] `built-environment` dalı `COURSE_SECTIONS`'a **sona** eklendi; ana
+- [x] `built-environment` dalı `COURSE_SECTIONS`'a **sona** eklendi; ana
       sayfada üçüncü bölüm doğru başlık/blurb/grid ile render oluyor;
       `sections[0]` hâlâ `engineering` (P13'ün CTA testi yeşil)
-- [ ] `bim-ifc-data-models` 10 ders + manifest; `shape/six-sections` ve
+- [x] `bim-ifc-data-models` 10 ders + manifest; `shape/six-sections` ve
       `shape/unrecognized-heading` sıfır bulgu
-- [ ] 10 dersin **tamamı** `stamp-verified.ts` ile damgalandı —
+- [x] 10 dersin **tamamı** `stamp-verified.ts` ile damgalandı —
       `verified-sha.json`'a 10 giriş; hiçbiri elle yazılmadı
-- [ ] Common Mistakes: `parseMistakes` bu 10 derste **0 `single`** madde
-      raporluyor (`content/_reports/mistakes.json`)
-- [ ] `spatial` widget: `parseSpatial`'ın altı kuralı
-      `course_content.spatial.test.ts`'te birer vaka ile yeşil
-- [ ] `SpatialCard` `course_content.spatial` modülünden **yalnız `import type`**
+- [x] Common Mistakes: `parseMistakes` bu 10 derste **0 `single`** madde
+      raporluyor (`content/_reports/mistakes.json`) — 58 maddenin 58'i
+      `bold-dash`
+- [x] `spatial` widget: `parseSpatial`'ın altı kuralı
+      `course_content.spatial.test.ts`'te birer vaka ile yeşil (+ şema
+      düzeyinde üç vaka: bilinmeyen anahtar, sayısal değer, bilinmeyen `rel`)
+- [x] `SpatialCard` `course_content.spatial` modülünden **yalnız `import type`**
       ile alıyor — `SpatialCard.test.ts` bunu mekanik doğruluyor
-      (`CalcCard.test.ts` emsali: P11 bu koruma yokken derse 8 `yaml` + 1 `zod`
-      izi sızdırmıştı)
-- [ ] `spatial` JS bütçesi **≤2,5 KB gz**, P11'in ölçtüğü yöntemle
-      (esbuild bundle, react/store hariç; referans: `CalcCard` + `expr.ts` +
-      `calc-format.ts` = 1.508 B gz)
-- [ ] Reveal kapısı `RecallCard`'ın `MIN_ANSWER_LENGTH = 15`'ini **paylaşıyor**
-      — sabit ortak bir modüle taşındı, kopyalanmadı
-- [ ] `spatial/invalid-payload` ve `spatial/unanchored-reveal` **error** olarak
+- [x] `spatial` JS bütçesi — **1.453 B gz** (3.495 B minified) marjinal
+      maliyet, paylaşılan `WidgetShell`/`widget-ui`/`cn` hariç; hepsi
+      bundle'landığında **2.236 B gz**. İkisi de ≤2,5 KB gz sınırının altında.
+      Yöntem P11'in yöntemi: esbuild ile modül grafiği bundle'lanıyor,
+      react/store/next hariç
+- [x] Reveal kapısı `RecallCard`'ın `MIN_ANSWER_LENGTH = 15`'ini **paylaşıyor**
+      — `ui/reveal-gate.ts`'e taşındı; `SpatialCard.test.ts` her iki dosyanın
+      da oradan aldığını ve kendi sabitini tanımlamadığını doğruluyor
+- [x] `spatial/invalid-payload` ve `spatial/unanchored-reveal` **error** olarak
       doğdu ve korpus ikisinden de temiz
-- [ ] `drill/widget-on-unverified-lesson` `ask` taşıyan `spatial` fence'ini de
-      süzüyor
-- [ ] `code/unverified-language` `warn` olarak doğdu; mevcut 10 `java` fence'ini
+- [x] `drill/widget-on-unverified-lesson` `ask` taşıyan `spatial` fence'ini de
+      süzüyor (`ask`'siz olanı süzmüyor — o zaten tam açık render ediyor)
+- [x] `code/unverified-language` `warn` olarak doğdu; mevcut 10 `java` fence'ini
       bildiriyor, **0 Python fence'i** var
-- [ ] Ders 432'nin `proof` bloğu `sha=`/`at=`/`commit=` damgalı ve
-      `stamp-verify.ts --check` CI'da yeşil; workspace **sıfır bağımlılık**
-- [ ] Üç sabit korpus sayısı 412 → **422** güncellendi (üç dosya adıyla yazılı)
-- [ ] `corpus-stats.ts` yinelenen etiket koruması var ve kasıtlı bir çakışmada
-      fırlatıyor
-- [ ] `## Alan bloğu` tablosu README'de; `P13 zemini` sütunu sıfırlar;
-      `npm run content:stats-check` **"0 disagree"**
-- [ ] `parse-snapshot.json` **büyüdü** (+10 ders); mevcut hiçbir girdinin sha'sı
-      değişmedi — `content:snapshot-diff` %100 EXPLAINED
-- [ ] `npm run content:reports` sonrası
-      `git diff --exit-code -- content/_reports` temiz (CI bu adımı koşuyor)
-- [ ] `npm run content:check`, `content:concepts-check`,
-      `content:verify-mermaid`, `npm run lint`, `npm run build` yeşil
+- [x] Ders 432'nin `proof` bloğu `sha=`/`at=`/`commit=` damgalı ve
+      `stamp-verify.ts --check` yeşil (13/13); workspace **sıfır bağımlılık**,
+      yalnız Node builtin'leri
+- [x] Üç sabit korpus sayısı 412 → **422**:
+      `course_content.sections.test.ts`, `course_content.service.test.ts`,
+      `remark-lesson-refs.test.ts`
+- [x] `corpus-stats.ts` yinelenen etiket koruması var ve kasıtlı bir çakışmada
+      fırlatıyor (denendi: ikinci bir `` `calc` `` satırı ile). Tablo ayıraç
+      satırları (`|---|`) etiket sayılmıyor
+- [x] `## Alan bloğu` tablosu README'de; `P13 zemini` sütunu sıfırlar; slug
+      kümesi `COURSE_SECTIONS`'ın `built-environment` dalından türüyor;
+      `npm run content:stats-check` **"32 rows checked · 0 disagree"**
+- [x] `parse-snapshot.json` **büyüdü** (+10 ders); tek değişen mevcut satır
+      `lessonCount`, hiçbir bölüm sha'sı kımıldamadı —
+      `content:snapshot-diff` 0 unexplained
+- [x] `npm run content:reports` sonrası
+      `git diff --exit-code -- content/_reports` temiz
+- [x] `npm run content:check`, `content:concepts-check`,
+      `content:verify-mermaid` (18 fence, 13 ok, 5 unverified — hepsi
+      `graph`, DOM sınırı), `npm run lint`, `npm run build` yeşil
+
+**Arketipte üç sapma, kayda geçiyor** — sonraki yedi kurs bu dersleri taklit
+edeceği için sessiz bırakılamaz:
+
+1. Şartnamenin örnek fence'i `IfcWallStandardCase` kullanıyor; içerikte
+   `IfcWall` kullanıldı. İlki IFC4'te kullanımdan kaldırılmış bir varlık, ve
+   taklit edilecek bir örnekte durmamalı. (`course_content.spatial.test.ts`
+   fixture'ı şartnamenin metnini aynen taşıdığı için orada kaldı.)
+2. Şartnamenin `reveal` metni (`"IfcRelContainedInSpatialStructure attaches an
+   element to exactly one IfcBuildingStorey"`) dersin nesrinde birebir
+   geçmediği sürece `spatial/unanchored-reveal` onu reddediyor — yani her
+   `reveal` artık dersin kendi cümlesinden **kesilerek** yazılıyor. Kural
+   çalıştığı için şartnamenin kendi örneği kurala takılan ilk vaka oldu.
+3. `SpatialCard`, `rel` değerini IFC ilişki varlığının adıyla etiketliyor
+   (`contained` → `IfcRelContainedInSpatialStructure`). Şartnamede yok; asıl
+   öğretim yükü orada olduğu için eklendi — kenardaki fark, düğümdeki değil.
+
+**P13'ün "asgari 3 kurs" testi hakkında karar.** Şartname iki seçenek
+bırakmıştı; seçilen üçüncüsü, ikisinin de amacını koruyor:
+`sections.test.ts` kuralı **koruyor** ama adı konmuş tek bir istisna
+tanıyor (`UNDER_CONSTRUCTION = {'built-environment'}`), ve o istisna
+**kendi kendini iptal ediyor** — yanındaki `keeps no finished branch on the
+under-construction list` testi, dal üçe ulaştığı anda istisna hâlâ oradaysa
+kırılır. `it.todo` seçilmedi çünkü o, kuralı diğer iki dal için de kapatırdı.
+P13'ün risk satırının istediği bu: "sessizce aşılamaz".
 
 ## Risk
 

@@ -274,6 +274,11 @@
     "short": "Binary search over commit history to isolate a regression.",
     "lesson": 123
   },
+  "global-id": {
+    "term": "GlobalId",
+    "short": "IFC's own identifier: a 128-bit UUID compressed into 22 characters. Unique within a file by schema rule; stable across exports only if the exporter chooses to keep it.",
+    "lesson": 433
+  },
   "graceful-degradation": {
     "term": "Graceful degradation",
     "short": "The system continues serving reduced functionality when a dependency fails; the opposite of hard dependencies everywhere.",
@@ -308,6 +313,11 @@
     "term": "Idempotency key",
     "short": "A unique identifier per logical operation (Stripe uses Idempotency-Key header; your own operations need equivalent protection) — guarantees at-most-once or exactly-once semantics.",
     "lesson": 87
+  },
+  "ifc": {
+    "term": "IFC",
+    "short": "Industry Foundation Classes — an EXPRESS schema plus a serialization (usually the STEP Physical File) for exchanging building models between tools.",
+    "lesson": 431
   },
   "index-bloat": {
     "term": "Index bloat",
@@ -427,6 +437,14 @@
     "term": "Prompt injection",
     "short": "Untrusted retrieved or user-supplied content containing instructions that hijack the model's behavior — treat any injected text as untrusted input, same posture as #29 OWASP.",
     "lesson": 140
+  },
+  "property-set": {
+    "term": "property set",
+    "aliases": [
+      "property sets"
+    ],
+    "short": "The open-ended bag IFC keeps discipline data in, attached to an element by a relationship instead of being a field on it. Published ones carry a Pset_ prefix.",
+    "lesson": 436
   },
   "race-condition": {
     "term": "Race condition",
@@ -562,6 +580,11 @@
     "term": "Soft delete",
     "short": "DeletedAt TIMESTAMP NULL column; NULL = active, non-null = deleted; queries filter on WHERE deletedAt IS NULL.",
     "lesson": 44
+  },
+  "spatial-containment": {
+    "term": "spatial containment",
+    "short": "IfcRelContainedInSpatialStructure: places a physical element into exactly one spatial structure element, normally a storey. The relationship a viewer tree and a per-storey take-off both read.",
+    "lesson": 435
   },
   "sticky-sessions": {
     "term": "Sticky sessions",
