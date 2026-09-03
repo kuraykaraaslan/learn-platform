@@ -1143,12 +1143,12 @@
       },
       "242_risk_issue_and_dependency_logs.md": {
         "title": "68a9b0b5d41d28d1",
-        "whatItIs": "7b13c8bb0723bcdb",
+        "whatItIs": "37dacc16e54a2cdf",
         "keyConcepts": "eb409e02c6bf4d33",
         "exampleCode": "28906684b1322800",
         "whenToUse": "3303168e6afd5e8e",
         "commonMistakes": "2350d11a9be0067a",
-        "furtherReading": "a9404c30590588a4"
+        "furtherReading": "130fe019b4ac037b"
       },
       "243_decisions_and_change_requests.md": {
         "title": "19ca0571970c79d1",
@@ -1179,12 +1179,12 @@
       },
       "246_communicating_timelines_and_delays.md": {
         "title": "e60e828639341be6",
-        "whatItIs": "b76e319191b00475",
+        "whatItIs": "9e56d21ec980d2ea",
         "keyConcepts": "efa15ad9cd5c787f",
         "exampleCode": "788b757deb7b31f0",
         "whenToUse": "51956801a10b1671",
         "commonMistakes": "df408cece879129c",
-        "furtherReading": "4ec4f6732cc38aeb"
+        "furtherReading": "a1729aa198d82974"
       },
       "247_phase_handoff_checklists.md": {
         "title": "de957046e36fe4e4",
@@ -1242,12 +1242,12 @@
       },
       "253_deployment_runbook_and_emergency_handover.md": {
         "title": "885922f4b0958d34",
-        "whatItIs": "5ff10d6bb2c260e0",
+        "whatItIs": "e73db180c4e4d5c2",
         "keyConcepts": "a85c3df8ef370818",
         "exampleCode": "7bac50d8ece13ee0",
         "whenToUse": "4e9dc626100cd71d",
         "commonMistakes": "40c0f67384644586",
-        "furtherReading": "705c37a84f7a764a"
+        "furtherReading": "ce9db4d6c104e02b"
       },
       "254_admin_and_user_guides.md": {
         "title": "4887da49a4b5249a",
@@ -1269,12 +1269,12 @@
       },
       "256_ownership_ip_and_source_code_handover.md": {
         "title": "8d166896e02cdba4",
-        "whatItIs": "d2686dc55d01f08f",
+        "whatItIs": "9366a42188a9ea42",
         "keyConcepts": "67c1d4c5f122c55d",
         "exampleCode": "47a221bea91c238d",
         "whenToUse": "f74de03fb80c175f",
         "commonMistakes": "dde6502691b17b16",
-        "furtherReading": "dede73498908113d"
+        "furtherReading": "81a0e8d0bf283ac7"
       },
       "257_client_training_and_demo_sessions.md": {
         "title": "1df6cbd90769e7c6",

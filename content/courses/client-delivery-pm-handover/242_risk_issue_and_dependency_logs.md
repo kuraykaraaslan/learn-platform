@@ -7,6 +7,47 @@ The discipline only works if every entry carries the same minimum fields. A risk
 
 The escalation rule is what separates a log from decoration. Many freelancers keep a risk register that nobody ever looks at again after the kickoff call — updated once, referenced never. A log earns its keep only when specific trigger conditions (a milestone date now at risk, an overdue client dependency, expanding scope, a failing integration) automatically produce a written flag to the client, before the deadline arrives rather than after it's missed. Waiting until a risk becomes an issue, and an issue becomes a missed date, is the exact sequence a log exists to interrupt.
 
+```quiz
+- q: "The client has not sent the API credentials you need next week. Risk, issue, or dependency?"
+  anchor: "a risk is a possible future problem, an issue is a problem already happening, a dependency is an external input the project needs before work can proceed"
+  options:
+    - text: "An issue — work is about to stop"
+      correct: false
+      why: "An issue is a problem already happening. This is an external input the project needs before work can proceed."
+    - text: "A dependency — an external input needed before work proceeds"
+      correct: true
+      why: "Each of the three gets its own log, because each needs different handling."
+    - text: "A risk — they might not arrive in time"
+      correct: false
+      why: "A risk is a *possible* future problem. Needing the credentials is not possible, it is certain."
+
+- q: "An integration starts failing on Tuesday. Your status report goes out Friday. When does the client hear?"
+  anchor: "triggers a written flag to the client immediately, not at the next scheduled status update"
+  options:
+    - text: "Friday — that is what the status cadence is for"
+      correct: false
+      why: "A failing integration is a named escalation trigger, and triggers fire immediately rather than at the next scheduled update."
+    - text: "Immediately, in writing"
+      correct: true
+      why: "Escalation is trigger-based, not vibes-based: an overdue dependency, an at-risk milestone or a failing integration each fire on their own."
+    - text: "Once you know whether you can fix it yourself"
+      correct: false
+      why: "That is the vibes-based version. The trigger does not wait on your diagnosis."
+
+- q: "A risk is logged with owner, probability and impact all filled in. What is still missing?"
+  anchor: "every logged risk gets one explicit response — avoid, reduce, transfer, or accept"
+  options:
+    - text: "Nothing — that is the minimum viable entry"
+      correct: false
+      why: "The minimum entry also wants mitigation, status and a next review date; and beyond the entry it needs a response."
+    - text: "An explicit response: avoid, reduce, transfer or accept"
+      correct: true
+      why: "Without one it sits in the log unaddressed, which is tracking rather than management."
+    - text: "An escalation date agreed with the client"
+      correct: false
+      why: "Escalation here is trigger-based rather than scheduled."
+```
+
 ## Key Concepts
 - **Risk vs. issue vs. dependency**: a risk is a possible future problem, an issue is a problem already happening, a dependency is an external input the project needs before work can proceed — each gets its own log because each needs different handling
 - **Minimum viable entry**: every risk/issue needs description, category, probability, impact, owner, mitigation, status, and a next review date; every dependency needs what's needed, owner, needed-by date, reason, and impact if delayed
@@ -62,3 +103,24 @@ to lock the list. If we do not resolve it by Friday, the likely impact is a
 - Tom DeMarco and Timothy Lister, *Waltzing with Bears: Managing Risk on Software Projects* — the foundational case for why visible risk management outperforms optimistic silence
 - PMI, *A Guide to the Project Management Body of Knowledge (PMBOK Guide)* — the Risk Management knowledge area formalizes probability/impact scoring and response strategy categories
 - Atlassian, "How to write a risk register" — practical templates for lightweight risk and issue tracking on small teams: https://www.atlassian.com/agile/project-management/risk-register
+
+```recall
+- q: "What is the minimum viable log entry, for each of the two kinds?"
+  must:
+    - "a risk or issue needs description, category, probability, impact, owner, mitigation, status and a next review date"
+    - "a dependency needs what is needed, owner, needed-by date, reason, and impact if delayed"
+
+- q: "Give the missing-dependency sequence, in order."
+  must:
+    - "mark the task blocked"
+    - "notify the client in writing, and explain the impact"
+    - "suggest a workaround if one exists"
+    - "update the timeline if necessary"
+    - "in that order, every time"
+
+- q: "Why does raising a risk early matter so much?"
+  must:
+    - "a risk raised early reads as competence"
+    - "a risk raised only after the deadline is missed reads as an excuse"
+    - "even when the underlying cause is identical"
+```

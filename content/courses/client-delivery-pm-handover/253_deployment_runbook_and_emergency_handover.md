@@ -7,6 +7,47 @@ The runbook has a fixed shape because production incidents don't leave time to i
 
 The emergency checklist is what turns a stressful, ambiguous moment into a mechanical sequence: check hosting status, check the latest deployment logs, check database availability, check environment variables, check DNS and SSL, roll back if the latest deploy caused it, notify the client with current status, and record incident notes. Following a checklist under pressure produces calmer, faster, more correct decisions than reasoning from scratch while the client is also messaging with rising urgency.
 
+```quiz
+- q: "The runbook's deployment section says \"deployment is automatic.\" Is that enough?"
+  anchor: "it must be paired with what triggers it (a merge to a branch, a manual button, a CLI command) and where to watch the result"
+  options:
+    - text: "Yes, if CI really is configured that way"
+      correct: false
+      why: "Never a complete answer on its own: it needs what triggers the deployment and where to watch the result."
+    - text: "No — it needs the trigger, and where the outcome is visible"
+      correct: true
+      why: "A merge to a branch, a manual button or a CLI command, plus where to watch it land."
+    - text: "No — automatic deployment does not belong in a runbook at all"
+      correct: false
+      why: "It belongs there. It simply has to be described completely."
+
+- q: "Your rollback note says the host supports redeploying a previous version. What makes that note dangerous?"
+  anchor: "dangerous without knowing whether the database schema is still backward-compatible with that older version"
+  options:
+    - text: "Nothing — that is the fact someone needs at 3 a.m."
+      correct: false
+      why: "It is useless without the click path, and dangerous without the migration warning."
+    - text: "It omits whether the database schema is still backward-compatible with that version"
+      correct: true
+      why: "Rolling code back onto an already-migrated schema can make the incident worse."
+    - text: "It omits who is authorized to perform a rollback"
+      correct: false
+      why: "Worth having, and not the danger named here."
+
+- q: "Production is down and the emergency checklist has eight steps. Can you jump straight to rollback?"
+  anchor: "without checking cause first can make things worse"
+  options:
+    - text: "Yes — restoring service comes before diagnosis"
+      correct: false
+      why: "The checklist is sequential rather than a menu, and skipping to rollback without checking cause first can make things worse."
+    - text: "No — hosting status, logs, database, env vars, DNS/SSL, then the rollback decision"
+      correct: true
+      why: "Then communicate, then document. Both are listed steps, not afterthoughts."
+    - text: "Yes, as long as you document it afterwards"
+      correct: false
+      why: "Documenting a step you should not have taken does not undo it."
+```
+
 ## Key Concepts
 - **Sixteen fixed sections, not prose**: hosting, URLs, branch, build/start commands, env var location, deployment process, DNS/SSL, logs, monitoring, backup, rollback, and an emergency checklist — a runbook missing any of these has a real gap, not a stylistic omission
 - **"Deployment is automatic" is never a complete answer**: it must be paired with what triggers it (a merge to a branch, a manual button, a CLI command) and where to watch the result
@@ -85,3 +126,22 @@ rollback alone is safe — check `06-database-and-backup.md`.
 - Google SRE Book, "Managing Incidents" — the canonical reference for structured incident response and the value of a fixed checklist under pressure: https://sre.google/sre-book/managing-incidents/
 - Atlassian, "Incident management runbooks" — practical runbook templates and structure: https://www.atlassian.com/incident-management/handbook/runbooks
 - Martin Fowler, "BlueGreenDeployment" and related deployment pattern writing — on why safe rollback requires thinking about deployment and rollback together, not as an afterthought: https://martinfowler.com/bliki/BlueGreenDeployment.html
+
+```recall
+- q: "What does the smoke test cover, and when is it run?"
+  must:
+    - "homepage loads, login works, admin dashboard loads, the critical create/edit flow works, and logs show no critical errors"
+    - "run every time, not only when something feels risky"
+
+- q: "Name the runbook's sections."
+  must:
+    - "hosting, URLs, branch, build and start commands, env var location"
+    - "deployment process, DNS/SSL, logs, monitoring"
+    - "backup, rollback, and an emergency checklist"
+    - "sixteen fixed sections — one missing is a real gap, not a stylistic omission"
+
+- q: "Where does client communication sit, and what must the backup entry say?"
+  must:
+    - "\"notify client with current status and next action\" is a listed runbook step, not something improvised once the technical fire is out"
+    - "what is backed up and how often needs a real, verified answer, never an assumed one"
+```

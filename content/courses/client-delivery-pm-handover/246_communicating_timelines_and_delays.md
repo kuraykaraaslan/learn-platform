@@ -7,6 +7,47 @@ Good estimation also resists fake precision. Sizing work in bands — a few hour
 
 When a delay does happen — and on any project of real size, some delay eventually will — the response that preserves trust follows a fixed shape: name the blocker, name what it affects and why, name the next action and who owns it, name the date by which resolution keeps the impact limited, and if that date passes, say so and update the plan. The instinct to delay this message until the deadline has already visibly slipped is the single most damaging habit in this whole area, because it converts an ordinary schedule risk into a credibility problem.
 
+```quiz
+- q: "\"Six weeks\" against \"4-6 weeks, assuming content and review feedback arrive on time.\" Which carries more information?"
+  anchor: "Range plus assumptions beats a single date"
+  options:
+    - text: "The single date — a commitment rather than a hedge"
+      correct: false
+      why: "A commitment made with false confidence, and it hides the assumptions the date depends on."
+    - text: "The range with its assumptions stated"
+      correct: true
+      why: "The assumption becomes part of the commitment instead of an excuse invoked later."
+    - text: "Neither — both are estimates, and estimates are not information"
+      correct: false
+      why: "An estimate with its assumptions stated is precisely how the information gets transferred."
+
+- q: "A backlog item comes out XL. What does the band system say to do?"
+  anchor: "an XL item estimated as a single number is a red flag, not a plan"
+  options:
+    - text: "Estimate it carefully and add a large buffer"
+      correct: false
+      why: "An XL item estimated as a single number is a red flag, not a plan."
+    - text: "Split it — XL means it must be broken down"
+      correct: true
+      why: "The bands run XS half a day to a day, S one to three days, M three to seven, L one to two weeks, and XL is the split signal."
+    - text: "Move it to a later phase where there is more slack"
+      correct: false
+      why: "Deferring an unsized item does not size it."
+
+- q: "The client sat on review feedback for two weeks and the milestone slipped. How do you report it?"
+  anchor: "without blame, and without absorbing responsibility that isn't the developer's"
+  options:
+    - text: "Absorb it — naming the client's delay damages the relationship"
+      correct: false
+      why: "Absorbing responsibility that is not yours is exactly what this rules out."
+    - text: "State it factually, without blame and without absorbing it"
+      correct: true
+      why: "Which is also why that dependency belonged inside the estimate from the start."
+    - text: "Report the slip without stating any cause"
+      correct: false
+      why: "A cause-free slip reads as your delay by default."
+```
+
 ## Key Concepts
 - **Range plus assumptions beats a single date**: "4–6 weeks, assuming content and review feedback arrive on time" carries more real information than "6 weeks" stated with false confidence
 - **Estimate bands over false precision**: XS (half a day to a day), S (one to three days), M (three to seven days), L (one to two weeks), XL (must be split) — an XL item estimated as a single number is a red flag, not a plan
@@ -68,3 +109,24 @@ I recommend we update the milestone plan and I'll send a revised date.
 - Steve McConnell, *Software Estimation: Demystifying the Black Art* — the standard reference on estimation uncertainty and cone-of-uncertainty thinking
 - Tom DeMarco and Timothy Lister, *Waltzing with Bears: Managing Risk on Software Projects* — on communicating schedule risk honestly rather than smoothing it over
 - PMI, *A Guide to the Project Management Body of Knowledge (PMBOK Guide)* — the Schedule Management knowledge area covers estimation technique and baseline communication
+
+```recall
+- q: "What does full-lifecycle estimation include?"
+  must:
+    - "analysis, architecture, UI, backend, database, integration"
+    - "testing, bug fixing, client review, deployment, documentation, handover and buffer"
+    - "coding is one line item among many, not the whole estimate"
+
+- q: "Give the fixed shape of a delay communication."
+  must:
+    - "the blocker"
+    - "the affected milestone, and why"
+    - "the next action and its owner"
+    - "the date by which impact stays limited"
+    - "an explicit plan update if that date passes"
+
+- q: "Why state client dependencies inside the estimate itself?"
+  must:
+    - "\"this timeline assumes credentials and final copy arrive before the integration milestone\""
+    - "it makes the dependency part of the commitment, rather than an excuse invoked later"
+```
