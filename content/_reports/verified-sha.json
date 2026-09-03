@@ -473,8 +473,16 @@
   "asset-management-systems/506_asset_identity.md": "3d0000335f42dd6b",
   "asset-management-systems/507_condition_and_criticality.md": "1e74c67416e77c3c",
   "asset-management-systems/508_work_orders_and_maintenance_history.md": "af003d53559bc0eb",
-  "asset-management-systems/509_whole_life_cost.md": "a96b81c91d46f45d",
+  "asset-management-systems/509_whole_life_cost.md": "1cde1e7e9217ecf7",
   "asset-management-systems/510_merging_two_registers.md": "2d0d1b00b5344135",
-  "asset-management-systems/511_handover_data.md": "f894918c42f9d4f9",
-  "asset-management-systems/512_buying_vs_building_eam.md": "fa59fd9f78ff4c13"
+  "asset-management-systems/511_handover_data.md": "bd7a941673224228",
+  "asset-management-systems/512_buying_vs_building_eam.md": "fa59fd9f78ff4c13",
+  "smart-infrastructure/513_smart_infrastructure_as_integration.md": "c9935b9d7c19fda1",
+  "smart-infrastructure/515_identity_resolution_across_systems.md": "05c04732ce5e807d",
+  "smart-infrastructure/516_units_scales_and_timezones.md": "af7ebdf1921a81b4",
+  "smart-infrastructure/517_network_topology_as_data.md": "5d9c1e78f12491f1",
+  "smart-infrastructure/518_event_ordering_without_a_shared_clock.md": "6827f59d504c5bdf",
+  "smart-infrastructure/519_data_quality_gates_for_a_public_feed.md": "2adfa5c3ced2690f",
+  "smart-infrastructure/520_historical_replay.md": "c550d46b333d1cb6",
+  "smart-infrastructure/522_the_integration_contract.md": "a5ed84562ff57d6a"
 }

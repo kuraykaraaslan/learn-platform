@@ -101,7 +101,7 @@ describe('course sections (home-page branches)', () => {
 describe('catalogStats', () => {
   it('reports the measured corpus size, not a hardcoded guess', () => {
     const stats = CourseContentService.catalogStats();
-    expect(stats.lessons).toBe(495);
+    expect(stats.lessons).toBe(505);
     expect(stats.courses).toBe(listCourseSlugs().length);
     expect(stats.drillableLessons).toBeGreaterThan(0);
     expect(stats.drillableLessons).toBeLessThanOrEqual(stats.lessons);

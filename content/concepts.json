@@ -161,10 +161,20 @@
     "short": "How much an asset's failure matters — consequence times likelihood against the organisation's own tolerance. A property of the role, roughly constant over life; not condition, and never a vendor number.",
     "lesson": 507
   },
+  "crosswalk": {
+    "term": "crosswalk",
+    "short": "A table holding one row per (canonical asset, source system, external id), each time-bounded, so an id in one system can be resolved to the same asset's id in another as of a given moment.",
+    "lesson": 515
+  },
   "cve": {
     "term": "CVE",
     "short": "Common Vulnerabilities and Exposures; a numbered, publicly documented security vulnerability in a specific software version.",
     "lesson": 36
+  },
+  "dangling-edge": {
+    "term": "dangling edge",
+    "short": "An edge in a network graph whose from- or to-node is not in the node table — usually a node deleted from one table and not the other. Invisible on a map, and it breaks any traversal passing through it.",
+    "lesson": 517
   },
   "data-minimization": {
     "term": "Data minimization",
@@ -344,6 +354,11 @@
     "short": "Uses a covering index; no heap fetch needed; fastest for covered queries.",
     "lesson": 18
   },
+  "integration-contract": {
+    "term": "integration contract",
+    "short": "A short per-source document stating what data the integration will receive, in what identity, clock, units and cadence, with what quality and change guarantees, and what happens when the source goes silent. Written before the sensors are installed.",
+    "lesson": 522
+  },
   "integration-test": {
     "term": "Integration test",
     "aliases": [
@@ -364,6 +379,11 @@
     "term": "KVKK",
     "short": "Turkish equivalent of GDPR; applies to any service processing data of Turkish citizens; same practical requirements as GDPR for most operational purposes.",
     "lesson": 48
+  },
+  "lamport-clock": {
+    "term": "Lamport clock",
+    "short": "A per-node counter, bumped on each local event and set to max(local, received)+1 on receiving a message. Guarantees that if A caused B then lamport(A) < lamport(B) — a causal order that needs no synchronised clock.",
+    "lesson": 518
   },
   "lazy-loading": {
     "term": "Lazy loading",

@@ -1,0 +1,8 @@
+{
+  "name": "verify-smart-infrastructure-518",
+  "private": true,
+  "description": "Replays one fixed sequence of cross-system events three ways — wall-clock order, Lamport-clock order, and version-vector comparison — and reports the final state each reconstructs, for lesson 518's proof block. One node's clock runs 90s fast; wall-clock order gets the answer wrong. Zero dependencies, pure Node, no Date.now() anywhere, deterministic.",
+  "scripts": {
+    "verify": "node replay.js"
+  }
+}

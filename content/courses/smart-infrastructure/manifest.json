@@ -1,0 +1,87 @@
+{
+  "slug": "smart-infrastructure",
+  "title": "Smart Infrastructure",
+  "description": "Integration, not a product: one asset with five ids, systems that do not share a clock, and the contract you write before the sensors arrive.",
+  "items": [
+    {
+      "id": 513,
+      "file": "513_smart_infrastructure_as_integration.md",
+      "title": "Smart Infrastructure as an Integration Problem, Not a Product",
+      "bracket": "1-3",
+      "category": "Smart Infrastructure",
+      "verified": true
+    },
+    {
+      "id": 514,
+      "file": "514_ot_and_it_protocol_boundaries.md",
+      "title": "OT and IT: Protocol Boundaries, Segregation, and the Gateway",
+      "bracket": "3-7",
+      "category": "Smart Infrastructure",
+      "verified": false
+    },
+    {
+      "id": 515,
+      "file": "515_identity_resolution_across_systems.md",
+      "title": "Identity Resolution Across Systems: One Asset, Five Ids",
+      "bracket": "3-7",
+      "category": "Smart Infrastructure",
+      "verified": true
+    },
+    {
+      "id": 516,
+      "file": "516_units_scales_and_timezones.md",
+      "title": "Units, Scales, and Timezones: Normalising at the Boundary",
+      "bracket": "3-7",
+      "category": "Smart Infrastructure",
+      "verified": true
+    },
+    {
+      "id": 517,
+      "file": "517_network_topology_as_data.md",
+      "title": "Network Topology as Data: Nodes, Edges, and Connectivity Queries",
+      "bracket": "3-7",
+      "category": "Smart Infrastructure",
+      "verified": true
+    },
+    {
+      "id": 518,
+      "file": "518_event_ordering_without_a_shared_clock.md",
+      "title": "Event Ordering Across Systems That Do Not Share a Clock",
+      "bracket": "7-10",
+      "category": "Smart Infrastructure",
+      "verified": true
+    },
+    {
+      "id": 519,
+      "file": "519_data_quality_gates_for_a_public_feed.md",
+      "title": "Data Quality Gates for a Public-Facing Feed",
+      "bracket": "3-7",
+      "category": "Smart Infrastructure",
+      "verified": true
+    },
+    {
+      "id": 520,
+      "file": "520_historical_replay.md",
+      "title": "Historical Replay: Answering \"What Did the System Know at 03:00?\"",
+      "bracket": "7-10",
+      "category": "Smart Infrastructure",
+      "verified": true
+    },
+    {
+      "id": 521,
+      "file": "521_sharing_data_without_losing_control.md",
+      "title": "Sharing Data Without Losing Control: Licences, Redaction, Rate Limits",
+      "bracket": "3-7",
+      "category": "Smart Infrastructure",
+      "verified": false
+    },
+    {
+      "id": 522,
+      "file": "522_the_integration_contract.md",
+      "title": "Designing the Integration Contract Before the Sensors Arrive",
+      "bracket": "7-10",
+      "category": "Smart Infrastructure",
+      "verified": true
+    }
+  ]
+}

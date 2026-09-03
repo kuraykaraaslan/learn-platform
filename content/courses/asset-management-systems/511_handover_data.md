@@ -125,7 +125,7 @@ sides:
 
 ## Further Reading
 - [buildingSMART COBie documentation](https://www.thenbs.com/knowledge/what-is-cobie) — the sheet structure (`Component`, `Type`, `Space`, `Floor`) a register is populated from, with the version stated
-- [Lesson 433](/courses/bim-ifc-data-models/433_globalid_the_ifc_guid) — why the `GlobalId` is unique-in-file but not export-stable, and how to test a given exporter
+- [Lesson 433](/courses/bim-ifc-data-models/globalid-the-ifc-guid) — why the `GlobalId` is unique-in-file but not export-stable, and how to test a given exporter
 - [ISO 19650-1 catalogue page](https://www.iso.org/standard/68078.html) — the information-management framework that places handover data requirements in the project lifecycle; number and scope only
 
 ```recall

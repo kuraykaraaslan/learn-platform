@@ -61,6 +61,7 @@ const SUBJECTS: Record<string, string> = {
   'digital-twin-engineering': 'a solid building form beside its wireframe counterpart, joined by a live signal line and a time-series ribbon',
   'field-data-collection': 'a rugged handheld device with a stack of queued record cards behind it and one dashed line reaching a distant server',
   'asset-management-systems': 'a branching register of labelled equipment cards over a maintenance timeline, with one card flagged as having no history',
+  'smart-infrastructure': 'five differently-shaped system icons linked by connecting lines to one central node, over a faint city-network grid',
 };
 
 type Quality = 'low' | 'medium' | 'high';

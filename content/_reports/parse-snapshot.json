@@ -1,5 +1,5 @@
 {
-  "lessonCount": 495,
+  "lessonCount": 505,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -512,7 +512,7 @@
         "exampleCode": "2e96282c6bced368",
         "whenToUse": "f4cebc14fb0c3cde",
         "commonMistakes": "d9360bb5add15573",
-        "furtherReading": "cedfef9aecc770ad"
+        "furtherReading": "c74ff11bfe159f86"
       },
       "510_merging_two_registers.md": {
         "title": "bbfa2231909b932c",
@@ -530,7 +530,7 @@
         "exampleCode": "a297b2ec27730402",
         "whenToUse": "2521ee10406f8d57",
         "commonMistakes": "b3cdfe6421767a71",
-        "furtherReading": "c4b6f1b5328f7164"
+        "furtherReading": "f564a5b165c30833"
       },
       "512_buying_vs_building_eam.md": {
         "title": "734e5ef412f4d437",
@@ -4514,6 +4514,98 @@
         "whenToUse": "c60cee1318005bc4",
         "commonMistakes": "3f2722eb28b68202",
         "furtherReading": "20e67f6a67dfa713"
+      }
+    },
+    "smart-infrastructure": {
+      "513_smart_infrastructure_as_integration.md": {
+        "title": "76d25b2b961c6556",
+        "whatItIs": "c07e772f91ae2998",
+        "keyConcepts": "c730da87d2e93712",
+        "exampleCode": "1ef8935e525ec8ee",
+        "whenToUse": "c0fcf027f61eb0df",
+        "commonMistakes": "a56a55ee35b733a3",
+        "furtherReading": "039175435be0b7ad"
+      },
+      "514_ot_and_it_protocol_boundaries.md": {
+        "title": "b505824e6feb9c4c",
+        "whatItIs": "c9b3d328e8a44f06",
+        "keyConcepts": "38a1a4ef33ddf859",
+        "exampleCode": "64c5149e5c49f97e",
+        "whenToUse": "301c63f08e0afeb8",
+        "commonMistakes": "b3893fe3ccd3250b",
+        "furtherReading": "fd0cbd0cec804413"
+      },
+      "515_identity_resolution_across_systems.md": {
+        "title": "6c6088aa5c0dff0e",
+        "whatItIs": "c8f71ec74b6c8b2b",
+        "keyConcepts": "26a503d34093eae6",
+        "exampleCode": "ce1a553b5e0e441d",
+        "whenToUse": "0516c3161c92b040",
+        "commonMistakes": "ebccd9e395720982",
+        "furtherReading": "8827883bf14b9e0e"
+      },
+      "516_units_scales_and_timezones.md": {
+        "title": "0561de4cc164beeb",
+        "whatItIs": "63844d6acd5818a6",
+        "keyConcepts": "c1c0b43784c80b57",
+        "exampleCode": "617aa6332b22a90b",
+        "whenToUse": "5713a9178f88059d",
+        "commonMistakes": "ec021d9537abe244",
+        "furtherReading": "aa9720387c833ad9"
+      },
+      "517_network_topology_as_data.md": {
+        "title": "21e7554f0c49bec1",
+        "whatItIs": "68dcce16ea071e94",
+        "keyConcepts": "9a2ad3748b549769",
+        "exampleCode": "cc7905651c445011",
+        "whenToUse": "5cd9533c625e8793",
+        "commonMistakes": "08d1368897e7a9a3",
+        "furtherReading": "49cbb8c73729d1fb"
+      },
+      "518_event_ordering_without_a_shared_clock.md": {
+        "title": "c8e16408622c354c",
+        "whatItIs": "b2826c9412208d65",
+        "keyConcepts": "ce7b491020b2b6d5",
+        "exampleCode": "a85eb05484603844",
+        "whenToUse": "593d2490c0f95729",
+        "commonMistakes": "a5308a34facf241f",
+        "furtherReading": "f650cd61aedd66e2"
+      },
+      "519_data_quality_gates_for_a_public_feed.md": {
+        "title": "2891f13b6b74bf23",
+        "whatItIs": "4f6f4dff80e00cbd",
+        "keyConcepts": "4471f5a58cb606f8",
+        "exampleCode": "40cc07ff55288828",
+        "whenToUse": "f66341c187f8f489",
+        "commonMistakes": "0f3c78e210f393ad",
+        "furtherReading": "25c8fdb5bfe34d58"
+      },
+      "520_historical_replay.md": {
+        "title": "6cc3e9564ac18605",
+        "whatItIs": "c8f0796a29a206fd",
+        "keyConcepts": "91f9d1f11c1b1fd6",
+        "exampleCode": "74979490898e0f33",
+        "whenToUse": "0a63c0ae0daee530",
+        "commonMistakes": "4c5c01b35f9577fd",
+        "furtherReading": "ff413b3e11a0ced1"
+      },
+      "521_sharing_data_without_losing_control.md": {
+        "title": "f1b55180385aec02",
+        "whatItIs": "481eade7435f2b99",
+        "keyConcepts": "05990a977c1cd3e0",
+        "exampleCode": "daf5eb6064259eac",
+        "whenToUse": "8f4b23915dc3ed09",
+        "commonMistakes": "d5bab94151558f05",
+        "furtherReading": "e8e38509dc1651d4"
+      },
+      "522_the_integration_contract.md": {
+        "title": "995b18f503155556",
+        "whatItIs": "b59b02b52d7183a2",
+        "keyConcepts": "475e9ccbc27432db",
+        "exampleCode": "5edd279bf57762b4",
+        "whenToUse": "0c254af51d4f363f",
+        "commonMistakes": "5ef15e254f0b0f32",
+        "furtherReading": "08b1d286c8b3a1a7"
       }
     }
   }

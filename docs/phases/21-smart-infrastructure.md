@@ -103,22 +103,44 @@ ile; yol haritasının business dersleri için koyduğu kuralın aynısı.
 
 ## Kabul kriterleri
 
-- [ ] 10 ders + manifest; `shape/*` sıfır bulgu
-- [ ] **8 ders damgalı, 514 ve 521 damgasız** (`HARM_DENYLIST`); ikisinde de
-      `quiz`/`recall` fence'i yok, `drill/widget-on-unverified-lesson` temiz
-- [ ] `parseMistakes` bu 10 derste **0 `single`** madde raporluyor
-- [ ] `crosswalk.sql` ≤50 KB; 515/517/519/520 fence'leri PGlite'ta koşuyor;
-      519'nın kalite kapısı tohumdaki bozuk kayıtları **gerçekten** buluyor
-- [ ] 518'in `proof` bloğu damgalı, sıfır bağımlılık, iki koşuda byte-aynı;
-      çıktıda hiçbir gerçek zaman damgası yok
-- [ ] 513'ün `sequenceDiagram`'ı `verify-mermaid`'de tam doğrulanan sınıfta
-- [ ] 522'un `template` fence'inin yanında doldurulmuş örnek var
-- [ ] Dersler P15/P17/P18/P20'ye `(#N)` ile bağlı; `links/dead-lesson-ref` temiz
-- [ ] `built-environment` dalı 8 kurs; P13'ün "asgari 3 kurs" testi artık
-      gerçek veriyle geçiyor (`it.todo` bırakıldıysa etkinleştirildi)
-- [ ] Üç sabit korpus sayısı 494 → **504**
-- [ ] `content:stats-check` "0 disagree"; snapshot +10 ders, %100 EXPLAINED
-- [ ] `git diff --exit-code -- content/_reports` temiz; `content:check` yeşil
+- [x] 10 ders (513-522) + manifest; `shape/*` sıfır bulgu
+- [x] **8 ders damgalı, 514 ve 521 damgasız** (`HARM_DENYLIST`'e eklendi);
+      ikisinde de `quiz`/`recall` fence'i yok, `drill/widget-on-unverified-lesson`
+      temiz (yalnız iki önceki program dersi kaldı). 478'le birlikte üç ders
+      uzman pasosu bekliyor
+- [x] `parseMistakes` bu 10 derste **0 `single`** madde raporluyor (korpus
+      geneli `single` 141'de sabit)
+- [x] `crosswalk.sql` **8.091 bayt** (sınır 50 KB); dört tablo (kimlik eşlemesi
+      geçerlilik-zamanıyla, ağ topolojisi node/edge, kamuya açık besleme).
+      515/517/519/520'nin `sql run` fence'leri PGlite'ta koşuldu; 519'nın kapısı
+      tohumdaki beş bozuk kaydı (menzil dışı, null, gelecek tarih, kopya,
+      bilinmeyen sensör) buluyor — naif filtre 8 geçiriyor, tam kapı 5
+- [x] 518'in `proof` bloğu `stamp-verify.ts` ile damgalı, sıfır bağımlılık,
+      `--check` byte-aynı. Duvar saati replay'i 50 (yanlış), Lamport 20 (doğru)
+      üretiyor. Çıktıda `Date.now()` yok — bütün zamanlar literal
+- [x] 513'ün `sequenceDiagram`'ı `verify-mermaid`'de **tam doğrulanan** sınıfta
+      (25 fence, 16 ok, 9 unverified — hepsi DOM gerektiren `graph`/`stateDiagram`)
+- [x] 522'un blank `template` fence'inin yanında SCADA historian'ı için
+      doldurulmuş ikinci `template` fence'i var
+- [x] Dersler P15/P17/P18/P20'ye `Lesson NNN` ile bağlı; `links/dead-lesson-ref`
+      temiz. Kurs içi Further Reading linkleri `fileToLessonSlug` slug'ıyla
+      yazıldı (P20'de yanlış yazılmış iki link de bu commit'te düzeltildi)
+- [x] `built-environment` dalı **8 kurs**; P13'ün "asgari 3 kurs" testi zaten
+      koşulsuz ve gerçek veriyle geçiyordu — `it.todo` yoktu, yapılacak bir şey yok
+- [x] Üç sabit korpus sayısı **495 → 505** (şartname 494→504 yazıyordu; +1 fark
+      P16'nın sonradan eklenen `#523` dersi)
+- [x] `content:stats-check` "32 rows checked · 0 disagree"; `content:snapshot-diff`
+      **0 unexplained** (+10 yeni ders; ayrıca 509/511'in `furtherReading`'i
+      EXPLAINED olarak değişti — P20 link düzeltmesi)
+- [x] `content:reports` sonrası tekrar koşumda fark yok; `content:check`, `lint`,
+      `content:concepts-check`, `content:verify-mermaid`, `build` (547 statik
+      sayfa) yeşil
+
+**`concepts.json`** (şartnamede istenmemişti): `crosswalk` (→515),
+`lamport-clock` (→518), `dangling-edge` (→517), `integration-contract` (→522)
+eklendi — hepsi korpusta yalnız bu kursta geçen ifadeler, geriye dönük link
+yok. `version vector` ve `quality gate` terim olarak **eklenmedi**: ikisi de
+önceki derslerde (P19 #496, ve yedi başka ders) geçiyor.
 
 ## Risk
 

@@ -55,6 +55,17 @@ const HARM_DENYLIST = new Set([
   // by design rather than by triage — it carries no quiz and no recall, and
   // the denylist is what mechanically keeps it that way.
   'iot-telemetry-edge/478_device_identity_and_provisioning.md',
+  // P21: two lessons written and published but never auto-stamped, for the
+  // same reason as 478 — a wrong drill is worse than a lesson merely read.
+  // docs/phases/21-smart-infrastructure.md places both here by design.
+  //   514 — OT/IT segregation is a security mitigation: a wrong segregation
+  //         recommendation causes harm on an industrial network that a reader
+  //         cannot verify alone.
+  //   521 — licence, redaction and data-sharing is legal content, the
+  //         roadmap's "never ships to production" class.
+  // Both carry no quiz and no recall; an expert pass can remove them later.
+  'smart-infrastructure/514_ot_and_it_protocol_boundaries.md',
+  'smart-infrastructure/521_sharing_data_without_losing_control.md',
 ]);
 
 function sha(value: string): string {

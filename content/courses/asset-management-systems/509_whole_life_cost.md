@@ -116,7 +116,7 @@ function repairOrReplace(opts: {
 ## Further Reading
 - [ISO 15686-5 catalogue page](https://www.iso.org/standard/61148.html) — life-cycle costing for buildings and constructed assets; the cost-breakdown structure, number and scope only
 - [GOV.UK: The Green Book — discounting and present value](https://www.gov.uk/government/publications/the-green-book-appraisal-and-evaluation-in-central-government) — a public methodology for discounting future costs, with worked rationale for the rate
-- [Lesson 322](/courses/business-finance-solo-ops/322_time_tracking_and_effective_rate) — the same "put your own numbers in a model rather than read a worked example" approach applied to rates
+- [Lesson 322](/courses/business-finance-solo-ops/time-tracking-and-effective-rate) — the same "put your own numbers in a model rather than read a worked example" approach applied to rates
 
 ```recall
 - q: "State the correct basis for a repair-vs-replace comparison and why the raw quotes mislead."

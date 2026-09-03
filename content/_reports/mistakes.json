@@ -1,11 +1,11 @@
 {
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
-    "lessons": 495,
+    "lessons": 505,
     "single": 141,
     "lessonsWithZeroDrillable": 10,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 463
+    "lessonsWithTwoPlusDrillable": 473
   },
   "lessons": [
     {
@@ -7431,6 +7431,156 @@
         "bold-space": 0,
         "plain-dash": 1,
         "single": 3
+      }
+    },
+    {
+      "courseSlug": "smart-infrastructure",
+      "file": "513_smart_infrastructure_as_integration.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "smart-infrastructure",
+      "file": "514_ot_and_it_protocol_boundaries.md",
+      "verified": false,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "smart-infrastructure",
+      "file": "515_identity_resolution_across_systems.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "smart-infrastructure",
+      "file": "516_units_scales_and_timezones.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "smart-infrastructure",
+      "file": "517_network_topology_as_data.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "smart-infrastructure",
+      "file": "518_event_ordering_without_a_shared_clock.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "smart-infrastructure",
+      "file": "519_data_quality_gates_for_a_public_feed.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "smart-infrastructure",
+      "file": "520_historical_replay.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "smart-infrastructure",
+      "file": "521_sharing_data_without_losing_control.md",
+      "verified": false,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "smart-infrastructure",
+      "file": "522_the_integration_contract.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
       }
     }
   ]

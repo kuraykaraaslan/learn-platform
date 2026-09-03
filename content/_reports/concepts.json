@@ -1,12 +1,12 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
-  "totalTerms": 135,
-  "totalLessons": 495,
+  "totalTerms": 139,
+  "totalLessons": 505,
   "totals": {
     "neverMatched": 0,
-    "neverLinked": 19,
+    "neverLinked": 21,
     "neverLinkedByCause": {
-      "own-lesson-only": 4,
+      "own-lesson-only": 6,
       "code-only": 13,
       "shadowed": 0,
       "case-mismatch": 0,
@@ -46,6 +46,14 @@
       "alsoAppearsInLessons": [
         40
       ]
+    },
+    {
+      "slug": "dangling-edge",
+      "term": "dangling edge",
+      "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
     },
     {
       "slug": "dip",
@@ -112,6 +120,14 @@
       "alsoAppearsInLessons": [
         17
       ]
+    },
+    {
+      "slug": "lamport-clock",
+      "term": "Lamport clock",
+      "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
     },
     {
       "slug": "mass-assignment",
@@ -272,9 +288,10 @@
         "database-advanced/51_event_log_rehydration.md",
         "digital-twin-engineering/483_what_a_digital_twin_is.md",
         "distributed-systems-api-design/02_event_sourcing_cqrs.md",
-        "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md"
+        "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md",
+        "smart-infrastructure/520_historical_replay.md"
       ],
-      "rawOccurrences": 16
+      "rawOccurrences": 21
     },
     {
       "slug": "audit-log",
@@ -298,7 +315,7 @@
         "security/143_compliance_frameworks.md",
         "security/39_rbac_vs_abac.md"
       ],
-      "rawOccurrences": 76
+      "rawOccurrences": 77
     },
     {
       "slug": "aws-secrets-manager",
@@ -382,7 +399,7 @@
         "open-source-community/96_semver_changelog_management.md",
         "security/40_supply_chain_security_lockfile_integrity.md"
       ],
-      "rawOccurrences": 28
+      "rawOccurrences": 29
     },
     {
       "slug": "cache-invalidation",
@@ -517,10 +534,26 @@
       "rawOccurrences": 69
     },
     {
+      "slug": "crosswalk",
+      "term": "crosswalk",
+      "lessonsLinkedIn": [
+        "smart-infrastructure/513_smart_infrastructure_as_integration.md",
+        "smart-infrastructure/519_data_quality_gates_for_a_public_feed.md",
+        "smart-infrastructure/520_historical_replay.md"
+      ],
+      "rawOccurrences": 46
+    },
+    {
       "slug": "cve",
       "term": "CVE",
       "lessonsLinkedIn": [],
       "rawOccurrences": 4
+    },
+    {
+      "slug": "dangling-edge",
+      "term": "dangling edge",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 6
     },
     {
       "slug": "data-minimization",
@@ -720,9 +753,10 @@
         "asset-management-systems/511_handover_data.md",
         "bim-ifc-data-models/432_parsing_ifc_without_a_library.md",
         "bim-ifc-data-models/439_ifc_in_a_relational_database.md",
-        "bim-ifc-data-models/440_model_diffing.md"
+        "bim-ifc-data-models/440_model_diffing.md",
+        "smart-infrastructure/513_smart_infrastructure_as_integration.md"
       ],
-      "rawOccurrences": 84
+      "rawOccurrences": 87
     },
     {
       "slug": "graceful-degradation",
@@ -812,9 +846,10 @@
         "digital-twin-engineering/489_indoor_navigation.md",
         "digital-twin-engineering/490_twin_identity.md",
         "field-data-collection/503_validating_field_data.md",
-        "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md"
+        "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md",
+        "smart-infrastructure/515_identity_resolution_across_systems.md"
       ],
-      "rawOccurrences": 113
+      "rawOccurrences": 114
     },
     {
       "slug": "index-bloat",
@@ -827,6 +862,15 @@
       "term": "Index Only Scan",
       "lessonsLinkedIn": [],
       "rawOccurrences": 4
+    },
+    {
+      "slug": "integration-contract",
+      "term": "integration contract",
+      "lessonsLinkedIn": [
+        "smart-infrastructure/516_units_scales_and_timezones.md",
+        "smart-infrastructure/518_event_ordering_without_a_shared_clock.md"
+      ],
+      "rawOccurrences": 14
     },
     {
       "slug": "integration-test",
@@ -867,6 +911,12 @@
         "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
       ],
       "rawOccurrences": 46
+    },
+    {
+      "slug": "lamport-clock",
+      "term": "Lamport clock",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 9
     },
     {
       "slug": "lazy-loading",
@@ -1065,9 +1115,11 @@
         "fundamentals-tools/133_networking_fundamentals.md",
         "iot-telemetry-edge/472_lorawan_duty_cycle.md",
         "observability-deployment/63_chaos_engineering.md",
-        "privacy-compliance-incident-response/361_vulnerability_management_lifecycle_patch_slas.md"
+        "privacy-compliance-incident-response/361_vulnerability_management_lifecycle_patch_slas.md",
+        "smart-infrastructure/513_smart_infrastructure_as_integration.md",
+        "smart-infrastructure/521_sharing_data_without_losing_control.md"
       ],
-      "rawOccurrences": 70
+      "rawOccurrences": 77
     },
     {
       "slug": "rbac",
