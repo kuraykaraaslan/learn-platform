@@ -1,5 +1,5 @@
 {
-  "lessonCount": 523,
+  "lessonCount": 535,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -2823,6 +2823,116 @@
         "whenToUse": "16e17da39688be65",
         "commonMistakes": "abf3048852812121",
         "furtherReading": "31bce6640650f119"
+      }
+    },
+    "embedded-firmware": {
+      "542_the_loop_that_never_exits.md": {
+        "title": "f52e6e187fafe07a",
+        "whatItIs": "48bce2ff51da2ee8",
+        "keyConcepts": "41177b7fc3aed954",
+        "exampleCode": "3685c705ef0cc1be",
+        "whenToUse": "915e5f3a05bccf10",
+        "commonMistakes": "80c6561e06da10cd",
+        "furtherReading": "5e335952e91f55bc"
+      },
+      "543_interrupts_and_the_two_contexts.md": {
+        "title": "435359516ad64cdc",
+        "whatItIs": "a9b48035952aed05",
+        "keyConcepts": "758eeceae45279ce",
+        "exampleCode": "564776c006e366c7",
+        "whenToUse": "3030dad3168032ef",
+        "commonMistakes": "2215ad3f1f231a1b",
+        "furtherReading": "e52959df05127755"
+      },
+      "544_shared_state_volatile_and_atomicity.md": {
+        "title": "06f1833d9c3c7cff",
+        "whatItIs": "03d8012d209e26c2",
+        "keyConcepts": "ab13a6f886067176",
+        "exampleCode": "1ed5a610bd7fd4c4",
+        "whenToUse": "27b59a825931616a",
+        "commonMistakes": "bdb8eea1169b86ba",
+        "furtherReading": "3d7efaf452da01fb"
+      },
+      "545_the_ring_buffer_between_two_contexts.md": {
+        "title": "e3ed3d04a46d0202",
+        "whatItIs": "ccf3ae4854ef6581",
+        "keyConcepts": "b169f2340a9d1268",
+        "exampleCode": "45a2ad47bbcab0f9",
+        "whenToUse": "40c65d04f0212d8d",
+        "commonMistakes": "73ffa0ce28e626d0",
+        "furtherReading": "4c85f5f53ea72513"
+      },
+      "546_never_block_cooperative_state_machines.md": {
+        "title": "574807167c446610",
+        "whatItIs": "3927ac6091424f05",
+        "keyConcepts": "7f6ae3aaeb3172c8",
+        "exampleCode": "ac97d85d417f2203",
+        "whenToUse": "ac59ea7b0de9e5b3",
+        "commonMistakes": "12895505eb27f62b",
+        "furtherReading": "7599deb6346fdc9a"
+      },
+      "547_when_the_superloop_stops_paying.md": {
+        "title": "7fedc0fc6b6ee8bb",
+        "whatItIs": "4a970ff5597c00eb",
+        "keyConcepts": "b96ffc4ea6b8404a",
+        "exampleCode": "d85d932c0f24a0b9",
+        "whenToUse": "5eb22ffcd9bc3fb8",
+        "commonMistakes": "dfbd01c0276b78b7",
+        "furtherReading": "d498605019405e17"
+      },
+      "548_memory_you_cannot_ask_for.md": {
+        "title": "e6a58a0046e73e81",
+        "whatItIs": "c88ef9ce7f612330",
+        "keyConcepts": "a621186662eeaa41",
+        "exampleCode": "f0d46129b0d197b2",
+        "whenToUse": "0d077b39c263bd26",
+        "commonMistakes": "f28a4ed697155c9e",
+        "furtherReading": "4b7fa4b192e9a9f0"
+      },
+      "549_time_without_a_clock.md": {
+        "title": "e739efeb2c59438b",
+        "whatItIs": "79f735730627c5ba",
+        "keyConcepts": "e1d63967ec91bbbd",
+        "exampleCode": "0646a367e0da2e92",
+        "whenToUse": "eb2e6c27a2c4b48d",
+        "commonMistakes": "1edd2b013626546a",
+        "furtherReading": "4bdee5aed9a24ae8"
+      },
+      "550_fixed_point_and_the_float_you_cannot_afford.md": {
+        "title": "71bc947ddfbd781f",
+        "whatItIs": "59200ef4f872e8cd",
+        "keyConcepts": "1fd22fe29a911582",
+        "exampleCode": "0e09383a6e880fbe",
+        "whenToUse": "f065bb5e2c982e37",
+        "commonMistakes": "1e408772c39acabc",
+        "furtherReading": "9e478f6b9f5c1710"
+      },
+      "551_the_watchdog_is_not_a_safety_net.md": {
+        "title": "9bcecd4047226968",
+        "whatItIs": "ae48bd8461d3bb71",
+        "keyConcepts": "28ddbd76ccc6041b",
+        "exampleCode": "3a2ad90f4b179c78",
+        "whenToUse": "d6debc921c6d6be9",
+        "commonMistakes": "3e8970a07b2a5e0d",
+        "furtherReading": "c928185d340eb71a"
+      },
+      "552_power_loss_is_a_state_transition.md": {
+        "title": "6436525b95915e99",
+        "whatItIs": "6641af93978e95be",
+        "keyConcepts": "9baf309274a1107e",
+        "exampleCode": "37403811662adf92",
+        "whenToUse": "8b0e441f16da0530",
+        "commonMistakes": "d291c904126219b2",
+        "furtherReading": "a42909173aa1d21b"
+      },
+      "553_debugging_without_a_console.md": {
+        "title": "e4cedb72e7d06be8",
+        "whatItIs": "11a00e05ac34677e",
+        "keyConcepts": "3b1096a729e5e1f2",
+        "exampleCode": "b1b456101e222910",
+        "whenToUse": "5bc7cf8e895b7bc8",
+        "commonMistakes": "6a510e5ca7a137a8",
+        "furtherReading": "1f92fde17c0c21cb"
       }
     },
     "field-data-collection": {

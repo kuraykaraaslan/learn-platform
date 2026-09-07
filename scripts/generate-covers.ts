@@ -63,6 +63,7 @@ const SUBJECTS: Record<string, string> = {
   'asset-management-systems': 'a branching register of labelled equipment cards over a maintenance timeline, with one card flagged as having no history',
   'smart-infrastructure': 'five differently-shaped system icons linked by connecting lines to one central node, over a faint city-network grid',
   'iot-hardware-basics': 'a breadboard cross-section with a sensor, a resistor divider and a microcontroller pin, one probe measuring a voltage between them',
+  'embedded-firmware': 'a closed loop of arrowed instruction blocks around a microcontroller die, with one arrow branching off to a smaller interrupt block and returning',
 };
 
 type Quality = 'low' | 'medium' | 'high';

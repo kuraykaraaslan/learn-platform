@@ -1,0 +1,103 @@
+{
+  "slug": "embedded-firmware",
+  "title": "Embedded Firmware Architecture",
+  "description": "The software half of a sensor node: a loop that never exits, two contexts sharing memory, budgets instead of allocation, and what happens to a device when the power goes away mid-write.",
+  "items": [
+    {
+      "id": 542,
+      "file": "542_the_loop_that_never_exits.md",
+      "title": "Firmware Is Not a Program: The Loop That Never Exits",
+      "bracket": "0-1",
+      "category": "Embedded Firmware Architecture",
+      "verified": true
+    },
+    {
+      "id": 543,
+      "file": "543_interrupts_and_the_two_contexts.md",
+      "title": "Interrupts: The Function That Runs While You Are Not Looking",
+      "bracket": "1-3",
+      "category": "Embedded Firmware Architecture",
+      "verified": true
+    },
+    {
+      "id": 544,
+      "file": "544_shared_state_volatile_and_atomicity.md",
+      "title": "Shared State: `volatile` Is Not Atomic, and the Torn Read",
+      "bracket": "3-7",
+      "category": "Embedded Firmware Architecture",
+      "verified": true
+    },
+    {
+      "id": 545,
+      "file": "545_the_ring_buffer_between_two_contexts.md",
+      "title": "One Producer, One Consumer, No Lock: The Ring Buffer Between Two Contexts",
+      "bracket": "3-7",
+      "category": "Embedded Firmware Architecture",
+      "verified": true
+    },
+    {
+      "id": 546,
+      "file": "546_never_block_cooperative_state_machines.md",
+      "title": "Never Block: Cooperative State Machines Instead of `delay()`",
+      "bracket": "1-3",
+      "category": "Embedded Firmware Architecture",
+      "verified": true
+    },
+    {
+      "id": 547,
+      "file": "547_when_the_superloop_stops_paying.md",
+      "title": "When the Superloop Stops Paying: Tasks, Priorities, and Priority Inversion",
+      "bracket": "3-7",
+      "category": "Embedded Firmware Architecture",
+      "verified": true
+    },
+    {
+      "id": 548,
+      "file": "548_memory_you_cannot_ask_for.md",
+      "title": "Memory You Cannot Ask For: Static Allocation, Stack Depth, and the Heap You Did Not Budget",
+      "bracket": "3-7",
+      "category": "Embedded Firmware Architecture",
+      "verified": true
+    },
+    {
+      "id": 549,
+      "file": "549_time_without_a_clock.md",
+      "title": "Time Without a Clock: Ticks, Overflow, and the Subtraction That Saves You",
+      "bracket": "1-3",
+      "category": "Embedded Firmware Architecture",
+      "verified": true
+    },
+    {
+      "id": 550,
+      "file": "550_fixed_point_and_the_float_you_cannot_afford.md",
+      "title": "Fixed Point: The Float You Cannot Afford, and the Overflow in the Middle",
+      "bracket": "3-7",
+      "category": "Embedded Firmware Architecture",
+      "verified": true
+    },
+    {
+      "id": 551,
+      "file": "551_the_watchdog_is_not_a_safety_net.md",
+      "title": "The Watchdog Is Not a Safety Net: Feeding It, and the Reboot Loop You Built",
+      "bracket": "3-7",
+      "category": "Embedded Firmware Architecture",
+      "verified": true
+    },
+    {
+      "id": 552,
+      "file": "552_power_loss_is_a_state_transition.md",
+      "title": "Power Loss Is a State Transition: Flash Wear, Journaling, and the Commit Point",
+      "bracket": "1-3",
+      "category": "Embedded Firmware Architecture",
+      "verified": true
+    },
+    {
+      "id": 553,
+      "file": "553_debugging_without_a_console.md",
+      "title": "Debugging Without a Console: Reset Reasons, Trace Buffers, and the Heisenbug",
+      "bracket": "3-7",
+      "category": "Embedded Firmware Architecture",
+      "verified": true
+    }
+  ]
+}

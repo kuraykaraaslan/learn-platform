@@ -1,0 +1,8 @@
+{
+  "name": "verify-embedded-firmware-545",
+  "private": true,
+  "description": "Exhaustively explores every interleaving of a single-producer/single-consumer ring buffer's micro-steps, for lesson 545's proof, and shows that swapping the producer's two writes is what breaks it -- not the missing lock. Zero dependencies, pure Node, no clock, no random.",
+  "scripts": {
+    "verify": "node ring.js"
+  }
+}

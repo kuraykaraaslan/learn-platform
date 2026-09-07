@@ -16,7 +16,12 @@ sebebi ölçütünün farklı olması: mevcut dersleri dönüştürmek değil, k
 ölçülmüş olarak **hiç bulunmayan** bir alanı açmak (`BIM`, `GIS`, `IFC`,
 `Autodesk`, `MQTT`, `PostGIS` terimlerinin 412 derste eşleşmesi: sıfır).
 
-P13-P24'ün her şartnamesi bir **`## Eklenebilecekler`** tablosu taşıyor: o fazın
+P24 ve P25 aynı ölçütle o dala iki kurs daha ekledi — dalın kendi içindeki
+boşlukları kapatarak. P24 cihazın elektriğini (`GPIO`, `I2C`, `ohm`: sıfır),
+P25 o elektriğin üstündeki yazılımı (`RTOS`, `DMA`, `mutex`, `fixed-point`:
+sıfır). Alan artık 10 kurs, 123 ders.
+
+P13-P25'in her şartnamesi bir **`## Eklenebilecekler`** tablosu taşıyor: o fazın
 kapsamı dışında bırakılan adaylar ve her birinin neden şimdi olmadığı (*kapsam*,
 *bağımlılık*, *doktrin*). Doktrine takılanlar `yasak` işaretli — ertelenmiş
 değil reddedilmiş. Bir aday kapsama alınınca tablodan çıkar, ders listesine
@@ -48,6 +53,7 @@ P21 akıllı altyapı  ← P15, P17, P18, P20 (kesişim dersleri)
 P22 kapanış         ← P14..P21 (çapraz bağlar, yeniden ölçüm)
 P23 developer path'leri  ← P14..P21 (kurslar arası okuma sırası)
 P24 IoT donanım temelleri ← P17 (dalın giriş kapısı; okuma sırasında #469'un önüne girer)
+P25 gömülü firmware      ← P24 (donanım ile taşıma arasındaki yazılım; okuma sırası 524 → 542 → 469)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -77,6 +83,7 @@ P24 IoT donanım temelleri ← P17 (dalın giriş kapısı; okuma sırasında #4
 | P22 | [22-domain-closeout.md](22-domain-closeout.md) | ~2 gün | tamamlandı — 6 forward `(#N)` bağı, arama indeksi 77.393 B gz (sınır 98.304), `cap-starved` 2, `shadowed` 0 |
 | P23 | [23-developer-paths.md](23-developer-paths.md) | ~3 gün | tamamlandı — 4 path (`bim-developer` 14, `gis-developer` 12, `iot-engineer` 16, `digital-twin` 16), `/paths` + 4 statik sayfa, ders rozeti sunucu bileşeni |
 | P24 | [24-iot-hardware-basics.md](24-iot-hardware-basics.md) | ~9-10 gün | tamamlandı — 18 ders (524-541), 17 damgalı, 541 denylist'te, `device_calibration` seed, `532` + `537` proof, `diff` 2 → 3 |
+| P25 | [25-embedded-firmware.md](25-embedded-firmware.md) | ~7-8 gün | tamamlandı — 12 ders (542-553), 12'si damgalı, denylist değişmedi, `545` + `549` proof, `diff` 3 → 4, hiç C fence'i yok |
 
 ## Ölçülen zemin
 
@@ -88,22 +95,22 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 
 | Ölçüm | P0 zemini | Bugün |
 |---|---:|---:|
-| Ders / kurs / bölüm | 412 / 23 / 2473 | 523 / 32 / **3138** |
-| Fence | 505 | 1322 |
+| Ders / kurs / bölüm | 412 / 23 / 2473 | 535 / 33 / **3210** |
+| Fence | 505 | 1362 |
 | Yalnız kod fence'i olan ders | 179 | 70 |
 | Yalnız şablon fence'i olan ders | 211 | 138 |
 | Hiç fence'i olmayan ders | 0 | 1 |
-| TS/TSX/JS fence | 161 | 249 |
-| Common Mistakes maddesi | 1746 | 2446 |
-| — drill'lenebilir | 705 (%40,4) | **2305 (%94,2)** |
+| TS/TSX/JS fence | 161 | 258 |
+| Common Mistakes maddesi | 1746 | 2519 |
+| — drill'lenebilir | 705 (%40,4) | **2378 (%94,4)** |
 | — tek cümlelik (P2'nin işi) | 1041 | **141** |
-| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **513** (sıfır: 10) |
+| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **525** (sıfır: 10) |
 | Form fence / dosya | 91 / 88 | 94 / 90 |
-| Checklist fence / madde | 35 / 293 | 38 / 318 |
+| Checklist fence / madde | 35 / 293 | 39 / 333 |
 | `sql` fence | 9 | 79 |
 | `java` fence | 10 | 10 |
 | Blockquote kullanan ders | 45 | 91 |
-| Mermaid kullanan ders | 0 | 26 |
+| Mermaid kullanan ders | 0 | 27 |
 
 Bölüm sayısındaki fark bir ölçüm hatasıdır, korpus değişimi değil: 412 ders × 6
 bölüm = **2472**, ve hiçbir bölüm boş değil. P0'ın 2473'ü bir fazla saymış.
@@ -128,10 +135,10 @@ kaynak `course_content.sections.ts` olarak kalır.
 
 | Alan ölçüsü | P13 zemini | Bugün |
 |---|---:|---:|
-| Alan dersi / alan kursu | 0 / 0 | 111 / 9 |
-| Alan fence'i | 0 | 415 |
-| Alan Common Mistakes maddesi | 0 | 674 |
-| Alan — drill'lenebilir | 0 | 674 |
+| Alan dersi / alan kursu | 0 / 0 | 123 / 10 |
+| Alan fence'i | 0 | 455 |
+| Alan Common Mistakes maddesi | 0 | 747 |
+| Alan — drill'lenebilir | 0 | 747 |
 
 P8/P9'un tek seferlik fence analizleri (hiç import etmeyen 44, yalnız
 tarayıcı-güvenli import 10, WebContainer'da çalışabilen 62, yerel eklenti
@@ -140,10 +147,13 @@ isteyen 42, var olmayan `@/` alias'ı 45) ve P0'ın `<pre>` yerleşim sayımı
 şartnamelerinde duruyor, sonuncusu `course_content.blocks.test.ts` tarafından
 sürekli korunuyor.
 
-**İki indeks bütçesi (P22'de yeniden ölçüldü).** Arama indeksi P13 zemininde
-64.207 B gz idi; 412 → 505 derste **77.393 B gz** — `MAX_INDEX_GZ_BYTES`
-(98.304 B, `build-search-index.ts:33`) altında, ~21 KB marj, sınır değişmedi.
-Review indeksinin bütçe kontrolü yok; 2.126 kartla **201.160 B gz**. Kavram
+**İki indeks bütçesi (P22'de yeniden ölçüldü, P25'te tekrar).** Arama indeksi
+P13 zemininde 64.207 B gz idi; P22'de 505 derste 77.393 B gz; bugün 535 derste
+**81.979 B gz** — `MAX_INDEX_GZ_BYTES` (98.304 B, `build-search-index.ts:33`)
+altında, ~16 KB marj, sınır değişmedi. Son iki kurs (30 ders) indekse ~4,6 KB
+ekledi; bu hızla sınır ~5 kurs sonra konuşulur. Review indeksinin bütçe
+kontrolü yok; P22'de 2.126 kartla 201.160 B gz, bugün 2.300 kartla
+**214.040 B gz**. Kavram
 sözlüğü 139 terim; `cap-starved` (4-link sınırına dayanan) ders sayısı 2,
 `shadowed` 0.
 
@@ -153,18 +163,18 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 
 | Widget | Fence | Ders |
 |---|---:|---:|
-| `quiz` | 271 | 271 |
-| `recall` | 271 | 271 |
-| `mermaid` | 26 | 26 |
-| `tradeoff` | 20 | 20 |
-| `calc` | 17 | 17 |
+| `quiz` | 283 | 283 |
+| `recall` | 283 | 283 |
+| `mermaid` | 27 | 27 |
+| `tradeoff` | 21 | 21 |
+| `calc` | 19 | 19 |
 | `spatial` | 6 | 6 |
-| `proof` | 25 | 25 |
-| `run` (toplam) | 121 | 78 |
+| `proof` | 27 | 27 |
+| `run` (toplam) | 129 | 86 |
 | — `sql run` | 66 | |
-| — JS/TS `run` | 52 | |
+| — JS/TS `run` | 60 | |
 | — `run project` | 3 | |
-| `diff` | 3 | 3 |
+| `diff` | 4 | 4 |
 
 Her kurs en az bir `quiz` ve bir `recall` taşıyor.
 
@@ -172,7 +182,9 @@ Her kurs en az bir `quiz` ve bir `recall` taşıyor.
 `// ── fixed ──` işaretçi çifti, `looksLikeDiff()` ile sayılır. Neden yalnız
 2 tane olduğu ölçülmek zorundaydı ve [P6'da](06-quiz-tradeoff-diff.md) kayda
 geçti: korpusun bad/good kalıbı çoğunlukla çok çiftli ya da büyük bir fence'e
-gömülü, ve iki yarımlı bir toggle'a uymuyor.
+gömülü, ve iki yarımlı bir toggle'a uymuyor. Sayı 4'e çıktı ve ikisi de sonradan
+**bu şekil için yazıldı** (P24/535, P25/543) — mevcut fence'lerden dönüştürülerek
+değil. P6'nın bulgusu ayakta: eski korpus bu kalıba uymuyor, yenisi uyabiliyor.
 
 ## Değişmezler — her fazda geçerli
 

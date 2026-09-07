@@ -501,5 +501,17 @@
   "iot-hardware-basics/537_energy_budgets.md": "e096f562e83ab360",
   "iot-hardware-basics/538_the_enclosure_is_part_of_the_product.md": "5633758f4162c24e",
   "iot-hardware-basics/539_a_dev_kit_is_not_a_product.md": "a71604a36b3a6252",
-  "iot-hardware-basics/540_bring_up_and_fault_isolation.md": "e026c2e3b791ee17"
+  "iot-hardware-basics/540_bring_up_and_fault_isolation.md": "e026c2e3b791ee17",
+  "embedded-firmware/542_the_loop_that_never_exits.md": "950461fff8db5aef",
+  "embedded-firmware/543_interrupts_and_the_two_contexts.md": "fbeff13ea0c607a6",
+  "embedded-firmware/544_shared_state_volatile_and_atomicity.md": "6a6895aded78ca3e",
+  "embedded-firmware/545_the_ring_buffer_between_two_contexts.md": "f1d19f3f786ce2f7",
+  "embedded-firmware/546_never_block_cooperative_state_machines.md": "2b83a0d4664dddce",
+  "embedded-firmware/547_when_the_superloop_stops_paying.md": "ee215582a87d1923",
+  "embedded-firmware/548_memory_you_cannot_ask_for.md": "09ff866ba469815d",
+  "embedded-firmware/549_time_without_a_clock.md": "3d33a99c56836704",
+  "embedded-firmware/550_fixed_point_and_the_float_you_cannot_afford.md": "da2d715a97250949",
+  "embedded-firmware/551_the_watchdog_is_not_a_safety_net.md": "33cba2549dca7d96",
+  "embedded-firmware/552_power_loss_is_a_state_transition.md": "8eff95bf4278978f",
+  "embedded-firmware/553_debugging_without_a_console.md": "e9bb2d94aff0f57b"
 }

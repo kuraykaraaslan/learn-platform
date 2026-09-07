@@ -1,11 +1,11 @@
 {
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
-    "lessons": 523,
+    "lessons": 535,
     "single": 141,
     "lessonsWithZeroDrillable": 10,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 491
+    "lessonsWithTwoPlusDrillable": 503
   },
   "lessons": [
     {
@@ -4656,6 +4656,186 @@
         "bold-space": 0,
         "plain-dash": 0,
         "single": 4
+      }
+    },
+    {
+      "courseSlug": "embedded-firmware",
+      "file": "542_the_loop_that_never_exits.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "embedded-firmware",
+      "file": "543_interrupts_and_the_two_contexts.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "embedded-firmware",
+      "file": "544_shared_state_volatile_and_atomicity.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "embedded-firmware",
+      "file": "545_the_ring_buffer_between_two_contexts.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "embedded-firmware",
+      "file": "546_never_block_cooperative_state_machines.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "embedded-firmware",
+      "file": "547_when_the_superloop_stops_paying.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "embedded-firmware",
+      "file": "548_memory_you_cannot_ask_for.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "embedded-firmware",
+      "file": "549_time_without_a_clock.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "embedded-firmware",
+      "file": "550_fixed_point_and_the_float_you_cannot_afford.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "embedded-firmware",
+      "file": "551_the_watchdog_is_not_a_safety_net.md",
+      "verified": true,
+      "total": 7,
+      "single": 0,
+      "drillable": 7,
+      "formCounts": {
+        "bold-dash": 7,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "embedded-firmware",
+      "file": "552_power_loss_is_a_state_transition.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "embedded-firmware",
+      "file": "553_debugging_without_a_console.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
       }
     },
     {

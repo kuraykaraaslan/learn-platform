@@ -1,0 +1,8 @@
+{
+  "name": "verify-embedded-firmware-549",
+  "private": true,
+  "description": "Enumerates every (start, elapsed) pair of an 8-bit tick counter to count how often the add-then-compare interval test is wrong, then repeats the measurement at 32 bits around the wrap point, for lesson 549's proof. Zero dependencies, pure Node, no clock, no random.",
+  "scripts": {
+    "verify": "node wrap.js"
+  }
+}
