@@ -228,7 +228,6 @@ işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
 | Dynamo | Görsel programlama ile Revit otomasyonu | kitle — hedef okuyucu kod yazıyor; Dynamo'nun asıl kitlesi başka |
 | ACC Issues / Submittals API | Şantiye iş akışlarının veri modeli | kapsam — `#468` vendor çürümesini kuruyor; ACC yüzeyi hızlı değişiyor, oynaklık kaydını şişirir |
 | Viewer extension yazımı | Viewer'ı genişletmek | doktrin — `#465`'in tezi Viewer'ın **istemci** olduğu; extension dersi o tezi zayıflatır ve çalıştırılamaz |
-| Revit → IFC dışa aktarım eşlemeleri | `#459`'un devamı: paylaşılan parametre IFC'de nereye düşüyor | bağımlılık — P14 ve `#459` birlikte okunduktan sonra anlamlı; en güçlü aday |
 
 ## Ek — `#523`, bu tablodan çıkan ilk aday (2026-09)
 
@@ -258,3 +257,18 @@ Kayda değer dört nokta:
   yazılan dersi kursun sonuna koyar.
 - **Korpus 485 → 486.** `docs/phases/README.md`'nin ölçülen tabloları yeniden
   ölçüldü (14 satır), `corpus-stats --check` yeşil.
+
+## Ek — `#561`, bu tablodan çıkan ikinci aday (2026-09)
+
+"Revit → IFC dışa aktarım eşlemeleri" kapsama alındı ve
+[P27](27-model-coordination-exchange.md)/`#561` oldu; tablonun "en güçlü aday"
+işareti karşılığını buldu. Erteleme gerekçesi bir bağımlılıktı — *"P14 ve
+`#459` birlikte okunduktan sonra anlamlı"* — ve ders ikisinin üstüne kuruldu:
+`#459`'un paylaşılan/proje parametre ayrımı dersin ekseni, `#436`'nın property
+set'i ise değerin **nereye düştüğü**.
+
+`#523`'te olduğu gibi burada da menü turu yok. Ders bir eşleme dosyasının nasıl
+açılacağını değil, **üç eşlemenin** (kategori, özellik, eleman-başı geçersiz
+kılma) ne yaptığını anlatıyor, ve tezini tek cümlede taşıyor: eşlemede olmayan
+bir parametre uyarı üretmez, hiçbir şey üretmez. `diff` çifti de bunun için:
+aynı eleman, iki eşleme, ve ikisinde de eksik kalan proje parametresi.

@@ -34,8 +34,8 @@ export const DEVELOPER_PATHS = [
     id: 'bim-developer',
     title: 'BIM Developer Path',
     blurb:
-      'Read an IFC model as data, query and diff it, drive Revit from code, and keep an element’s identity alive across a re-export.',
-    steps: [431, 432, 433, 434, 435, 436, 437, 439, 440, 455, 456, 459, 460, 490],
+      'Read an IFC model as data, query and diff it, carry an issue back to the model, produce a file another tool will accept, drive Revit from code, and keep an element’s identity alive across a re-export.',
+    steps: [431, 432, 433, 434, 435, 436, 437, 439, 440, 555, 559, 455, 456, 459, 460, 490],
   },
   {
     id: 'gis-developer',

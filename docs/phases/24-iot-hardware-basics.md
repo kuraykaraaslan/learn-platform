@@ -295,7 +295,19 @@ başka bir şey gerekiyor), *doktrin* — sonuncusu ertelenmiş değil
 | Röle ve aktüatör sürme | Çıkışın dünyayı hareket ettirmesi | kapsam — ama şebeke anahtarlayan hiçbir devre yazılmaz (`#541` sınırı) |
 | Lityum şarj devresi, hücre dengeleme, BMS | Pil yönetimi tasarımı | **doktrin = yasak** — `#541` denylist'te; tasarım tarifi hiç yazılmaz |
 | Şebeke tesisatı, pano, koruma topraklaması | Kurulum işi | **doktrin = yasak** — lisanslı iş; `#541` nerede durulacağını söyler |
-| Firmware mimarisi (RTOS, kesme, DMA) | Pinin ötesindeki yazılım | kapsam — bu kurs elektriği kuruyor; firmware ayrı |
 | Termal tasarım ve derating | Sıcak muhafazada ömrün kısalması | kapsam — `#538` ısıya değiniyor, hesap ayrı ders |
 | Modbus RTU çerçeve düzeyinde | `#536`'nın fiziksel katmanının üstü | bağımlılık — `#514` OT sınırını kuruyor ve **denylist'te**; protokol dersi o pasodan sonra |
 | Zigbee / BLE / Matter, sensör füzyonu | Kısa menzil yığını, çok sensörlü tahmin | kapsam — P17'nin `Eklenebilecekler` tablosunda zaten duruyor |
+
+## Ek — firmware tabloyu terk etti (2026-09)
+
+"Firmware mimarisi (RTOS, kesme, DMA)" kapsama alındı ve bir ders değil bir
+**kurs** oldu: [P25](25-embedded-firmware.md), 12 ders (542-553). Erteleme
+gerekçesi *"bu kurs elektriği kuruyor; firmware ayrı"* idi ve ayrılık korundu —
+P24 pinde duran gerilimi anlatır, P25 o pini okuyan döngüyü. İkisi arasındaki
+dikiş `#542`'de açıkça çiziliyor: kurs `#524`'ün sinyal zincirinin bittiği
+yerde başlıyor ve `#469`'un ilk baytında bitiyor.
+
+DMA tabloda kalmadı, P25'in kendi `Eklenebilecekler`'ine geçti — orada gerekçe
+değişti: iki bağlam (`#543`-`#545`) kurulduktan sonra DMA **üçüncü** bir bağlam
+ve kendi dersini hak ediyor.

@@ -83,7 +83,7 @@ P27 model koordinasyonu  ← P14, P16, P20 (dalın yazma yarısı: federasyon, �
 | P20 | [20-asset-management-systems.md](20-asset-management-systems.md) | ~4-5 gün | tamamlandı — 9 ders (504-512), `asset_register` seed, `510` proof, anti-join + birleştirme hunisi |
 | P21 | [21-smart-infrastructure.md](21-smart-infrastructure.md) | ~5 gün | tamamlandı — 10 ders (513-522); 8 damgalı, 514 + 521 denylist'te, `crosswalk` seed, `518` proof |
 | P22 | [22-domain-closeout.md](22-domain-closeout.md) | ~2 gün | tamamlandı — 6 forward `(#N)` bağı, arama indeksi 77.393 B gz (sınır 98.304), `cap-starved` 2, `shadowed` 0 |
-| P23 | [23-developer-paths.md](23-developer-paths.md) | ~3 gün | tamamlandı — 4 path (`bim-developer` 14, `gis-developer` 12, `iot-engineer` 16, `digital-twin` 16), `/paths` + 4 statik sayfa, ders rozeti sunucu bileşeni |
+| P23 | [23-developer-paths.md](23-developer-paths.md) | ~3 gün | tamamlandı — 4 path (`bim-developer` 16, `gis-developer` 12, `iot-engineer` 16, `digital-twin` 16; ilk ikisi sonraki fazlarda güncellendi), `/paths` + 4 statik sayfa, ders rozeti sunucu bileşeni |
 | P24 | [24-iot-hardware-basics.md](24-iot-hardware-basics.md) | ~9-10 gün | tamamlandı — 18 ders (524-541), 17 damgalı, 541 denylist'te, `device_calibration` seed, `532` + `537` proof, `diff` 2 → 3 |
 | P25 | [25-embedded-firmware.md](25-embedded-firmware.md) | ~7-8 gün | tamamlandı — 12 ders (542-553), 12'si damgalı, denylist değişmedi, `545` + `549` proof, `diff` 3 → 4, hiç C fence'i yok |
 | P26 | [26-device-branch-closeout.md](26-device-branch-closeout.md) | ~2-3 gün | tamamlandı — yeni ders yok; 8 geriye bağ, iki yeni kurs 1/0 → **2/2** kurstan bağ alıyor, sözlük 139 → 149 (`shadowed` 0), 11 yeni link render, 0 kayıp |

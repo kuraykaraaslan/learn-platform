@@ -449,11 +449,28 @@ işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
 
 | Aday | Ne getirir | Neden şimdi değil |
 |---|---|---|
-| BCF (BIM Collaboration Format) | Model üzerindeki sorunun bir API nesnesi olarak taşınması — koordinasyonun veri hâli | kapsam — 10 ders IFC'nin kendi veri modelini kapatıyor; BCF ayrı bir değişim formatı |
-| COBie | Devir tablosunun formatı; neden hâlâ bir tablo ve bunun maliyeti | kapsam — devrin *kendisi* P20/`#511`'de; formatın anatomisi ayrı bir ders |
-| Clash detection | Çakışmanın bir geometri sorgusu oluşu: broad-phase/narrow-phase, tolerans | kapsam — geometri bu kursun dışında; IFC'nin veri tarafı önce oturmalı |
 | LOD / LOIN ve ISO 19650 bilgi gereksinimleri | Bilgi teslimatının bir sözleşme kalemi olması | kapsam + kaynak — ISO 19650 ücretli; ders numara+katalog ile yazılabilir ama kitle kayması riski (süreç dersi) |
-| Model federasyonu | Çok disiplinli modellerin tek koordinat sisteminde birleşmesi | bağımlılık — `#438` georeferansı ve P18/`#484` bunun yarısını zaten kuruyor; üçüncü ders ancak ikisi okunduktan sonra anlamlı |
 | IFC4.3 altyapı varlıkları (Alignment, yol/demiryolu) | Bina dışı altyapının IFC'ye girmesi — alanın en yeni kısmı | kapsam — IFC4.3 benimsenmesi hâlâ oynak; sürüm damgalı tek ders yazılabilir |
 | IFC **yazma** | Şu an yalnız okuma öğretiliyor; geçerli bir dosya üretmek ayrı bir problem | kapsam — yazma, şema doğrulama ve sertifikasyon gerektirir; okuma tarafı önce |
 | `spatial` widget'a arama/filtre | 40 düğümlük ağaçta terimle gezinme | kapsam — 40 düğüm sınırı zaten aramayı gereksiz kılıyor; sınır büyürse yeniden bakılır |
+
+## Ek — dört aday tabloyu terk etti (2026-09)
+
+BCF, COBie'nin anatomisi, çakışma tespiti ve model federasyonu
+[P27](27-model-coordination-exchange.md)'de ders oldu ve README'nin kuralı
+gereği tablodan çıktı. Dördünün de erteleme gerekçesi dersi **şekillendirdi**,
+yani gerekçe geçersiz sayılarak değil, karşılanarak kapandı:
+
+- **BCF** *("ayrı bir değişim formatı")* → `#555`, ayrı bir kursta ve ayrı bir
+  format olarak. P14'ün IFC veri modeline hiç dokunmuyor; tek bağı `#433`'ün
+  GlobalId'i, çünkü BCF'in tuttuğu şey o.
+- **COBie** *("devrin kendisi P20/#511'de; formatın anatomisi ayrı bir ders")* →
+  `#560`, ve dersin ilk paragrafı bu sınırı aynen beyan ediyor: süreç `#511`'in,
+  şema 560'ın.
+- **Çakışma tespiti** *("geometri bu kursun dışında")* → `#557`, bir **sorgu**
+  olarak yazıldı. Broad phase üç aralık karşılaştırması, narrow phase bir karar
+  kuralı, ve ders "this lesson writes no geometry engine" diye beyan ediyor.
+  Gerekçe dersi dar tuttu.
+- **Model federasyonu** *("#438 ve P18/#484 yarısını zaten kuruyor")* → `#556`,
+  ve tam olarak ikisinin bıraktığı yerden başlıyor: tek dosyanın zinciri değil,
+  **iki dosyanın** aynı sisteme çıkması ve iki referans noktasıyla doğrulanması.
