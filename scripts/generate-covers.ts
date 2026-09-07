@@ -64,6 +64,7 @@ const SUBJECTS: Record<string, string> = {
   'smart-infrastructure': 'five differently-shaped system icons linked by connecting lines to one central node, over a faint city-network grid',
   'iot-hardware-basics': 'a breadboard cross-section with a sensor, a resistor divider and a microcontroller pin, one probe measuring a voltage between them',
   'embedded-firmware': 'a closed loop of arrowed instruction blocks around a microcontroller die, with one arrow branching off to a smaller interrupt block and returning',
+  'model-coordination-exchange': 'two translucent overlapping building-model wireframes on one grid, with a small marked collision zone where they intersect and a tag leading away from it',
 };
 
 type Quality = 'low' | 'medium' | 'high';

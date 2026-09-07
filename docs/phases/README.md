@@ -55,6 +55,7 @@ P23 developer path'leri  ← P14..P21 (kurslar arası okuma sırası)
 P24 IoT donanım temelleri ← P17 (dalın giriş kapısı; okuma sırasında #469'un önüne girer)
 P25 gömülü firmware      ← P24 (donanım ile taşıma arasındaki yazılım; okuma sırası 524 → 542 → 469)
 P26 cihaz dalı kapanışı  ← P24, P25 (P22'nin iki yönlü bağ kuralı, kapanıştan sonra gelen iki kursa)
+P27 model koordinasyonu  ← P14, P16, P20 (dalın yazma yarısı: federasyon, çakışma, BCF, IFC yazma)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -86,6 +87,7 @@ P26 cihaz dalı kapanışı  ← P24, P25 (P22'nin iki yönlü bağ kuralı, kap
 | P24 | [24-iot-hardware-basics.md](24-iot-hardware-basics.md) | ~9-10 gün | tamamlandı — 18 ders (524-541), 17 damgalı, 541 denylist'te, `device_calibration` seed, `532` + `537` proof, `diff` 2 → 3 |
 | P25 | [25-embedded-firmware.md](25-embedded-firmware.md) | ~7-8 gün | tamamlandı — 12 ders (542-553), 12'si damgalı, denylist değişmedi, `545` + `549` proof, `diff` 3 → 4, hiç C fence'i yok |
 | P26 | [26-device-branch-closeout.md](26-device-branch-closeout.md) | ~2-3 gün | tamamlandı — yeni ders yok; 8 geriye bağ, iki yeni kurs 1/0 → **2/2** kurstan bağ alıyor, sözlük 139 → 149 (`shadowed` 0), 11 yeni link render, 0 kayıp |
+| P27 | [27-model-coordination-exchange.md](27-model-coordination-exchange.md) | ~6-7 gün | tamamlandı — 9 ders (554-562), 9'u damgalı, `557` proof, `diff` 4 → 5; dalın yazma yarısı (federasyon, çakışma sorgusu, BCF, IFC yazma, COBie şeması) |
 
 ## Ölçülen zemin
 
@@ -97,22 +99,22 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 
 | Ölçüm | P0 zemini | Bugün |
 |---|---:|---:|
-| Ders / kurs / bölüm | 412 / 23 / 2473 | 535 / 33 / **3210** |
-| Fence | 505 | 1362 |
+| Ders / kurs / bölüm | 412 / 23 / 2473 | 544 / 34 / **3264** |
+| Fence | 505 | 1391 |
 | Yalnız kod fence'i olan ders | 179 | 70 |
 | Yalnız şablon fence'i olan ders | 211 | 138 |
 | Hiç fence'i olmayan ders | 0 | 1 |
-| TS/TSX/JS fence | 161 | 258 |
-| Common Mistakes maddesi | 1746 | 2519 |
-| — drill'lenebilir | 705 (%40,4) | **2378 (%94,4)** |
+| TS/TSX/JS fence | 161 | 265 |
+| Common Mistakes maddesi | 1746 | 2573 |
+| — drill'lenebilir | 705 (%40,4) | **2432 (%94,5)** |
 | — tek cümlelik (P2'nin işi) | 1041 | **141** |
-| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **525** (sıfır: 10) |
+| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **534** (sıfır: 10) |
 | Form fence / dosya | 91 / 88 | 94 / 90 |
-| Checklist fence / madde | 35 / 293 | 39 / 333 |
+| Checklist fence / madde | 35 / 293 | 40 / 349 |
 | `sql` fence | 9 | 79 |
 | `java` fence | 10 | 10 |
 | Blockquote kullanan ders | 45 | 91 |
-| Mermaid kullanan ders | 0 | 27 |
+| Mermaid kullanan ders | 0 | 28 |
 
 Bölüm sayısındaki fark bir ölçüm hatasıdır, korpus değişimi değil: 412 ders × 6
 bölüm = **2472**, ve hiçbir bölüm boş değil. P0'ın 2473'ü bir fazla saymış.
@@ -137,10 +139,10 @@ kaynak `course_content.sections.ts` olarak kalır.
 
 | Alan ölçüsü | P13 zemini | Bugün |
 |---|---:|---:|
-| Alan dersi / alan kursu | 0 / 0 | 123 / 10 |
-| Alan fence'i | 0 | 455 |
-| Alan Common Mistakes maddesi | 0 | 747 |
-| Alan — drill'lenebilir | 0 | 747 |
+| Alan dersi / alan kursu | 0 / 0 | 132 / 11 |
+| Alan fence'i | 0 | 484 |
+| Alan Common Mistakes maddesi | 0 | 801 |
+| Alan — drill'lenebilir | 0 | 801 |
 
 P8/P9'un tek seferlik fence analizleri (hiç import etmeyen 44, yalnız
 tarayıcı-güvenli import 10, WebContainer'da çalışabilen 62, yerel eklenti
@@ -155,8 +157,8 @@ P13 zemininde 64.207 B gz idi; P22'de 505 derste 77.393 B gz; bugün 535 derste
 altında, ~16 KB marj, sınır değişmedi. Son iki kurs (30 ders) indekse ~4,6 KB
 ekledi; bu hızla sınır ~5 kurs sonra konuşulur. Review indeksinin bütçe
 kontrolü yok; P22'de 2.126 kartla 201.160 B gz, bugün 2.300 kartla
-**214.040 B gz**. Kavram sözlüğü P22'de 139 terimdi; P26 cihaz dalı için 10
-terim ekledi ve bugün **149**. `cap-starved` (4-link sınırına dayanan) ders
+**214.040 B gz**. Kavram sözlüğü P22'de 139 terimdi; P26 cihaz dalı için 10,
+P27 koordinasyon kursu için 5 terim ekledi ve bugün **154**. `cap-starved` (4-link sınırına dayanan) ders
 sayısı 2, `shadowed` 0, `case-mismatch` 0 — üçü de P22'den beri kımıldamadı.
 `own-lesson-only` 5 → 8: üç yeni terim yalnız tanımlandığı derste geçiyor,
 yani hiçbir yerde tooltip render etmiyor. Bu P3'ün ölçülen kategorilerinden
@@ -166,7 +168,9 @@ biri, hata değil.
 yönlü* bağlanmasıydı, ama P24 ve P25 o kapanıştan sonra geldi ve kural onlara
 uygulanmamıştı: `iot-hardware-basics`'e 1, `embedded-firmware`'a **0** kurstan
 bağ vardı (karşılaştırma: P17'ye 7, P14/P18'e 5). P26 ikisini de 2'ye çıkardı —
-uydurulmuş bağla değil, nesrin zaten işaret ettiği sekiz yere.
+uydurulmuş bağla değil, nesrin zaten işaret ettiği sekiz yere. P27 aynı kuralı
+**doğuşta** uyguladı: yeni kurs üç kurstan bağ alarak açıldı, çünkü aynı borcu
+ikinci kez ödemenin anlamı yok.
 
 ## Widget kapsamı
 
@@ -174,18 +178,18 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 
 | Widget | Fence | Ders |
 |---|---:|---:|
-| `quiz` | 283 | 283 |
-| `recall` | 283 | 283 |
-| `mermaid` | 27 | 27 |
-| `tradeoff` | 21 | 21 |
+| `quiz` | 292 | 292 |
+| `recall` | 292 | 292 |
+| `mermaid` | 28 | 28 |
+| `tradeoff` | 22 | 22 |
 | `calc` | 19 | 19 |
 | `spatial` | 6 | 6 |
-| `proof` | 27 | 27 |
-| `run` (toplam) | 129 | 86 |
+| `proof` | 28 | 28 |
+| `run` (toplam) | 135 | 92 |
 | — `sql run` | 66 | |
-| — JS/TS `run` | 60 | |
+| — JS/TS `run` | 66 | |
 | — `run project` | 3 | |
-| `diff` | 4 | 4 |
+| `diff` | 5 | 5 |
 
 Her kurs en az bir `quiz` ve bir `recall` taşıyor.
 
@@ -193,9 +197,9 @@ Her kurs en az bir `quiz` ve bir `recall` taşıyor.
 `// ── fixed ──` işaretçi çifti, `looksLikeDiff()` ile sayılır. Neden yalnız
 2 tane olduğu ölçülmek zorundaydı ve [P6'da](06-quiz-tradeoff-diff.md) kayda
 geçti: korpusun bad/good kalıbı çoğunlukla çok çiftli ya da büyük bir fence'e
-gömülü, ve iki yarımlı bir toggle'a uymuyor. Sayı 4'e çıktı ve ikisi de sonradan
-**bu şekil için yazıldı** (P24/535, P25/543) — mevcut fence'lerden dönüştürülerek
-değil. P6'nın bulgusu ayakta: eski korpus bu kalıba uymuyor, yenisi uyabiliyor.
+gömülü, ve iki yarımlı bir toggle'a uymuyor. Sayı 5'e çıktı ve üçü de sonradan
+**bu şekil için yazıldı** (P24/535, P25/543, P27/561) — mevcut fence'lerden
+dönüştürülerek değil. P6'nın bulgusu ayakta: eski korpus bu kalıba uymuyor, yenisi uyabiliyor.
 
 ## Değişmezler — her fazda geçerli
 

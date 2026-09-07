@@ -1,0 +1,8 @@
+{
+  "name": "verify-model-coordination-exchange-557",
+  "private": true,
+  "description": "Counts the pair reduction an axis-aligned broad phase achieves on a fixed 30-element model and shows how the clash count moves with the tolerance, for lesson 557's proof. Arithmetic only -- no geometry engine, no library, no random.",
+  "scripts": {
+    "verify": "node clash.js"
+  }
+}

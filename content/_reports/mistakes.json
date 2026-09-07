@@ -1,11 +1,11 @@
 {
   "generatedFrom": "scripts/mistakes-report.ts",
   "totals": {
-    "lessons": 535,
+    "lessons": 544,
     "single": 141,
     "lessonsWithZeroDrillable": 10,
     "lessonsWithNoMistakesAtAll": 0,
-    "lessonsWithTwoPlusDrillable": 503
+    "lessonsWithTwoPlusDrillable": 512
   },
   "lessons": [
     {
@@ -6491,6 +6491,141 @@
     {
       "courseSlug": "iot-telemetry-edge",
       "file": "482_alerting_without_crying_wolf.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "model-coordination-exchange",
+      "file": "554_coordination_is_a_data_problem.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "model-coordination-exchange",
+      "file": "555_bcf_an_issue_as_a_portable_object.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "model-coordination-exchange",
+      "file": "556_federating_models.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "model-coordination-exchange",
+      "file": "557_clash_detection_is_a_query.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "model-coordination-exchange",
+      "file": "558_the_clash_report_nobody_reads.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "model-coordination-exchange",
+      "file": "559_writing_ifc.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "model-coordination-exchange",
+      "file": "560_cobie_as_a_schema.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "model-coordination-exchange",
+      "file": "561_revit_to_ifc.md",
+      "verified": true,
+      "total": 6,
+      "single": 0,
+      "drillable": 6,
+      "formCounts": {
+        "bold-dash": 6,
+        "bold-colon": 0,
+        "bold-space": 0,
+        "plain-dash": 0,
+        "single": 0
+      }
+    },
+    {
+      "courseSlug": "model-coordination-exchange",
+      "file": "562_exchange_requirements_a_machine_can_check.md",
       "verified": true,
       "total": 6,
       "single": 0,

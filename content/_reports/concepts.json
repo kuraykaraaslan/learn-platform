@@ -1,19 +1,19 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
-  "totalTerms": 149,
-  "totalLessons": 535,
+  "totalTerms": 154,
+  "totalLessons": 544,
   "totals": {
     "neverMatched": 0,
-    "neverLinked": 24,
+    "neverLinked": 25,
     "neverLinkedByCause": {
-      "own-lesson-only": 8,
+      "own-lesson-only": 9,
       "code-only": 14,
       "shadowed": 0,
       "case-mismatch": 0,
       "cap-starved": 2,
       "never-matched": 0
     },
-    "atCapLessons": 10
+    "atCapLessons": 11
   },
   "neverMatched": [],
   "neverLinked": [
@@ -36,6 +36,14 @@
       "alsoAppearsInLessons": [
         496
       ]
+    },
+    {
+      "slug": "broad-phase",
+      "term": "broad phase",
+      "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
     },
     {
       "slug": "correlation-id",
@@ -256,6 +264,7 @@
     "architecture-design-patterns-testing/132_load_stress_testing_basics.md",
     "architecture-design-patterns-testing/68_big_o_analysis.md",
     "distributed-systems-api-design/04_circuit_breaker_bulkhead_retry.md",
+    "model-coordination-exchange/554_coordination_is_a_data_problem.md",
     "observability-deployment/59_kubernetes_fundamentals.md",
     "product-technical-strategy/389_domain_modeling_module_boundaries_scaling_path.md",
     "product-technical-strategy/391_nfr_production_readiness_strategy.md",
@@ -382,6 +391,14 @@
       "rawOccurrences": 12
     },
     {
+      "slug": "bcf",
+      "term": "BCF",
+      "lessonsLinkedIn": [
+        "model-coordination-exchange/558_the_clash_report_nobody_reads.md"
+      ],
+      "rawOccurrences": 37
+    },
+    {
       "slug": "billable-utilization",
       "term": "Billable utilization",
       "lessonsLinkedIn": [
@@ -434,6 +451,12 @@
       "rawOccurrences": 29
     },
     {
+      "slug": "broad-phase",
+      "term": "broad phase",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 14
+    },
+    {
       "slug": "cache-invalidation",
       "term": "Cache invalidation",
       "lessonsLinkedIn": [
@@ -462,6 +485,14 @@
         "process-soft-skills/79_blameless_post_mortem.md"
       ],
       "rawOccurrences": 15
+    },
+    {
+      "slug": "cobie",
+      "term": "COBie",
+      "lessonsLinkedIn": [
+        "asset-management-systems/511_handover_data.md"
+      ],
+      "rawOccurrences": 42
     },
     {
       "slug": "code-generation",
@@ -742,6 +773,16 @@
       "rawOccurrences": 25
     },
     {
+      "slug": "exchange-requirement",
+      "term": "exchange requirement",
+      "lessonsLinkedIn": [
+        "bim-ifc-data-models/438_georeferencing_a_model.md",
+        "model-coordination-exchange/554_coordination_is_a_data_problem.md",
+        "model-coordination-exchange/556_federating_models.md"
+      ],
+      "rawOccurrences": 8
+    },
+    {
       "slug": "exponential-backoff",
       "term": "exponential backoff",
       "lessonsLinkedIn": [
@@ -768,6 +809,15 @@
         "saas-business-skills/93_ab_test_infrastructure.md"
       ],
       "rawOccurrences": 27
+    },
+    {
+      "slug": "federated-model",
+      "term": "federated model",
+      "lessonsLinkedIn": [
+        "bim-ifc-data-models/433_globalid_the_ifc_guid.md",
+        "model-coordination-exchange/554_coordination_is_a_data_problem.md"
+      ],
+      "rawOccurrences": 9
     },
     {
       "slug": "flame-graph",
@@ -797,9 +847,12 @@
         "bim-ifc-data-models/432_parsing_ifc_without_a_library.md",
         "bim-ifc-data-models/439_ifc_in_a_relational_database.md",
         "bim-ifc-data-models/440_model_diffing.md",
+        "model-coordination-exchange/555_bcf_an_issue_as_a_portable_object.md",
+        "model-coordination-exchange/559_writing_ifc.md",
+        "model-coordination-exchange/560_cobie_as_a_schema.md",
         "smart-infrastructure/513_smart_infrastructure_as_integration.md"
       ],
-      "rawOccurrences": 88
+      "rawOccurrences": 123
     },
     {
       "slug": "graceful-degradation",
@@ -904,9 +957,16 @@
         "digital-twin-engineering/490_twin_identity.md",
         "field-data-collection/503_validating_field_data.md",
         "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md",
+        "model-coordination-exchange/554_coordination_is_a_data_problem.md",
+        "model-coordination-exchange/555_bcf_an_issue_as_a_portable_object.md",
+        "model-coordination-exchange/556_federating_models.md",
+        "model-coordination-exchange/559_writing_ifc.md",
+        "model-coordination-exchange/560_cobie_as_a_schema.md",
+        "model-coordination-exchange/561_revit_to_ifc.md",
+        "model-coordination-exchange/562_exchange_requirements_a_machine_can_check.md",
         "smart-infrastructure/515_identity_resolution_across_systems.md"
       ],
-      "rawOccurrences": 114
+      "rawOccurrences": 144
     },
     {
       "slug": "index-bloat",
@@ -1124,9 +1184,14 @@
         "bim-ifc-data-models/440_model_diffing.md",
         "digital-twin-engineering/483_what_a_digital_twin_is.md",
         "digital-twin-engineering/485_binding_a_model_element.md",
-        "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md"
+        "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md",
+        "model-coordination-exchange/554_coordination_is_a_data_problem.md",
+        "model-coordination-exchange/559_writing_ifc.md",
+        "model-coordination-exchange/560_cobie_as_a_schema.md",
+        "model-coordination-exchange/561_revit_to_ifc.md",
+        "model-coordination-exchange/562_exchange_requirements_a_machine_can_check.md"
       ],
-      "rawOccurrences": 30
+      "rawOccurrences": 54
     },
     {
       "slug": "pull-up",
@@ -1424,7 +1489,7 @@
         "bim-ifc-data-models/434_the_spatial_hierarchy.md",
         "bim-ifc-data-models/439_ifc_in_a_relational_database.md"
       ],
-      "rawOccurrences": 4
+      "rawOccurrences": 5
     },
     {
       "slug": "sticky-sessions",

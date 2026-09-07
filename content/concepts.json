@@ -62,6 +62,11 @@
     "short": "Basically Available, Soft state, Eventual consistency — the alternative to ACID for distributed systems; AP systems are BASE systems.",
     "lesson": 15
   },
+  "bcf": {
+    "term": "BCF",
+    "short": "BIM Collaboration Format: an issue about a model as a portable object — markup, a viewpoint listing components by GlobalId, and an optional snapshot. It references geometry and never contains it.",
+    "lesson": 555
+  },
   "billable-utilization": {
     "term": "Billable utilization",
     "short": "Billable delivery hours ÷ total work hours — used for capacity insight, never as a self-punishment metric.",
@@ -90,6 +95,11 @@
     "short": "Any change that would cause an existing client to break — removing a field, changing a field type, changing required/optional status, changing authentication scheme.",
     "lesson": 9
   },
+  "broad-phase": {
+    "term": "broad phase",
+    "short": "The cheap first step of a spatial query: discard pairs whose bounding boxes cannot overlap, using three interval comparisons and no geometry. It exists because the pair count is quadratic.",
+    "lesson": 557
+  },
   "cache-invalidation": {
     "term": "Cache invalidation",
     "short": "Deleting or updating cache entries when source data changes — the hardest problem in caching.",
@@ -104,6 +114,11 @@
     "term": "circuit breaker",
     "short": "Tracks recent failure rates for calls to an external dependency and \"opens\" once failures exceed a threshold, making further calls fail fast instead of piling up on a slow or dead service — then probes with a half-open state before closing again.",
     "lesson": 4
+  },
+  "cobie": {
+    "term": "COBie",
+    "short": "A handover delivery shipped as spreadsheet tabs but shaped like a relational schema — Type, Component, Space and the rest — whose foreign keys are names matched exactly as strings.",
+    "lesson": 560
   },
   "code-generation": {
     "term": "Code generation",
@@ -279,6 +294,14 @@
     "short": "Accepts that different parts of a distributed system may be briefly out of sync, and designs the system to converge to a consistent state over time — a deliberate trade of synchronous consistency for availability and performance, not \"eventual incorrectness.\"",
     "lesson": 15
   },
+  "exchange-requirement": {
+    "term": "exchange requirement",
+    "short": "A statement of what a delivered file must contain, written as entity + property + value domain + cardinality, with the check that evaluates it shipped alongside.",
+    "aliases": [
+      "exchange requirements"
+    ],
+    "lesson": 562
+  },
   "exponential-backoff": {
     "term": "exponential backoff",
     "short": "Spreads out retries after a failed operation instead of retrying immediately, so a recovering service doesn't get hit by every client at once. Usually paired with jitter, which randomizes the delay so retries from many clients don't all land on the same second.",
@@ -293,6 +316,15 @@
     ],
     "short": "A runtime switch that controls whether a feature is visible inside an already-deployed version of the code, decoupling deployment from release — code can ship dark, then be turned on for a small percentage of users before everyone.",
     "lesson": 56
+  },
+  "federated-model": {
+    "term": "federated model",
+    "short": "Several discipline models loaded together as a view, each keeping its own author and identifier space. It is never a deliverable — an edit to it dies at the next discipline export.",
+    "aliases": [
+      "federated models",
+      "model federation"
+    ],
+    "lesson": 556
   },
   "flame-graph": {
     "term": "Flame graph",

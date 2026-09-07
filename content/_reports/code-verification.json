@@ -2,17 +2,17 @@
   "generatedFrom": "scripts/verify-code.ts",
   "defectsByClass": {},
   "totals": {
-    "snippetFiles": 386,
-    "fences": 258,
-    "clean": 158,
-    "onlyMissingModules": 228,
+    "snippetFiles": 393,
+    "fences": 265,
+    "clean": 164,
+    "onlyMissingModules": 229,
     "failing": 0,
     "lessonsAffected": 0,
     "privateAliasImports": 31
   },
   "runnable": {
-    "total": 67,
-    "ready": 67,
+    "total": 73,
+    "ready": 73,
     "blocked": 0
   },
   "lessons": []

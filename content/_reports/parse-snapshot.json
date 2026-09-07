@@ -1,5 +1,5 @@
 {
-  "lessonCount": 535,
+  "lessonCount": 544,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -525,11 +525,11 @@
       },
       "511_handover_data.md": {
         "title": "d02b0612b413cfb2",
-        "whatItIs": "e1814f77cb090da7",
+        "whatItIs": "04782839982e7de4",
         "keyConcepts": "f8f11ddae683528f",
         "exampleCode": "a297b2ec27730402",
         "whenToUse": "2521ee10406f8d57",
-        "commonMistakes": "b3cdfe6421767a71",
+        "commonMistakes": "dbc9e733e6317061",
         "furtherReading": "f564a5b165c30833"
       },
       "512_buying_vs_building_eam.md": {
@@ -581,7 +581,7 @@
       },
       "459_revit_parameters.md": {
         "title": "7a1ed81bc95b788c",
-        "whatItIs": "4ed5b2b5b69bd98b",
+        "whatItIs": "b82969602d855577",
         "keyConcepts": "cda6a3fc17eec93d",
         "exampleCode": "78deec64f4ae110c",
         "whenToUse": "35316da53e0a775b",
@@ -704,7 +704,7 @@
         "keyConcepts": "e615ad7b023c417f",
         "exampleCode": "da41ab39a5316ff2",
         "whenToUse": "a2d355daa661e3e9",
-        "commonMistakes": "828a707902a10f6e",
+        "commonMistakes": "ae90cf9d76f82c88",
         "furtherReading": "399248d3b7862909"
       },
       "434_the_spatial_hierarchy.md": {
@@ -748,7 +748,7 @@
         "whatItIs": "976e84fe2dff4888",
         "keyConcepts": "f3bdd78c8c539872",
         "exampleCode": "5583e64da85a85e5",
-        "whenToUse": "df8c4b67a63ff592",
+        "whenToUse": "f3dcee6b5b6a14f3",
         "commonMistakes": "6c6f921201365a22",
         "furtherReading": "63c8f551695fc2bc"
       },
@@ -763,7 +763,7 @@
       },
       "440_model_diffing.md": {
         "title": "0a0311d492ead3a6",
-        "whatItIs": "bc2e268a6aca77f9",
+        "whatItIs": "00000ce175867b49",
         "keyConcepts": "8c8ac549b89e9517",
         "exampleCode": "bdc4be2d8c5744a2",
         "whenToUse": "7988f6cbea15674f",
@@ -3946,6 +3946,89 @@
         "whenToUse": "ca887c0adab7538a",
         "commonMistakes": "91f96dd0d1fe9493",
         "furtherReading": "8e4106cfe06cb590"
+      }
+    },
+    "model-coordination-exchange": {
+      "554_coordination_is_a_data_problem.md": {
+        "title": "263e245905baf7c2",
+        "whatItIs": "05f426e3cdb6d476",
+        "keyConcepts": "bf3203488d203ee3",
+        "exampleCode": "ccf635573ecc7b3d",
+        "whenToUse": "db5f9575b74ed7eb",
+        "commonMistakes": "e100e9a1cfae0196",
+        "furtherReading": "38f68a642b404bdb"
+      },
+      "555_bcf_an_issue_as_a_portable_object.md": {
+        "title": "eee03bf5fffe1dbc",
+        "whatItIs": "c74b9de8dc20f3fe",
+        "keyConcepts": "675e5862aef2b820",
+        "exampleCode": "f1ea5614b3ea64c5",
+        "whenToUse": "1c263744f26d487b",
+        "commonMistakes": "ca2943be4dc9470c",
+        "furtherReading": "60d618629a5bf412"
+      },
+      "556_federating_models.md": {
+        "title": "8c491646738b17d4",
+        "whatItIs": "f1c7dfe39563b800",
+        "keyConcepts": "1b3ff8364b576981",
+        "exampleCode": "65721af20df18d5d",
+        "whenToUse": "058a93c56dba5614",
+        "commonMistakes": "a32c0d09d1df30f9",
+        "furtherReading": "e8e0b877f8b7e46b"
+      },
+      "557_clash_detection_is_a_query.md": {
+        "title": "289d0c628e0a9962",
+        "whatItIs": "8ca328cb79eefa67",
+        "keyConcepts": "48f71c83b645bd66",
+        "exampleCode": "970dca4e4a225a6e",
+        "whenToUse": "edcfd25d122abd84",
+        "commonMistakes": "7811e100e740c0c6",
+        "furtherReading": "ef464ef3b2f7df62"
+      },
+      "558_the_clash_report_nobody_reads.md": {
+        "title": "de5e1e39a947a08d",
+        "whatItIs": "8fdde81bd642b5d8",
+        "keyConcepts": "d6f43e7521b66861",
+        "exampleCode": "ce7719c154bb680a",
+        "whenToUse": "c46aac77ea9f59ad",
+        "commonMistakes": "b48dc8517b7bf8ff",
+        "furtherReading": "65fbea85ee1225c2"
+      },
+      "559_writing_ifc.md": {
+        "title": "f8b87e5c6389bd28",
+        "whatItIs": "62949b9820a327dd",
+        "keyConcepts": "d3fadaf153d800c7",
+        "exampleCode": "e85b93a5b8f19d6b",
+        "whenToUse": "b9015fa37e1ce165",
+        "commonMistakes": "28f485cf081d85b0",
+        "furtherReading": "8fd89c68ecaa2b80"
+      },
+      "560_cobie_as_a_schema.md": {
+        "title": "b0dfb807cdfa58d4",
+        "whatItIs": "2a88b4e0a8d44a89",
+        "keyConcepts": "1e98176f13f3fa0c",
+        "exampleCode": "dfb6ba6b4006a654",
+        "whenToUse": "242a960f54881460",
+        "commonMistakes": "71f4c906df607e93",
+        "furtherReading": "3e415c0719d43bc6"
+      },
+      "561_revit_to_ifc.md": {
+        "title": "d186716b64033168",
+        "whatItIs": "e7cc7dc670c512d3",
+        "keyConcepts": "b69de2c52d393437",
+        "exampleCode": "8ed241e53a2c4065",
+        "whenToUse": "a0237ca6ae0aadf1",
+        "commonMistakes": "38ddd5468b911a75",
+        "furtherReading": "37b454ad4904e495"
+      },
+      "562_exchange_requirements_a_machine_can_check.md": {
+        "title": "b5bed734e0218dad",
+        "whatItIs": "53084cb30bcd1c5d",
+        "keyConcepts": "c203fe9f1b268d1f",
+        "exampleCode": "949d7d7f965c2caf",
+        "whenToUse": "53e84809c15dda9d",
+        "commonMistakes": "eb33612ac30c8022",
+        "furtherReading": "92705866010c1e6a"
       }
     },
     "observability-deployment": {

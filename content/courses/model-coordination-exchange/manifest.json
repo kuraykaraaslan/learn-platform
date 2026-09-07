@@ -1,0 +1,79 @@
+{
+  "slug": "model-coordination-exchange",
+  "title": "Model Coordination and Exchange",
+  "description": "The write half of the branch: combining discipline models, finding what collides, moving an issue between tools as data, and producing a file someone else's software will accept.",
+  "items": [
+    {
+      "id": 554,
+      "file": "554_coordination_is_a_data_problem.md",
+      "title": "Coordination Is a Data Problem: Geometry, Properties, and the Issue",
+      "bracket": "1-3",
+      "category": "Model Coordination and Exchange",
+      "verified": true
+    },
+    {
+      "id": 555,
+      "file": "555_bcf_an_issue_as_a_portable_object.md",
+      "title": "BCF: An Issue as a Portable Object, Anchored to an Element",
+      "bracket": "3-7",
+      "category": "Model Coordination and Exchange",
+      "verified": true
+    },
+    {
+      "id": 556,
+      "file": "556_federating_models.md",
+      "title": "Federating Models: Many Files, One Coordinate System",
+      "bracket": "3-7",
+      "category": "Model Coordination and Exchange",
+      "verified": true
+    },
+    {
+      "id": 557,
+      "file": "557_clash_detection_is_a_query.md",
+      "title": "Clash Detection Is a Query: Broad Phase, Narrow Phase, Tolerance",
+      "bracket": "3-7",
+      "category": "Model Coordination and Exchange",
+      "verified": true
+    },
+    {
+      "id": 558,
+      "file": "558_the_clash_report_nobody_reads.md",
+      "title": "The Clash Report Nobody Reads: Grouping, Ownership, and Status",
+      "bracket": "1-3",
+      "category": "Model Coordination and Exchange",
+      "verified": true
+    },
+    {
+      "id": 559,
+      "file": "559_writing_ifc.md",
+      "title": "Writing IFC: A File Someone Else's Tool Will Accept",
+      "bracket": "3-7",
+      "category": "Model Coordination and Exchange",
+      "verified": true
+    },
+    {
+      "id": 560,
+      "file": "560_cobie_as_a_schema.md",
+      "title": "COBie: The Handover Spreadsheet as a Schema",
+      "bracket": "3-7",
+      "category": "Model Coordination and Exchange",
+      "verified": true
+    },
+    {
+      "id": 561,
+      "file": "561_revit_to_ifc.md",
+      "title": "Revit to IFC: Where Your Parameters Actually Land",
+      "bracket": "3-7",
+      "category": "Model Coordination and Exchange",
+      "verified": true
+    },
+    {
+      "id": 562,
+      "file": "562_exchange_requirements_a_machine_can_check.md",
+      "title": "Exchange Requirements a Machine Can Check",
+      "bracket": "1-3",
+      "category": "Model Coordination and Exchange",
+      "verified": true
+    }
+  ]
+}

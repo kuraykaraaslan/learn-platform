@@ -9,7 +9,7 @@ A **project parameter** is one you add to a project. It shows in schedules, it c
 
 A **shared parameter** is the one to reach for when data has to survive. It is defined in an external shared-parameter file, and its identity is a **GUID** rather than its name. That GUID is what makes the same parameter the same parameter across projects, across exports and across teams, and it is what an IFC export or a downstream database can join on. A project parameter's name is a label; a shared parameter's GUID is an identity.
 
-This is the first link in the handover chain. When a wall's fire rating has to appear in an IFC export as a property in a set — the shape Lesson 436 describes — the export mapping is expressed against shared parameters. A project parameter does not reliably make that journey, and the failure shows up not as an error but as a property that quietly is not there.
+This is the first link in the handover chain. When a wall's fire rating has to appear in an IFC export as a property in a set — the shape Lesson 436 describes — the export mapping is expressed against shared parameters, and what that mapping does with each one is Lesson 561. A project parameter does not reliably make that journey, and the failure shows up not as an error but as a property that quietly is not there.
 
 ```quiz
 - q: "Two projects each have a project parameter called `AssetTag`. Are they the same parameter?"

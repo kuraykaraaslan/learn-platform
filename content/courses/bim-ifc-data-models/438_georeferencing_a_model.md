@@ -87,7 +87,7 @@ export function toDecimalDegrees(angle: CompoundAngle): number {
 - You are overlaying a model on a map, a site plan, or anything produced by a surveyor
 - You are joining model data to a spatial database, where the coordinate reference system is a column, not an assumption
 - You are federating models from several disciplines and need to know whether they share an origin before you trust the overlay
-- You are writing an exchange requirement, where "georeferenced" is too vague to check and "an `IfcMapConversion` with a named `IfcProjectedCRS`" is not
+- You are writing an exchange requirement, where "georeferenced" is too vague to check and "an `IfcMapConversion` with a named `IfcProjectedCRS`" is not — Lesson 562 turns that difference into a rule with a check attached
 
 ## Common Mistakes
 - **Looking for a project base point entity** — the two points are authoring-tool vocabulary, and what the file carries is the resulting placement plus a coordinate-system declaration
