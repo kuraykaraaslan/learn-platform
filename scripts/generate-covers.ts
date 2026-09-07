@@ -66,6 +66,7 @@ const SUBJECTS: Record<string, string> = {
   'embedded-firmware': 'a closed loop of arrowed instruction blocks around a microcontroller die, with one arrow branching off to a smaller interrupt block and returning',
   'model-coordination-exchange': 'two translucent overlapping building-model wireframes on one grid, with a small marked collision zone where they intersect and a tag leading away from it',
   'condition-monitoring': 'a long flat sensor trace that begins to rise at one end, with a faint horizontal band behind it marking the machine’s own normal range',
+  'asset-identification': 'a small numbered plate fixed to a piece of plant, with a faint scanning beam crossing it and two nearly identical plates behind it out of focus',
 };
 
 type Quality = 'low' | 'medium' | 'high';

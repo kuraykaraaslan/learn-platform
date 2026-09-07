@@ -57,6 +57,7 @@ P25 gömülü firmware      ← P24 (donanım ile taşıma arasındaki yazılım
 P26 cihaz dalı kapanışı  ← P24, P25 (P22'nin iki yönlü bağ kuralı, kapanıştan sonra gelen iki kursa)
 P27 model koordinasyonu  ← P14, P16, P20 (dalın yazma yarısı: federasyon, çakışma, BCF, IFC yazma)
 P28 durum izleme         ← P17, P18, P20 (telemetri ile bakım kararı arasındaki katman)
+P29 varlık tanıma        ← P19, P20 (kütükteki satır ile önündeki nesne arasındaki bağ)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -90,6 +91,7 @@ P28 durum izleme         ← P17, P18, P20 (telemetri ile bakım kararı arasın
 | P26 | [26-device-branch-closeout.md](26-device-branch-closeout.md) | ~2-3 gün | tamamlandı — yeni ders yok; 8 geriye bağ, iki yeni kurs 1/0 → **2/2** kurstan bağ alıyor, sözlük 139 → 149 (`shadowed` 0), 11 yeni link render, 0 kayıp |
 | P27 | [27-model-coordination-exchange.md](27-model-coordination-exchange.md) | ~6-7 gün | tamamlandı — 9 ders (554-562), 9'u damgalı, `557` proof, `diff` 4 → 5; dalın yazma yarısı (federasyon, çakışma sorgusu, BCF, IFC yazma, COBie şeması) |
 | P28 | [28-condition-monitoring.md](28-condition-monitoring.md) | ~6-7 gün | tamamlandı — 9 ders (563-571), 9'u damgalı, `condition_history` seed (8 `sql run`), `566` proof (maskeleme sayıldı), `sql` fence 79 → 87 |
+| P29 | [29-asset-identification.md](29-asset-identification.md) | ~5-6 gün | tamamlandı — 9 ders (572-580), 9'u damgalı, yeni seed yok (`asset_register` yeniden kullanıldı), `574` proof (kontrol basamağı hata sınıfları sayıldı) |
 
 ## Ölçülen zemin
 
@@ -101,22 +103,22 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 
 | Ölçüm | P0 zemini | Bugün |
 |---|---:|---:|
-| Ders / kurs / bölüm | 412 / 23 / 2473 | 553 / 35 / **3318** |
-| Fence | 505 | 1424 |
+| Ders / kurs / bölüm | 412 / 23 / 2473 | 562 / 36 / **3372** |
+| Fence | 505 | 1455 |
 | Yalnız kod fence'i olan ders | 179 | 70 |
 | Yalnız şablon fence'i olan ders | 211 | 138 |
 | Hiç fence'i olmayan ders | 0 | 1 |
-| TS/TSX/JS fence | 161 | 268 |
-| Common Mistakes maddesi | 1746 | 2627 |
-| — drill'lenebilir | 705 (%40,4) | **2486 (%94,6)** |
+| TS/TSX/JS fence | 161 | 272 |
+| Common Mistakes maddesi | 1746 | 2681 |
+| — drill'lenebilir | 705 (%40,4) | **2540 (%94,7)** |
 | — tek cümlelik (P2'nin işi) | 1041 | **141** |
-| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **543** (sıfır: 10) |
+| ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **552** (sıfır: 10) |
 | Form fence / dosya | 91 / 88 | 94 / 90 |
-| Checklist fence / madde | 35 / 293 | 40 / 349 |
-| `sql` fence | 9 | 87 |
+| Checklist fence / madde | 35 / 293 | 41 / 364 |
+| `sql` fence | 9 | 91 |
 | `java` fence | 10 | 10 |
 | Blockquote kullanan ders | 45 | 91 |
-| Mermaid kullanan ders | 0 | 29 |
+| Mermaid kullanan ders | 0 | 30 |
 
 Bölüm sayısındaki fark bir ölçüm hatasıdır, korpus değişimi değil: 412 ders × 6
 bölüm = **2472**, ve hiçbir bölüm boş değil. P0'ın 2473'ü bir fazla saymış.
@@ -141,10 +143,10 @@ kaynak `course_content.sections.ts` olarak kalır.
 
 | Alan ölçüsü | P13 zemini | Bugün |
 |---|---:|---:|
-| Alan dersi / alan kursu | 0 / 0 | 141 / 12 |
-| Alan fence'i | 0 | 517 |
-| Alan Common Mistakes maddesi | 0 | 855 |
-| Alan — drill'lenebilir | 0 | 855 |
+| Alan dersi / alan kursu | 0 / 0 | 150 / 13 |
+| Alan fence'i | 0 | 548 |
+| Alan Common Mistakes maddesi | 0 | 909 |
+| Alan — drill'lenebilir | 0 | 909 |
 
 P8/P9'un tek seferlik fence analizleri (hiç import etmeyen 44, yalnız
 tarayıcı-güvenli import 10, WebContainer'da çalışabilen 62, yerel eklenti
@@ -160,8 +162,9 @@ altında, ~16 KB marj, sınır değişmedi. Son iki kurs (30 ders) indekse ~4,6 
 ekledi; bu hızla sınır ~5 kurs sonra konuşulur. Review indeksinin bütçe
 kontrolü yok; P22'de 2.126 kartla 201.160 B gz, bugün 2.300 kartla
 **214.040 B gz**. Kavram sözlüğü P22'de 139 terimdi; P26 cihaz dalı için 10, P27 koordinasyon
-kursu için 5, P28 durum izleme için 5 terim ekledi ve bugün **159**. `cap-starved` (4-link sınırına dayanan) ders
-sayısı 2, `shadowed` 0, `case-mismatch` 0 — üçü de P22'den beri kımıldamadı.
+kursu için 5, P28 durum izleme için 5, P29 varlık tanıma için 5 terim ekledi ve
+bugün **164**. `cap-starved` (4-link sınırına dayanan) ders
+sayısı **1** (P29'un bağları biriyle çakışan bir terime yer açtı), `shadowed` 0, `case-mismatch` 0 — üçü de P22'den beri kımıldamadı.
 `own-lesson-only` 5 → 8: üç yeni terim yalnız tanımlandığı derste geçiyor,
 yani hiçbir yerde tooltip render etmiyor. Bu P3'ün ölçülen kategorilerinden
 biri, hata değil.
@@ -170,8 +173,8 @@ biri, hata değil.
 yönlü* bağlanmasıydı, ama P24 ve P25 o kapanıştan sonra geldi ve kural onlara
 uygulanmamıştı: `iot-hardware-basics`'e 1, `embedded-firmware`'a **0** kurstan
 bağ vardı (karşılaştırma: P17'ye 7, P14/P18'e 5). P26 ikisini de 2'ye çıkardı —
-uydurulmuş bağla değil, nesrin zaten işaret ettiği sekiz yere. P27 ve P28 aynı kuralı
-**doğuşta** uyguladı: her iki yeni kurs da üç kurstan bağ alarak açıldı, çünkü
+uydurulmuş bağla değil, nesrin zaten işaret ettiği sekiz yere. P27, P28 ve P29 aynı kuralı
+**doğuşta** uyguladı: üç yeni kurs da üç kurstan bağ alarak açıldı, çünkü
 aynı borcu ikinci kez ödemenin anlamı yok.
 
 ## Widget kapsamı
@@ -180,16 +183,16 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 
 | Widget | Fence | Ders |
 |---|---:|---:|
-| `quiz` | 301 | 301 |
-| `recall` | 301 | 301 |
-| `mermaid` | 29 | 29 |
-| `tradeoff` | 23 | 23 |
-| `calc` | 20 | 20 |
+| `quiz` | 310 | 310 |
+| `recall` | 310 | 310 |
+| `mermaid` | 30 | 30 |
+| `tradeoff` | 24 | 24 |
+| `calc` | 21 | 21 |
 | `spatial` | 6 | 6 |
-| `proof` | 29 | 29 |
-| `run` (toplam) | 146 | 99 |
-| — `sql run` | 74 | |
-| — JS/TS `run` | 69 | |
+| `proof` | 30 | 30 |
+| `run` (toplam) | 154 | 105 |
+| — `sql run` | 78 | |
+| — JS/TS `run` | 73 | |
 | — `run project` | 3 | |
 | `diff` | 5 | 5 |
 

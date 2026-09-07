@@ -1,7 +1,7 @@
 # 506. Asset Identity: Tags, Serials, and Surviving a Replacement
 
 ## What It Is
-An asset has two identifiers and they answer different questions. The **serial number** identifies a physical unit — this exact pump, built by this manufacturer, with this warranty. The **functional-location tag** identifies a position in the plant — "the booster pump on set 01", whatever unit is currently bolted there. When the pump fails and is replaced, the serial changes and the tag does not, and that is the entire point of having both.
+An asset has two identifiers and they answer different questions. Which of them ends up printed on the object decides whether a tag moved to a replacement unit continues the history or fabricates it (#573). The **serial number** identifies a physical unit — this exact pump, built by this manufacturer, with this warranty. The **functional-location tag** identifies a position in the plant — "the booster pump on set 01", whatever unit is currently bolted there. When the pump fails and is replaced, the serial changes and the tag does not, and that is the entire point of having both.
 
 The register keys on the tag, because the thing it is tracking is the **function**: how often does this position fail, what does its downtime cost, when is it due. A register keyed on the serial restarts every asset's history at every replacement, which is exactly when the history was about to become useful. The serial still belongs in the register — as an attribute of the row, the unit installed right now — it is just not the identity.
 

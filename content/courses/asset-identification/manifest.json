@@ -1,0 +1,79 @@
+{
+  "slug": "asset-identification",
+  "title": "Asset Identification in the Field",
+  "description": "The link between a row in the register and the object in front of you: what goes on a tag, how a mistyped code fails loudly, reading when the network is gone, and catching the scan that quietly went to the wrong asset.",
+  "items": [
+    {
+      "id": 572,
+      "file": "572_the_wrong_asset_problem.md",
+      "title": "The Wrong Asset Problem: A Register Row Is Not the Object in Front of You",
+      "bracket": "1-3",
+      "category": "Asset Identification in the Field",
+      "verified": true
+    },
+    {
+      "id": 573,
+      "file": "573_what_goes_on_the_tag.md",
+      "title": "What Goes on the Tag: An Identifier, Not a Payload",
+      "bracket": "3-7",
+      "category": "Asset Identification in the Field",
+      "verified": true
+    },
+    {
+      "id": 574,
+      "file": "574_check_digits.md",
+      "title": "Check Digits: Making a Mistyped Identifier Fail Loudly",
+      "bracket": "3-7",
+      "category": "Asset Identification in the Field",
+      "verified": true
+    },
+    {
+      "id": 575,
+      "file": "575_symbologies.md",
+      "title": "Symbologies: 1D, 2D, and What Actually Fits on the Tag",
+      "bracket": "3-7",
+      "category": "Asset Identification in the Field",
+      "verified": true
+    },
+    {
+      "id": 576,
+      "file": "576_rfid_and_nfc.md",
+      "title": "RFID and NFC: When the Tag Does Not Have to Be Seen",
+      "bracket": "3-7",
+      "category": "Asset Identification in the Field",
+      "verified": true
+    },
+    {
+      "id": 577,
+      "file": "577_the_scan_that_fails_and_the_scan_that_lies.md",
+      "title": "The Scan That Fails and the Scan That Lies",
+      "bracket": "1-3",
+      "category": "Asset Identification in the Field",
+      "verified": true
+    },
+    {
+      "id": 578,
+      "file": "578_offline_resolution.md",
+      "title": "Offline Resolution: The Scanner That Cannot Ask",
+      "bracket": "3-7",
+      "category": "Asset Identification in the Field",
+      "verified": true
+    },
+    {
+      "id": 579,
+      "file": "579_finding_the_mis_scan_after_the_fact.md",
+      "title": "Finding the Mis-Scan After the Fact",
+      "bracket": "3-7",
+      "category": "Asset Identification in the Field",
+      "verified": true
+    },
+    {
+      "id": 580,
+      "file": "580_tag_lifecycle.md",
+      "title": "Tag Lifecycle: Re-Tagging, and the Tag That Outlives the Asset",
+      "bracket": "1-3",
+      "category": "Asset Identification in the Field",
+      "verified": true
+    }
+  ]
+}

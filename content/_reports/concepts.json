@@ -1,16 +1,16 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
-  "totalTerms": 159,
-  "totalLessons": 553,
+  "totalTerms": 164,
+  "totalLessons": 562,
   "totals": {
     "neverMatched": 0,
-    "neverLinked": 28,
+    "neverLinked": 29,
     "neverLinkedByCause": {
-      "own-lesson-only": 11,
+      "own-lesson-only": 13,
       "code-only": 15,
       "shadowed": 0,
       "case-mismatch": 0,
-      "cap-starved": 2,
+      "cap-starved": 1,
       "never-matched": 0
     },
     "atCapLessons": 11
@@ -26,6 +26,14 @@
       "alsoAppearsInLessons": [
         531
       ]
+    },
+    {
+      "slug": "anti-collision",
+      "term": "anti-collision",
+      "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
     },
     {
       "slug": "base",
@@ -82,20 +90,6 @@
       "linkableInLessons": [],
       "presentInLessons": [],
       "alsoAppearsInLessons": []
-    },
-    {
-      "slug": "functional-location",
-      "term": "functional location",
-      "cause": "cap-starved",
-      "linkableInLessons": [
-        504
-      ],
-      "presentInLessons": [
-        504
-      ],
-      "alsoAppearsInLessons": [
-        504
-      ]
     },
     {
       "slug": "git-bisect",
@@ -206,6 +200,14 @@
     {
       "slug": "priority-inversion",
       "term": "priority inversion",
+      "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
+    },
+    {
+      "slug": "quiet-zone",
+      "term": "quiet zone",
       "cause": "own-lesson-only",
       "linkableInLessons": [],
       "presentInLessons": [],
@@ -327,6 +329,12 @@
         "observability-deployment/55_slo_sli_sla.md"
       ],
       "rawOccurrences": 4
+    },
+    {
+      "slug": "anti-collision",
+      "term": "anti-collision",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 6
     },
     {
       "slug": "anti-join",
@@ -504,6 +512,16 @@
       "rawOccurrences": 9
     },
     {
+      "slug": "check-digit",
+      "term": "check digit",
+      "lessonsLinkedIn": [
+        "asset-identification/573_what_goes_on_the_tag.md",
+        "asset-identification/577_the_scan_that_fails_and_the_scan_that_lies.md",
+        "asset-identification/580_tag_lifecycle.md"
+      ],
+      "rawOccurrences": 39
+    },
+    {
       "slug": "circuit-breaker",
       "term": "circuit breaker",
       "lessonsLinkedIn": [
@@ -622,7 +640,7 @@
         "asset-management-systems/512_buying_vs_building_eam.md",
         "condition-monitoring/568_the_alert_you_can_defend.md"
       ],
-      "rawOccurrences": 76
+      "rawOccurrences": 77
     },
     {
       "slug": "crosswalk",
@@ -858,8 +876,12 @@
     {
       "slug": "functional-location",
       "term": "functional location",
-      "lessonsLinkedIn": [],
-      "rawOccurrences": 3
+      "lessonsLinkedIn": [
+        "asset-identification/572_the_wrong_asset_problem.md",
+        "asset-identification/573_what_goes_on_the_tag.md",
+        "asset-identification/580_tag_lifecycle.md"
+      ],
+      "rawOccurrences": 22
     },
     {
       "slug": "git-bisect",
@@ -1251,6 +1273,12 @@
       "rawOccurrences": 52
     },
     {
+      "slug": "quiet-zone",
+      "term": "quiet zone",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 8
+    },
+    {
       "slug": "race-condition",
       "term": "Race condition",
       "lessonsLinkedIn": [
@@ -1317,6 +1345,15 @@
         "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
       ],
       "rawOccurrences": 25
+    },
+    {
+      "slug": "re-tagging",
+      "term": "re-tagging",
+      "lessonsLinkedIn": [
+        "asset-identification/574_check_digits.md",
+        "asset-identification/579_finding_the_mis_scan_after_the_fact.md"
+      ],
+      "rawOccurrences": 12
     },
     {
       "slug": "read-replica",
@@ -1598,6 +1635,14 @@
       "rawOccurrences": 7
     },
     {
+      "slug": "symbology",
+      "term": "symbology",
+      "lessonsLinkedIn": [
+        "asset-identification/580_tag_lifecycle.md"
+      ],
+      "rawOccurrences": 21
+    },
+    {
       "slug": "table-partitioning",
       "term": "Table partitioning",
       "lessonsLinkedIn": [
@@ -1776,6 +1821,8 @@
       "slug": "work-order",
       "term": "work order",
       "lessonsLinkedIn": [
+        "asset-identification/578_offline_resolution.md",
+        "asset-identification/579_finding_the_mis_scan_after_the_fact.md",
         "asset-management-systems/504_the_asset_register.md",
         "asset-management-systems/510_merging_two_registers.md",
         "condition-monitoring/563_from_a_score_to_a_signal.md",
@@ -1783,7 +1830,7 @@
         "condition-monitoring/569_labels_come_from_maintenance_history.md",
         "condition-monitoring/571_the_monitor_that_decays.md"
       ],
-      "rawOccurrences": 25
+      "rawOccurrences": 30
     },
     {
       "slug": "x-forwarded-for",

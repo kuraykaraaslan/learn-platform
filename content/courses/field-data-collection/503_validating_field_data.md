@@ -1,7 +1,7 @@
 # 503. Validating Field Data Against the Model It Describes
 
 ## What It Is
-Field data describes something that already exists in a model, and that gives you a validation source most forms never get: **the model itself**. A form can check that an asset tag looks like an asset tag. Only a join against the register can check that it *is* one.
+Field data describes something that already exists in a model, and that gives you a validation source most forms never get: **the model itself**. This lesson is the server's half of that; the checks available on the device at the moment of the scan, with no network, are Lesson 577's. A form can check that an asset tag looks like an asset tag. Only a join against the register can check that it *is* one.
 
 Three checks matter and they are progressively harder to see.
 

@@ -1,5 +1,5 @@
 {
-  "lessonCount": 553,
+  "lessonCount": 562,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -459,6 +459,89 @@
         "furtherReading": "3a7beacf946b32d6"
       }
     },
+    "asset-identification": {
+      "572_the_wrong_asset_problem.md": {
+        "title": "b6548b46facb40a8",
+        "whatItIs": "eecf57a320665af8",
+        "keyConcepts": "29ca681585d10549",
+        "exampleCode": "bebeffbb6ac6fb9e",
+        "whenToUse": "154a6859cff710e7",
+        "commonMistakes": "c6fab3c4639807e0",
+        "furtherReading": "09911c40ea1a82c7"
+      },
+      "573_what_goes_on_the_tag.md": {
+        "title": "ecd4a9dfe55d22f2",
+        "whatItIs": "ad73220e15cb9039",
+        "keyConcepts": "327144091c5fec0f",
+        "exampleCode": "a454958304e32143",
+        "whenToUse": "e85b783989ce8282",
+        "commonMistakes": "5c4f123d270ff46d",
+        "furtherReading": "ba8f46923093337a"
+      },
+      "574_check_digits.md": {
+        "title": "9fa9d22d35ac9326",
+        "whatItIs": "0b048bb87e1a0e29",
+        "keyConcepts": "4e198ef4a1afc6b1",
+        "exampleCode": "b9724c65ed51fe76",
+        "whenToUse": "2367880c92102202",
+        "commonMistakes": "c0f2744ede2135db",
+        "furtherReading": "181861ec08079e55"
+      },
+      "575_symbologies.md": {
+        "title": "d2d25d2002164f2a",
+        "whatItIs": "d1608504391359c4",
+        "keyConcepts": "81ca818c84a7daea",
+        "exampleCode": "61e05a4030bfbdf2",
+        "whenToUse": "40e6be981b533bae",
+        "commonMistakes": "42592a18d5964d61",
+        "furtherReading": "df485a7bd0c82cfb"
+      },
+      "576_rfid_and_nfc.md": {
+        "title": "ae27e07518b76553",
+        "whatItIs": "3fdf591531066be6",
+        "keyConcepts": "b5581172719f558c",
+        "exampleCode": "b4a42da5ac05a9ef",
+        "whenToUse": "a6e00305df2ae988",
+        "commonMistakes": "6c1ac3505af04dd7",
+        "furtherReading": "f95478220423d951"
+      },
+      "577_the_scan_that_fails_and_the_scan_that_lies.md": {
+        "title": "674b2a811166b31e",
+        "whatItIs": "3fce39f4e1ea8bdf",
+        "keyConcepts": "bd2a638764860824",
+        "exampleCode": "01e96e0ec6c0aee9",
+        "whenToUse": "aa8e4d2a2003c430",
+        "commonMistakes": "57da9ef79ad8696c",
+        "furtherReading": "15d55576f0798f56"
+      },
+      "578_offline_resolution.md": {
+        "title": "a1951682f92ee2d1",
+        "whatItIs": "643014c290c7a0b3",
+        "keyConcepts": "7bcf6cf17d8923ad",
+        "exampleCode": "9ad02a466f52c44d",
+        "whenToUse": "40b0ec7c83349848",
+        "commonMistakes": "81c4ff31e2ce3c94",
+        "furtherReading": "1e54effcac0dd2b0"
+      },
+      "579_finding_the_mis_scan_after_the_fact.md": {
+        "title": "5820b8cd12744c46",
+        "whatItIs": "2a9141a87e0c5904",
+        "keyConcepts": "c9d98e34af9457b7",
+        "exampleCode": "ee674f36696a7d1e",
+        "whenToUse": "6b03dccd7c702b3e",
+        "commonMistakes": "2445f93d9b1a4ff9",
+        "furtherReading": "4221933afab32296"
+      },
+      "580_tag_lifecycle.md": {
+        "title": "39d28472135f3df7",
+        "whatItIs": "87960d4732fc2ede",
+        "keyConcepts": "e26aeb08c17717ca",
+        "exampleCode": "984ca73fecafd86d",
+        "whenToUse": "7b9a9878cafc7941",
+        "commonMistakes": "1aa95e7ffa1f44d1",
+        "furtherReading": "38b05d6b123a11da"
+      }
+    },
     "asset-management-systems": {
       "504_the_asset_register.md": {
         "title": "66fd967f977ea6ec",
@@ -480,7 +563,7 @@
       },
       "506_asset_identity.md": {
         "title": "a0ead504c9f74653",
-        "whatItIs": "26f5ce6379ff5d71",
+        "whatItIs": "201023818b17f584",
         "keyConcepts": "2450bf45fae613c3",
         "exampleCode": "0b250fbcdf7c8c7f",
         "whenToUse": "15b9e6c981d40406",
@@ -3102,7 +3185,7 @@
       },
       "503_validating_field_data.md": {
         "title": "33f94e93e6e27c2c",
-        "whatItIs": "9b89518c482a47c9",
+        "whatItIs": "73e4ad967acf8361",
         "keyConcepts": "62bf16859cfbde6e",
         "exampleCode": "e53211df35e60964",
         "whenToUse": "86b79e785d6b5458",
@@ -4977,7 +5060,7 @@
       },
       "515_identity_resolution_across_systems.md": {
         "title": "6c6088aa5c0dff0e",
-        "whatItIs": "c8f71ec74b6c8b2b",
+        "whatItIs": "ac1e878cc61cda9a",
         "keyConcepts": "26a503d34093eae6",
         "exampleCode": "ce1a553b5e0e441d",
         "whenToUse": "0516c3161c92b040",

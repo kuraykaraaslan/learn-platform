@@ -1,0 +1,8 @@
+{
+  "name": "verify-asset-identification-574",
+  "private": true,
+  "description": "Enumerates every single-digit error and every adjacent transposition over a fixed block of identifiers and counts what a plain sum, Luhn and mod-97 each catch, for lesson 574's proof. Zero dependencies, pure Node, no clock, no random.",
+  "scripts": {
+    "verify": "node checkdigit.js"
+  }
+}

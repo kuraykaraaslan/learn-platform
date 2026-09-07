@@ -19,6 +19,11 @@
     "short": "When so many alerts fire that on-call engineers start ignoring all of them, including critical ones.",
     "lesson": 61
   },
+  "anti-collision": {
+    "term": "anti-collision",
+    "short": "The protocol a radio reader runs to single out one tag when several reply at once. It is why reading a population takes time proportional to the population, not to the tag you wanted.",
+    "lesson": 576
+  },
   "anti-join": {
     "term": "anti-join",
     "short": "A LEFT JOIN kept only where the right side is NULL — the rows with no match. How you find what is missing (a neglected asset), which a query starting from the present side can never see.",
@@ -109,6 +114,14 @@
     "term": "Change request process",
     "short": "Every fixed-price package needs an explicit path for \"what happens when the client asks for something not in scope\" — without this, every such request becomes a negotiation from scratch.",
     "lesson": 336
+  },
+  "check-digit": {
+    "term": "check digit",
+    "short": "One or two characters computed from the rest of an identifier so that a typo makes the whole string arithmetically invalid rather than merely wrong — offline, with no lookup.",
+    "aliases": [
+      "check digits"
+    ],
+    "lesson": 574
   },
   "circuit-breaker": {
     "term": "circuit breaker",
@@ -568,6 +581,11 @@
     ],
     "lesson": 528
   },
+  "quiet-zone": {
+    "term": "quiet zone",
+    "short": "The blank margin every barcode symbology requires around the symbol, specified in modules. A code printed to the edge of a label does not scan, and it is the most common reason a whole batch fails.",
+    "lesson": 575
+  },
   "race-condition": {
     "term": "Race condition",
     "aliases": [
@@ -594,6 +612,11 @@
     "term": "RBAC",
     "short": "Permissions assigned to roles; users assigned to roles; simple, auditable, correct for 80% of SaaS use cases.",
     "lesson": 39
+  },
+  "re-tagging": {
+    "term": "re-tagging",
+    "short": "Replacing an estate's physical identifiers. The only cheap moment to change encoding or symbology, and the moment the physical-to-register link is broken and remade — so the old-to-new mapping is the deliverable.",
+    "lesson": 580
   },
   "read-replica": {
     "term": "read replica",
@@ -753,6 +776,14 @@
     "term": "Suspense boundary",
     "short": "A <Suspense fallback={...}> wrapper that tells React \"this subtree can be deferred; show the fallback until it resolves\".",
     "lesson": 26
+  },
+  "symbology": {
+    "term": "symbology",
+    "short": "The rule for turning characters into a printed pattern — Code 128, QR, Data Matrix. Choosing one is mostly a question about physical space, since the identifier is short.",
+    "aliases": [
+      "symbologies"
+    ],
+    "lesson": 575
   },
   "table-partitioning": {
     "term": "Table partitioning",
