@@ -1,7 +1,7 @@
 # 507. Condition and Criticality: Modelling a Score You Did Not Invent
 
 ## What It Is
-Two numbers get attached to an asset and they are constantly confused. **Condition** is how worn the asset is right now — an inspector's judgement on a visit, 1 for as-new, 5 for failed. **Criticality** is how much its failure matters — a property of the asset's role, not its state, and it barely changes over the asset's life. A pump in perfect condition can be the most critical asset on the site; a corroded handrail bracket can be the least.
+Two numbers get attached to an asset and they are constantly confused. **Condition** is how worn the asset is right now — an inspector's judgement on a visit, and the thing a telemetry-derived indicator can inform but not replace (#563), 1 for as-new, 5 for failed. **Criticality** is how much its failure matters — a property of the asset's role, not its state, and it barely changes over the asset's life. A pump in perfect condition can be the most critical asset on the site; a corroded handrail bracket can be the least.
 
 The mistake this lesson exists to prevent is **importing a criticality number**. There is no industry table that says "a booster pump is criticality 4". Criticality is `consequence × likelihood` evaluated against *this* organisation's tolerance: what does it cost this site when this pump fails, given its redundancy, its spares holding, its lead time, and what is downstream. That calculation is the organisation's to make, and a developer's job is to build the model that lets them make it — not to seed it with plausible-looking defaults and hope nobody asks where they came from.
 

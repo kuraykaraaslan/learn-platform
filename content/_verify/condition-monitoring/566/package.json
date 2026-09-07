@@ -1,0 +1,8 @@
+{
+  "name": "verify-condition-monitoring-566",
+  "private": true,
+  "description": "Injects 0 to 6 artefacts into one fixed series and counts how many a 3-sigma rule finds versus a median/MAD modified z-score, for lesson 566's proof -- the masking effect, counted rather than described. Zero dependencies, pure Node, no clock, no random.",
+  "scripts": {
+    "verify": "node masking.js"
+  }
+}

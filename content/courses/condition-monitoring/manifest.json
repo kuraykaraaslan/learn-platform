@@ -1,0 +1,79 @@
+{
+  "slug": "condition-monitoring",
+  "title": "Condition Monitoring from Telemetry",
+  "description": "The layer between a reading and a maintenance decision: per-asset baselines, features over windows, statistics that survive outliers, and the labels you probably do not have.",
+  "items": [
+    {
+      "id": 563,
+      "file": "563_from_a_score_to_a_signal.md",
+      "title": "From a Score to a Signal: What Telemetry Can and Cannot Say About Condition",
+      "bracket": "1-3",
+      "category": "Condition Monitoring from Telemetry",
+      "verified": true
+    },
+    {
+      "id": 564,
+      "file": "564_baselines.md",
+      "title": "Baselines: An Absolute Threshold Is a Guess About a Machine You Have Not Met",
+      "bracket": "3-7",
+      "category": "Condition Monitoring from Telemetry",
+      "verified": true
+    },
+    {
+      "id": 565,
+      "file": "565_features_over_windows.md",
+      "title": "Features Over Windows: What the Window Length Decides",
+      "bracket": "3-7",
+      "category": "Condition Monitoring from Telemetry",
+      "verified": true
+    },
+    {
+      "id": 566,
+      "file": "566_robust_statistics.md",
+      "title": "Robust Statistics: Why the Mean and the Standard Deviation Betray You",
+      "bracket": "3-7",
+      "category": "Condition Monitoring from Telemetry",
+      "verified": true
+    },
+    {
+      "id": 567,
+      "file": "567_seasonality_is_not_an_anomaly.md",
+      "title": "Seasonality Is Not an Anomaly: Comparing Like With Like",
+      "bracket": "3-7",
+      "category": "Condition Monitoring from Telemetry",
+      "verified": true
+    },
+    {
+      "id": 568,
+      "file": "568_the_alert_you_can_defend.md",
+      "title": "The Alert You Can Defend: From Indicator to a Work Order Somebody Accepts",
+      "bracket": "1-3",
+      "category": "Condition Monitoring from Telemetry",
+      "verified": true
+    },
+    {
+      "id": 569,
+      "file": "569_labels_come_from_maintenance_history.md",
+      "title": "Labels Come From Maintenance History, and You Probably Do Not Have Them",
+      "bracket": "3-7",
+      "category": "Condition Monitoring from Telemetry",
+      "verified": true
+    },
+    {
+      "id": 570,
+      "file": "570_remaining_useful_life.md",
+      "title": "Remaining Useful Life: What You Can Compute and What You Must Not Claim",
+      "bracket": "3-7",
+      "category": "Condition Monitoring from Telemetry",
+      "verified": true
+    },
+    {
+      "id": 571,
+      "file": "571_the_monitor_that_decays.md",
+      "title": "The Monitor That Decays: Re-Baselining After Maintenance",
+      "bracket": "3-7",
+      "category": "Condition Monitoring from Telemetry",
+      "verified": true
+    }
+  ]
+}

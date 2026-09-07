@@ -65,6 +65,7 @@ const SUBJECTS: Record<string, string> = {
   'iot-hardware-basics': 'a breadboard cross-section with a sensor, a resistor divider and a microcontroller pin, one probe measuring a voltage between them',
   'embedded-firmware': 'a closed loop of arrowed instruction blocks around a microcontroller die, with one arrow branching off to a smaller interrupt block and returning',
   'model-coordination-exchange': 'two translucent overlapping building-model wireframes on one grid, with a small marked collision zone where they intersect and a tag leading away from it',
+  'condition-monitoring': 'a long flat sensor trace that begins to rise at one end, with a faint horizontal band behind it marking the machine’s own normal range',
 };
 
 type Quality = 'low' | 'medium' | 'high';

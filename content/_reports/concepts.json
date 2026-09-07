@@ -1,13 +1,13 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
-  "totalTerms": 154,
-  "totalLessons": 544,
+  "totalTerms": 159,
+  "totalLessons": 553,
   "totals": {
     "neverMatched": 0,
-    "neverLinked": 25,
+    "neverLinked": 28,
     "neverLinkedByCause": {
-      "own-lesson-only": 9,
-      "code-only": 14,
+      "own-lesson-only": 11,
+      "code-only": 15,
       "shadowed": 0,
       "case-mismatch": 0,
       "cap-starved": 2,
@@ -148,6 +148,14 @@
       "alsoAppearsInLessons": []
     },
     {
+      "slug": "masking",
+      "term": "masking",
+      "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
+    },
+    {
       "slug": "mass-assignment",
       "term": "Mass assignment",
       "cause": "code-only",
@@ -156,6 +164,14 @@
       "alsoAppearsInLessons": [
         38
       ]
+    },
+    {
+      "slug": "median-absolute-deviation",
+      "term": "median absolute deviation",
+      "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
     },
     {
       "slug": "outbox-relay",
@@ -202,6 +218,16 @@
       "linkableInLessons": [],
       "presentInLessons": [],
       "alsoAppearsInLessons": []
+    },
+    {
+      "slug": "remaining-useful-life",
+      "term": "remaining useful life",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": [
+        563
+      ]
     },
     {
       "slug": "scoped-packages",
@@ -306,9 +332,10 @@
       "slug": "anti-join",
       "term": "anti-join",
       "lessonsLinkedIn": [
-        "asset-management-systems/504_the_asset_register.md"
+        "asset-management-systems/504_the_asset_register.md",
+        "condition-monitoring/569_labels_come_from_maintenance_history.md"
       ],
-      "rawOccurrences": 16
+      "rawOccurrences": 21
     },
     {
       "slug": "api-documentation",
@@ -592,9 +619,10 @@
         "asset-management-systems/504_the_asset_register.md",
         "asset-management-systems/505_asset_hierarchies.md",
         "asset-management-systems/508_work_orders_and_maintenance_history.md",
-        "asset-management-systems/512_buying_vs_building_eam.md"
+        "asset-management-systems/512_buying_vs_building_eam.md",
+        "condition-monitoring/568_the_alert_you_can_defend.md"
       ],
-      "rawOccurrences": 69
+      "rawOccurrences": 76
     },
     {
       "slug": "crosswalk",
@@ -922,6 +950,14 @@
       "rawOccurrences": 8
     },
     {
+      "slug": "hour-of-week-profile",
+      "term": "hour-of-week profile",
+      "lessonsLinkedIn": [
+        "condition-monitoring/568_the_alert_you_can_defend.md"
+      ],
+      "rawOccurrences": 5
+    },
+    {
       "slug": "idempotency-key",
       "term": "Idempotency key",
       "lessonsLinkedIn": [
@@ -1053,6 +1089,12 @@
       "rawOccurrences": 3
     },
     {
+      "slug": "masking",
+      "term": "masking",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 7
+    },
+    {
       "slug": "mass-assignment",
       "term": "Mass assignment",
       "lessonsLinkedIn": [],
@@ -1066,6 +1108,12 @@
         "database-advanced/52_oltp_vs_olap.md"
       ],
       "rawOccurrences": 27
+    },
+    {
+      "slug": "median-absolute-deviation",
+      "term": "median absolute deviation",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 19
     },
     {
       "slug": "modular-monolith",
@@ -1293,6 +1341,12 @@
       "rawOccurrences": 2
     },
     {
+      "slug": "remaining-useful-life",
+      "term": "remaining useful life",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 4
+    },
+    {
       "slug": "replication-lag",
       "term": "Replication lag",
       "lessonsLinkedIn": [
@@ -1462,6 +1516,15 @@
         "product-technical-strategy/391_nfr_production_readiness_strategy.md"
       ],
       "rawOccurrences": 19
+    },
+    {
+      "slug": "sliding-window",
+      "term": "sliding window",
+      "lessonsLinkedIn": [
+        "distributed-systems-api-design/05_rate_limiting_strategies.md",
+        "framework-deep-dives/407_springboot_security_filter_chain.md"
+      ],
+      "rawOccurrences": 20
     },
     {
       "slug": "slo",
@@ -1714,9 +1777,13 @@
       "term": "work order",
       "lessonsLinkedIn": [
         "asset-management-systems/504_the_asset_register.md",
-        "asset-management-systems/510_merging_two_registers.md"
+        "asset-management-systems/510_merging_two_registers.md",
+        "condition-monitoring/563_from_a_score_to_a_signal.md",
+        "condition-monitoring/568_the_alert_you_can_defend.md",
+        "condition-monitoring/569_labels_come_from_maintenance_history.md",
+        "condition-monitoring/571_the_monitor_that_decays.md"
       ],
-      "rawOccurrences": 10
+      "rawOccurrences": 25
     },
     {
       "slug": "x-forwarded-for",

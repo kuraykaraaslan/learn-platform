@@ -11,7 +11,7 @@ A chart is a few hundred pixels wide and a twin's history is a few hundred thous
 
 **LTTB** — Largest Triangle Three Buckets, from Steinarsson's 2013 thesis — keeps the **shape**. It splits the series into buckets and from each keeps the point forming the largest triangle with the previously kept point and the mean of the next bucket, because triangle area is large exactly where the line changes direction, which is what an eye picks out of a chart. In the proof it retains 99.8% of the series range and catches both the spike and the dropout.
 
-What LTTB destroys is the arithmetic. **Its output has no aggregate meaning at all** — the mean of an LTTB series is not the mean of the data, and neither is anything else. So the rule is about the consumer rather than the algorithm: **downsample for drawing, aggregate for computing, and never let a chart series feed a calculation.**
+What LTTB destroys is the arithmetic. **Its output has no aggregate meaning at all** — the mean of an LTTB series is not the mean of the data, and neither is anything else. Any condition feature computed downstream then measures the reduction rather than the machine (#565). So the rule is about the consumer rather than the algorithm: **downsample for drawing, aggregate for computing, and never let a chart series feed a calculation.**
 
 ```quiz
 - q: "Bucket averaging removed a four-sample spike from a chart. Is the average wrong?"

@@ -1,5 +1,5 @@
 {
-  "lessonCount": 544,
+  "lessonCount": 553,
   "courses": {
     "advanced-deep-dive-topics": {
       "101_realtime_systems.md": {
@@ -489,7 +489,7 @@
       },
       "507_condition_and_criticality.md": {
         "title": "574252e3f9e18fba",
-        "whatItIs": "db8384dc36ec309b",
+        "whatItIs": "5d306246f469a43d",
         "keyConcepts": "a917db4d86792bd3",
         "exampleCode": "12582b30093c301e",
         "whenToUse": "fd6058b2923edc78",
@@ -498,7 +498,7 @@
       },
       "508_work_orders_and_maintenance_history.md": {
         "title": "a7f4f81920d9dd5c",
-        "whatItIs": "3a42b1f8518d22a1",
+        "whatItIs": "1e09c5756fd6737a",
         "keyConcepts": "52085eadc1afda59",
         "exampleCode": "b8315fb6a24c4993",
         "whenToUse": "be1ebe312f9759da",
@@ -1706,6 +1706,89 @@
         "furtherReading": "558a583bd7588c47"
       }
     },
+    "condition-monitoring": {
+      "563_from_a_score_to_a_signal.md": {
+        "title": "5be3763922887d70",
+        "whatItIs": "f1924017729bb245",
+        "keyConcepts": "78996569f7f5db21",
+        "exampleCode": "6f9a1663bb66d9a1",
+        "whenToUse": "4b53ae2dfa28462b",
+        "commonMistakes": "60c6f6d0a0520861",
+        "furtherReading": "77f96481c277cf84"
+      },
+      "564_baselines.md": {
+        "title": "45607ff16320c630",
+        "whatItIs": "f58e9e949e9323c4",
+        "keyConcepts": "90f0d518cfa9ff23",
+        "exampleCode": "372a8d755c03f53c",
+        "whenToUse": "ebeb884d6591e34f",
+        "commonMistakes": "702c31d288d711ee",
+        "furtherReading": "4a5713c14d18ca9e"
+      },
+      "565_features_over_windows.md": {
+        "title": "1b863ea87b697d49",
+        "whatItIs": "2892194233b054c5",
+        "keyConcepts": "ee58367b7d0882e8",
+        "exampleCode": "f1d9164e657f008d",
+        "whenToUse": "fef2308e630e4508",
+        "commonMistakes": "550c2b1b01ce39ca",
+        "furtherReading": "8cf517eb68a4ebe5"
+      },
+      "566_robust_statistics.md": {
+        "title": "78d5a025c47ddd1c",
+        "whatItIs": "afc86556c40dcc67",
+        "keyConcepts": "0746e3a3f717fd6d",
+        "exampleCode": "93b5749ab8b5c4be",
+        "whenToUse": "999bb4ec56606047",
+        "commonMistakes": "59daf44251bb4a80",
+        "furtherReading": "1d75471c921e8b75"
+      },
+      "567_seasonality_is_not_an_anomaly.md": {
+        "title": "9bc565ab5ec79f67",
+        "whatItIs": "b175ca5a7a31a706",
+        "keyConcepts": "5e2b407ed3945e6f",
+        "exampleCode": "5eae611b5487925d",
+        "whenToUse": "76b352a67e1adde8",
+        "commonMistakes": "03efe9230eeab92e",
+        "furtherReading": "acaee85781363eb8"
+      },
+      "568_the_alert_you_can_defend.md": {
+        "title": "707a7ba1eaebe324",
+        "whatItIs": "4f789987b0153a27",
+        "keyConcepts": "2586ef47ebeacb68",
+        "exampleCode": "a08d85e20a1f22dc",
+        "whenToUse": "69f87cf8319ce048",
+        "commonMistakes": "08e5ee97180f3ffa",
+        "furtherReading": "42136be7c4d8cd89"
+      },
+      "569_labels_come_from_maintenance_history.md": {
+        "title": "9ab0b445e550b382",
+        "whatItIs": "3414bce75bbfef81",
+        "keyConcepts": "4c984af52964b1ba",
+        "exampleCode": "8ffdf5fceecdf08e",
+        "whenToUse": "da93b1fc9451a091",
+        "commonMistakes": "c47b9a272e6abd96",
+        "furtherReading": "e738dabfd65ef47f"
+      },
+      "570_remaining_useful_life.md": {
+        "title": "52f316813d4c7d91",
+        "whatItIs": "dfc5f07a877a4caf",
+        "keyConcepts": "d31582b500646319",
+        "exampleCode": "59e5edadda253aa3",
+        "whenToUse": "91c0503eb909440b",
+        "commonMistakes": "1b747175a7fe8bf9",
+        "furtherReading": "f2925ad30dd9a8b3"
+      },
+      "571_the_monitor_that_decays.md": {
+        "title": "927c1052dfb2c6c3",
+        "whatItIs": "5fbc0f10d2d2c943",
+        "keyConcepts": "3c865424e406b720",
+        "exampleCode": "844f754fcb260062",
+        "whenToUse": "696563f112c05f9e",
+        "commonMistakes": "12eb0aac7a4faf47",
+        "furtherReading": "2e79d2324b697dac"
+      }
+    },
     "content-seo-personal-brand": {
       "271_content_pillars_and_strategic_positioning.md": {
         "title": "436db89ce423ef95",
@@ -2608,7 +2691,7 @@
       },
       "488_downsampling_without_lying.md": {
         "title": "d75cf67c96d71610",
-        "whatItIs": "34008578e3a7c1b5",
+        "whatItIs": "aad48b8a925ebe06",
         "keyConcepts": "28022f3104fb3c83",
         "exampleCode": "416894139cb39073",
         "whenToUse": "e3585cbd5ff9bba4",
@@ -2700,10 +2783,10 @@
       },
       "05_rate_limiting_strategies.md": {
         "title": "5450888d7e309e02",
-        "whatItIs": "6aed160beaa4e47b",
-        "keyConcepts": "59fef834748ea8f7",
+        "whatItIs": "8d45ac42ddf8327f",
+        "keyConcepts": "c4598fd3e4bcd8f4",
         "exampleCode": "c0fb0618c527cfd2",
-        "whenToUse": "66abbdf290a967c3",
+        "whenToUse": "4c1367768c48591b",
         "commonMistakes": "d2aaf6e046c7f0ee",
         "furtherReading": "d640cafa80d983cb"
       },
@@ -3129,10 +3212,10 @@
       },
       "407_springboot_security_filter_chain.md": {
         "title": "14d6cee1282994f3",
-        "whatItIs": "83e63caf11070370",
+        "whatItIs": "a427bd17d69b1dcb",
         "keyConcepts": "1d1c75c121e5784e",
         "exampleCode": "c6a60b28deefa746",
-        "whenToUse": "4bc764618efdce28",
+        "whenToUse": "9ea571ec9d1b6f98",
         "commonMistakes": "b5ab768a952b1583",
         "furtherReading": "769d7c0c89ff6b02"
       },
@@ -3940,7 +4023,7 @@
       },
       "482_alerting_without_crying_wolf.md": {
         "title": "17bab8fe92b581f3",
-        "whatItIs": "923968e09326149e",
+        "whatItIs": "ee25fe0c69bacbb9",
         "keyConcepts": "1055f4b08e1e0d77",
         "exampleCode": "13c300ee253e2f61",
         "whenToUse": "ca887c0adab7538a",
