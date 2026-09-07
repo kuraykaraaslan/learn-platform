@@ -52,6 +52,13 @@ export const DEVELOPER_PATHS = [
     steps: [524, 525, 533, 537, 542, 546, 549, 469, 471, 474, 475, 476, 477, 482, 488, 518],
   },
   {
+    id: 'operations-engineer',
+    title: 'Operations Engineer Path',
+    blurb:
+      'For the person building the systems an estate is actually run from. Start with what an asset is and how it is named, then the link between a register row and the object in front of you — tags, check digits and the scan that quietly goes to the wrong machine. Then capture in the field with no network, validate what arrives, and turn telemetry into a condition indicator and a work order somebody accepts.',
+    steps: [504, 505, 506, 572, 573, 574, 494, 577, 578, 503, 507, 563, 564, 568, 508, 569],
+  },
+  {
     id: 'digital-twin',
     title: 'Digital Twin Path',
     blurb:

@@ -8,11 +8,18 @@ import { lessonIndex } from './course_content.index';
 import { CourseContentService } from './course_content.service';
 
 describe('developer paths', () => {
-  it('declares exactly four paths', () => {
+  it('declares exactly five paths', () => {
     // docs/phases/23-developer-paths.md: four hand-curated cross-course
     // reading orders. Not a hard invariant of the type, but a decision worth
     // a test — a fifth path is a choice, not an accident.
-    expect(DEVELOPER_PATHS).toHaveLength(4);
+    //
+    // The choice was made in docs/phases/30-second-generation-closeout.md.
+    // P23's four paths are all on the design/data side; the courses added
+    // after it (asset identification, condition monitoring) serve an
+    // operations reader who had no reading order at all. That is P23's own
+    // justification, applied to a reader who did not exist when it was
+    // written — not a fifth path because there was room for one.
+    expect(DEVELOPER_PATHS).toHaveLength(5);
   });
 
   it('gives every path a unique kebab-case id, derived into the union', () => {

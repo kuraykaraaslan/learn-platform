@@ -21,7 +21,7 @@ The other thing that always stays is the **raw data question**. Aggregating at t
     - text: "Comparing a reading against the fleet's current average"
       correct: true
       why: "The device does not have the fleet average, so providing it means transporting data to the device."
-    - text: "Dropping samples that are outside the sensor's physical range"
+    - text: "Dropping samples that are outside the sensor's physical range, which the datasheet states (#526)"
       correct: false
       why: "Cheap, local, and it prevents a transmission — a good candidate."
 

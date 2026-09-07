@@ -38,7 +38,7 @@ The costs are real and worth stating rather than discovering. A compact encoding
       why: "The schema travels separately, the fourth value needs the first three decoded, and one corrupt byte desynchronises the rest."
     - text: "Precision, since values are scaled to integers"
       correct: false
-      why: "Scaling is a choice with a known bound — two decimal places is exact if you scale by a hundred. The three losses above are structural."
+      why: "Scaling is a choice with a known bound — two decimal places is exact if you scale by a hundred. The three losses above are structural. What resolution the front end actually delivered is a separate question (#533)."
 ```
 
 ## Key Concepts

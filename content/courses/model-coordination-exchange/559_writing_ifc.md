@@ -59,7 +59,7 @@ The pragmatic advice is to use a library for the serialisation and to keep your 
 - **Units declared in the file** — a missing or wrong unit assignment is silently off by a factor (Lesson 437)
 - **Property sets attached through the schema's relationship**, not left free-floating (Lesson 436)
 - **Header and schema version must describe the file** — the consumer picks its parser from them
-- **Id stability across exports is a process requirement**, not a schema one (Lessons 555, 558, 440)
+- **Id stability across exports is a process requirement**, not a schema one (Lessons 555, 558, 440); the physical-tag version of the same rule is Lesson 580
 - **Use a library for serialisation, keep validation independent** — syntax is not intent
 
 ## Example Code

@@ -3,7 +3,7 @@
 ## What It Is
 A twin that only records what happened is a history. A twin that also holds what a model *predicts* is more useful and considerably more dangerous, because the two kinds of number look identical in a table and mean opposite things.
 
-An **observation** is a measurement: something physical produced it, it has a device behind it, and its error bars come from the sensor. A **simulation output** is a computation: a model produced it, it has assumptions behind it, and its error bars come from those assumptions. Put both in a `value` column and within a month somebody will compute a monthly average across the two, publish it, and be asked where the number came from.
+An **observation** is a measurement: something physical produced it, it has a device behind it, and its error bars come from the sensor — offset, gain and drift, which Lesson 534 quantifies per device. A **simulation output** is a computation: a model produced it, it has assumptions behind it, and its error bars come from those assumptions. Put both in a `value` column and within a month somebody will compute a monthly average across the two, publish it, and be asked where the number came from.
 
 The fix is not two tables. Two tables sound clean and produce a system where every query has to be written twice, and the one that matters — comparing the prediction against what actually happened — becomes a join nobody maintains. The fix is **one table with the distinction as a column**, and a rule that no query may aggregate across it without saying so.
 

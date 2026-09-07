@@ -58,6 +58,7 @@ P26 cihaz dalı kapanışı  ← P24, P25 (P22'nin iki yönlü bağ kuralı, kap
 P27 model koordinasyonu  ← P14, P16, P20 (dalın yazma yarısı: federasyon, çakışma, BCF, IFC yazma)
 P28 durum izleme         ← P17, P18, P20 (telemetri ile bakım kararı arasındaki katman)
 P29 varlık tanıma        ← P19, P20 (kütükteki satır ile önündeki nesne arasındaki bağ)
+P30 ikinci nesil kapanışı ← P24..P29 (kursları birbirine bağlamak, operasyon path'i)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -85,13 +86,14 @@ P29 varlık tanıma        ← P19, P20 (kütükteki satır ile önündeki nesne
 | P20 | [20-asset-management-systems.md](20-asset-management-systems.md) | ~4-5 gün | tamamlandı — 9 ders (504-512), `asset_register` seed, `510` proof, anti-join + birleştirme hunisi |
 | P21 | [21-smart-infrastructure.md](21-smart-infrastructure.md) | ~5 gün | tamamlandı — 10 ders (513-522); 8 damgalı, 514 + 521 denylist'te, `crosswalk` seed, `518` proof |
 | P22 | [22-domain-closeout.md](22-domain-closeout.md) | ~2 gün | tamamlandı — 6 forward `(#N)` bağı, arama indeksi 77.393 B gz (sınır 98.304), `cap-starved` 2, `shadowed` 0 |
-| P23 | [23-developer-paths.md](23-developer-paths.md) | ~3 gün | tamamlandı — 4 path (`bim-developer` 16, `gis-developer` 12, `iot-engineer` 16, `digital-twin` 16; ilk ikisi sonraki fazlarda güncellendi), `/paths` + 4 statik sayfa, ders rozeti sunucu bileşeni |
+| P23 | [23-developer-paths.md](23-developer-paths.md) | ~3 gün | tamamlandı — 4 path (`bim-developer` 16, `gis-developer` 12, `iot-engineer` 16, `digital-twin` 16; ilk ikisi sonraki fazlarda güncellendi, beşincisi P30'da eklendi), `/paths` + 4 statik sayfa, ders rozeti sunucu bileşeni |
 | P24 | [24-iot-hardware-basics.md](24-iot-hardware-basics.md) | ~9-10 gün | tamamlandı — 18 ders (524-541), 17 damgalı, 541 denylist'te, `device_calibration` seed, `532` + `537` proof, `diff` 2 → 3 |
 | P25 | [25-embedded-firmware.md](25-embedded-firmware.md) | ~7-8 gün | tamamlandı — 12 ders (542-553), 12'si damgalı, denylist değişmedi, `545` + `549` proof, `diff` 3 → 4, hiç C fence'i yok |
 | P26 | [26-device-branch-closeout.md](26-device-branch-closeout.md) | ~2-3 gün | tamamlandı — yeni ders yok; 8 geriye bağ, iki yeni kurs 1/0 → **2/2** kurstan bağ alıyor, sözlük 139 → 149 (`shadowed` 0), 11 yeni link render, 0 kayıp |
 | P27 | [27-model-coordination-exchange.md](27-model-coordination-exchange.md) | ~6-7 gün | tamamlandı — 9 ders (554-562), 9'u damgalı, `557` proof, `diff` 4 → 5; dalın yazma yarısı (federasyon, çakışma sorgusu, BCF, IFC yazma, COBie şeması) |
 | P28 | [28-condition-monitoring.md](28-condition-monitoring.md) | ~6-7 gün | tamamlandı — 9 ders (563-571), 9'u damgalı, `condition_history` seed (8 `sql run`), `566` proof (maskeleme sayıldı), `sql` fence 79 → 87 |
 | P29 | [29-asset-identification.md](29-asset-identification.md) | ~5-6 gün | tamamlandı — 9 ders (572-580), 9'u damgalı, yeni seed yok (`asset_register` yeniden kullanıldı), `574` proof (kontrol basamağı hata sınıfları sayıldı) |
+| P30 | [30-second-generation-closeout.md](30-second-generation-closeout.md) | ~2 gün | tamamlandı — yeni ders yok; 8 bağ, `iot-hardware-basics` ilk nesilden 1 → **4** bağ, yeni kurslar arası 4 → 6 kenar, 5. path (`operations-engineer`, 16 adım) |
 
 ## Ölçülen zemin
 
@@ -176,6 +178,13 @@ bağ vardı (karşılaştırma: P17'ye 7, P14/P18'e 5). P26 ikisini de 2'ye çı
 uydurulmuş bağla değil, nesrin zaten işaret ettiği sekiz yere. P27, P28 ve P29 aynı kuralı
 **doğuşta** uyguladı: üç yeni kurs da üç kurstan bağ alarak açıldı, çünkü
 aynı borcu ikinci kez ödemenin anlamı yok.
+
+P30 kuralın ölçmediği yeri ölçtü. P22'nin kuralı bir kursun **ilk nesille**
+bağını denetliyor; ikinci neslin **kendi içindeki** bağını kimse bakmamıştı ve
+orada dört kenar vardı, 26'sı tek çiftte. `model-coordination-exchange`
+diğer yeni kursların hiçbirine bağlı değildi ve `iot-hardware-basics` korpusa
+72 kez yazıp ilk nesilden **1** bağ alıyordu. Sekiz bağla ikisi de kapandı:
+hardware 4, kenar sayısı 6.
 
 ## Widget kapsamı
 

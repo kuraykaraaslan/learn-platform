@@ -9,7 +9,7 @@ The precise decision is the **narrow phase**, and its cost is why the broad phas
 
 The third part is the **tolerance**, and it is not a technical parameter — **it is a policy about what counts as a problem**. A pipe passing 2 mm into a beam's bounding volume may be a modelling artefact, an acceptable clearance, or a real collision, and no property of the geometry decides which. Setting it to zero reports everything and buries the team; setting it high suppresses real interferences. The number matters less than the fact that it must be **stated with the report**, because two teams running the same models at different tolerances produce different findings and both are correct.
 
-One more reduction is usually applied before any of this, and it is a modelling decision rather than a geometric one: **pairs within the same discipline are excluded**. A structural model's beams intersecting its own columns is how the model is built, not a coordination finding. What remains is the cross-discipline pairs — and deciding which discipline pairs are even interesting is the first step of making a report readable (Lesson 558).
+One more reduction is usually applied before any of this, and it is a modelling decision rather than a geometric one — and it assumes each element's identity is settled, which is Lesson 506's subject: **pairs within the same discipline are excluded**. A structural model's beams intersecting its own columns is how the model is built, not a coordination finding. What remains is the cross-discipline pairs — and deciding which discipline pairs are even interesting is the first step of making a report readable (Lesson 558).
 
 ```quiz
 - q: "What does the broad phase of a clash query do?"
