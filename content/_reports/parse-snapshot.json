@@ -2828,16 +2828,16 @@
     "embedded-firmware": {
       "542_the_loop_that_never_exits.md": {
         "title": "f52e6e187fafe07a",
-        "whatItIs": "48bce2ff51da2ee8",
+        "whatItIs": "e8b67a932d8a078c",
         "keyConcepts": "41177b7fc3aed954",
         "exampleCode": "3685c705ef0cc1be",
         "whenToUse": "915e5f3a05bccf10",
         "commonMistakes": "80c6561e06da10cd",
-        "furtherReading": "5e335952e91f55bc"
+        "furtherReading": "fbe5608d276f5c6e"
       },
       "543_interrupts_and_the_two_contexts.md": {
         "title": "435359516ad64cdc",
-        "whatItIs": "a9b48035952aed05",
+        "whatItIs": "67e3ebe882d98972",
         "keyConcepts": "758eeceae45279ce",
         "exampleCode": "564776c006e366c7",
         "whenToUse": "3030dad3168032ef",
@@ -2864,21 +2864,21 @@
       },
       "546_never_block_cooperative_state_machines.md": {
         "title": "574807167c446610",
-        "whatItIs": "3927ac6091424f05",
+        "whatItIs": "f0997c0b870d80b4",
         "keyConcepts": "7f6ae3aaeb3172c8",
         "exampleCode": "ac97d85d417f2203",
         "whenToUse": "ac59ea7b0de9e5b3",
-        "commonMistakes": "12895505eb27f62b",
+        "commonMistakes": "d27c7936501a49a3",
         "furtherReading": "7599deb6346fdc9a"
       },
       "547_when_the_superloop_stops_paying.md": {
         "title": "7fedc0fc6b6ee8bb",
-        "whatItIs": "4a970ff5597c00eb",
-        "keyConcepts": "b96ffc4ea6b8404a",
+        "whatItIs": "4cbbae9782a49006",
+        "keyConcepts": "a616560377051b29",
         "exampleCode": "d85d932c0f24a0b9",
         "whenToUse": "5eb22ffcd9bc3fb8",
-        "commonMistakes": "dfbd01c0276b78b7",
-        "furtherReading": "d498605019405e17"
+        "commonMistakes": "b8235f1c1e31d674",
+        "furtherReading": "1f2fc50350da4398"
       },
       "548_memory_you_cannot_ask_for.md": {
         "title": "e6a58a0046e73e81",
@@ -2930,8 +2930,8 @@
         "whatItIs": "11a00e05ac34677e",
         "keyConcepts": "3b1096a729e5e1f2",
         "exampleCode": "b1b456101e222910",
-        "whenToUse": "5bc7cf8e895b7bc8",
-        "commonMistakes": "6a510e5ca7a137a8",
+        "whenToUse": "7b9720b568457476",
+        "commonMistakes": "23366c8a296726b0",
         "furtherReading": "1f92fde17c0c21cb"
       }
     },
@@ -3671,7 +3671,7 @@
         "whatItIs": "e184166c0bdf5d5c",
         "keyConcepts": "0233e426ef835b6f",
         "exampleCode": "ce43fca54f1be8b7",
-        "whenToUse": "2871278453955789",
+        "whenToUse": "8a823d8c447447e5",
         "commonMistakes": "819e2191764b813d",
         "furtherReading": "a3459c50c0f6d0df"
       },
@@ -3713,10 +3713,10 @@
       },
       "530_i2c_and_spi.md": {
         "title": "b3c53fedd319ebca",
-        "whatItIs": "351f6fbc83775954",
-        "keyConcepts": "9228ae0534f15972",
-        "exampleCode": "121b25247c8d8380",
-        "whenToUse": "cbe1c13b68d2e879",
+        "whatItIs": "fc85eec51c78942f",
+        "keyConcepts": "ca7315dd189a1add",
+        "exampleCode": "375cfcf25e60d040",
+        "whenToUse": "877ce371c57ae2cb",
         "commonMistakes": "6222cfa27d0d5d29",
         "furtherReading": "fe4d603c3827f9d5"
       },
@@ -3763,7 +3763,7 @@
         "exampleCode": "0cc9eeb3e9b277c5",
         "whenToUse": "31b579ffe4fc3b08",
         "commonMistakes": "8924c72dbf3c4652",
-        "furtherReading": "b76022e58fc7ae4a"
+        "furtherReading": "a7d3e509af5808f6"
       },
       "536_distance_voltage_drop_4_20ma.md": {
         "title": "e6f863d908f2f39e",
@@ -3803,7 +3803,7 @@
       },
       "540_bring_up_and_fault_isolation.md": {
         "title": "a278c4f380ccf650",
-        "whatItIs": "83e3f0dfe0d148a3",
+        "whatItIs": "d84a13c6cf5ea40a",
         "keyConcepts": "2f557b49542397c9",
         "exampleCode": "0b384d5116e62013",
         "whenToUse": "eb9202cae41ab488",
@@ -3823,7 +3823,7 @@
     "iot-telemetry-edge": {
       "469_the_device_to_database_path.md": {
         "title": "fdf8f08234184b9a",
-        "whatItIs": "9c74c252916fd7f8",
+        "whatItIs": "16e9ecb8f77e4343",
         "keyConcepts": "4d5e213b1e665fb3",
         "exampleCode": "8996a060526480e1",
         "whenToUse": "fc8757954645fdaf",
@@ -3850,7 +3850,7 @@
       },
       "472_lorawan_duty_cycle.md": {
         "title": "9ab18202f3ad0969",
-        "whatItIs": "36beea979928dd7e",
+        "whatItIs": "90c4d0f6b393fc76",
         "keyConcepts": "6a382234d84d1c2e",
         "exampleCode": "dc55cb84ed32fd8f",
         "whenToUse": "b342478c0612e84a",
@@ -3868,7 +3868,7 @@
       },
       "474_three_clocks.md": {
         "title": "70935ec087bd3262",
-        "whatItIs": "4d09c33a40cf7bc4",
+        "whatItIs": "0b83926453f05e35",
         "keyConcepts": "a94582f5b0f4524c",
         "exampleCode": "ee3f88c52311329c",
         "whenToUse": "4eed104f2c35d80c",
@@ -3886,7 +3886,7 @@
       },
       "476_store_and_forward.md": {
         "title": "6e973bf9badd426a",
-        "whatItIs": "eed2c8f4faea7cc9",
+        "whatItIs": "76c818f2c46668c2",
         "keyConcepts": "1fca24a58af7584b",
         "exampleCode": "e0ee3bda1ca32f19",
         "whenToUse": "9cfc2b296febc2b3",
@@ -3913,7 +3913,7 @@
       },
       "479_device_fleet_management.md": {
         "title": "7ecf8d8ba8239162",
-        "whatItIs": "105361a45cdfcf29",
+        "whatItIs": "78972cdee7f43f44",
         "keyConcepts": "61ba0c4b57aeba9f",
         "exampleCode": "90cc87f0fe905ea8",
         "whenToUse": "9a7113e7fea0d9ec",
@@ -3931,7 +3931,7 @@
       },
       "481_edge_processing.md": {
         "title": "52d2aa5e827ee2bd",
-        "whatItIs": "4a9773a930987869",
+        "whatItIs": "c5affac28fdc512b",
         "keyConcepts": "fb78466e03db60c4",
         "exampleCode": "3b8214b925006e37",
         "whenToUse": "6fe85aae1128d4f8",
@@ -3940,7 +3940,7 @@
       },
       "482_alerting_without_crying_wolf.md": {
         "title": "17bab8fe92b581f3",
-        "whatItIs": "7f8170736f60d30f",
+        "whatItIs": "923968e09326149e",
         "keyConcepts": "1055f4b08e1e0d77",
         "exampleCode": "13c300ee253e2f61",
         "whenToUse": "ca887c0adab7538a",
@@ -3987,7 +3987,7 @@
       },
       "57_blue_green_vs_rolling_deployment.md": {
         "title": "27924432938e69ae",
-        "whatItIs": "45e60d010772952f",
+        "whatItIs": "706f8ac1801c215d",
         "keyConcepts": "8184a27faf7c0e1e",
         "exampleCode": "3e75b122da78f6d8",
         "whenToUse": "65d7170ea1e825d0",

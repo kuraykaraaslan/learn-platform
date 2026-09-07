@@ -3,7 +3,7 @@
 ## What It Is
 A sensor reading has a longer journey than most data in a system, and almost every production bug in a telemetry stack is located somewhere on it. Naming the hops is the first useful thing to do, because "the data is wrong" is not a diagnosis and "the reading was written at the wrong timestamp between the gateway and the ingest" is.
 
-The path is: a **sensor** produces a measurement; the **device** samples it, stamps it with its own clock and buffers it; a **radio or network link** carries it, sometimes; a **gateway** receives it and forwards it, possibly alongside another gateway that heard the same transmission; a **broker or network server** routes it; an **ingest** validates and writes it; and a **database** stores it under a schema with its own retention rules. Seven hops, and a reading can be lost, duplicated or mis-timestamped at nearly all of them.
+The path is: a **sensor** produces a measurement; the **device** samples it, stamps it with its own clock and buffers it — a loop, a tick counter and a ring buffer, all of which are Lesson 542's course; a **radio or network link** carries it, sometimes; a **gateway** receives it and forwards it, possibly alongside another gateway that heard the same transmission; a **broker or network server** routes it; an **ingest** validates and writes it; and a **database** stores it under a schema with its own retention rules. Seven hops, and a reading can be lost, duplicated or mis-timestamped at nearly all of them.
 
 What makes this course necessary rather than a rewrite of the distributed-systems lessons is where the constraints differ. A client retrying an HTTP request and a device retrying an uplink are solving the same problem under different physics: the device may have been offline for three days, may have four thousand buffered readings to flush, may be legally forbidden from transmitting again for two minutes (Lesson 472), and cannot be asked anything because it is asleep. The patterns from (#7) and (#4) still apply; their parameters do not.
 
@@ -15,7 +15,7 @@ The other structural difference is that **a reading has three timestamps and non
   options:
     - text: "The device sampled twice"
       correct: false
-      why: "Possible, and the least likely: the device's own loop is the one part of the path with no network in it."
+      why: "Possible, and the least likely: the device's own loop is the one part of the path with no network in it (#542)."
     - text: "Several hops can cause it, and more than one of them is the network working correctly"
       correct: true
       why: "Two gateways hearing one transmission, an acknowledgement that did not get back, and a store-and-forward flush all produce duplicates without anything failing."

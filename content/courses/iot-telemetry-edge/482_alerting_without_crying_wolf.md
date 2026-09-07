@@ -7,7 +7,7 @@ The fix is to stop treating "is the value above the line" as the alerting condit
 
 The run below applies all four rules — the bare threshold and the three fixes — to the same thirty-five readings, and reports what each produced. The bare threshold raises ten alerts. The other three raise one each, and find the real excursion within a sample or two of when it starts.
 
-**Every one of these costs something, and the cost is latency.** A debounce of three samples reports three samples late. Hysteresis with a wide gap will not fire until the value has moved well past the threshold. There is no rule that removes noise for free, and choosing the parameters means deciding how much delay an alert may carry — which is a question about the physical process, not about the code.
+**Every one of these costs something, and the cost is latency.** A debounce of three samples reports three samples late. Note that a debounce here is a filter over *readings*; the contact bounce a switch produces is a different problem one layer down (#528), and neither one fixes an input that is simply floating. Hysteresis with a wide gap will not fire until the value has moved well past the threshold. There is no rule that removes noise for free, and choosing the parameters means deciding how much delay an alert may carry — which is a question about the physical process, not about the code.
 
 The failure mode of the fix is worth knowing too. **Hysteresis is not a noise filter**; it filters noise *smaller than the gap between its two lines*. A signal that swings past both lines flaps exactly as much as it did before, and choosing the gap means measuring your own sensor's noise amplitude rather than taking a default from anywhere.
 

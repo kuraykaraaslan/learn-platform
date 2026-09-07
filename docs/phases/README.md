@@ -54,6 +54,7 @@ P22 kapanış         ← P14..P21 (çapraz bağlar, yeniden ölçüm)
 P23 developer path'leri  ← P14..P21 (kurslar arası okuma sırası)
 P24 IoT donanım temelleri ← P17 (dalın giriş kapısı; okuma sırasında #469'un önüne girer)
 P25 gömülü firmware      ← P24 (donanım ile taşıma arasındaki yazılım; okuma sırası 524 → 542 → 469)
+P26 cihaz dalı kapanışı  ← P24, P25 (P22'nin iki yönlü bağ kuralı, kapanıştan sonra gelen iki kursa)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -84,6 +85,7 @@ P25 gömülü firmware      ← P24 (donanım ile taşıma arasındaki yazılım
 | P23 | [23-developer-paths.md](23-developer-paths.md) | ~3 gün | tamamlandı — 4 path (`bim-developer` 14, `gis-developer` 12, `iot-engineer` 16, `digital-twin` 16), `/paths` + 4 statik sayfa, ders rozeti sunucu bileşeni |
 | P24 | [24-iot-hardware-basics.md](24-iot-hardware-basics.md) | ~9-10 gün | tamamlandı — 18 ders (524-541), 17 damgalı, 541 denylist'te, `device_calibration` seed, `532` + `537` proof, `diff` 2 → 3 |
 | P25 | [25-embedded-firmware.md](25-embedded-firmware.md) | ~7-8 gün | tamamlandı — 12 ders (542-553), 12'si damgalı, denylist değişmedi, `545` + `549` proof, `diff` 3 → 4, hiç C fence'i yok |
+| P26 | [26-device-branch-closeout.md](26-device-branch-closeout.md) | ~2-3 gün | tamamlandı — yeni ders yok; 8 geriye bağ, iki yeni kurs 1/0 → **2/2** kurstan bağ alıyor, sözlük 139 → 149 (`shadowed` 0), 11 yeni link render, 0 kayıp |
 
 ## Ölçülen zemin
 
@@ -153,9 +155,18 @@ P13 zemininde 64.207 B gz idi; P22'de 505 derste 77.393 B gz; bugün 535 derste
 altında, ~16 KB marj, sınır değişmedi. Son iki kurs (30 ders) indekse ~4,6 KB
 ekledi; bu hızla sınır ~5 kurs sonra konuşulur. Review indeksinin bütçe
 kontrolü yok; P22'de 2.126 kartla 201.160 B gz, bugün 2.300 kartla
-**214.040 B gz**. Kavram
-sözlüğü 139 terim; `cap-starved` (4-link sınırına dayanan) ders sayısı 2,
-`shadowed` 0.
+**214.040 B gz**. Kavram sözlüğü P22'de 139 terimdi; P26 cihaz dalı için 10
+terim ekledi ve bugün **149**. `cap-starved` (4-link sınırına dayanan) ders
+sayısı 2, `shadowed` 0, `case-mismatch` 0 — üçü de P22'den beri kımıldamadı.
+`own-lesson-only` 5 → 8: üç yeni terim yalnız tanımlandığı derste geçiyor,
+yani hiçbir yerde tooltip render etmiyor. Bu P3'ün ölçülen kategorilerinden
+biri, hata değil.
+
+**Bir kursun korpusa bağlılığı da ölçülür.** P22'nin kuralı bir kursun *iki
+yönlü* bağlanmasıydı, ama P24 ve P25 o kapanıştan sonra geldi ve kural onlara
+uygulanmamıştı: `iot-hardware-basics`'e 1, `embedded-firmware`'a **0** kurstan
+bağ vardı (karşılaştırma: P17'ye 7, P14/P18'e 5). P26 ikisini de 2'ye çıkardı —
+uydurulmuş bağla değil, nesrin zaten işaret ettiği sekiz yere.
 
 ## Widget kapsamı
 

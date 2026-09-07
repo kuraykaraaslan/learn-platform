@@ -1,13 +1,13 @@
 {
   "generatedFrom": "scripts/build-concepts.ts",
-  "totalTerms": 139,
+  "totalTerms": 149,
   "totalLessons": 535,
   "totals": {
     "neverMatched": 0,
-    "neverLinked": 20,
+    "neverLinked": 24,
     "neverLinkedByCause": {
-      "own-lesson-only": 5,
-      "code-only": 13,
+      "own-lesson-only": 8,
+      "code-only": 14,
       "shadowed": 0,
       "case-mismatch": 0,
       "cap-starved": 2,
@@ -17,6 +17,16 @@
   },
   "neverMatched": [],
   "neverLinked": [
+    {
+      "slug": "absolute-maximum",
+      "term": "absolute maximum",
+      "cause": "code-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": [
+        531
+      ]
+    },
     {
       "slug": "base",
       "term": "BASE",
@@ -88,6 +98,14 @@
       "alsoAppearsInLessons": [
         139
       ]
+    },
+    {
+      "slug": "ground-loop",
+      "term": "ground loop",
+      "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
     },
     {
       "slug": "index-bloat",
@@ -162,6 +180,14 @@
       ]
     },
     {
+      "slug": "priority-inversion",
+      "term": "priority inversion",
+      "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
+    },
+    {
       "slug": "readiness-probe",
       "term": "Readiness probe",
       "cause": "own-lesson-only",
@@ -178,6 +204,14 @@
       "alsoAppearsInLessons": [
         95
       ]
+    },
+    {
+      "slug": "torn-read",
+      "term": "torn read",
+      "cause": "own-lesson-only",
+      "linkableInLessons": [],
+      "presentInLessons": [],
+      "alsoAppearsInLessons": []
     },
     {
       "slug": "traffic-cutover",
@@ -236,6 +270,12 @@
         "product-technical-strategy/394_auth_identity_multi_tenancy_decisions.md"
       ],
       "rawOccurrences": 19
+    },
+    {
+      "slug": "absolute-maximum",
+      "term": "absolute maximum",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 14
     },
     {
       "slug": "acid-transaction",
@@ -536,6 +576,14 @@
       "rawOccurrences": 46
     },
     {
+      "slug": "current-loop",
+      "term": "current loop",
+      "lessonsLinkedIn": [
+        "iot-hardware-basics/535_ground_noise_and_the_cable_that_became_an_antenna.md"
+      ],
+      "rawOccurrences": 10
+    },
+    {
       "slug": "cve",
       "term": "CVE",
       "lessonsLinkedIn": [],
@@ -764,6 +812,12 @@
       "rawOccurrences": 11
     },
     {
+      "slug": "ground-loop",
+      "term": "ground loop",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 4
+    },
+    {
       "slug": "hard-bounce",
       "term": "Hard bounce",
       "lessonsLinkedIn": [
@@ -786,6 +840,14 @@
         "advanced-deep-dive-topics/103_browser_internals.md"
       ],
       "rawOccurrences": 6
+    },
+    {
+      "slug": "high-water-mark",
+      "term": "high-water mark",
+      "lessonsLinkedIn": [
+        "embedded-firmware/553_debugging_without_a_console.md"
+      ],
+      "rawOccurrences": 9
     },
     {
       "slug": "hmac",
@@ -1030,6 +1092,12 @@
       "rawOccurrences": 2
     },
     {
+      "slug": "priority-inversion",
+      "term": "priority inversion",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 7
+    },
+    {
       "slug": "productized-service",
       "term": "Productized service",
       "lessonsLinkedIn": [
@@ -1059,6 +1127,15 @@
         "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md"
       ],
       "rawOccurrences": 30
+    },
+    {
+      "slug": "pull-up",
+      "term": "pull-up",
+      "lessonsLinkedIn": [
+        "iot-hardware-basics/525_volts_amps_ohms_watts.md",
+        "iot-hardware-basics/530_i2c_and_spi.md"
+      ],
+      "rawOccurrences": 52
     },
     {
       "slug": "race-condition",
@@ -1277,6 +1354,15 @@
       "rawOccurrences": 9
     },
     {
+      "slug": "signal-chain",
+      "term": "signal chain",
+      "lessonsLinkedIn": [
+        "embedded-firmware/542_the_loop_that_never_exits.md",
+        "iot-hardware-basics/540_bring_up_and_fault_isolation.md"
+      ],
+      "rawOccurrences": 7
+    },
+    {
       "slug": "singleton-scope",
       "term": "Singleton scope",
       "lessonsLinkedIn": [
@@ -1367,6 +1453,15 @@
       "rawOccurrences": 5
     },
     {
+      "slug": "superloop",
+      "term": "superloop",
+      "lessonsLinkedIn": [
+        "embedded-firmware/543_interrupts_and_the_two_contexts.md",
+        "embedded-firmware/547_when_the_superloop_stops_paying.md"
+      ],
+      "rawOccurrences": 27
+    },
+    {
       "slug": "suspense-boundary",
       "term": "Suspense boundary",
       "lessonsLinkedIn": [
@@ -1430,6 +1525,16 @@
       "rawOccurrences": 11
     },
     {
+      "slug": "tick-counter",
+      "term": "tick counter",
+      "lessonsLinkedIn": [
+        "embedded-firmware/546_never_block_cooperative_state_machines.md",
+        "embedded-firmware/553_debugging_without_a_console.md",
+        "iot-telemetry-edge/469_the_device_to_database_path.md"
+      ],
+      "rawOccurrences": 12
+    },
+    {
       "slug": "timeline-reconstruction",
       "term": "Timeline reconstruction",
       "lessonsLinkedIn": [
@@ -1445,6 +1550,12 @@
         "framework-deep-dives/407_springboot_security_filter_chain.md"
       ],
       "rawOccurrences": 17
+    },
+    {
+      "slug": "torn-read",
+      "term": "torn read",
+      "lessonsLinkedIn": [],
+      "rawOccurrences": 3
     },
     {
       "slug": "traffic-cutover",

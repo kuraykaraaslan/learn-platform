@@ -11,7 +11,7 @@ A device that cannot reach the network has two choices: throw the reading away, 
 
 **How does it know what to stop keeping?** Only an acknowledgement can tell it, so a device that buffers needs a confirmed-delivery path. Under Lesson 471's QoS 0 there is no acknowledgement at all, which means either accepting that the buffer is trimmed on a guess, or paying for QoS 1 precisely because the buffer exists.
 
-The reason none of this can be added later is that **it is a device-firmware decision**, and the device is in a ceiling void, on a pole, or cast into a wall. Lesson 479 is about updating it; this lesson is about what you would rather not have to.
+The reason none of this can be added later is that **it is a device-firmware decision**, and the device is in a ceiling void, on a pole, or cast into a wall. The queue itself is a ring buffer between two contexts (#545), and keeping it across a power loss is a flash-journal problem (#552). Lesson 479 is about updating it; this lesson is about what you would rather not have to.
 
 ```quiz
 - q: "A gateway reboots and two hundred devices reconnect at once. What is the failure?"
