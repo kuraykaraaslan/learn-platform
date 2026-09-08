@@ -71,6 +71,7 @@ P37 denylist denetimi    ← P36 (bir örnek mi örüntü mü: on bir yüzey öl
 P38 arama capstone'u bulur ← P12, P34 (cheat sheet bilinçli olarak indekslenmiyor)
 P39 üçüncü capstone      ← P34..P36 (`security`: inşa etmek değil incelemek)
 P40 doğrulanamaz dil kapısı ← P16, P22 (sayaç, kapısı olmadığı için saymayı bırakmıştı)
+P41 dördüncü capstone    ← P35, P39 (koşturulacak hiçbir şeyin olmadığı yerde referans)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -116,6 +117,7 @@ P40 doğrulanamaz dil kapısı ← P16, P22 (sayaç, kapısı olmadığı için 
 | P38 | [38-search-finds-the-capstone.md](38-search-finds-the-capstone.md) | ~1 gün | tamamlandı — arama indeksi 562 → **564 kayıt** (iki capstone); rotanın şekli sayesinde `SearchRecord` ve istemci **değişmedi**. Cheat sheet bilinçli olarak dışarıda: P33'ün birebir sözleşmesi gereği her sonucu ikizlerdi |
 | P39 | [39-security-capstone.md](39-security-capstone.md) | ~2-3 gün | tamamlandı — üçüncü capstone (`security`), şekli bilinçli olarak **inceleme**: kursun 3 dersi denylist'te ve rubric'in altı satırı da doğrulanmış derslerden. Referans `ORDER BY`'ın parametrelenemediğini koşarak gösteriyor, sömürü göstermeden |
 | P40 | [40-unverified-language-gate.md](40-unverified-language-gate.md) | ~1 gün | tamamlandı — P22'nin "terfi backlog'a takılı" kaydı ölçüldü ve backlog'un **kalıcı** olduğu bulundu (9 C# + 10 Java, ikisi de tasarım). Kural artık hem sayaç hem kapı: kabul edilen iki dil `warn`, listede olmayan her dil **error**; `csharp` fence satırı stats'a eklendi |
+| P41 | [41-business-capstone.md](41-business-capstone.md) | ~2 gün | tamamlandı — dördüncü capstone (`business-finance-solo-ops`), **koşturulacak hiçbir şeyin olmadığı ilk capstone**: `proof` yok ve bu P35'in kuralının gereği. Brief'teki her rakam kurgunun kendisine ait, dış olgu iddiası yok |
 
 ## Ölçülen zemin
 

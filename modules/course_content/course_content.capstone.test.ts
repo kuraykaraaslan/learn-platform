@@ -100,8 +100,16 @@ describe('capstone.md is invisible to the lesson pipeline', () => {
 describe('capstone proofs', () => {
   const fences = listCapstoneProofFences(withCapstone);
 
-  it('exists for every pilot capstone', () => {
-    expect(fences.length).toBe(withCapstone.length);
+  it('exists wherever there is something to run, and is not invented where there is not', () => {
+    // P35 wrote this as "one proof per capstone", which was true while every
+    // capstone was in a code domain. P41's business capstone has nothing to
+    // execute — no database, no runtime, only a diagnosis — and P35's own rule
+    // says that where a claim cannot be run, its output is not written. So the
+    // assertion is that the mechanism is exercised and that every proof which
+    // exists is real, NOT that each capstone must produce one. Forcing a proof
+    // here would produce exactly the fabricated output the rule exists to stop.
+    expect(fences.length).toBeGreaterThan(0);
+    expect(fences.length).toBeLessThanOrEqual(withCapstone.length);
   });
 
   it('has a workspace at content/_verify/<course>/capstone with a verify script', () => {
