@@ -2,12 +2,27 @@ import { describe, expect, it } from 'vitest';
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
-import { hasCapstone, listCapstoneProofFences, loadCapstone, parseCapstoneMarkdown } from './course_content.capstone';
+import {
+  hasCapstone,
+  hasPathCapstone,
+  listCapstoneProofFences,
+  loadCapstone,
+  loadPathCapstone,
+  parseCapstoneMarkdown,
+} from './course_content.capstone';
+import { DEVELOPER_PATHS } from './course_content.paths';
 import { listCourseSlugs, readCourseManifest, readLessonMarkdown } from './course_content.manifest';
 import { splitLessonSections } from './course_content.parser';
 import { parseMistakes } from './course_content.mistakes';
 
 const withCapstone = listCourseSlugs().filter(hasCapstone);
+const pathsWithCapstone = DEVELOPER_PATHS.filter((p) => hasPathCapstone(p.id));
+
+/** lesson id -> the course that owns it, built once from the manifests. */
+const courseOfLesson = new Map<number, string>();
+for (const slug of listCourseSlugs()) {
+  for (const item of readCourseManifest(slug).items) courseOfLesson.set(item.id, slug);
+}
 
 describe('parseCapstoneMarkdown', () => {
   it('is opt-in: most courses have no capstone and that is not a gap', () => {
@@ -132,5 +147,60 @@ describe('capstone proofs', () => {
 
   it('opens with the command that produced it, as every proof body does', () => {
     for (const fence of fences) expect(fence.code.startsWith('$ node ')).toBe(true);
+  });
+});
+
+describe("a developer path's capstone", () => {
+  // docs/phases/43-path-capstone.md. Same parser, same UI, same rules as a
+  // course capstone; what differs is the home (content/paths/<id>/capstone.md)
+  // and the scope of the rubric (the path's steps, not a course's lessons).
+  it('is opt-in, the same way a course capstone is', () => {
+    expect(hasPathCapstone('no-such-path')).toBe(false);
+    expect(loadPathCapstone('no-such-path')).toBeNull();
+    expect(pathsWithCapstone.length).toBeGreaterThan(0);
+  });
+
+  it('quotes every lead verbatim from a lesson that is a step on that path', () => {
+    const offenders: string[] = [];
+
+    for (const developerPath of pathsWithCapstone) {
+      const capstone = loadPathCapstone(developerPath.id)!;
+      const steps = new Set<number>(developerPath.steps);
+
+      for (const row of capstone.rubric) {
+        if (!steps.has(row.lesson)) {
+          offenders.push(`${developerPath.id}: lesson ${row.lesson} is not a step on this path`);
+          continue;
+        }
+        const slug = courseOfLesson.get(row.lesson)!;
+        const item = readCourseManifest(slug).items.find((i) => i.id === row.lesson)!;
+        expect(item.verified, `${developerPath.id} rubric cites unverified lesson ${row.lesson}`).toBe(true);
+        const { sections } = splitLessonSections(readLessonMarkdown(slug, item.file));
+        const leads = parseMistakes(sections.commonMistakes).map((m) => m.lead);
+        if (!leads.includes(row.lead)) offenders.push(`${developerPath.id}#${row.lesson}: ${row.lead}`);
+      }
+    }
+
+    expect(offenders).toEqual([]);
+  });
+
+  it('draws its rows from at least three courses — the thing a course capstone cannot do', () => {
+    // This is the phase's whole point rather than a stylistic preference: a
+    // capstone confined to one course measures one course. If this assertion
+    // ever holds trivially, the path capstone has stopped earning its home.
+    for (const developerPath of pathsWithCapstone) {
+      const courses = new Set(
+        loadPathCapstone(developerPath.id)!.rubric.map((row) => courseOfLesson.get(row.lesson))
+      );
+      expect(courses.size, `${developerPath.id} capstone spans ${courses.size} course(s)`).toBeGreaterThanOrEqual(3);
+    }
+  });
+
+  it('lives beside the path, never inside a course, so no course walks it', () => {
+    for (const developerPath of pathsWithCapstone) {
+      const file = path.join(process.cwd(), 'content', 'paths', developerPath.id, 'capstone.md');
+      expect(fs.existsSync(file)).toBe(true);
+      expect(hasCapstone(developerPath.id)).toBe(false);
+    }
   });
 });

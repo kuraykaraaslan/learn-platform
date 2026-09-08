@@ -13,7 +13,8 @@ import { RUNNABLE_LANGS } from '../../modules/course_content/course_content.tran
 import { MAX_SEED_BYTES } from '../../modules/course_content/course_content.seeds';
 import { parseQuiz } from '../../modules/course_content/course_content.quiz';
 import { parseNumbers, claimsPublishedDefault, hasMeasurement } from '../../modules/course_content/course_content.numbers';
-import { hasCapstone, listCapstoneProofFences, loadCapstone } from '../../modules/course_content/course_content.capstone';
+import { hasCapstone, hasPathCapstone, listCapstoneProofFences, loadCapstone, loadPathCapstone } from '../../modules/course_content/course_content.capstone';
+import { DEVELOPER_PATHS } from '../../modules/course_content/course_content.paths';
 import { parseMistakes } from '../../modules/course_content/course_content.mistakes';
 import { parseRecall } from '../../modules/course_content/course_content.recall';
 import { flattenSpatial, parseSpatial } from '../../modules/course_content/course_content.spatial';
@@ -52,6 +53,10 @@ export type Rule = {
   description: string;
   lesson?: (file: LessonFile) => Finding[];
   course?: (slug: string, files: LessonFile[]) => Finding[];
+  /** P43: for things that belong to no single lesson or course — a developer
+   *  path's capstone, for instance, whose rubric is scoped to the path's steps
+   *  rather than to one course's lessons. Runs once per lint. */
+  global?: (corpus: LessonFile[]) => Finding[];
 };
 
 /**
@@ -196,6 +201,27 @@ const VERIFIED_SHA_REPORT = path.join(process.cwd(), 'content', '_reports', 'ver
 const verifiedShaReport: Record<string, string> = fs.existsSync(VERIFIED_SHA_REPORT)
   ? JSON.parse(fs.readFileSync(VERIFIED_SHA_REPORT, 'utf-8'))
   : {};
+
+/** Both path-capstone rules need the parsed capstone; only the first reports a
+ *  parse failure, so the same file never produces two findings for one cause. */
+function loadPathCapstoneOrReport(
+  pathId: string,
+  rule: string,
+  findings: Finding[]
+): ReturnType<typeof loadPathCapstone> {
+  if (!hasPathCapstone(pathId)) return null;
+  try {
+    return loadPathCapstone(pathId);
+  } catch (error) {
+    findings.push({
+      rule,
+      severity: 'error',
+      target: `paths/${pathId}/capstone.md`,
+      message: error instanceof Error ? error.message : String(error),
+    });
+    return null;
+  }
+}
 
 export const RULES: Rule[] = [
   {
@@ -779,6 +805,83 @@ export const RULES: Rule[] = [
           }
           return findings;
         }),
+  },
+  {
+    id: 'capstone/path-rubric-off-path',
+    severity: 'error',
+    description:
+      "A developer path's capstone quotes a mistake lead from a lesson that is not one of that path's steps, or does not quote it verbatim. The course capstone's rule (capstone/unsourced-rubric-row) is that a rubric may only quote the course it belongs to; for a path the natural scope is the path's own curated steps, which is a sharper constraint rather than a looser one — the capstone measures exactly the reading order it sits at the end of. docs/phases/43-path-capstone.md.",
+    global: (corpus) => {
+      const findings: Finding[] = [];
+      const byId = new Map(corpus.map((f) => [f.id, f]));
+
+      for (const developerPath of DEVELOPER_PATHS) {
+        const capstone = loadPathCapstoneOrReport(developerPath.id, 'capstone/path-rubric-off-path', findings);
+        if (!capstone) continue;
+
+        const steps = new Set<number>(developerPath.steps);
+        for (const row of capstone.rubric) {
+          if (!steps.has(row.lesson)) {
+            findings.push({
+              rule: 'capstone/path-rubric-off-path',
+              severity: 'error',
+              target: `paths/${developerPath.id}/capstone.md`,
+              message: `rubric row cites lesson ${row.lesson}, which is not a step on this path`,
+            });
+            continue;
+          }
+          const file = byId.get(row.lesson);
+          const section = file?.sections.find((sec) => sec.heading.startsWith('Common Mistakes'));
+          const leads = section ? parseMistakes(section.lines.join('\n')).map((m) => m.lead) : [];
+          if (!leads.includes(row.lead)) {
+            findings.push({
+              rule: 'capstone/path-rubric-off-path',
+              severity: 'error',
+              target: `paths/${developerPath.id}/capstone.md`,
+              message: `"${row.lead}" is not a Common Mistakes lead in lesson ${row.lesson}`,
+            });
+          }
+        }
+      }
+
+      return findings;
+    },
+  },
+  {
+    id: 'capstone/path-rubric-cites-unverified',
+    severity: 'error',
+    description:
+      "A developer path's capstone rubric cites a lesson that is not `verified: true`. Same reasoning as capstone/rubric-cites-unverified one scope up: a rubric row asks the reader to score their own work against an item, which is an exercise rather than a reading, so it may only measure content the corpus stands behind. Kept separate from capstone/path-rubric-off-path because it is a different failure — the lesson is on the path, the quote is real, and the corpus simply has not vouched for it yet. It relaxes on its own when a lesson leaves HARM_DENYLIST. docs/phases/43-path-capstone.md.",
+    global: (corpus) => {
+      const findings: Finding[] = [];
+      const byId = new Map(corpus.map((f) => [f.id, f]));
+
+      for (const developerPath of DEVELOPER_PATHS) {
+        // A parse failure is reported once, by path-rubric-off-path.
+        if (!hasPathCapstone(developerPath.id)) continue;
+        let capstone;
+        try {
+          capstone = loadPathCapstone(developerPath.id)!;
+        } catch {
+          continue;
+        }
+
+        const steps = new Set<number>(developerPath.steps);
+        for (const row of capstone.rubric) {
+          if (!steps.has(row.lesson)) continue; // off-path is the other rule's finding
+          if (byId.get(row.lesson)?.verified !== true) {
+            findings.push({
+              rule: 'capstone/path-rubric-cites-unverified',
+              severity: 'error',
+              target: `paths/${developerPath.id}/capstone.md`,
+              message: `rubric row cites lesson ${row.lesson}, which is not verified — a rubric may only measure what the corpus stands behind`,
+            });
+          }
+        }
+      }
+
+      return findings;
+    },
   },
   {
     id: 'capstone/rubric-cites-unverified',

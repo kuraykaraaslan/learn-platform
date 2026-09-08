@@ -39,6 +39,7 @@ const findings: Finding[] = [];
 for (const rule of RULES) {
   if (rule.lesson) for (const file of corpus) findings.push(...rule.lesson(file));
   if (rule.course) for (const slug of listCourseSlugs()) findings.push(...rule.course(slug, byCourse.get(slug) ?? []));
+  if (rule.global) findings.push(...rule.global(corpus));
 }
 
 const today = new Date().toISOString().slice(0, 10);

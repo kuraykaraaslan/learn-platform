@@ -5,8 +5,13 @@
 // this keeps the search UI's own JS near-zero instead of paying for a
 // general-purpose matcher this corpus doesn't need.
 export type SearchRecord = {
+  /** P43: where this record points. Built by scripts/build-search-index.ts
+   *  rather than reconstructed in the UI, because a path capstone lives at
+   *  /paths/<id>/capstone and no amount of courseSlug + lessonSlug addresses
+   *  it. docs/phases/38 recorded this as the change a path capstone would
+   *  force; docs/phases/43 is that capstone. */
+  href: string;
   courseSlug: string;
-  lessonSlug: string;
   courseTitle: string;
   title: string;
   mistakes: string[];

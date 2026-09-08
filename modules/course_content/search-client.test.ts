@@ -3,15 +3,15 @@ import { search, type SearchRecord } from './search-client';
 
 const RECORDS: SearchRecord[] = [
   {
+    href: '/courses/distributed-systems-api-design/idempotency-key-pattern',
     courseSlug: 'distributed-systems-api-design',
-    lessonSlug: 'idempotency-key-pattern',
     courseTitle: 'Distributed Systems & API Design',
     title: 'Idempotency Key Pattern',
     mistakes: ['Not scoping keys to the API key that created them', 'Reusing a key for a different request body'],
   },
   {
+    href: '/courses/database-caching-performance/connection-pool-tuning',
     courseSlug: 'database-caching-performance',
-    lessonSlug: 'connection-pool-tuning',
     courseTitle: 'Database, Caching & Performance',
     title: 'Connection Pool Tuning',
     mistakes: ['Pool exhaustion under burst traffic', 'Setting pool size without measuring actual concurrency'],

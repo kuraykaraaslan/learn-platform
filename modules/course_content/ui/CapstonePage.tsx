@@ -4,12 +4,22 @@ import Link from 'next/link';
 import type { Capstone } from '../course_content.capstone';
 import { CapstoneRubric } from './CapstoneRubric';
 
-export function CapstonePage({ capstone, courseTitle }: { capstone: Capstone; courseTitle: string }) {
+export function CapstonePage({
+  capstone,
+  courseTitle,
+  // P43: a capstone can belong to a developer path instead of a course. The
+  // page is identical; only where "back" goes differs.
+  backHref = `/courses/${capstone.courseSlug}`,
+}: {
+  capstone: Capstone;
+  courseTitle: string;
+  backHref?: string;
+}) {
   return (
     <div className="mx-auto max-w-3xl">
       <header className="mb-6">
         <Link
-          href={`/courses/${capstone.courseSlug}`}
+          href={backHref}
           className="text-sm text-text-secondary underline decoration-border underline-offset-4 hover:text-text-primary"
         >
           {courseTitle}

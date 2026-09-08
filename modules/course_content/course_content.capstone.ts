@@ -19,6 +19,7 @@ import { z } from 'zod';
 import { markdownToHtml } from './course_content.markdown';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'content', 'courses');
+const PATHS_ROOT = path.join(process.cwd(), 'content', 'paths');
 
 const RubricRowSchema = z.object({
   /** Verbatim mistake lead from `lesson`. Never written here. */
@@ -54,6 +55,23 @@ export function capstonePath(courseSlug: string): string {
 
 export function hasCapstone(courseSlug: string): boolean {
   return fs.existsSync(capstonePath(courseSlug));
+}
+
+/** P43: a capstone can also belong to a developer path rather than a course.
+ *  Same file shape, same parser, same lint rules — what differs is the home
+ *  and the scope a rubric row may cite (the path's steps, not one course's
+ *  lessons). See docs/phases/43-path-capstone.md. */
+export function pathCapstonePath(pathId: string): string {
+  return path.join(PATHS_ROOT, pathId, 'capstone.md');
+}
+
+export function hasPathCapstone(pathId: string): boolean {
+  return fs.existsSync(pathCapstonePath(pathId));
+}
+
+export function loadPathCapstone(pathId: string): Capstone | null {
+  if (!hasPathCapstone(pathId)) return null;
+  return parseCapstoneMarkdown(pathId, fs.readFileSync(pathCapstonePath(pathId), 'utf-8'));
 }
 
 /** Splits the four sections and pulls the rubric out of its fence. Throws on a

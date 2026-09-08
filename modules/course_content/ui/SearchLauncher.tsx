@@ -144,12 +144,12 @@ export function SearchLauncher() {
                   <li className="px-3 py-2 text-xs text-text-secondary">Loading…</li>
                 )}
                 {results.map((r, i) => (
-                  <li key={`${r.record.courseSlug}/${r.record.lessonSlug}`}>
+                  <li key={r.record.href}>
                     <Link
                       ref={(el) => {
                         resultRefs.current[i] = el;
                       }}
-                      href={`/courses/${r.record.courseSlug}/${r.record.lessonSlug}`}
+                      href={r.record.href}
                       onClick={closeAfterNavigate}
                       onMouseEnter={() => setActiveIndex(i)}
                       className={cn(

@@ -15,7 +15,8 @@ import zlib from 'node:zlib';
 import { listCourseSlugs, readCourseManifest, readLessonMarkdown } from '../modules/course_content/course_content.manifest';
 import { splitLessonSections } from '../modules/course_content/course_content.parser';
 import { parseMistakes } from '../modules/course_content/course_content.mistakes';
-import { hasCapstone, loadCapstone } from '../modules/course_content/course_content.capstone';
+import { hasCapstone, hasPathCapstone, loadCapstone, loadPathCapstone } from '../modules/course_content/course_content.capstone';
+import { DEVELOPER_PATHS } from '../modules/course_content/course_content.paths';
 
 const OUT_PATH = path.join(process.cwd(), 'public', 'search-index.json');
 // docs/phases/12 originally set ≤50 KB gz, measured before docs/phases/02
@@ -45,8 +46,9 @@ function fileToLessonSlug(file: string): string {
 }
 
 export type SearchRecord = {
+  /** Built here, not reconstructed in the UI — see course_content/search-client.ts. */
+  href: string;
   courseSlug: string;
-  lessonSlug: string;
   courseTitle: string;
   title: string;
   /** Common Mistakes leads — the highest-weighted field at query time. */
@@ -66,18 +68,19 @@ function buildIndex(): SearchRecord[] {
         .filter((lead) => lead.length > 0);
 
       records.push({
+        href: `/courses/${courseSlug}/${fileToLessonSlug(item.file)}`,
         courseSlug,
-        lessonSlug: fileToLessonSlug(item.file),
         courseTitle: manifest.title,
         title: item.title,
         mistakes,
       });
     }
 
-    // P38: the capstone, where a course has one. It needs no new field and no
-    // client change — SearchLauncher builds /courses/<courseSlug>/<lessonSlug>
-    // and the capstone route is exactly /courses/<slug>/capstone, so the
-    // existing shape addresses it correctly.
+    // P38: the capstone, where a course has one. Its route is exactly
+    // /courses/<slug>/capstone — which is why P38 needed no new field. P43's
+    // path capstone is the record that broke that, and `href` above is the
+    // answer: every record now states its own route instead of having the
+    // launcher reconstruct one.
     //
     // Its rubric leads go in `mistakes`, which is the highest-weighted field
     // at query time. That is not a trick: since P36 every rubric lead IS a
@@ -92,13 +95,30 @@ function buildIndex(): SearchRecord[] {
     if (hasCapstone(courseSlug)) {
       const capstone = loadCapstone(courseSlug)!;
       records.push({
+        href: `/courses/${courseSlug}/capstone`,
         courseSlug,
-        lessonSlug: 'capstone',
         courseTitle: manifest.title,
         title: `Capstone — ${capstone.title}`,
         mistakes: capstone.rubric.map((row) => row.lead),
       });
     }
+  }
+
+  // P43: a developer path's capstone. This is the record that could not be
+  // addressed by courseSlug + lessonSlug, and the reason `href` exists.
+  for (const path of DEVELOPER_PATHS) {
+    if (!hasPathCapstone(path.id)) continue;
+    const capstone = loadPathCapstone(path.id)!;
+    records.push({
+      href: `/paths/${path.id}/capstone`,
+      // `courseSlug` is the record's owner, not necessarily a course: for a
+      // path capstone it is the path id. Only `href` is a route; this field
+      // is a grouping key the launcher shows through `courseTitle`.
+      courseSlug: path.id,
+      courseTitle: path.title,
+      title: `Capstone — ${capstone.title}`,
+      mistakes: capstone.rubric.map((row) => row.lead),
+    });
   }
 
   return records;
@@ -110,7 +130,7 @@ fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
 fs.writeFileSync(OUT_PATH, json);
 
 const gzSize = zlib.gzipSync(json).length;
-const capstoneCount = records.filter((r) => r.lessonSlug === 'capstone').length;
+const capstoneCount = records.filter((r) => r.href.endsWith('/capstone')).length;
 console.log(
   `search index: ${records.length} records (${records.length - capstoneCount} lessons, ${capstoneCount} capstones), ` +
     `${json.length} bytes, ${gzSize} bytes gz -> ${OUT_PATH}`

@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { CourseContentService } from '@/modules/course_content/course_content.service';
 import { PathPage } from '@/modules/course_content/ui/PathPage';
+import { hasPathCapstone } from '@/modules/course_content/course_content.capstone';
 
 // One static page per path (docs/phases/23-developer-paths.md keeps ADR 0001's
 // static-generation stance).
@@ -15,5 +16,5 @@ export default async function PathRoute({ params }: { params: Promise<{ slug: st
   const path = CourseContentService.getPath(slug);
   if (!path) notFound();
 
-  return <PathPage path={path} />;
+  return <PathPage path={path} hasCapstone={hasPathCapstone(slug)} />;
 }

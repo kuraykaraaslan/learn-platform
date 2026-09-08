@@ -101,6 +101,20 @@ sınır değişmiyor.
 
 | Aday | Ne getirir | Neden şimdi değil |
 |---|---|---|
-| Path'lerin indekslenmesi | Beş path'in blurb'ü aranabilir olur | bağımlılık — path rotası `/paths/<id>`, `/courses/...` değil; `SearchRecord`'a bir href alanı ve istemcide bir dallanma gerektirir. Path'ler zaten `/paths` sayfasından bulunuyor |
+| Path'lerin **blurb'ünün** indekslenmesi | Beş path'in tanıtım metni aranabilir olur | kapsam — engel kalmadı ([P43](43-path-capstone.md) `href`'i getirdi ve path capstone'u zaten indeksleniyor); geriye yalnız "blurb aranmaya değer mi" sorusu kaldı. Path'ler `/paths` sayfasından bulunuyor |
 | Capstone brief/deliverable metninin indekslenmesi | Daha geniş eşleşme | kapsam — bugün başlık + rubric lead'leri indeksleniyor; gövde metni bütçeyi ölçülmeden büyütür |
 | Sonuç türünün UI'da işaretlenmesi ("capstone" rozeti) | Okuyucu ne açtığını görür | kapsam — başlık zaten "Capstone — " ile başlıyor; rozet ayrı bir UI kararı |
+
+## Ek — `href` ertelemesi kapandı (2026-09)
+
+Bu fazın kaydı şuydu: *"path rotası `/paths/<id>`, `/courses/...` değil;
+`SearchRecord`'a bir href alanı ve istemcide bir dallanma gerektirir."*
+[P43](43-path-capstone.md)'ün path capstone'u tam olarak o rotayı yarattı ve
+erteleme bitti — ama tahminin yarısı yanlış çıktı: **dallanma gerekmedi**.
+
+Kayda tek bir `href` alanı girdi ve `SearchLauncher` onu olduğu gibi kullanıyor;
+istemcinin rota şeklini bilmesi gerekmiyordu ve artık bilmiyor. Alan ücretsiz
+de değildi — href her kayıtta `courseSlug` + slug'ı tekrarladığı için indeks
++4.375 bayt gz büyüdü, ve karşılığında `lessonSlug` düştü (tek kullanıcısı
+istemcinin kurduğu o rotaydı). Net: 86.006 → **86.925 bayt gz**, 98.304'lük
+bütçenin altında.

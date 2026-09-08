@@ -180,4 +180,20 @@ işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
 | Okuyucu tanımlı path | Kendi okuma listesini kurma (localStorage) | kapsam — kürasyonun değeri **yazarın** seçmesinde; kişisel liste ayrı bir ürün kararı |
 | Path başına tahmini süre | Adımların `estimateMinutes` toplamı | kapsam — ucuz ve zararsız, ama sayaç/ilerleme algısına en yakın kalem; bilinçli olarak sonraya |
 | Path'ten path'e öneri | Bitirenin sıradaki path'i | kapsam — 'bitirdi' bilgisi yok ve olmayacak (değişmez #4); öneri statik olarak yazılabilir |
-| Path'e capstone bağlama | Path'in sonunda bir teslimat | bağımlılık — P22'nin capstone adayına bağlı |
+
+## Ek — capstone adayı tabloyu terk etti (2026-09)
+
+*"Path'e capstone bağlama — bağımlılık: P22'nin capstone adayına bağlı."*
+Bağımlılık P34-P42 ile karşılandı ve kalem
+[P43](43-path-capstone.md)'te `operations-engineer` için ders oldu.
+
+Erteleme gerekçesi burada da geçersiz sayılmadı, karşılandı: P22'nin adayı
+"sekiz kursun tek bir teslimatta birleşmesi"ni istiyordu ve P43 tam olarak
+onu yapıyor — dört kurstan gelen 16 adımın sonunda tek bir teslimat. Bu fazın
+kurduğu şey — bir path'in *küratörlü bir seçki* olması — capstone'un rubric
+kuralını da belirledi: rubric yalnız o path'in adımlarını alıntılayabiliyor.
+Yani path capstone'u bu fazın üstüne kurulmakla kalmadı, kapsamını da bu
+fazdan aldı.
+
+Değişmez #4 hâlâ yerinde: capstone bir teslimat, bir tamamlama değil — tik
+yok, yüzde yok, `progress.store.ts` P43'te de değişmedi.

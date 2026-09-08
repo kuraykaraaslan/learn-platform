@@ -7,7 +7,7 @@ import { BRACKET_LABELS, type DeveloperPath } from '../course_content.types';
 // there is no completion state, no tick, no "n of m" (invariant #4). The
 // number is the reading position, the same way the course-overview list is
 // numbered.
-export function PathPage({ path }: { path: DeveloperPath }) {
+export function PathPage({ path, hasCapstone = false }: { path: DeveloperPath; hasCapstone?: boolean }) {
   return (
     <div className="mx-auto max-w-3xl">
       <nav className="mb-4 text-xs text-text-secondary" aria-label="Breadcrumb">
@@ -51,6 +51,21 @@ export function PathPage({ path }: { path: DeveloperPath }) {
           </section>
         ))}
       </div>
+
+      {/* P43: only where content/paths/<id>/capstone.md exists. It sits after
+          the last step rather than beside the title, because unlike a course's
+          capstone this one measures the whole reading order above it. */}
+      {hasCapstone && (
+        <Link
+          href={`/paths/${path.id}/capstone`}
+          className="mt-8 block rounded-lg border border-border bg-surface-raised px-4 py-3 transition-colors hover:bg-surface-overlay"
+        >
+          <span className="text-sm font-medium text-text-primary">Capstone</span>
+          <span className="mt-1 block text-xs text-text-secondary">
+            One deliverable that spans every course above.
+          </span>
+        </Link>
+      )}
     </div>
   );
 }

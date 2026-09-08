@@ -101,5 +101,21 @@ da yok.
 | Aday | Ne getirir | Neden şimdi değil |
 |---|---|---|
 | Alan (`built-environment`) capstone'u | P22'nin ertelediği kalem | kapsam — capstone bugün kurs başına; sekiz kursu birleştiren teslimat farklı bir mekanizma |
-| Path capstone'u | Beş path'in kendi teslimatı | kapsam — P23'ün tablosunda duruyor ve capstone'a bağlıydı; artık mümkün ama ayrı bir karar |
 | Capstone sayfasında rubric satırının dersine bağlantı | Okuyucunun maddeyi okuyabilmesi | kapsam — satır ders numarasını gösteriyor; bağlantı ayrı bir UI kararı (P36'nın tablosunda da duruyor) |
+
+## Ek — path capstone'u tabloyu terk etti (2026-09)
+
+*"Beş path'in kendi teslimatı — artık mümkün ama ayrı bir karar."* Karar
+[P43](43-path-capstone.md)'te verildi: evet, ve **bir** path'te.
+
+"Ayrı bir karar" nitelemesi doğru çıktı, çünkü mekanizma göründüğünden fazlasını
+gerektirdi — capstone'a ikinci bir ev (`content/paths/<id>/capstone.md`),
+lint'e üçüncü bir kanca (`global`, çünkü path bir kurs değil) ve arama kaydına
+`href`. Beşi birden yapılsaydı bunların üçü de tek bir path'te sınanmadan
+yayılırdı; P6/P31/P39'un usulü izlendi ve kalan dört path yeni bir aday olarak
+P43'ün tablosunda duruyor.
+
+Bu tablonun "Alan (`built-environment`) capstone'u" satırı **kalıyor** ama
+gerekçesi değişti: path capstone'u o ihtiyacın büyük kısmını karşıladığı için
+soru artık "mümkün mü" değil, "dal capstone'u ayrıca gerekli mi" — ölçülmeden
+verilecek bir karar değil.

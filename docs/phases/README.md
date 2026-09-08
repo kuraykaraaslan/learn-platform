@@ -73,6 +73,7 @@ P39 üçüncü capstone      ← P34..P36 (`security`: inşa etmek değil incele
 P40 doğrulanamaz dil kapısı ← P16, P22 (sayaç, kapısı olmadığı için saymayı bırakmıştı)
 P41 dördüncü capstone    ← P35, P39 (koşturulacak hiçbir şeyin olmadığı yerde referans)
 P42 beşinci capstone     ← P36, P41 (en riskli alan; T2.4'ün beş kursu tamam)
+P43 path capstone'u      ← P23, P30, P34-P36, P42 (kurs sınırını aşan ilk teslimat)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -120,6 +121,7 @@ P42 beşinci capstone     ← P36, P41 (en riskli alan; T2.4'ün beş kursu tama
 | P40 | [40-unverified-language-gate.md](40-unverified-language-gate.md) | ~1 gün | tamamlandı — P22'nin "terfi backlog'a takılı" kaydı ölçüldü ve backlog'un **kalıcı** olduğu bulundu (9 C# + 10 Java, ikisi de tasarım). Kural artık hem sayaç hem kapı: kabul edilen iki dil `warn`, listede olmayan her dil **error**; `csharp` fence satırı stats'a eklendi |
 | P41 | [41-business-capstone.md](41-business-capstone.md) | ~2 gün | tamamlandı — dördüncü capstone (`business-finance-solo-ops`), **koşturulacak hiçbir şeyin olmadığı ilk capstone**: `proof` yok ve bu P35'in kuralının gereği. Brief'teki her rakam kurgunun kendisine ait, dış olgu iddiası yok |
 | P42 | [42-contracts-capstone.md](42-contracts-capstone.md) | ~2 gün | tamamlandı — beşinci capstone (`contracts-pricing-legal`) ve **yol haritasının T2.4'ü tamamlandı**. En riskli alan: ölçüm 33 dersin 31'inin doğrulanmış ve ticari olduğunu, denylist'teki ikisinin tam da avukat isteyenler olduğunu gösterdi. Şekil "gitmeden önce incele", sorumluluk reddi brief'in ilk bloğunda |
+| P43 | [43-path-capstone.md](43-path-capstone.md) | ~3 gün | tamamlandı — **kurs sınırını aşan ilk capstone**: `operations-engineer` path'inin 16 adımı dört kurstan geliyor ve rubric'in altı satırı da o adımlardan, dört ayrı kurstan. Capstone'un ikinci evi `content/paths/<id>/capstone.md`; aynı parser, aynı UI. Rubric'in kapsamı kurs değil **path'in adımları** — daha gevşek değil daha keskin bir kural. P38'in ertelediği `SearchRecord.href` geldi (indeks 567 → **568 kayıt**, `lessonSlug` düştü); lint'e `global` kancası ve iki path kuralı eklendi |
 
 ## Ölçülen zemin
 
