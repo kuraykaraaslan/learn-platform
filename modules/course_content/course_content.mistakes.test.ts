@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { parseMistakes } from './course_content.mistakes';
+import { parseMistakes, splitBulletItems } from './course_content.mistakes';
 import { listCourseSlugs, readCourseManifest, readLessonMarkdown } from './course_content.manifest';
 import { splitLessonSections } from './course_content.parser';
 
@@ -83,8 +83,19 @@ describe('parseMistakes across the corpus', () => {
       for (const item of readCourseManifest(courseSlug).items) {
         const raw = readLessonMarkdown(courseSlug, item.file);
         const { sections } = splitLessonSections(raw);
+        // Counted with an independent, deliberately naive fence toggle rather
+        // than by calling splitBulletItems — the point of this assertion is
+        // that two different readings of the section agree, and reusing the
+        // implementation would make it agree with itself. P44 added the
+        // corpus's first fence inside Common Mistakes, whose YAML entries look
+        // like bullets and are not.
+        let inFence = false;
         for (const line of sections.commonMistakes.split('\n')) {
-          if (/^-\s+/.test(line)) rawBulletLines++;
+          if (/^\s*```/.test(line)) {
+            inFence = !inFence;
+            continue;
+          }
+          if (!inFence && /^-\s+/.test(line)) rawBulletLines++;
         }
         const mistakes = parseMistakes(sections.commonMistakes);
         parsedItems += mistakes.length;
@@ -102,5 +113,35 @@ describe('parseMistakes across the corpus', () => {
     // bounds. The floor still catches a real regression: parseMistakes
     // suddenly classifying almost nothing as drillable.
     expect(drillable / parsedItems).toBeGreaterThan(0.35);
+  });
+});
+
+describe('splitBulletItems and fenced blocks', () => {
+  it('skips a fenced block, so a `breaks` fence inside Common Mistakes is not four bullets', () => {
+    // P44 put the first fence into this section. Its YAML entries begin
+    // "- symptom:", which is a bullet by syntax and nothing of the sort;
+    // without the fence skip the two pilot lessons added four phantom Common
+    // Mistakes items to the corpus counts, the drill total and the pool P36's
+    // rubric leads are quoted from. Measured, then fixed.
+    const items = splitBulletItems(
+      [
+        '- **A real mistake** — with a real body',
+        '',
+        '```breaks',
+        'entries:',
+        '  - symptom: "not a bullet"',
+        '    knob: "nor this"',
+        '  - symptom: "also not a bullet"',
+        '```',
+      ].join('\n')
+    );
+    expect(items).toEqual(['**A real mistake** — with a real body']);
+  });
+
+  it('closes a fence only on a run of at least as many backticks as opened it', () => {
+    const items = splitBulletItems(
+      ['````md', '```', '- inside the outer fence', '```', '````', '- outside'].join('\n')
+    );
+    expect(items).toEqual(['outside']);
   });
 });

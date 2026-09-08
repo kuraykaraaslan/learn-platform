@@ -572,7 +572,7 @@
         "frontend-performance-scaling/28_horizontal_scaling_stateless_design.md",
         "fundamentals-tools/133_networking_fundamentals.md"
       ],
-      "rawOccurrences": 28
+      "rawOccurrences": 29
     },
     {
       "slug": "constant-time-comparison",
@@ -1038,7 +1038,7 @@
       "slug": "index-only-scan",
       "term": "Index Only Scan",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 4
+      "rawOccurrences": 5
     },
     {
       "slug": "integration-contract",
@@ -1188,7 +1188,7 @@
       "slug": "partial-index",
       "term": "Partial index",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 7
+      "rawOccurrences": 9
     },
     {
       "slug": "password-hashing",
@@ -1493,7 +1493,7 @@
       "lessonsLinkedIn": [
         "database-caching-performance/18_query_plan_analysis.md"
       ],
-      "rawOccurrences": 8
+      "rawOccurrences": 11
     },
     {
       "slug": "shallow-size",

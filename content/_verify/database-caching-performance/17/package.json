@@ -1,0 +1,8 @@
+{
+  "name": "verify-database-caching-performance-17",
+  "private": true,
+  "description": "Puts two of lesson 17's index claims to a real PostgreSQL: that a partial index predicate calling NOW() creates a snapshot condition (it is rejected outright), and that a composite index cannot serve a query filtering on its non-leading column (this version does serve it, at a cost the plan names). Deterministic: fixed rows, no clock, no random, plan timings and buffers off.",
+  "scripts": {
+    "verify": "node indexes.js"
+  }
+}

@@ -18,6 +18,7 @@ import { PredictOutputCard } from './PredictOutputCard';
 import { QuizCard } from './QuizCard';
 import { TradeoffCard } from './TradeoffCard';
 import { NumbersCard } from './NumbersCard';
+import { BreaksCard } from './widgets/BreaksCard';
 import { DiffCard } from './DiffCard';
 import { RecallCard } from './widgets/RecallCard';
 import { CalcCard } from './widgets/CalcCard';
@@ -115,6 +116,11 @@ function BlockView({
         // generated claim, and every value in it links to what publishes it.
         case 'numbers':
           return <NumbersCard widget={block.widget} />;
+        // Gated on `verified` like QuizCard/RecallCard: a diagnosis is an
+        // exercise, and invariant #3 does not let one sit on unverified
+        // content. The card returns null rather than a placeholder.
+        case 'breaks':
+          return <BreaksCard widget={block.widget} verified={verified} />;
         case 'diff':
           return <DiffCard widget={block.widget} />;
         case 'recall':

@@ -1,0 +1,8 @@
+{
+  "name": "verify-database-caching-performance-18",
+  "private": true,
+  "description": "Reads two plans for the same hour of data out of a real PostgreSQL: one written as a range on the indexed column, one wrapping that column in date_trunc. Also shows pg_class.reltuples before and after ANALYZE. TIMING/COSTS off and timezone pinned to UTC so the output is byte-identical between runs.",
+  "scripts": {
+    "verify": "node plans.js"
+  }
+}

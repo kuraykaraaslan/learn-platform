@@ -3,7 +3,7 @@
 ## What It Is
 An index is a separate data structure (typically a B-tree) that PostgreSQL maintains alongside your table, allowing it to find rows matching a condition without scanning every row. Indexes trade write overhead (every INSERT/UPDATE/DELETE must update all relevant indexes) and storage for faster reads. Choosing which indexes to create — and which not to — is one of the highest-leverage performance decisions in a database-backed application.
 
-A **composite index** is an index on multiple columns in a defined order. The leading column rule determines its usefulness: an index on `(tenant_id, created_at)` can be used for queries filtering on `tenant_id` alone, or on `(tenant_id, created_at)` together — but not for queries filtering on `created_at` alone. Column order in composite indexes mirrors column order in WHERE clauses; put the most selective column first if queries filter on it alone.
+A **composite index** is an index on multiple columns in a defined order, and the order decides how cheaply it serves a query. An index on `(tenant_id, created_at)` serves a filter on `tenant_id` alone, or on both together, by descending into the part of the tree that filter names. A filter on `created_at` alone names nothing at the top of the tree — and what happens then is version-dependent, which is the part usually stated as an absolute. PostgreSQL 18 will still use such an index, skipping across the leading values; the proof below shows it doing so, and shows the cost in the plan's `Index Searches` count. Older versions would not use it at all. Either way the advice is the same and the reason is now a measured one rather than a rule: put the column that appears alone in the most WHERE clauses first.
 
 A **covering index** includes all columns needed to satisfy a query — both the filter columns and the SELECT columns — allowing PostgreSQL to return results directly from the index without touching the main table (an "index-only scan"). This eliminates the heap fetch step and can dramatically speed up read-heavy queries. A **partial index** indexes only a subset of rows matching a condition (`WHERE status = 'active'`). If 90% of your `user_sessions` rows are expired, a partial index `WHERE expires_at > now()` covers the 10% you actually query, is smaller, and is faster to maintain.
 
@@ -132,6 +132,55 @@ SELECT role, status FROM tenant_members WHERE tenant_id = 42;
 
 Look for `Index Only Scan` and `Heap Fetches: 0` in that last plan — PostgreSQL answered the query entirely from the index, without touching `tenant_members` itself. Before `VACUUM` ran, the same query would still use the index but couldn't claim `Heap Fetches: 0`: the visibility map (which rows are guaranteed visible to every transaction) is only current after a vacuum, and without it Postgres still has to check the heap.
 
+Two of this lesson's claims are about what the planner will refuse and what it
+will accept, which is not something an author is entitled to simply state. They
+are run instead, on the same PostgreSQL build the fences above use, on every
+commit:
+
+```proof sha=d339b6f38476843c at=2026-09-08 commit=fc21918
+$ node indexes.js
+PostgreSQL 18.3 (PGlite, the same build the lesson's run buttons use)
+
+1. A partial index whose predicate calls now().
+
+   $ CREATE INDEX ... ON user_sessions (tenant_id) WHERE expires_at > NOW();
+   ERROR:  functions in index predicate must be marked IMMUTABLE
+
+   There is no snapshot-at-creation-time behaviour to reason about, because
+   the statement does not execute. A partial index predicate must be IMMUTABLE,
+   and now() is STABLE. The fix is a real cutoff value, not a call:
+   WHERE expires_at > timestamptz '2026-03-01 00:00:00+00'  -> accepted
+   index 376 kB against a 2944 kB table
+
+2. The leading column rule, on a composite index (status, tenant_id).
+
+   filtering on tenant_id alone — the NON-leading column:
+     Aggregate (actual rows=1.00 loops=1)
+       ->  Bitmap Heap Scan on user_sessions (actual rows=500.00 loops=1)
+             Recheck Cond: (tenant_id = 42)
+             Heap Blocks: exact=368
+             ->  Bitmap Index Scan on sessions_status_tenant_idx (actual rows=500.00 loops=1)
+                   Index Cond: (tenant_id = 42)
+                   Index Searches: 5
+
+   The index is used. It is not free, and the plan says where the cost went:
+   "Index Searches" counts how many separate descents the scan had to make,
+   because the filter does not constrain the leading column. Compare an index
+   whose leading column IS the filter:
+     Aggregate (actual rows=1.00 loops=1)
+       ->  Bitmap Heap Scan on user_sessions (actual rows=500.00 loops=1)
+             Recheck Cond: (tenant_id = 42)
+             Heap Blocks: exact=368
+             ->  Bitmap Index Scan on sessions_tenant_idx (actual rows=500.00 loops=1)
+                   Index Cond: (tenant_id = 42)
+                   Index Searches: 1
+
+   One search instead of several. That difference is what the leading column
+   rule is actually about.
+   The rule survives as advice about column order; it does not survive as a
+   statement about what this version of the planner is capable of.
+```
+
 ## When to Use
 - Any query that filters on `tenantId` + one or more additional columns — these are your most common queries in a multi-tenant app and the first place to apply composite indexes
 - Listing endpoints with `ORDER BY created_at DESC LIMIT N` — the sort column must be the trailing column in the index
@@ -140,9 +189,56 @@ Look for `Index Only Scan` and `Heap Fetches: 0` in that last plan — PostgreSQ
 
 ## Common Mistakes
 - **Over-indexing**: Every index slows down writes; tables with 8 indexes on 10 columns are common in over-indexed apps; index based on actual query plans, not hypothetical ones
-- **Wrong composite column order**: An index on `(status, tenant_id)` won't help a query that only filters on `tenant_id`; put the column appearing in the most standalone WHERE clauses first
-- **Partial indexes with functions**: `WHERE expires_at > NOW()` creates a partial index with a snapshot condition at creation time — it doesn't dynamically filter; for time-based partial indexes, use explicit cutoff columns or accept the index covers the full table
+- **Wrong composite column order**: An index on `(status, tenant_id)` serves a query filtering on `tenant_id` alone far more expensively than one on `(tenant_id, ...)` would — and on PostgreSQL versions before skip scan, not at all; put the column appearing in the most standalone WHERE clauses first
+- **Partial indexes with functions**: `WHERE expires_at > NOW()` does not create a snapshot condition — it is **rejected outright** (`functions in index predicate must be marked IMMUTABLE`), because `now()` is `STABLE`; there is no creation-time behaviour to reason about, so use an explicit cutoff value, an explicit cutoff column, or accept an index over the full table
 - **Not using `CREATE INDEX CONCURRENTLY`**: Creating an index without `CONCURRENTLY` takes a write lock on the table, blocking all writes for the duration; always use `CONCURRENTLY` for indexes on production tables
+
+```breaks
+caption: The index is there and the query is still slow. Write down what you would check before you look.
+entries:
+  - symptom: >-
+      A tenant-scoped count over 50,000 rows runs several times slower than the
+      same count in a sibling service. Both have a composite index that
+      contains `tenant_id`, and `EXPLAIN` shows the index being used in both.
+    instinct: >-
+      The index is being used, so indexing is not the problem — go and look at
+      the connection pool or the application code.
+    look: EXPLAIN (ANALYZE, TIMING OFF, SUMMARY OFF, COSTS OFF, BUFFERS OFF) SELECT count(*) FROM user_sessions WHERE tenant_id = 42;
+    see: |-
+      ->  Bitmap Index Scan on sessions_status_tenant_idx (actual rows=500.00 loops=1)
+            Index Cond: (tenant_id = 42)
+            Index Searches: 5
+    why: >-
+      "Used" and "used well" are different plan facts. `tenant_id` is the
+      second column of `(status, tenant_id)`, so the filter constrains nothing
+      at the top of the tree and the scan has to make a separate descent for
+      each leading value it skips over. `Index Searches` is where that shows up
+      — the sibling service's index leads with `tenant_id` and reports 1.
+    knob: >-
+      Column order. An index leading with the column that appears alone in the
+      most WHERE clauses; the `Index Searches` count is how you confirm the new
+      one is doing what you expected rather than merely being listed.
+  - symptom: >-
+      A migration that adds a partial index for live sessions fails on all 3
+      environments, including a staging database where the table has 0 rows.
+    instinct: >-
+      A permissions or locking problem — the table is busy, or the migration
+      user cannot create indexes.
+    look: CREATE INDEX ... ON user_sessions (tenant_id) WHERE expires_at > NOW();
+    see: |-
+      ERROR:  functions in index predicate must be marked IMMUTABLE
+    why: >-
+      An index predicate is evaluated once per row at write time and must give
+      the same answer forever, so PostgreSQL only accepts `IMMUTABLE`
+      functions in it. `now()` is `STABLE`. The statement never runs, which
+      means the widely-repeated "it snapshots the condition at creation time"
+      describes behaviour that does not exist.
+    knob: >-
+      A literal cutoff (`WHERE expires_at > timestamptz '2026-03-01
+      00:00:00+00'`), reindexed on a schedule; or a boolean column the
+      application maintains. Both are IMMUTABLE predicates, and both make the
+      staleness explicit instead of imagined.
+```
 
 ## Further Reading
 - **PostgreSQL documentation — "Indexes"** — Chapters 11–12 in the official docs; covers B-tree, partial, covering, and multicolumn indexes with examples

@@ -30,8 +30,19 @@ const PATTERNS: { form: MistakeForm; re: RegExp }[] = [
 /**
  * Splits a Common Mistakes section's raw markdown into top-level `- ` bullets,
  * joining a wrapped item's continuation lines into one string. Safe at line
- * level because the corpus has zero nested bullets and zero fences inside
- * this section (measured across all 412 lessons).
+ * level because the corpus has zero nested bullets in this section.
+ *
+ * Fenced blocks are skipped. That was not needed until P44 put a `breaks`
+ * fence inside Common Mistakes: its YAML entries begin `- symptom:`, which is
+ * a bullet by syntax and nothing of the sort, and without this the four
+ * entries of the two pilot lessons appeared as four extra Common Mistakes
+ * items — inflating the corpus counts, the drill total, and the pool P36's
+ * rubric leads are quoted from. Same hazard rules.ts's `bullets()` helper
+ * already documents for a trailing `recall` fence in Further Reading.
+ *
+ * A fence closes only on a run of at least as many backticks as opened it
+ * (CommonMark), so a four-backtick block wrapping three-backtick ones does not
+ * put the scan out of phase — the same rule walkLines() follows.
  */
 /** Exported for course_content.cheatsheet.ts, which has to split the Key
  *  Concepts bullets by exactly the same rule this file splits Common
@@ -46,7 +57,20 @@ export function splitBulletItems(markdown: string): string[] {
     current = null;
   };
 
+  let openTicks = 0;
   for (const line of markdown.split('\n')) {
+    const fence = /^\s*(`{3,})/.exec(line);
+    if (fence) {
+      if (openTicks === 0) {
+        flush();
+        openTicks = fence[1].length;
+      } else if (fence[1].length >= openTicks && /^\s*`+\s*$/.test(line)) {
+        openTicks = 0;
+      }
+      continue;
+    }
+    if (openTicks > 0) continue;
+
     const bullet = /^\s*[-*]\s+(.*)$/.exec(line);
     if (bullet) {
       flush();

@@ -2682,20 +2682,20 @@
       },
       "17_database_index_strategy.md": {
         "title": "a551e2011d930ae8",
-        "whatItIs": "4d211ec115e245dc",
+        "whatItIs": "0ed1f7f7ba03f55d",
         "keyConcepts": "5082caae94374ad3",
-        "exampleCode": "00b916a022b78414",
+        "exampleCode": "d97403512207a781",
         "whenToUse": "c681da75fa0894ef",
-        "commonMistakes": "5e3691d2149ea4c6",
+        "commonMistakes": "0905dcb348f89fea",
         "furtherReading": "699f0e3445cc93c8"
       },
       "18_query_plan_analysis.md": {
         "title": "4422a6d89ccfe51b",
         "whatItIs": "66cc1a7c9f6a3c21",
         "keyConcepts": "3f1de94ac68f4831",
-        "exampleCode": "c30e5edd8ae5b90f",
+        "exampleCode": "52a30e6be1790968",
         "whenToUse": "085f93aed425acb2",
-        "commonMistakes": "a7c179d851afcaf4",
+        "commonMistakes": "76281e6a3e549773",
         "furtherReading": "f5c2deef1d7a7de7"
       },
       "19_connection_pool_tuning.md": {

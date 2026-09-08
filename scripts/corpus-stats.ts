@@ -107,7 +107,7 @@ const lessonsBy = (p: (f: (typeof fences)[number]) => boolean) =>
   new Set(fences.filter(p).map((f) => `${f.courseSlug}/${f.file}`)).size;
 
 const widgets: Record<string, [string, string]> = {};
-for (const w of ['quiz', 'recall', 'mermaid', 'tradeoff', 'calc', 'proof', 'spatial', 'numbers'])
+for (const w of ['quiz', 'recall', 'mermaid', 'tradeoff', 'calc', 'proof', 'spatial', 'numbers', 'breaks'])
   widgets[`\`${w}\``] = [String(lang(w)), String(lessonsWith(w))];
 widgets['`run` (toplam)'] = [String(countBy(isRun)), String(lessonsBy(isRun))];
 widgets['— `sql run`'] = [String(countBy((f) => isRun(f) && f.lang === 'sql')), ''];

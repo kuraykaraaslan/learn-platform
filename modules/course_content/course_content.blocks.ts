@@ -5,6 +5,7 @@ import { parseTemplate, parseChecklist, looksLikeChecklist, type TemplateWidget,
 import { parseQuiz, type QuizWidget } from './course_content.quiz';
 import { parseTradeoff, type TradeoffWidget } from './course_content.tradeoff';
 import { parseNumbers, type NumbersWidget } from './course_content.numbers';
+import { parseBreaks, type BreaksWidget } from './course_content.breaks';
 import { looksLikeDiff, parseDiff, type DiffWidget } from './course_content.diff';
 import { parseRecall, type RecallWidget } from './course_content.recall';
 import { parseCalc, type CalcWidget } from './course_content.calc';
@@ -17,6 +18,7 @@ export type { TemplateWidget, ChecklistWidget } from './course_content.templates
 export type { QuizWidget, QuizQuestion, QuizOption } from './course_content.quiz';
 export type { TradeoffWidget } from './course_content.tradeoff';
 export type { NumbersWidget } from './course_content.numbers';
+export type { BreaksWidget, BreaksEntry } from './course_content.breaks';
 export type { DiffWidget } from './course_content.diff';
 export type { RecallWidget, RecallItem } from './course_content.recall';
 export type { CalcWidget, CalcInput, CalcOutput } from './course_content.calc';
@@ -33,7 +35,8 @@ export type LessonWidget =
   | RecallWidget
   | CalcWidget
   | SpatialWidget
-  | NumbersWidget;
+  | NumbersWidget
+  | BreaksWidget;
 
 declare module 'hast' {
   interface Data {
@@ -122,6 +125,7 @@ export function splitBlocks(root: HastRoot, sectionKey: keyof LessonSections): L
     else if (lang === 'quiz') widget = parseQuiz(source);
     else if (lang === 'tradeoff') widget = parseTradeoff(source);
     else if (lang === 'numbers') widget = parseNumbers(source);
+    else if (lang === 'breaks') widget = parseBreaks(source);
     else if (lang === 'recall') widget = parseRecall(source);
     else if (lang === 'calc') widget = parseCalc(source);
     else if (lang === 'spatial') widget = parseSpatial(source);

@@ -74,6 +74,7 @@ P40 doğrulanamaz dil kapısı ← P16, P22 (sayaç, kapısı olmadığı için 
 P41 dördüncü capstone    ← P35, P39 (koşturulacak hiçbir şeyin olmadığı yerde referans)
 P42 beşinci capstone     ← P36, P41 (en riskli alan; T2.4'ün beş kursu tamam)
 P43 path capstone'u      ← P23, P30, P34-P36, P42 (kurs sınırını aşan ilk teslimat)
+P44 how it breaks        ← P1, P5, P10, P31, P35, P36 (yol haritasının T2.6'sı: teşhis, `see:` kanıttan alıntı)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -122,6 +123,7 @@ P43 path capstone'u      ← P23, P30, P34-P36, P42 (kurs sınırını aşan ilk
 | P41 | [41-business-capstone.md](41-business-capstone.md) | ~2 gün | tamamlandı — dördüncü capstone (`business-finance-solo-ops`), **koşturulacak hiçbir şeyin olmadığı ilk capstone**: `proof` yok ve bu P35'in kuralının gereği. Brief'teki her rakam kurgunun kendisine ait, dış olgu iddiası yok |
 | P42 | [42-contracts-capstone.md](42-contracts-capstone.md) | ~2 gün | tamamlandı — beşinci capstone (`contracts-pricing-legal`) ve **yol haritasının T2.4'ü tamamlandı**. En riskli alan: ölçüm 33 dersin 31'inin doğrulanmış ve ticari olduğunu, denylist'teki ikisinin tam da avukat isteyenler olduğunu gösterdi. Şekil "gitmeden önce incele", sorumluluk reddi brief'in ilk bloğunda |
 | P43 | [43-path-capstone.md](43-path-capstone.md) | ~3 gün | tamamlandı — **kurs sınırını aşan ilk capstone**: `operations-engineer` path'inin 16 adımı dört kurstan geliyor ve rubric'in altı satırı da o adımlardan, dört ayrı kurstan. Capstone'un ikinci evi `content/paths/<id>/capstone.md`; aynı parser, aynı UI. Rubric'in kapsamı kurs değil **path'in adımları** — daha gevşek değil daha keskin bir kural. P38'in ertelediği `SearchRecord.href` geldi (indeks 567 → **568 kayıt**, `lessonSlug` düştü); lint'e `global` kancası ve iki path kuralı eklendi |
+| P44 | [44-how-it-breaks.md](44-how-it-breaks.md) | ~3 gün | tamamlandı — yol haritasının T2.6'sı: `breaks` widget'ı (predict-then-reveal, `## Common Mistakes` içinde fence), iki pilot ders (`database-caching-performance/#17`, `#18`), her biri damgalanmış bir `proof` + ondan alıntılayan `breaks` (`proof` 32 → 34). Dört `error`-doğan lint kuralı: `see:`in her satırı aynı dersteki bir `proof` gövdesinde birebir geçiyor (`breaks/see-not-proven`), doğrulanmamış derste yok, ≤3 girdi, semptomda sayı zorunlu. `splitBulletItems` artık fence atlıyor — `single` 141'de sabit, `breaks` korpusa 0 mistake ekledi |
 
 ## Ölçülen zemin
 
@@ -134,7 +136,7 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 | Ölçüm | P0 zemini | Bugün |
 |---|---:|---:|
 | Ders / kurs / bölüm | 412 / 23 / 2473 | 562 / 36 / **3372** |
-| Fence | 505 | 1470 |
+| Fence | 505 | 1474 |
 | Yalnız kod fence'i olan ders | 179 | 67 |
 | Yalnız şablon fence'i olan ders | 211 | 138 |
 | Hiç fence'i olmayan ders | 0 | 1 |
@@ -229,12 +231,13 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 | `tradeoff` | 24 | 24 |
 | `calc` | 21 | 21 |
 | `spatial` | 6 | 6 |
-| `proof` | 32 | 32 |
+| `proof` | 34 | 34 |
 | `run` (toplam) | 158 | 107 |
 | — `sql run` | 82 | |
 | — JS/TS `run` | 73 | |
 | — `run project` | 3 | |
 | `numbers` | 9 | 9 |
+| `breaks` | 2 | 2 |
 | `diff` | 5 | 5 |
 
 Her kurs en az bir `quiz` ve bir `recall` taşıyor.

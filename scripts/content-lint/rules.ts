@@ -13,6 +13,7 @@ import { RUNNABLE_LANGS } from '../../modules/course_content/course_content.tran
 import { MAX_SEED_BYTES } from '../../modules/course_content/course_content.seeds';
 import { parseQuiz } from '../../modules/course_content/course_content.quiz';
 import { parseNumbers, claimsPublishedDefault, hasMeasurement } from '../../modules/course_content/course_content.numbers';
+import { parseBreaks, provableLines, symptomHasNumber } from '../../modules/course_content/course_content.breaks';
 import { hasCapstone, hasPathCapstone, listCapstoneProofFences, loadCapstone, loadPathCapstone } from '../../modules/course_content/course_content.capstone';
 import { DEVELOPER_PATHS } from '../../modules/course_content/course_content.paths';
 import { parseMistakes } from '../../modules/course_content/course_content.mistakes';
@@ -221,6 +222,23 @@ function loadPathCapstoneOrReport(
     });
     return null;
   }
+}
+
+/** Every `breaks` fence in a lesson, already parsed, with the fence's line so a
+ *  finding can point at it. A malformed payload is reported by
+ *  widget/invalid-payload, so it is skipped rather than thrown here — one bad
+ *  fence should not stop the other rules from reporting on the same lesson. */
+function breaksFences(file: LessonFile): { widget: ReturnType<typeof parseBreaks>; line: number }[] {
+  const out: { widget: ReturnType<typeof parseBreaks>; line: number }[] = [];
+  for (const fence of file.fences) {
+    if (fence.lang !== 'breaks') continue;
+    try {
+      out.push({ widget: parseBreaks(fence.code), line: fence.line });
+    } catch {
+      // breaks/invalid-payload's problem.
+    }
+  }
+  return out;
 }
 
 export const RULES: Rule[] = [
@@ -805,6 +823,107 @@ export const RULES: Rule[] = [
           }
           return findings;
         }),
+  },
+  {
+    id: 'breaks/invalid-payload',
+    severity: 'error',
+    description:
+      "A `breaks` fence course_content.breaks.ts's zod schema rejects — zero or more than three entries, a missing beat, or unparseable YAML. The three-entry cap is the roadmap's own (docs/investigate/04-roadmap.md, T2.6: \"at most 3 entries per lesson\"); a fourth is a sign the lesson is carrying two subjects. Same shape as recall/invalid-payload and spatial/invalid-payload, and it exists for the same reason: without it a malformed fence surfaces only as a crash inside the corpus parse-snapshot test, which names the assertion rather than the fence.",
+    lesson: (file) =>
+      file.fences
+        .filter((f) => f.lang === 'breaks')
+        .flatMap((f) => {
+          try {
+            parseBreaks(f.code);
+            return [];
+          } catch (error) {
+            return [
+              {
+                rule: 'breaks/invalid-payload',
+                severity: 'error' as const,
+                target: file.target,
+                line: f.line,
+                message: `breaks fence failed validation: ${error instanceof Error ? error.message : String(error)}`,
+              },
+            ];
+          }
+        }),
+  },
+  {
+    id: 'breaks/see-not-proven',
+    severity: 'error',
+    description:
+      "A `breaks` entry's `see:` block contains a line that does not appear in any `proof` fence in the same lesson. This is the rule the whole of docs/phases/44-how-it-breaks.md stands on. The roadmap's T2.6 was deferred for one reason — \"a hallucinated psql output is indistinguishable from a real one\" — and its mechanical condition was that no such section publishes without a runnable repro. A `proof` body is the only text in this corpus nobody types (scripts/stamp-verify.ts is its only writer, and verify/hand-edited-output fails the build the moment a byte of one stops matching its own sha), so quoting one verbatim is what makes an authored diagnosis carry unauthored output. Same contract as P36's rubric leads, one level down.",
+    lesson: (file) => {
+      const findings: Finding[] = [];
+      const fences = breaksFences(file);
+      if (fences.length === 0) return findings;
+
+      const proven = new Set<string>();
+      for (const fence of file.fences) {
+        if (fence.lang !== 'proof') continue;
+        for (const line of fence.code.split('\n')) proven.add(line.trim());
+      }
+
+      for (const { widget, line } of fences) {
+        for (const entry of widget.entries) {
+          for (const seeLine of provableLines(entry.see)) {
+            if (!proven.has(seeLine)) {
+              findings.push({
+                rule: 'breaks/see-not-proven',
+                severity: 'error',
+                target: file.target,
+                line,
+                message:
+                  proven.size === 0
+                    ? `a \`breaks\` entry shows output but this lesson has no \`proof\` fence to have produced it: "${seeLine}"`
+                    : `this line is in no \`proof\` fence in this lesson, so nothing ran it: "${seeLine}"`,
+              });
+            }
+          }
+        }
+      }
+      return findings;
+    },
+  },
+  {
+    id: 'breaks/on-unverified-lesson',
+    severity: 'error',
+    description:
+      'A `breaks` fence sits on a lesson that is not `verified: true`. Invariant #3: no exercise on an unverified lesson. A diagnosis is an exercise — the reader commits to one before anything opens — and stamp-verified.ts states the reason such a fence inherits the correctness of what it sits on. Same stopping rule QuizCard and RecallCard already enforce at render time; this is the build-time half.',
+    lesson: (file) =>
+      file.verified === true || breaksFences(file).length === 0
+        ? []
+        : breaksFences(file).map(({ line }) => ({
+            rule: 'breaks/on-unverified-lesson',
+            severity: 'error' as const,
+            target: file.target,
+            line,
+            message: 'a `breaks` fence is an exercise and this lesson is not verified',
+          })),
+  },
+  {
+    id: 'breaks/symptom-without-a-number',
+    severity: 'error',
+    description:
+      "A `breaks` entry's `symptom` carries no figure. The roadmap's wording for this beat is \"what a human reported, with a number\", and the number is not decoration: \"it got slow\" is the vague report this section exists to replace, while \"20 ms last quarter, seconds now\" is a thing that can be compared against what the plan says. Kept as a schema-adjacent rule rather than a zod constraint so a violation reads as one sentence instead of a stack.",
+    lesson: (file) => {
+      const findings: Finding[] = [];
+      for (const { widget, line } of breaksFences(file)) {
+        for (const entry of widget.entries) {
+          if (!symptomHasNumber(entry.symptom)) {
+            findings.push({
+              rule: 'breaks/symptom-without-a-number',
+              severity: 'error',
+              target: file.target,
+              line,
+              message: `symptom has no figure in it: "${entry.symptom.slice(0, 70)}…"`,
+            });
+          }
+        }
+      }
+      return findings;
+    },
   },
   {
     id: 'capstone/path-rubric-off-path',
