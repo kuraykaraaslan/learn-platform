@@ -60,8 +60,8 @@ comes from your accountant, not from this page.
 ```calc
 inputs:
   - { id: invoice,  label: "Invoice amount to a US client (USD)", type: number, default: 5000, min: 0, step: 100 }
-  - { id: default_rate, label: "Default withholding with no W-8BEN on file (%)", type: number, default: 30, min: 0 }
-  - { id: treaty_rate,  label: "Your treaty withholding rate (%)", type: number, default: 0, min: 0 }
+  - { id: default_rate, label: "Withholding with no form on file (%) — an illustration; check the rate that applies to you", type: number, default: 30, min: 0 }
+  - { id: treaty_rate,  label: "Your treaty rate (%) — from your own treaty and your own check, not from this page", type: number, default: 0, min: 0 }
 outputs:
   - { label: "You receive, no form on file", expr: "invoice * (1 - default_rate / 100)", format: usd }
   - { label: "You receive, form on file",    expr: "invoice * (1 - treaty_rate / 100)", format: usd }
