@@ -6,8 +6,8 @@
     "neverMatched": 0,
     "neverLinked": 29,
     "neverLinkedByCause": {
-      "own-lesson-only": 13,
-      "code-only": 15,
+      "own-lesson-only": 12,
+      "code-only": 16,
       "shadowed": 0,
       "case-mismatch": 0,
       "cap-starved": 1,
@@ -216,10 +216,12 @@
     {
       "slug": "readiness-probe",
       "term": "Readiness probe",
-      "cause": "own-lesson-only",
+      "cause": "code-only",
       "linkableInLessons": [],
       "presentInLessons": [],
-      "alsoAppearsInLessons": []
+      "alsoAppearsInLessons": [
+        59
+      ]
     },
     {
       "slug": "remaining-useful-life",
@@ -529,7 +531,7 @@
         "observability-deployment/63_chaos_engineering.md",
         "process-soft-skills/79_blameless_post_mortem.md"
       ],
-      "rawOccurrences": 15
+      "rawOccurrences": 16
     },
     {
       "slug": "cobie",
@@ -1375,7 +1377,7 @@
       "slug": "readiness-probe",
       "term": "Readiness probe",
       "lessonsLinkedIn": [],
-      "rawOccurrences": 2
+      "rawOccurrences": 3
     },
     {
       "slug": "remaining-useful-life",
@@ -1427,7 +1429,7 @@
         "distributed-systems-api-design/07_idempotency_key_pattern.md",
         "iot-telemetry-edge/472_lorawan_duty_cycle.md"
       ],
-      "rawOccurrences": 6
+      "rawOccurrences": 8
     },
     {
       "slug": "risk-register",

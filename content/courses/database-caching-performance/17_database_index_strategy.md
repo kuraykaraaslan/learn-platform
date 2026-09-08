@@ -58,6 +58,44 @@ A **covering index** includes all columns needed to satisfy a query — both the
 - **Index bloat**: Over time, dead tuples accumulate in indexes; `VACUUM` reclaims them; `REINDEX CONCURRENTLY` rebuilds without locking
 - **Write overhead**: Every index adds overhead to INSERT/UPDATE/DELETE; don't index every column — index based on actual query patterns
 
+Building the index is the other half of the decision, and two server settings
+decide how long it takes and how much memory it uses while it happens:
+
+```numbers
+caption: "What an index build is given to work with. Both values are read from a running server by the query below this table."
+rows:
+  - quantity: "PostgreSQL 18 `maintenance_work_mem`"
+    default: "64MB"
+    source: "https://www.postgresql.org/docs/current/runtime-config-resource.html"
+    at_scale: "It is the memory a single index build, VACUUM or ALTER TABLE gets. On a large table 64MB means the sort spills to disk, so the build is bounded by disk throughput rather than by CPU — and the usual report is that 'creating the index took all night'."
+    measure: "`SHOW maintenance_work_mem;`, then `SET maintenance_work_mem = '1GB';` in the session doing the build and compare"
+  - quantity: "PostgreSQL 18 `max_parallel_maintenance_workers`"
+    default: "2"
+    source: "https://www.postgresql.org/docs/current/runtime-config-resource.html"
+    at_scale: "A B-tree build can use parallel workers, and two is the ceiling regardless of how many cores the machine has. It is a per-build limit, so raising it for a one-off migration is a session-level decision rather than a cluster-wide one."
+    measure: "`SHOW max_parallel_maintenance_workers;` and watch `pg_stat_activity` during a build to count the workers that actually appear"
+```
+
+Both are session-settable, which is the practical point: an index build during
+a migration window can be given far more memory and more workers than the
+cluster's steady-state defaults, without changing anything for normal traffic.
+
+```sql run
+-- What this server would give an index build. Run it against yours.
+SELECT name, setting, unit, boot_val
+FROM pg_settings
+WHERE name IN ('maintenance_work_mem', 'max_parallel_maintenance_workers', 'work_mem')
+ORDER BY name;
+```
+
+Note what that run shows for `max_parallel_maintenance_workers`: `boot_val` is
+2 and `setting` is 0. The server executing this query is an embedded, single-
+threaded PostgreSQL, so it has been configured down — which is the distinction
+worth taking away. `boot_val` is the default the software ships with;
+`setting` is what the server you are talking to has actually been given. On
+your own database they will differ too, for less exotic reasons, and only the
+second one is enforcing anything.
+
 ## Example Code
 
 Same seeded table as the query-plan-analysis lesson: 400 tenants, 20,000 users, 50,000 `tenant_members` rows, no indexes yet. Each fence below is self-contained — run them in any order.

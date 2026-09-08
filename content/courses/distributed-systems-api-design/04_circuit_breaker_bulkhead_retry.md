@@ -30,6 +30,40 @@ stateDiagram-v2
     HALF_OPEN --> OPEN: probe fails
 ```
 
+Every pattern above assumes a request eventually stops. In Node, that
+assumption is not free, and the defaults that decide it are not what most
+people expect:
+
+```numbers
+caption: "What an outbound HTTP call does before any retry policy is involved."
+rows:
+  - quantity: "`fetch()` request timeout"
+    default: "— none"
+    source: "https://nodejs.org/api/globals.html#fetch"
+    at_scale: "There is no default timeout at all. A retry policy sitting above a call that never returns never runs: the circuit breaker sees no failures to count, the bulkhead's slot is never released, and the symptom is a queue that grows rather than an error rate that rises."
+    measure: "`AbortSignal.timeout(2000)` passed as `signal`, then confirm with a request to a host that accepts the connection and never responds"
+  - quantity: "Node `http.globalAgent.keepAlive`"
+    default: "true"
+    source: "https://nodejs.org/api/http.html#httpglobalagent"
+    at_scale: "A call with no explicit agent reuses connections, which is what you want. The number matters because the moment you construct an agent — the usual reason being to cap concurrency — you get a different answer."
+    measure: "`node -e \"console.log(require('http').globalAgent.keepAlive)\"`"
+  - quantity: "Node `new http.Agent().keepAlive`"
+    default: "false"
+    source: "https://nodejs.org/api/http.html#new-agentoptions"
+    at_scale: "Constructing an agent to bound sockets silently turns connection reuse off. The change meant to limit concurrency has also added a TCP and TLS handshake to every request, and the latency it introduces looks like the dependency getting slower."
+    measure: "`node -e \"console.log(new (require('http').Agent)().keepAlive)\"` and compare with the line above"
+  - quantity: "Node `Agent.maxSockets`"
+    default: "Infinity"
+    source: "https://nodejs.org/api/http.html#agentmaxsockets"
+    at_scale: "Unbounded outbound concurrency is a bulkhead that does not exist. Under a slow dependency the process opens sockets until something else runs out — file descriptors, memory, or the dependency itself."
+    measure: "`node -e \"console.log(require('http').globalAgent.maxSockets)\"` and count live sockets with `ss -tan state established | wc -l` under load"
+```
+
+The first two rows are the same argument the rest of this lesson makes, one
+layer down: a retry, a breaker and a bulkhead all bound something that is
+already bounded. When the underlying call has no timeout, none of the three
+patterns can do its job, and each one will look like it is working.
+
 ## Example Code
 ```typescript
 // Circuit breaker + retry with exponential backoff + jitter

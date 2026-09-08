@@ -1,0 +1,8 @@
+{
+  "name": "verify-framework-deep-dives-401",
+  "private": true,
+  "description": "Reads Node's inbound HTTP timeouts and outbound agent defaults off real objects for lesson 401's numbers table. Constructs a server without listening -- no port, no socket, no network. Zero dependencies, no clock, no random.",
+  "scripts": {
+    "verify": "node timeouts.js"
+  }
+}

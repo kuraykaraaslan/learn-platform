@@ -2683,7 +2683,7 @@
       "17_database_index_strategy.md": {
         "title": "a551e2011d930ae8",
         "whatItIs": "4d211ec115e245dc",
-        "keyConcepts": "d1de5b130a3f02e1",
+        "keyConcepts": "5082caae94374ad3",
         "exampleCode": "00b916a022b78414",
         "whenToUse": "c681da75fa0894ef",
         "commonMistakes": "5e3691d2149ea4c6",
@@ -2710,7 +2710,7 @@
       "20_redis_cache_strategies.md": {
         "title": "4816350e2ec1814d",
         "whatItIs": "0dc74ce4ac3b15ac",
-        "keyConcepts": "7a0d4142b5ce9369",
+        "keyConcepts": "7483e2a64d409583",
         "exampleCode": "2a8918643758d79c",
         "whenToUse": "09d5d2ce08a5f24a",
         "commonMistakes": "12a5cde600feeff8",
@@ -2858,7 +2858,7 @@
       "04_circuit_breaker_bulkhead_retry.md": {
         "title": "a2f8585952eaff09",
         "whatItIs": "e8a2e85fd21f9406",
-        "keyConcepts": "4148a23e6195bb5a",
+        "keyConcepts": "555e6cb9741e0f43",
         "exampleCode": "1fab8b5fcf50e5dc",
         "whenToUse": "b78a52cd505835f5",
         "commonMistakes": "2d6236c24c4b768b",
@@ -3242,7 +3242,7 @@
       "401_express_realtime_sse_and_socketio.md": {
         "title": "893863892be8dd96",
         "whatItIs": "a1970b61ac2d12f1",
-        "keyConcepts": "3afeecb81aa3da29",
+        "keyConcepts": "a71592d1ac2ade31",
         "exampleCode": "f6b33243aca73ffe",
         "whenToUse": "eedf29e412ac676a",
         "commonMistakes": "fb0f4291ddcfe63a",
@@ -4255,7 +4255,7 @@
       "59_kubernetes_fundamentals.md": {
         "title": "0d0e26cd9800673f",
         "whatItIs": "28da2fd10b6dda89",
-        "keyConcepts": "a85ffa9308fd5aa0",
+        "keyConcepts": "8040d3ac36f88c6f",
         "exampleCode": "f229de9ef6034b54",
         "whenToUse": "c3b0be8834ac3f1b",
         "commonMistakes": "15e2739eab2e3d85",

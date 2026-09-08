@@ -20,6 +20,35 @@ For your multi-tenant SaaS, a typical Kubernetes setup would be: one Deployment 
 - **Namespace** — virtual cluster isolation; use separate namespaces for staging and production in the same cluster
 - **`kubectl`** — the CLI for interacting with Kubernetes: `apply`, `get`, `logs`, `exec`, `rollout`
 
+Three Kubernetes defaults decide how a pod behaves under conditions nobody
+tests for, and all three are documented values rather than anything the
+manifest states:
+
+```numbers
+caption: "Defaults that apply when a manifest is silent. Documented rather than measured — CI has no cluster to read them from."
+rows:
+  - quantity: "`terminationGracePeriodSeconds`"
+    default: "30"
+    source: "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/"
+    at_scale: "It is the window between SIGTERM and SIGKILL. A process that drains connections, finishes in-flight requests or flushes a buffer has thirty seconds total — and if the readiness probe is still routing traffic during the first few of them, the drain has not even started."
+    measure: "`kubectl get pod <name> -o jsonpath='{.spec.terminationGracePeriodSeconds}'` and time an actual rollout with `kubectl get events --watch`"
+  - quantity: "CPU and memory `requests`"
+    default: "— none, unless a LimitRange sets one"
+    source: "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/"
+    at_scale: "A pod with no request is scheduled as if it needs nothing, so the scheduler will pack a node past what it can serve. It is also the lowest QoS class, so it is the first thing evicted when that node runs short."
+    measure: "`kubectl get pods -o custom-columns=NAME:.metadata.name,REQ:.spec.containers[*].resources.requests` across a namespace and count the empties"
+  - quantity: "Pod `restartPolicy`"
+    default: "Always"
+    source: "https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/"
+    at_scale: "A container that exits is restarted with an exponential back-off capped at five minutes. A process crashing on a bad config therefore looks like a slow, partial outage rather than a failure, and the pod reports `CrashLoopBackOff` long after the cause has scrolled out of the logs."
+    measure: "`kubectl get pods` and read the RESTARTS column, then `kubectl logs <pod> --previous` for the run that actually failed"
+```
+
+The second row is the one that produces surprises. A manifest with no resource
+requests is not neutral — it is a specific choice with a specific consequence
+at scheduling time and another at eviction time, and neither appears anywhere
+in the file that made it.
+
 ## Example Code
 ```yaml
 # k8s/deployment.yaml — Next.js app Deployment

@@ -17,6 +17,78 @@ Socket.io earns its complexity when the client needs to send events too — a ch
 - **Services emit, routes never touch the socket layer**: `getIO()` is called from service code (e.g. `NotificationService.send`), never imported into a route file
 - **Decision table, not vibes**: default to SSE; reach for Socket.io only when the feature genuinely requires the client to send events back in real time
 
+A streaming endpoint is a request that deliberately does not finish, and Node
+ships four timeouts that decide how long "does not finish" is allowed to last.
+None of them was chosen for streaming:
+
+```numbers
+caption: "Node's own HTTP timeouts. Every value here is read off a real server object by the proof below, not quoted from documentation."
+rows:
+  - quantity: "Node `server.requestTimeout`"
+    default: "300000 ms (5 minutes)"
+    source: "https://nodejs.org/api/http.html#serverrequesttimeout"
+    at_scale: "It bounds the whole request, and an SSE response is a request that has not finished. A stream held open past five minutes is destroyed by the runtime — not by the proxy, not by the client, and with nothing in the application code to point at."
+    measure: "`node -e \"console.log(require('http').createServer().requestTimeout)\"` on the version you deploy"
+  - quantity: "Node `server.keepAliveTimeout`"
+    default: "5000 ms"
+    source: "https://nodejs.org/api/http.html#serverkeepalivetimeout"
+    at_scale: "Whatever sits in front of this server usually holds idle connections longer. Node then closes a socket the proxy still believes it can reuse, and the next request on it fails at the proxy — the classic intermittent 502 that never appears in the application log."
+    measure: "`node -e \"console.log(require('http').createServer().keepAliveTimeout)\"`, then compare it with the idle timeout configured on the load balancer in front of it"
+  - quantity: "Node `server.headersTimeout`"
+    default: "60000 ms"
+    source: "https://nodejs.org/api/http.html#serverheaderstimeout"
+    at_scale: "A client that opens a connection and sends headers slowly holds a socket for a minute per attempt. It is the setting that bounds a slow-header attack, and it does nothing about a slow body."
+    measure: "`node -e \"console.log(require('http').createServer().headersTimeout)\"`"
+  - quantity: "Node `server.timeout`"
+    default: "0 — no limit"
+    source: "https://nodejs.org/api/http.html#servertimeout"
+    at_scale: "The socket-level inactivity timeout is off. On its own that is fine, because requestTimeout took over the job — but code written before that change often still sets `server.timeout` and believes it is protected."
+    measure: "`node -e \"console.log(require('http').createServer().timeout)\"`"
+```
+
+The first row is the one that decides whether this lesson's technique works at
+all. A long-lived stream is not an exception to `requestTimeout`; it is exactly
+what the setting was written to kill. Raising it (or setting it to `0`) is a
+deliberate decision for a streaming route, and it has to be made somewhere.
+
+Where the proxy in front of the process is configured is outside this course —
+the corpus has no lesson on load-balancer configuration — but the number to
+compare against is the one in the second row.
+
+```proof sha=2a27d5028db28df3 at=2026-09-08 commit=c35219c
+$ node timeouts.js
+$ node -e "read the defaults off http.createServer()"
+
+inbound — what the server enforces on a connection it accepts:
+  server.keepAliveTimeout      5000 ms
+  server.headersTimeout        60000 ms
+  server.requestTimeout        300000 ms
+  server.timeout               0 (no limit)
+  server.maxRequestsPerSocket  0 (unlimited)
+
+outbound — and here the two agents disagree:
+  http.globalAgent.keepAlive   true
+  new http.Agent().keepAlive   false
+  http.globalAgent.maxSockets  Infinity
+  new http.Agent().maxSockets  Infinity
+
+That pair is worth staring at. A request with no agent uses the global one and
+reuses connections (keepAlive true). The moment you construct an agent -- which is
+what you do to cap maxSockets, the usual reason -- you get a fresh one whose
+keepAlive is false, and connection reuse is silently gone. The change that was
+meant to bound concurrency has also added a TCP and TLS handshake per request.
+
+requestTimeout is 300 seconds, and it applies to the whole request.
+A server-sent-events response is a request that has not finished, so a stream
+left open past that limit is destroyed by the runtime -- not by the proxy, not
+by the client, and with nothing in the application code to point at.
+
+keepAliveTimeout is 5 seconds, which is the other half of the classic 502.
+If whatever sits in front of this server holds idle connections longer than
+Node does, Node closes a socket the proxy still believes it can reuse, and the
+next request on it fails at the proxy rather than here.
+```
+
 ## Example Code
 ```typescript
 // modules/jobs/jobs.route.ts — SSE for one-directional progress updates

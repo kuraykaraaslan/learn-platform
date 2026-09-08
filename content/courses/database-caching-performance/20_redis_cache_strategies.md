@@ -78,6 +78,29 @@ sequenceDiagram
     Note over A,DB: On expiry every concurrent request runs this same miss path at once — the thundering herd
 ```
 
+Every strategy above assumes the cache is allowed to forget things. That is a
+configuration decision, and its default is the opposite:
+
+```numbers
+caption: "Two Redis settings that decide whether a cache behaves like a cache. Both are documented values rather than measured ones — CI has no Redis to read them from."
+rows:
+  - quantity: "Redis `maxmemory`"
+    default: "0 — unlimited"
+    source: "https://redis.io/docs/latest/develop/reference/eviction/"
+    at_scale: "With no limit set, Redis grows until the operating system intervenes. On a 64-bit host that means it keeps allocating until the machine swaps or the kernel kills the process — the instance does not degrade, it disappears."
+    measure: "`CONFIG GET maxmemory` and `INFO memory` on the instance your application actually uses"
+  - quantity: "Redis `maxmemory-policy`"
+    default: "noeviction"
+    source: "https://redis.io/docs/latest/develop/reference/eviction/"
+    at_scale: "Once `maxmemory` is reached, writes fail with an error rather than older keys being evicted. A cache configured this way stops accepting new entries at exactly the moment it is under most pressure, and the application sees write errors from something it treats as optional."
+    measure: "`CONFIG GET maxmemory-policy`, then `INFO stats` and read `evicted_keys` — a cache under memory pressure with zero evictions is not evicting"
+```
+
+The pairing is what matters. A cache with no `maxmemory` never evicts because
+it never reaches a limit; a cache with `maxmemory` and the default policy stops
+writing when it does. Neither is the behaviour any strategy in this lesson
+assumes, and both are what an unconfigured instance does.
+
 ## Example Code
 ```typescript
 // ─── Cache-aside with thundering herd prevention ───

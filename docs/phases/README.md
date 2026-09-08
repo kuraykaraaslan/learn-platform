@@ -62,6 +62,7 @@ P30 ikinci nesil kapanışı ← P24..P29 (kursları birbirine bağlamak, operas
 
 ── yol haritasına dönüş ─────────────────────────────────────────────
 P31 numbers that matter  ← yol haritasının T2.2'si (otuz faz boyunca açılmadı)
+P32 numbers'ın yayılması ← P31 (Postgres dışına: Node koşuluyor, Redis/k8s linkleniyor)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -98,6 +99,7 @@ P31 numbers that matter  ← yol haritasının T2.2'si (otuz faz boyunca açılm
 | P29 | [29-asset-identification.md](29-asset-identification.md) | ~5-6 gün | tamamlandı — 9 ders (572-580), 9'u damgalı, yeni seed yok (`asset_register` yeniden kullanıldı), `574` proof (kontrol basamağı hata sınıfları sayıldı) |
 | P30 | [30-second-generation-closeout.md](30-second-generation-closeout.md) | ~2 gün | tamamlandı — yeni ders yok; 8 bağ, `iot-hardware-basics` ilk nesilden 1 → **4** bağ, yeni kurslar arası 4 → 6 kenar, 5. path (`operations-engineer`, 16 adım) |
 | P31 | [31-numbers-that-matter.md](31-numbers-that-matter.md) | ~4 gün | tamamlandı — yol haritasının T2.2'si, bölüm değil **fence** olarak; `numbers` widget'ı (sunucu bileşeni, 0 istemci baytı), 2 lint kuralı, 4 pilot ders, `42`'nin proof'u varsayılanları gerçek PostgreSQL'den okuyor |
+| P32 | [32-numbers-spread.md](32-numbers-spread.md) | ~3 gün | tamamlandı — yeni ders yok; 5 ders daha (`numbers` 4 → 9), `401`'in proof'u Node'un zaman aşımlarını gerçek sunucu nesnesinden okuyor, Redis/k8s dokümana linkleniyor |
 
 ## Ölçülen zemin
 
@@ -110,8 +112,8 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 | Ölçüm | P0 zemini | Bugün |
 |---|---:|---:|
 | Ders / kurs / bölüm | 412 / 23 / 2473 | 562 / 36 / **3372** |
-| Fence | 505 | 1463 |
-| Yalnız kod fence'i olan ders | 179 | 69 |
+| Fence | 505 | 1470 |
+| Yalnız kod fence'i olan ders | 179 | 67 |
 | Yalnız şablon fence'i olan ders | 211 | 138 |
 | Hiç fence'i olmayan ders | 0 | 1 |
 | TS/TSX/JS fence | 161 | 272 |
@@ -121,7 +123,7 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 | ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **552** (sıfır: 10) |
 | Form fence / dosya | 91 / 88 | 94 / 90 |
 | Checklist fence / madde | 35 / 293 | 41 / 364 |
-| `sql` fence | 9 | 94 |
+| `sql` fence | 9 | 95 |
 | `java` fence | 10 | 10 |
 | Blockquote kullanan ders | 45 | 91 |
 | Mermaid kullanan ders | 0 | 30 |
@@ -202,12 +204,12 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 | `tradeoff` | 24 | 24 |
 | `calc` | 21 | 21 |
 | `spatial` | 6 | 6 |
-| `proof` | 31 | 31 |
-| `run` (toplam) | 157 | 107 |
-| — `sql run` | 81 | |
+| `proof` | 32 | 32 |
+| `run` (toplam) | 158 | 107 |
+| — `sql run` | 82 | |
 | — JS/TS `run` | 73 | |
 | — `run project` | 3 | |
-| `numbers` | 4 | 4 |
+| `numbers` | 9 | 9 |
 | `diff` | 5 | 5 |
 
 Her kurs en az bir `quiz` ve bir `recall` taşıyor.
