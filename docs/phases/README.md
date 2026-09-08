@@ -68,6 +68,7 @@ P34 capstone             ← yol haritasının T2.4'ü (tanımanın ötesi; rubr
 P35 capstone doğrulanıyor ← P5, P34 (referansın iddiaları CI'da koşuyor)
 P36 rubric doğrulanmışı ölçer ← P34, P35 (P34'ün 12 satırının 8'i denylist dersini alıntılıyordu)
 P37 denylist denetimi    ← P36 (bir örnek mi örüntü mü: on bir yüzey ölçüldü)
+P38 arama capstone'u bulur ← P12, P34 (cheat sheet bilinçli olarak indekslenmiyor)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -110,6 +111,7 @@ P37 denylist denetimi    ← P36 (bir örnek mi örüntü mü: on bir yüzey öl
 | P35 | [35-verifiable-capstone.md](35-verifiable-capstone.md) | ~1-2 gün | tamamlandı — P34'ün bıraktığı yumuşak nokta kapandı: `stamp-verify` capstone workspace'ini tanıyor (`proof` 32 → 34), iki referansın kilit ve idempotency iddiaları artık CI'da koşuyor, `capstone/hand-edited-proof` kuralı |
 | P36 | [36-rubric-cites-verified.md](36-rubric-cites-verified.md) | ~1 gün | tamamlandı — ölçüm P34'te bir doktrin ihlali buldu: 12 rubric satırının **8'i** `HARM_DENYLIST` dersini alıntılıyordu. `capstone/rubric-cites-unverified` kuralı + sekiz satır doğrulanmış derslerden yeniden kaynaklandı |
 | P37 | [37-denylist-audit.md](37-denylist-audit.md) | ~1 gün | tamamlandı — P36'nın sınıfı süpürüldü: **on bir yüzey** denylist'e karşı ölçüldü, path'lerde ve sözlükte **0**, tek bulgu `#319`'un `calc` varsayılanı (kaynaksız mevzuat rakamı) ve o düzeltildi |
+| P38 | [38-search-finds-the-capstone.md](38-search-finds-the-capstone.md) | ~1 gün | tamamlandı — arama indeksi 562 → **564 kayıt** (iki capstone); rotanın şekli sayesinde `SearchRecord` ve istemci **değişmedi**. Cheat sheet bilinçli olarak dışarıda: P33'ün birebir sözleşmesi gereği her sonucu ikizlerdi |
 
 ## Ölçülen zemin
 
@@ -173,13 +175,15 @@ isteyen 42, var olmayan `@/` alias'ı 45) ve P0'ın `<pre>` yerleşim sayımı
 şartnamelerinde duruyor, sonuncusu `course_content.blocks.test.ts` tarafından
 sürekli korunuyor.
 
-**İki indeks bütçesi (P22'de yeniden ölçüldü, P25'te tekrar).** Arama indeksi
-P13 zemininde 64.207 B gz idi; P22'de 505 derste 77.393 B gz; bugün 535 derste
-**81.979 B gz** — `MAX_INDEX_GZ_BYTES` (98.304 B, `build-search-index.ts:33`)
-altında, ~16 KB marj, sınır değişmedi. Son iki kurs (30 ders) indekse ~4,6 KB
-ekledi; bu hızla sınır ~5 kurs sonra konuşulur. Review indeksinin bütçe
-kontrolü yok; P22'de 2.126 kartla 201.160 B gz, bugün 2.300 kartla
-**214.040 B gz**. Kavram sözlüğü P22'de 139 terimdi; P26 cihaz dalı için 10, P27 koordinasyon
+**İki indeks bütçesi (P22'de ölçüldü, P25 ve P38'de yeniden).** Arama indeksi
+P13 zemininde 64.207 B gz idi; P22'de 505 derste 77.393 B gz; bugün **564
+kayıtta 85.833 B gz** — 562 ders artı P38'in eklediği iki capstone.
+`MAX_INDEX_GZ_BYTES` (98.304 B, `build-search-index.ts:33`) altında, **~12 KB
+marj**, sınır değişmedi. Kurs başına maliyet ölçülü: son iki kurs (30 ders)
+~4,6 KB ekledi, iki capstone kaydı ise yalnız **111 B**. Bu hızla sınır ~5
+kurs sonra konuşulur — capstone'lar değil kurslar yaklaştırıyor. Review
+indeksinin bütçe kontrolü yok; P22'de 2.126 kartla 201.160 B gz, bugün
+**2.462 kartla 224.731 B gz**. Kavram sözlüğü P22'de 139 terimdi; P26 cihaz dalı için 10, P27 koordinasyon
 kursu için 5, P28 durum izleme için 5, P29 varlık tanıma için 5 terim ekledi ve
 bugün **164**. `cap-starved` (4-link sınırına dayanan) ders
 sayısı **1** (P29'un bağları biriyle çakışan bir terime yer açtı), `shadowed` 0, `case-mismatch` 0 — üçü de P22'den beri kımıldamadı.

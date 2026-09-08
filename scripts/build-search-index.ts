@@ -15,6 +15,7 @@ import zlib from 'node:zlib';
 import { listCourseSlugs, readCourseManifest, readLessonMarkdown } from '../modules/course_content/course_content.manifest';
 import { splitLessonSections } from '../modules/course_content/course_content.parser';
 import { parseMistakes } from '../modules/course_content/course_content.mistakes';
+import { hasCapstone, loadCapstone } from '../modules/course_content/course_content.capstone';
 
 const OUT_PATH = path.join(process.cwd(), 'public', 'search-index.json');
 // docs/phases/12 originally set ≤50 KB gz, measured before docs/phases/02
@@ -72,6 +73,32 @@ function buildIndex(): SearchRecord[] {
         mistakes,
       });
     }
+
+    // P38: the capstone, where a course has one. It needs no new field and no
+    // client change — SearchLauncher builds /courses/<courseSlug>/<lessonSlug>
+    // and the capstone route is exactly /courses/<slug>/capstone, so the
+    // existing shape addresses it correctly.
+    //
+    // Its rubric leads go in `mistakes`, which is the highest-weighted field
+    // at query time. That is not a trick: since P36 every rubric lead IS a
+    // Common Mistakes lead, quoted verbatim from a verified lesson in this
+    // course. Searching a mistake now finds both the lesson that explains it
+    // and the capstone that measures it.
+    //
+    // Cheat sheets are deliberately NOT indexed. P33's verbatim contract means
+    // every line on one already appears on the lesson it came from, so
+    // indexing them would return each hit twice and make the reader work out
+    // which of the two is the source. See docs/phases/38-search-finds-the-capstone.md.
+    if (hasCapstone(courseSlug)) {
+      const capstone = loadCapstone(courseSlug)!;
+      records.push({
+        courseSlug,
+        lessonSlug: 'capstone',
+        courseTitle: manifest.title,
+        title: `Capstone — ${capstone.title}`,
+        mistakes: capstone.rubric.map((row) => row.lead),
+      });
+    }
   }
 
   return records;
@@ -83,7 +110,11 @@ fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
 fs.writeFileSync(OUT_PATH, json);
 
 const gzSize = zlib.gzipSync(json).length;
-console.log(`search index: ${records.length} lessons, ${json.length} bytes, ${gzSize} bytes gz -> ${OUT_PATH}`);
+const capstoneCount = records.filter((r) => r.lessonSlug === 'capstone').length;
+console.log(
+  `search index: ${records.length} records (${records.length - capstoneCount} lessons, ${capstoneCount} capstones), ` +
+    `${json.length} bytes, ${gzSize} bytes gz -> ${OUT_PATH}`
+);
 if (gzSize > MAX_INDEX_GZ_BYTES) {
   console.error(`search index is ${gzSize} bytes gz, over the ${MAX_INDEX_GZ_BYTES}-byte budget`);
   process.exit(1);
