@@ -58,6 +58,43 @@ Prisma has a built-in connection pool (using the Prisma Query Engine). The defau
 - **`DATABASE_URL` pool configuration**: Prisma reads pool settings from the connection string: `?connection_limit=5&pool_timeout=30`
 - **Prisma Accelerate**: Prisma's managed connection pooler — similar to pgBouncer in transaction mode, deployed as an edge proxy
 
+Pool sizing is usually argued in the application, and the ceiling it is being
+sized against lives in the database. Both numbers below ship as values nobody
+chose for this workload:
+
+```numbers
+caption: "The two server-side numbers a pool is sized against, and the one that decides how long a bad query holds a connection."
+rows:
+  - quantity: "PostgreSQL 18 `max_connections`"
+    default: "100"
+    source: "https://www.postgresql.org/docs/current/runtime-config-connection.html"
+    at_scale: "It is a hard ceiling across every client, not per application. Four services with a pool of 30 each exceed it, and the failure is a connection refused at startup of whichever instance came last — usually the one deployed during an incident."
+    measure: "`SHOW max_connections;` and `SELECT count(*), state FROM pg_stat_activity GROUP BY state;` at peak"
+  - quantity: "PostgreSQL 18 `superuser_reserved_connections`"
+    default: "3"
+    source: "https://www.postgresql.org/docs/current/runtime-config-connection.html"
+    at_scale: "Those slots are subtracted from the ceiling, so the number available to applications is lower than the one everybody sizes against. They exist so an operator can still get in when the pool has exhausted everything else — do not spend them."
+    measure: "`SHOW superuser_reserved_connections;`"
+  - quantity: "PostgreSQL 18 `statement_timeout`"
+    default: "0 — no limit"
+    source: "https://www.postgresql.org/docs/current/runtime-config-client.html"
+    at_scale: "With no limit, one pathological query holds its connection until the client gives up or forever if the client is patient. A pool of 20 needs only 20 such queries to stop serving anything, and the database reports no error at all while it happens."
+    measure: "`SHOW statement_timeout;`, then set it per role or per transaction and watch `pg_stat_activity` for what starts failing"
+```
+
+The third row is the one that changes an outage's shape. A pool exhausted by
+slow queries produces no database error, no slow-query log entry until the
+query finally ends, and an application that simply stops responding — which is
+why the timeout belongs on the database side rather than only in the client.
+
+```sql run
+-- What this server would actually enforce. Run the same query against yours.
+SELECT name, setting, unit, boot_val
+FROM pg_settings
+WHERE name IN ('max_connections', 'superuser_reserved_connections', 'statement_timeout')
+ORDER BY name;
+```
+
 ## Example Code
 ```typescript
 // ─── 1. Prisma connection limit for serverless ───

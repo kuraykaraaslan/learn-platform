@@ -2564,7 +2564,7 @@
       "41_postgresql_mvcc_vacuum_bloat_isolation.md": {
         "title": "7d62acb374e200b7",
         "whatItIs": "cddacd7f2e0b2c56",
-        "keyConcepts": "912127637145c224",
+        "keyConcepts": "2d99990099a2b1ed",
         "exampleCode": "5be7b15337cdc175",
         "whenToUse": "792077b868f7e8e9",
         "commonMistakes": "d16afcff2ef2b18f",
@@ -2573,7 +2573,7 @@
       "42_optimistic_vs_pessimistic_locking.md": {
         "title": "98b922fc23771f39",
         "whatItIs": "36386e8a39e87606",
-        "keyConcepts": "60e836fd5ea9a401",
+        "keyConcepts": "351844f4c24d16f7",
         "exampleCode": "0552d73f5c41e8eb",
         "whenToUse": "c54c233443d9310c",
         "commonMistakes": "31a737963a8daea5",
@@ -2692,7 +2692,7 @@
       "18_query_plan_analysis.md": {
         "title": "4422a6d89ccfe51b",
         "whatItIs": "66cc1a7c9f6a3c21",
-        "keyConcepts": "a112fb9166831b32",
+        "keyConcepts": "3f1de94ac68f4831",
         "exampleCode": "c30e5edd8ae5b90f",
         "whenToUse": "085f93aed425acb2",
         "commonMistakes": "a7c179d851afcaf4",
@@ -2701,7 +2701,7 @@
       "19_connection_pool_tuning.md": {
         "title": "1a63810dea4e7cd4",
         "whatItIs": "c41a062fb2167cbf",
-        "keyConcepts": "5d9addfb406d57f0",
+        "keyConcepts": "4d3c5ee7a4a12d70",
         "exampleCode": "5a335f1bc3f1fb37",
         "whenToUse": "0f610bc3b3b8300a",
         "commonMistakes": "8b8b994ce7fcd211",

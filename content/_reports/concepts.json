@@ -367,7 +367,7 @@
         "iot-telemetry-edge/480_thingsboard_and_the_platform_question.md",
         "smart-infrastructure/520_historical_replay.md"
       ],
-      "rawOccurrences": 21
+      "rawOccurrences": 22
     },
     {
       "slug": "audit-log",
@@ -1491,7 +1491,7 @@
       "lessonsLinkedIn": [
         "database-caching-performance/18_query_plan_analysis.md"
       ],
-      "rawOccurrences": 7
+      "rawOccurrences": 8
     },
     {
       "slug": "shallow-size",

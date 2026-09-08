@@ -1,0 +1,8 @@
+{
+  "name": "verify-database-advanced-42",
+  "private": true,
+  "description": "Reads lock_timeout, deadlock_timeout and idle_in_transaction_session_timeout out of a real embedded PostgreSQL (pg_settings.boot_val) so lesson 42's numbers table states measured defaults rather than quoted ones. Uses the repo's own PGlite, as security/30 does; no clock, no random.",
+  "scripts": {
+    "verify": "node defaults.js"
+  }
+}

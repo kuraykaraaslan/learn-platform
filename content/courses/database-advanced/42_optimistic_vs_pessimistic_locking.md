@@ -34,6 +34,61 @@ sides:
       - signal: "measured contention is high enough that optimistic retries would thrash \u2014 if your conflict rate is more than a few percent, queueing on `SELECT FOR UPDATE` is cheaper than looping"
 ```
 
+Both strategies above are described with adjectives — "conflicts are rare",
+"holds a lock". Neither is a number, and the numbers that decide how either
+strategy behaves under load are server settings most readers have never seen:
+
+```numbers
+caption: "Three PostgreSQL settings that decide what happens when a lock is contended. All three are read from a running server by the proof below, not quoted."
+rows:
+  - quantity: "PostgreSQL 18 `lock_timeout`"
+    default: "0 — no limit"
+    source: "https://www.postgresql.org/docs/current/runtime-config-client.html"
+    at_scale: "A `SELECT FOR UPDATE` behind a slow transaction waits for as long as the holder keeps the lock, and holds its own pooled connection the whole time. The pool empties before any statement errors, so the symptom is a dead application rather than a lock error."
+    measure: "`SHOW lock_timeout;` on the database your application actually connects to, then compare it with your request timeout"
+  - quantity: "PostgreSQL 18 `deadlock_timeout`"
+    default: "1s"
+    source: "https://www.postgresql.org/docs/current/runtime-config-locks.html"
+    at_scale: "It is not a limit on waiting — it is how long the server waits before it begins looking for a deadlock. Every ordinary lock wait pays it before detection starts, and lowering it spends CPU on every wait, not only the deadlocked ones."
+    measure: "`SHOW deadlock_timeout;` and `SELECT count(*) FROM pg_stat_activity WHERE wait_event_type = 'Lock';` while under load"
+  - quantity: "PostgreSQL 18 `idle_in_transaction_session_timeout`"
+    default: "0 — no limit"
+    source: "https://www.postgresql.org/docs/current/runtime-config-client.html"
+    at_scale: "An application that opens a transaction and then awaits something slow keeps every lock it has taken, indefinitely. It also holds back vacuum for the whole cluster, so the cost is not confined to the rows it touched."
+    measure: "`SELECT pid, state, now() - state_change AS idle_for FROM pg_stat_activity WHERE state = 'idle in transaction' ORDER BY idle_for DESC;`"
+```
+
+Two of those defaults are `0`, and `0` is the most misread value in the set:
+it does not mean the wait is instant, it means there is no limit. A pessimistic
+strategy on a stock configuration is not "slower under contention" — it is
+unbounded under contention, and the bound has to be added deliberately.
+
+The numbers above are not quoted from documentation. They are read out of a
+running PostgreSQL, and the run is repeated in CI, so a future release that
+changes one of them fails the build rather than quietly ageing the lesson.
+Before opening it, predict what `lock_timeout` ships as:
+
+```proof sha=a3dd2dc4685b4bee at=2026-09-07 commit=392ddbd
+$ node defaults.js
+PostgreSQL 18.3 (embedded build)
+
+compiled-in defaults (boot_val), which is what "default" means:
+
+  deadlock_timeout                      1000 ms
+  idle_in_transaction_session_timeout   0 ms
+  lock_timeout                          0 ms
+
+lock_timeout ships as 0, and 0 does not mean "no waiting" -- it means
+no limit. A statement that wants a row lock waits for as long as the holder
+keeps it, holding its own connection the entire time.
+
+deadlock_timeout ships as 1000 ms, and it is not a limit on waiting either: it
+is how long the server waits before it starts LOOKING for a deadlock. Every
+lock wait pays it before detection can begin.
+
+Neither number is quoted here. Both were read from the server above.
+```
+
 ## Example Code
 ```typescript
 // ─── Optimistic locking in TypeORM ────────────────────────────────────────

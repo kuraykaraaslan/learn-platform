@@ -59,6 +59,9 @@ P27 model koordinasyonu  ← P14, P16, P20 (dalın yazma yarısı: federasyon, �
 P28 durum izleme         ← P17, P18, P20 (telemetri ile bakım kararı arasındaki katman)
 P29 varlık tanıma        ← P19, P20 (kütükteki satır ile önündeki nesne arasındaki bağ)
 P30 ikinci nesil kapanışı ← P24..P29 (kursları birbirine bağlamak, operasyon path'i)
+
+── yol haritasına dönüş ─────────────────────────────────────────────
+P31 numbers that matter  ← yol haritasının T2.2'si (otuz faz boyunca açılmadı)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -94,6 +97,7 @@ P30 ikinci nesil kapanışı ← P24..P29 (kursları birbirine bağlamak, operas
 | P28 | [28-condition-monitoring.md](28-condition-monitoring.md) | ~6-7 gün | tamamlandı — 9 ders (563-571), 9'u damgalı, `condition_history` seed (8 `sql run`), `566` proof (maskeleme sayıldı), `sql` fence 79 → 87 |
 | P29 | [29-asset-identification.md](29-asset-identification.md) | ~5-6 gün | tamamlandı — 9 ders (572-580), 9'u damgalı, yeni seed yok (`asset_register` yeniden kullanıldı), `574` proof (kontrol basamağı hata sınıfları sayıldı) |
 | P30 | [30-second-generation-closeout.md](30-second-generation-closeout.md) | ~2 gün | tamamlandı — yeni ders yok; 8 bağ, `iot-hardware-basics` ilk nesilden 1 → **4** bağ, yeni kurslar arası 4 → 6 kenar, 5. path (`operations-engineer`, 16 adım) |
+| P31 | [31-numbers-that-matter.md](31-numbers-that-matter.md) | ~4 gün | tamamlandı — yol haritasının T2.2'si, bölüm değil **fence** olarak; `numbers` widget'ı (sunucu bileşeni, 0 istemci baytı), 2 lint kuralı, 4 pilot ders, `42`'nin proof'u varsayılanları gerçek PostgreSQL'den okuyor |
 
 ## Ölçülen zemin
 
@@ -106,8 +110,8 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 | Ölçüm | P0 zemini | Bugün |
 |---|---:|---:|
 | Ders / kurs / bölüm | 412 / 23 / 2473 | 562 / 36 / **3372** |
-| Fence | 505 | 1455 |
-| Yalnız kod fence'i olan ders | 179 | 70 |
+| Fence | 505 | 1463 |
+| Yalnız kod fence'i olan ders | 179 | 69 |
 | Yalnız şablon fence'i olan ders | 211 | 138 |
 | Hiç fence'i olmayan ders | 0 | 1 |
 | TS/TSX/JS fence | 161 | 272 |
@@ -117,7 +121,7 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 | ≥1 drill'lenebilir maddesi olan ders | 215 (sıfır: 197) | **552** (sıfır: 10) |
 | Form fence / dosya | 91 / 88 | 94 / 90 |
 | Checklist fence / madde | 35 / 293 | 41 / 364 |
-| `sql` fence | 9 | 91 |
+| `sql` fence | 9 | 94 |
 | `java` fence | 10 | 10 |
 | Blockquote kullanan ders | 45 | 91 |
 | Mermaid kullanan ders | 0 | 30 |
@@ -198,11 +202,12 @@ P0 zemininde hiç yoktu; bunlar fazların ürettiği yüzey.
 | `tradeoff` | 24 | 24 |
 | `calc` | 21 | 21 |
 | `spatial` | 6 | 6 |
-| `proof` | 30 | 30 |
-| `run` (toplam) | 154 | 105 |
-| — `sql run` | 78 | |
+| `proof` | 31 | 31 |
+| `run` (toplam) | 157 | 107 |
+| — `sql run` | 81 | |
 | — JS/TS `run` | 73 | |
 | — `run project` | 3 | |
+| `numbers` | 4 | 4 |
 | `diff` | 5 | 5 |
 
 Her kurs en az bir `quiz` ve bir `recall` taşıyor.

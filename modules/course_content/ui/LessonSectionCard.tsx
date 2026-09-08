@@ -17,6 +17,7 @@ import { SqlRunner } from './SqlRunner';
 import { PredictOutputCard } from './PredictOutputCard';
 import { QuizCard } from './QuizCard';
 import { TradeoffCard } from './TradeoffCard';
+import { NumbersCard } from './NumbersCard';
 import { DiffCard } from './DiffCard';
 import { RecallCard } from './widgets/RecallCard';
 import { CalcCard } from './widgets/CalcCard';
@@ -110,6 +111,10 @@ function BlockView({
           return <QuizCard widget={block.widget} verified={verified} />;
         case 'tradeoff':
           return <TradeoffCard widget={block.widget} />;
+        // No gate and no client bytes: a table of published defaults makes no
+        // generated claim, and every value in it links to what publishes it.
+        case 'numbers':
+          return <NumbersCard widget={block.widget} />;
         case 'diff':
           return <DiffCard widget={block.widget} />;
         case 'recall':

@@ -12,6 +12,7 @@ import { parseFenceMeta } from '../../modules/course_content/course_content.fenc
 import { RUNNABLE_LANGS } from '../../modules/course_content/course_content.transpile';
 import { MAX_SEED_BYTES } from '../../modules/course_content/course_content.seeds';
 import { parseQuiz } from '../../modules/course_content/course_content.quiz';
+import { parseNumbers, claimsPublishedDefault, hasMeasurement } from '../../modules/course_content/course_content.numbers';
 import { parseRecall } from '../../modules/course_content/course_content.recall';
 import { flattenSpatial, parseSpatial } from '../../modules/course_content/course_content.spatial';
 import { extractMountFiles } from '../../modules/course_content/course_content.mount';
@@ -755,6 +756,66 @@ export const RULES: Rule[] = [
             }
           }
           return findings;
+        }),
+  },
+  {
+    id: 'numbers/unsourced-default',
+    severity: 'error',
+    description:
+      "A `numbers` row states a default and does not link to what publishes it. docs/investigate/04-roadmap.md's T2.2 made this the whole credibility condition — \"each row either links inline to the document publishing the number, or gives the command that produces it; if neither, the row is deleted\" — and docs/phases/31-numbers-that-matter.md turns it from review etiquette into a gate. A row with no published default writes `—` and owes no link.",
+    lesson: (file) =>
+      file.fences
+        .filter((f) => f.lang === 'numbers')
+        .flatMap((f) => {
+          let widget;
+          try {
+            widget = parseNumbers(f.code);
+          } catch (error) {
+            return [
+              {
+                rule: 'numbers/unsourced-default',
+                severity: 'error' as const,
+                target: file.target,
+                line: f.line,
+                message: `numbers fence failed validation: ${error instanceof Error ? error.message : String(error)}`,
+              },
+            ];
+          }
+          return widget.rows
+            .filter((row) => claimsPublishedDefault(row) && !row.source)
+            .map((row) => ({
+              rule: 'numbers/unsourced-default',
+              severity: 'error' as const,
+              target: file.target,
+              line: f.line,
+              message: `"${row.quantity}" states the default "${row.default}" with no source link (use "—" if none is published)`,
+            }));
+        }),
+  },
+  {
+    id: 'numbers/unmeasurable-row',
+    severity: 'error',
+    description:
+      "A `numbers` row's `measure` column gives the reader neither a command nor a link. That column is the reason the widget exists: T2.2's argument is that a reader who comes back with a number measured on their own system has learned more than fifty correct paragraphs could teach. A cell with no backticked command and no URL is a description of measuring rather than a way to measure.",
+    lesson: (file) =>
+      file.fences
+        .filter((f) => f.lang === 'numbers')
+        .flatMap((f) => {
+          let widget;
+          try {
+            widget = parseNumbers(f.code);
+          } catch {
+            return []; // numbers/unsourced-default already reports the parse failure
+          }
+          return widget.rows
+            .filter((row) => !hasMeasurement(row))
+            .map((row) => ({
+              rule: 'numbers/unmeasurable-row',
+              severity: 'error' as const,
+              target: file.target,
+              line: f.line,
+              message: `"${row.quantity}" has no measurable step: \`measure\` needs a backticked command or a link`,
+            }));
         }),
   },
   {

@@ -18,6 +18,51 @@ Transaction isolation levels control what a transaction can see of concurrent mo
 - **REPEATABLE READ** — Transaction sees a consistent snapshot from its start time; prevents non-repeatable reads but not serialization anomalies
 - **SERIALIZABLE** — Strongest isolation; transactions behave as if run one after another; significant performance cost
 
+Autovacuum's schedule is not a mystery and it is not adaptive: it is a formula
+over four settings, and on a large table the formula produces an answer most
+people would not have chosen.
+
+```numbers
+caption: "What decides when autovacuum touches a table. The threshold is threshold + scale_factor x reltuples — a formula, not a heuristic."
+rows:
+  - quantity: "PostgreSQL 18 `autovacuum_vacuum_scale_factor`"
+    default: "0.2"
+    source: "https://www.postgresql.org/docs/current/runtime-config-autovacuum.html"
+    at_scale: "Twenty per cent of the table must be dead before a vacuum is triggered. On a 500-million-row table that is 100 million dead rows of bloat accumulated before anything happens, and the vacuum that finally runs is correspondingly enormous."
+    measure: "`SELECT relname, n_dead_tup, n_live_tup, last_autovacuum FROM pg_stat_user_tables ORDER BY n_dead_tup DESC LIMIT 10;`"
+  - quantity: "PostgreSQL 18 `autovacuum_vacuum_threshold`"
+    default: "50"
+    source: "https://www.postgresql.org/docs/current/runtime-config-autovacuum.html"
+    at_scale: "The constant added to the scaled term. It keeps small tables from being vacuumed constantly and is irrelevant on a large one — which is the point: on a big table the scale factor is the whole equation."
+    measure: "`SHOW autovacuum_vacuum_threshold;` and compute threshold + scale_factor x reltuples for your largest table"
+  - quantity: "PostgreSQL 18 `autovacuum_vacuum_insert_threshold`"
+    default: "1000"
+    source: "https://www.postgresql.org/docs/current/runtime-config-autovacuum.html"
+    at_scale: "Insert-only tables produce no dead rows, so before this setting existed they were never vacuumed and never got their visibility map updated — which is what index-only scans depend on. It is the setting that fixed append-only tables, and it is worth knowing it exists."
+    measure: "`SELECT relname, n_ins_since_vacuum FROM pg_stat_user_tables ORDER BY n_ins_since_vacuum DESC LIMIT 10;`"
+  - quantity: "PostgreSQL 18 `autovacuum_naptime`"
+    default: "1min"
+    source: "https://www.postgresql.org/docs/current/runtime-config-autovacuum.html"
+    at_scale: "The launcher considers each database once per naptime, and it is per database rather than per table. With many databases in one cluster, any individual table's turn comes round considerably less often than a minute."
+    measure: "`SHOW autovacuum_naptime;` and `SELECT datname, count(*) FROM pg_stat_activity GROUP BY datname;` to count databases in the cluster"
+```
+
+The scale factor is the row worth acting on. It is a fraction, the table is a
+count, and the product is what has to accumulate before anything happens — so
+the larger the table, the later the vacuum, which is exactly backwards from
+what the table needs. Setting it per table with `ALTER TABLE ... SET
+(autovacuum_vacuum_scale_factor = ...)` is the standard fix, and the number to
+put there comes from the query in the first row rather than from a blog post.
+
+```sql run
+-- The formula's inputs, as this server has them.
+SELECT name, setting, unit, boot_val
+FROM pg_settings
+WHERE name IN ('autovacuum_vacuum_scale_factor', 'autovacuum_vacuum_threshold',
+               'autovacuum_vacuum_insert_threshold', 'autovacuum_naptime')
+ORDER BY name;
+```
+
 ## Example Code
 ```sql
 -- ─── Diagnosing table bloat ───────────────────────────────────────────────

@@ -58,6 +58,42 @@ The key things to look for in a plan are: **Seq Scan on a large table** (means n
 - **rows estimate vs actual rows**: Large discrepancies mean stale statistics; run `ANALYZE` or `VACUUM ANALYZE`
 - **Buffers: shared hit / read**: Cache hits (fast) vs disk reads (slow); high "read" values indicate cold data
 
+A plan is the planner's arithmetic, and the arithmetic runs on constants that
+ship with the server. Three of them decide most of what a plan chooses, and
+none of them knows anything about your hardware until you tell it:
+
+```numbers
+caption: "Planner constants, as PostgreSQL ships them. Every value below can be read from your own server with the query underneath this table."
+rows:
+  - quantity: "PostgreSQL 18 `random_page_cost`"
+    default: "4.0"
+    source: "https://www.postgresql.org/docs/current/runtime-config-query.html"
+    at_scale: "It says a random page read costs four times a sequential one — true of a spinning disk, wrong by roughly an order of magnitude on SSD or NVMe. Left at 4.0 the planner systematically prefers sequential scans and rejects index plans that would win."
+    measure: "`SHOW random_page_cost;`, then compare a forced index plan against the seq scan with `EXPLAIN (ANALYZE, BUFFERS)` on your own data"
+  - quantity: "PostgreSQL 18 `effective_cache_size`"
+    default: "4GB"
+    source: "https://www.postgresql.org/docs/current/runtime-config-query.html"
+    at_scale: "It is not an allocation — it is the planner's estimate of how much of the OS cache is available to it. On a machine with far more or far less RAM the estimate is simply wrong, and index scans are costed against a cache size nobody has."
+    measure: "`SHOW effective_cache_size;` and compare it with the machine's actual free memory"
+  - quantity: "PostgreSQL 18 `default_statistics_target`"
+    default: "100"
+    source: "https://www.postgresql.org/docs/current/runtime-config-query.html"
+    at_scale: "It sets how many histogram buckets ANALYZE collects per column. On a skewed column — a tenant id where one tenant owns most rows — 100 buckets estimate the common case and miss the tail, and the plan chosen for the tail is the one that times out."
+    measure: "`SELECT attname, n_distinct, most_common_freqs FROM pg_stats WHERE tablename = 'your_table';`"
+```
+
+Read your own server's values rather than assuming these — the point of the
+last column is that the answer for your database is one query away:
+
+```sql run
+-- The planner constants above, straight out of the running server. `boot_val`
+-- is the compiled-in default; `setting` is what this server is actually using.
+SELECT name, setting, unit, boot_val
+FROM pg_settings
+WHERE name IN ('random_page_cost', 'seq_page_cost', 'effective_cache_size', 'default_statistics_target')
+ORDER BY name;
+```
+
 ## Example Code
 
 This runs against a real, single-process Postgres in your browser (PGlite), seeded with 400 tenants, 20,000 users, and 50,000 `tenant_members` rows — no index on `tenant_id` yet. Run it, read the plan, then try the second query below.

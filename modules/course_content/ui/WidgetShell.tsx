@@ -30,6 +30,7 @@ export type WidgetKind =
   | 'sql'
   | 'project'
   | 'proof'
+  | 'numbers'
   | 'code';
 
 /** The one naming vocabulary. LessonFeatureChips imports this so a course
@@ -51,6 +52,7 @@ export const WIDGET_LABEL: Record<WidgetKind, string> = {
   // Two kinds with no chip on the overview page, since they aren't lesson
   // "features" the catalog advertises — but they still need a header word.
   proof: 'predict output',
+  numbers: 'numbers that matter',
   code: 'code',
 };
 
@@ -73,6 +75,9 @@ const FAMILY: Record<WidgetKind, Family> = {
   spatial: 'reveal',
   code: 'read',
   mermaid: 'read',
+  // A table of defaults is something you read and then go and measure; the
+  // reading is the widget's own job, the measuring is the last column's.
+  numbers: 'read',
 };
 
 const MARK: Record<Family, string> = {
