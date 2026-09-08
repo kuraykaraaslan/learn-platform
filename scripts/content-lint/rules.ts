@@ -761,6 +761,30 @@ export const RULES: Rule[] = [
         }),
   },
   {
+    id: 'capstone/rubric-cites-unverified',
+    severity: 'error',
+    description:
+      "A capstone rubric row cites a lesson that is not `verified: true`. docs/phases/README.md's invariant #3 is written about a lesson's own page, but stamp-verified.ts's HARM_DENYLIST states the reason it exists — \"a drill inherits the correctness of the content it sits on, and a wrong mitigation drilled into a reader's memory is worse than one merely read\" — and a rubric row asks the reader to score their own work against that item, which is an exercise rather than a reading. docs/phases/36-rubric-cites-verified.md takes the conservative reading, as P24's #541 and P17's #478 did. If a lesson leaves the denylist this rule relaxes on its own.",
+    course: (slug, files) => {
+      if (!hasCapstone(slug)) return [];
+      let capstone;
+      try {
+        capstone = loadCapstone(slug)!;
+      } catch {
+        return []; // capstone/unsourced-rubric-row reports the parse failure
+      }
+      const verified = new Map(files.map((f) => [f.id, f.verified === true]));
+      return capstone.rubric
+        .filter((row) => verified.get(row.lesson) !== true)
+        .map((row) => ({
+          rule: 'capstone/rubric-cites-unverified',
+          severity: 'error' as const,
+          target: `${slug}/capstone.md`,
+          message: `rubric row cites lesson ${row.lesson}, which is not verified — a rubric may only measure what the corpus stands behind`,
+        }));
+    },
+  },
+  {
     id: 'capstone/hand-edited-proof',
     severity: 'error',
     description:

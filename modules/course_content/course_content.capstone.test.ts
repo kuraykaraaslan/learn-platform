@@ -57,6 +57,21 @@ describe('the rubric is derived, not written', () => {
     expect(offenders).toEqual([]);
   });
 
+  it('cites only verified lessons', () => {
+    // docs/phases/36-rubric-cites-verified.md. A rubric row asks the reader to
+    // score their own work against an item, which is an exercise rather than a
+    // reading — so it may only measure content the corpus stands behind. P34
+    // shipped eight rows citing HARM_DENYLIST lessons; this is the guard that
+    // would have caught it.
+    for (const slug of withCapstone) {
+      const items = readCourseManifest(slug).items;
+      for (const row of loadCapstone(slug)!.rubric) {
+        const item = items.find((i) => i.id === row.lesson)!;
+        expect(item.verified, `${slug} rubric cites unverified lesson ${row.lesson}`).toBe(true);
+      }
+    }
+  });
+
   it('gives every row a looks_like the lesson does not already contain', () => {
     // The one authored field. If it were also lifted from the lesson the
     // rubric would just be the Common Mistakes list with extra steps.

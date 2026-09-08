@@ -38,24 +38,24 @@ them was invented for this exercise.
 
 ```rubric
 rows:
-  - lead: "Dropping the old column in the same deploy as adding the new one"
-    lesson: 43
-    looks_like: "Your plan has one deploy where a column appears and another disappears. Any instance still running the previous release is now writing to a column that is gone, or reading one that is empty."
-  - lead: "Running long migrations inside a single transaction"
-    lesson: 43
-    looks_like: "The backfill is one UPDATE over 40 million rows. It holds a transaction open for its whole duration, blocks vacuum on the table for that time, and cannot be interrupted without losing all of it."
-  - lead: "Not making migrations idempotent"
-    lesson: 43
-    looks_like: "Re-running your plan after a partial failure does something different from running it once. `IF NOT EXISTS`, and a backfill whose WHERE clause excludes rows it already touched."
+  - lead: "Running tenant migrations without verification"
+    lesson: 50
+    looks_like: "Your plan has never been run against anything the size of production. The step that takes four seconds on 40,000 rows is the one that takes forty minutes on 40 million, and nothing in the plan says which step that is."
+  - lead: "`WHERE deleted_at IS NULL` in some queries but not all"
+    lesson: 44
+    looks_like: "The same partial-adoption failure, one deploy earlier: some code paths read the new column and some do not. Between your two deploys both behaviours are live at once, and your plan does not say which reads are allowed to see NULL."
   - lead: "Long transactions with pessimistic locks"
     lesson: 42
-    looks_like: "A step takes a lock the checkout path also needs, and holds it while doing something slow. The lock's name is in your plan and its duration is not."
-  - lead: "Assuming `UPDATE` is atomic by default"
-    lesson: 41
-    looks_like: "Your backfill assumes nothing else writes the rows it is touching. Under MVCC a concurrent write produces a new row version, and your plan does not say which one wins."
-  - lead: "Using `VACUUM FULL` in production"
-    lesson: 41
-    looks_like: "Bloat from the backfill appears in your plan as a VACUUM FULL, which takes an AccessExclusiveLock over the whole table — the outage you were avoiding, arriving after the migration rather than during it."
+    looks_like: "The backfill is one statement over the whole table. It holds its transaction — and whatever locks it took — for as long as it runs, and the checkout path waits behind it."
+  - lead: "Pessimistic locking outside a transaction"
+    lesson: 42
+    looks_like: "A step in your plan names a lock without naming the transaction that scopes it. A lock's duration is its transaction's duration; a plan that states one without the other has not stated anything."
+  - lead: "Never testing restores"
+    lesson: 49
+    looks_like: "Your rollback position is a sentence rather than a rehearsed procedure. \"We can drop the column\" is a claim about a database under load at 06:00, and it is worth exactly as much as the last time somebody did it."
+  - lead: "Growing table size from never cleaning up"
+    lesson: 44
+    looks_like: "The backfill leaves a dead row version behind for every row it touches. Your plan says nothing about who removes them, how long that takes, or what the table looks like on disk when it is over."
 ```
 
 ## Reference Walkthrough

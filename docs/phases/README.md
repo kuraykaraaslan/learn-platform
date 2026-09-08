@@ -66,6 +66,7 @@ P32 numbers'ın yayılması ← P31 (Postgres dışına: Node koşuluyor, Redis/
 P33 course cheat sheet   ← yol haritasının T3'ü (türetilen tek sayfa; içerik yazılmıyor)
 P34 capstone             ← yol haritasının T2.4'ü (tanımanın ötesi; rubric türetiliyor)
 P35 capstone doğrulanıyor ← P5, P34 (referansın iddiaları CI'da koşuyor)
+P36 rubric doğrulanmışı ölçer ← P34, P35 (P34'ün 12 satırının 8'i denylist dersini alıntılıyordu)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -106,6 +107,7 @@ P35 capstone doğrulanıyor ← P5, P34 (referansın iddiaları CI'da koşuyor)
 | P33 | [33-course-cheat-sheet.md](33-course-cheat-sheet.md) | ~2 gün | tamamlandı — yol haritasının T3'ü; kurs başına türetilen yazdırılabilir sayfa (36 statik rota, build 615 → **651**), birebir sözleşmesi testle korunuyor, ders metni değişmedi |
 | P34 | [34-capstone.md](34-capstone.md) | ~4-5 gün | tamamlandı — yol haritasının T2.4'ü; iki pilot capstone (`database-advanced`, `distributed-systems-api-design`), rubric satırları kursun kendi mistake lead'lerinden **birebir** (lint + test), referans puanlanana kadar mühürlü, puan **saklanmıyor** |
 | P35 | [35-verifiable-capstone.md](35-verifiable-capstone.md) | ~1-2 gün | tamamlandı — P34'ün bıraktığı yumuşak nokta kapandı: `stamp-verify` capstone workspace'ini tanıyor (`proof` 32 → 34), iki referansın kilit ve idempotency iddiaları artık CI'da koşuyor, `capstone/hand-edited-proof` kuralı |
+| P36 | [36-rubric-cites-verified.md](36-rubric-cites-verified.md) | ~1 gün | tamamlandı — ölçüm P34'te bir doktrin ihlali buldu: 12 rubric satırının **8'i** `HARM_DENYLIST` dersini alıntılıyordu. `capstone/rubric-cites-unverified` kuralı + sekiz satır doğrulanmış derslerden yeniden kaynaklandı |
 
 ## Ölçülen zemin
 

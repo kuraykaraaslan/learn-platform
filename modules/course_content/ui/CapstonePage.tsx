@@ -37,7 +37,8 @@ export function CapstonePage({ capstone, courseTitle }: { capstone: Capstone; co
       <section>
         <h2 className="text-lg font-semibold text-text-primary">Rubric</h2>
         <p className="mt-1 mb-3 text-sm text-text-secondary">
-          Every row is a mistake this course already documents, quoted from the lesson beside it.
+          Every row is a mistake this course already documents, quoted from the lesson beside it —
+          and only from lessons the corpus stands behind, never from one still awaiting review.
         </p>
         <CapstoneRubric
           rows={capstone.rubric}

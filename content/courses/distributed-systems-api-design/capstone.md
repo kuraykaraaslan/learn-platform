@@ -41,22 +41,22 @@ them was invented for this exercise.
 rows:
   - lead: "Retrying non-idempotent operations"
     lesson: 4
-    looks_like: "Your retry policy sits above a call that changes state and has no key attached. Each attempt is a fresh charge as far as the provider is concerned."
-  - lead: "Not handling the concurrent case"
-    lesson: 7
-    looks_like: "Two requests with the same key arrive within milliseconds. Your design checks for an existing record and then inserts — which is a race unless a unique constraint decides it."
-  - lead: "Not returning the original response"
-    lesson: 7
-    looks_like: "A retry after completion returns a fresh 200, or a 409, instead of the exact body the first attempt returned. The client cannot tell it already succeeded."
-  - lead: "Key scope too broad"
-    lesson: 7
-    looks_like: "The key is unique per customer or per endpoint rather than per intended operation, so two genuinely different charges collide and the second is silently swallowed as a replay."
+    looks_like: "Your retry policy sits above a call that moves money and carries no key. Each attempt is a fresh charge as far as the provider is concerned, which is exactly how the customer in the brief was charged twice."
+  - lead: "Catching and silencing circuit open errors"
+    lesson: 4
+    looks_like: "The ambiguous case — timed out, might have succeeded — is caught and turned into a clean failure response. The caller retries, the operation happens again, and nothing recorded that the first outcome was unknown rather than failed."
   - lead: "Publishing outside the transaction \"for performance\""
     lesson: 14
-    looks_like: "The order is committed and then an event is published. The process can die in between, and nothing downstream ever learns the order exists."
+    looks_like: "The order row is committed and the event is published afterwards. The process can die between the two, and nothing downstream ever learns the order exists."
+  - lead: "Polling without `FOR UPDATE SKIP LOCKED`"
+    lesson: 14
+    looks_like: "Two publisher instances read the same outbox rows and both send them. The design has an outbox but no statement about which worker owns a row while it is being published."
+  - lead: "Leaving \"provisioning\" status entities unmonitored"
+    lesson: 15
+    looks_like: "Rows left `in_progress` because the process died mid-charge are in your schema and in nobody's queue. This is the hardest half of the deliverable: state who looks at them, how often, and what they are able to do about it."
   - lead: "Not documenting the consistency model"
     lesson: 15
-    looks_like: "Your design does not say, in writing, what a caller may assume the moment it receives a 200 — and therefore every consumer will assume something different."
+    looks_like: "Your design does not say, in writing, what a caller may assume when it receives a 200 and what a 409 means instead — so every consumer assumes something different, and one of them is wrong."
 ```
 
 ## Reference Walkthrough
