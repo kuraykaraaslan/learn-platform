@@ -273,3 +273,53 @@
 .skip-link:focus {
   left: 0;
 }
+
+/* P33 — printing a cheat sheet. Everything here is scoped to @media print, so
+ * nothing below changes a single pixel on screen.
+ *
+ * The attr(href) rule is docs/investigate/04-roadmap.md's own line, and it
+ * exists because a link is invisible on paper: the corpus carries a large
+ * number of Further Reading URLs that render as grey text and print as
+ * nothing. On paper the address is the whole value of the reference. */
+@media print {
+  /* Chrome and Safari drop backgrounds by default; asking for them keeps the
+   * card borders and code blocks legible rather than merging into the page. */
+  :root {
+    color-scheme: light;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* The application frame is not part of the document being printed. */
+  aside,
+  nav,
+  [data-print='hide'] {
+    display: none !important;
+  }
+
+  main,
+  [data-print='sheet'] {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* A reference is its address once it is on paper. */
+  [data-print='sheet'] a[href^='http']::after {
+    content: ' (' attr(href) ')';
+    font-size: 0.85em;
+    word-break: break-all;
+  }
+
+  /* Never split a lesson's block across a page if it can be helped. */
+  [data-print='lesson'] {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  [data-print='sheet'] h1,
+  [data-print='sheet'] h2 {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+}

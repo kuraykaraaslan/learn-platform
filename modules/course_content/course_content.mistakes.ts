@@ -33,7 +33,11 @@ const PATTERNS: { form: MistakeForm; re: RegExp }[] = [
  * level because the corpus has zero nested bullets and zero fences inside
  * this section (measured across all 412 lessons).
  */
-function splitBulletItems(markdown: string): string[] {
+/** Exported for course_content.cheatsheet.ts, which has to split the Key
+ *  Concepts bullets by exactly the same rule this file splits Common
+ *  Mistakes by. Two splitters would drift, and the cheat sheet's whole
+ *  contract is that what it prints is verbatim. */
+export function splitBulletItems(markdown: string): string[] {
   const items: string[] = [];
   let current: string[] | null = null;
 

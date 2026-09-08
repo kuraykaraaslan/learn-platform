@@ -36,6 +36,16 @@ export function CourseOverviewPage({
               {totalDrills > 0 && ` · ${totalDrills} drills`}
             </p>
           </div>
+
+          {/* P33: the one page in the product a reader can take away. Linked
+              from here rather than from a lesson, where it would interrupt
+              the reading it is meant to follow. */}
+          <Link
+            href={`/courses/${summary.slug}/cheatsheet`}
+            className="mt-4 inline-block text-sm text-text-secondary underline decoration-border underline-offset-4 hover:text-text-primary"
+          >
+            Printable cheat sheet
+          </Link>
         </div>
       </div>
 
