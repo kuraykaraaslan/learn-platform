@@ -1,0 +1,8 @@
+{
+  "name": "verify-distributed-systems-api-design-capstone",
+  "private": true,
+  "description": "Executes the three idempotency-key arrivals the capstone's reference describes on a real PostgreSQL, plus the same-key-different-body case. Uses the repo's own PGlite; no clock printed, no random.",
+  "scripts": {
+    "verify": "node idempotency.js"
+  }
+}

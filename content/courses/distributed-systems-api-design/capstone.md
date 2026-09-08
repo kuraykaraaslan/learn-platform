@@ -112,6 +112,30 @@ transaction, after the provider returns; the publisher reads the outbox
 separately. That ordering is what makes "the order exists but nothing
 downstream heard about it" impossible rather than rare.
 
+**Those three arrivals are executed, not asserted.** The run below performs
+them in order against a real PostgreSQL and reports what the database returned
+each time. Predict the row count of the second arrival before opening it:
+
+```proof sha=d394993e088a182d at=2026-09-08 commit=393ce83
+$ node idempotency.js
+arrival 1 (first)            rows returned: 1  status: in_progress
+arrival 2 (retry, in flight) rows returned: 0  -> 409, do not charge again
+arrival 3 (retry, completed) rows returned: 0  status: succeeded
+                             replays: {"payment_id":"pay_77","amount_cents":4200}
+same key, different body     same_request: false  -> reject, not replay
+
+rows in payment_attempt after three arrivals: 1
+
+That is the whole concurrency control. There is no read-then-write, no
+advisory lock and no window: the primary key decides which arrival owns the
+operation, and the two that do not own it are told so by getting nothing back.
+
+Note what is NOT proven here. Nothing above shows what happens when the
+process dies between calling the provider and writing the result — that row
+stays in_progress with no provider_ref, and no schema resolves it. The
+walkthrough says so, and this run cannot say otherwise.
+```
+
 **And the part that has no clean answer.**
 
 If the process dies between calling the provider and recording the result, the

@@ -1,0 +1,8 @@
+{
+  "name": "verify-database-advanced-capstone",
+  "private": true,
+  "description": "Reads the lock mode each step of the capstone's migration plan takes out of pg_locks on a real PostgreSQL, and proves the batched backfill is resumable by running it to exhaustion. Uses the repo's own PGlite; no clock, no random.",
+  "scripts": {
+    "verify": "node locks.js"
+  }
+}

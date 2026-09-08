@@ -13,7 +13,7 @@ import { RUNNABLE_LANGS } from '../../modules/course_content/course_content.tran
 import { MAX_SEED_BYTES } from '../../modules/course_content/course_content.seeds';
 import { parseQuiz } from '../../modules/course_content/course_content.quiz';
 import { parseNumbers, claimsPublishedDefault, hasMeasurement } from '../../modules/course_content/course_content.numbers';
-import { hasCapstone, loadCapstone } from '../../modules/course_content/course_content.capstone';
+import { hasCapstone, listCapstoneProofFences, loadCapstone } from '../../modules/course_content/course_content.capstone';
 import { parseMistakes } from '../../modules/course_content/course_content.mistakes';
 import { parseRecall } from '../../modules/course_content/course_content.recall';
 import { flattenSpatial, parseSpatial } from '../../modules/course_content/course_content.spatial';
@@ -759,6 +759,29 @@ export const RULES: Rule[] = [
           }
           return findings;
         }),
+  },
+  {
+    id: 'capstone/hand-edited-proof',
+    severity: 'error',
+    description:
+      "A `proof` fence inside a capstone.md whose body no longer matches its own `sha=` meta attribute. This is verify/hand-edited-output's counterpart for capstones: that rule walks lesson fences, and capstone.md is deliberately invisible to the lesson pipeline (docs/phases/34-capstone.md), so it needs its own walk over the same scanner stamp-verify.ts uses. Cheap and offline; `npx tsx scripts/stamp-verify.ts --check` is still the half that re-runs the command and confirms the output has not changed.",
+    course: (slug) =>
+      listCapstoneProofFences([slug]).flatMap((fence) => {
+        const recorded = parseFenceMeta(fence.meta).opts.sha as string | undefined;
+        const actual = sha(fence.code);
+        if (recorded === actual) return [];
+        return [
+          {
+            rule: 'capstone/hand-edited-proof',
+            severity: 'error' as const,
+            target: `${slug}/capstone.md`,
+            line: fence.line,
+            message: recorded
+              ? `capstone proof body sha (${actual}) does not match its own sha=${recorded} — re-run scripts/stamp-verify.ts`
+              : 'capstone proof fence has no sha= meta attribute — run scripts/stamp-verify.ts to stamp it',
+          },
+        ];
+      }),
   },
   {
     id: 'capstone/unsourced-rubric-row',

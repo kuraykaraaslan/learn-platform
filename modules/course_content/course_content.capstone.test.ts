@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { hasCapstone, loadCapstone, parseCapstoneMarkdown } from './course_content.capstone';
+import { createHash } from 'node:crypto';
+import fs from 'node:fs';
+import path from 'node:path';
+import { hasCapstone, listCapstoneProofFences, loadCapstone, parseCapstoneMarkdown } from './course_content.capstone';
 import { listCourseSlugs, readCourseManifest, readLessonMarkdown } from './course_content.manifest';
 import { splitLessonSections } from './course_content.parser';
 import { parseMistakes } from './course_content.mistakes';
@@ -72,5 +75,39 @@ describe('capstone.md is invisible to the lesson pipeline', () => {
     for (const slug of withCapstone) {
       expect(readCourseManifest(slug).items.map((i) => i.file)).not.toContain('capstone.md');
     }
+  });
+});
+
+// P35: the reference walkthrough's claims are executed rather than asserted.
+// stamp-verify.ts writes these bodies and content-lint checks their sha; these
+// are the same guarantees expressed as unit tests, so `npm run test` fails too
+// if a capstone proof is hand-edited or loses its workspace.
+describe('capstone proofs', () => {
+  const fences = listCapstoneProofFences(withCapstone);
+
+  it('exists for every pilot capstone', () => {
+    expect(fences.length).toBe(withCapstone.length);
+  });
+
+  it('has a workspace at content/_verify/<course>/capstone with a verify script', () => {
+    for (const fence of fences) {
+      const dir = path.join(process.cwd(), 'content', '_verify', fence.courseSlug, 'capstone');
+      expect(fs.existsSync(dir)).toBe(true);
+      const pkg = JSON.parse(fs.readFileSync(path.join(dir, 'package.json'), 'utf-8'));
+      expect(pkg.scripts?.verify).toBeTruthy();
+    }
+  });
+
+  it('is stamped, and the body matches its own sha', () => {
+    for (const fence of fences) {
+      const recorded = /sha=([0-9a-f]+)/.exec(fence.meta)?.[1];
+      expect(recorded, `${fence.courseSlug}/capstone.md is unstamped`).toBeTruthy();
+      const actual = createHash('sha256').update(fence.code, 'utf8').digest('hex').slice(0, 16);
+      expect(actual).toBe(recorded);
+    }
+  });
+
+  it('opens with the command that produced it, as every proof body does', () => {
+    for (const fence of fences) expect(fence.code.startsWith('$ node ')).toBe(true);
   });
 });

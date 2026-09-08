@@ -101,3 +101,49 @@ export function loadCapstone(courseSlug: string): Capstone | null {
   if (!hasCapstone(courseSlug)) return null;
   return parseCapstoneMarkdown(courseSlug, fs.readFileSync(capstonePath(courseSlug), 'utf-8'));
 }
+
+/** A `proof` fence found in a capstone.md, in the shape stamp-verify.ts and
+ *  the lint rule both need.
+ *
+ *  Deliberately NOT routed through listFences(): that walks manifest items, so
+ *  capstone.md is invisible to it — and that invisibility is what keeps
+ *  corpus-stats from counting capstone fences as corpus fences and loadCorpus
+ *  from treating a capstone as a lesson (docs/phases/34-capstone.md relies on
+ *  it, and a test asserts it). One scanner, used by both callers, for the same
+ *  reason P33 exported splitBulletItems rather than writing a second one. */
+export type CapstoneProofFence = {
+  courseSlug: string;
+  file: 'capstone.md';
+  /** 1-based line of the opening fence. */
+  line: number;
+  /** Info string after the language token, e.g. "sha=... at=... commit=...". */
+  meta: string;
+  /** Everything between the fence markers. */
+  code: string;
+};
+
+export function listCapstoneProofFences(courseSlugs: string[]): CapstoneProofFence[] {
+  const out: CapstoneProofFence[] = [];
+
+  for (const courseSlug of courseSlugs) {
+    if (!hasCapstone(courseSlug)) continue;
+    const lines = fs.readFileSync(capstonePath(courseSlug), 'utf-8').split('\n');
+
+    let open: { line: number; meta: string; body: string[] } | null = null;
+    for (let i = 0; i < lines.length; i++) {
+      const fence = /^```(\S*)\s*(.*)$/.exec(lines[i]);
+      if (!fence) {
+        if (open) open.body.push(lines[i]);
+        continue;
+      }
+      if (open) {
+        out.push({ courseSlug, file: 'capstone.md', line: open.line, meta: open.meta, code: open.body.join('\n') });
+        open = null;
+        continue;
+      }
+      if (fence[1] === 'proof') open = { line: i + 1, meta: fence[2].trim(), body: [] };
+    }
+  }
+
+  return out;
+}

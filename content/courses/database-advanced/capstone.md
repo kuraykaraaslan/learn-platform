@@ -117,6 +117,39 @@ being present, the reversible step is a deploy, not a migration — which is why
 "drop the old column" belongs in a third deploy, weeks later, and never in the
 same one that added the new.
 
+**The lock claims above are not this author's.** Each statement was run inside
+a transaction against a real PostgreSQL and its locks were read out of
+`pg_locks` while it still held them; the batched backfill was run to
+exhaustion to show that a second pass over the same rows updates nothing.
+Before opening it, predict which of the four statements does *not* take an
+`AccessExclusiveLock`:
+
+```proof sha=3b68c485087d9246 at=2026-09-08 commit=393ce83
+$ node locks.js
+locks each migration step holds, read from pg_locks inside its own transaction:
+
+  ADD COLUMN                         AccessExclusiveLock
+  SET DEFAULT                        AccessExclusiveLock
+  SELECT ... FOR UPDATE              RowShareLock
+  VALIDATE CONSTRAINT                ShareUpdateExclusiveLock
+
+AccessExclusiveLock blocks every reader and writer of the table for as long as
+it is held. ShareUpdateExclusiveLock blocks neither. That difference is the
+whole reason the plan validates a NOT VALID constraint instead of running
+SET NOT NULL, and it is why the two ALTERs above belong in quiet deploys.
+
+backfill in batches of 15, over 40 rows:
+  pass 1: 15 rows updated
+  pass 2: 15 rows updated
+  pass 3: 10 rows updated
+  pass 4: 0 rows updated
+
+rows left NULL: 0
+The last pass updates nothing, which is what makes the plan safe to re-run:
+the WHERE clause excludes every row an earlier pass already touched, so an
+interrupted backfill resumes rather than starting over.
+```
+
 **What to watch, as queries rather than as feelings.**
 
 ```sql

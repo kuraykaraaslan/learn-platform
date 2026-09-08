@@ -20,6 +20,8 @@ import path from 'node:path';
 import { execSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { listFences, type Fence } from '../modules/course_content/course_content.fences';
+import { listCapstoneProofFences } from '../modules/course_content/course_content.capstone';
+import { listCourseSlugs } from '../modules/course_content/course_content.manifest';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'content', 'courses');
 const VERIFY_ROOT = path.join(process.cwd(), 'content', '_verify');
@@ -32,16 +34,45 @@ const checkMode = process.argv.includes('--check');
 const commitSha = execSync('git rev-parse --short HEAD', { encoding: 'utf-8' }).trim();
 const today = new Date().toISOString().slice(0, 10);
 
-const proofFences = listFences().filter((f) => f.lang === 'proof');
+// A capstone has no lesson id, so listFences() — which walks manifest items —
+// never sees content/courses/<slug>/capstone.md. That invisibility is load
+// bearing (docs/phases/34-capstone.md), so rather than widening listFences and
+// letting capstone fences leak into corpus-stats, the capstone's proofs are
+// scanned separately and joined here. The only other difference is where their
+// workspace lives: content/_verify/<slug>/capstone/ rather than /<lessonId>/.
+type ProofTarget = Pick<Fence, 'courseSlug' | 'file' | 'meta' | 'code' | 'line'> & {
+  workspace: string;
+};
 
-type Outcome = { fence: Fence; body: string; newSha: string; onDiskSha: string };
+const proofFences: ProofTarget[] = [
+  ...listFences()
+    .filter((f) => f.lang === 'proof')
+    .map((f) => ({
+      courseSlug: f.courseSlug,
+      file: f.file,
+      meta: f.meta,
+      code: f.code,
+      line: f.line,
+      workspace: String(f.lessonId),
+    })),
+  ...listCapstoneProofFences(listCourseSlugs()).map((f) => ({
+    courseSlug: f.courseSlug,
+    file: f.file,
+    meta: f.meta,
+    code: f.code,
+    line: f.line,
+    workspace: 'capstone',
+  })),
+];
+
+type Outcome = { fence: ProofTarget; body: string; newSha: string; onDiskSha: string };
 const outcomes: Outcome[] = [];
 let missingWorkspace = 0;
 
 for (const f of proofFences) {
-  const verifyDir = path.join(VERIFY_ROOT, f.courseSlug, String(f.lessonId));
+  const verifyDir = path.join(VERIFY_ROOT, f.courseSlug, f.workspace);
   if (!fs.existsSync(verifyDir)) {
-    console.error(`No content/_verify/${f.courseSlug}/${f.lessonId} for a \`proof\` fence in ${f.courseSlug}/${f.file}`);
+    console.error(`No content/_verify/${f.courseSlug}/${f.workspace} for a \`proof\` fence in ${f.courseSlug}/${f.file}`);
     missingWorkspace++;
     continue;
   }
