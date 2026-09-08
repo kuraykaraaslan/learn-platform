@@ -176,5 +176,20 @@ işaretli. Kapsama alınan bir aday bu tablodan çıkar ve ders listesine girer.
 |---|---|---|
 | Alan capstone'u | Sekiz kursun tek bir uçtan uca teslimatta birleşmesi — T2.4'ün usulüyle: brief, deliverable, rubric, mühürlü referans çözüm | kapsam — T2.4 capstone'u 5 kurs için tasarlandı ve hiç uygulanmadı; alan capstone'u o karardan sonra |
 | Alan cheat sheet / yazdırma paketi | Kurs başına iki statik route + `@media print` | kapsam — Tier 3 kalemi, korpusun tamamı için düşünülmüştü; alan için ayrı yapılmaz |
-| `code/unverified-language`'ın `error`'a terfisi | C#/java fence'lerinin sıfırlanması | bağımlılık — korpusta 10 `java` + P16'nın ≤10 C# fence'i duruyor; kural yaratmadığı backlog'a takılamaz |
 | Türkçe ders katmanı | — | `yasak` — yol haritasının açık maddesi: 412→824 sayfa, `sourceHash` drift, ve bayat bir çeviri çevirisizlikten kötü |
+
+## Ek — `code/unverified-language` tabloyu terk etti (2026-09)
+
+Bu tablo kuralın `error`'a terfisini bir bağımlılık olarak kaydetmişti:
+*"korpusta 10 `java` + P16'nın ≤10 C# fence'i duruyor; kural yaratmadığı
+backlog'a takılamaz."* [P40](40-unverified-language-gate.md) o backlog'u ölçtü
+ve **temizlenmeyeceğini** buldu: 19 bulgunun 9'u C# (Revit API'nin başka dili
+yok) ve 10'u Java (Spring Boot derslerinde konunun kendisi). İkisi de triyaj
+değil tasarım — yani beklenti baştan karşılanamazdı.
+
+Terfi eden şey kuralın tamamı değil **kapsamı** oldu: kabul edilen iki dil
+`warn` kalıp bu dosyanın istediği sayaç görevini sürdürüyor, listede olmayan
+her doğrulanamaz dil `error`. Bu fazın 87. satırdaki kendi cümlesi de böylece
+gerçekten doğru hâle geldi — "Python fence'leri: `code/unverified-language`
+sızmayı engelliyor" — çünkü 19 özdeş uyarının arasında bir Python fence'i
+20. olurdu ve hiçbir şeyi engellemezdi.

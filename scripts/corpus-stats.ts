@@ -89,6 +89,10 @@ const measured: Record<string, string> = {
   'Checklist fence / madde': `${boxFences} / ${boxItems}`,
   '`sql` fence': String(lang('sql')),
   '`java` fence': String(lang('java')),
+  // P40: counted for the same reason java is — both are on the accepted list
+  // in content-lint, and "visible and bounded" needs a number somewhere that
+  // a check enforces.
+  '`csharp` fence': String(lang('csharp')),
   'Blockquote kullanan ders': String(blockquote),
   'Mermaid kullanan ders': String(lessonsWith('mermaid')),
 };

@@ -70,6 +70,7 @@ P36 rubric doğrulanmışı ölçer ← P34, P35 (P34'ün 12 satırının 8'i de
 P37 denylist denetimi    ← P36 (bir örnek mi örüntü mü: on bir yüzey ölçüldü)
 P38 arama capstone'u bulur ← P12, P34 (cheat sheet bilinçli olarak indekslenmiyor)
 P39 üçüncü capstone      ← P34..P36 (`security`: inşa etmek değil incelemek)
+P40 doğrulanamaz dil kapısı ← P16, P22 (sayaç, kapısı olmadığı için saymayı bırakmıştı)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -114,6 +115,7 @@ P39 üçüncü capstone      ← P34..P36 (`security`: inşa etmek değil incele
 | P37 | [37-denylist-audit.md](37-denylist-audit.md) | ~1 gün | tamamlandı — P36'nın sınıfı süpürüldü: **on bir yüzey** denylist'e karşı ölçüldü, path'lerde ve sözlükte **0**, tek bulgu `#319`'un `calc` varsayılanı (kaynaksız mevzuat rakamı) ve o düzeltildi |
 | P38 | [38-search-finds-the-capstone.md](38-search-finds-the-capstone.md) | ~1 gün | tamamlandı — arama indeksi 562 → **564 kayıt** (iki capstone); rotanın şekli sayesinde `SearchRecord` ve istemci **değişmedi**. Cheat sheet bilinçli olarak dışarıda: P33'ün birebir sözleşmesi gereği her sonucu ikizlerdi |
 | P39 | [39-security-capstone.md](39-security-capstone.md) | ~2-3 gün | tamamlandı — üçüncü capstone (`security`), şekli bilinçli olarak **inceleme**: kursun 3 dersi denylist'te ve rubric'in altı satırı da doğrulanmış derslerden. Referans `ORDER BY`'ın parametrelenemediğini koşarak gösteriyor, sömürü göstermeden |
+| P40 | [40-unverified-language-gate.md](40-unverified-language-gate.md) | ~1 gün | tamamlandı — P22'nin "terfi backlog'a takılı" kaydı ölçüldü ve backlog'un **kalıcı** olduğu bulundu (9 C# + 10 Java, ikisi de tasarım). Kural artık hem sayaç hem kapı: kabul edilen iki dil `warn`, listede olmayan her dil **error**; `csharp` fence satırı stats'a eklendi |
 
 ## Ölçülen zemin
 
@@ -139,6 +141,7 @@ arası fazların ne yaptığını gösterir. Hepsi repo'nun kendi modülleriyle
 | Checklist fence / madde | 35 / 293 | 41 / 364 |
 | `sql` fence | 9 | 95 |
 | `java` fence | 10 | 10 |
+| `csharp` fence | 0 | 9 |
 | Blockquote kullanan ders | 45 | 91 |
 | Mermaid kullanan ders | 0 | 30 |
 

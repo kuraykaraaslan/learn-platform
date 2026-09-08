@@ -92,6 +92,26 @@ const UNVERIFIED_LANGS = new Set([
   'java', 'python', 'py', 'ruby', 'go', 'csharp', 'cs', 'php', 'rust', 'kotlin', 'swift', 'cpp', 'c',
 ]);
 
+/** The languages this corpus has deliberately taken on, each with the phase
+ *  that accepted it and why no other language would have done. These stay
+ *  `warn`, so the counter this rule was built to be keeps counting.
+ *
+ *  Everything else in UNVERIFIED_LANGS is an `error`, which is the half that
+ *  was missing: with nineteen identical warnings standing, a first Python
+ *  fence would have arrived as the twentieth and been invisible — and stopping
+ *  exactly that is what this rule's own description says it is for. See
+ *  docs/phases/40-unverified-language-gate.md. */
+const ACCEPTED_UNVERIFIED = new Map<string, string>([
+  [
+    'csharp',
+    'docs/phases/16-autodesk-developer-platform.md — the Revit API has no other language, and that phase caps the fences in its own acceptance criteria',
+  ],
+  [
+    'java',
+    "framework-deep-dives' Spring Boot lessons, where Java is the subject rather than the vehicle; the count is pinned in docs/phases/README.md's measured table",
+  ],
+]);
+
 const RECOGNIZED = [
   'What It Is',
   'Key Concepts',
@@ -1108,12 +1128,17 @@ export const RULES: Rule[] = [
     lesson: (file) =>
       file.fences
         .filter((f) => UNVERIFIED_LANGS.has(f.lang.toLowerCase()))
-        .map((f) => ({
-          rule: 'code/unverified-language',
-          severity: 'warn' as const,
-          target: file.target,
-          line: f.line,
-          message: `\`${f.lang}\` fence — no typechecker and no runtime covers this language`,
-        })),
+        .map((f) => {
+          const accepted = ACCEPTED_UNVERIFIED.get(f.lang.toLowerCase());
+          return {
+            rule: 'code/unverified-language',
+            severity: (accepted ? 'warn' : 'error') as 'warn' | 'error',
+            target: file.target,
+            line: f.line,
+            message: accepted
+              ? `\`${f.lang}\` fence — no typechecker and no runtime covers this language (accepted: ${accepted})`
+              : `\`${f.lang}\` fence — no typechecker and no runtime covers this language, and it is not on the accepted list in scripts/content-lint/rules.ts. Add it there with a reason, or use a language something checks.`,
+          };
+        }),
   },
 ];
