@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { CourseContentService } from '@/modules/course_content/course_content.service';
 import { CourseOverviewPage } from '@/modules/course_content/ui/CourseOverviewPage';
+import { hasCapstone } from '@/modules/course_content/course_content.capstone';
 
 export function generateStaticParams() {
   return CourseContentService.listCourses().map((course) => ({ courseSlug: course.slug }));
@@ -17,5 +18,5 @@ export default async function CourseOverviewRoute({
 
   const lessons = CourseContentService.listLessonCards(courseSlug);
 
-  return <CourseOverviewPage summary={summary} lessons={lessons} />;
+  return <CourseOverviewPage summary={summary} lessons={lessons} hasCapstone={hasCapstone(courseSlug)} />;
 }

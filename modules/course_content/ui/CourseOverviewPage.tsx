@@ -7,9 +7,11 @@ import { BRACKET_LABELS, type CourseSummary, type LessonCard } from '../course_c
 export function CourseOverviewPage({
   summary,
   lessons,
+  hasCapstone = false,
 }: {
   summary: CourseSummary;
   lessons: LessonCard[];
+  hasCapstone?: boolean;
 }) {
   const ordered = [...lessons].sort((a, b) => a.id - b.id);
   const totalMinutes = ordered.reduce((sum, l) => sum + l.minutes, 0);
@@ -40,12 +42,23 @@ export function CourseOverviewPage({
           {/* P33: the one page in the product a reader can take away. Linked
               from here rather than from a lesson, where it would interrupt
               the reading it is meant to follow. */}
-          <Link
-            href={`/courses/${summary.slug}/cheatsheet`}
-            className="mt-4 inline-block text-sm text-text-secondary underline decoration-border underline-offset-4 hover:text-text-primary"
-          >
-            Printable cheat sheet
-          </Link>
+          <div className="mt-4 flex flex-wrap gap-4">
+            <Link
+              href={`/courses/${summary.slug}/cheatsheet`}
+              className="inline-block text-sm text-text-secondary underline decoration-border underline-offset-4 hover:text-text-primary"
+            >
+              Printable cheat sheet
+            </Link>
+            {/* P34: only where content/courses/<slug>/capstone.md exists. */}
+            {hasCapstone && (
+              <Link
+                href={`/courses/${summary.slug}/capstone`}
+                className="inline-block text-sm text-text-secondary underline decoration-border underline-offset-4 hover:text-text-primary"
+              >
+                Capstone
+              </Link>
+            )}
+          </div>
         </div>
       </div>
 

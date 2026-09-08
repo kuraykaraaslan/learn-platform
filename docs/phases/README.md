@@ -64,6 +64,7 @@ P30 ikinci nesil kapanışı ← P24..P29 (kursları birbirine bağlamak, operas
 P31 numbers that matter  ← yol haritasının T2.2'si (otuz faz boyunca açılmadı)
 P32 numbers'ın yayılması ← P31 (Postgres dışına: Node koşuluyor, Redis/k8s linkleniyor)
 P33 course cheat sheet   ← yol haritasının T3'ü (türetilen tek sayfa; içerik yazılmıyor)
+P34 capstone             ← yol haritasının T2.4'ü (tanımanın ötesi; rubric türetiliyor)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -102,6 +103,7 @@ P33 course cheat sheet   ← yol haritasının T3'ü (türetilen tek sayfa; içe
 | P31 | [31-numbers-that-matter.md](31-numbers-that-matter.md) | ~4 gün | tamamlandı — yol haritasının T2.2'si, bölüm değil **fence** olarak; `numbers` widget'ı (sunucu bileşeni, 0 istemci baytı), 2 lint kuralı, 4 pilot ders, `42`'nin proof'u varsayılanları gerçek PostgreSQL'den okuyor |
 | P32 | [32-numbers-spread.md](32-numbers-spread.md) | ~3 gün | tamamlandı — yeni ders yok; 5 ders daha (`numbers` 4 → 9), `401`'in proof'u Node'un zaman aşımlarını gerçek sunucu nesnesinden okuyor, Redis/k8s dokümana linkleniyor |
 | P33 | [33-course-cheat-sheet.md](33-course-cheat-sheet.md) | ~2 gün | tamamlandı — yol haritasının T3'ü; kurs başına türetilen yazdırılabilir sayfa (36 statik rota, build 615 → **651**), birebir sözleşmesi testle korunuyor, ders metni değişmedi |
+| P34 | [34-capstone.md](34-capstone.md) | ~4-5 gün | tamamlandı — yol haritasının T2.4'ü; iki pilot capstone (`database-advanced`, `distributed-systems-api-design`), rubric satırları kursun kendi mistake lead'lerinden **birebir** (lint + test), referans puanlanana kadar mühürlü, puan **saklanmıyor** |
 
 ## Ölçülen zemin
 

@@ -13,6 +13,8 @@ import { RUNNABLE_LANGS } from '../../modules/course_content/course_content.tran
 import { MAX_SEED_BYTES } from '../../modules/course_content/course_content.seeds';
 import { parseQuiz } from '../../modules/course_content/course_content.quiz';
 import { parseNumbers, claimsPublishedDefault, hasMeasurement } from '../../modules/course_content/course_content.numbers';
+import { hasCapstone, loadCapstone } from '../../modules/course_content/course_content.capstone';
+import { parseMistakes } from '../../modules/course_content/course_content.mistakes';
 import { parseRecall } from '../../modules/course_content/course_content.recall';
 import { flattenSpatial, parseSpatial } from '../../modules/course_content/course_content.spatial';
 import { extractMountFiles } from '../../modules/course_content/course_content.mount';
@@ -757,6 +759,58 @@ export const RULES: Rule[] = [
           }
           return findings;
         }),
+  },
+  {
+    id: 'capstone/unsourced-rubric-row',
+    severity: 'error',
+    description:
+      "A `capstone.md` rubric row's `lead` is not a verbatim Common Mistakes lead from the lesson it names. docs/investigate/04-roadmap.md's T2.4 requires that \"Rubric satırları o kursun kendi Common Mistakes maddelerinden türetilir\" — this makes that mechanical instead of aspirational, in the same way P33's cheat sheet test does for its own verbatim contract. A rubric written freehand would be the author's opinion wearing the corpus's clothes.",
+    course: (slug, files) => {
+      if (!hasCapstone(slug)) return [];
+      let capstone;
+      try {
+        capstone = loadCapstone(slug)!;
+      } catch (error) {
+        return [
+          {
+            rule: 'capstone/unsourced-rubric-row',
+            severity: 'error' as const,
+            target: `${slug}/capstone.md`,
+            message: error instanceof Error ? error.message : String(error),
+          },
+        ];
+      }
+
+      const leadsByLesson = new Map<number, Set<string>>();
+      for (const file of files) {
+        const section = file.sections.find((s) => s.heading.startsWith('Common Mistakes'));
+        if (!section) continue;
+        leadsByLesson.set(file.id, new Set(parseMistakes(section.lines.join('\n')).map((m) => m.lead)));
+      }
+
+      return capstone.rubric.flatMap((row) => {
+        const leads = leadsByLesson.get(row.lesson);
+        if (!leads) {
+          return [
+            {
+              rule: 'capstone/unsourced-rubric-row',
+              severity: 'error' as const,
+              target: `${slug}/capstone.md`,
+              message: `rubric row cites lesson ${row.lesson}, which is not in this course`,
+            },
+          ];
+        }
+        if (leads.has(row.lead)) return [];
+        return [
+          {
+            rule: 'capstone/unsourced-rubric-row',
+            severity: 'error' as const,
+            target: `${slug}/capstone.md`,
+            message: `"${row.lead}" is not a Common Mistakes lead in lesson ${row.lesson}`,
+          },
+        ];
+      });
+    },
   },
   {
     id: 'numbers/unsourced-default',
