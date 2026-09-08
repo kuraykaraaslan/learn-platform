@@ -161,8 +161,19 @@ gömülü, sorgu `ORDER BY name`, sürüm `package-lock`'ta sabit.
 
 | Aday | Ne getirir | Neden şimdi değil |
 |---|---|---|
-| Yayılma: Node/HTTP zaman aşımları, Redis, JVM | Aynı tablo başka yığınlarda | kapsam — pilot dört ders; yayılma ayrı bir pas (P6'nın usulü) |
 | Karar satırı (T2.2'nin ikinci yarısı) | ~70 dersteki ikili seçim için sayılabilir sinyal | kapsam — `tradeoff` (P6) o işi zaten yapıyor; çakışma gözden geçirilmeli |
 | T2.6 "How It Breaks" | Semptom → teşhis komutu → neden → düğme | bağımlılık — `content/repro/` altyapısı yok; yol haritası kendi şartını koyuyor |
 | T2.5 Frontmatter Spine | Manifest'in tek gerçek kaynağa inmesi | kapsam — büyük ve bu fazla ilgisiz; yol haritasında duruyor |
 | `## Numbers` bölümü olarak yeniden yapmak | Yol haritasının orijinal şekli | **doktrin = yasak** — sapma gerekçesiyle yukarıda kayıtlı; iki mekanizma tutulmaz |
+
+## Ek — yayılma tabloyu terk etti (2026-09)
+
+"Yayılma: Node/HTTP zaman aşımları, Redis, JVM" kapsama alındı ve
+[P32](32-numbers-spread.md) oldu: beş ders daha, `numbers` 4 → 9. Erteleme
+gerekçesi kapsamdı ("pilot dört ders") ve pas ayrı yapıldı.
+
+P32 ayrıca bu fazın cevaplamadığı bir soruyu cevapladı: `#42`'nin proof'undaki
+numara — varsayılanı alıntılamak yerine çalışan bir sunucudan okumak —
+genelleşiyor mu? Node için evet (`#401` `http.createServer()`'ı okuyor), Redis
+ve Kubernetes için hayır (CI'da ikisi de yok, orada doküman linki kalıyor).
+JVM/.NET hâlâ dışarıda ve sebebi kaynak: korpusta o yığınların dersi yok.

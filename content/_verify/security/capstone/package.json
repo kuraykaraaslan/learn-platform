@@ -1,0 +1,8 @@
+{
+  "name": "verify-security-capstone",
+  "private": true,
+  "description": "Shows what a parameter in ORDER BY position does on a real PostgreSQL — nothing — so the capstone's allowlist finding rests on a run rather than an assertion. Prints row order only; demonstrates no attack. Uses the repo's own PGlite.",
+  "scripts": {
+    "verify": "node order_by.js"
+  }
+}

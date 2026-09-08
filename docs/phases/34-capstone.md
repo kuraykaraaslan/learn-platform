@@ -164,7 +164,14 @@ workspace'i kabul etmesini gerektiriyor ve o `Eklenebilecekler`'de duruyor.
 | Aday | Ne getirir | Neden şimdi değil |
 |---|---|---|
 | Kalan üç kurs (`security`, `business-finance-solo-ops`, `contracts-pricing-legal`) | Yol haritasının önerdiği beşin tamamı | kapsam — pilot iki; yayılma ayrı bir pas (P6/P31 usulü) |
-| Capstone içinde `proof` | Referansın CI'da doğrulanması | bağımlılık — `stamp-verify.ts` ders id'sine göre workspace çözüyor; capstone id'si yok |
 | Alan capstone'u (`built-environment`) | P22'nin ertelediği kalem | bağımlılık — P22 bunu T2.4 kararına bağlamıştı; karar artık verildi, ama sıra pilotun sonucunu görmekte |
 | Puanların saklanması | Oturumlar arası devam | **doktrin = yasak** — değişmez #4; store'un altı anahtarı kilitli |
 | Path capstone'u | Beş path'in kendi teslimatı | kapsam — P23'ün tablosunda zaten duruyor ve capstone'a bağlıydı |
+
+## Ek — `proof` tabloyu terk etti (2026-09)
+
+"Capstone içinde `proof`" kapsama alındı ve [P35](35-verifiable-capstone.md)
+oldu. Erteleme gerekçesi bir bağımlılıktı — `stamp-verify.ts` workspace'i ders
+id'sine göre çözüyordu — ve P35 onu `listFences()`'ı genişletmeden çözdü:
+ayrı bir tarayıcı, tek bir yol dallanması. Bu fazın en yumuşak noktası
+(referansın doğrulanmaması) böylece kapandı.

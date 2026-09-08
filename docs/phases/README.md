@@ -69,6 +69,7 @@ P35 capstone doğrulanıyor ← P5, P34 (referansın iddiaları CI'da koşuyor)
 P36 rubric doğrulanmışı ölçer ← P34, P35 (P34'ün 12 satırının 8'i denylist dersini alıntılıyordu)
 P37 denylist denetimi    ← P36 (bir örnek mi örüntü mü: on bir yüzey ölçüldü)
 P38 arama capstone'u bulur ← P12, P34 (cheat sheet bilinçli olarak indekslenmiyor)
+P39 üçüncü capstone      ← P34..P36 (`security`: inşa etmek değil incelemek)
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -112,6 +113,7 @@ P38 arama capstone'u bulur ← P12, P34 (cheat sheet bilinçli olarak indekslenm
 | P36 | [36-rubric-cites-verified.md](36-rubric-cites-verified.md) | ~1 gün | tamamlandı — ölçüm P34'te bir doktrin ihlali buldu: 12 rubric satırının **8'i** `HARM_DENYLIST` dersini alıntılıyordu. `capstone/rubric-cites-unverified` kuralı + sekiz satır doğrulanmış derslerden yeniden kaynaklandı |
 | P37 | [37-denylist-audit.md](37-denylist-audit.md) | ~1 gün | tamamlandı — P36'nın sınıfı süpürüldü: **on bir yüzey** denylist'e karşı ölçüldü, path'lerde ve sözlükte **0**, tek bulgu `#319`'un `calc` varsayılanı (kaynaksız mevzuat rakamı) ve o düzeltildi |
 | P38 | [38-search-finds-the-capstone.md](38-search-finds-the-capstone.md) | ~1 gün | tamamlandı — arama indeksi 562 → **564 kayıt** (iki capstone); rotanın şekli sayesinde `SearchRecord` ve istemci **değişmedi**. Cheat sheet bilinçli olarak dışarıda: P33'ün birebir sözleşmesi gereği her sonucu ikizlerdi |
+| P39 | [39-security-capstone.md](39-security-capstone.md) | ~2-3 gün | tamamlandı — üçüncü capstone (`security`), şekli bilinçli olarak **inceleme**: kursun 3 dersi denylist'te ve rubric'in altı satırı da doğrulanmış derslerden. Referans `ORDER BY`'ın parametrelenemediğini koşarak gösteriyor, sömürü göstermeden |
 
 ## Ölçülen zemin
 
