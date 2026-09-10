@@ -14,13 +14,26 @@
 
 export const LOGO_VIEW_BOX = '0 0 32 32';
 
-/** Stem, upper arm, lower arm. Drawn as strokes with round caps/joins. */
-export const LOGO_PATHS = ['M9.5 5.5V26.5', 'M9.5 16 22 6.2', 'M9.5 16 22 25.8'] as const;
+/**
+ * Stem, upper arm, lower arm. Drawn as strokes with round caps/joins.
+ *
+ * The arms leave the stem at exactly 45deg (dx == dy == 9.8) — the house
+ * constant, shared with the kui-viewer mark. Do not eyeball this angle: the
+ * two marks are meant to read as the same hand, and 45deg is the only value
+ * that survives being redrawn on a different grid.
+ *
+ * The reach is 9.8 because the *vertical* extent is what binds. A node at the
+ * tip adds LOGO_NODE_RADIUS beyond it, so 16 +/- (9.8 + 3.2) fills the 32-unit
+ * grid to a 3-unit margin. A longer arm at 45deg would push the nodes off the
+ * tile; the stem x then follows from centering what is left (10.4 - 1.7 to
+ * 20.2 + 3.2 centers on 16.05).
+ */
+export const LOGO_PATHS = ['M10.4 5.5V26.5', 'M10.4 16 20.2 6.2', 'M10.4 16 20.2 25.8'] as const;
 
 /** The two destination nodes at the arm tips. */
 export const LOGO_NODES = [
-  { cx: 22, cy: 6.2 },
-  { cx: 22, cy: 25.8 },
+  { cx: 20.2, cy: 6.2 },
+  { cx: 20.2, cy: 25.8 },
 ] as const;
 
 /** Weights for the open mark (transparent background, two-tone). */

@@ -4,7 +4,7 @@ import { describe, expect, it } from 'vitest';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import { Logo, LogoMark } from './Logo';
-import { LOGO_PATHS, LOGO_TILE } from './logo.geometry';
+import { LOGO_NODES, LOGO_PATHS, LOGO_TILE } from './logo.geometry';
 
 describe('Logo', () => {
   it('renders the full lockup as a link home', () => {
@@ -32,6 +32,32 @@ describe('Logo', () => {
     expect(html).toContain('stroke-primary');
     expect(html).toContain('fill-secondary');
     expect(html).not.toMatch(/#[0-9a-f]{6}/i);
+  });
+});
+
+describe('geometry', () => {
+  // The 45deg arm is the house constant, shared with the kui-viewer mark
+  // (Brand_Positioning_Rules/logo-system.md). Asserted rather than eyeballed:
+  // the two marks live on different grids in different repos, and an angle
+  // nudged by hand here is the one change that silently breaks the pair.
+  it('forks both arms at exactly 45 degrees', () => {
+    const [stem, ...arms] = LOGO_PATHS;
+    const forkX = Number(stem.match(/^M([\d.]+)/)![1]);
+    const forkY = 16;
+
+    expect(arms).toHaveLength(2);
+    for (const arm of arms) {
+      const [x, y] = arm.match(/([\d.]+) ([\d.]+)$/)!.slice(1).map(Number);
+      expect(Math.abs(x - forkX)).toBeCloseTo(Math.abs(y - forkY), 5);
+    }
+  });
+
+  it('keeps the arm-tip nodes on the arm tips', () => {
+    const tips = LOGO_PATHS.slice(1).map((d) => {
+      const [x, y] = d.match(/([\d.]+) ([\d.]+)$/)!.slice(1).map(Number);
+      return { cx: x, cy: y };
+    });
+    expect(LOGO_NODES.map((n) => ({ cx: n.cx, cy: n.cy }))).toEqual(tips);
   });
 });
 
