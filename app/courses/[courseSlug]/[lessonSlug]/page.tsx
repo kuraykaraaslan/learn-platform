@@ -25,8 +25,9 @@ export default async function LessonRoute({
 
   const neighbors = CourseContentService.getLessonNeighbors(courseSlug, lessonSlug);
   const paths = CourseContentService.pathsForLesson(lesson.id);
+  const podcast = CourseContentService.getLessonPodcast(courseSlug, lessonSlug);
 
   return (
-    <LessonPage lesson={lesson} courseTitle={summary.title} neighbors={neighbors} paths={paths} />
+    <LessonPage lesson={lesson} courseTitle={summary.title} neighbors={neighbors} paths={paths} podcast={podcast} />
   );
 }

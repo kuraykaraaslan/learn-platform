@@ -26,8 +26,10 @@ import {
   type Lesson,
   type LessonCard,
   type LessonFeatures,
+  type LessonPodcast,
   type LessonSections,
   type ManifestItem,
+  type PodcastTurn,
 } from './course_content.types';
 
 /** "029_owasp_top_10.md" -> "owasp-top-10" */
@@ -303,6 +305,32 @@ export class CourseContentService {
       blocks,
       mistakes: parseMistakes(sections.commonMistakes),
       concepts,
+    };
+  }
+
+  /** Reads the audio + transcript scripts/generate-lesson-podcast.ts writes
+   *  under public/podcasts/<courseSlug>/<lessonSlug>.{mp3,json} (plus the
+   *  .webm scripts/generate-lesson-podcast-video.ts renders from them) — a script
+   *  that has only been run for a couple of lessons so far, not the whole
+   *  corpus, so this returns null for every lesson without one instead of
+   *  assuming the file exists the way CourseSummary.cover does for covers. */
+  static getLessonPodcast(courseSlug: string, lessonSlug: string): LessonPodcast | null {
+    const dir = path.join(process.cwd(), 'public', 'podcasts', courseSlug);
+    const audioPath = path.join(dir, `${lessonSlug}.mp3`);
+    if (!fs.existsSync(audioPath)) return null;
+
+    const transcriptPath = path.join(dir, `${lessonSlug}.json`);
+    let turns: PodcastTurn[] = [];
+    if (fs.existsSync(transcriptPath)) {
+      const parsed = JSON.parse(fs.readFileSync(transcriptPath, 'utf-8')) as { turns?: PodcastTurn[] };
+      turns = parsed.turns ?? [];
+    }
+
+    const hasVideo = fs.existsSync(path.join(dir, `${lessonSlug}.webm`));
+    return {
+      audioSrc: `/podcasts/${courseSlug}/${lessonSlug}.mp3`,
+      videoSrc: hasVideo ? `/podcasts/${courseSlug}/${lessonSlug}.webm` : null,
+      turns,
     };
   }
 

@@ -1,0 +1,118 @@
+{
+  "courseSlug": "distributed-systems-api-design",
+  "lessonSlug": "message-queues-101",
+  "lessonTitle": "Message Queues 101 — Pub/Sub and Point-to-Point Basics",
+  "generatedAt": "2026-09-20T09:47:15.403Z",
+  "openaiModel": "gpt-4o-mini",
+  "elevenLabsModel": "eleven_multilingual_v2",
+  "voices": {
+    "host_a": "EXAVITQu4vr4xnSDxMaL",
+    "host_b": "CwhRBWXzGAHq8TQ4Fs17"
+  },
+  "turns": [
+    {
+      "speaker": "host_a",
+      "text": "Hey everyone, welcome back to the podcast! Today, we're diving into message queues — specifically the basics of pub/sub and point-to-point messaging."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Right! So, message queues are crucial in software engineering because they help decouple producers from consumers. This means producers don’t have to worry about who’s consuming their messages and when."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Exactly! And on the flip side, consumers don't need to know about the producers. It’s all handled by a broker sitting in between, which is pretty cool."
+    },
+    {
+      "speaker": "host_b",
+      "text": "And there are two main patterns to consider: point-to-point and publish/subscribe. Point-to-point sends each message to exactly one consumer, which is great for distributing work."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Right, and that’s useful when you have multiple workers processing tasks, like handling orders or processing data."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Then you have the publish/subscribe model, where messages are delivered to every subscriber. This is handy for scenarios where you want multiple systems to react to the same event."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Like if an order is placed, you might want to trigger an email, update inventory, and log analytics—all independently."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Exactly! But one of the big challenges with message queues are the delivery guarantees. Most brokers default to at-least-once delivery."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Right, so that means a message might be delivered more than once, which can create issues in production if the consumer isn't designed to handle duplicates."
+    },
+    {
+      "speaker": "host_b",
+      "text": "That’s why the Idempotency Key Pattern is so important! It helps ensure that if a message is processed multiple times, it doesn’t cause any unintended side effects."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Now, let's talk about consumer groups. They allow multiple logical consumers to get their own copy of a topic while balancing the load internally."
+    },
+    {
+      "speaker": "host_b",
+      "text": "That’s a useful feature! It really helps with scaling out your application without overwhelming any single consumer."
+    },
+    {
+      "speaker": "host_a",
+      "text": "And we can’t forget about the dead-letter queue, or DLQ. It's a safety net for messages that fail processing multiple times."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Yeah, you definitely want to avoid an infinite retry loop that blocks the whole queue. That could be a nightmare!"
+    },
+    {
+      "speaker": "host_a",
+      "text": "So when would you actually want to use a message queue?"
+    },
+    {
+      "speaker": "host_b",
+      "text": "Good question! You’d typically use a queue to decouple slow or unreliable processes, like sending emails or making API calls."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Absolutely! And it’s also great for smoothing out traffic spikes. A queue can absorb bursts of requests that might overwhelm your consumers."
+    },
+    {
+      "speaker": "host_b",
+      "text": "But with all this power comes responsibility. There are some common mistakes developers make with message queues."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Yes! One big mistake is using a queue like a database, trying to query or filter message backlogs instead of storing consumed data properly."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Another common pitfall is writing consumers that assume exactly-once delivery. This can lead to double-processing, which can be really messy."
+    },
+    {
+      "speaker": "host_a",
+      "text": "And don’t forget about unbounded retry loops without a dead-letter queue. That can cause one broken message to block everything."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Exactly! Lastly, neglecting to monitor queue depth and consumer lag can turn into a huge problem, only showing up as a user-facing incident."
+    },
+    {
+      "speaker": "host_a",
+      "text": "So, it’s clear that understanding message queues is vital for building resilient systems."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Absolutely! Keep these concepts in mind, and you'll be well on your way to making effective use of message queues."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Thanks for joining us today! We hope you found this discussion helpful."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Catch you next time as we explore more exciting topics in software engineering!"
+    }
+  ]
+}

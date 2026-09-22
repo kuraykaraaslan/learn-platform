@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import { Badge } from '@kui/ui/Badge';
-import { BRACKET_LABELS, type DeveloperPathSummary, type Lesson } from '../course_content.types';
+import { BRACKET_LABELS, type DeveloperPathSummary, type Lesson, type LessonPodcast } from '../course_content.types';
 import { LessonSectionCard } from './LessonSectionCard';
 import { FailureDrillCard } from './FailureDrillCard';
 import { ConceptTooltipProvider } from './ConceptTooltip';
 import { PathBadge } from './PathBadge';
+import { LessonPodcastPlayer } from './LessonPodcastPlayer';
+import { LessonPodcastVideo } from './LessonPodcastVideo';
 
 type LessonNeighbor = { title: string; href: string };
 
@@ -13,11 +15,13 @@ export function LessonPage({
   courseTitle,
   neighbors,
   paths = [],
+  podcast = null,
 }: {
   lesson: Lesson;
   courseTitle: string;
   neighbors?: { prev: LessonNeighbor | null; next: LessonNeighbor | null };
   paths?: DeveloperPathSummary[];
+  podcast?: LessonPodcast | null;
 }) {
   return (
     <div className="max-w-3xl mx-auto">
@@ -39,6 +43,8 @@ export function LessonPage({
         </Badge>
       </div>
 
+      {podcast && <LessonPodcastPlayer audioSrc={podcast.audioSrc} turns={podcast.turns} />}
+
       <ConceptTooltipProvider concepts={lesson.concepts} className="space-y-4">
         <LessonSectionCard title="What It Is" blocks={lesson.blocks.whatItIs} courseSlug={lesson.courseSlug} lessonFile={lesson.file} verified={lesson.verified === true} />
         <LessonSectionCard title="Key Concepts" blocks={lesson.blocks.keyConcepts} courseSlug={lesson.courseSlug} lessonFile={lesson.file} verified={lesson.verified === true} />
@@ -47,6 +53,8 @@ export function LessonPage({
         <FailureDrillCard lesson={lesson} blocks={lesson.blocks.commonMistakes} />
         <LessonSectionCard title="Further Reading" blocks={lesson.blocks.furtherReading} courseSlug={lesson.courseSlug} lessonFile={lesson.file} verified={lesson.verified === true} />
       </ConceptTooltipProvider>
+
+      {podcast?.videoSrc && <LessonPodcastVideo videoSrc={podcast.videoSrc} />}
 
       <PathBadge paths={paths} />
 

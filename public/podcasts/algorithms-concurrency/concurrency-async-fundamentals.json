@@ -1,0 +1,122 @@
+{
+  "courseSlug": "algorithms-concurrency",
+  "lessonSlug": "concurrency-async-fundamentals",
+  "lessonTitle": "Concurrency & Async Fundamentals — Event Loop, Promises, Race Conditions",
+  "generatedAt": "2026-09-20T09:46:29.782Z",
+  "openaiModel": "gpt-4o-mini",
+  "elevenLabsModel": "eleven_multilingual_v2",
+  "voices": {
+    "host_a": "EXAVITQu4vr4xnSDxMaL",
+    "host_b": "CwhRBWXzGAHq8TQ4Fs17"
+  },
+  "turns": [
+    {
+      "speaker": "host_a",
+      "text": "Welcome back to the podcast! Today, we're diving into concurrency and async fundamentals, specifically the event loop, promises, and race conditions."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Yep, it's a crucial topic for JavaScript developers. Even if JavaScript runs on a single thread, it can still manage to deal with multiple tasks at once, thanks to the event loop."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Exactly! So, the event loop allows synchronous code to run to completion first, then processes callbacks from I/O operations and timers, right?"
+    },
+    {
+      "speaker": "host_b",
+      "text": "Right! But it’s important to note that it handles these tasks one at a time, which can lead to some tricky situations, especially when using `await`."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Oh, definitely! That’s where promises come in. Using `async` and `await` makes our code look sequential, but it doesn’t actually create new threads."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Exactly! It just gives us these pause-and-resume points, which can make things easier to read and write. But it's also where we need to be careful about race conditions."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Yeah, because even though JavaScript is single-threaded, if we have two concurrent requests that each perform `await read()` followed by `await write()`, we can run into issues."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Right! Request A could read first, followed by Request B reading the same data. If they both compute based on that stale data and write, one write can overwrite the other."
+    },
+    {
+      "speaker": "host_a",
+      "text": "That’s a classic case of a race condition! It shows that just because we’re single-threaded doesn’t mean we’re free from these kinds of bugs."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Exactly! And that's why understanding the call stack, task queue, and microtask queue is so important. Synchronous code runs first, then the microtasks, and finally the macrotasks."
+    },
+    {
+      "speaker": "host_a",
+      "text": "For sure! This sequence is crucial when dealing with async code. And knowing the difference between `Promise.all` and `Promise.allSettled` can really help with error handling."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Absolutely. `Promise.all` fails fast on the first rejection, which is great for stopping a batch job if something goes wrong. But `Promise.allSettled` lets you wait for all promises to settle."
+    },
+    {
+      "speaker": "host_a",
+      "text": "That’s a key distinction! You wouldn’t want to silently drop errors you needed to know about in a batch operation."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Exactly! And when should developers really reach for these tools?"
+    },
+    {
+      "speaker": "host_a",
+      "text": "Well, any time there's more than one `await` that touches shared state, it’s crucial to account for potential interleaving."
+    },
+    {
+      "speaker": "host_b",
+      "text": "And for independent async operations, using `Promise.all` instead of multiple sequential `await`s can significantly reduce latency."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Right! And for scenarios where partial failure is expected, `Promise.allSettled` is your go-to."
+    },
+    {
+      "speaker": "host_b",
+      "text": "But let’s talk about some common mistakes developers make. First off, a lot of folks assume that single-threaded execution means no race conditions."
+    },
+    {
+      "speaker": "host_a",
+      "text": "That’s a big misconception! Just because two lines don’t run simultaneously doesn’t mean the state is safe across an `await`."
+    },
+    {
+      "speaker": "host_b",
+      "text": "Totally! And we often see unhandled promise rejections from fire-and-forget async calls that don’t have a `.catch`."
+    },
+    {
+      "speaker": "host_a",
+      "text": "Yeah, that can lead to silent failures, which is the last thing you want in production."
+    },
+    {
+      "speaker": "host_b",
+      "text": "And let’s not forget about those sequential `await`s for independent operations. That can really add unnecessary latency."
+    },
+    {
+      "speaker": "host_a",
+      "text": "For sure! And blocking the event loop with synchronous CPU-heavy work, like a large JSON parse or regex, is another common pitfall."
+    },
+    {
+      "speaker": "host_b",
+      "text": "That’s where `worker_threads` come into play, that’s the real escape hatch for CPU-bound tasks!"
+    },
+    {
+      "speaker": "host_a",
+      "text": "Exactly! So, to wrap things up, understanding these concurrency fundamentals can help you write better, more efficient JavaScript code."
+    },
+    {
+      "speaker": "host_b",
+      "text": "And avoiding race conditions and using promises effectively will save you a lot of headaches down the road. Thanks for joining us today!"
+    },
+    {
+      "speaker": "host_a",
+      "text": "See you next time!"
+    }
+  ]
+}

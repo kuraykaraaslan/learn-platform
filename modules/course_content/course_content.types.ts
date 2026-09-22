@@ -151,6 +151,21 @@ export type Lesson = ManifestItem & {
   concepts: Record<string, ConceptSummary>;
 };
 
+/** One line of the generated two-host audio podcast (scripts/generate-lesson-
+ *  podcast.ts). host_a is the female voice, host_b the male one. */
+export type PodcastTurn = { speaker: 'host_a' | 'host_b'; text: string };
+
+/** Only set when scripts/generate-lesson-podcast.ts has actually generated
+ *  an episode for this lesson — most lessons have none (see
+ *  CourseContentService.getLessonPodcast's own doc comment). */
+export type LessonPodcast = {
+  audioSrc: string;
+  /** The studio video (scripts/generate-lesson-podcast-video.ts), when one
+   *  has been rendered on top of the audio — null until then. */
+  videoSrc: string | null;
+  turns: PodcastTurn[];
+};
+
 export const BRACKET_LABELS: Record<Bracket, string> = {
   '0-1': '0-1 yrs',
   '1-3': '1-3 yrs',
