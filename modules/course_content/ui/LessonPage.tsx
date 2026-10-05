@@ -7,7 +7,8 @@ import { ConceptTooltipProvider } from './ConceptTooltip';
 import { PathBadge } from './PathBadge';
 import { LessonPodcastPlayer } from './LessonPodcastPlayer';
 import { LessonPodcastVideo } from './LessonPodcastVideo';
-import { LessonCompletion, lessonProgressKey } from '@/modules/progress/ui/LessonProgress';
+import { LessonCompletion } from '@/modules/progress/ui/LessonProgress';
+import { lessonProgressKey } from '@/modules/progress/progress.key';
 
 type LessonNeighbor = { title: string; href: string };
 

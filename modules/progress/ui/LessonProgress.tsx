@@ -2,12 +2,9 @@
 
 import { useHydrated } from '../useHydrated';
 import { useProgressStore } from '../progress.store';
+import { lessonProgressKey } from '../progress.key';
 
 export type ProgressItem = { key: string; label: string };
-
-export function lessonProgressKey(courseSlug: string, lessonSlug: string): string {
-  return `${courseSlug}/${lessonSlug}`;
-}
 
 function ProgressBar({ items, compact = false }: { items: ProgressItem[]; compact?: boolean }) {
   const hydrated = useHydrated();

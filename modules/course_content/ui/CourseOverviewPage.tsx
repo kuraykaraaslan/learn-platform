@@ -3,7 +3,8 @@ import { Badge } from '@kui/ui/Badge';
 import { BracketBar, bracketSummary } from './BracketBar';
 import { LessonFeatureChips } from './LessonFeatureChips';
 import { BRACKET_LABELS, type CourseSummary, type LessonCard } from '../course_content.types';
-import { LessonCompletion, ProgressSummary, lessonProgressKey } from '@/modules/progress/ui/LessonProgress';
+import { LessonCompletion, ProgressSummary } from '@/modules/progress/ui/LessonProgress';
+import { lessonProgressKey } from '@/modules/progress/progress.key';
 
 export function CourseOverviewPage({
   summary,

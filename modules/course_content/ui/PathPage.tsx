@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { Badge } from '@kui/ui/Badge';
 import { BRACKET_LABELS, type DeveloperPath } from '../course_content.types';
-import { LessonCompletion, ProgressSummary, lessonProgressKey } from '@/modules/progress/ui/LessonProgress';
+import { LessonCompletion, ProgressSummary } from '@/modules/progress/ui/LessonProgress';
+import { lessonProgressKey } from '@/modules/progress/progress.key';
 
 // One developer path: its steps in reading order, grouped by course so the
 // reader can see which courses it draws from. Numbered for order only —
