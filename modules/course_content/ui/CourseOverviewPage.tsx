@@ -3,6 +3,7 @@ import { Badge } from '@kui/ui/Badge';
 import { BracketBar, bracketSummary } from './BracketBar';
 import { LessonFeatureChips } from './LessonFeatureChips';
 import { BRACKET_LABELS, type CourseSummary, type LessonCard } from '../course_content.types';
+import { LessonCompletion, ProgressSummary, lessonProgressKey } from '@/modules/progress/ui/LessonProgress';
 
 export function CourseOverviewPage({
   summary,
@@ -62,12 +63,14 @@ export function CourseOverviewPage({
         </div>
       </div>
 
+      <ProgressSummary items={ordered.map((lesson) => ({ key: lessonProgressKey(summary.slug, lesson.lessonSlug), label: lesson.title }))} />
+
       <ol className="space-y-1.5">
         {ordered.map((lesson, index) => (
-          <li key={lesson.id}>
+          <li key={lesson.id} className="flex items-center gap-2 rounded-md pr-2 hover:bg-surface-overlay">
             <Link
               href={`/courses/${summary.slug}/${lesson.lessonSlug}`}
-              className="block rounded-md px-3 py-2.5 hover:bg-surface-overlay transition-colors"
+              className="block min-w-0 flex-1 px-3 py-2.5 transition-colors"
             >
               <div className="flex items-baseline gap-3">
                 <span className="w-5 shrink-0 text-right text-xs tabular-nums text-text-disabled">
@@ -91,6 +94,7 @@ export function CourseOverviewPage({
                 </span>
               </div>
             </Link>
+            <LessonCompletion item={{ key: lessonProgressKey(summary.slug, lesson.lessonSlug), label: lesson.title }} />
           </li>
         ))}
       </ol>

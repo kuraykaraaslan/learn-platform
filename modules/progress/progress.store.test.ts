@@ -12,14 +12,14 @@ import {
 } from './progress.store';
 
 describe('useProgressStore', () => {
-  it('persists exactly {mistake, reviewBox, expandAll, templateValues, checklistChecked, editors} — adding a field like "completed" must fail this test', () => {
+  it('persists reader-marked lesson completion with the existing progress maps', () => {
     // reviewBox (added for P12's Return Queue) is per-item spaced-repetition
     // scheduling — a box number and a next-review date keyed identically to
-    // `mistake` — never rendered as a score, streak, or completion percentage.
-    // It is not the kind of field this guard exists to block; everything else
-    // added here still fails the same way "completed" always would have.
+    // `mistake` is still only spaced-repetition data. Lesson completion is a
+    // separate explicit self-report, never inferred from reading activity.
     const persisted = partializeProgress(useProgressStore.getState());
     expect(Object.keys(persisted).sort()).toEqual([
+      'completedLessons',
       'checklistChecked',
       'editors',
       'expandAll',
@@ -29,10 +29,18 @@ describe('useProgressStore', () => {
     ]);
   });
 
-  it('is named "learn:v1", version 1', () => {
+  it('is named "learn:v1", version 2', () => {
     const options = useProgressStore.persist.getOptions();
     expect(options.name).toBe('learn:v1');
-    expect(options.version).toBe(1);
+    expect(options.version).toBe(2);
+  });
+
+  it('sets and clears an explicitly marked lesson', () => {
+    const key = 'security/owasp-top-10';
+    useProgressStore.getState().setLessonCompleted(key, true);
+    expect(useProgressStore.getState().completedLessons[key]).toBe(true);
+    useProgressStore.getState().setLessonCompleted(key, false);
+    expect(useProgressStore.getState().completedLessons[key]).toBe(false);
   });
 
   it('mistakeKey composes courseSlug/lessonFile#mistakeId', () => {

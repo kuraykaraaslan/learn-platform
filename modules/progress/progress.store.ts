@@ -60,6 +60,8 @@ export function editorKey(courseSlug: string, lessonFile: string, blockId: strin
 }
 
 type PersistedProgress = {
+  /** Reader-marked lesson completion, keyed by `<courseSlug>/<lessonSlug>`. */
+  completedLessons: Record<string, boolean>;
   mistake: Record<string, MistakeAssessment>;
   /** P12: Leitner box + next review date, keyed identically to `mistake`
    *  (same mistakeKey) — no deck of its own, this is purely the schedule
@@ -82,6 +84,7 @@ type PersistedProgress = {
 };
 
 type ProgressState = PersistedProgress & {
+  setLessonCompleted: (key: string, value: boolean) => void;
   setMistakeAssessment: (key: string, value: MistakeAssessment) => void;
   setExpandAll: (key: string, value: boolean) => void;
   setTemplateValue: (key: string, value: string) => void;
@@ -100,18 +103,16 @@ function touch<V>(map: Record<string, V>, key: string, value: V): Record<string,
   return next;
 }
 
-// Actions are never persisted, only these six data maps — and that's
-// exactly what progress.store.test.ts pins: the persisted key set is
-// {checklistChecked, editors, expandAll, mistake, reviewBox, templateValues}.
-// Deliberately no completed/streak/percentage field — see
-// docs/phases/README.md's invariants; reviewBox is per-item spaced-
-// repetition scheduling, not a metric, and the pinned test's own comment
-// explains why it's not the same kind of field the guard exists to block.
+// Actions are never persisted, only these data maps — and that's
+// exactly what progress.store.test.ts pins: the persisted maps include
+// explicit lesson completions and the existing practice state.
+// Lesson completion is an explicit reader self-report (not an inferred score).
 // Exported (rather than left inline in the persist() call below) so the
 // test can call it directly with a real type, instead of fighting
 // zustand's persist generics through `.persist.getOptions()`.
 export function partializeProgress(state: ProgressState): PersistedProgress {
   return {
+    completedLessons: state.completedLessons,
     mistake: state.mistake,
     reviewBox: state.reviewBox,
     expandAll: state.expandAll,
@@ -125,6 +126,7 @@ export const useProgressStore = create<ProgressState>()(
   persist(
     (set) => ({
       mistake: {},
+      completedLessons: {},
       reviewBox: {},
       expandAll: {},
       templateValues: {},
@@ -135,6 +137,8 @@ export const useProgressStore = create<ProgressState>()(
           mistake: touch(state.mistake, key, value),
           reviewBox: touch(state.reviewBox, key, nextReviewBox(state.reviewBox[key], value)),
         })),
+      setLessonCompleted: (key, value) =>
+        set((state) => ({ completedLessons: touch(state.completedLessons, key, value) })),
       setExpandAll: (key, value) => set((state) => ({ expandAll: touch(state.expandAll, key, value) })),
       setTemplateValue: (key, value) => set((state) => ({ templateValues: touch(state.templateValues, key, value) })),
       setChecklistChecked: (key, value) =>
@@ -143,18 +147,21 @@ export const useProgressStore = create<ProgressState>()(
     }),
     {
       name: 'learn:v1',
-      version: 1,
+      version: 2,
       storage: createJSONStorage(createQuotaSafeStorage),
       // Identity migration for the only version that has ever shipped — in
       // place from day one so a real v2 has somewhere to add a branch,
       // instead of retrofitting migrate() onto a store already in the wild.
-      migrate: (persisted) => persisted as PersistedProgress,
+      migrate: (persisted) => ({
+        ...(persisted as Partial<PersistedProgress>),
+        completedLessons: (persisted as Partial<PersistedProgress>)?.completedLessons ?? {},
+      }) as PersistedProgress,
       partialize: partializeProgress,
     }
   )
 );
 
-const PERSISTED_KEYS = ['mistake', 'reviewBox', 'expandAll', 'templateValues', 'checklistChecked', 'editors'] as const;
+const PERSISTED_KEYS = ['completedLessons', 'mistake', 'reviewBox', 'expandAll', 'templateValues', 'checklistChecked', 'editors'] as const;
 
 /** All of localStorage's actual content, not just an in-app summary — the
  *  Return Queue's box schedule lives only in this store (docs/phases/12

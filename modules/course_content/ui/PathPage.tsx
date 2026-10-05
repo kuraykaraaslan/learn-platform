@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Badge } from '@kui/ui/Badge';
 import { BRACKET_LABELS, type DeveloperPath } from '../course_content.types';
+import { LessonCompletion, ProgressSummary, lessonProgressKey } from '@/modules/progress/ui/LessonProgress';
 
 // One developer path: its steps in reading order, grouped by course so the
 // reader can see which courses it draws from. Numbered for order only —
@@ -21,6 +22,7 @@ export function PathPage({ path, hasCapstone = false }: { path: DeveloperPath; h
       <p className="mt-3 text-xs text-text-disabled">
         {path.stepCount} lessons across {path.courseCount} courses · read in order
       </p>
+      <ProgressSummary items={path.steps.map((step) => ({ key: lessonProgressKey(step.courseSlug, step.lessonSlug), label: step.title }))} />
 
       <div className="mt-8 space-y-8">
         {path.byCourse.map((group) => (
@@ -32,10 +34,10 @@ export function PathPage({ path, hasCapstone = false }: { path: DeveloperPath; h
             </h2>
             <ol className="mt-2 space-y-1">
               {group.steps.map((step) => (
-                <li key={step.id}>
+                <li key={step.id} className="flex items-center gap-2 rounded-md pr-2 hover:bg-surface-overlay">
                   <Link
                     href={step.href}
-                    className="flex items-baseline gap-3 rounded-md px-3 py-2 transition-colors hover:bg-surface-overlay"
+                    className="flex min-w-0 flex-1 items-baseline gap-3 px-3 py-2 transition-colors"
                   >
                     <span className="w-6 shrink-0 text-right text-xs tabular-nums text-text-disabled">
                       {path.steps.findIndex((s) => s.id === step.id) + 1}
@@ -45,6 +47,7 @@ export function PathPage({ path, hasCapstone = false }: { path: DeveloperPath; h
                       {BRACKET_LABELS[step.bracket]}
                     </Badge>
                   </Link>
+                  <LessonCompletion item={{ key: lessonProgressKey(step.courseSlug, step.lessonSlug), label: step.title }} />
                 </li>
               ))}
             </ol>

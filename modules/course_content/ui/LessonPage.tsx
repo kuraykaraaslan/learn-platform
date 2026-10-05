@@ -7,6 +7,7 @@ import { ConceptTooltipProvider } from './ConceptTooltip';
 import { PathBadge } from './PathBadge';
 import { LessonPodcastPlayer } from './LessonPodcastPlayer';
 import { LessonPodcastVideo } from './LessonPodcastVideo';
+import { LessonCompletion, lessonProgressKey } from '@/modules/progress/ui/LessonProgress';
 
 type LessonNeighbor = { title: string; href: string };
 
@@ -41,6 +42,9 @@ export function LessonPage({
         <Badge variant="neutral" size="sm">
           {lesson.category}
         </Badge>
+        <span className="ml-auto">
+          <LessonCompletion item={{ key: lessonProgressKey(lesson.courseSlug, lesson.lessonSlug), label: lesson.title }} />
+        </span>
       </div>
 
       {podcast && <LessonPodcastPlayer audioSrc={podcast.audioSrc} turns={podcast.turns} />}
@@ -58,11 +62,8 @@ export function LessonPage({
 
       <PathBadge paths={paths} />
 
-      {/* P12 (docs/phases/12): prev/next only — no tick, streak, or
-          completion percentage anywhere here. That's the roadmap's explicit
-          ban: those measure the page turned, not what was learned, which is
-          exactly the illusion of knowing this whole project exists to
-          undo. */}
+      {/* P12: lesson completion is a reader self-report; it does not infer
+          learning from page views. */}
       {neighbors && (neighbors.prev || neighbors.next) && (
         <nav className="mt-8 flex items-center justify-between gap-4 border-t border-border pt-4 text-sm" aria-label="Lesson navigation">
           {neighbors.prev ? (
