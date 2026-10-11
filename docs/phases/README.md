@@ -75,6 +75,7 @@ P41 dördüncü capstone    ← P35, P39 (koşturulacak hiçbir şeyin olmadığ
 P42 beşinci capstone     ← P36, P41 (en riskli alan; T2.4'ün beş kursu tamam)
 P43 path capstone'u      ← P23, P30, P34-P36, P42 (kurs sınırını aşan ilk teslimat)
 P44 how it breaks        ← P1, P5, P10, P31, P35, P36 (yol haritasının T2.6'sı: teşhis, `see:` kanıttan alıntı)
+P45 işletim sistemi temelleri ← mevcut genel yazılım korpusundaki OS boşlukları; P25 RTOS'tan ayrı, `engineering` dalı
 ```
 
 | Faz | Dosya | Efor | Durum |
@@ -124,6 +125,7 @@ P44 how it breaks        ← P1, P5, P10, P31, P35, P36 (yol haritasının T2.6'
 | P42 | [42-contracts-capstone.md](42-contracts-capstone.md) | ~2 gün | tamamlandı — beşinci capstone (`contracts-pricing-legal`) ve **yol haritasının T2.4'ü tamamlandı**. En riskli alan: ölçüm 33 dersin 31'inin doğrulanmış ve ticari olduğunu, denylist'teki ikisinin tam da avukat isteyenler olduğunu gösterdi. Şekil "gitmeden önce incele", sorumluluk reddi brief'in ilk bloğunda |
 | P43 | [43-path-capstone.md](43-path-capstone.md) | ~3 gün | tamamlandı — **kurs sınırını aşan ilk capstone**: `operations-engineer` path'inin 16 adımı dört kurstan geliyor ve rubric'in altı satırı da o adımlardan, dört ayrı kurstan. Capstone'un ikinci evi `content/paths/<id>/capstone.md`; aynı parser, aynı UI. Rubric'in kapsamı kurs değil **path'in adımları** — daha gevşek değil daha keskin bir kural. P38'in ertelediği `SearchRecord.href` geldi (indeks 567 → **568 kayıt**, `lessonSlug` düştü); lint'e `global` kancası ve iki path kuralı eklendi |
 | P44 | [44-how-it-breaks.md](44-how-it-breaks.md) | ~3 gün | tamamlandı — yol haritasının T2.6'sı: `breaks` widget'ı (predict-then-reveal, `## Common Mistakes` içinde fence), iki pilot ders (`database-caching-performance/#17`, `#18`), her biri damgalanmış bir `proof` + ondan alıntılayan `breaks` (`proof` 32 → 34). Dört `error`-doğan lint kuralı: `see:`in her satırı aynı dersteki bir `proof` gövdesinde birebir geçiyor (`breaks/see-not-proven`), doğrulanmamış derste yok, ≤3 girdi, semptomda sayı zorunlu. `splitBulletItems` artık fence atlıyor — `single` 141'de sabit, `breaks` korpusa 0 mistake ekledi |
+| P45 | [45-operating-systems-fundamentals.md](45-operating-systems-fundamentals.md) | belirlenecek | öneri — genel amaçlı OS temelleri; sanal bellek, system call, dosya sistemi ve I/O; P25'in RTOS kapsamını tekrar etmez |
 
 ## Ölçülen zemin
 
