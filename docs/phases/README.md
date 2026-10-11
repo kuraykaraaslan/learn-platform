@@ -4,7 +4,7 @@
 bir kursa çevirme işi. Her dosya tek bir fazın uygulanabilir şartnamesidir ve
 tek başına merge edilebilir.
 
-Bağlam: [`../investigate/04-roadmap.md`](../investigate/04-roadmap.md) (teşhis ve
+Bağlam: [`../audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md`](../audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md) (teşhis ve
 yasaklar), [`../adr/0001-no-backend-markdown-content.md`](../adr/0001-no-backend-markdown-content.md)
 (backend yok), [`../adr/0002-client-side-code-execution.md`](../adr/0002-client-side-code-execution.md)
 (çalıştırma kararı).

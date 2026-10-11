@@ -1,4 +1,4 @@
-// P44: `breaks` — docs/investigate/04-roadmap.md's T2.6 ("How It Breaks"), as
+// P44: `breaks` — docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md's T2.6 ("How It Breaks"), as
 // a fence rather than the `##` section it originally specified, for the same
 // reason P31 gave: HEADING_RULES is a protected surface and a fence leaves it
 // untouched (docs/phases/44-how-it-breaks.md).

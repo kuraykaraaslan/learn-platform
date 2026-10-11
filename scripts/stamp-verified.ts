@@ -28,7 +28,7 @@ const REPORTS_DIR = path.join(process.cwd(), 'content', '_reports');
 const CODE_VERIFICATION = path.join(REPORTS_DIR, 'code-verification.json');
 const SHA_REPORT = path.join(REPORTS_DIR, 'verified-sha.json');
 
-// docs/investigate/04-roadmap.md T1.7 — hand-fixed content pending an expert
+// docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md T1.7 — hand-fixed content pending an expert
 // pass (2 of these need a lawyer, 1 needs an accountant). Never auto-stamped,
 // no matter what the mechanical gates say — a drill inherits the correctness
 // of the content it sits on, and a wrong mitigation drilled into a reader's

@@ -2,7 +2,7 @@
 // reasoning as course_content.tradeoff.ts: yaml and zod never reach the
 // client, and NumbersCard imports only the type from here.
 //
-// This is docs/investigate/04-roadmap.md's T2.2 with its strict rule made
+// This is docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md's T2.2 with its strict rule made
 // mechanical rather than remembered: "each row either links inline to the
 // document that publishes the number, or gives the command that produces it;
 // if neither, the row is deleted." Those two conditions are lint rules

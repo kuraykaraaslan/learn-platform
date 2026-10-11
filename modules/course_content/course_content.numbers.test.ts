@@ -45,7 +45,7 @@ describe('parseNumbers', () => {
   });
 });
 
-// The two conditions docs/investigate/04-roadmap.md's T2.2 made the price of
+// The two conditions docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md's T2.2 made the price of
 // the widget existing at all. They live in the parser module rather than in
 // the lint rules so the rule and the card cannot disagree about what a sourced
 // row is.

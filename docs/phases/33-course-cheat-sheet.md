@@ -5,7 +5,7 @@
 ## Neden
 
 Bu faz da yol haritasından geliyor —
-[`../investigate/04-roadmap.md`](../investigate/04-roadmap.md)'nin Tier 3
+[`../audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md`](../audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md)'nin Tier 3
 kalemi **"Course Pack + cheat sheet"**. Şartı da orada yazılı ve fazın
 tamamını belirliyor:
 

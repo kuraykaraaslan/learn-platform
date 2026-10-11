@@ -29,7 +29,7 @@ describe('buildCheatSheet', () => {
   });
 });
 
-// The contract docs/investigate/04-roadmap.md set for this feature: the cheat
+// The contract docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md set for this feature: the cheat
 // sheet is a mechanical selection, "asla yeniden özetleyen bir AI geçişiyle
 // değil". This test is what makes that enforceable rather than aspirational —
 // if any string on the page stops being a literal substring of the lesson it

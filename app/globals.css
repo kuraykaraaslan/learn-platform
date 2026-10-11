@@ -277,7 +277,7 @@
 /* P33 — printing a cheat sheet. Everything here is scoped to @media print, so
  * nothing below changes a single pixel on screen.
  *
- * The attr(href) rule is docs/investigate/04-roadmap.md's own line, and it
+ * The attr(href) rule is docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md's own line, and it
  * exists because a link is invisible on paper: the corpus carries a large
  * number of Further Reading URLs that render as grey text and print as
  * nothing. On paper the address is the whole value of the reference. */

@@ -5,7 +5,7 @@
 ## Neden
 
 Bu faz `Eklenebilecekler` tablolarından değil, **yol haritasının kendisinden**
-geliyor: [`../investigate/04-roadmap.md`](../investigate/04-roadmap.md)'nin
+geliyor: [`../audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md`](../audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md)'nin
 **T2.2 — Numbers That Matter**. Otuz faz boyunca hiç açılmadı ve teşhisi
 bugün de geçerli.
 

@@ -45,7 +45,7 @@ describe('parseCapstoneMarkdown', () => {
   });
 });
 
-// docs/investigate/04-roadmap.md's T2.4: "Rubric satırları o kursun kendi
+// docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md's T2.4: "Rubric satırları o kursun kendi
 // Common Mistakes maddelerinden türetilir." The lint rule enforces this at
 // lint time; this is the same assertion as a unit test, so a broken rubric
 // fails `npm run test` too rather than only the content pipeline.

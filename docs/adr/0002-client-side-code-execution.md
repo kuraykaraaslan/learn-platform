@@ -6,7 +6,7 @@ Proposed (2026-08-27). ADR 0001'i **geçersiz kılmaz, genişletir.**
 ## Context
 
 412 dersin 412'sinde okuyucudan üretmesi istenen bir şey yok
-(`docs/investigate/04-roadmap.md`). Okuyucunun kodu çalıştırıp değiştirebilmesi,
+(`docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md`). Okuyucunun kodu çalıştırıp değiştirebilmesi,
 bu geri bildirim boşluğunu kapatan mekanizmalardan biri.
 
 ADR 0001 backend, DB ve auth'u reddetti; "sıfır altyapı maliyeti, sıfır güvenlik

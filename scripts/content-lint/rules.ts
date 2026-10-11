@@ -828,7 +828,7 @@ export const RULES: Rule[] = [
     id: 'breaks/invalid-payload',
     severity: 'error',
     description:
-      "A `breaks` fence course_content.breaks.ts's zod schema rejects — zero or more than three entries, a missing beat, or unparseable YAML. The three-entry cap is the roadmap's own (docs/investigate/04-roadmap.md, T2.6: \"at most 3 entries per lesson\"); a fourth is a sign the lesson is carrying two subjects. Same shape as recall/invalid-payload and spatial/invalid-payload, and it exists for the same reason: without it a malformed fence surfaces only as a crash inside the corpus parse-snapshot test, which names the assertion rather than the fence.",
+      "A `breaks` fence course_content.breaks.ts's zod schema rejects — zero or more than three entries, a missing beat, or unparseable YAML. The three-entry cap is the roadmap's own (docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md, T2.6: \"at most 3 entries per lesson\"); a fourth is a sign the lesson is carrying two subjects. Same shape as recall/invalid-payload and spatial/invalid-payload, and it exists for the same reason: without it a malformed fence surfaces only as a crash inside the corpus parse-snapshot test, which names the assertion rather than the fence.",
     lesson: (file) =>
       file.fences
         .filter((f) => f.lang === 'breaks')
@@ -1053,7 +1053,7 @@ export const RULES: Rule[] = [
     id: 'capstone/unsourced-rubric-row',
     severity: 'error',
     description:
-      "A `capstone.md` rubric row's `lead` is not a verbatim Common Mistakes lead from the lesson it names. docs/investigate/04-roadmap.md's T2.4 requires that \"Rubric satırları o kursun kendi Common Mistakes maddelerinden türetilir\" — this makes that mechanical instead of aspirational, in the same way P33's cheat sheet test does for its own verbatim contract. A rubric written freehand would be the author's opinion wearing the corpus's clothes.",
+      "A `capstone.md` rubric row's `lead` is not a verbatim Common Mistakes lead from the lesson it names. docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md's T2.4 requires that \"Rubric satırları o kursun kendi Common Mistakes maddelerinden türetilir\" — this makes that mechanical instead of aspirational, in the same way P33's cheat sheet test does for its own verbatim contract. A rubric written freehand would be the author's opinion wearing the corpus's clothes.",
     course: (slug, files) => {
       if (!hasCapstone(slug)) return [];
       let capstone;
@@ -1105,7 +1105,7 @@ export const RULES: Rule[] = [
     id: 'numbers/unsourced-default',
     severity: 'error',
     description:
-      "A `numbers` row states a default and does not link to what publishes it. docs/investigate/04-roadmap.md's T2.2 made this the whole credibility condition — \"each row either links inline to the document publishing the number, or gives the command that produces it; if neither, the row is deleted\" — and docs/phases/31-numbers-that-matter.md turns it from review etiquette into a gate. A row with no published default writes `—` and owes no link.",
+      "A `numbers` row states a default and does not link to what publishes it. docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md's T2.2 made this the whole credibility condition — \"each row either links inline to the document publishing the number, or gives the command that produces it; if neither, the row is deleted\" — and docs/phases/31-numbers-that-matter.md turns it from review etiquette into a gate. A row with no published default writes `—` and owes no link.",
     lesson: (file) =>
       file.fences
         .filter((f) => f.lang === 'numbers')

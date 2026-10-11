@@ -1,4 +1,4 @@
-// P34: the capstone parser — docs/investigate/04-roadmap.md's T2.4.
+// P34: the capstone parser — docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md's T2.4.
 //
 // Deliberately a SEPARATE parser from course_content.parser.ts. T2.4's own
 // condition was that "katı 6 bölümlü ders parser'ı ve HEADING_RULES hiç

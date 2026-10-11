@@ -1,6 +1,6 @@
 // P33: the per-course cheat sheet, derived rather than written.
 //
-// docs/investigate/04-roadmap.md's Tier 3 item states the condition that
+// docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md's Tier 3 item states the condition that
 // shapes this entire module: "Cheat sheet seçimi mekanik kuralla yapılmalı
 // (Key Concepts + mistake lead'leri, parseMistakes'i yeniden kullanarak),
 // asla yeniden özetleyen bir AI geçişiyle değil."

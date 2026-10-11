@@ -1,4 +1,4 @@
-// P31: a `numbers` fence — docs/investigate/04-roadmap.md's T2.2, as a widget
+// P31: a `numbers` fence — docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md's T2.2, as a widget
 // rather than the `##` section it originally specified (the reasoning is in
 // docs/phases/31-numbers-that-matter.md: P4 built a card system after the
 // roadmap was written, and a fence leaves HEADING_RULES untouched).

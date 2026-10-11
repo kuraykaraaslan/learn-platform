@@ -144,6 +144,6 @@ sentez ajanı çözdü.
 
 Ajanlara verilen brief'te "Mermaid bu stack'te doğal olarak render oluyor" deniyordu — **bu repoda
 yanlış**. Feasibility jürisi ` ```mermaid ` bloğunu gerçek hattan geçirip düz
-`<pre class="language-mermaid">` olarak çıktığını doğruladı; [course_content.markdown.ts](../../modules/course_content/course_content.markdown.ts)
+`<pre class="language-mermaid">` olarak çıktığını doğruladı; [course_content.markdown.ts](../../../modules/course_content/course_content.markdown.ts)
 zincirinde mermaid eklentisi yok. Diyagram öneren her kalem bu yüzden ek bağımlılık maliyeti
 taşır ve `Decide` önerisi bu gerekçeyle reddedildi.

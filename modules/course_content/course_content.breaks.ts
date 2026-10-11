@@ -2,7 +2,7 @@
 // reasoning as course_content.numbers.ts: yaml and zod never reach the client,
 // and BreaksCard imports only the type from here.
 //
-// This is docs/investigate/04-roadmap.md's T2.6 ("How It Breaks"), whose four
+// This is docs/audits/2026-08-27-lesson-enrichment-investigation/04-roadmap.md's T2.6 ("How It Breaks"), whose four
 // beats are symptom -> what you see -> why -> which knob. The reviewers who
 // deferred it named one reason — "a hallucinated psql output is
 // indistinguishable from a real one" — and set one mechanical rule: no
